@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="5b1a-bf72-0ab6-2d76" name="Chaos" revision="2" battleScribeVersion="2.03" authorName="Thulram" library="false" gameSystemId="e832-3291-06be-cab1" gameSystemRevision="2" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="5b1a-bf72-0ab6-2d76" name="Chaos" revision="3" battleScribeVersion="2.03" authorName="Thulram" library="false" gameSystemId="e832-3291-06be-cab1" gameSystemRevision="2" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+  <categoryEntries>
+    <categoryEntry id="fc3d-b24c-012c-9cfc" name="General - Lord of Pain" hidden="false"/>
+  </categoryEntries>
   <selectionEntries>
     <selectionEntry id="0fab-488b-1675-d389" name="Vortemis and The Eyes of the Nine (separate units)" publicationId="97ef-9bf4-54c7-6623" hidden="false" collective="false" import="true" type="upgrade">
       <constraints>
@@ -2754,14 +2757,78 @@ If a friendly MAGISTER is slain by this effect, roll a dice before removing the 
     <entryLink id="2afb-3078-0821-9c95" name="Godsworn Champions of Ruin" hidden="false" collective="false" import="true" targetId="cebf-1d3d-1705-6baa" type="selectionEntry"/>
     <entryLink id="b6fe-4f90-05e5-25b8" name="Godswrath Warband" hidden="false" collective="false" import="true" targetId="917f-287c-fb68-e446" type="selectionEntry"/>
     <entryLink id="f39b-df2c-1f47-66e1" name="Ruinbringer Warband" hidden="false" collective="false" import="true" targetId="ca8c-5a55-78ae-2f81" type="selectionEntry"/>
-    <entryLink id="b804-240d-59dc-0e37" name="Lord of Pain" hidden="false" collective="false" import="true" targetId="9b8f-acbd-252f-6b7d" type="selectionEntry">
+    <entryLink id="7898-4a90-782e-ab19" name="The Dread Pageant" hidden="false" collective="false" import="true" targetId="2f15-a248-7dae-bbf7" type="selectionEntry"/>
+    <entryLink id="11fc-0e8c-0157-3f86" name="Symbaresh Twinsouls" hidden="false" collective="false" import="true" targetId="27c7-4eb8-6783-73e6" type="selectionEntry">
+      <modifiers>
+        <modifier type="remove" field="category" value="a42d-220e-6a88-7bf6">
+          <conditions>
+            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="fc3d-b24c-012c-9cfc" type="equalTo"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <categoryLinks>
+        <categoryLink id="1099-bd8b-1b72-f5e5" name="BATTLELINE" hidden="false" targetId="a42d-220e-6a88-7bf6" primary="false"/>
+      </categoryLinks>
+    </entryLink>
+    <entryLink id="1a93-293c-0aa3-6ad8" name="Myrmidesh Painbringers" hidden="false" collective="false" import="true" targetId="1326-840f-9c0d-cb87" type="selectionEntry">
+      <modifiers>
+        <modifier type="remove" field="category" value="a42d-220e-6a88-7bf6">
+          <conditions>
+            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="fc3d-b24c-012c-9cfc" type="equalTo"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <categoryLinks>
+        <categoryLink id="47a0-9029-bd2d-fa8f" name="BATTLELINE" hidden="false" targetId="a42d-220e-6a88-7bf6" primary="false"/>
+      </categoryLinks>
+    </entryLink>
+    <entryLink id="a7f1-06f9-9097-fab6" name="Sigvald, Prince of Slaanesh" hidden="false" collective="false" import="true" targetId="1567-e643-31ac-f08a" type="selectionEntry">
       <entryLinks>
-        <entryLink id="aed0-d6a2-93ae-cb8d" name="General" hidden="false" collective="false" import="true" targetId="98a4-3d6d-a7b9-399f" type="selectionEntry"/>
-        <entryLink id="cac6-15b6-230a-51ef" name="Artefacts of Power" hidden="false" collective="false" import="true" targetId="79a3-0cc4-cb04-8668" type="selectionEntryGroup"/>
-        <entryLink id="b809-9ce8-1a83-7ac9" name="Command Traits" hidden="false" collective="false" import="true" targetId="a8a9-33dd-ba17-6d58" type="selectionEntryGroup"/>
+        <entryLink id="fa04-7081-1477-a831" name="General" hidden="false" collective="false" import="true" targetId="98a4-3d6d-a7b9-399f" type="selectionEntry">
+          <categoryLinks>
+            <categoryLink id="5930-bf76-b3ee-fd80" name="Named General" hidden="false" targetId="8b3d-7f03-e1f9-eaf5" primary="false"/>
+          </categoryLinks>
+        </entryLink>
       </entryLinks>
     </entryLink>
-    <entryLink id="7898-4a90-782e-ab19" name="The Dread Pageant" hidden="false" collective="false" import="true" targetId="2f15-a248-7dae-bbf7" type="selectionEntry"/>
+    <entryLink id="6c27-bc27-2a05-4926" name="Shardspeaker of Slaanesh" hidden="false" collective="false" import="true" targetId="9802-e51c-f34a-1953" type="selectionEntry">
+      <entryLinks>
+        <entryLink id="34a0-067e-0bb3-578f" name="General" hidden="false" collective="false" import="true" targetId="98a4-3d6d-a7b9-399f" type="selectionEntry"/>
+        <entryLink id="66f6-7f91-727b-9046" name="Command Traits" hidden="false" collective="false" import="true" targetId="a8a9-33dd-ba17-6d58" type="selectionEntryGroup"/>
+        <entryLink id="d282-ba81-f6a2-129d" name="Artefacts of Power" hidden="false" collective="false" import="true" targetId="79a3-0cc4-cb04-8668" type="selectionEntryGroup"/>
+      </entryLinks>
+    </entryLink>
+    <entryLink id="1071-02e5-c9da-c799" name="Slaangor Fiendbloods" hidden="false" collective="false" import="true" targetId="9f2d-104b-4d9c-875e" type="selectionEntry">
+      <categoryLinks>
+        <categoryLink id="adbd-bac0-90d8-cdbf" name="Hedonite" hidden="false" targetId="9af3-d9d6-e682-7929" primary="false"/>
+      </categoryLinks>
+    </entryLink>
+    <entryLink id="195a-a8ff-80b6-392b" name="Slickblade Seekers" hidden="false" collective="false" import="true" targetId="681e-a2c6-4833-1d5a" type="selectionEntry"/>
+    <entryLink id="0dc2-5ac0-21e0-5d1d" name="Lord of Pain" hidden="false" collective="false" import="true" targetId="9b8f-acbd-252f-6b7d" type="selectionEntry">
+      <entryLinks>
+        <entryLink id="f9a0-32b9-fca8-1f96" name="Artefacts of Power" hidden="false" collective="false" import="true" targetId="79a3-0cc4-cb04-8668" type="selectionEntryGroup"/>
+        <entryLink id="3c25-b403-b1fc-2516" name="Command Traits" hidden="false" collective="false" import="true" targetId="a8a9-33dd-ba17-6d58" type="selectionEntryGroup"/>
+        <entryLink id="fabb-8e8c-b531-ddd0" name="General" hidden="false" collective="false" import="true" targetId="98a4-3d6d-a7b9-399f" type="selectionEntry">
+          <categoryLinks>
+            <categoryLink id="7623-027a-703e-cc2e" name="General - Lord of Pain" hidden="false" targetId="fc3d-b24c-012c-9cfc" primary="false"/>
+          </categoryLinks>
+        </entryLink>
+      </entryLinks>
+    </entryLink>
+    <entryLink id="27f2-0836-22f8-0953" name="Glutos Orscollion, Lord of Gluttony" hidden="false" collective="false" import="true" targetId="30e9-0004-6ff3-ce7a" type="selectionEntry">
+      <entryLinks>
+        <entryLink id="38e2-a227-67e7-49ee" name="General" hidden="false" collective="false" import="true" targetId="98a4-3d6d-a7b9-399f" type="selectionEntry">
+          <categoryLinks>
+            <categoryLink id="1bba-10ed-d21a-1ef4" name="Named General" hidden="false" targetId="8b3d-7f03-e1f9-eaf5" primary="false"/>
+          </categoryLinks>
+        </entryLink>
+      </entryLinks>
+    </entryLink>
+    <entryLink id="85c5-1a56-436b-e5ac" name="Blissbarb Seekers" hidden="false" collective="false" import="true" targetId="c904-4f68-bac3-f7a8" type="selectionEntry"/>
+    <entryLink id="31c7-95c5-086e-b6b4" name="Blissbarb Archers" hidden="false" collective="false" import="true" targetId="b309-c000-e0c8-b592" type="selectionEntry"/>
+    <entryLink id="d5c9-a5e6-c906-a9f4" name="Depraved Carnival" hidden="false" collective="false" import="true" targetId="7445-01ac-106e-cc15" type="selectionEntry"/>
+    <entryLink id="e1db-2ba6-b0ba-f97a" name="Exalted Speed-Knights" hidden="false" collective="false" import="true" targetId="5138-907e-2b17-b00d" type="selectionEntry"/>
+    <entryLink id="24cc-3115-1308-fa32" name="Nobles of Excess" hidden="false" collective="false" import="true" targetId="56c2-a902-8d33-96ad" type="selectionEntry"/>
   </entryLinks>
   <sharedSelectionEntries>
     <selectionEntry id="f53b-034f-f032-894a" name="Allegiance" hidden="false" collective="false" import="true" type="upgrade">
@@ -8086,6 +8153,151 @@ After rolling a dice for each unit from this battalion, roll a dice for each ene
             <entryLink id="0e57-779b-da5a-dea4" name="Ruinbringer Warband" hidden="false" collective="false" import="true" targetId="ca8c-5a55-78ae-2f81" type="selectionEntry"/>
             <entryLink id="a39a-ba11-1050-bec5" name="Godswrath Warband" hidden="false" collective="false" import="true" targetId="917f-287c-fb68-e446" type="selectionEntry"/>
             <entryLink id="24a7-b742-b19a-66de" name="Fatesworn Warband" hidden="false" collective="false" import="true" targetId="b06b-12e2-76ce-09fe" type="selectionEntry"/>
+          </entryLinks>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
+      <costs>
+        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="140.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="7445-01ac-106e-cc15" name="Depraved Carnival" publicationId="29d6-453f-ecc0-3e4b" hidden="false" collective="false" import="true" type="upgrade">
+      <profiles>
+        <profile id="2e93-6a17-31a5-0374" name="Honed by the Inimical" hidden="false" typeId="66c5-932e-004a-574c" typeName="Battalion Abilities">
+          <characteristics>
+            <characteristic name="Battalion Ability" typeId="23f7-32c0-e059-29b2">Once per turn, in your hero phase, you can pick 1 BLISSBARB ARCHERS unit from this battalion. That unit can shoot.</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <categoryLinks>
+        <categoryLink id="1dc7-5857-3909-7c3e" name="New CategoryLink" hidden="false" targetId="c03a-b1a8-66c6-3637" primary="true"/>
+      </categoryLinks>
+      <selectionEntryGroups>
+        <selectionEntryGroup id="3a2d-2dbf-6f86-ec9b" name="3 Blissbarb Archers" hidden="false" collective="false" import="true">
+          <constraints>
+            <constraint field="selections" scope="parent" value="3.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="59bf-cbb0-4823-8907" type="max"/>
+            <constraint field="selections" scope="parent" value="3.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="c63b-8652-64a5-3cf9" type="min"/>
+          </constraints>
+          <entryLinks>
+            <entryLink id="3d90-b05e-3815-41d0" name="Blissbarb Archers" hidden="false" collective="false" import="true" targetId="b309-c000-e0c8-b592" type="selectionEntry"/>
+          </entryLinks>
+        </selectionEntryGroup>
+        <selectionEntryGroup id="a4f6-46b7-87f6-f1c4" name="3 featured heroes" hidden="false" collective="false" import="true">
+          <constraints>
+            <constraint field="selections" scope="parent" value="3.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="27b1-78e1-e1e8-81dd" type="max"/>
+            <constraint field="selections" scope="parent" value="3.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="965d-7f5d-1115-578f" type="min"/>
+          </constraints>
+          <entryLinks>
+            <entryLink id="5917-ed7c-927b-f297" name="Shardspeaker of Slaanesh" hidden="false" collective="false" import="true" targetId="9802-e51c-f34a-1953" type="selectionEntry">
+              <entryLinks>
+                <entryLink id="0d1c-4717-dc71-5c65" name="General" hidden="false" collective="false" import="true" targetId="98a4-3d6d-a7b9-399f" type="selectionEntry"/>
+                <entryLink id="0665-0750-d7d4-ee95" name="Command Traits" hidden="false" collective="false" import="true" targetId="a8a9-33dd-ba17-6d58" type="selectionEntryGroup"/>
+                <entryLink id="2cc9-2114-e4e8-eec7" name="Artefacts of Power" hidden="false" collective="false" import="true" targetId="79a3-0cc4-cb04-8668" type="selectionEntryGroup"/>
+              </entryLinks>
+            </entryLink>
+            <entryLink id="9b48-f5b9-f048-6604" name="Lord of Pain" hidden="false" collective="false" import="true" targetId="9b8f-acbd-252f-6b7d" type="selectionEntry">
+              <entryLinks>
+                <entryLink id="ebc7-9b90-3e6f-6987" name="Artefacts of Power" hidden="false" collective="false" import="true" targetId="79a3-0cc4-cb04-8668" type="selectionEntryGroup"/>
+                <entryLink id="425e-fb6c-d157-1f3c" name="Command Traits" hidden="false" collective="false" import="true" targetId="a8a9-33dd-ba17-6d58" type="selectionEntryGroup"/>
+                <entryLink id="6726-c7b6-1ed7-8a58" name="General" hidden="false" collective="false" import="true" targetId="98a4-3d6d-a7b9-399f" type="selectionEntry">
+                  <categoryLinks>
+                    <categoryLink id="0243-d028-a43a-b595" name="General - Lord of Pain" hidden="false" targetId="fc3d-b24c-012c-9cfc" primary="false"/>
+                  </categoryLinks>
+                </entryLink>
+              </entryLinks>
+            </entryLink>
+          </entryLinks>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
+      <costs>
+        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="160.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="5138-907e-2b17-b00d" name="Exalted Speed-Knights" publicationId="29d6-453f-ecc0-3e4b" hidden="false" collective="false" import="true" type="upgrade">
+      <profiles>
+        <profile id="8e11-4a16-0744-d41c" name="Timing is Everything" hidden="false" typeId="66c5-932e-004a-574c" typeName="Battalion Abilities">
+          <characteristics>
+            <characteristic name="Battalion Ability" typeId="23f7-32c0-e059-29b2">After armies are set up but before the first battle round begins, up to D6 units from this battalion can move up to 6&quot;.</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <categoryLinks>
+        <categoryLink id="a59a-2f5d-53fd-570f" name="New CategoryLink" hidden="false" targetId="c03a-b1a8-66c6-3637" primary="true"/>
+      </categoryLinks>
+      <selectionEntryGroups>
+        <selectionEntryGroup id="a91e-87b3-0113-6147" name="2-3 Blissbarb Seekers" hidden="false" collective="false" import="true">
+          <constraints>
+            <constraint field="selections" scope="parent" value="3.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="cf16-9201-feb5-32ac" type="max"/>
+            <constraint field="selections" scope="parent" value="3.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8444-d726-d14a-bba5" type="min"/>
+          </constraints>
+          <entryLinks>
+            <entryLink id="78da-92ad-7d00-c8d8" name="Blissbarb Seekers" hidden="false" collective="false" import="true" targetId="c904-4f68-bac3-f7a8" type="selectionEntry"/>
+          </entryLinks>
+        </selectionEntryGroup>
+        <selectionEntryGroup id="334a-8b33-dca2-6cc4" name="2-3 Slickblade Seekers" hidden="false" collective="false" import="true">
+          <constraints>
+            <constraint field="selections" scope="parent" value="3.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="40a3-cbfa-cf0c-cf37" type="max"/>
+            <constraint field="selections" scope="parent" value="3.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d93c-092b-0c78-64cb" type="min"/>
+          </constraints>
+          <entryLinks>
+            <entryLink id="c3ec-600a-2735-c990" name="Slickblade Seekers" hidden="false" collective="false" import="true" targetId="681e-a2c6-4833-1d5a" type="selectionEntry"/>
+          </entryLinks>
+        </selectionEntryGroup>
+        <selectionEntryGroup id="72cc-9e96-1c43-e677" name="2-3 Seekers" hidden="false" collective="false" import="true">
+          <constraints>
+            <constraint field="selections" scope="parent" value="3.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="0e2e-4276-ae31-92fd" type="max"/>
+            <constraint field="selections" scope="parent" value="3.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="35fe-1869-7987-c883" type="min"/>
+          </constraints>
+          <entryLinks>
+            <entryLink id="42c3-7381-946a-8c72" name="Seekers" hidden="false" collective="false" import="true" targetId="557e-4177-4be2-2d54" type="selectionEntry"/>
+          </entryLinks>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
+      <costs>
+        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="120.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="56c2-a902-8d33-96ad" name="Nobles of Excess" publicationId="29d6-453f-ecc0-3e4b" hidden="false" collective="false" import="true" type="upgrade">
+      <profiles>
+        <profile id="790c-2256-9384-247d" name="A Demonstration of Prowess" hidden="false" typeId="66c5-932e-004a-574c" typeName="Battalion Abilities">
+          <characteristics>
+            <characteristic name="Battalion Ability" typeId="23f7-32c0-e059-29b2">You can re-roll wound rolls for attacks made with melee weapons by units from this battalion that made a charge move in the same turn.</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <categoryLinks>
+        <categoryLink id="a04b-6554-7f84-69d1" name="New CategoryLink" hidden="false" targetId="c03a-b1a8-66c6-3637" primary="true"/>
+      </categoryLinks>
+      <selectionEntryGroups>
+        <selectionEntryGroup id="25d4-db64-a155-4d4f" name="3-6 featured units" hidden="false" collective="false" import="true">
+          <constraints>
+            <constraint field="selections" scope="parent" value="6.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="bb25-84e1-c9d3-03d6" type="max"/>
+            <constraint field="selections" scope="parent" value="3.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="1919-bf1d-bbd0-3f6e" type="min"/>
+          </constraints>
+          <entryLinks>
+            <entryLink id="2870-9b7b-33e8-d96b" name="Symbaresh Twinsouls" hidden="false" collective="false" import="true" targetId="27c7-4eb8-6783-73e6" type="selectionEntry">
+              <modifiers>
+                <modifier type="remove" field="category" value="a42d-220e-6a88-7bf6">
+                  <conditions>
+                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="fc3d-b24c-012c-9cfc" type="equalTo"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+              <categoryLinks>
+                <categoryLink id="0bba-3c9b-63a5-98a4" name="BATTLELINE" hidden="false" targetId="a42d-220e-6a88-7bf6" primary="false"/>
+              </categoryLinks>
+            </entryLink>
+            <entryLink id="f2cf-36e9-2cc9-38ca" name="Myrmidesh Painbringers" hidden="false" collective="false" import="true" targetId="1326-840f-9c0d-cb87" type="selectionEntry">
+              <modifiers>
+                <modifier type="remove" field="category" value="a42d-220e-6a88-7bf6">
+                  <conditions>
+                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="fc3d-b24c-012c-9cfc" type="equalTo"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+              <categoryLinks>
+                <categoryLink id="f4b5-f303-9193-8015" name="BATTLELINE" hidden="false" targetId="a42d-220e-6a88-7bf6" primary="false"/>
+              </categoryLinks>
+            </entryLink>
           </entryLinks>
         </selectionEntryGroup>
       </selectionEntryGroups>

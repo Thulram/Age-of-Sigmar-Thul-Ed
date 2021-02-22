@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="174c-6424-9680-8149" name="Chaos - Beasts of Chaos - Data" revision="1" battleScribeVersion="2.03" authorName="Thulram" library="true" gameSystemId="e832-3291-06be-cab1" gameSystemRevision="1" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="174c-6424-9680-8149" name="Chaos - Beasts of Chaos - Data" revision="2" battleScribeVersion="2.03" authorName="Thulram" library="true" gameSystemId="e832-3291-06be-cab1" gameSystemRevision="2" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <profileTypes>
     <profileType id="dbc8-f49e-ecdb-8eb0" name="Cygor Wounds">
       <characteristicTypes>
@@ -66,6 +66,7 @@
     <categoryEntry id="3ca0-c6b0-8f3c-df36" name="General - Dragon Ogor Shaggoth" hidden="false"/>
     <categoryEntry id="c77d-829c-56f6-50e8" name="General - Doombull" hidden="false"/>
     <categoryEntry id="e231-36cd-3d09-89a2" name="General - Tzaangor Shaman" hidden="false"/>
+    <categoryEntry id="9cb2-8ef7-3610-be4c" name="Slaangor Fiendbloods" hidden="false"/>
   </categoryEntries>
   <sharedSelectionEntries>
     <selectionEntry id="9e0e-4909-17ad-0438" name="Beastlord" publicationId="f0d1-73ce-b949-8524" hidden="false" collective="false" import="true" type="unit">
@@ -3773,6 +3774,112 @@
           </selectionEntries>
         </selectionEntryGroup>
       </selectionEntryGroups>
+      <costs>
+        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="9f2d-104b-4d9c-875e" name="Slaangor Fiendbloods" hidden="false" collective="false" import="true" type="unit">
+      <profiles>
+        <profile id="8db9-c633-6c38-f60b" name="Slaangor Fiendbloods" hidden="false" typeId="3956-f6dd-6c88-ae4b" typeName="Unit">
+          <characteristics>
+            <characteristic name="Move" typeId="5bbe-8910-4dfa-7b1c">8&quot;</characteristic>
+            <characteristic name="Wounds" typeId="a0c6-af64-2f24-5759">3</characteristic>
+            <characteristic name="Save" typeId="93b6-2f96-2df7-e330">5+</characteristic>
+            <characteristic name="Bravery" typeId="2420-1c5c-1016-7033">6</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="ed67-d39c-c799-e7be" name="Obsessive Violence" hidden="false" typeId="7861-da01-01c0-88d9" typeName="Ability">
+          <characteristics>
+            <characteristic name="Ability" typeId="9bce-4deb-8b79-eaec">At the end of the combat phase, pick 1 enemy unit within 3&quot; of this unit and roll a dice for each model in this unit. For each 4+, that enemy unit suffers 1 mortal wound.</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="31ed-90ee-2b4f-c97f" name="Slaughter At Any Cost" hidden="false" typeId="7861-da01-01c0-88d9" typeName="Ability">
+          <characteristics>
+            <characteristic name="Ability" typeId="9bce-4deb-8b79-eaec">Add 1 to the Attacks characteristic of this unit’s melee weapons if it made a charge move in the same turn.
+</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <categoryLinks>
+        <categoryLink id="a4a8-09bc-de27-6df1" name="Chaos" hidden="false" targetId="d8b4-9de1-926f-99b1" primary="false"/>
+        <categoryLink id="3ea0-9b09-2cf9-8b20" name="BEASTS OF CHAOS" hidden="false" targetId="8b47-5a0c-c31c-53e0" primary="false"/>
+        <categoryLink id="0ed9-2c73-1c48-467c" name="Mortal" hidden="false" targetId="ca90-b9b0-010b-72d0" primary="false"/>
+        <categoryLink id="336e-a9cd-c8c8-5ea7" name="New CategoryLink" hidden="false" targetId="6230-ed60-e374-add4" primary="true"/>
+        <categoryLink id="a18a-cd07-1078-bd3a" name="Slaangor Fiendbloods" hidden="false" targetId="9cb2-8ef7-3610-be4c" primary="false"/>
+        <categoryLink id="f8eb-bb6d-69fc-698c" name="SLAANESH" hidden="false" targetId="58b2-6793-0b10-a246" primary="false"/>
+      </categoryLinks>
+      <selectionEntries>
+        <selectionEntry id="4587-8260-337e-a0fb" name="3 Slaangor Fiendbloods" hidden="false" collective="false" import="true" type="model">
+          <constraints>
+            <constraint field="selections" scope="parent" value="3.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="4438-bbaa-7fed-2c27" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="6fc6-1e01-0f4f-d7eb" type="min"/>
+          </constraints>
+          <costs>
+            <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="140.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="7359-757b-f069-8547" name="Slake-Horn" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="c524-7c12-ea02-8699" type="max"/>
+          </constraints>
+          <profiles>
+            <profile id="db2f-5a5f-6b15-6c32" name="Slake-Horn" hidden="false" typeId="c23b-5a30-07e2-4706" typeName="Unit Options">
+              <characteristics>
+                <characteristic name="Unit Option" typeId="5879-9a21-e9d2-539d">1 model in this unit can be a Slake-Horn. That model is armed with a Razorsharp Claw and Gilded Weapon.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <selectionEntries>
+            <selectionEntry id="3464-a182-9090-3b32" name="Gilded Weapon" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="3cfd-4d41-62ed-14ea" type="max"/>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="2d51-34e1-4ec6-8d68" type="min"/>
+              </constraints>
+              <profiles>
+                <profile id="c814-737d-de2d-6dee" name="Gilded Weapon" hidden="false" typeId="2905-f6bd-06e5-6642" typeName="Weapon">
+                  <characteristics>
+                    <characteristic name="Type" typeId="1a08-195b-76fd-2c2b">Melee</characteristic>
+                    <characteristic name="Range" typeId="1406-f935-3f8e-b27f">1&quot;</characteristic>
+                    <characteristic name="Attacks" typeId="4c19-dba6-f094-5165">2</characteristic>
+                    <characteristic name="To-Hit" typeId="7a4f-9704-2095-96c8">4+</characteristic>
+                    <characteristic name="To-Wound" typeId="172f-fc84-895b-04b7">3+</characteristic>
+                    <characteristic name="Rend" typeId="0c05-bd2e-b7e7-3925">-1</characteristic>
+                    <characteristic name="Damage" typeId="01c2-d16a-8788-e52b">2</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <costs>
+                <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
+              </costs>
+            </selectionEntry>
+          </selectionEntries>
+          <costs>
+            <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="71fc-f943-9749-31cb" name="Razor-sharp Claws" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="63fc-54e6-be00-923b" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="9bee-3b5e-4c32-25eb" type="min"/>
+          </constraints>
+          <profiles>
+            <profile id="13a3-e5e6-ebed-4d39" name="Razor-sharp Claws" hidden="false" typeId="2905-f6bd-06e5-6642" typeName="Weapon">
+              <characteristics>
+                <characteristic name="Type" typeId="1a08-195b-76fd-2c2b">Melee</characteristic>
+                <characteristic name="Range" typeId="1406-f935-3f8e-b27f">2&quot;</characteristic>
+                <characteristic name="Attacks" typeId="4c19-dba6-f094-5165">3</characteristic>
+                <characteristic name="To-Hit" typeId="7a4f-9704-2095-96c8">4+</characteristic>
+                <characteristic name="To-Wound" typeId="172f-fc84-895b-04b7">3+</characteristic>
+                <characteristic name="Rend" typeId="0c05-bd2e-b7e7-3925">-1</characteristic>
+                <characteristic name="Damage" typeId="01c2-d16a-8788-e52b">1</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <costs>
+            <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
+          </costs>
+        </selectionEntry>
+      </selectionEntries>
       <costs>
         <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
       </costs>
