@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<gameSystem id="e832-3291-06be-cab1" name="Age of Sigmar - Thul Ed" revision="8" battleScribeVersion="2.03" authorName="Thulram" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
+<gameSystem id="e832-3291-06be-cab1" name="Age of Sigmar - Thul Ed" revision="9" battleScribeVersion="2.03" authorName="Thulram" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
   <publications>
     <publication id="bf0c-0cbf-1f5d-5885" name="Chaos Battletome - Blades of Khorne"/>
     <publication id="6ce4-e8a3-f18f-be55" name="Order Battletome - Daughters of Khaine"/>
@@ -291,14 +291,13 @@
             </modifier>
           </modifiers>
           <constraints>
-            <constraint field="b0b4-6aec-82c2-02ae" scope="6cd6-b22e-bfcb-9589" value="400.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="9d2d-b9c8-e120-0b50" type="max"/>
+            <constraint field="b0b4-6aec-82c2-02ae" scope="6cd6-b22e-bfcb-9589" value="400.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="9d2d-b9c8-e120-0b50" type="max"/>
           </constraints>
           <categoryLinks>
             <categoryLink id="70a4-b2ee-9791-93d9" name="Leader" hidden="false" targetId="93cb-21d9-e1d5-6161" primary="false"/>
             <categoryLink id="cbbb-f32f-d1d4-a6e1" name="Other Units" hidden="false" targetId="6230-ed60-e374-add4" primary="false"/>
             <categoryLink id="465f-beed-220c-5020" name="Behemoth" hidden="false" targetId="7f62-b7f5-32d5-e13b" primary="false"/>
             <categoryLink id="7a1d-177b-5521-9e4c" name="Artillery" hidden="false" targetId="9573-fac2-8fe9-5ed8" primary="false"/>
-            <categoryLink id="9229-b8bd-7518-2eac" name="Battalions" hidden="false" targetId="c03a-b1a8-66c6-3637" primary="false"/>
           </categoryLinks>
         </forceEntry>
       </forceEntries>
@@ -351,7 +350,7 @@
         <categoryLink id="2d86-42b3-37bd-f628" name="List Options" hidden="false" targetId="29f4-e63d-fa5b-1611" primary="false"/>
         <categoryLink id="897a-2de1-9a5e-b40c" name="Allegiance" hidden="false" targetId="af41-ae78-5063-3d36" primary="false">
           <constraints>
-            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="127c-420a-955d-3674" type="min"/>
+            <constraint field="selections" scope="582e-fd89-8731-30c8" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="127c-420a-955d-3674" type="min"/>
           </constraints>
         </categoryLink>
         <categoryLink id="efee-49e6-73d0-4462" name="Artefacts" hidden="false" targetId="ba14-5553-456e-33ad" primary="false">
@@ -435,14 +434,13 @@
             </modifier>
           </modifiers>
           <constraints>
-            <constraint field="b0b4-6aec-82c2-02ae" scope="4373-740f-1bf3-b0aa" value="500.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="513d-7061-f74d-082e" type="max"/>
+            <constraint field="b0b4-6aec-82c2-02ae" scope="4373-740f-1bf3-b0aa" value="500.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="513d-7061-f74d-082e" type="max"/>
           </constraints>
           <categoryLinks>
             <categoryLink id="f4a0-94f9-dd33-a961" name="Leader" hidden="false" targetId="93cb-21d9-e1d5-6161" primary="false"/>
             <categoryLink id="6770-64f6-673c-e40f" name="Other Units" hidden="false" targetId="6230-ed60-e374-add4" primary="false"/>
             <categoryLink id="c1e5-a4b4-6d41-413b" name="Behemoth" hidden="false" targetId="7f62-b7f5-32d5-e13b" primary="false"/>
             <categoryLink id="ba7f-7400-c36f-9cdf" name="Artillery" hidden="false" targetId="9573-fac2-8fe9-5ed8" primary="false"/>
-            <categoryLink id="46e7-3895-7698-e097" name="Battalions" hidden="false" targetId="c03a-b1a8-66c6-3637" primary="false"/>
           </categoryLinks>
         </forceEntry>
       </forceEntries>
@@ -518,7 +516,7 @@
         <categoryLink id="55c6-ecd1-573c-9b34" name="List Options" hidden="false" targetId="29f4-e63d-fa5b-1611" primary="false"/>
         <categoryLink id="cfb1-8679-0f25-199d" name="Allegiance" hidden="false" targetId="af41-ae78-5063-3d36" primary="false">
           <constraints>
-            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="e1c0-f74c-ccfa-ea1f" type="min"/>
+            <constraint field="selections" scope="85e6-5eeb-b3e5-4316" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="e1c0-f74c-ccfa-ea1f" type="min"/>
           </constraints>
         </categoryLink>
         <categoryLink id="4bdc-1340-f258-4768" name="Allegiant Duardin" hidden="false" targetId="c9f0-7b6d-1b55-8eb2" primary="false">
@@ -584,14 +582,13 @@
             </modifier>
           </modifiers>
           <constraints>
-            <constraint field="b0b4-6aec-82c2-02ae" scope="e3a6-45ca-4974-b489" value="200.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d0a1-67be-783c-8616" type="max"/>
+            <constraint field="b0b4-6aec-82c2-02ae" scope="e3a6-45ca-4974-b489" value="200.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="d0a1-67be-783c-8616" type="max"/>
           </constraints>
           <categoryLinks>
             <categoryLink id="24d5-68c9-51a5-a1bb" name="Leader" hidden="false" targetId="93cb-21d9-e1d5-6161" primary="false"/>
             <categoryLink id="5294-881e-87d7-620b" name="Other Units" hidden="false" targetId="6230-ed60-e374-add4" primary="false"/>
             <categoryLink id="387d-657b-1520-4bd8" name="Behemoth" hidden="false" targetId="7f62-b7f5-32d5-e13b" primary="false"/>
             <categoryLink id="0fb1-2c16-e50b-dcbe" name="Artillery" hidden="false" targetId="9573-fac2-8fe9-5ed8" primary="false"/>
-            <categoryLink id="9214-0079-cb87-346e" name="Battalions" hidden="false" targetId="c03a-b1a8-66c6-3637" primary="false"/>
           </categoryLinks>
         </forceEntry>
       </forceEntries>
@@ -644,7 +641,7 @@
         <categoryLink id="44bf-ebdf-0506-fc59" name="List Options" hidden="false" targetId="29f4-e63d-fa5b-1611" primary="false"/>
         <categoryLink id="d3ea-d407-a024-146b" name="Allegiance" hidden="false" targetId="af41-ae78-5063-3d36" primary="false">
           <constraints>
-            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="1e1e-aa77-246d-68d1" type="min"/>
+            <constraint field="selections" scope="3666-d754-f7d0-ab96" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="1e1e-aa77-246d-68d1" type="min"/>
           </constraints>
         </categoryLink>
         <categoryLink id="a602-879f-df54-d595" name="Artefacts" hidden="false" targetId="ba14-5553-456e-33ad" primary="false">

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="0154-f530-b576-332d" name="Destruction - Ogor Mawtribes" revision="2" battleScribeVersion="2.03" authorName="Thulram" library="false" gameSystemId="e832-3291-06be-cab1" gameSystemRevision="2" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="0154-f530-b576-332d" name="Destruction - Ogor Mawtribes" revision="3" battleScribeVersion="2.03" authorName="Thulram" library="false" gameSystemId="e832-3291-06be-cab1" gameSystemRevision="3" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <profileTypes>
     <profileType id="be3d-81f2-95ae-0aff" name="Mount Traits">
       <characteristicTypes>
@@ -90,7 +90,21 @@
     </selectionEntry>
   </selectionEntries>
   <entryLinks>
-    <entryLink id="cbb1-27ab-32e6-86d3" name="Allegiance" hidden="false" collective="false" import="true" targetId="74e8-bb1f-4c34-7b52" type="selectionEntry"/>
+    <entryLink id="cbb1-27ab-32e6-86d3" name="Allegiance" hidden="false" collective="false" import="true" targetId="74e8-bb1f-4c34-7b52" type="selectionEntry">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="6cd6-b22e-bfcb-9589" type="instanceOf"/>
+                <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="e3a6-45ca-4974-b489" type="instanceOf"/>
+                <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4373-740f-1bf3-b0aa" type="instanceOf"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+    </entryLink>
     <entryLink id="6fae-e799-6e73-c03c" name="Terrain Feature - Great Mawpot" hidden="false" collective="false" import="true" targetId="e95a-ae31-acaf-106f" type="selectionEntry"/>
     <entryLink id="efc1-0b5c-5882-5a8d" name="Tyrant" hidden="false" collective="false" import="true" targetId="36c9-39f0-0081-d0cc" type="selectionEntry">
       <entryLinks>
@@ -382,6 +396,19 @@
   </entryLinks>
   <sharedSelectionEntries>
     <selectionEntry id="74e8-bb1f-4c34-7b52" name="Allegiance" hidden="false" collective="false" import="true" type="upgrade">
+      <modifiers>
+        <modifier type="set" field="d8f6-2a0f-c37f-dfb9" value="0.0">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="6cd6-b22e-bfcb-9589" type="instanceOf"/>
+                <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="e3a6-45ca-4974-b489" type="instanceOf"/>
+                <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4373-740f-1bf3-b0aa" type="instanceOf"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
       <constraints>
         <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="8485-9b14-829b-5b6e" type="max"/>
         <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="d8f6-2a0f-c37f-dfb9" type="min"/>

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="4b7e-86ee-6109-8cae" name="Order - Lethisian Defenders" revision="1" battleScribeVersion="2.03" authorName="Thulram" library="false" gameSystemId="e832-3291-06be-cab1" gameSystemRevision="1" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="4b7e-86ee-6109-8cae" name="Order - Lethisian Defenders" revision="2" battleScribeVersion="2.03" authorName="Thulram" library="false" gameSystemId="e832-3291-06be-cab1" gameSystemRevision="2" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <selectionEntries>
     <selectionEntry id="52f0-7c1d-6d62-a577" name="Bjorgen Thundrik and Profiteers (separate units)" hidden="false" collective="false" import="true" type="upgrade">
       <constraints>
@@ -35,7 +35,21 @@
     </selectionEntry>
   </selectionEntries>
   <entryLinks>
-    <entryLink id="5cf7-224c-86f1-14d9" name="Allegiance" hidden="false" collective="false" import="true" targetId="5eb6-93cb-8cb3-3b35" type="selectionEntry"/>
+    <entryLink id="5cf7-224c-86f1-14d9" name="Allegiance" hidden="false" collective="false" import="true" targetId="5eb6-93cb-8cb3-3b35" type="selectionEntry">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="6cd6-b22e-bfcb-9589" type="instanceOf"/>
+                <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="e3a6-45ca-4974-b489" type="instanceOf"/>
+                <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4373-740f-1bf3-b0aa" type="instanceOf"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+    </entryLink>
     <entryLink id="577c-a1ac-d07a-2b96" name="Excelsior Warpriest" hidden="false" collective="false" import="true" targetId="ca04-c38a-0803-971a" type="selectionEntry">
       <entryLinks>
         <entryLink id="3fe5-3634-043b-33ee" name="General" hidden="false" collective="false" import="true" targetId="98a4-3d6d-a7b9-399f" type="selectionEntry"/>
@@ -415,6 +429,19 @@
   </entryLinks>
   <sharedSelectionEntries>
     <selectionEntry id="5eb6-93cb-8cb3-3b35" name="Allegiance" hidden="false" collective="false" import="true" type="upgrade">
+      <modifiers>
+        <modifier type="set" field="9666-2e0f-9bdf-69c4" value="0.0">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="6cd6-b22e-bfcb-9589" type="instanceOf"/>
+                <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="e3a6-45ca-4974-b489" type="instanceOf"/>
+                <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4373-740f-1bf3-b0aa" type="instanceOf"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
       <constraints>
         <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="1b07-191c-06a3-89ac" type="max"/>
         <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="9666-2e0f-9bdf-69c4" type="min"/>

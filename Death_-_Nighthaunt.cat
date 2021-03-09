@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="c840-7021-e207-4ff0" name="Death - Nighthaunt" revision="1" battleScribeVersion="2.03" authorName="Thulram" library="false" gameSystemId="e832-3291-06be-cab1" gameSystemRevision="1" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="c840-7021-e207-4ff0" name="Death - Nighthaunt" revision="2" battleScribeVersion="2.03" authorName="Thulram" library="false" gameSystemId="e832-3291-06be-cab1" gameSystemRevision="2" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <selectionEntries>
     <selectionEntry id="a733-4902-e5c7-0b8e" name="The Briar Queen and Thorns (separate units)" publicationId="6918-4599-9a4b-12c8" hidden="false" collective="false" import="true" type="unit">
       <constraints>
@@ -245,7 +245,21 @@
     </selectionEntry>
   </selectionEntries>
   <entryLinks>
-    <entryLink id="7ba3-e563-bcb6-50d3" name="Allegiance" hidden="false" collective="false" import="true" targetId="6eb0-488e-1003-d3a6" type="selectionEntry"/>
+    <entryLink id="7ba3-e563-bcb6-50d3" name="Allegiance" hidden="false" collective="false" import="true" targetId="6eb0-488e-1003-d3a6" type="selectionEntry">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="6cd6-b22e-bfcb-9589" type="instanceOf"/>
+                <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="e3a6-45ca-4974-b489" type="instanceOf"/>
+                <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4373-740f-1bf3-b0aa" type="instanceOf"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+    </entryLink>
     <entryLink id="7bf8-50d6-1b7d-bd65" name="Black Coach" hidden="false" collective="false" import="true" targetId="2329-d342-7083-c4b0" type="selectionEntry"/>
     <entryLink id="89d2-d222-5afa-1abf" name="Bladegheist Revenants" hidden="false" collective="false" import="true" targetId="1eb0-2abd-6605-b601" type="selectionEntry"/>
     <entryLink id="1e62-2d72-9f31-1a06" name="Cairn Wraith" hidden="false" collective="false" import="true" targetId="c20e-d027-598d-eab2" type="selectionEntry">
@@ -473,6 +487,19 @@
   </entryLinks>
   <sharedSelectionEntries>
     <selectionEntry id="6eb0-488e-1003-d3a6" name="Allegiance" publicationId="6918-4599-9a4b-12c8" hidden="false" collective="false" import="true" type="upgrade">
+      <modifiers>
+        <modifier type="set" field="eff0-ba04-9d1e-990d" value="0.0">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="6cd6-b22e-bfcb-9589" type="instanceOf"/>
+                <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="e3a6-45ca-4974-b489" type="instanceOf"/>
+                <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4373-740f-1bf3-b0aa" type="instanceOf"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
       <constraints>
         <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="5d71-e179-d308-a11e" type="max"/>
         <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="eff0-ba04-9d1e-990d" type="min"/>

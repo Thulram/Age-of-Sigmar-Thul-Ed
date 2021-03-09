@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="17e0-7b8f-5bbb-e8c8" name="Chaos - Legion of Chaos Ascendant" revision="1" battleScribeVersion="2.03" authorName="Thulram" library="false" gameSystemId="e832-3291-06be-cab1" gameSystemRevision="1" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="17e0-7b8f-5bbb-e8c8" name="Chaos - Legion of Chaos Ascendant" revision="2" battleScribeVersion="2.03" authorName="Thulram" library="false" gameSystemId="e832-3291-06be-cab1" gameSystemRevision="2" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <profileTypes>
     <profileType id="b324-3770-f5b4-1780" name="Lord Skreech Wounds">
       <characteristicTypes>
@@ -181,7 +181,21 @@
     <categoryEntry id="46e1-9794-9f64-dc8a" name="Herald of Khorne" hidden="false"/>
   </categoryEntries>
   <entryLinks>
-    <entryLink id="7c73-9724-30b6-46e8" name="Allegiance" hidden="false" collective="false" import="true" targetId="a3ed-24d6-0a9f-8665" type="selectionEntry"/>
+    <entryLink id="7c73-9724-30b6-46e8" name="Allegiance" hidden="false" collective="false" import="true" targetId="a3ed-24d6-0a9f-8665" type="selectionEntry">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="6cd6-b22e-bfcb-9589" type="instanceOf"/>
+                <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="e3a6-45ca-4974-b489" type="instanceOf"/>
+                <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4373-740f-1bf3-b0aa" type="instanceOf"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+    </entryLink>
     <entryLink id="487e-50ef-9f17-353d" name="Beasts of Nurgle" hidden="false" collective="false" import="true" targetId="ec6e-27e4-f8e1-6386" type="selectionEntry"/>
     <entryLink id="1c30-464b-6644-2b96" name="Nurglings" hidden="false" collective="false" import="true" targetId="6c25-524f-7103-13f5" type="selectionEntry"/>
     <entryLink id="64c0-54f5-c203-b77c" name="K&apos;daai Fireborn" hidden="false" collective="false" import="true" targetId="e31d-fd4c-f135-b8aa" type="selectionEntry"/>
@@ -327,6 +341,19 @@
   </entryLinks>
   <sharedSelectionEntries>
     <selectionEntry id="a3ed-24d6-0a9f-8665" name="Allegiance" hidden="false" collective="false" import="true" type="upgrade">
+      <modifiers>
+        <modifier type="set" field="6c4c-5c36-e0fa-8064" value="0.0">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="6cd6-b22e-bfcb-9589" type="instanceOf"/>
+                <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="e3a6-45ca-4974-b489" type="instanceOf"/>
+                <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4373-740f-1bf3-b0aa" type="instanceOf"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
       <constraints>
         <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="a0b7-bcf0-5131-2bf7" type="max"/>
         <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="6c4c-5c36-e0fa-8064" type="min"/>
