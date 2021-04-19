@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="5b1a-bf72-0ab6-2d76" name="Chaos" revision="3" battleScribeVersion="2.03" authorName="Thulram" library="false" gameSystemId="e832-3291-06be-cab1" gameSystemRevision="2" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="5b1a-bf72-0ab6-2d76" name="Chaos" revision="4" battleScribeVersion="2.03" authorName="Thulram" library="false" gameSystemId="e832-3291-06be-cab1" gameSystemRevision="3" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <categoryEntries>
     <categoryEntry id="fc3d-b24c-012c-9cfc" name="General - Lord of Pain" hidden="false"/>
+    <categoryEntry id="43f6-2f55-865c-f431" name="General - Gortle Pulpskull" hidden="false"/>
   </categoryEntries>
   <selectionEntries>
     <selectionEntry id="0fab-488b-1675-d389" name="Vortemis and The Eyes of the Nine (separate units)" publicationId="97ef-9bf4-54c7-6623" hidden="false" collective="false" import="true" type="upgrade">
@@ -2829,6 +2830,7 @@ If a friendly MAGISTER is slain by this effect, roll a dice before removing the 
     <entryLink id="d5c9-a5e6-c906-a9f4" name="Depraved Carnival" hidden="false" collective="false" import="true" targetId="7445-01ac-106e-cc15" type="selectionEntry"/>
     <entryLink id="e1db-2ba6-b0ba-f97a" name="Exalted Speed-Knights" hidden="false" collective="false" import="true" targetId="5138-907e-2b17-b00d" type="selectionEntry"/>
     <entryLink id="24cc-3115-1308-fa32" name="Nobles of Excess" hidden="false" collective="false" import="true" targetId="56c2-a902-8d33-96ad" type="selectionEntry"/>
+    <entryLink id="6a22-637f-54b9-5af9" name="Invidian Plaguehost" hidden="false" collective="false" import="true" targetId="e458-87e6-2020-e274" type="selectionEntry"/>
   </entryLinks>
   <sharedSelectionEntries>
     <selectionEntry id="f53b-034f-f032-894a" name="Allegiance" hidden="false" collective="false" import="true" type="upgrade">
@@ -8303,6 +8305,98 @@ After rolling a dice for each unit from this battalion, roll a dice for each ene
       </selectionEntryGroups>
       <costs>
         <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="140.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="e458-87e6-2020-e274" name="Invidian Plaguehost" hidden="false" collective="false" import="true" type="upgrade">
+      <constraints>
+        <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="9528-c6f5-f703-ebba" type="max"/>
+      </constraints>
+      <profiles>
+        <profile id="ac6a-758c-acd7-a9f2" name="Bulwark of Flesh" hidden="false" typeId="66c5-932e-004a-574c" typeName="Battalion Abilities">
+          <characteristics>
+            <characteristic name="Battalion Ability" typeId="23f7-32c0-e059-29b2">The first time a Plaguebearers unit from this battalion is destroyed, a new Plaguebearers unit with 10 models is added to your army. Set up the unit wholly within your territory, wholly within 6&quot; of the edge of the battlefield, and more than 9&quot; from any enemy units.</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <categoryLinks>
+        <categoryLink id="31c7-3c4d-eedf-439c" name="New CategoryLink" hidden="false" targetId="c03a-b1a8-66c6-3637" primary="true"/>
+      </categoryLinks>
+      <selectionEntryGroups>
+        <selectionEntryGroup id="74bf-38c7-64d5-5f75" name="2 Plaguebearers units" hidden="false" collective="false" import="true">
+          <constraints>
+            <constraint field="selections" scope="parent" value="2.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="a2c4-6b1c-f64a-0619" type="max"/>
+            <constraint field="selections" scope="parent" value="2.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="2aa8-9b46-7482-9de0" type="min"/>
+          </constraints>
+          <entryLinks>
+            <entryLink id="c84f-d028-3c01-7846" name="Plaguebearers" hidden="false" collective="false" import="true" targetId="a978-0fc6-7c3a-86e0" type="selectionEntry"/>
+          </entryLinks>
+        </selectionEntryGroup>
+        <selectionEntryGroup id="5c4a-a5fd-ee6a-609d" name="1 Spoilpox Scrivener" hidden="false" collective="false" import="true">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="bafc-58c0-19ee-fd5d" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="c2ee-65fd-3e9f-8e72" type="min"/>
+          </constraints>
+          <entryLinks>
+            <entryLink id="3bda-781b-969e-3580" name="Spoilpox Scrivener, Herald of Nurgle" hidden="false" collective="false" import="true" targetId="c666-0207-6daa-45b6" type="selectionEntry">
+              <entryLinks>
+                <entryLink id="047c-5871-bc06-f79c" name="General" hidden="false" collective="false" import="true" targetId="98a4-3d6d-a7b9-399f" type="selectionEntry"/>
+                <entryLink id="c5d0-ecd3-592f-a4a9" name="Artefacts of Power" hidden="false" collective="false" import="true" targetId="79a3-0cc4-cb04-8668" type="selectionEntryGroup"/>
+                <entryLink id="ec98-8dbf-8d6e-c58d" name="Command Traits" hidden="false" collective="false" import="true" targetId="a8a9-33dd-ba17-6d58" type="selectionEntryGroup"/>
+              </entryLinks>
+            </entryLink>
+          </entryLinks>
+        </selectionEntryGroup>
+        <selectionEntryGroup id="ce44-139a-5c5a-4231" name="1 Sloppity Bilepiper (Gortle Pulpskull)" hidden="false" collective="false" import="true">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="3315-e001-0fe4-20c3" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="ac7a-7471-d885-3b87" type="min"/>
+          </constraints>
+          <entryLinks>
+            <entryLink id="22bd-2d3f-8ab3-1f79" name="Sloppity Bilepiper, Herald of Nurgle" hidden="false" collective="false" import="true" targetId="9efb-863a-c137-d6ae" type="selectionEntry">
+              <selectionEntries>
+                <selectionEntry id="7037-cff6-3007-26fb" name="0. Rude Limericks" hidden="false" collective="false" import="true" type="upgrade">
+                  <modifiers>
+                    <modifier type="set" field="hidden" value="true">
+                      <conditions>
+                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="43f6-2f55-865c-f431" type="equalTo"/>
+                      </conditions>
+                    </modifier>
+                    <modifier type="set" field="a98d-529a-2408-ddc8" value="1.0">
+                      <conditions>
+                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="43f6-2f55-865c-f431" type="greaterThan"/>
+                      </conditions>
+                    </modifier>
+                  </modifiers>
+                  <constraints>
+                    <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="18ab-6226-44e5-e636" type="max"/>
+                    <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="a98d-529a-2408-ddc8" type="min"/>
+                  </constraints>
+                  <profiles>
+                    <profile id="e1aa-4624-ff49-4180" name="Rude Limericks" hidden="false" typeId="1504-23bf-8850-4f65" typeName="Command Traits">
+                      <characteristics>
+                        <characteristic name="Command Trait" typeId="0145-9acf-f5dc-d543">Add 1 to the Bravery characteristic of NURGLE DAEMON units from this battalion while they are wholly within 14&quot; of the SLOPPITY BILEPIPER from the same battalion (in addition to the modifier from the Disease of Mirth ability).</characteristic>
+                      </characteristics>
+                    </profile>
+                  </profiles>
+                  <costs>
+                    <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
+                  </costs>
+                </selectionEntry>
+              </selectionEntries>
+              <entryLinks>
+                <entryLink id="276e-37a7-124f-e4c2" name="Artefacts of Power" hidden="false" collective="false" import="true" targetId="79a3-0cc4-cb04-8668" type="selectionEntryGroup"/>
+                <entryLink id="aa51-60ed-3564-d086" name="General" hidden="false" collective="false" import="true" targetId="98a4-3d6d-a7b9-399f" type="selectionEntry">
+                  <categoryLinks>
+                    <categoryLink id="1d60-47b7-6fea-4d8d" name="General - Gortle Pulpskull" hidden="false" targetId="43f6-2f55-865c-f431" primary="false"/>
+                  </categoryLinks>
+                </entryLink>
+              </entryLinks>
+            </entryLink>
+          </entryLinks>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
+      <costs>
+        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="120.0"/>
       </costs>
     </selectionEntry>
   </sharedSelectionEntries>

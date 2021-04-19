@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="7286-0e34-cdf6-ca5d" name="Death - Ossiarch Bonereapers" revision="5" battleScribeVersion="2.03" authorName="Thulram" library="false" gameSystemId="e832-3291-06be-cab1" gameSystemRevision="5" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="7286-0e34-cdf6-ca5d" name="Death - Ossiarch Bonereapers" revision="6" battleScribeVersion="2.03" authorName="Thulram" library="false" gameSystemId="e832-3291-06be-cab1" gameSystemRevision="5" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <profileTypes>
     <profileType id="bb3a-6a96-1b3d-bfaf" name="Katakros Wounds">
       <characteristicTypes>
@@ -59,6 +59,8 @@
     <categoryEntry id="5a28-1e0c-4890-aac6" name="Mortek Ballistari" hidden="false"/>
     <categoryEntry id="7abf-82c7-aded-d8ea" name="Ossiarch Cohort" hidden="false"/>
     <categoryEntry id="fcf0-628c-5232-536f" name="General - Vokmortian" hidden="false"/>
+    <categoryEntry id="9655-4e12-84d1-06ed" name="General - Horrek Venzai" hidden="false"/>
+    <categoryEntry id="c4e8-33e6-9ce4-48de" name="Horrek Venzai" hidden="false"/>
   </categoryEntries>
   <selectionEntries>
     <selectionEntry id="5e06-60ff-99f6-11be" name="The Briar Queen and Thorns (separate units) [Allies]" hidden="false" collective="false" import="true" type="upgrade">
@@ -413,6 +415,7 @@
         </modifier>
       </modifiers>
     </entryLink>
+    <entryLink id="9ed0-1283-61ee-2201" name="Horrek&apos;s Dreadlance" hidden="false" collective="false" import="true" targetId="643e-35f0-5081-5ef1" type="selectionEntry"/>
   </entryLinks>
   <sharedSelectionEntries>
     <selectionEntry id="3f18-f49d-6ccb-d4c2" name="Allegiance" hidden="false" collective="false" import="true" type="upgrade">
@@ -3568,6 +3571,64 @@ Once in each of your hero phases, if this unit is within 6&quot; of an ENDLESS S
         <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
       </costs>
     </selectionEntry>
+    <selectionEntry id="643e-35f0-5081-5ef1" name="Horrek&apos;s Dreadlance" hidden="false" collective="false" import="true" type="upgrade">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="1bd4-6c0a-0e87-1f0c" type="equalTo"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <constraints>
+        <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="c8fd-5701-d5c6-aae1" type="max"/>
+      </constraints>
+      <profiles>
+        <profile id="2bb5-95e2-baa1-76fb" name="Relentless Attackers" hidden="false" typeId="66c5-932e-004a-574c" typeName="Battalion Abilities">
+          <characteristics>
+            <characteristic name="Battalion Ability" typeId="23f7-32c0-e059-29b2">Each time you pick a unit from this battalion when you use the Rally Back command ability, roll a dice. On a 4+, you receive 1 relentless discipline point.</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <categoryLinks>
+        <categoryLink id="e6ba-a932-45f8-371c" name="New CategoryLink" hidden="false" targetId="c03a-b1a8-66c6-3637" primary="true"/>
+      </categoryLinks>
+      <selectionEntryGroups>
+        <selectionEntryGroup id="92c4-e00b-f267-2f33" name="2 Kavalos Deathriders units" hidden="false" collective="false" import="true">
+          <constraints>
+            <constraint field="selections" scope="parent" value="2.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="0e0c-f251-46e8-a32a" type="max"/>
+            <constraint field="selections" scope="parent" value="2.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="38b5-c493-a2ce-88ef" type="min"/>
+          </constraints>
+          <entryLinks>
+            <entryLink id="9718-5fbc-4f5c-160b" name="Kavalos Deathriders" hidden="false" collective="false" import="true" targetId="a636-1946-9ccb-e060" type="selectionEntry"/>
+          </entryLinks>
+        </selectionEntryGroup>
+        <selectionEntryGroup id="5f61-b876-e5ca-cc3d" name="Liege-Kavalos (Horrek Venzai)" hidden="false" collective="false" import="true">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="5e11-d715-d69a-f9fa" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8a3f-3bf8-8942-ce2d" type="min"/>
+          </constraints>
+          <entryLinks>
+            <entryLink id="06f9-7180-d0dc-3b66" name="Liege Kavalos" hidden="false" collective="false" import="true" targetId="c786-c155-a06a-ea03" type="selectionEntry">
+              <categoryLinks>
+                <categoryLink id="fb6c-23d5-92d3-26b9" name="Horrek Venzai" hidden="false" targetId="c4e8-33e6-9ce4-48de" primary="false"/>
+              </categoryLinks>
+              <entryLinks>
+                <entryLink id="c8d2-3fb3-c0ad-b9ec" name="Command Traits" hidden="false" collective="false" import="true" targetId="a4bb-3004-c0d3-8fe1" type="selectionEntryGroup"/>
+                <entryLink id="2a0f-64be-a3b9-d854" name="General" hidden="false" collective="false" import="true" targetId="98a4-3d6d-a7b9-399f" type="selectionEntry">
+                  <categoryLinks>
+                    <categoryLink id="a4a1-5e07-45df-7557" name="General - Horrek Venzai" hidden="false" targetId="9655-4e12-84d1-06ed" primary="false"/>
+                  </categoryLinks>
+                </entryLink>
+                <entryLink id="6a6e-3aac-fa48-5e3b" name="Artefacts of Power" hidden="false" collective="false" import="true" targetId="b737-66c3-ce13-27db" type="selectionEntryGroup"/>
+              </entryLinks>
+            </entryLink>
+          </entryLinks>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
+      <costs>
+        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="120.0"/>
+      </costs>
+    </selectionEntry>
   </sharedSelectionEntries>
   <sharedSelectionEntryGroups>
     <selectionEntryGroup id="a4bb-3004-c0d3-8fe1" name="Command Traits" publicationId="4522-98a4-f23e-c0df" hidden="false" collective="false" import="true">
@@ -3777,7 +3838,21 @@ Once in each of your hero phases, if this unit is within 6&quot; of an ENDLESS S
                     <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="f7e2-2a6f-3137-0edb" type="equalTo"/>
                   </conditions>
                 </modifier>
+                <modifier type="set" field="2604-8938-5e1b-0857" value="1.0">
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="c661-44d6-0f5b-11ff" type="instanceOf"/>
+                        <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="8b3d-7f03-e1f9-eaf5" type="notInstanceOf"/>
+                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="00c1-888d-d783-276c" type="greaterThan"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
               </modifiers>
+              <constraints>
+                <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="2604-8938-5e1b-0857" type="min"/>
+              </constraints>
               <profiles>
                 <profile id="17df-2a23-c90d-19c9" name="Katakros&apos; Chosen" hidden="false" typeId="1504-23bf-8850-4f65" typeName="Command Traits">
                   <characteristics>
@@ -3798,7 +3873,21 @@ Once per battle, at the start of your hero phase, if this general is on the batt
                     <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="ecaf-0dd5-6134-97ae" type="equalTo"/>
                   </conditions>
                 </modifier>
+                <modifier type="set" field="2973-94ad-ca94-3577" value="1.0">
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="c661-44d6-0f5b-11ff" type="instanceOf"/>
+                        <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="8b3d-7f03-e1f9-eaf5" type="notInstanceOf"/>
+                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="49fd-7cb9-5b95-8555" type="greaterThan"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
               </modifiers>
+              <constraints>
+                <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="2973-94ad-ca94-3577" type="min"/>
+              </constraints>
               <profiles>
                 <profile id="ebbd-6cb1-9b09-9b96" name="Mighty Archaeossian" hidden="false" typeId="1504-23bf-8850-4f65" typeName="Command Traits">
                   <characteristics>
@@ -3819,7 +3908,28 @@ Add 2 to this general’s Wounds characteristic.</characteristic>
                     <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="3ae9-1c93-0211-fc84" type="equalTo"/>
                   </conditions>
                 </modifier>
+                <modifier type="set" field="994f-e13b-7b1f-d48e" value="1.0">
+                  <conditionGroups>
+                    <conditionGroup type="or">
+                      <conditions>
+                        <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="9655-4e12-84d1-06ed" type="instanceOf"/>
+                      </conditions>
+                      <conditionGroups>
+                        <conditionGroup type="and">
+                          <conditions>
+                            <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="c661-44d6-0f5b-11ff" type="instanceOf"/>
+                            <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="8b3d-7f03-e1f9-eaf5" type="notInstanceOf"/>
+                            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="1bd4-6c0a-0e87-1f0c" type="greaterThan"/>
+                          </conditions>
+                        </conditionGroup>
+                      </conditionGroups>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
               </modifiers>
+              <constraints>
+                <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="994f-e13b-7b1f-d48e" type="min"/>
+              </constraints>
               <profiles>
                 <profile id="a179-9c1d-d9dc-1041" name="Twisted Challenge" hidden="false" typeId="1504-23bf-8850-4f65" typeName="Command Traits">
                   <characteristics>
@@ -3840,7 +3950,21 @@ At the start of the combat phase, you can pick 1 enemy HERO within 3&quot; of th
                     <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="4421-5433-f44a-6321" type="equalTo"/>
                   </conditions>
                 </modifier>
+                <modifier type="set" field="b78a-f9cc-72cf-9512" value="1.0">
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="c661-44d6-0f5b-11ff" type="instanceOf"/>
+                        <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="8b3d-7f03-e1f9-eaf5" type="notInstanceOf"/>
+                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="d137-68f1-3c1c-5e74" type="greaterThan"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
               </modifiers>
+              <constraints>
+                <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="b78a-f9cc-72cf-9512" type="min"/>
+              </constraints>
               <profiles>
                 <profile id="5363-fd0f-fbbc-7a9b" name="Scrimshawed Savage" hidden="false" typeId="1504-23bf-8850-4f65" typeName="Command Traits">
                   <characteristics>
@@ -3861,7 +3985,21 @@ In each of your hero phases, roll a dice for this general. On a 5+, add 1 to the
                     <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="a7f2-ae4d-d006-04b5" type="equalTo"/>
                   </conditions>
                 </modifier>
+                <modifier type="set" field="aaf8-594e-a32d-7be0" value="1.0">
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="c661-44d6-0f5b-11ff" type="instanceOf"/>
+                        <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="8b3d-7f03-e1f9-eaf5" type="notInstanceOf"/>
+                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="550b-42cc-63ca-3e61" type="greaterThan"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
               </modifiers>
+              <constraints>
+                <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="aaf8-594e-a32d-7be0" type="min"/>
+              </constraints>
               <profiles>
                 <profile id="16d3-59c3-613d-9408" name="Unsettling and Sinister" hidden="false" typeId="1504-23bf-8850-4f65" typeName="Command Traits">
                   <characteristics>
@@ -3882,7 +4020,21 @@ In each of your hero phases, roll a dice for this general. On a 5+, add 1 to the
                     <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="4c4e-c640-e9cd-6783" type="equalTo"/>
                   </conditions>
                 </modifier>
+                <modifier type="set" field="7082-c013-ba67-36da" value="1.0">
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="c661-44d6-0f5b-11ff" type="instanceOf"/>
+                        <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="8b3d-7f03-e1f9-eaf5" type="notInstanceOf"/>
+                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="ca70-ff1b-069e-b056" type="greaterThan"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
               </modifiers>
+              <constraints>
+                <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="7082-c013-ba67-36da" type="min"/>
+              </constraints>
               <profiles>
                 <profile id="cf9d-025f-1165-aea7" name="Wrathful Avenger" hidden="false" typeId="1504-23bf-8850-4f65" typeName="Command Traits">
                   <characteristics>
@@ -4430,10 +4582,22 @@ Pick 1 of the bearer’s melee weapons. Add 1 to the Attacks characteristic of t
                     </conditionGroup>
                   </conditionGroups>
                 </modifier>
+                <modifier type="set" field="5fde-5260-7789-f6b3" value="1.0">
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="bb9a-1f7d-39f5-36fc" type="greaterThan"/>
+                        <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="c4e8-33e6-9ce4-48de" type="instanceOf"/>
+                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="ba14-5553-456e-33ad" type="greaterThan"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
               </modifiers>
               <constraints>
                 <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="24e7-fd41-d10b-12d7" type="max"/>
                 <constraint field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="8dbe-5d5f-39a3-abc6" type="min"/>
+                <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="5fde-5260-7789-f6b3" type="min"/>
               </constraints>
               <profiles>
                 <profile id="2d17-5cb7-18bd-d2cd" name="Nadir-bound Mount" hidden="false" typeId="0c9d-7abe-a53c-6a37" typeName="Artefacts">

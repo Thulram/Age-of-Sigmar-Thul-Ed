@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="be67-bfd4-4381-fac6" name="Order - Cities of Sigmar" revision="8" battleScribeVersion="2.03" authorName="Thulram" library="false" gameSystemId="e832-3291-06be-cab1" gameSystemRevision="8" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="be67-bfd4-4381-fac6" name="Order - Cities of Sigmar" revision="9" battleScribeVersion="2.03" authorName="Thulram" library="false" gameSystemId="e832-3291-06be-cab1" gameSystemRevision="9" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <profileTypes>
     <profileType id="6ed8-2f25-715e-ccd5" name="Drakeblood Curse">
       <characteristicTypes>
@@ -218,6 +218,26 @@
       </constraints>
     </categoryEntry>
     <categoryEntry id="5025-733f-b4be-1bc2" name="General - Drusa Kraeth" hidden="false"/>
+    <categoryEntry id="f5a0-4952-8421-1ee6" name="Allegiant - Lumineth Realm-Lords" hidden="false">
+      <modifiers>
+        <modifier type="increment" field="fd05-f54b-59ca-0f92" value="1.0">
+          <repeats>
+            <repeat field="selections" scope="force" value="4.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="unit" repeats="1" roundUp="false"/>
+          </repeats>
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition field="selections" scope="force" value="3.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="unit" type="greaterThan"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="8c4a-0cbf-664c-32b1" type="greaterThan"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+      <constraints>
+        <constraint field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="fd05-f54b-59ca-0f92" type="max"/>
+      </constraints>
+    </categoryEntry>
   </categoryEntries>
   <selectionEntries>
     <selectionEntry id="85ad-9788-b7b3-83bb" name="Averon Stormsire and Cursebreakers (separate units)" hidden="false" collective="false" import="true" type="upgrade">
@@ -417,8 +437,11 @@
             <entryLink id="3e36-4ac8-2677-2cc3" name="General" hidden="false" collective="false" import="true" targetId="98a4-3d6d-a7b9-399f" type="selectionEntry">
               <categoryLinks>
                 <categoryLink id="72dd-ede3-dbab-673b" name="Named General" hidden="false" targetId="8b3d-7f03-e1f9-eaf5" primary="false"/>
+                <categoryLink id="d15f-804b-421f-bf2e" name="Adjutant Unlock" hidden="false" targetId="8974-618e-c993-fdeb" primary="false"/>
+                <categoryLink id="36c8-f212-4923-9af6" name="Honoured Retinue Unlock" hidden="false" targetId="b5b4-1120-6ef3-afa0" primary="false"/>
               </categoryLinks>
             </entryLink>
+            <entryLink id="363b-2d6e-7e9e-a88f" name="General&apos;s Adjutant" hidden="false" collective="false" import="true" targetId="9217-d5c0-9f8d-de1a" type="selectionEntry"/>
           </entryLinks>
         </entryLink>
         <entryLink id="cce5-2544-559c-09f4" name="The Blade-Coven" hidden="false" collective="false" import="true" targetId="0251-a229-f166-49ba" type="selectionEntry">
@@ -454,6 +477,8 @@
             <entryLink id="0621-624c-5741-80eb" name="General" hidden="false" collective="false" import="true" targetId="98a4-3d6d-a7b9-399f" type="selectionEntry">
               <categoryLinks>
                 <categoryLink id="a7f7-f8e7-adaa-90db" name="Named General" hidden="false" targetId="8b3d-7f03-e1f9-eaf5" primary="false"/>
+                <categoryLink id="4649-01cc-9a37-d910" name="Adjutant Unlock" hidden="false" targetId="8974-618e-c993-fdeb" primary="false"/>
+                <categoryLink id="86be-e8f0-8d17-3b0a" name="Honoured Retinue Unlock" hidden="false" targetId="b5b4-1120-6ef3-afa0" primary="false"/>
               </categoryLinks>
             </entryLink>
             <entryLink id="70ce-f55c-6285-7e10" name="Cities of Sigmar Spell Lores" hidden="false" collective="false" import="true" targetId="aa48-e2aa-1ecc-eb1a" type="selectionEntryGroup"/>
@@ -467,6 +492,54 @@
       </entryLinks>
       <costs>
         <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="f31d-316f-8ecf-fbd9" name="Myari Lightcaller &amp; Purifiers (separate units)" publicationId="fe71-80f7-f53f-3348" hidden="false" collective="false" import="true" type="upgrade">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="8c4a-0cbf-664c-32b1" type="equalTo"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <constraints>
+        <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="938d-be94-596a-4ecf" type="max"/>
+      </constraints>
+      <categoryLinks>
+        <categoryLink id="0555-3c6b-64f3-5968" name="New CategoryLink" hidden="false" targetId="93cb-21d9-e1d5-6161" primary="true"/>
+      </categoryLinks>
+      <entryLinks>
+        <entryLink id="f393-eb5c-41df-4d3a" name="Myari Lightcaller" hidden="false" collective="false" import="true" targetId="6203-1ba2-2be9-6288" type="selectionEntry">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8569-f552-8621-94b7" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="f217-d981-85a1-8a3a" type="min"/>
+          </constraints>
+          <categoryLinks>
+            <categoryLink id="d32c-9fb7-ac73-44c2" name="Allegiant - Lumineth Realm-Lords" hidden="false" targetId="f5a0-4952-8421-1ee6" primary="false"/>
+          </categoryLinks>
+          <entryLinks>
+            <entryLink id="98cc-47f4-bf8c-f997" name="General" hidden="false" collective="false" import="true" targetId="98a4-3d6d-a7b9-399f" type="selectionEntry">
+              <categoryLinks>
+                <categoryLink id="98df-d927-8cd6-9a7f" name="Adjutant Unlock" hidden="false" targetId="8974-618e-c993-fdeb" primary="false"/>
+                <categoryLink id="fb16-9b69-149b-ebeb" name="Honoured Retinue Unlock" hidden="false" targetId="b5b4-1120-6ef3-afa0" primary="false"/>
+                <categoryLink id="55be-fba9-4b58-b538" name="Named General" hidden="false" targetId="8b3d-7f03-e1f9-eaf5" primary="false"/>
+              </categoryLinks>
+            </entryLink>
+            <entryLink id="7d25-4d8a-1a88-8bf5" name="General&apos;s Adjutant" hidden="false" collective="false" import="true" targetId="9217-d5c0-9f8d-de1a" type="selectionEntry"/>
+          </entryLinks>
+        </entryLink>
+        <entryLink id="4c36-b609-9584-71f7" name="Myari&apos;s Purifiers" hidden="false" collective="false" import="true" targetId="b1e7-9488-0f4c-1679" type="selectionEntry">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="0f32-ac63-0039-2045" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="6661-dd74-a376-dcea" type="min"/>
+          </constraints>
+          <categoryLinks>
+            <categoryLink id="2646-a1c8-b9ab-7cb7" name="Allegiant - Lumineth Realm-Lords" hidden="false" targetId="f5a0-4952-8421-1ee6" primary="false"/>
+          </categoryLinks>
+        </entryLink>
+      </entryLinks>
+      <costs>
+        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="220.0"/>
       </costs>
     </selectionEntry>
   </selectionEntries>
@@ -3992,6 +4065,17 @@
         <categoryLink id="e34d-82ca-3825-d606" name="Allegiant - Daughters of Khaine" hidden="false" targetId="3173-37bc-b90a-a50f" primary="false"/>
         <categoryLink id="3de4-a896-4534-aa2b" name="BATTLELINE" hidden="false" targetId="a42d-220e-6a88-7bf6" primary="false"/>
       </categoryLinks>
+      <entryLinks>
+        <entryLink id="52b7-8c07-cacc-4710" name="Honoured Retinue" hidden="false" collective="false" import="true" targetId="5462-02e1-ed1a-d03f" type="selectionEntry">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="parent" value="4.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" type="greaterThan"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </entryLink>
+      </entryLinks>
     </entryLink>
     <entryLink id="5e4c-0bb1-6930-342b" name="Blood Stalkers" hidden="false" collective="false" import="true" targetId="f565-aec7-6075-c942" type="selectionEntry">
       <modifiers>
@@ -4017,6 +4101,17 @@
         <categoryLink id="7ce8-cbe3-8368-b34d" name="Allegiant - Daughters of Khaine" hidden="false" targetId="3173-37bc-b90a-a50f" primary="false"/>
         <categoryLink id="039e-04a4-5ac1-8dd8" name="BATTLELINE" hidden="false" targetId="a42d-220e-6a88-7bf6" primary="false"/>
       </categoryLinks>
+      <entryLinks>
+        <entryLink id="30d3-cdb3-6705-2a85" name="Honoured Retinue" hidden="false" collective="false" import="true" targetId="5462-02e1-ed1a-d03f" type="selectionEntry">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="parent" value="4.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" type="greaterThan"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </entryLink>
+      </entryLinks>
     </entryLink>
     <entryLink id="1513-ad53-b42a-2b48" name="Bloodwrack Medusa" hidden="false" collective="false" import="true" targetId="4767-b7f8-0507-9909" type="selectionEntry">
       <modifiers>
@@ -4036,8 +4131,11 @@
         <entryLink id="a1b2-3557-e787-1691" name="General" hidden="false" collective="false" import="true" targetId="98a4-3d6d-a7b9-399f" type="selectionEntry">
           <categoryLinks>
             <categoryLink id="0237-c60a-48bf-3082" name="General - Melusai" hidden="false" targetId="0094-ed50-0305-4c39" primary="false"/>
+            <categoryLink id="cf8f-da28-1d7e-16c2" name="Adjutant Unlock" hidden="false" targetId="8974-618e-c993-fdeb" primary="false"/>
+            <categoryLink id="5e94-ac53-4442-83b0" name="Honoured Retinue Unlock" hidden="false" targetId="b5b4-1120-6ef3-afa0" primary="false"/>
           </categoryLinks>
         </entryLink>
+        <entryLink id="296b-6ff2-c986-5d10" name="General&apos;s Adjutant" hidden="false" collective="false" import="true" targetId="9217-d5c0-9f8d-de1a" type="selectionEntry"/>
       </entryLinks>
     </entryLink>
     <entryLink id="85cc-9ba5-b5a6-86d4" name="Bloodwrack Shrine" hidden="false" collective="false" import="true" targetId="3fe0-b78b-5eb6-863a" type="selectionEntry">
@@ -4074,7 +4172,15 @@
         <categoryLink id="4c46-4cfd-0334-d0cc" name="Allegiant - Daughters of Khaine" hidden="false" targetId="3173-37bc-b90a-a50f" primary="false"/>
       </categoryLinks>
       <entryLinks>
-        <entryLink id="a790-f8c5-96b4-bde2" name="Cities of Sigmar Spell Lores" hidden="false" collective="false" import="true" targetId="aa48-e2aa-1ecc-eb1a" type="selectionEntryGroup"/>
+        <entryLink id="af1f-69c2-53e2-a52a" name="Honoured Retinue" hidden="false" collective="false" import="true" targetId="5462-02e1-ed1a-d03f" type="selectionEntry">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="parent" value="4.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" type="greaterThan"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </entryLink>
       </entryLinks>
     </entryLink>
     <entryLink id="c3a4-55bd-8a8c-7c23" name="Hag Queen" hidden="false" collective="false" import="true" targetId="8482-6f84-8e0c-0546" type="selectionEntry">
@@ -4092,9 +4198,15 @@
         <categoryLink id="b456-907f-2512-17a5" name="Allegiant - Daughters of Khaine" hidden="false" targetId="3173-37bc-b90a-a50f" primary="false"/>
       </categoryLinks>
       <entryLinks>
-        <entryLink id="f021-e925-db7e-24b1" name="General" hidden="false" collective="false" import="true" targetId="98a4-3d6d-a7b9-399f" type="selectionEntry"/>
         <entryLink id="045a-e36c-00e0-27f8" name="Artefacts of Power" hidden="false" collective="false" import="true" targetId="b788-a656-5a3a-9c4f" type="selectionEntryGroup"/>
         <entryLink id="1890-b63b-cddb-5711" name="Command Traits" hidden="false" collective="false" import="true" targetId="8c92-8f4c-91f5-9c79" type="selectionEntryGroup"/>
+        <entryLink id="5d51-f9fb-8383-bbdb" name="General&apos;s Adjutant" hidden="false" collective="false" import="true" targetId="9217-d5c0-9f8d-de1a" type="selectionEntry"/>
+        <entryLink id="d7fe-5ef6-7bc4-56ff" name="General" hidden="false" collective="false" import="true" targetId="98a4-3d6d-a7b9-399f" type="selectionEntry">
+          <categoryLinks>
+            <categoryLink id="ca55-b406-f5a0-2071" name="Adjutant Unlock" hidden="false" targetId="8974-618e-c993-fdeb" primary="false"/>
+            <categoryLink id="4b7e-0172-81ac-f23b" name="Honoured Retinue Unlock" hidden="false" targetId="b5b4-1120-6ef3-afa0" primary="false"/>
+          </categoryLinks>
+        </entryLink>
       </entryLinks>
     </entryLink>
     <entryLink id="d595-af1a-dbb8-881f" name="Hag Queen on Cauldron of Blood" hidden="false" collective="false" import="true" targetId="8589-0ad5-e172-db89" type="selectionEntry">
@@ -4128,6 +4240,17 @@
       <categoryLinks>
         <categoryLink id="ae13-ed53-7eb0-c802" name="Allegiant - Daughters of Khaine" hidden="false" targetId="3173-37bc-b90a-a50f" primary="false"/>
       </categoryLinks>
+      <entryLinks>
+        <entryLink id="01c7-0c2c-ce7d-72c0" name="Honoured Retinue" hidden="false" collective="false" import="true" targetId="5462-02e1-ed1a-d03f" type="selectionEntry">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="parent" value="4.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" type="greaterThan"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </entryLink>
+      </entryLinks>
     </entryLink>
     <entryLink id="36ec-c22a-3f40-7863" name="Khinerai Lifetakers" hidden="false" collective="false" import="true" targetId="cb5d-fabe-1eff-5352" type="selectionEntry">
       <modifiers>
@@ -4140,6 +4263,17 @@
       <categoryLinks>
         <categoryLink id="d1eb-03cb-ca0b-ee6b" name="Allegiant - Daughters of Khaine" hidden="false" targetId="3173-37bc-b90a-a50f" primary="false"/>
       </categoryLinks>
+      <entryLinks>
+        <entryLink id="358b-1b1a-e0e6-ffd4" name="Honoured Retinue" hidden="false" collective="false" import="true" targetId="5462-02e1-ed1a-d03f" type="selectionEntry">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="parent" value="4.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" type="greaterThan"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </entryLink>
+      </entryLinks>
     </entryLink>
     <entryLink id="bf83-e036-6fb3-0c51" name="Melusai Ironscale" hidden="false" collective="false" import="true" targetId="afa6-31c9-b988-e6fb" type="selectionEntry">
       <modifiers>
@@ -4155,9 +4289,12 @@
       <entryLinks>
         <entryLink id="534a-12cb-4096-9196" name="Artefacts of Power" hidden="false" collective="false" import="true" targetId="b788-a656-5a3a-9c4f" type="selectionEntryGroup"/>
         <entryLink id="8e09-6be5-2ceb-a0ce" name="Command Traits" hidden="false" collective="false" import="true" targetId="8c92-8f4c-91f5-9c79" type="selectionEntryGroup"/>
-        <entryLink id="d9d3-eda1-a976-b24e" name="General" hidden="false" collective="false" import="true" targetId="98a4-3d6d-a7b9-399f" type="selectionEntry">
+        <entryLink id="3ad6-7018-2822-8c88" name="General&apos;s Adjutant" hidden="false" collective="false" import="true" targetId="9217-d5c0-9f8d-de1a" type="selectionEntry"/>
+        <entryLink id="fdfe-c8eb-379d-8751" name="General" hidden="false" collective="false" import="true" targetId="98a4-3d6d-a7b9-399f" type="selectionEntry">
           <categoryLinks>
-            <categoryLink id="c1a9-8799-358a-2502" name="General - Melusai" hidden="false" targetId="0094-ed50-0305-4c39" primary="false"/>
+            <categoryLink id="5390-2703-e4c7-c03a" name="General - Melusai" hidden="false" targetId="0094-ed50-0305-4c39" primary="false"/>
+            <categoryLink id="1412-7526-d1f6-82fc" name="Adjutant Unlock" hidden="false" targetId="8974-618e-c993-fdeb" primary="false"/>
+            <categoryLink id="0f4b-11f3-6141-c2ba" name="Honoured Retinue Unlock" hidden="false" targetId="b5b4-1120-6ef3-afa0" primary="false"/>
           </categoryLinks>
         </entryLink>
       </entryLinks>
@@ -4173,6 +4310,17 @@
       <categoryLinks>
         <categoryLink id="045a-77fc-76b1-681e" name="Allegiant - Daughters of Khaine" hidden="false" targetId="3173-37bc-b90a-a50f" primary="false"/>
       </categoryLinks>
+      <entryLinks>
+        <entryLink id="11a6-492c-ff83-4c88" name="Honoured Retinue" hidden="false" collective="false" import="true" targetId="5462-02e1-ed1a-d03f" type="selectionEntry">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="parent" value="4.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" type="greaterThan"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </entryLink>
+      </entryLinks>
     </entryLink>
     <entryLink id="1a11-056f-1540-62e4" name="Slaughter Queen" hidden="false" collective="false" import="true" targetId="22b7-1197-cba3-18d1" type="selectionEntry">
       <modifiers>
@@ -4189,9 +4337,15 @@
         <categoryLink id="359d-a484-6602-386c" name="Allegiant - Daughters of Khaine" hidden="false" targetId="3173-37bc-b90a-a50f" primary="false"/>
       </categoryLinks>
       <entryLinks>
-        <entryLink id="93ca-de73-4c03-cb3b" name="General" hidden="false" collective="false" import="true" targetId="98a4-3d6d-a7b9-399f" type="selectionEntry"/>
+        <entryLink id="93ca-de73-4c03-cb3b" name="General" hidden="false" collective="false" import="true" targetId="98a4-3d6d-a7b9-399f" type="selectionEntry">
+          <categoryLinks>
+            <categoryLink id="1d82-ffc8-67c5-a381" name="Adjutant Unlock" hidden="false" targetId="8974-618e-c993-fdeb" primary="false"/>
+            <categoryLink id="fe77-f847-85d3-439d" name="Honoured Retinue Unlock" hidden="false" targetId="b5b4-1120-6ef3-afa0" primary="false"/>
+          </categoryLinks>
+        </entryLink>
         <entryLink id="ac73-77eb-7231-a8e4" name="Artefacts of Power" hidden="false" collective="false" import="true" targetId="b788-a656-5a3a-9c4f" type="selectionEntryGroup"/>
         <entryLink id="071b-6de2-7e89-93eb" name="Command Traits" hidden="false" collective="false" import="true" targetId="8c92-8f4c-91f5-9c79" type="selectionEntryGroup"/>
+        <entryLink id="649e-4a6b-40ac-d407" name="General&apos;s Adjutant" hidden="false" collective="false" import="true" targetId="9217-d5c0-9f8d-de1a" type="selectionEntry"/>
       </entryLinks>
     </entryLink>
     <entryLink id="50d0-13bd-879e-6589" name="Slaughter Queen on Cauldron of Blood" hidden="false" collective="false" import="true" targetId="48c3-9912-adf4-0e22" type="selectionEntry">
@@ -4225,8 +4379,475 @@
       <categoryLinks>
         <categoryLink id="147b-6784-8d05-c227" name="Allegiant - Daughters of Khaine" hidden="false" targetId="3173-37bc-b90a-a50f" primary="false"/>
       </categoryLinks>
+      <entryLinks>
+        <entryLink id="293e-ff6c-07ed-fa6c" name="Honoured Retinue" hidden="false" collective="false" import="true" targetId="5462-02e1-ed1a-d03f" type="selectionEntry">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="parent" value="4.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" type="greaterThan"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </entryLink>
+      </entryLinks>
     </entryLink>
     <entryLink id="5064-35f8-5347-8739" name="Kraeth&apos;s Shadowhost" hidden="false" collective="false" import="true" targetId="896e-c76d-0a3f-fe68" type="selectionEntry"/>
+    <entryLink id="d9c6-2e74-edbf-4772" name="Xintil War-Magi" hidden="false" collective="false" import="true" targetId="ddcb-b0ea-a476-59d1" type="selectionEntry"/>
+    <entryLink id="d5fd-8894-7558-8106" name="Alarith Spirit of the Mountain" hidden="false" collective="false" import="true" targetId="10fc-f436-5e8e-82ca" type="selectionEntry">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="8c4a-0cbf-664c-32b1" type="equalTo"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <categoryLinks>
+        <categoryLink id="7371-7910-4333-3dcd" name="Allegiant - Lumineth Realm-Lords" hidden="false" targetId="f5a0-4952-8421-1ee6" primary="false"/>
+      </categoryLinks>
+    </entryLink>
+    <entryLink id="0599-ab04-226e-f7e6" name="Alarith Stoneguard" hidden="false" collective="false" import="true" targetId="1067-64f2-2bfb-76c1" type="selectionEntry">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="8c4a-0cbf-664c-32b1" type="equalTo"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <categoryLinks>
+        <categoryLink id="c19d-454d-8f75-3b74" name="Allegiant - Lumineth Realm-Lords" hidden="false" targetId="f5a0-4952-8421-1ee6" primary="false"/>
+      </categoryLinks>
+      <entryLinks>
+        <entryLink id="ade5-518e-2e4a-4ce5" name="Honoured Retinue" hidden="false" collective="false" import="true" targetId="5462-02e1-ed1a-d03f" type="selectionEntry">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="parent" value="4.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" type="greaterThan"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </entryLink>
+      </entryLinks>
+    </entryLink>
+    <entryLink id="423a-f8c9-1bbe-a51e" name="Alarith Stonemage" hidden="false" collective="false" import="true" targetId="7ae5-82e7-111b-aad5" type="selectionEntry">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="8c4a-0cbf-664c-32b1" type="equalTo"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <categoryLinks>
+        <categoryLink id="568a-65d7-d0e8-64e5" name="Allegiant - Lumineth Realm-Lords" hidden="false" targetId="f5a0-4952-8421-1ee6" primary="false"/>
+      </categoryLinks>
+      <entryLinks>
+        <entryLink id="627b-5429-28c0-3473" name="General" hidden="false" collective="false" import="true" targetId="98a4-3d6d-a7b9-399f" type="selectionEntry">
+          <categoryLinks>
+            <categoryLink id="80a2-84a6-ad83-6cab" name="Adjutant Unlock" hidden="false" targetId="8974-618e-c993-fdeb" primary="false"/>
+            <categoryLink id="3ac5-9d07-48b7-754f" name="Honoured Retinue Unlock" hidden="false" targetId="b5b4-1120-6ef3-afa0" primary="false"/>
+          </categoryLinks>
+        </entryLink>
+        <entryLink id="3000-7837-0beb-293d" name="Artefacts of Power" hidden="false" collective="false" import="true" targetId="b788-a656-5a3a-9c4f" type="selectionEntryGroup"/>
+        <entryLink id="73b0-413b-51bf-793f" name="Command Traits" hidden="false" collective="false" import="true" targetId="8c92-8f4c-91f5-9c79" type="selectionEntryGroup"/>
+        <entryLink id="8a49-a5fb-83bc-e7b1" name="General&apos;s Adjutant" hidden="false" collective="false" import="true" targetId="9217-d5c0-9f8d-de1a" type="selectionEntry"/>
+      </entryLinks>
+    </entryLink>
+    <entryLink id="428a-431b-c16c-b6c6" name="Archmage Teclis and Celennar, Spirit of Hysh" hidden="false" collective="false" import="true" targetId="fc3d-6c81-177d-4419" type="selectionEntry">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="8c4a-0cbf-664c-32b1" type="equalTo"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <categoryLinks>
+        <categoryLink id="4164-6221-6fa9-866a" name="Allegiant - Lumineth Realm-Lords" hidden="false" targetId="f5a0-4952-8421-1ee6" primary="false"/>
+      </categoryLinks>
+      <entryLinks>
+        <entryLink id="a0e9-5d97-55d3-066c" name="General" hidden="false" collective="false" import="true" targetId="98a4-3d6d-a7b9-399f" type="selectionEntry">
+          <categoryLinks>
+            <categoryLink id="4600-e4db-62ca-41a8" name="Named General" hidden="false" targetId="8b3d-7f03-e1f9-eaf5" primary="false"/>
+          </categoryLinks>
+        </entryLink>
+      </entryLinks>
+    </entryLink>
+    <entryLink id="2091-a6c7-ccac-d3c4" name="Avalenor, the Stoneheart King" hidden="false" collective="false" import="true" targetId="8626-8866-265a-6882" type="selectionEntry">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="8c4a-0cbf-664c-32b1" type="equalTo"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <categoryLinks>
+        <categoryLink id="3b0e-8354-2631-6467" name="Allegiant - Lumineth Realm-Lords" hidden="false" targetId="f5a0-4952-8421-1ee6" primary="false"/>
+      </categoryLinks>
+      <entryLinks>
+        <entryLink id="3c6a-e89f-82b4-c264" name="General" hidden="false" collective="false" import="true" targetId="98a4-3d6d-a7b9-399f" type="selectionEntry">
+          <categoryLinks>
+            <categoryLink id="9345-7858-2da5-0a9a" name="Named General" hidden="false" targetId="8b3d-7f03-e1f9-eaf5" primary="false"/>
+          </categoryLinks>
+        </entryLink>
+      </entryLinks>
+    </entryLink>
+    <entryLink id="b941-5f41-f387-c765" name="Ellania and Ellathor, Eclipsian Warsages" hidden="false" collective="false" import="true" targetId="87f7-0ab4-db6e-9812" type="selectionEntry">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="8c4a-0cbf-664c-32b1" type="equalTo"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <categoryLinks>
+        <categoryLink id="8ee4-82fa-0c10-0087" name="Allegiant - Lumineth Realm-Lords" hidden="false" targetId="f5a0-4952-8421-1ee6" primary="false"/>
+      </categoryLinks>
+      <entryLinks>
+        <entryLink id="4718-94dc-3c39-5cf6" name="General" hidden="false" collective="false" import="true" targetId="98a4-3d6d-a7b9-399f" type="selectionEntry">
+          <categoryLinks>
+            <categoryLink id="8dba-f4cd-7df9-c6cf" name="Named General" hidden="false" targetId="8b3d-7f03-e1f9-eaf5" primary="false"/>
+          </categoryLinks>
+        </entryLink>
+      </entryLinks>
+    </entryLink>
+    <entryLink id="3d4a-713f-8095-433e" name="Hurakan Spirit of the Wind" hidden="false" collective="false" import="true" targetId="db96-6989-b1bc-cff4" type="selectionEntry">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="8c4a-0cbf-664c-32b1" type="equalTo"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <categoryLinks>
+        <categoryLink id="af06-384c-bab8-7d85" name="Allegiant - Lumineth Realm-Lords" hidden="false" targetId="f5a0-4952-8421-1ee6" primary="false"/>
+      </categoryLinks>
+    </entryLink>
+    <entryLink id="d018-3c81-de70-da04" name="Hurakan Windchargers" hidden="false" collective="false" import="true" targetId="cd2e-9b24-83ad-2801" type="selectionEntry">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="8c4a-0cbf-664c-32b1" type="equalTo"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <categoryLinks>
+        <categoryLink id="2be8-a2e0-f7e3-d9aa" name="Allegiant - Lumineth Realm-Lords" hidden="false" targetId="f5a0-4952-8421-1ee6" primary="false"/>
+      </categoryLinks>
+      <entryLinks>
+        <entryLink id="462d-bc06-d27c-b161" name="Honoured Retinue" hidden="false" collective="false" import="true" targetId="5462-02e1-ed1a-d03f" type="selectionEntry">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="parent" value="4.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" type="greaterThan"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </entryLink>
+      </entryLinks>
+    </entryLink>
+    <entryLink id="b24f-120b-448e-45f6" name="Hurakan Windmage" hidden="false" collective="false" import="true" targetId="b735-3075-a97e-b108" type="selectionEntry">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="8c4a-0cbf-664c-32b1" type="equalTo"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <categoryLinks>
+        <categoryLink id="712f-ced1-b278-8d05" name="Allegiant - Lumineth Realm-Lords" hidden="false" targetId="f5a0-4952-8421-1ee6" primary="false"/>
+      </categoryLinks>
+      <entryLinks>
+        <entryLink id="7347-1a67-628e-bc90" name="General" hidden="false" collective="false" import="true" targetId="98a4-3d6d-a7b9-399f" type="selectionEntry">
+          <categoryLinks>
+            <categoryLink id="d12a-9c7d-9db4-8d11" name="Adjutant Unlock" hidden="false" targetId="8974-618e-c993-fdeb" primary="false"/>
+            <categoryLink id="a4ea-11c4-da5c-4a74" name="Honoured Retinue Unlock" hidden="false" targetId="b5b4-1120-6ef3-afa0" primary="false"/>
+          </categoryLinks>
+        </entryLink>
+        <entryLink id="8c9e-c4a2-e429-785e" name="Artefacts of Power" hidden="false" collective="false" import="true" targetId="b788-a656-5a3a-9c4f" type="selectionEntryGroup"/>
+        <entryLink id="f1cc-6d19-cbf0-1a2b" name="Command Traits" hidden="false" collective="false" import="true" targetId="8c92-8f4c-91f5-9c79" type="selectionEntryGroup"/>
+        <entryLink id="1293-487f-dbae-47d3" name="General&apos;s Adjutant" hidden="false" collective="false" import="true" targetId="9217-d5c0-9f8d-de1a" type="selectionEntry"/>
+      </entryLinks>
+    </entryLink>
+    <entryLink id="d602-beb2-8f58-a755" name="Lyrior Uthralle, Warden of Ymetrica" hidden="false" collective="false" import="true" targetId="2ed1-5de6-c5da-6aa5" type="selectionEntry">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="8c4a-0cbf-664c-32b1" type="equalTo"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <categoryLinks>
+        <categoryLink id="2ef2-cff6-88e9-f599" name="Allegiant - Lumineth Realm-Lords" hidden="false" targetId="f5a0-4952-8421-1ee6" primary="false"/>
+      </categoryLinks>
+      <entryLinks>
+        <entryLink id="12f0-781e-c5a7-5699" name="General" hidden="false" collective="false" import="true" targetId="98a4-3d6d-a7b9-399f" type="selectionEntry">
+          <categoryLinks>
+            <categoryLink id="eb32-0465-6042-4134" name="Adjutant Unlock" hidden="false" targetId="8974-618e-c993-fdeb" primary="false"/>
+            <categoryLink id="95dd-a7de-3d72-3464" name="Honoured Retinue Unlock" hidden="false" targetId="b5b4-1120-6ef3-afa0" primary="false"/>
+            <categoryLink id="4c66-1edf-23dc-4d67" name="Named General" hidden="false" targetId="8b3d-7f03-e1f9-eaf5" primary="false"/>
+          </categoryLinks>
+        </entryLink>
+        <entryLink id="682b-97dc-25ba-55df" name="General&apos;s Adjutant" hidden="false" collective="false" import="true" targetId="9217-d5c0-9f8d-de1a" type="selectionEntry"/>
+      </entryLinks>
+    </entryLink>
+    <entryLink id="b928-419b-f8ec-8dbf" name="Scinari Calligrave" hidden="false" collective="false" import="true" targetId="e436-f5d4-426a-839e" type="selectionEntry">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="8c4a-0cbf-664c-32b1" type="equalTo"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <categoryLinks>
+        <categoryLink id="0f9a-f7da-9e9a-7ad3" name="Allegiant - Lumineth Realm-Lords" hidden="false" targetId="f5a0-4952-8421-1ee6" primary="false"/>
+      </categoryLinks>
+      <entryLinks>
+        <entryLink id="8f9e-ac54-e0c3-7a40" name="General" hidden="false" collective="false" import="true" targetId="98a4-3d6d-a7b9-399f" type="selectionEntry">
+          <categoryLinks>
+            <categoryLink id="542d-5b08-7b64-6387" name="Adjutant Unlock" hidden="false" targetId="8974-618e-c993-fdeb" primary="false"/>
+            <categoryLink id="a196-4dd3-df3f-55cc" name="Honoured Retinue Unlock" hidden="false" targetId="b5b4-1120-6ef3-afa0" primary="false"/>
+          </categoryLinks>
+        </entryLink>
+        <entryLink id="bf9b-e32b-d9f8-cc92" name="Artefacts of Power" hidden="false" collective="false" import="true" targetId="b788-a656-5a3a-9c4f" type="selectionEntryGroup"/>
+        <entryLink id="cae0-ccd6-ee6d-2f0e" name="Command Traits" hidden="false" collective="false" import="true" targetId="8c92-8f4c-91f5-9c79" type="selectionEntryGroup"/>
+        <entryLink id="7cc7-a910-3f76-8a5f" name="General&apos;s Adjutant" hidden="false" collective="false" import="true" targetId="9217-d5c0-9f8d-de1a" type="selectionEntry"/>
+      </entryLinks>
+    </entryLink>
+    <entryLink id="ff82-aac4-e65d-3417" name="Scinari Cathallar" hidden="false" collective="false" import="true" targetId="66e7-45da-22d3-3a7b" type="selectionEntry">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="8c4a-0cbf-664c-32b1" type="equalTo"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <categoryLinks>
+        <categoryLink id="f52d-b8fb-c799-f120" name="Allegiant - Lumineth Realm-Lords" hidden="false" targetId="f5a0-4952-8421-1ee6" primary="false"/>
+      </categoryLinks>
+      <entryLinks>
+        <entryLink id="9cd1-22f6-01e9-dd29" name="General" hidden="false" collective="false" import="true" targetId="98a4-3d6d-a7b9-399f" type="selectionEntry">
+          <categoryLinks>
+            <categoryLink id="eec8-2646-7883-b5f5" name="Adjutant Unlock" hidden="false" targetId="8974-618e-c993-fdeb" primary="false"/>
+            <categoryLink id="5dc5-8976-365e-1509" name="Honoured Retinue Unlock" hidden="false" targetId="b5b4-1120-6ef3-afa0" primary="false"/>
+          </categoryLinks>
+        </entryLink>
+        <entryLink id="1471-76c1-1bf0-4e46" name="Artefacts of Power" hidden="false" collective="false" import="true" targetId="b788-a656-5a3a-9c4f" type="selectionEntryGroup"/>
+        <entryLink id="e634-6496-55b8-bdeb" name="Command Traits" hidden="false" collective="false" import="true" targetId="8c92-8f4c-91f5-9c79" type="selectionEntryGroup"/>
+        <entryLink id="43a5-745a-183c-6a87" name="General&apos;s Adjutant" hidden="false" collective="false" import="true" targetId="9217-d5c0-9f8d-de1a" type="selectionEntry"/>
+      </entryLinks>
+    </entryLink>
+    <entryLink id="5609-aba8-4575-20b1" name="Scinari Loreseeker" hidden="false" collective="false" import="true" targetId="3c0d-7e29-1014-7cc5" type="selectionEntry">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="8c4a-0cbf-664c-32b1" type="equalTo"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <categoryLinks>
+        <categoryLink id="b5c1-a9a3-4a94-28c0" name="Allegiant - Lumineth Realm-Lords" hidden="false" targetId="f5a0-4952-8421-1ee6" primary="false"/>
+      </categoryLinks>
+      <entryLinks>
+        <entryLink id="8ce9-f43f-1a77-b9ea" name="General" hidden="false" collective="false" import="true" targetId="98a4-3d6d-a7b9-399f" type="selectionEntry">
+          <categoryLinks>
+            <categoryLink id="ff83-5573-c4bb-c43d" name="Adjutant Unlock" hidden="false" targetId="8974-618e-c993-fdeb" primary="false"/>
+            <categoryLink id="7420-f2e0-55da-546c" name="Honoured Retinue Unlock" hidden="false" targetId="b5b4-1120-6ef3-afa0" primary="false"/>
+          </categoryLinks>
+        </entryLink>
+        <entryLink id="4e73-ddb8-bac2-9a2b" name="Artefacts of Power" hidden="false" collective="false" import="true" targetId="b788-a656-5a3a-9c4f" type="selectionEntryGroup"/>
+        <entryLink id="80c2-5c24-5e51-a249" name="Command Traits" hidden="false" collective="false" import="true" targetId="8c92-8f4c-91f5-9c79" type="selectionEntryGroup"/>
+        <entryLink id="d626-b3b6-74af-848e" name="General&apos;s Adjutant" hidden="false" collective="false" import="true" targetId="9217-d5c0-9f8d-de1a" type="selectionEntry"/>
+      </entryLinks>
+    </entryLink>
+    <entryLink id="9763-8b52-348a-4432" name="Sevireth, Lord of the Seventh Wind" hidden="false" collective="false" import="true" targetId="d228-16e9-4fc7-74f4" type="selectionEntry">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="8c4a-0cbf-664c-32b1" type="equalTo"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <categoryLinks>
+        <categoryLink id="43df-55ce-df8d-bdfb" name="Allegiant - Lumineth Realm-Lords" hidden="false" targetId="f5a0-4952-8421-1ee6" primary="false"/>
+      </categoryLinks>
+      <entryLinks>
+        <entryLink id="82a3-e16f-7e01-6a80" name="General" hidden="false" collective="false" import="true" targetId="98a4-3d6d-a7b9-399f" type="selectionEntry">
+          <categoryLinks>
+            <categoryLink id="0f57-10ab-5435-2104" name="Named General" hidden="false" targetId="8b3d-7f03-e1f9-eaf5" primary="false"/>
+          </categoryLinks>
+        </entryLink>
+      </entryLinks>
+    </entryLink>
+    <entryLink id="313e-8475-7fdc-0827" name="The Light of Eltharion" hidden="false" collective="false" import="true" targetId="aa10-93de-734a-e109" type="selectionEntry">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="8c4a-0cbf-664c-32b1" type="equalTo"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <categoryLinks>
+        <categoryLink id="856f-1a41-9169-5f1a" name="Allegiant - Lumineth Realm-Lords" hidden="false" targetId="f5a0-4952-8421-1ee6" primary="false"/>
+      </categoryLinks>
+      <entryLinks>
+        <entryLink id="52f5-b13a-28fe-7cf4" name="General" hidden="false" collective="false" import="true" targetId="98a4-3d6d-a7b9-399f" type="selectionEntry">
+          <categoryLinks>
+            <categoryLink id="3b94-a4c4-1587-8c7d" name="Named General" hidden="false" targetId="8b3d-7f03-e1f9-eaf5" primary="false"/>
+          </categoryLinks>
+        </entryLink>
+      </entryLinks>
+    </entryLink>
+    <entryLink id="3dca-af25-399d-743c" name="Vanari Auralan Sentinels" hidden="false" collective="false" import="true" targetId="0c52-c86c-842c-ec29" type="selectionEntry">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="8c4a-0cbf-664c-32b1" type="equalTo"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <categoryLinks>
+        <categoryLink id="5045-ef45-a0c2-5c32" name="Allegiant - Lumineth Realm-Lords" hidden="false" targetId="f5a0-4952-8421-1ee6" primary="false"/>
+      </categoryLinks>
+      <entryLinks>
+        <entryLink id="c52d-b109-14a0-2a36" name="Honoured Retinue" hidden="false" collective="false" import="true" targetId="5462-02e1-ed1a-d03f" type="selectionEntry">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="parent" value="4.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" type="greaterThan"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </entryLink>
+        <entryLink id="df7e-0da0-ed26-9afc" name="Vanari Battleline" hidden="false" collective="false" import="true" targetId="9e79-e904-c824-c897" type="selectionEntry"/>
+      </entryLinks>
+    </entryLink>
+    <entryLink id="4937-5563-9a4d-7ceb" name="Vanari Auralan Wardens" hidden="false" collective="false" import="true" targetId="ee0e-fd0b-53b4-60e0" type="selectionEntry">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="8c4a-0cbf-664c-32b1" type="equalTo"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <categoryLinks>
+        <categoryLink id="2709-afe1-0a3e-a7f3" name="Allegiant - Lumineth Realm-Lords" hidden="false" targetId="f5a0-4952-8421-1ee6" primary="false"/>
+      </categoryLinks>
+      <entryLinks>
+        <entryLink id="daa4-b297-61b0-43dd" name="Honoured Retinue" hidden="false" collective="false" import="true" targetId="5462-02e1-ed1a-d03f" type="selectionEntry">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="parent" value="4.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" type="greaterThan"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </entryLink>
+      </entryLinks>
+    </entryLink>
+    <entryLink id="097c-5170-e9f8-aa83" name="Vanari Bannerblade" hidden="false" collective="false" import="true" targetId="41a7-d86e-661a-dd55" type="selectionEntry">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="8c4a-0cbf-664c-32b1" type="equalTo"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <categoryLinks>
+        <categoryLink id="4a2a-2731-6979-8df7" name="Allegiant - Lumineth Realm-Lords" hidden="false" targetId="f5a0-4952-8421-1ee6" primary="false"/>
+      </categoryLinks>
+      <entryLinks>
+        <entryLink id="8092-ce77-a2f0-baa0" name="General" hidden="false" collective="false" import="true" targetId="98a4-3d6d-a7b9-399f" type="selectionEntry">
+          <categoryLinks>
+            <categoryLink id="28eb-02c9-f9e3-7709" name="Adjutant Unlock" hidden="false" targetId="8974-618e-c993-fdeb" primary="false"/>
+            <categoryLink id="af5e-80e6-3463-7d38" name="Honoured Retinue Unlock" hidden="false" targetId="b5b4-1120-6ef3-afa0" primary="false"/>
+          </categoryLinks>
+        </entryLink>
+        <entryLink id="7470-cc42-0e16-1296" name="Artefacts of Power" hidden="false" collective="false" import="true" targetId="b788-a656-5a3a-9c4f" type="selectionEntryGroup"/>
+        <entryLink id="90c9-e122-949b-ff43" name="Command Traits" hidden="false" collective="false" import="true" targetId="8c92-8f4c-91f5-9c79" type="selectionEntryGroup"/>
+        <entryLink id="da25-008c-0cbc-2b9c" name="General&apos;s Adjutant" hidden="false" collective="false" import="true" targetId="9217-d5c0-9f8d-de1a" type="selectionEntry"/>
+      </entryLinks>
+    </entryLink>
+    <entryLink id="74ab-fbba-5f09-f1da" name="Vanari Bladelords" hidden="false" collective="false" import="true" targetId="577b-62d5-7a75-24cd" type="selectionEntry">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="8c4a-0cbf-664c-32b1" type="equalTo"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <categoryLinks>
+        <categoryLink id="7724-a093-56ad-8441" name="Allegiant - Lumineth Realm-Lords" hidden="false" targetId="f5a0-4952-8421-1ee6" primary="false"/>
+      </categoryLinks>
+      <entryLinks>
+        <entryLink id="5217-dc8b-d467-2d5b" name="Honoured Retinue" hidden="false" collective="false" import="true" targetId="5462-02e1-ed1a-d03f" type="selectionEntry">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="parent" value="4.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" type="greaterThan"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </entryLink>
+        <entryLink id="6747-c9e0-c3cf-5e23" name="Bladelord Battleline" hidden="false" collective="false" import="true" targetId="7bba-ef4f-08c2-1194" type="selectionEntry"/>
+      </entryLinks>
+    </entryLink>
+    <entryLink id="406d-63d2-4865-d305" name="Vanari Dawnriders" hidden="false" collective="false" import="true" targetId="b276-95ae-03b9-3802" type="selectionEntry">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="8c4a-0cbf-664c-32b1" type="equalTo"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <categoryLinks>
+        <categoryLink id="929b-4559-3fc0-4145" name="Allegiant - Lumineth Realm-Lords" hidden="false" targetId="f5a0-4952-8421-1ee6" primary="false"/>
+      </categoryLinks>
+      <entryLinks>
+        <entryLink id="7da6-c3ef-5661-e244" name="Honoured Retinue" hidden="false" collective="false" import="true" targetId="5462-02e1-ed1a-d03f" type="selectionEntry">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="parent" value="4.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" type="greaterThan"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </entryLink>
+        <entryLink id="0895-8325-e8cf-cc04" name="Vanari Battleline" hidden="false" collective="false" import="true" targetId="9e79-e904-c824-c897" type="selectionEntry"/>
+      </entryLinks>
+    </entryLink>
+    <entryLink id="6191-80db-156f-8476" name="Vanari Lord Regent" hidden="false" collective="false" import="true" targetId="32f0-19e5-53ba-b0cc" type="selectionEntry">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="8c4a-0cbf-664c-32b1" type="equalTo"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <categoryLinks>
+        <categoryLink id="5871-a3b5-007a-e841" name="Allegiant - Lumineth Realm-Lords" hidden="false" targetId="f5a0-4952-8421-1ee6" primary="false"/>
+      </categoryLinks>
+      <entryLinks>
+        <entryLink id="dae3-6755-2bed-0929" name="General" hidden="false" collective="false" import="true" targetId="98a4-3d6d-a7b9-399f" type="selectionEntry">
+          <categoryLinks>
+            <categoryLink id="0e74-92ef-f2b8-7a7f" name="Adjutant Unlock" hidden="false" targetId="8974-618e-c993-fdeb" primary="false"/>
+            <categoryLink id="a463-4487-a9a8-1f4a" name="Honoured Retinue Unlock" hidden="false" targetId="b5b4-1120-6ef3-afa0" primary="false"/>
+          </categoryLinks>
+        </entryLink>
+        <entryLink id="1709-6c13-f7b4-d450" name="Artefacts of Power" hidden="false" collective="false" import="true" targetId="b788-a656-5a3a-9c4f" type="selectionEntryGroup"/>
+        <entryLink id="48b6-585d-0ef1-7f18" name="Command Traits" hidden="false" collective="false" import="true" targetId="8c92-8f4c-91f5-9c79" type="selectionEntryGroup"/>
+        <entryLink id="ba62-8746-1f99-76a4" name="General&apos;s Adjutant" hidden="false" collective="false" import="true" targetId="9217-d5c0-9f8d-de1a" type="selectionEntry"/>
+      </entryLinks>
+    </entryLink>
+    <entryLink id="25fe-a277-aa9d-23ec" name="Vanari Starshard Ballistas" hidden="false" collective="false" import="true" targetId="a474-774a-77f2-d4e4" type="selectionEntry">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="8c4a-0cbf-664c-32b1" type="equalTo"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <categoryLinks>
+        <categoryLink id="bd84-fac0-f8f6-d0c0" name="Allegiant - Lumineth Realm-Lords" hidden="false" targetId="f5a0-4952-8421-1ee6" primary="false"/>
+      </categoryLinks>
+    </entryLink>
   </entryLinks>
   <sharedSelectionEntries>
     <selectionEntry id="c5c4-2c0a-bf6a-e123" name="Allegiance" hidden="false" collective="false" import="true" type="upgrade">
@@ -4271,6 +4892,8 @@
 • ANVILGARD
 • HALLOWHEART
 • TEMPEST’S EYE
+• HAR KURON
+• SETTLER&apos;S GAIN
 
 If a model already has a city keyword on its warscroll, it cannot gain another one. You can still include the model in your army, but you cannot use the allegiance abilities for its city.</characteristic>
                   </characteristics>
@@ -4668,6 +5291,36 @@ You can choose 1 additional friendly ANVILGARD DRAGON, ANVILGARD KHARIBDYSS or A
                       </profiles>
                       <categoryLinks>
                         <categoryLink id="8e59-c99d-af84-e87e" name="Cities Realms - Aqshy" hidden="false" targetId="717f-e16c-d728-7341" primary="false"/>
+                      </categoryLinks>
+                      <costs>
+                        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
+                      </costs>
+                    </selectionEntry>
+                    <selectionEntry id="8c4a-0cbf-664c-32b1" name="Settler&apos;s Gain" hidden="false" collective="false" import="true" type="upgrade">
+                      <profiles>
+                        <profile id="18a1-014c-f0d1-a545" name="In the Land of Enlightenment" hidden="false" typeId="ce32-0c40-1990-4c8a" typeName="Restriction">
+                          <characteristics>
+                            <characteristic name="Restriction" typeId="edbe-5fe5-1142-afa6">A Settler’s Gain army must be from Hysh.</characteristic>
+                          </characteristics>
+                        </profile>
+                        <profile id="965f-e7ec-8540-00f5" name="Lumineth Tutors" hidden="false" typeId="c0c2-177b-e761-ec41" typeName="Allegiance Abilities">
+                          <characteristics>
+                            <characteristic name="Allegiance Ability" typeId="0506-f62d-68b3-5499">You can choose 1 extra SETTLER’S GAIN FREEGUILD HERO or SETTLER’S GAIN COLLEGIATE ARCANE HERO to have an artefact of power in a Settler’s Gain army. In addition, you can add 1 to casting rolls for SETTLER’S GAIN COLLEGIATE ARCANE WIZARDS.</characteristic>
+                          </characteristics>
+                        </profile>
+                        <profile id="1dd7-d735-b84e-3109" name="Warriors of the High Districts" hidden="false" typeId="c0c2-177b-e761-ec41" typeName="Allegiance Abilities">
+                          <characteristics>
+                            <characteristic name="Allegiance Ability" typeId="0506-f62d-68b3-5499">When you choose a Settler’s Gain army, 1 in every 4 units can be a LUMINETH REALM-LORDS unit (this is in addition to the option for 1 in every 4 units to be a STORMCAST ETERNALS unit). Those units gain the CITIES OF SIGMAR and SETTLER’S GAIN keywords.</characteristic>
+                          </characteristics>
+                        </profile>
+                        <profile id="45d3-ce9c-ab57-cfa6" name="Aelven Training" hidden="false" typeId="6364-f76d-fc0c-80bc" typeName="Command Abilities">
+                          <characteristics>
+                            <characteristic name="Command Ability" typeId="36cb-f8a4-d94b-8aa8">You can use this command ability at the start of the battleshock phase. If you do so, pick 1 friendly SETTLER’S GAIN LUMINETH REALM-LORDS HERO. Do not take battleshock tests in that phase for friendly SETTLER’S GAIN FREEGUILD or SETTLER’S GAIN COLLEGIATE ARCANE units wholly within 18&quot; of that HERO.</characteristic>
+                          </characteristics>
+                        </profile>
+                      </profiles>
+                      <categoryLinks>
+                        <categoryLink id="695d-fb28-782d-9b67" name="Cities Realms - Hysh" hidden="false" targetId="cfde-38dc-0d06-3bc4" primary="false"/>
                       </categoryLinks>
                       <costs>
                         <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
@@ -5867,6 +6520,164 @@ You can choose 1 additional friendly ANVILGARD DRAGON, ANVILGARD KHARIBDYSS or A
         <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="160.0"/>
       </costs>
     </selectionEntry>
+    <selectionEntry id="ddcb-b0ea-a476-59d1" name="Xintil War-Magi" hidden="false" collective="false" import="true" type="upgrade">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="8c4a-0cbf-664c-32b1" type="equalTo"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <profiles>
+        <profile id="ef80-c5c9-4c0a-55dc" name="Beacon of Intellect" hidden="false" typeId="66c5-932e-004a-574c" typeName="Battalion Abilities">
+          <characteristics>
+            <characteristic name="Battalion Ability" typeId="23f7-32c0-e059-29b2">When you use the Searing Beam of Light ability for the Luminark of Hysh from this battalion, you can re-roll the roll that determines if a unit suffers D3 mortal wounds. In addition, when you use the Aura of Protection ability for the Luminark of Hysh from this battalion, add 1 to the roll that determines if a wound or mortal wound is negated.</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <categoryLinks>
+        <categoryLink id="156a-3ae3-a632-f3e9" name="New CategoryLink" hidden="false" targetId="c03a-b1a8-66c6-3637" primary="true"/>
+      </categoryLinks>
+      <selectionEntryGroups>
+        <selectionEntryGroup id="e6cc-9301-82cf-f470" name="1 Celestial Hurricanum with Celestial Battlemage" hidden="false" collective="false" import="true">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="b9eb-d7ac-a56f-795e" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="fb09-62e2-5f9a-0160" type="min"/>
+          </constraints>
+          <entryLinks>
+            <entryLink id="1223-7aed-a3e9-808b" name="Celestial Hurricanum with Celestial Battlemage" hidden="false" collective="false" import="true" targetId="b8b2-7494-343e-6c9c" type="selectionEntry">
+              <modifiers>
+                <modifier type="set" field="hidden" value="true">
+                  <conditions>
+                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="b046-79c2-424d-a058" type="greaterThan"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+              <entryLinks>
+                <entryLink id="cf6a-7624-09bb-3694" name="General" hidden="false" collective="false" import="true" targetId="98a4-3d6d-a7b9-399f" type="selectionEntry">
+                  <modifiers>
+                    <modifier type="add" field="category" value="db5f-919f-cbd3-f9ff">
+                      <conditions>
+                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="f6e6-a0ae-8da1-b478" type="greaterThan"/>
+                      </conditions>
+                    </modifier>
+                  </modifiers>
+                  <categoryLinks>
+                    <categoryLink id="6e3c-af6c-d23d-3449" name="General - Human" hidden="false" targetId="5f17-4ccd-b223-4427" primary="false"/>
+                  </categoryLinks>
+                </entryLink>
+                <entryLink id="81e0-1697-0b2e-573a" name="Artefacts of Power" hidden="false" collective="false" import="true" targetId="b788-a656-5a3a-9c4f" type="selectionEntryGroup"/>
+                <entryLink id="f959-eee7-397c-6fae" name="Command Traits" hidden="false" collective="false" import="true" targetId="8c92-8f4c-91f5-9c79" type="selectionEntryGroup"/>
+                <entryLink id="982f-c3bb-9298-0fbe" name="Cities of Sigmar Spell Lores" hidden="false" collective="false" import="true" targetId="aa48-e2aa-1ecc-eb1a" type="selectionEntryGroup"/>
+                <entryLink id="5277-e940-900c-c47d" name="Misthåvn Narcotics" hidden="false" collective="false" import="true" targetId="de8c-eb81-ab3a-6616" type="selectionEntryGroup"/>
+              </entryLinks>
+            </entryLink>
+          </entryLinks>
+        </selectionEntryGroup>
+        <selectionEntryGroup id="049c-ea72-6df8-291b" name="1 Luminark of Hysh" hidden="false" collective="false" import="true">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="f858-6e88-41d4-dae5" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="e956-dd27-23bd-cbb5" type="min"/>
+          </constraints>
+          <entryLinks>
+            <entryLink id="d18e-68b2-0cb4-a4a2" name="Luminark of Hysh" hidden="false" collective="false" import="true" targetId="23fb-797b-8727-77a3" type="selectionEntry">
+              <modifiers>
+                <modifier type="set" field="hidden" value="true">
+                  <conditions>
+                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="b046-79c2-424d-a058" type="greaterThan"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+            </entryLink>
+          </entryLinks>
+        </selectionEntryGroup>
+        <selectionEntryGroup id="0cd6-d8d5-ded7-f316" name="1 Battlemage" hidden="false" collective="false" import="true">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d6ce-1a41-d888-3b4e" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="2644-6f44-44fc-41f1" type="min"/>
+          </constraints>
+          <entryLinks>
+            <entryLink id="315c-f5ae-3cea-51c4" name="Battlemage" hidden="false" collective="false" import="true" targetId="fd2d-8df5-bf31-0ad9" type="selectionEntry">
+              <modifiers>
+                <modifier type="set" field="hidden" value="true">
+                  <conditions>
+                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="b046-79c2-424d-a058" type="greaterThan"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+              <entryLinks>
+                <entryLink id="85a8-f582-9bd0-3ede" name="General" hidden="false" collective="false" import="true" targetId="98a4-3d6d-a7b9-399f" type="selectionEntry">
+                  <modifiers>
+                    <modifier type="add" field="category" value="db5f-919f-cbd3-f9ff">
+                      <conditions>
+                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="f6e6-a0ae-8da1-b478" type="greaterThan"/>
+                      </conditions>
+                    </modifier>
+                  </modifiers>
+                  <categoryLinks>
+                    <categoryLink id="6d6f-4143-dbef-ab50" name="General - Human" hidden="false" targetId="5f17-4ccd-b223-4427" primary="false"/>
+                    <categoryLink id="3c35-ecee-7f08-8afd" name="Adjutant Unlock" hidden="false" targetId="8974-618e-c993-fdeb" primary="false"/>
+                    <categoryLink id="78a8-50a5-9bfd-f47c" name="Honoured Retinue Unlock" hidden="false" targetId="b5b4-1120-6ef3-afa0" primary="false"/>
+                  </categoryLinks>
+                </entryLink>
+                <entryLink id="594e-e9d2-a920-7447" name="General&apos;s Adjutant" hidden="false" collective="false" import="true" targetId="9217-d5c0-9f8d-de1a" type="selectionEntry"/>
+                <entryLink id="d53f-808d-b05d-4156" name="Artefacts of Power" hidden="false" collective="false" import="true" targetId="b788-a656-5a3a-9c4f" type="selectionEntryGroup"/>
+                <entryLink id="f4c7-ae9f-e8d3-1af1" name="Command Traits" hidden="false" collective="false" import="true" targetId="8c92-8f4c-91f5-9c79" type="selectionEntryGroup"/>
+                <entryLink id="85e8-50e1-49a2-0b16" name="Cities of Sigmar Spell Lores" hidden="false" collective="false" import="true" targetId="aa48-e2aa-1ecc-eb1a" type="selectionEntryGroup"/>
+                <entryLink id="bffd-35f2-b399-42ab" name="Misthåvn Narcotics" hidden="false" collective="false" import="true" targetId="de8c-eb81-ab3a-6616" type="selectionEntryGroup"/>
+              </entryLinks>
+            </entryLink>
+          </entryLinks>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
+      <costs>
+        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="140.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="9e79-e904-c824-c897" name="Vanari Battleline" hidden="false" collective="false" import="true" type="upgrade">
+      <modifiers>
+        <modifier type="increment" field="8176-5a01-136b-7e2a" value="1.0">
+          <repeats>
+            <repeat field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="ee0e-fd0b-53b4-60e0" repeats="1" roundUp="false"/>
+          </repeats>
+          <conditions>
+            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="ee0e-fd0b-53b4-60e0" type="greaterThan"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <constraints>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="9774-0d6b-c74e-db1a" type="max"/>
+        <constraint field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="8176-5a01-136b-7e2a" type="max"/>
+      </constraints>
+      <categoryLinks>
+        <categoryLink id="37b9-3878-e9bc-8fc8" name="BATTLELINE" hidden="false" targetId="a42d-220e-6a88-7bf6" primary="false"/>
+      </categoryLinks>
+      <costs>
+        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="7bba-ef4f-08c2-1194" name="Bladelord Battleline" hidden="false" collective="false" import="true" type="upgrade">
+      <modifiers>
+        <modifier type="increment" field="3719-7168-f724-b912" value="1.0">
+          <repeats>
+            <repeat field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="1bba-b451-8ae0-0091" repeats="1" roundUp="false"/>
+          </repeats>
+          <conditions>
+            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="1bba-b451-8ae0-0091" type="greaterThan"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <constraints>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="6641-fb8f-0668-a6ee" type="max"/>
+        <constraint field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="3719-7168-f724-b912" type="max"/>
+      </constraints>
+      <categoryLinks>
+        <categoryLink id="5733-468e-df25-f5d5" name="BATTLELINE" hidden="false" targetId="a42d-220e-6a88-7bf6" primary="false"/>
+      </categoryLinks>
+      <costs>
+        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
+      </costs>
+    </selectionEntry>
   </sharedSelectionEntries>
   <sharedSelectionEntryGroups>
     <selectionEntryGroup id="aa48-e2aa-1ecc-eb1a" name="Cities of Sigmar Spell Lores" hidden="false" collective="false" import="true">
@@ -6370,6 +7181,56 @@ You can choose 1 additional friendly ANVILGARD DRAGON, ANVILGARD KHARIBDYSS or A
                 <profile id="1cc2-b9f3-90f2-0aea" name="Sap Strength" hidden="false" typeId="13da-11a8-b7d1-77a7" typeName="Spell">
                   <characteristics>
                     <characteristic name="Spell" typeId="1170-c916-1b73-ae34">Sap Strength has a casting value of 6. If successfully cast, pick 1 enemy unit within 18&quot; of the caster that is visible to them. Subtract 1 from hit rolls for attacks made by that unit until the start of your next hero phase.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <costs>
+                <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
+              </costs>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
+        <selectionEntryGroup id="99f2-69d9-159b-2b98" name="Lore of Illumination" hidden="false" collective="false" import="true">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="8c4a-0cbf-664c-32b1" type="equalTo"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="802a-effa-24d1-7032" type="max"/>
+          </constraints>
+          <selectionEntries>
+            <selectionEntry id="78f9-d0e6-14f5-1bec" name="3 - Illuminate" hidden="false" collective="false" import="true" type="upgrade">
+              <profiles>
+                <profile id="ddd6-9ba0-ba2d-f4f1" name="Illuminate" hidden="false" typeId="13da-11a8-b7d1-77a7" typeName="Spell">
+                  <characteristics>
+                    <characteristic name="Spell" typeId="1170-c916-1b73-ae34">Illuminate has a casting value of 6. If successfully cast, pick 1 enemy unit within 12&quot; of the caster that is visible to them. Until your next hero phase, add 1 to hit rolls for attacks made with missile weapons that target that unit.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <costs>
+                <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="e889-2b7f-511e-eb21" name="2 - Shield of Light" hidden="false" collective="false" import="true" type="upgrade">
+              <profiles>
+                <profile id="122b-eac2-e5ed-92b9" name="Shield of Light" hidden="false" typeId="13da-11a8-b7d1-77a7" typeName="Spell">
+                  <characteristics>
+                    <characteristic name="Spell" typeId="1170-c916-1b73-ae34">Shield of Light has a casting value of 6. If successfully cast, pick 1 friendly unit wholly within 12&quot; of the caster. Until your next hero phase, roll a dice each time you allocate a wound or mortal wound to that unit. On a 6, that wound or mortal wound is negated.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <costs>
+                <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="c5e7-cca8-6309-8cc1" name="1 - Drain Magic" hidden="false" collective="false" import="true" type="upgrade">
+              <profiles>
+                <profile id="2b14-f15e-9104-f270" name="Drain Magic" hidden="false" typeId="13da-11a8-b7d1-77a7" typeName="Spell">
+                  <characteristics>
+                    <characteristic name="Spell" typeId="1170-c916-1b73-ae34">Drain Magic has a casting value of 6. If successfully, until your next hero phase, subtract 2 from casting, dispelling and unbinding rolls for WIZARDS within 12&quot; of the caster.</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
@@ -7103,6 +7964,56 @@ You can choose 1 additional friendly ANVILGARD DRAGON, ANVILGARD KHARIBDYSS or A
                     <characteristic name="Command Trait" typeId="0145-9acf-f5dc-d543">If Drusa Kraeth is your army’s general, she must have this command trait.
 
 At the start of the first hero phase of the first battle round, you receive 1 extra command point.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <costs>
+                <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
+              </costs>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
+        <selectionEntryGroup id="42c3-def7-2801-35f4" name="Scholars of Settler&apos;s Gain" hidden="false" collective="false" import="true">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="8c4a-0cbf-664c-32b1" type="equalTo"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d700-b1b9-ca8a-444c" type="max"/>
+          </constraints>
+          <selectionEntries>
+            <selectionEntry id="bbcb-4540-2888-9cc1" name="3. Raging Outburst" hidden="false" collective="false" import="true" type="upgrade">
+              <profiles>
+                <profile id="ea7d-2461-c5a1-ab22" name="Raging Outburst" hidden="false" typeId="1504-23bf-8850-4f65" typeName="Command Traits">
+                  <characteristics>
+                    <characteristic name="Command Trait" typeId="0145-9acf-f5dc-d543">Add 1 to hit and wound rolls for attacks made with melee weapons by this general, but subtract 1 from save rolls for attacks made with melee weapons that target this general.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <costs>
+                <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="6016-da8c-a123-07fe" name="2. Strategic Mastermind" hidden="false" collective="false" import="true" type="upgrade">
+              <profiles>
+                <profile id="aced-8048-8376-9454" name="Strategic Mastermind" hidden="false" typeId="1504-23bf-8850-4f65" typeName="Command Traits">
+                  <characteristics>
+                    <characteristic name="Command Trait" typeId="0145-9acf-f5dc-d543">If this general is part of your army and on the battlefield at the start of your hero phase, roll a dice. On a 4+, you receive 1 extra command point.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <costs>
+                <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="e750-23fe-d22f-9d37" name="1. Personal Levitation" hidden="false" collective="false" import="true" type="upgrade">
+              <profiles>
+                <profile id="c9e9-463c-8cc1-6602" name="Personal Levitation" hidden="false" typeId="1504-23bf-8850-4f65" typeName="Command Traits">
+                  <characteristics>
+                    <characteristic name="Command Trait" typeId="0145-9acf-f5dc-d543">This general can fly.</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
@@ -7860,6 +8771,110 @@ If the bearer has a Wounds characteristic of 7 or more, while they are in cover,
             </selectionEntry>
           </selectionEntries>
         </selectionEntryGroup>
+        <selectionEntryGroup id="f52b-d787-97e9-6236" name="Artefacts of the Luminaries" hidden="false" collective="false" import="true">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="8c4a-0cbf-664c-32b1" type="equalTo"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="466e-779d-081f-6c46" type="max"/>
+          </constraints>
+          <selectionEntries>
+            <selectionEntry id="c6a6-080f-dace-f1df" name="6 -- Stone-spirit Armour" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="8497-8d78-6906-4f07" type="max"/>
+              </constraints>
+              <profiles>
+                <profile id="bb22-8579-23dc-b10f" name="Stone-spirit Armour" hidden="false" typeId="0c9d-7abe-a53c-6a37" typeName="Artefacts">
+                  <characteristics>
+                    <characteristic name="Artefact" typeId="44b6-de26-0b54-1318">Roll a dice each time you allocate a wound or mortal wound to the bearer. On a 6, that wound or mortal wound is negated. In addition, each time the bearer is affected by a spell or endless spell, you can roll a dice. On a 5+, ignore the effects of that spell on the bearer.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <costs>
+                <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="bfd4-b935-aba4-ca1a" name="4 -- Blade of Leaping Bronze" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="4823-751c-3387-8378" type="max"/>
+              </constraints>
+              <profiles>
+                <profile id="2605-a7e9-64f0-ef50" name="Blade of Leaping Bronze" hidden="false" typeId="0c9d-7abe-a53c-6a37" typeName="Artefacts">
+                  <characteristics>
+                    <characteristic name="Artefact" typeId="44b6-de26-0b54-1318">Pick 1 of the bearer’s melee weapons. Add 2 to the Attacks characteristic of that weapon.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <costs>
+                <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="00fb-d22f-6c21-2f6b" name="5 -- Amulet of Haste" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="4871-4eee-8e84-d036" type="max"/>
+              </constraints>
+              <profiles>
+                <profile id="f31e-8e2c-d4b8-1656" name="Amulet of Haste" hidden="false" typeId="0c9d-7abe-a53c-6a37" typeName="Artefacts">
+                  <characteristics>
+                    <characteristic name="Artefact" typeId="44b6-de26-0b54-1318">Roll a dice after the bearer finishes a normal move and they ran. On a 2+, the bearer can still charge later in the same turn.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <costs>
+                <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="f569-01b4-e1fe-31aa" name="2 -- Talisman of Dispellation" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="afa5-e8cb-d76d-b180" type="max"/>
+              </constraints>
+              <profiles>
+                <profile id="214a-42c7-501f-53f9" name="Talisman of Dispellation" hidden="false" typeId="0c9d-7abe-a53c-6a37" typeName="Artefacts">
+                  <characteristics>
+                    <characteristic name="Artefact" typeId="44b6-de26-0b54-1318">You do not have to reduce the number of spells the bearer can attempt to cast in your hero phase if they attempted to dispel an endless spell in the same phase.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <costs>
+                <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="e462-8f3d-caaa-e596" name="3 -- Silver-plated Wand" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="e129-a9af-eeba-e668" type="max"/>
+              </constraints>
+              <profiles>
+                <profile id="31ba-cef0-bdf2-68e4" name="Silver-plated Wand" hidden="false" typeId="0c9d-7abe-a53c-6a37" typeName="Artefacts">
+                  <characteristics>
+                    <characteristic name="Artefact" typeId="44b6-de26-0b54-1318">The bearer can attempt to cast 1 extra spell in your hero phase.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <costs>
+                <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="b69e-273f-d2e3-a787" name="1 -- Heart Stone" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="dc88-e0c4-bfe3-cd26" type="max"/>
+              </constraints>
+              <profiles>
+                <profile id="396f-d99f-e22c-bc1c" name="Heart Stone" hidden="false" typeId="0c9d-7abe-a53c-6a37" typeName="Artefacts">
+                  <characteristics>
+                    <characteristic name="Artefact" typeId="44b6-de26-0b54-1318">The first time the bearer is slain, before removing them from play, roll a dice. On a 4+, they are not slain, 1 wound allocated to them is healed, and any wounds that remain to be allocated to them are negated.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <costs>
+                <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
+              </costs>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
       </selectionEntryGroups>
       <entryLinks>
         <entryLink id="a092-91c0-abe4-a91b" name="Realm Artefacts" hidden="false" collective="false" import="true" targetId="4df1-d526-85d7-1c93" type="selectionEntryGroup">
@@ -8072,5 +9087,6 @@ If the bearer has a Wounds characteristic of 7 or more, while they are in cover,
     <catalogueLink id="8bd4-6220-5a9f-3e63" name="Order - Endless SpellsPrayers" targetId="a77a-1dd9-a880-042e" type="catalogue" importRootEntries="true"/>
     <catalogueLink id="23cb-121b-0fd0-7799" name="Order - Cities of Sigmar - Data" targetId="ea43-7972-d2ab-617a" type="catalogue" importRootEntries="true"/>
     <catalogueLink id="8432-f79b-d9f2-f49f" name="Order - Daughters of Khaine - Data" targetId="6529-a3f6-42f7-7556" type="catalogue" importRootEntries="true"/>
+    <catalogueLink id="3e5b-1fcd-923f-7c53" name="Order - Lumineth Realm-lords - Data" targetId="f72e-6879-fe1f-edf6" type="catalogue" importRootEntries="true"/>
   </catalogueLinks>
 </catalogue>

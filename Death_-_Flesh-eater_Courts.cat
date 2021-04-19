@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="cd0c-e4a7-63f3-a16c" name="Death - Flesh-eater Courts" revision="5" battleScribeVersion="2.03" authorName="Thulram" library="false" gameSystemId="e832-3291-06be-cab1" gameSystemRevision="5" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="cd0c-e4a7-63f3-a16c" name="Death - Flesh-eater Courts" revision="6" battleScribeVersion="2.03" authorName="Thulram" library="false" gameSystemId="e832-3291-06be-cab1" gameSystemRevision="6" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <profileTypes>
     <profileType id="1f8c-169e-faa0-5118" name="Royal Terrorgheist Wounds">
       <characteristicTypes>
@@ -295,6 +295,7 @@
         <entryLink id="996c-8adf-29e7-0842" name="Lore of Madness" hidden="false" collective="false" import="true" targetId="efca-bee7-5cf9-1972" type="selectionEntryGroup"/>
       </entryLinks>
     </entryLink>
+    <entryLink id="4b80-4d1e-bccf-f903" name="Mortevell&apos;s Helcourt" hidden="false" collective="false" import="true" targetId="db2f-5344-c59b-7f28" type="selectionEntry"/>
   </entryLinks>
   <sharedSelectionEntries>
     <selectionEntry id="7037-604d-fbf9-c8c0" name="Allegiance" hidden="false" collective="false" import="true" type="upgrade">
@@ -1245,6 +1246,118 @@ Sinister: Subtract 1 from the Bravery characteristic of units while they are wit
       </selectionEntryGroups>
       <costs>
         <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="60.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="db2f-5344-c59b-7f28" name="Mortevell&apos;s Helcourt" hidden="false" collective="false" import="true" type="upgrade">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="1da6-1c24-24e9-7a7a" type="equalTo"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <profiles>
+        <profile id="8b3b-7c35-8540-7299" name="Mortevell&apos;s Helcourt" hidden="false" typeId="66c5-932e-004a-574c" typeName="Battalion Abilities">
+          <characteristics>
+            <characteristic name="Battalion Ability" typeId="23f7-32c0-e059-29b2">Do not take battleshock tests for units from this battalion that are wholly within 12&quot; of the ABHORRANT ARCHREGENT from the same battalion.</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <categoryLinks>
+        <categoryLink id="ac2f-2ebb-cd62-ff65" name="New CategoryLink" hidden="false" targetId="c03a-b1a8-66c6-3637" primary="true"/>
+      </categoryLinks>
+      <selectionEntryGroups>
+        <selectionEntryGroup id="8d89-53af-4f29-4976" name="1 Crypt Ghouls unit" hidden="false" collective="false" import="true">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="ad49-cfb2-d66c-cee3" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="9ab7-6919-2417-3761" type="min"/>
+          </constraints>
+          <entryLinks>
+            <entryLink id="37b8-bf7d-33c1-ab5e" name="Crypt Ghouls" hidden="false" collective="false" import="true" targetId="7f19-bc59-fd81-7780" type="selectionEntry"/>
+          </entryLinks>
+        </selectionEntryGroup>
+        <selectionEntryGroup id="5187-7444-31d0-4d85" name="1 Crypt Horrors unit" hidden="false" collective="false" import="true">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="ed11-65ef-1f47-5df8" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="21a1-b92b-2b3f-019d" type="min"/>
+          </constraints>
+          <entryLinks>
+            <entryLink id="3ec3-0c2f-ebae-02b8" name="Crypt Horrors" hidden="false" collective="false" import="true" targetId="c86b-9667-c1b4-841a" type="selectionEntry">
+              <modifiers>
+                <modifier type="remove" field="category" value="a42d-220e-6a88-7bf6">
+                  <conditionGroups>
+                    <conditionGroup type="or">
+                      <conditions>
+                        <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="e3a6-45ca-4974-b489" type="instanceOf"/>
+                        <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="6cd6-b22e-bfcb-9589" type="instanceOf"/>
+                        <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4373-740f-1bf3-b0aa" type="instanceOf"/>
+                      </conditions>
+                      <conditionGroups>
+                        <conditionGroup type="and">
+                          <conditions>
+                            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="1da6-1c24-24e9-7a7a" type="equalTo"/>
+                            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="f6de-d6bb-e3d1-96e4" type="equalTo"/>
+                          </conditions>
+                        </conditionGroup>
+                      </conditionGroups>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+              </modifiers>
+              <categoryLinks>
+                <categoryLink id="d796-89fe-7a84-bf35" name="BATTLELINE" hidden="false" targetId="a42d-220e-6a88-7bf6" primary="false"/>
+              </categoryLinks>
+            </entryLink>
+          </entryLinks>
+        </selectionEntryGroup>
+        <selectionEntryGroup id="ec1a-517d-b7c9-650e" name="1 Abhorrant Archregent (Gorstane Mortevell)" hidden="false" collective="false" import="true">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="385f-0cda-bd67-d37d" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="5e04-7282-df4a-7063" type="min"/>
+          </constraints>
+          <entryLinks>
+            <entryLink id="e040-593c-2256-0d74" name="Abhorrent Archregent" hidden="false" collective="false" import="true" targetId="4a35-537a-0c92-55ca" type="selectionEntry">
+              <selectionEntries>
+                <selectionEntry id="b246-f09c-dcd0-1283" name="0. The Bright Emperor" hidden="false" collective="false" import="true" type="upgrade">
+                  <modifiers>
+                    <modifier type="set" field="hidden" value="true">
+                      <conditions>
+                        <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="c661-44d6-0f5b-11ff" type="notInstanceOf"/>
+                      </conditions>
+                    </modifier>
+                    <modifier type="set" field="8b58-2f9b-5608-1c92" value="0.0">
+                      <conditions>
+                        <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="c661-44d6-0f5b-11ff" type="notInstanceOf"/>
+                      </conditions>
+                    </modifier>
+                  </modifiers>
+                  <constraints>
+                    <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="04f0-a302-3b55-d63d" type="max"/>
+                    <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8b58-2f9b-5608-1c92" type="min"/>
+                  </constraints>
+                  <profiles>
+                    <profile id="e1c8-c149-fff5-9dfe" name="The Bright Emperor" hidden="false" typeId="1504-23bf-8850-4f65" typeName="Command Traits">
+                      <characteristics>
+                        <characteristic name="Command Trait" typeId="0145-9acf-f5dc-d543">Once per battle, this general can use the Ravenous Crusaders command ability without a command point being spent.</characteristic>
+                      </characteristics>
+                    </profile>
+                  </profiles>
+                  <costs>
+                    <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
+                  </costs>
+                </selectionEntry>
+              </selectionEntries>
+              <entryLinks>
+                <entryLink id="195c-7701-4884-f087" name="Artefacts of Power" hidden="false" collective="false" import="true" targetId="a694-82a5-4af3-2e0d" type="selectionEntryGroup"/>
+                <entryLink id="15e9-c446-72bf-ea3d" name="General" hidden="false" collective="false" import="true" targetId="98a4-3d6d-a7b9-399f" type="selectionEntry"/>
+                <entryLink id="9ba3-77d9-d896-553a" name="Lore of Madness" hidden="false" collective="false" import="true" targetId="efca-bee7-5cf9-1972" type="selectionEntryGroup"/>
+              </entryLinks>
+            </entryLink>
+          </entryLinks>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
+      <costs>
+        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="100.0"/>
       </costs>
     </selectionEntry>
   </sharedSelectionEntries>
