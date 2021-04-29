@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="2834-0a12-130c-7dc1" name="Order - Sylvaneth - Data" revision="1" battleScribeVersion="2.03" authorName="Thulram" library="true" gameSystemId="e832-3291-06be-cab1" gameSystemRevision="1" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="2834-0a12-130c-7dc1" name="Order - Sylvaneth - Data" revision="2" battleScribeVersion="2.03" authorName="Thulram" library="true" gameSystemId="e832-3291-06be-cab1" gameSystemRevision="1" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <profileTypes>
     <profileType id="c66f-7dc1-c415-35c1" name="Alarielle Wounds">
       <characteristicTypes>
@@ -52,6 +52,8 @@
     <categoryEntry id="23b6-097b-2ae9-4214" name="Kurnoth Hunters" hidden="false"/>
     <categoryEntry id="04f5-f09a-5b63-77dd" name="Dryads" hidden="false"/>
     <categoryEntry id="9c10-0ce8-45db-6e06" name="Forest Folk" hidden="false"/>
+    <categoryEntry id="770c-3b7b-5ee5-e7de" name="Qulathis the Exile" hidden="false"/>
+    <categoryEntry id="0769-ec5d-2106-7352" name="Enga&apos;la Weald" hidden="false"/>
   </categoryEntries>
   <sharedSelectionEntries>
     <selectionEntry id="e617-dc5b-efd7-13be" name="Alarielle the Everqueen" publicationId="41a4-7d44-770a-c56b" hidden="false" collective="false" import="true" type="unit">
@@ -2090,6 +2092,83 @@ Embittered: While this model is Embittered, its Swarm of Squirmlings has an Atta
       </selectionEntryGroups>
       <costs>
         <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="b9af-b9c9-4abf-8d74" name="Qulathis the Exile" hidden="false" collective="false" import="true" type="unit">
+      <constraints>
+        <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="b1b5-49c9-e4d6-daff" type="max"/>
+      </constraints>
+      <profiles>
+        <profile id="7c47-5657-a6d7-ff70" name="Qulathis the Exile" hidden="false" typeId="3956-f6dd-6c88-ae4b" typeName="Unit">
+          <characteristics>
+            <characteristic name="Move" typeId="5bbe-8910-4dfa-7b1c">6&quot;</characteristic>
+            <characteristic name="Wounds" typeId="a0c6-af64-2f24-5759">5</characteristic>
+            <characteristic name="Save" typeId="93b6-2f96-2df7-e330">5+</characteristic>
+            <characteristic name="Bravery" typeId="2420-1c5c-1016-7033">7</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="0b96-1130-6ab1-7788" name="Strike Unseen" hidden="false" typeId="7861-da01-01c0-88d9" typeName="Ability">
+          <characteristics>
+            <characteristic name="Ability" typeId="9bce-4deb-8b79-eaec">The cover modifier add 2 to save rolls for attacks made with missile weapons that target this model, instead of 1.</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="eb04-1abe-5d3e-a455" name="Guardian of the Enga&apos;la Weald" hidden="false" typeId="7861-da01-01c0-88d9" typeName="Ability">
+          <characteristics>
+            <characteristic name="Ability" typeId="9bce-4deb-8b79-eaec">ENGA&apos;LA WEALD is a Glade keyword (this means that this model cannot gain another Glade keyword if it is included in a Sylvaneth army - see the Glades battle trait in Battletome: Sylvaneth).</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <categoryLinks>
+        <categoryLink id="e6c8-4b25-4c46-f8a3" name="Enga&apos;la Weald" hidden="false" targetId="0769-ec5d-2106-7352" primary="false"/>
+        <categoryLink id="652b-ef3b-7d0c-727d" name="Hero" hidden="false" targetId="411f-dd41-4ab6-8a05" primary="false"/>
+        <categoryLink id="4df1-af08-22fc-cc4e" name="New CategoryLink" hidden="false" targetId="93cb-21d9-e1d5-6161" primary="true"/>
+        <categoryLink id="a863-1c51-c108-6a5f" name="NAMED" hidden="false" targetId="543e-1cc9-6d38-f8b3" primary="false"/>
+        <categoryLink id="0d3c-13ab-ac9c-d63a" name="Order" hidden="false" targetId="90c6-6c11-9677-1fa8" primary="false"/>
+        <categoryLink id="8538-ae9f-aac7-5e1a" name="Qulathis the Exile" hidden="false" targetId="770c-3b7b-5ee5-e7de" primary="false"/>
+        <categoryLink id="bcea-49b4-7848-f28b" name="SYLVANETH" hidden="false" targetId="b827-97c4-10f4-0d4e" primary="false"/>
+      </categoryLinks>
+      <selectionEntries>
+        <selectionEntry id="6e93-f925-9ca2-27f1" name="Aelven Blade" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="6bd9-7425-7bba-b326" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8559-3c97-52e0-7c4f" type="min"/>
+          </constraints>
+          <profiles>
+            <profile id="932f-248e-b47a-b4c6" name="Aelven Blade" hidden="false" typeId="2905-f6bd-06e5-6642" typeName="Weapon">
+              <characteristics>
+                <characteristic name="Type" typeId="1a08-195b-76fd-2c2b">Melee</characteristic>
+                <characteristic name="Range" typeId="1406-f935-3f8e-b27f">1&quot;</characteristic>
+                <characteristic name="Attacks" typeId="4c19-dba6-f094-5165">3</characteristic>
+                <characteristic name="To-Hit" typeId="7a4f-9704-2095-96c8">4+</characteristic>
+                <characteristic name="To-Wound" typeId="172f-fc84-895b-04b7">4</characteristic>
+                <characteristic name="Rend" typeId="0c05-bd2e-b7e7-3925">-</characteristic>
+                <characteristic name="Damage" typeId="01c2-d16a-8788-e52b">1</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+        </selectionEntry>
+        <selectionEntry id="bae5-7fc6-0311-a8aa" name="Winter&apos;s Call" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="9c1d-f27d-3710-6a4b" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="0576-3008-86c1-bd10" type="min"/>
+          </constraints>
+          <profiles>
+            <profile id="fc21-ea89-6807-2a2a" name="Winter&apos;s Call" hidden="false" typeId="2905-f6bd-06e5-6642" typeName="Weapon">
+              <characteristics>
+                <characteristic name="Type" typeId="1a08-195b-76fd-2c2b">Missile</characteristic>
+                <characteristic name="Range" typeId="1406-f935-3f8e-b27f">24&quot;</characteristic>
+                <characteristic name="Attacks" typeId="4c19-dba6-f094-5165">3</characteristic>
+                <characteristic name="To-Hit" typeId="7a4f-9704-2095-96c8">3+</characteristic>
+                <characteristic name="To-Wound" typeId="172f-fc84-895b-04b7">3+</characteristic>
+                <characteristic name="Rend" typeId="0c05-bd2e-b7e7-3925">-1</characteristic>
+                <characteristic name="Damage" typeId="01c2-d16a-8788-e52b">1</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+        </selectionEntry>
+      </selectionEntries>
+      <costs>
+        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="100.0"/>
       </costs>
     </selectionEntry>
   </sharedSelectionEntries>

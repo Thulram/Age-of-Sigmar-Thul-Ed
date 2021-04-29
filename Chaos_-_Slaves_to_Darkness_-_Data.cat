@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="0323-3d4f-ac64-f863" name="Chaos - Slaves to Darkness - Data" revision="4" battleScribeVersion="2.03" authorName="Thulram" library="true" gameSystemId="e832-3291-06be-cab1" gameSystemRevision="4" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="0323-3d4f-ac64-f863" name="Chaos - Slaves to Darkness - Data" revision="5" battleScribeVersion="2.03" authorName="Thulram" library="true" gameSystemId="e832-3291-06be-cab1" gameSystemRevision="5" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <profileTypes>
     <profileType id="6d8f-5fb8-9cc5-2146" name="Archaon Wounds">
       <characteristicTypes>
@@ -64,6 +64,13 @@
         <characteristicType id="f65b-cce0-70f5-8598" name="Move"/>
         <characteristicType id="dd5d-8586-62c4-4933" name="Crushing Fist"/>
         <characteristicType id="ead7-a7b6-8db0-71b9" name="Stomp"/>
+      </characteristicTypes>
+    </profileType>
+    <profileType id="3d45-11ef-00ea-4acd" name="Be&apos;lakor Wounds">
+      <characteristicTypes>
+        <characteristicType id="803d-d6a7-f4af-c1e8" name="Move"/>
+        <characteristicType id="afa1-93fc-cdbf-fefc" name="Blade of Shadows"/>
+        <characteristicType id="9606-63c4-fc3c-573a" name="Spearing Tail"/>
       </characteristicTypes>
     </profileType>
   </profileTypes>
@@ -2041,29 +2048,27 @@ Choose 1 unit from the following list:
         <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="140.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="4b92-6e50-e8b5-139b" name="Be&apos;lakor" publicationId="3fe3-bddd-c287-5968" hidden="false" collective="false" import="true" type="unit">
+    <selectionEntry id="4b92-6e50-e8b5-139b" name="Be&apos;lakor, The Dark Master" publicationId="3fe3-bddd-c287-5968" hidden="false" collective="false" import="true" type="unit">
       <constraints>
         <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="8d7f-3701-76a4-dd4f" type="max"/>
       </constraints>
       <profiles>
         <profile id="cbc7-8567-1c0b-9e31" name="Be&apos;lakor" hidden="false" typeId="3956-f6dd-6c88-ae4b" typeName="Unit">
           <characteristics>
-            <characteristic name="Move" typeId="5bbe-8910-4dfa-7b1c">12&quot;</characteristic>
-            <characteristic name="Wounds" typeId="a0c6-af64-2f24-5759">8</characteristic>
+            <characteristic name="Move" typeId="5bbe-8910-4dfa-7b1c">*</characteristic>
+            <characteristic name="Wounds" typeId="a0c6-af64-2f24-5759">14</characteristic>
             <characteristic name="Save" typeId="93b6-2f96-2df7-e330">4+</characteristic>
             <characteristic name="Bravery" typeId="2420-1c5c-1016-7033">10</characteristic>
           </characteristics>
         </profile>
         <profile id="c054-7a32-59f7-b532" name="The Dark Master" hidden="false" typeId="7861-da01-01c0-88d9" typeName="Ability">
           <characteristics>
-            <characteristic name="Ability" typeId="9bce-4deb-8b79-eaec">After set-up is complete but before the first battle round begins, secretly pick 1 enemy unit on the battlefield. Once per battle, at the start of the enemy hero phase, you can reveal which unit you picked.
-
-Until your next hero phase, your opponent must roll a dice each time that unit attempts to cast a spell, move, charge or attack with any weapons it is armed with. On a 1-4, that unit cannot do so. On a 5+, that unit can do so as normal.</characteristic>
+            <characteristic name="Ability" typeId="9bce-4deb-8b79-eaec">Once per battle, at the start of the enemy hero phase, you can pick 1 enemy unit on the battlefield. Until your next hero phase, at the start of each phase (including the phase in which the unit was picked), you can roll a dice for that unit. On a 3+, that unit cannot move, shoot, fight, use command abilities, chant prayers, attempt to cast spells, attempt to dispel endless spells or attempt to unbind spells in that phase.</characteristic>
           </characteristics>
         </profile>
         <profile id="6109-9598-b096-397d" name="Lord of Torment" hidden="false" typeId="7861-da01-01c0-88d9" typeName="Ability">
           <characteristics>
-            <characteristic name="Ability" typeId="9bce-4deb-8b79-eaec">If an enemy unit fails a battleshock test while it is within 10&quot; of this model, you can heal up to D3 wounds allocated to this model.</characteristic>
+            <characteristic name="Ability" typeId="9bce-4deb-8b79-eaec">If an enemy unit fails a battleshock test while it is within 12&quot; of this model, you can heal up to D3 wounds allocated to this model.</characteristic>
           </characteristics>
         </profile>
         <profile id="0a5b-7896-8c74-e5f4" name="Shadow Form" hidden="false" typeId="7861-da01-01c0-88d9" typeName="Ability">
@@ -2074,12 +2079,47 @@ Until your next hero phase, your opponent must roll a dice each time that unit a
         <profile id="42d5-d71d-b985-454c" name="Be&apos;lakor" hidden="false" typeId="a62b-2245-5c24-f8bc" typeName="Magic">
           <characteristics>
             <characteristic name="Cast/Unbind" typeId="9a5b-68ee-bc46-6a9d">2/2</characteristic>
-            <characteristic name="Spells Known" typeId="25bd-2ad0-e570-e880">Arcane Bolt, Mystic Shield, Enfeeble Foe, 1 spell from Lore of the Damned</characteristic>
+            <characteristic name="Spells Known" typeId="25bd-2ad0-e570-e880">Arcane Bolt, Mystic Shield, Enfeeble Foe</characteristic>
           </characteristics>
         </profile>
         <profile id="f721-46e2-948c-1105" name="Enfeeble Foe" hidden="false" typeId="13da-11a8-b7d1-77a7" typeName="Spell">
           <characteristics>
             <characteristic name="Spell" typeId="1170-c916-1b73-ae34">Enfeeble Foe has a casting value of 6. If successfully cast, pick 1 enemy unit within 18&quot; of the caster and visible to them. Subtract 1 from wound rolls for attacks made with melee weapons by that unit until your next hero phase.</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="ad10-f0c1-5d97-08f7" name="00-03" hidden="false" typeId="3d45-11ef-00ea-4acd" typeName="Be&apos;lakor Wounds">
+          <characteristics>
+            <characteristic name="Move" typeId="803d-d6a7-f4af-c1e8">14&quot;</characteristic>
+            <characteristic name="Blade of Shadows" typeId="afa1-93fc-cdbf-fefc">8</characteristic>
+            <characteristic name="Spearing Tail" typeId="9606-63c4-fc3c-573a">1+</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="f9e9-3608-31d5-d45e" name="09-10" hidden="false" typeId="3d45-11ef-00ea-4acd" typeName="Be&apos;lakor Wounds">
+          <characteristics>
+            <characteristic name="Move" typeId="803d-d6a7-f4af-c1e8">8&quot;</characteristic>
+            <characteristic name="Blade of Shadows" typeId="afa1-93fc-cdbf-fefc">5</characteristic>
+            <characteristic name="Spearing Tail" typeId="9606-63c4-fc3c-573a">4+</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="596e-1620-9d54-7100" name="11+" hidden="false" typeId="3d45-11ef-00ea-4acd" typeName="Be&apos;lakor Wounds">
+          <characteristics>
+            <characteristic name="Move" typeId="803d-d6a7-f4af-c1e8">6&quot;</characteristic>
+            <characteristic name="Blade of Shadows" typeId="afa1-93fc-cdbf-fefc">4</characteristic>
+            <characteristic name="Spearing Tail" typeId="9606-63c4-fc3c-573a">5+</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="7b76-c907-9402-6622" name="07-08" hidden="false" typeId="3d45-11ef-00ea-4acd" typeName="Be&apos;lakor Wounds">
+          <characteristics>
+            <characteristic name="Move" typeId="803d-d6a7-f4af-c1e8">10&quot;</characteristic>
+            <characteristic name="Blade of Shadows" typeId="afa1-93fc-cdbf-fefc">6</characteristic>
+            <characteristic name="Spearing Tail" typeId="9606-63c4-fc3c-573a">3+</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="18c9-b7cc-1241-023c" name="04-06" hidden="false" typeId="3d45-11ef-00ea-4acd" typeName="Be&apos;lakor Wounds">
+          <characteristics>
+            <characteristic name="Move" typeId="803d-d6a7-f4af-c1e8">12&quot;</characteristic>
+            <characteristic name="Blade of Shadows" typeId="afa1-93fc-cdbf-fefc">7</characteristic>
+            <characteristic name="Spearing Tail" typeId="9606-63c4-fc3c-573a">2+</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -2097,19 +2137,65 @@ Until your next hero phase, your opponent must roll a dice each time that unit a
         <categoryLink id="a1b0-573a-2973-ebba" name="SLAVES TO DARKNESS" hidden="false" targetId="7cc4-0f77-6518-a47d" primary="false"/>
         <categoryLink id="728a-bb14-f463-a2da" name="UNDIVIDED" hidden="false" targetId="99f6-bae0-b529-5f2d" primary="false"/>
         <categoryLink id="4b94-c755-884e-a3b6" name="Wizard" hidden="false" targetId="7ee2-0d81-544f-5d7e" primary="false"/>
+        <categoryLink id="6a42-57fa-979a-b450" name="Monster" hidden="false" targetId="e3bc-f9bd-b6f8-7afd" primary="false"/>
+        <categoryLink id="11c7-7925-cbd9-5c54" name="Behemoth" hidden="false" targetId="7f62-b7f5-32d5-e13b" primary="false"/>
       </categoryLinks>
       <selectionEntries>
-        <selectionEntry id="feb3-9262-74c9-4100" name="Blade of Shadows" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="feb3-9262-74c9-4100" name="Spearing Tail" hidden="false" collective="false" import="true" type="upgrade">
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="b98f-cd36-9d5e-b1dd" type="max"/>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="7f13-69e3-b144-504c" type="min"/>
           </constraints>
           <profiles>
-            <profile id="f920-2187-7f0e-64fd" name="Blade of Shadows" hidden="false" typeId="2905-f6bd-06e5-6642" typeName="Weapon">
+            <profile id="f920-2187-7f0e-64fd" name="Spearing Tail" hidden="false" typeId="2905-f6bd-06e5-6642" typeName="Weapon">
+              <characteristics>
+                <characteristic name="Type" typeId="1a08-195b-76fd-2c2b">Melee</characteristic>
+                <characteristic name="Range" typeId="1406-f935-3f8e-b27f">3&quot;</characteristic>
+                <characteristic name="Attacks" typeId="4c19-dba6-f094-5165">1</characteristic>
+                <characteristic name="To-Hit" typeId="7a4f-9704-2095-96c8">2+</characteristic>
+                <characteristic name="To-Wound" typeId="172f-fc84-895b-04b7">*</characteristic>
+                <characteristic name="Rend" typeId="0c05-bd2e-b7e7-3925">-3</characteristic>
+                <characteristic name="Damage" typeId="01c2-d16a-8788-e52b">2</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <costs>
+            <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="9b7b-0f13-c8a3-2f32" name="Blade of Shadows" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="48b3-2a8c-389f-f368" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="e1a4-2b94-87bd-4750" type="min"/>
+          </constraints>
+          <profiles>
+            <profile id="4fec-fb17-906e-0154" name="Blade of Shadows" hidden="false" typeId="2905-f6bd-06e5-6642" typeName="Weapon">
+              <characteristics>
+                <characteristic name="Type" typeId="1a08-195b-76fd-2c2b">Melee</characteristic>
+                <characteristic name="Range" typeId="1406-f935-3f8e-b27f">2&quot;</characteristic>
+                <characteristic name="Attacks" typeId="4c19-dba6-f094-5165">*</characteristic>
+                <characteristic name="To-Hit" typeId="7a4f-9704-2095-96c8">3+</characteristic>
+                <characteristic name="To-Wound" typeId="172f-fc84-895b-04b7">3+</characteristic>
+                <characteristic name="Rend" typeId="0c05-bd2e-b7e7-3925">-2</characteristic>
+                <characteristic name="Damage" typeId="01c2-d16a-8788-e52b">2</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <costs>
+            <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="86b8-7b4b-fd1c-c48f" name="Fell Claw" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="ccf7-84e9-1c72-6107" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="b416-4a2b-2880-e47c" type="min"/>
+          </constraints>
+          <profiles>
+            <profile id="ef85-d544-f8b3-fa82" name="Fell Claw" hidden="false" typeId="2905-f6bd-06e5-6642" typeName="Weapon">
               <characteristics>
                 <characteristic name="Type" typeId="1a08-195b-76fd-2c2b">Melee</characteristic>
                 <characteristic name="Range" typeId="1406-f935-3f8e-b27f">1&quot;</characteristic>
-                <characteristic name="Attacks" typeId="4c19-dba6-f094-5165">6</characteristic>
+                <characteristic name="Attacks" typeId="4c19-dba6-f094-5165">1</characteristic>
                 <characteristic name="To-Hit" typeId="7a4f-9704-2095-96c8">3+</characteristic>
                 <characteristic name="To-Wound" typeId="172f-fc84-895b-04b7">3+</characteristic>
                 <characteristic name="Rend" typeId="0c05-bd2e-b7e7-3925">-1</characteristic>
@@ -2123,7 +2209,7 @@ Until your next hero phase, your opponent must roll a dice each time that unit a
         </selectionEntry>
       </selectionEntries>
       <costs>
-        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="240.0"/>
+        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="380.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="293f-06ab-2a5a-f895" name="Slaves to Darkness Daemon Prince" publicationId="3fe3-bddd-c287-5968" hidden="false" collective="false" import="true" type="unit">
@@ -6627,30 +6713,6 @@ FIRST CIRCLE, SECOND CIRCLE, THIRD CIRCLE, FOURTH CIRCLE, FIFTH CIRCLE, SIXTH CI
                           </selectionEntries>
                         </selectionEntryGroup>
                       </selectionEntryGroups>
-                      <costs>
-                        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
-                      </costs>
-                    </selectionEntry>
-                    <selectionEntry id="0713-a1ad-9cdc-2a00" name="The Legion of the First Prince" hidden="false" collective="false" import="true" type="upgrade">
-                      <profiles>
-                        <profile id="aebc-5155-d8de-a34d" name="First-Damned Prince" hidden="false" typeId="c0c2-177b-e761-ec41" typeName="Allegiance Abilities">
-                          <characteristics>
-                            <characteristic name="Allegiance Ability" typeId="0506-f62d-68b3-5499">In addition, before you allocate a wound or mortal wound to BE’LAKOR, pick 1 friendly LEGION OF THE FIRST PRINCE BLOODLETTERS, PLAGUEBEARERS, DAEMONETTES or HORRORS OF TZEENTCH unit within 8&quot; of him and roll a dice. On a 4+, that wound or mortal wound is allocated to that unit instead.</characteristic>
-                          </characteristics>
-                        </profile>
-                        <profile id="ed20-e924-acd7-153f" name="The Shadow Legion" hidden="false" typeId="6364-f76d-fc0c-80bc" typeName="Command Abilities">
-                          <characteristics>
-                            <characteristic name="Command Ability" typeId="36cb-f8a4-d94b-8aa8">You can use this command ability once per turn at the end of the battleshock phase if BE&apos;LAKOR is your general and on the battlefield. If you do so, roll a dice for each friendly LEGION OF THE FIRST PRINCE BLOODLETTERS, PLAGUEBEARERS, DAEMONETTES and HORRORS OF TZEENTCH unit on the battlefield. On a 3+, you can return D3 slain models to that unit.</characteristic>
-                          </characteristics>
-                        </profile>
-                        <profile id="bc46-5225-46e2-d987" name="The Master&apos;s Command" hidden="false" typeId="13da-11a8-b7d1-77a7" typeName="Spell">
-                          <characteristics>
-                            <characteristic name="Spell" typeId="1170-c916-1b73-ae34">Each WIZARD in a LEGION OF THE FIRST PRINCE army knows the following spell in addition to any other spells that they know.
-
-The Master’s Command has a casting value of 7. If successfully cast, pick 1 friendly LEGION OF THE FIRST PRINCE BLOODLETTERS, PLAGUEBEARERS, DAEMONETTES or HORRORS OF TZEENTCH unit wholly within 12&quot; of the caster and visible to them. Until the start of your next hero phase, if a model from that unit is slain by an attack made with a melee weapon, that model can fight before it is removed from play.</characteristic>
-                          </characteristics>
-                        </profile>
-                      </profiles>
                       <costs>
                         <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
                       </costs>

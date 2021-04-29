@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="a9fc-3ad2-0bad-01ea" name="Death - Nighthaunt - Data" revision="1" battleScribeVersion="2.03" authorName="Thulram" library="true" gameSystemId="e832-3291-06be-cab1" gameSystemRevision="1" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="a9fc-3ad2-0bad-01ea" name="Death - Nighthaunt - Data" revision="2" battleScribeVersion="2.03" authorName="Thulram" library="true" gameSystemId="e832-3291-06be-cab1" gameSystemRevision="1" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <profileTypes>
     <profileType id="4f6e-8f72-4279-a5ac" name="Black Coach Wounds">
       <characteristicTypes>
@@ -42,6 +42,7 @@
     <categoryEntry id="86e7-7779-e363-10fa" name="Mirrorghast Banshee" hidden="false"/>
     <categoryEntry id="860a-2b3a-d6d6-f6ba" name="Thorns of the Briar Queen" hidden="false"/>
     <categoryEntry id="ec4b-172f-5c4c-f65c" name="Mourngul" hidden="false"/>
+    <categoryEntry id="e56a-42b6-da9c-b761" name="Krulghast Cruciator" hidden="false"/>
   </categoryEntries>
   <sharedSelectionEntries>
     <selectionEntry id="18fc-073a-cdfd-ad1f" name="Lady Olynder, Mortarch of Grief" publicationId="6918-4599-9a4b-12c8" hidden="false" collective="false" import="true" type="unit">
@@ -1672,9 +1673,9 @@ Once in each of your hero phases, if this unit is within 6&quot; of an ENDLESS S
             <characteristic name="Bravery" typeId="2420-1c5c-1016-7033">10</characteristic>
           </characteristics>
         </profile>
-        <profile id="f8ca-d4a9-ea59-be93" name="Harrowin Shriek" hidden="false" typeId="7861-da01-01c0-88d9" typeName="Ability">
+        <profile id="f8ca-d4a9-ea59-be93" name="Harrowing Shriek" hidden="false" typeId="7861-da01-01c0-88d9" typeName="Ability">
           <characteristics>
-            <characteristic name="Ability" typeId="9bce-4deb-8b79-eaec">Subtract 1 from hit rolls for attacks made by enemy models within 3&quot; of this unit unless they have a Bravery characteristic of 6 or more.</characteristic>
+            <characteristic name="Ability" typeId="9bce-4deb-8b79-eaec">Subtract 1 from hit rolls for attacks made by enemy models with a Bravery characteristic of less than 7 while they are within 3&quot; of any units with this ability.</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -1693,7 +1694,7 @@ Once in each of your hero phases, if this unit is within 6&quot; of an ENDLESS S
       <selectionEntries>
         <selectionEntry id="a582-a5d7-be0c-daa4" name="5 Dreadscythe Harridans" hidden="false" collective="false" import="true" type="model">
           <modifiers>
-            <modifier type="set" field="b0b4-6aec-82c2-02ae" value="65.0">
+            <modifier type="set" field="b0b4-6aec-82c2-02ae" value="80.0">
               <conditions>
                 <condition field="selections" scope="parent" value="4.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" type="equalTo"/>
               </conditions>
@@ -1704,18 +1705,27 @@ Once in each of your hero phases, if this unit is within 6&quot; of an ENDLESS S
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="20ae-408c-907e-a265" type="min"/>
           </constraints>
           <costs>
-            <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="70.0"/>
+            <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="90.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="408f-4ed3-e26e-b4ca" name="Slasher Crone" hidden="false" collective="false" import="true" type="upgrade">
+          <modifiers>
+            <modifier type="increment" field="38aa-e5a7-4e3f-d48e" value="1.0">
+              <repeats>
+                <repeat field="selections" scope="a9c6-073c-787e-e9bc" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
+              </repeats>
+              <conditions>
+                <condition field="selections" scope="a9c6-073c-787e-e9bc" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="model" type="greaterThan"/>
+              </conditions>
+            </modifier>
+          </modifiers>
           <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="38aa-e5a7-4e3f-d48e" type="max"/>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="a146-cdcf-3404-5a5b" type="min"/>
+            <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="38aa-e5a7-4e3f-d48e" type="max"/>
           </constraints>
           <profiles>
             <profile id="19a2-64b3-a219-b935" name="Slasher Crone" hidden="false" typeId="c23b-5a30-07e2-4706" typeName="Unit Options">
               <characteristics>
-                <characteristic name="Unit Option" typeId="5879-9a21-e9d2-539d">The leader of this unit is a Slasher Crone. Add 1 to the Attacks characteristic of a Slasher Crone’s Scythed Limbs.</characteristic>
+                <characteristic name="Unit Option" typeId="5879-9a21-e9d2-539d">1 in every 5 models in this unit can be a Slasher Crone. Add 1 to the Attacks characteristic of that model’s Scythed Limbs.</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -1742,7 +1752,7 @@ Once in each of your hero phases, if this unit is within 6&quot; of an ENDLESS S
             </profile>
             <profile id="3b0c-9cee-1288-2576" name="Murderous Bloodlust" hidden="false" typeId="7861-da01-01c0-88d9" typeName="Ability">
               <characteristics>
-                <characteristic name="Ability" typeId="9bce-4deb-8b79-eaec">If the unmodified wound roll for an attack made with Scythed Limbs is 6, that attack has a Damage characteristic of 2 instead of 1.</characteristic>
+                <characteristic name="Ability" typeId="9bce-4deb-8b79-eaec">If the unmodified hit roll for an attack made with Scythed Limbs is 6, that attack scores 2 hits on the target instead of 1. Make a wound and save roll for each hit.</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -2526,6 +2536,79 @@ In addition, if the unmodified hit roll for an attack made with the Relic Bearer
       </categoryLinks>
       <costs>
         <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="140.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="e20c-af6f-4f62-9bb2" name="Krulghast Cruciator" publicationId="6918-4599-9a4b-12c8" hidden="false" collective="false" import="true" type="unit">
+      <profiles>
+        <profile id="49be-ce48-6fbc-5a9e" name="Krulghast Cruciator" hidden="false" typeId="3956-f6dd-6c88-ae4b" typeName="Unit">
+          <characteristics>
+            <characteristic name="Move" typeId="5bbe-8910-4dfa-7b1c">6&quot;</characteristic>
+            <characteristic name="Wounds" typeId="a0c6-af64-2f24-5759">6</characteristic>
+            <characteristic name="Save" typeId="93b6-2f96-2df7-e330">4+</characteristic>
+            <characteristic name="Bravery" typeId="2420-1c5c-1016-7033">10</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="c6b5-56f7-32f7-1ff8" name="Empowering Excruciation" hidden="false" typeId="7861-da01-01c0-88d9" typeName="Ability">
+          <characteristics>
+            <characteristic name="Ability" typeId="9bce-4deb-8b79-eaec">If any wounds inflicted by this model’s Phantasmal Torture are allocated to an enemy model and not negated, this model becomes empowered until your next shooting phase. The Deathless Spirits battle trait negates wounds allocated to friendly NIGHTHAUNT units wholly within 12&quot; of any friendly empowered KRULGHAST CRUCIATORS on a 5+ instead of 6+.</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoLinks>
+        <infoLink id="5af1-41f5-9a83-29ff" name="Fly" hidden="false" targetId="dd68-953d-c8fb-7075" type="profile"/>
+        <infoLink id="a5dc-467b-bcf1-7520" name="Ethereal" hidden="false" targetId="c443-5858-8d6e-c443" type="profile"/>
+      </infoLinks>
+      <categoryLinks>
+        <categoryLink id="f870-5a7f-9893-6bce" name="Death" hidden="false" targetId="4927-09f0-87d8-4a68" primary="false"/>
+        <categoryLink id="fcb2-b4bb-4941-4252" name="Krulghast Cruciator" hidden="false" targetId="e56a-42b6-da9c-b761" primary="false"/>
+        <categoryLink id="66cc-4912-b146-949c" name="New CategoryLink" hidden="false" targetId="93cb-21d9-e1d5-6161" primary="true"/>
+        <categoryLink id="923f-162f-02ad-987b" name="Malignant" hidden="false" targetId="4128-85eb-b9a7-54f4" primary="false"/>
+        <categoryLink id="764b-2719-5d6d-3913" name="NIGHTHAUNT" hidden="false" targetId="9af1-04d7-aa3e-c8b0" primary="false"/>
+        <categoryLink id="46f0-9b82-3360-2611" name="Totem" hidden="false" targetId="29de-3558-f0b3-40ea" primary="false"/>
+        <categoryLink id="d53e-ac68-0e85-61d9" name="Hero" hidden="false" targetId="411f-dd41-4ab6-8a05" primary="false"/>
+      </categoryLinks>
+      <selectionEntries>
+        <selectionEntry id="0e5d-195f-1912-f471" name="Talons and Flensing Knives" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d56e-a114-4ee4-735d" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="f211-6a97-4986-3727" type="min"/>
+          </constraints>
+          <profiles>
+            <profile id="e4f1-933c-1346-2824" name="Talons and Flensing Knives" hidden="false" typeId="2905-f6bd-06e5-6642" typeName="Weapon">
+              <characteristics>
+                <characteristic name="Type" typeId="1a08-195b-76fd-2c2b">Melee</characteristic>
+                <characteristic name="Range" typeId="1406-f935-3f8e-b27f">1&quot;</characteristic>
+                <characteristic name="Attacks" typeId="4c19-dba6-f094-5165">4</characteristic>
+                <characteristic name="To-Hit" typeId="7a4f-9704-2095-96c8">3+</characteristic>
+                <characteristic name="To-Wound" typeId="172f-fc84-895b-04b7">3+</characteristic>
+                <characteristic name="Rend" typeId="0c05-bd2e-b7e7-3925">-1</characteristic>
+                <characteristic name="Damage" typeId="01c2-d16a-8788-e52b">1</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+        </selectionEntry>
+        <selectionEntry id="2423-270b-83c4-4006" name="Phantasmal Torture" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="fab4-d108-8d7d-d8e4" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="bd21-faed-956a-681d" type="min"/>
+          </constraints>
+          <profiles>
+            <profile id="9be1-d08b-a9c9-d25a" name="Phantasmal Torture" hidden="false" typeId="2905-f6bd-06e5-6642" typeName="Weapon">
+              <characteristics>
+                <characteristic name="Type" typeId="1a08-195b-76fd-2c2b">Missile</characteristic>
+                <characteristic name="Range" typeId="1406-f935-3f8e-b27f">12&quot;</characteristic>
+                <characteristic name="Attacks" typeId="4c19-dba6-f094-5165">4</characteristic>
+                <characteristic name="To-Hit" typeId="7a4f-9704-2095-96c8">3+</characteristic>
+                <characteristic name="To-Wound" typeId="172f-fc84-895b-04b7">3+</characteristic>
+                <characteristic name="Rend" typeId="0c05-bd2e-b7e7-3925">-2</characteristic>
+                <characteristic name="Damage" typeId="01c2-d16a-8788-e52b">1</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+        </selectionEntry>
+      </selectionEntries>
+      <costs>
+        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="120.0"/>
       </costs>
     </selectionEntry>
   </sharedSelectionEntries>

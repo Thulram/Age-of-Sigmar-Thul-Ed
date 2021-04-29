@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="b581-6f0c-51ed-b9f9" name="Order - Seraphon" revision="6" battleScribeVersion="2.03" authorName="Thulram" library="false" gameSystemId="e832-3291-06be-cab1" gameSystemRevision="6" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="b581-6f0c-51ed-b9f9" name="Order - Seraphon" revision="7" battleScribeVersion="2.03" authorName="Thulram" library="false" gameSystemId="e832-3291-06be-cab1" gameSystemRevision="6" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <profileTypes>
     <profileType id="71c0-db88-72dc-b20c" name="Celestial Conjuration Table">
       <characteristicTypes>
@@ -82,6 +82,7 @@
     <categoryEntry id="52cb-3ca6-5e69-150b" name="General - Monster" hidden="true"/>
     <categoryEntry id="ed8c-9127-879b-4bc3" name="General - Saurus" hidden="true"/>
     <categoryEntry id="d338-94d4-b4f2-8371" name="General - Slann" hidden="true"/>
+    <categoryEntry id="e75a-1b6b-ff18-0f2d" name="Iq-To Prime Warbeast" hidden="false"/>
   </categoryEntries>
   <entryLinks>
     <entryLink id="f871-d478-e259-aff8" name="Allegiance" hidden="false" collective="false" import="true" targetId="baff-fa65-8924-8e2d" type="selectionEntry">
@@ -386,6 +387,11 @@
     <entryLink id="c216-7967-aed8-4c8c" name="Sunclaw Temple-host" hidden="false" collective="false" import="true" targetId="65c2-0468-8b31-1420" type="selectionEntry"/>
     <entryLink id="0aae-054f-3385-84fb" name="Thunderquake Starhost" hidden="false" collective="false" import="true" targetId="52d1-d672-c53b-bace" type="selectionEntry"/>
     <entryLink id="3d08-d066-341f-cc7d" name="Thunderquake Temple-host" hidden="false" collective="false" import="true" targetId="84dc-4257-7b89-e0fa" type="selectionEntry"/>
+    <entryLink id="89eb-47f8-cf42-f588" name="Bound Endless Spell - Horrorghast" hidden="false" collective="false" import="true" targetId="fb4c-9675-1c0f-3b5e" type="selectionEntry"/>
+    <entryLink id="38a6-cd55-9b94-7059" name="Bound Endless Spell - Lauchon the Soulseeker" hidden="false" collective="false" import="true" targetId="80ee-47b3-6e40-8e04" type="selectionEntry"/>
+    <entryLink id="e9e1-57d2-1864-6644" name="Bound Endless Spell - Soulscream Bridge" hidden="false" collective="false" import="true" targetId="71d4-4d21-7e47-fd24" type="selectionEntry"/>
+    <entryLink id="b40d-c315-8df8-3775" name="Bound Endless Spell - Shards of Valagharr" hidden="false" collective="false" import="true" targetId="8a08-11e8-a2d3-284a" type="selectionEntry"/>
+    <entryLink id="8abe-dcb2-7b63-c415" name="The Celestial Stampede" hidden="false" collective="false" import="true" targetId="4c18-6024-f153-39ae" type="selectionEntry"/>
   </entryLinks>
   <sharedSelectionEntries>
     <selectionEntry id="baff-fa65-8924-8e2d" name="Allegiance" hidden="false" collective="false" import="true" type="upgrade">
@@ -2252,6 +2258,285 @@ If a predatory endless spell finishes a move within 6&quot; of a Bound Umbral Sp
         <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="80.0"/>
       </costs>
     </selectionEntry>
+    <selectionEntry id="80ee-47b3-6e40-8e04" name="Bound Endless Spell - Lauchon the Soulseeker" hidden="false" collective="false" import="true" type="model">
+      <constraints>
+        <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="5591-c644-bbd2-41e5" type="max"/>
+      </constraints>
+      <profiles>
+        <profile id="bbf8-245e-753a-4fa4" name="Summon Bound Lauchon the Soulseeker" hidden="false" typeId="13da-11a8-b7d1-77a7" typeName="Spell">
+          <characteristics>
+            <characteristic name="Spell" typeId="1170-c916-1b73-ae34">Summon Bound Lauchon the Soulseeker has a casting value of 6. Only SERAPHON WIZARDS can attempt to cast this spell. If successfully cast, set up a Bound Lauchon the Soulseeker model wholly within 12&quot; of the caster.</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="e625-46fc-d641-3c08" name="Predatory" hidden="false" typeId="ce32-0c40-1990-4c8a" typeName="Restriction">
+          <characteristics>
+            <characteristic name="Restriction" typeId="edbe-5fe5-1142-afa6">Bound Lauchon the Soulseeker is a predatory endless spell. It can move up to 12&quot; and can fly.</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="2da7-4fb8-2a0a-f2ef" name="Navigate Deathly Tides" hidden="false" typeId="7861-da01-01c0-88d9" typeName="Ability">
+          <characteristics>
+            <characteristic name="Ability" typeId="9bce-4deb-8b79-eaec">When this model is set up, the player who set it up can immediately make a move with it.</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="e63c-ab71-6431-517d" name="Empowered by Shyish" hidden="false" typeId="7861-da01-01c0-88d9" typeName="Ability">
+          <characteristics>
+            <characteristic name="Ability" typeId="9bce-4deb-8b79-eaec">If your battle is taking place in the Realm of Death, this model can move up to 18&quot; instead of up to 12&quot;.</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="0cea-6cb6-47b4-e329" name="Soul Price" hidden="false" typeId="7861-da01-01c0-88d9" typeName="Ability">
+          <characteristics>
+            <characteristic name="Ability" typeId="9bce-4deb-8b79-eaec">Before a player makes a move with this model, that player can pick a friendly unit wholly within 3&quot; of this model. Remove that unit from the battlefield and place it to one side. After this model has moved, set up that unit again wholly within 3&quot; of this model and more than 9&quot; from any enemy units. After that unit has been set up, 1 model from that unit is slain. The unit you set up cannot move in the following movement phase.</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <categoryLinks>
+        <categoryLink id="779d-dacc-ad5a-c7ca" name="Bound" hidden="false" targetId="7d5d-4f26-1f17-5dae" primary="false"/>
+        <categoryLink id="2def-ccd2-5d03-297f" name="Endless Spell" hidden="false" targetId="fcd7-57cc-479b-7d67" primary="false"/>
+        <categoryLink id="4c1e-50f0-22cb-f137" name="Lauchon the Soulseeker" hidden="false" targetId="d58e-b376-52ea-a019" primary="false"/>
+        <categoryLink id="2c3d-3379-6d5b-92a8" name="New CategoryLink" hidden="false" targetId="ecf9-78bd-d326-2a82" primary="true"/>
+        <categoryLink id="5188-88bf-c5e2-86bc" name="Shyish (realm)" hidden="false" targetId="b347-5473-3854-2c40" primary="false"/>
+      </categoryLinks>
+      <costs>
+        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="70.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="71d4-4d21-7e47-fd24" name="Bound Endless Spell - Soulscream Bridge" hidden="false" collective="false" import="true" type="model">
+      <constraints>
+        <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="5870-3f17-c291-990c" type="max"/>
+      </constraints>
+      <profiles>
+        <profile id="1d7d-8758-1379-472f" name="Summon Bound Soulscream Bridge" hidden="false" typeId="13da-11a8-b7d1-77a7" typeName="Spell">
+          <characteristics>
+            <characteristic name="Spell" typeId="1170-c916-1b73-ae34">Summon Bound Soulscream Bridge has a casting value of 6. Only SERAPHON WIZARDS can attempt to cast this spell. If successfully cast, set up the first Bound Soulscream Bridge model wholly within 6&quot; of the caster, and then set up the second Bound Soulscream Bridge model wholly within 12&quot; of the first.</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="b0d4-08a3-0553-3800" name="Deathly Passage" hidden="false" typeId="7861-da01-01c0-88d9" typeName="Ability">
+          <characteristics>
+            <characteristic name="Ability" typeId="9bce-4deb-8b79-eaec">At the start of your movement phase, friendly units wholly within 6&quot; of one of the models from this endless spell can travel across the Soulscream Bridge. If they do so, remove that unit from the battlefield and set it up again wholly within 6&quot; of the other model from this endless spell and more than 9&quot; from any enemy units. That unit cannot make a normal move that phase.</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="8a4e-bf6d-da89-0300" name="Nightmarish Construct" hidden="false" typeId="7861-da01-01c0-88d9" typeName="Ability">
+          <characteristics>
+            <characteristic name="Ability" typeId="9bce-4deb-8b79-eaec">Subtract 1 from the Bravery characteristic of units while they are within 6&quot; of a Bound Soulscream Bridge model. This ability has no effect on DEATH units.</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="1a9e-1d2c-aa1d-5abf" name="Empowered by Shyish" hidden="false" typeId="7861-da01-01c0-88d9" typeName="Ability">
+          <characteristics>
+            <characteristic name="Ability" typeId="9bce-4deb-8b79-eaec">If your battle is taking place in the Realm of Death, the second Bound Soulscream Bridge model can be set up wholly within 24&quot; of the first instead of wholly within 12&quot; of the first.</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <categoryLinks>
+        <categoryLink id="f7d3-5167-19f7-918c" name="Bound" hidden="false" targetId="7d5d-4f26-1f17-5dae" primary="false"/>
+        <categoryLink id="303f-8bac-37a6-4f8c" name="Endless Spell" hidden="false" targetId="fcd7-57cc-479b-7d67" primary="false"/>
+        <categoryLink id="79e2-bad7-37a7-6130" name="New CategoryLink" hidden="false" targetId="ecf9-78bd-d326-2a82" primary="true"/>
+        <categoryLink id="7bb1-e9b2-57ca-07aa" name="Shyish (realm)" hidden="false" targetId="b347-5473-3854-2c40" primary="false"/>
+        <categoryLink id="610e-de72-1e7c-837e" name="Soulscream Bridge" hidden="false" targetId="889e-7ffd-ffc9-7c5f" primary="false"/>
+      </categoryLinks>
+      <costs>
+        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="110.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="fb4c-9675-1c0f-3b5e" name="Bound Endless Spell - Horrorghast" hidden="false" collective="false" import="true" type="model">
+      <constraints>
+        <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="57b5-9220-c081-5adf" type="max"/>
+      </constraints>
+      <profiles>
+        <profile id="a4c9-c8fa-1480-9d9a" name="Summon Bound Horrorghast" hidden="false" typeId="13da-11a8-b7d1-77a7" typeName="Spell">
+          <characteristics>
+            <characteristic name="Spell" typeId="1170-c916-1b73-ae34">Summon Bound Horrorghast has a casting value of 6. Only SERAPHON WIZARDS can attempt to cast this spell. If successfully cast, set up a Bound Horrorghast model wholly within 12&quot; of the caster.</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="3cd6-d754-8df2-821c" name="Predatory" hidden="false" typeId="ce32-0c40-1990-4c8a" typeName="Restriction">
+          <characteristics>
+            <characteristic name="Restriction" typeId="edbe-5fe5-1142-afa6">A Bound Horrorghast is a predatory endless spell. It can move up to 9&quot; and can fly.</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="0ded-1967-f776-c98f" name="Prey on Fear" hidden="false" typeId="7861-da01-01c0-88d9" typeName="Ability">
+          <characteristics>
+            <characteristic name="Ability" typeId="9bce-4deb-8b79-eaec">Subtract 1 from the Bravery characteristic of units while they are within 12&quot; of this model. Subtract 2 instead from the Bravery characteristic of units while they are within 6&quot; of this model.</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="4715-c726-199d-c199" name="Empowered by Shyish" hidden="false" typeId="7861-da01-01c0-88d9" typeName="Ability">
+          <characteristics>
+            <characteristic name="Ability" typeId="9bce-4deb-8b79-eaec">If your battle is taking place in the Realm of Death, this model can move up to 12&quot; instead of up to 9&quot;.</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <categoryLinks>
+        <categoryLink id="968d-07c6-baae-cc02" name="Bound" hidden="false" targetId="7d5d-4f26-1f17-5dae" primary="false"/>
+        <categoryLink id="2e6e-5aa6-5c08-d609" name="Endless Spell" hidden="false" targetId="fcd7-57cc-479b-7d67" primary="false"/>
+        <categoryLink id="776c-ee62-63d9-0fd4" name="Horrorghast" hidden="false" targetId="8aea-d7aa-5928-0c6b" primary="false"/>
+        <categoryLink id="98c5-48e8-ab64-2314" name="New CategoryLink" hidden="false" targetId="ecf9-78bd-d326-2a82" primary="true"/>
+        <categoryLink id="6736-f746-0b4f-a95d" name="Shyish (realm)" hidden="false" targetId="b347-5473-3854-2c40" primary="false"/>
+      </categoryLinks>
+      <costs>
+        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="60.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="8a08-11e8-a2d3-284a" name="Bound Endless Spell - Shards of Valagharr" hidden="false" collective="false" import="true" type="model">
+      <constraints>
+        <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="d983-e34f-3329-24f2" type="max"/>
+      </constraints>
+      <profiles>
+        <profile id="0954-a769-69cf-3ac0" name="Summon Bound Shards of Valagharr" hidden="false" typeId="13da-11a8-b7d1-77a7" typeName="Spell">
+          <characteristics>
+            <characteristic name="Spell" typeId="1170-c916-1b73-ae34">Summon Bound Shards of Valagharr has a casting value of 5. Only SERAPHON WIZARDS can attempt to cast this spell. If successfully cast, set up the first Bound Shards of Valagharr model wholly within 6&quot; of the caster, and then set up the second Bound Shards of Valagharr model wholly within 12&quot; of the first.</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="b3a9-a561-101a-6547" name="Ensnaring Soul-drain" hidden="false" typeId="7861-da01-01c0-88d9" typeName="Ability">
+          <characteristics>
+            <characteristic name="Ability" typeId="9bce-4deb-8b79-eaec">At the start of the movement phase, draw an imaginary straight line 1mm wide between the closest parts of the bases of the two models from this endless spell. Each unit passed across by this line is ensnared until the end of that turn. Halve the Move characteristic of a unit that is ensnared. In addition, subtract 1 from hit rolls for attacks made by units that are ensnared.</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="8737-3213-c197-ceeb" name="Twilight Translocation" hidden="false" typeId="7861-da01-01c0-88d9" typeName="Ability">
+          <characteristics>
+            <characteristic name="Ability" typeId="9bce-4deb-8b79-eaec">At the start of the battle round, after determining who has the first turn, you can remove one of the models from this endless spell from the battlefield and set it up again anywhere on the battlefield wholly within 12&quot; of the other model from this endless spell.</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="ea60-68c3-8161-7486" name="Empowered by Shyish" hidden="false" typeId="7861-da01-01c0-88d9" typeName="Ability">
+          <characteristics>
+            <characteristic name="Ability" typeId="9bce-4deb-8b79-eaec">If your battle is taking place in the Realm of Death, the first Shards of Valagharr model can be set up wholly within 12&quot; of the caster instead of 6&quot;.</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <categoryLinks>
+        <categoryLink id="7bd6-efe3-dea2-d61f" name="Bound" hidden="false" targetId="7d5d-4f26-1f17-5dae" primary="false"/>
+        <categoryLink id="b864-f947-ae8d-1d9f" name="Endless Spell" hidden="false" targetId="fcd7-57cc-479b-7d67" primary="false"/>
+        <categoryLink id="f610-dae6-6266-138c" name="New CategoryLink" hidden="false" targetId="ecf9-78bd-d326-2a82" primary="true"/>
+        <categoryLink id="bd6d-4a0f-c05e-4787" name="Shards of Valagharr" hidden="false" targetId="8f27-0154-a719-3596" primary="false"/>
+        <categoryLink id="5029-f1a1-31e7-3957" name="Shyish (realm)" hidden="false" targetId="b347-5473-3854-2c40" primary="false"/>
+      </categoryLinks>
+      <costs>
+        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="40.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="4c18-6024-f153-39ae" name="The Celestial Stampede" hidden="false" collective="false" import="true" type="upgrade">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="57dd-a5bb-ea75-4bdf" type="equalTo"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <constraints>
+        <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="f501-7cfe-6911-c19b" type="max"/>
+      </constraints>
+      <profiles>
+        <profile id="2dc3-24b2-86e0-7f7b" name="Ancient Talepotec" hidden="false" typeId="66c5-932e-004a-574c" typeName="Battalion Abilities">
+          <characteristics>
+            <characteristic name="Battalion Ability" typeId="23f7-32c0-e059-29b2">Starwarden Iq-To has the Prime Warbeast command trait from Battletome: Seraphon even if he is not your general.</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="25bb-1653-c6cb-0093" name="Lance of Cosmic Power" hidden="false" typeId="66c5-932e-004a-574c" typeName="Battalion Abilities">
+          <characteristics>
+            <characteristic name="Battalion Ability" typeId="23f7-32c0-e059-29b2">Once per battle, at the start of your shooting phase, you can say that this battalion is going to shoot a Lance of Cosmic Power. If you do so, you cannot make cosmic engine rolls for units from this battalion in that phase, and you cannot use the Trove of Old One Technology command ability in that phase. Instead, pick 1 enemy unit within 24&quot; of Starwarden Iq-To and roll 1 dice for each ENGINE OF THE GODS from this battalion that is within 24&quot; of that enemy unit, and roll 2 dice for each BASTILADON armed with a Solar Engine from this battalion that is within 24&quot; of that enemy unit. For each 2+, that enemy unit suffers D3 mortal wounds.</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <categoryLinks>
+        <categoryLink id="ece0-050c-1ea2-4d9c" name="New CategoryLink" hidden="false" targetId="c03a-b1a8-66c6-3637" primary="true"/>
+      </categoryLinks>
+      <selectionEntryGroups>
+        <selectionEntryGroup id="177d-56bc-d067-b412" name="1 Bastiladon" hidden="false" collective="false" import="true">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="01eb-2ba4-4d88-6e61" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="41bf-0d2b-a9af-d456" type="min"/>
+          </constraints>
+          <entryLinks>
+            <entryLink id="753f-0a24-361a-43fc" name="Bastiladon" hidden="false" collective="false" import="true" targetId="ba6f-5b56-9e8b-48e2" type="selectionEntry"/>
+          </entryLinks>
+        </selectionEntryGroup>
+        <selectionEntryGroup id="1775-2796-b5d8-f7a6" name="1 featured unit" hidden="false" collective="false" import="true">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="b3d7-0906-92b4-a2a6" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="7d81-0d32-922f-aec9" type="min"/>
+          </constraints>
+          <entryLinks>
+            <entryLink id="4d19-6a3c-2016-f7e5" name="Engine of the Gods" hidden="false" collective="false" import="true" targetId="63dd-fada-ecfa-da5e" type="selectionEntry">
+              <entryLinks>
+                <entryLink id="c6c0-d76c-1c07-1ae1" name="General" hidden="false" collective="false" import="true" targetId="98a4-3d6d-a7b9-399f" type="selectionEntry">
+                  <categoryLinks>
+                    <categoryLink id="d707-eb8b-1f0c-ff62" name="General - Monster" hidden="false" targetId="52cb-3ca6-5e69-150b" primary="false"/>
+                  </categoryLinks>
+                </entryLink>
+                <entryLink id="01f8-7021-cc72-b31a" name="Artefacts of Power" hidden="false" collective="false" import="true" targetId="3a05-2cb4-92ae-62e4" type="selectionEntryGroup"/>
+                <entryLink id="9579-a705-44c6-501a" name="Command Traits" hidden="false" collective="false" import="true" targetId="5d24-ebc4-7261-165d" type="selectionEntryGroup"/>
+              </entryLinks>
+            </entryLink>
+            <entryLink id="7e4f-96b4-eac7-45eb" name="Stegadon" hidden="false" collective="false" import="true" targetId="166c-bb29-f70a-13bd" type="selectionEntry">
+              <modifiers>
+                <modifier type="remove" field="category" value="8ae1-74a9-a02d-3cfa">
+                  <conditions>
+                    <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="a42d-220e-6a88-7bf6" type="equalTo"/>
+                  </conditions>
+                </modifier>
+                <modifier type="remove" field="category" value="a42d-220e-6a88-7bf6">
+                  <conditionGroups>
+                    <conditionGroup type="or">
+                      <conditions>
+                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="e3a6-45ca-4974-b489" type="instanceOf"/>
+                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4373-740f-1bf3-b0aa" type="instanceOf"/>
+                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="6cd6-b22e-bfcb-9589" type="instanceOf"/>
+                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="57dd-a5bb-ea75-4bdf" type="equalTo"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+              </modifiers>
+              <categoryLinks>
+                <categoryLink id="9342-a343-cfa5-b585" name="BATTLELINE" hidden="false" targetId="a42d-220e-6a88-7bf6" primary="false"/>
+                <categoryLink id="1ba4-490a-82ab-95ad" name="Battleline Behemoth" hidden="false" targetId="8ae1-74a9-a02d-3cfa" primary="false"/>
+              </categoryLinks>
+            </entryLink>
+          </entryLinks>
+        </selectionEntryGroup>
+        <selectionEntryGroup id="1c82-90fc-8b00-30c0" name="1 Stegadon with Skink Chief (Starwarden Iq-To)" hidden="false" collective="false" import="true">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="40ce-4fba-ce27-b1c1" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="e577-1bac-4ea6-b08c" type="min"/>
+          </constraints>
+          <entryLinks>
+            <entryLink id="20b1-adbb-f2a0-d1b8" name="Stegadon with Skink Chief" hidden="false" collective="false" import="true" targetId="2b38-8179-6a82-4e17" type="selectionEntry">
+              <selectionEntries>
+                <selectionEntry id="f19a-8842-0f34-8d34" name="0. Prime Warbeast" hidden="false" collective="false" import="true" type="upgrade">
+                  <constraints>
+                    <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="91c7-a696-fa05-d85a" type="max"/>
+                    <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="72f9-9525-3bc0-f950" type="min"/>
+                  </constraints>
+                  <profiles>
+                    <profile id="b8b5-cc1f-63f6-069c" name="Prime Warbeast" hidden="false" typeId="1504-23bf-8850-4f65" typeName="Command Traits">
+                      <characteristics>
+                        <characteristic name="Command Trait" typeId="0145-9acf-f5dc-d543">THUNDER LIZARD general with a MONSTER mount must have this command trait.
+
+Add 1 to the Attacks characteristic of the weapons used by this general’s mount.</characteristic>
+                      </characteristics>
+                    </profile>
+                  </profiles>
+                  <categoryLinks>
+                    <categoryLink id="0928-2ea4-122f-b757" name="Iq-To Prime Warbeast" hidden="false" targetId="e75a-1b6b-ff18-0f2d" primary="false"/>
+                  </categoryLinks>
+                  <costs>
+                    <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
+                  </costs>
+                </selectionEntry>
+              </selectionEntries>
+              <entryLinks>
+                <entryLink id="bf6f-9ce3-035f-d5ab" name="General" hidden="false" collective="false" import="true" targetId="98a4-3d6d-a7b9-399f" type="selectionEntry">
+                  <categoryLinks>
+                    <categoryLink id="0dc0-5d42-acf4-37df" name="General - Monster" hidden="false" targetId="52cb-3ca6-5e69-150b" primary="false"/>
+                  </categoryLinks>
+                </entryLink>
+                <entryLink id="4a6a-087e-ef87-66ad" name="Artefacts of Power" hidden="false" collective="false" import="true" targetId="3a05-2cb4-92ae-62e4" type="selectionEntryGroup"/>
+              </entryLinks>
+            </entryLink>
+          </entryLinks>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
+      <costs>
+        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="140.0"/>
+      </costs>
+    </selectionEntry>
   </sharedSelectionEntries>
   <sharedSelectionEntryGroups>
     <selectionEntryGroup id="f503-4e35-143c-0f54" name="Seraphon Spell Lores" publicationId="ba75-6000-0ab5-fd66" hidden="false" collective="false" import="true">
@@ -2793,6 +3078,7 @@ This general knows 1 extra spell from the Lore of Celestial Domination. In addit
                         <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="8b3d-7f03-e1f9-eaf5" type="notInstanceOf"/>
                         <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="c661-44d6-0f5b-11ff" type="greaterThan"/>
                         <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="52cb-3ca6-5e69-150b" type="greaterThan"/>
+                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e75a-1b6b-ff18-0f2d" type="equalTo"/>
                       </conditions>
                     </conditionGroup>
                   </conditionGroups>

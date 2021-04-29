@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="8b6f-df16-b345-222b" name="Order - Kharadron Overlords - Data" revision="2" battleScribeVersion="2.03" authorName="Thulram" library="true" gameSystemId="e832-3291-06be-cab1" gameSystemRevision="2" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="8b6f-df16-b345-222b" name="Order - Kharadron Overlords - Data" revision="3" battleScribeVersion="2.03" authorName="Thulram" library="true" gameSystemId="e832-3291-06be-cab1" gameSystemRevision="2" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <profileTypes>
     <profileType id="5bd0-50e9-b771-b170" name="Skyvessel Wounds">
       <characteristicTypes>
@@ -28,6 +28,8 @@
     <categoryEntry id="aff4-6edd-4fbf-08f5" name="Grundstok Thunderers" hidden="false"/>
     <categoryEntry id="a6be-0c1b-bb97-424b" name="Endrinriggers" hidden="false"/>
     <categoryEntry id="c49e-be66-dfc6-829f" name="Skywardens" hidden="false"/>
+    <categoryEntry id="2f3f-d632-1304-6e02" name="Dagnai Holdenstock" hidden="false"/>
+    <categoryEntry id="838c-8b85-0b2f-2704" name="Bharak-Mhornar" hidden="false"/>
   </categoryEntries>
   <sharedSelectionEntries>
     <selectionEntry id="88d2-f354-a49c-2030" name="Brokk Grungsson, Lord Magnate of Barak-Nar" publicationId="e97a-4837-a772-7406" hidden="false" collective="false" import="true" type="unit">
@@ -2982,6 +2984,86 @@ No more than 7 models can hitch a lift on the same SKYVESSEL in the same turn.</
       </selectionEntryGroups>
       <costs>
         <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="f2c5-73e7-b820-2900" name="Dagnai Holdenstock" hidden="false" collective="false" import="true" type="unit">
+      <constraints>
+        <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="3a05-ee72-b2de-6796" type="max"/>
+      </constraints>
+      <profiles>
+        <profile id="3ec4-494f-4ddf-fbe6" name="Dagnai Holdenstock" hidden="false" typeId="3956-f6dd-6c88-ae4b" typeName="Unit">
+          <characteristics>
+            <characteristic name="Move" typeId="5bbe-8910-4dfa-7b1c">4&quot;</characteristic>
+            <characteristic name="Wounds" typeId="a0c6-af64-2f24-5759">6</characteristic>
+            <characteristic name="Save" typeId="93b6-2f96-2df7-e330">4+</characteristic>
+            <characteristic name="Bravery" typeId="2420-1c5c-1016-7033">8</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="87e6-ca8b-d923-b848" name="Gold-plated Reputation" hidden="false" typeId="7861-da01-01c0-88d9" typeName="Ability">
+          <characteristics>
+            <characteristic name="Ability" typeId="9bce-4deb-8b79-eaec">If this model is included in a Kharadron Overlords army, it starts the battle with 2 shares of aether-gold instead of 1.</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <categoryLinks>
+        <categoryLink id="3edf-f920-c0f9-d922" name="Bharak-Mhornar" hidden="false" targetId="838c-8b85-0b2f-2704" primary="false"/>
+        <categoryLink id="8c72-fac4-d808-c315" name="Dagnai Holdenstock" hidden="false" targetId="2f3f-d632-1304-6e02" primary="false"/>
+        <categoryLink id="db39-4e06-291c-1059" name="Duardin" hidden="false" targetId="3434-9baa-1e9a-4ebd" primary="false"/>
+        <categoryLink id="4a99-d8f5-5471-e729" name="Hero" hidden="false" targetId="411f-dd41-4ab6-8a05" primary="false"/>
+        <categoryLink id="8960-31cd-2ba7-42dc" name="KHARADRON OVERLORDS" hidden="false" targetId="49c9-2257-e9f5-a409" primary="false"/>
+        <categoryLink id="6e28-3555-b855-ddc8" name="New CategoryLink" hidden="false" targetId="93cb-21d9-e1d5-6161" primary="true"/>
+        <categoryLink id="c044-1069-fa61-4cde" name="Marine" hidden="false" targetId="90a2-5d1e-c079-f4b6" primary="false"/>
+        <categoryLink id="7278-dd53-f223-78be" name="NAMED" hidden="false" targetId="543e-1cc9-6d38-f8b3" primary="false"/>
+        <categoryLink id="a47d-cafe-45ac-9637" name="Order" hidden="false" targetId="90c6-6c11-9677-1fa8" primary="false"/>
+        <categoryLink id="8500-29c9-a883-a2a1" name="Skyfarer" hidden="false" targetId="a5be-1443-e38e-40f7" primary="false"/>
+      </categoryLinks>
+      <selectionEntries>
+        <selectionEntry id="f550-8c77-0bbb-f3b7" name="Harpoon Gun" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="957f-2cd6-83ea-ef88" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="77f1-e595-3af0-f25a" type="min"/>
+          </constraints>
+          <profiles>
+            <profile id="ff9d-a480-6ac0-63e8" name="Harpoon Gun" hidden="false" typeId="2905-f6bd-06e5-6642" typeName="Weapon">
+              <characteristics>
+                <characteristic name="Type" typeId="1a08-195b-76fd-2c2b">Missile</characteristic>
+                <characteristic name="Range" typeId="1406-f935-3f8e-b27f">16&quot;</characteristic>
+                <characteristic name="Attacks" typeId="4c19-dba6-f094-5165">1</characteristic>
+                <characteristic name="To-Hit" typeId="7a4f-9704-2095-96c8">4+</characteristic>
+                <characteristic name="To-Wound" typeId="172f-fc84-895b-04b7">3+</characteristic>
+                <characteristic name="Rend" typeId="0c05-bd2e-b7e7-3925">-2</characteristic>
+                <characteristic name="Damage" typeId="01c2-d16a-8788-e52b">D3</characteristic>
+              </characteristics>
+            </profile>
+            <profile id="d22d-7f13-704a-f4a6" name="Reel &apos;Em In" hidden="false" typeId="7861-da01-01c0-88d9" typeName="Ability">
+              <characteristics>
+                <characteristic name="Ability" typeId="9bce-4deb-8b79-eaec">If an attack made with this model&apos;s Harpoon Gun score a hit on a MONSTER, if that MONSTER is not slain after that attack has been resolved, roll a dice. On a 4+, that MONSTER is skewered until the start of your next shooting phase. While that MONSTER is skewered, each time it makes a move, it must finish that move at least as close to this model as it was at the start of the move.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+        </selectionEntry>
+        <selectionEntry id="0937-6752-a344-a8c7" name="Belaying Axe" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="a223-e54e-b6f3-f8c6" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="59c4-6cc1-6b42-e93d" type="min"/>
+          </constraints>
+          <profiles>
+            <profile id="5180-934d-a79d-51bd" name="Belaying Axe" hidden="false" typeId="2905-f6bd-06e5-6642" typeName="Weapon">
+              <characteristics>
+                <characteristic name="Type" typeId="1a08-195b-76fd-2c2b">Melee</characteristic>
+                <characteristic name="Range" typeId="1406-f935-3f8e-b27f">1&quot;</characteristic>
+                <characteristic name="Attacks" typeId="4c19-dba6-f094-5165">3</characteristic>
+                <characteristic name="To-Hit" typeId="7a4f-9704-2095-96c8">4+</characteristic>
+                <characteristic name="To-Wound" typeId="172f-fc84-895b-04b7">3+</characteristic>
+                <characteristic name="Rend" typeId="0c05-bd2e-b7e7-3925">-1</characteristic>
+                <characteristic name="Damage" typeId="01c2-d16a-8788-e52b">1</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+        </selectionEntry>
+      </selectionEntries>
+      <costs>
+        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="100.0"/>
       </costs>
     </selectionEntry>
   </sharedSelectionEntries>

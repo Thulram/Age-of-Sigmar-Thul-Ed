@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="b308-9b80-759a-5873" name="Order - Fyreslayers - Data" revision="1" battleScribeVersion="2.03" authorName="Thulram" library="true" gameSystemId="e832-3291-06be-cab1" gameSystemRevision="1" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="b308-9b80-759a-5873" name="Order - Fyreslayers - Data" revision="2" battleScribeVersion="2.03" authorName="Thulram" library="true" gameSystemId="e832-3291-06be-cab1" gameSystemRevision="1" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <profileTypes>
     <profileType id="bd47-b513-a373-3222" name="HERO on Magmadroth Wounds">
       <characteristicTypes>
@@ -1596,19 +1596,31 @@
             <characteristic name="Bravery" typeId="2420-1c5c-1016-7033">9</characteristic>
           </characteristics>
         </profile>
-        <profile id="a13b-bdd7-e317-c239" name="Unstoppable Berzerker" hidden="false" typeId="7861-da01-01c0-88d9" typeName="Ability">
+        <profile id="a13b-bdd7-e317-c239" name="Grimwrath Oath" hidden="false" typeId="7861-da01-01c0-88d9" typeName="Ability">
           <characteristics>
-            <characteristic name="Ability" typeId="9bce-4deb-8b79-eaec">Roll a dice each time you allocate a wound or mortal wound to this model. Add 1 to the roll if there are any enemy units within 3&quot; of this model. On a 6+ that wound or mortal wound is negated.</characteristic>
+            <characteristic name="Ability" typeId="9bce-4deb-8b79-eaec">At the start of the first battle round, you can pick 1 of the following oaths for this model to swear. The rule for that oath applies until the end of the battle. If your army includes more than 1 model with this ability, you cannot pick the same oath more than once.
+
+‘I will cut down the priests of Grimnir’s enemies!’: Add 1 to hit and wound rolls for attacks made by this model and add 1 to the damage inflicted by those attacks if the target is a PRIEST that does not have the FYRESLAYERS keyword.
+
+‘I will guard them with my life!’: When you pick this oath, pick 1 friendly FYRESLAYERS HERO other than this model that does not have the MAGMADROTH keyword. If that HERO is within 3&quot; of this model and not within 3&quot; of a friendly AURIC HEARTHGUARD unit, roll a dice before you allocate that wound or mortal wound to that HERO. On a 2+, that wound or mortal wound is allocated to this model instead. In addition, add 1 to hit rolls for attacks made by this model while it is within 3&quot; of that HERO.
+
+‘I will let nothing stand in my way!’: This model can run and still charge in the same turn. In addition, you can re-roll run and charge rolls for this model.
+
+‘I will prove Grimnir’s might to our allies!’: Add 1 to hit and wound rolls for attacks made by this model while this model is within 12&quot; of a friendly allied unit (including this model if this model is itself taken as an allied unit).
+
+‘I will not be stopped!’: Roll a dice each time you allocate a wound or mortal wound to this model. Add 1 to the roll if there are any enemy units within 3&quot; of this model. On a 6+, that wound or mortal wound is negated.
+
+‘I will strike hard and true in Grimnir’s name!’: If the unmodified hit roll for an attack made by this model is 6, that attack inflicts 1 mortal wound on the target in addition to any normal damage.</characteristic>
           </characteristics>
         </profile>
         <profile id="6fc4-aac3-388a-0ac5" name="Battle-fury" hidden="false" typeId="7861-da01-01c0-88d9" typeName="Ability">
           <characteristics>
-            <characteristic name="Ability" typeId="9bce-4deb-8b79-eaec">At the end of the combat phase, if this model is within 3&quot; of an enemy unit, roll a dice. On a 2+ make a pile in move with this model, and then attack with all the melee weapons this model is armed with.</characteristic>
+            <characteristic name="Ability" typeId="9bce-4deb-8b79-eaec">At the end of the combat phase, if this model is within 3&quot; of an enemy unit and has fought no more than once in that phase, roll a dice. On a 2+, this model can fight.</characteristic>
           </characteristics>
         </profile>
         <profile id="0bda-304f-b5a0-57cf" name="Dead, But Not Defeated" hidden="false" typeId="7861-da01-01c0-88d9" typeName="Ability">
           <characteristics>
-            <characteristic name="Ability" typeId="9bce-4deb-8b79-eaec">If this model is slain, before it is removed from play, it can make a pile in move and then attack with all of the melee weapons it is armed with.</characteristic>
+            <characteristic name="Ability" typeId="9bce-4deb-8b79-eaec">If this model is slain in the combat phase and has fought no more than once in that phase, it can fight before it is removed from play.</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -1654,9 +1666,9 @@
                 <characteristic name="Type" typeId="1a08-195b-76fd-2c2b">Missile</characteristic>
                 <characteristic name="Range" typeId="1406-f935-3f8e-b27f">8&quot;</characteristic>
                 <characteristic name="Attacks" typeId="4c19-dba6-f094-5165">1</characteristic>
-                <characteristic name="To-Hit" typeId="7a4f-9704-2095-96c8">5+</characteristic>
-                <characteristic name="To-Wound" typeId="172f-fc84-895b-04b7">5+</characteristic>
-                <characteristic name="Rend" typeId="0c05-bd2e-b7e7-3925">-</characteristic>
+                <characteristic name="To-Hit" typeId="7a4f-9704-2095-96c8">4+</characteristic>
+                <characteristic name="To-Wound" typeId="172f-fc84-895b-04b7">4+</characteristic>
+                <characteristic name="Rend" typeId="0c05-bd2e-b7e7-3925">-1</characteristic>
                 <characteristic name="Damage" typeId="01c2-d16a-8788-e52b">1</characteristic>
               </characteristics>
             </profile>
@@ -1667,7 +1679,7 @@
         </selectionEntry>
       </selectionEntries>
       <costs>
-        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="100.0"/>
+        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="110.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="36e0-fccd-6e89-19b2" name="Doomseeker" publicationId="486b-93d3-3587-5477" hidden="false" collective="false" import="true" type="unit">
@@ -1676,18 +1688,20 @@
           <characteristics>
             <characteristic name="Move" typeId="5bbe-8910-4dfa-7b1c">4&quot;</characteristic>
             <characteristic name="Wounds" typeId="a0c6-af64-2f24-5759">5</characteristic>
-            <characteristic name="Save" typeId="93b6-2f96-2df7-e330">4</characteristic>
+            <characteristic name="Save" typeId="93b6-2f96-2df7-e330">4+</characteristic>
             <characteristic name="Bravery" typeId="2420-1c5c-1016-7033">8</characteristic>
           </characteristics>
         </profile>
         <profile id="af26-5d14-174f-c263" name="Oathbound" hidden="false" typeId="7861-da01-01c0-88d9" typeName="Ability">
           <characteristics>
-            <characteristic name="Ability" typeId="9bce-4deb-8b79-eaec">At the start of the first battle round, pick 1 enemy unit that this model has sworn to destroy. At the end of the combat phase, if this model is within 3&quot; of that unit, this model can make a pile-in move and then attack with all the melee weapons it is armed with.</characteristic>
+            <characteristic name="Ability" typeId="9bce-4deb-8b79-eaec">At the start of the first battle round, pick 1 enemy unit for this model to swear to destroy. At the end of the combat phase, if this model is within 3&quot; of that unit and has fought no more than once in that phase, this model can fight but can only target that unit.
+
+In addition, in the combat phase, if this model is slain while it is within 3&quot; of the unit it has sworn to destroy and has fought no more than once in that phase, this model can fight before it is removed from play.</characteristic>
           </characteristics>
         </profile>
         <profile id="98ef-d4ca-131c-d855" name="Runic Power" hidden="false" typeId="7861-da01-01c0-88d9" typeName="Ability">
           <characteristics>
-            <characteristic name="Ability" typeId="9bce-4deb-8b79-eaec">Add 1 to the Damage characteristic of this model’s melee weapons if it has 1 wound allocated to it. Add 2 to the Damage characteristic of this model’s melee weapons instead if it has 2 or more wounds allocated to it.</characteristic>
+            <characteristic name="Ability" typeId="9bce-4deb-8b79-eaec">Add 1 to the Damage characteristic of this model’s melee weapons if it has 1 wound allocated to it. Add 2 to the Damage characteristic of this model’s melee weapons instead if it has 2 or more wounds allocated to it or when it fights when it is slain (see Oathbound).</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -1711,9 +1725,9 @@
                 <characteristic name="Type" typeId="1a08-195b-76fd-2c2b">Missile</characteristic>
                 <characteristic name="Range" typeId="1406-f935-3f8e-b27f">8&quot;</characteristic>
                 <characteristic name="Attacks" typeId="4c19-dba6-f094-5165">1</characteristic>
-                <characteristic name="To-Hit" typeId="7a4f-9704-2095-96c8">5+</characteristic>
-                <characteristic name="To-Wound" typeId="172f-fc84-895b-04b7">5+</characteristic>
-                <characteristic name="Rend" typeId="0c05-bd2e-b7e7-3925">-</characteristic>
+                <characteristic name="To-Hit" typeId="7a4f-9704-2095-96c8">4+</characteristic>
+                <characteristic name="To-Wound" typeId="172f-fc84-895b-04b7">4+</characteristic>
+                <characteristic name="Rend" typeId="0c05-bd2e-b7e7-3925">-1</characteristic>
                 <characteristic name="Damage" typeId="01c2-d16a-8788-e52b">1</characteristic>
               </characteristics>
             </profile>
@@ -1756,7 +1770,7 @@
                 <characteristic name="Range" typeId="1406-f935-3f8e-b27f">1&quot;</characteristic>
                 <characteristic name="Attacks" typeId="4c19-dba6-f094-5165">3</characteristic>
                 <characteristic name="To-Hit" typeId="7a4f-9704-2095-96c8">3+</characteristic>
-                <characteristic name="To-Wound" typeId="172f-fc84-895b-04b7">4+</characteristic>
+                <characteristic name="To-Wound" typeId="172f-fc84-895b-04b7">3+</characteristic>
                 <characteristic name="Rend" typeId="0c05-bd2e-b7e7-3925">-</characteristic>
                 <characteristic name="Damage" typeId="01c2-d16a-8788-e52b">1</characteristic>
               </characteristics>
@@ -1768,7 +1782,7 @@
         </selectionEntry>
       </selectionEntries>
       <costs>
-        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="100.0"/>
+        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="90.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="b07d-e7f1-80eb-f1fe" name="Auric Runesmiter" publicationId="486b-93d3-3587-5477" hidden="false" collective="false" import="true" type="unit">

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="3b1b-a210-7f3a-5f15" name="Order - Stormcast Eternals - Data" revision="1" battleScribeVersion="2.03" authorName="Thulram" library="true" gameSystemId="e832-3291-06be-cab1" gameSystemRevision="1" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="3b1b-a210-7f3a-5f15" name="Order - Stormcast Eternals - Data" revision="2" battleScribeVersion="2.03" authorName="Thulram" library="true" gameSystemId="e832-3291-06be-cab1" gameSystemRevision="1" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <profileTypes>
     <profileType id="48c3-6b80-e877-66c7" name="HERO on Stardrake Wounds">
       <characteristicTypes>
@@ -81,6 +81,8 @@
     <categoryEntry id="341b-d634-40b7-9d24" name="Soulstrike Brotherhood" hidden="false"/>
     <categoryEntry id="38b9-aaa2-477b-c337" name="Astral Compass" hidden="true"/>
     <categoryEntry id="ce49-d557-7f31-e4a9" name="Lynus Ghalmorian" hidden="false"/>
+    <categoryEntry id="be76-962b-9a57-b7e8" name="Gardus Steel Soul" hidden="false"/>
+    <categoryEntry id="6dd8-7c7e-1df5-8a42" name="Steel Souls" hidden="false"/>
   </categoryEntries>
   <sharedSelectionEntries>
     <selectionEntry id="1fab-3efb-80c6-b725" name="Errant-Questor" publicationId="0624-d006-ae10-12c0" hidden="false" collective="false" import="true" type="unit">
@@ -7241,6 +7243,108 @@ Units of EVOCATORS can know and attempt to cast one spell from the Lore of Invig
       </selectionEntries>
       <costs>
         <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="240.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="faa9-abbc-9dbc-7a16" name="Lord-Celestant Gardus Steel Soul" hidden="false" collective="false" import="true" type="unit">
+      <constraints>
+        <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="42af-ef1a-b11e-d980" type="max"/>
+      </constraints>
+      <profiles>
+        <profile id="5b93-bf94-b504-ee6b" name="Gardus Steel Soul" hidden="false" typeId="3956-f6dd-6c88-ae4b" typeName="Unit">
+          <characteristics>
+            <characteristic name="Move" typeId="5bbe-8910-4dfa-7b1c">6&quot;</characteristic>
+            <characteristic name="Wounds" typeId="a0c6-af64-2f24-5759">5</characteristic>
+            <characteristic name="Save" typeId="93b6-2f96-2df7-e330">4+</characteristic>
+            <characteristic name="Bravery" typeId="2420-1c5c-1016-7033">10</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="4da7-60a4-2c1b-f52d" name="Aura of Purity" hidden="false" typeId="7861-da01-01c0-88d9" typeName="Ability">
+          <characteristics>
+            <characteristic name="Ability" typeId="9bce-4deb-8b79-eaec">Roll a dice each time you allocate a mortal wound to this model. On a 5+, that mortal wound is negated. In addition, roll a dice each time you allocate a mortal wound to a model from another friendly HALLOWED KNIGHTS unit wholly within 12&quot; of this model. On a 6, that mortal wound is negated.</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="3251-70ec-6b0b-38b6" name="Martyr&apos;s Strength" hidden="false" typeId="7861-da01-01c0-88d9" typeName="Ability">
+          <characteristics>
+            <characteristic name="Ability" typeId="9bce-4deb-8b79-eaec">Roll a dice if this model is slain in the combat phase. On a 2+, this model can make a pile-in move and then attack with all of the melee weapons it is armed with, before it is removed from play.</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="4f99-1307-1025-bcd0" name="Saintly Assault" hidden="false" typeId="7861-da01-01c0-88d9" typeName="Ability">
+          <characteristics>
+            <characteristic name="Ability" typeId="9bce-4deb-8b79-eaec">Once per battle, at the start of your charge phase, you can declare that this model and other friendly HALLOWED KNIGHTS HEROES within 12&quot; of this model will launch a saintly assault. You can re-roll charge rolls for those models in that phase. In addition, add 1 to the Attacks characteristic of melee weapons used by those models until the end of the turn.</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="aec2-a7a7-e614-9531" name="Sigmarite Warcloak" hidden="false" typeId="7861-da01-01c0-88d9" typeName="Ability">
+          <characteristics>
+            <characteristic name="Ability" typeId="9bce-4deb-8b79-eaec">In your shooting phase, this model can make D6 storm magic strikes. For each strike, pick 1 enemy unit within 16&quot; of this model that is visible to them and roll a dice. On a 4+, that unit suffers 1 mortal wound.</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="8ece-e7af-e949-9e28" name="Furious Retribution" hidden="false" typeId="6364-f76d-fc0c-80bc" typeName="Command Abilities">
+          <characteristics>
+            <characteristic name="Command Ability" typeId="36cb-f8a4-d94b-8aa8">You can use this command ability at the start of the combat phase. If you do so, pick a friendly model with this command ability that is within 3&quot; of an enemy unit. Add 1 to hit rolls for friendly STORMCAST ETERNAL units wholly within 12&quot; of that model when they attack in that combat phase. The same unit cannot be affected by this command ability more than once per phase.</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <categoryLinks>
+        <categoryLink id="9d7d-ac3b-b097-80d4" name="Celestial" hidden="false" targetId="3312-857f-e66d-e32e" primary="false"/>
+        <categoryLink id="274e-cc41-36bb-3de9" name="Gardus Steel Soul" hidden="false" targetId="be76-962b-9a57-b7e8" primary="false"/>
+        <categoryLink id="ca61-ee9f-b45a-ff3f" name="Hallowed Knights" hidden="false" targetId="cfce-6237-d4ff-2250" primary="false"/>
+        <categoryLink id="39c8-e0c3-ff45-0cce" name="Hero" hidden="false" targetId="411f-dd41-4ab6-8a05" primary="false"/>
+        <categoryLink id="30a5-f4f1-4688-e6f9" name="Human" hidden="false" targetId="b4ba-caec-0644-d577" primary="false"/>
+        <categoryLink id="31b0-9f5b-39fa-6cff" name="New CategoryLink" hidden="false" targetId="93cb-21d9-e1d5-6161" primary="true"/>
+        <categoryLink id="efe0-d6ed-1951-bab3" name="Lord-Celestant" hidden="false" targetId="e08a-f1e4-d718-0aed" primary="false"/>
+        <categoryLink id="40eb-bcbf-8e78-3e9e" name="NAMED" hidden="false" targetId="543e-1cc9-6d38-f8b3" primary="false"/>
+        <categoryLink id="e781-cb54-24e0-ff98" name="Order" hidden="false" targetId="90c6-6c11-9677-1fa8" primary="false"/>
+        <categoryLink id="2e36-8ac1-7468-ef49" name="Steel Souls" hidden="false" targetId="6dd8-7c7e-1df5-8a42" primary="false"/>
+        <categoryLink id="dc09-3677-cb52-bdd6" name="STORMCAST ETERNAL" hidden="false" targetId="f7e5-f667-4647-e141" primary="false"/>
+      </categoryLinks>
+      <selectionEntries>
+        <selectionEntry id="589e-22d3-bb85-3a91" name="Warhammer" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="3d97-2fca-58fd-5a60" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="b0a1-1b49-9c9c-f7c8" type="min"/>
+          </constraints>
+          <profiles>
+            <profile id="c96d-f146-934b-b2a8" name="Warhammer" hidden="false" typeId="2905-f6bd-06e5-6642" typeName="Weapon">
+              <characteristics>
+                <characteristic name="Type" typeId="1a08-195b-76fd-2c2b">Melee</characteristic>
+                <characteristic name="Range" typeId="1406-f935-3f8e-b27f">1&quot;</characteristic>
+                <characteristic name="Attacks" typeId="4c19-dba6-f094-5165">2</characteristic>
+                <characteristic name="To-Hit" typeId="7a4f-9704-2095-96c8">4+</characteristic>
+                <characteristic name="To-Wound" typeId="172f-fc84-895b-04b7">3+</characteristic>
+                <characteristic name="Rend" typeId="0c05-bd2e-b7e7-3925">-</characteristic>
+                <characteristic name="Damage" typeId="01c2-d16a-8788-e52b">1</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <costs>
+            <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="fef8-1b24-3e51-a703" name="Sigmarite Runeblade" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="1726-a371-bc77-fba6" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="796c-46cd-bcfc-a686" type="min"/>
+          </constraints>
+          <profiles>
+            <profile id="8106-0048-10e0-3c8a" name="Sigmarite Runeblade" hidden="false" typeId="2905-f6bd-06e5-6642" typeName="Weapon">
+              <characteristics>
+                <characteristic name="Type" typeId="1a08-195b-76fd-2c2b">Melee</characteristic>
+                <characteristic name="Range" typeId="1406-f935-3f8e-b27f">1&quot;</characteristic>
+                <characteristic name="Attacks" typeId="4c19-dba6-f094-5165">4</characteristic>
+                <characteristic name="To-Hit" typeId="7a4f-9704-2095-96c8">3+</characteristic>
+                <characteristic name="To-Wound" typeId="172f-fc84-895b-04b7">3+</characteristic>
+                <characteristic name="Rend" typeId="0c05-bd2e-b7e7-3925">-1</characteristic>
+                <characteristic name="Damage" typeId="01c2-d16a-8788-e52b">1</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <costs>
+            <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
+          </costs>
+        </selectionEntry>
+      </selectionEntries>
+      <costs>
+        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="110.0"/>
       </costs>
     </selectionEntry>
   </sharedSelectionEntries>
