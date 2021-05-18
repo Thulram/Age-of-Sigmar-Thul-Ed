@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="baec-b910-0f21-3dd6" name="Destruction - Orruk Warclans" revision="5" battleScribeVersion="2.03" authorName="Thulram" library="false" gameSystemId="e832-3291-06be-cab1" gameSystemRevision="5" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="baec-b910-0f21-3dd6" name="Destruction - Orruk Warclans" revision="6" battleScribeVersion="2.03" authorName="Thulram" library="false" gameSystemId="e832-3291-06be-cab1" gameSystemRevision="5" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <profileTypes>
     <profileType id="2112-3fb5-330c-b45d" name="Waaagh! Power - Pts">
       <characteristicTypes>
@@ -74,6 +74,48 @@
     <categoryEntry id="8056-f131-5496-f751" name="Big Boss Artefact" hidden="false"/>
     <categoryEntry id="f71f-b661-6a40-32da" name="Megaboss General" hidden="false"/>
   </categoryEntries>
+  <selectionEntries>
+    <selectionEntry id="05f6-6a96-c03c-cfb3" name="Hedkrakka &amp; Madmob (separate units)" hidden="false" collective="false" import="true" type="upgrade">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="7030-4df1-d47b-13e6" type="greaterThan"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <constraints>
+        <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="53fc-4a6f-fb06-466f" type="max"/>
+      </constraints>
+      <categoryLinks>
+        <categoryLink id="7001-5954-58a7-2945" name="New CategoryLink" hidden="false" targetId="93cb-21d9-e1d5-6161" primary="true"/>
+      </categoryLinks>
+      <entryLinks>
+        <entryLink id="2fde-e52c-6aad-eed4" name="Hedkrakka, Gob of Gork" hidden="false" collective="false" import="true" targetId="6d95-b952-d7e0-8d35" type="selectionEntry">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="4f78-0700-134f-4cd8" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="1799-1f62-fa73-1999" type="min"/>
+          </constraints>
+          <entryLinks>
+            <entryLink id="f2b2-7476-27ba-a1c0" name="General" hidden="false" collective="false" import="true" targetId="98a4-3d6d-a7b9-399f" type="selectionEntry">
+              <categoryLinks>
+                <categoryLink id="7be8-ee5c-8ea3-6545" name="Named General" hidden="false" targetId="8b3d-7f03-e1f9-eaf5" primary="false"/>
+              </categoryLinks>
+            </entryLink>
+            <entryLink id="8537-98e8-1a93-616e" name="Lore of the Savage Beast" hidden="false" collective="false" import="true" targetId="7110-b30d-34b0-190a" type="selectionEntryGroup"/>
+          </entryLinks>
+        </entryLink>
+        <entryLink id="2f72-c335-c590-2241" name="Hedkrakka&apos;s Madmob" hidden="false" collective="false" import="true" targetId="8826-7b27-4574-41c8" type="selectionEntry">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="a301-2c8c-1e09-22e1" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="a058-2cfb-b87a-e264" type="min"/>
+          </constraints>
+        </entryLink>
+      </entryLinks>
+      <costs>
+        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="220.0"/>
+      </costs>
+    </selectionEntry>
+  </selectionEntries>
   <entryLinks>
     <entryLink id="a1df-30a6-295a-6366" name="Allegiance" hidden="false" collective="false" import="true" targetId="b8d0-e62e-8b8f-91cd" type="selectionEntry">
       <modifiers>

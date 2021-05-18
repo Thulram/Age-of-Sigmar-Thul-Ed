@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="c04f-85d8-0212-a0b8" name="Destruction - Orruk Warclans - Data" revision="4" battleScribeVersion="2.03" authorName="Thulram" library="true" gameSystemId="e832-3291-06be-cab1" gameSystemRevision="4" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="c04f-85d8-0212-a0b8" name="Destruction - Orruk Warclans - Data" revision="5" battleScribeVersion="2.03" authorName="Thulram" library="true" gameSystemId="e832-3291-06be-cab1" gameSystemRevision="4" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <profileTypes>
     <profileType id="2112-3fb5-330c-b45d" name="Waaagh! Power - Pts">
       <characteristicTypes>
@@ -74,6 +74,8 @@
     <categoryEntry id="8056-f131-5496-f751" name="Big Boss Artefact" hidden="false"/>
     <categoryEntry id="f71f-b661-6a40-32da" name="Megaboss General" hidden="false"/>
     <categoryEntry id="27cc-b39e-344b-95a7" name="Morgok&apos;s Krushas" hidden="false"/>
+    <categoryEntry id="a55d-e81f-2120-4e32" name="Hedkrakka" hidden="false"/>
+    <categoryEntry id="9ac4-8cbf-44d5-6371" name="Hedkrakka&apos;s Madmob" hidden="false"/>
   </categoryEntries>
   <sharedSelectionEntries>
     <selectionEntry id="25e6-fbb8-fc6f-6537" name="Gordrakk, The Fist of Gork" publicationId="9e65-0058-6ffe-24a5" hidden="false" collective="false" import="true" type="unit">
@@ -1461,7 +1463,7 @@ If the mortal wounds inflicted by this model’s Destructive Bulk mean there are
         <categoryLink id="6f4f-5800-eb86-f9a7" name="Wizard" hidden="false" targetId="7ee2-0d81-544f-5d7e" primary="false"/>
       </categoryLinks>
       <selectionEntries>
-        <selectionEntry id="9363-752b-59e2-e0a0" name="Mount" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="9363-752b-59e2-e0a0" name="Companion" hidden="false" collective="false" import="true" type="upgrade">
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8951-5871-7112-c8d1" type="max"/>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="13da-f249-0e61-9eca" type="min"/>
@@ -3190,6 +3192,247 @@ Weirddokk Dance: Pick 1 friendly BONESPLITTERZ WIZARD wholly within 12&quot; of 
       <costs>
         <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="90.0"/>
       </costs>
+    </selectionEntry>
+    <selectionEntry id="6d95-b952-d7e0-8d35" name="Hedkrakka, Gob of Gork" hidden="false" collective="false" import="true" type="unit">
+      <profiles>
+        <profile id="3d7d-5245-4e2b-cabc" name="Hedkrakka" hidden="false" typeId="3956-f6dd-6c88-ae4b" typeName="Unit">
+          <characteristics>
+            <characteristic name="Move" typeId="5bbe-8910-4dfa-7b1c">5&quot;</characteristic>
+            <characteristic name="Wounds" typeId="a0c6-af64-2f24-5759">7</characteristic>
+            <characteristic name="Save" typeId="93b6-2f96-2df7-e330">5+</characteristic>
+            <characteristic name="Bravery" typeId="2420-1c5c-1016-7033">8</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="0162-ff75-1194-7402" name="Hedkrakka" hidden="false" typeId="a62b-2245-5c24-f8bc" typeName="Magic">
+          <characteristics>
+            <characteristic name="Cast/Unbind" typeId="9a5b-68ee-bc46-6a9d">2/2</characteristic>
+            <characteristic name="Spells Known" typeId="25bd-2ad0-e570-e880">Arcane Bolt, Mystic Shield, Bone Krusha</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="d131-56af-4615-87b8" name="Bone Krusha" hidden="false" typeId="13da-11a8-b7d1-77a7" typeName="Spell">
+          <characteristics>
+            <characteristic name="Spell" typeId="1170-c916-1b73-ae34">Bone Krusha has a casting value of 6. If successfully cast, pick 1 enemy unit within 24&quot; of the caster that is visible to them. If that unit is within 6&quot; of the caster, it suffers D6 mortal wounds. If that unit is more than 6&quot; from and within 12&quot; of the caster, it suffers D3 mortal wounds. If that unit is more than 12&quot; from the caster, it suffers 1 mortal wound.</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="ca47-63d3-87e6-add9" name="Gobby Mask" hidden="false" typeId="7861-da01-01c0-88d9" typeName="Ability">
+          <characteristics>
+            <characteristic name="Ability" typeId="9bce-4deb-8b79-eaec">Subtract 1 from hit rolls for attacks made with melee weapons that target this model.</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="89a6-21cc-b5b6-3f51" name="An Eye for Weakness" hidden="false" typeId="7861-da01-01c0-88d9" typeName="Ability">
+          <characteristics>
+            <characteristic name="Ability" typeId="9bce-4deb-8b79-eaec">In your hero phase, you can pick 1 enemy unit within 18&quot; of this model and visible to them. Until your next hero phase, add 1 to hit rolls for attacks made by this model that target that unit. In addition, until your next hero phase, add 1 to hit rolls for attacks made by a friendly HEDKRAKKA&apos;S MADMOB unit that target that unit.</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoLinks>
+        <infoLink id="150c-13ad-6f33-0bd0" name="Mystic Shield" hidden="false" targetId="3b74-6720-61fa-1f0c" type="profile"/>
+        <infoLink id="059e-4455-b248-efad" name="Arcane Bolt" hidden="false" targetId="2dfe-38cb-0d5e-e85e" type="profile"/>
+      </infoLinks>
+      <categoryLinks>
+        <categoryLink id="5d81-bedf-e740-596f" name="BONESPLITTERZ" hidden="false" targetId="858d-9c79-fe92-649f" primary="false"/>
+        <categoryLink id="1e57-7ccf-2f0e-1be2" name="Bonegrinz" hidden="false" targetId="b3e3-9f37-9d39-0a41" primary="false"/>
+        <categoryLink id="2888-35f9-1213-2ac4" name="Destruction" hidden="false" targetId="5d33-469f-2bda-51f9" primary="false"/>
+        <categoryLink id="b8b5-079e-bbac-3583" name="Hedkrakka" hidden="false" targetId="a55d-e81f-2120-4e32" primary="false"/>
+        <categoryLink id="0993-b091-0511-34fc" name="Hero" hidden="false" targetId="411f-dd41-4ab6-8a05" primary="false"/>
+        <categoryLink id="61d2-8888-207f-3315" name="NAMED" hidden="false" targetId="543e-1cc9-6d38-f8b3" primary="false"/>
+        <categoryLink id="0167-e343-2264-bc5b" name="ORRUK" hidden="false" targetId="df1c-7b56-4692-0e49" primary="false"/>
+        <categoryLink id="20fd-2565-7e68-5f9b" name="Wurrgog Prophet" hidden="false" targetId="9a31-a874-64c6-550b" primary="false"/>
+        <categoryLink id="49a7-235d-348a-891c" name="Wizard" hidden="false" targetId="7ee2-0d81-544f-5d7e" primary="false"/>
+        <categoryLink id="a434-ea71-3d8f-1855" name="Totem" hidden="false" targetId="29de-3558-f0b3-40ea" primary="false"/>
+      </categoryLinks>
+      <selectionEntries>
+        <selectionEntry id="ff9f-7e18-28bf-a3b2" name="Companion" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="0d2c-aaa0-a098-976b" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="88b7-9370-ae26-5e7e" type="min"/>
+          </constraints>
+          <profiles>
+            <profile id="24f9-b4d0-7538-c3f1" name="Companion" hidden="false" typeId="61e3-eba4-7222-dee7" typeName="Mount/Companion">
+              <characteristics>
+                <characteristic name="Mount/Companion" typeId="e368-06f5-5b4f-64a3">Hedkrakka is accompanied by a Squiggly Snake that attacks with its Fanged Maw. For rules purposes, it is treated in the same manner as a mount.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <selectionEntries>
+            <selectionEntry id="aa4c-27f4-739e-3468" name="Fanged Maw" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="e68e-3e2f-406d-3ce6" type="min"/>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="1b16-002e-46d8-5dcf" type="max"/>
+              </constraints>
+              <profiles>
+                <profile id="1dfb-8dc2-2130-847f" name="Fanged Maw" hidden="false" typeId="2905-f6bd-06e5-6642" typeName="Weapon">
+                  <characteristics>
+                    <characteristic name="Type" typeId="1a08-195b-76fd-2c2b">Melee</characteristic>
+                    <characteristic name="Range" typeId="1406-f935-3f8e-b27f">1&quot;</characteristic>
+                    <characteristic name="Attacks" typeId="4c19-dba6-f094-5165">2</characteristic>
+                    <characteristic name="To-Hit" typeId="7a4f-9704-2095-96c8">4+</characteristic>
+                    <characteristic name="To-Wound" typeId="172f-fc84-895b-04b7">3+</characteristic>
+                    <characteristic name="Rend" typeId="0c05-bd2e-b7e7-3925">-</characteristic>
+                    <characteristic name="Damage" typeId="01c2-d16a-8788-e52b">1</characteristic>
+                  </characteristics>
+                </profile>
+                <profile id="c6c6-70ae-0054-72ff" name="Venomous Bite" hidden="false" typeId="7861-da01-01c0-88d9" typeName="Ability">
+                  <characteristics>
+                    <characteristic name="Ability" typeId="9bce-4deb-8b79-eaec">If the unmodified hit roll for an attack made with a Fanged Maw is 6, that attack inflicts 1 mortal wound on the target and the attack sequence ends (do not make a wound roll or save roll).</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <costs>
+                <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
+              </costs>
+            </selectionEntry>
+          </selectionEntries>
+          <costs>
+            <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="d9fa-6c4f-332a-5ee4" name="Wurrgog Staff" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="f8f4-e360-81f1-d3ab" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d691-4152-1dc9-2199" type="min"/>
+          </constraints>
+          <profiles>
+            <profile id="055d-42e1-0ff6-e191" name="Wurrgog Staff" hidden="false" typeId="2905-f6bd-06e5-6642" typeName="Weapon">
+              <characteristics>
+                <characteristic name="Type" typeId="1a08-195b-76fd-2c2b">Melee</characteristic>
+                <characteristic name="Range" typeId="1406-f935-3f8e-b27f">1&quot;</characteristic>
+                <characteristic name="Attacks" typeId="4c19-dba6-f094-5165">4</characteristic>
+                <characteristic name="To-Hit" typeId="7a4f-9704-2095-96c8">4+</characteristic>
+                <characteristic name="To-Wound" typeId="172f-fc84-895b-04b7">3+</characteristic>
+                <characteristic name="Rend" typeId="0c05-bd2e-b7e7-3925">-</characteristic>
+                <characteristic name="Damage" typeId="01c2-d16a-8788-e52b">D3</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <costs>
+            <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
+          </costs>
+        </selectionEntry>
+      </selectionEntries>
+    </selectionEntry>
+    <selectionEntry id="8826-7b27-4574-41c8" name="Hedkrakka&apos;s Madmob" hidden="false" collective="false" import="true" type="unit">
+      <profiles>
+        <profile id="08b0-3cb5-12f1-3d22" name="Hedkrakka&apos;s Madmob" hidden="false" typeId="3956-f6dd-6c88-ae4b" typeName="Unit">
+          <characteristics>
+            <characteristic name="Move" typeId="5bbe-8910-4dfa-7b1c">5&quot;</characteristic>
+            <characteristic name="Wounds" typeId="a0c6-af64-2f24-5759">2</characteristic>
+            <characteristic name="Save" typeId="93b6-2f96-2df7-e330">5+</characteristic>
+            <characteristic name="Bravery" typeId="2420-1c5c-1016-7033">6</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="c3d7-b178-a700-6fbe" name="Primal Surge" hidden="false" typeId="7861-da01-01c0-88d9" typeName="Ability">
+          <characteristics>
+            <characteristic name="Ability" typeId="9bce-4deb-8b79-eaec">Add 1 to wound rolls for attacks made by this unit if this unit made a charge move in the same turn.</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="e6e0-e493-189f-0b54" name="Da Mad Mob" hidden="false" typeId="7861-da01-01c0-88d9" typeName="Ability">
+          <characteristics>
+            <characteristic name="Ability" typeId="9bce-4deb-8b79-eaec">Roll a dice before you allocate a wound or mortal wound to a friendly HEDKRAKKA within 3&quot; of this unit. On a 4+, you must allocate that wound or mortal wound to this unit instead.</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <categoryLinks>
+        <categoryLink id="5aa4-e868-ef92-127d" name="Bonegrinz" hidden="false" targetId="b3e3-9f37-9d39-0a41" primary="false"/>
+        <categoryLink id="2ba4-965f-7f4c-c45a" name="BONESPLITTERZ" hidden="false" targetId="858d-9c79-fe92-649f" primary="false"/>
+        <categoryLink id="5d6f-069f-4466-2495" name="Destruction" hidden="false" targetId="5d33-469f-2bda-51f9" primary="false"/>
+        <categoryLink id="06c4-5655-03ab-d9dd" name="Hedkrakka&apos;s Madmob" hidden="false" targetId="9ac4-8cbf-44d5-6371" primary="false"/>
+        <categoryLink id="39ae-74f9-2d4c-a60d" name="ORRUK" hidden="false" targetId="df1c-7b56-4692-0e49" primary="false"/>
+      </categoryLinks>
+      <selectionEntries>
+        <selectionEntry id="259f-e39c-5b0a-765c" name="Toofdagga" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="c59b-1f8f-5631-027d" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="4230-ddf0-2b55-34f5" type="min"/>
+          </constraints>
+          <selectionEntries>
+            <selectionEntry id="f56c-5e76-ee21-d5d2" name="Paired Toofdaggas" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="f1d3-554e-421a-9c01" type="max"/>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="4a06-6a40-097d-6636" type="min"/>
+              </constraints>
+              <profiles>
+                <profile id="bd24-6059-327c-eebc" name="Paired Toofdaggas" hidden="false" typeId="2905-f6bd-06e5-6642" typeName="Weapon">
+                  <characteristics>
+                    <characteristic name="Type" typeId="1a08-195b-76fd-2c2b">Melee</characteristic>
+                    <characteristic name="Range" typeId="1406-f935-3f8e-b27f">1&quot;</characteristic>
+                    <characteristic name="Attacks" typeId="4c19-dba6-f094-5165">4</characteristic>
+                    <characteristic name="To-Hit" typeId="7a4f-9704-2095-96c8">3+</characteristic>
+                    <characteristic name="To-Wound" typeId="172f-fc84-895b-04b7">4+</characteristic>
+                    <characteristic name="Rend" typeId="0c05-bd2e-b7e7-3925">-</characteristic>
+                    <characteristic name="Damage" typeId="01c2-d16a-8788-e52b">1</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntry>
+        <selectionEntry id="01be-6885-55ac-7237" name="Wollop da Skul" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="c19d-57a5-eec7-34d9" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="fb11-8c29-7006-cf8e" type="min"/>
+          </constraints>
+          <selectionEntries>
+            <selectionEntry id="6dc2-ecda-450b-94e7" name="Big Chompa" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="524a-cfb9-f220-3e13" type="max"/>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d125-6611-6a67-f89d" type="min"/>
+              </constraints>
+              <profiles>
+                <profile id="896a-3922-be89-d687" name="Big Chompa" hidden="false" typeId="2905-f6bd-06e5-6642" typeName="Weapon">
+                  <characteristics>
+                    <characteristic name="Type" typeId="1a08-195b-76fd-2c2b">Melee</characteristic>
+                    <characteristic name="Range" typeId="1406-f935-3f8e-b27f">1&quot;</characteristic>
+                    <characteristic name="Attacks" typeId="4c19-dba6-f094-5165">2</characteristic>
+                    <characteristic name="To-Hit" typeId="7a4f-9704-2095-96c8">4+</characteristic>
+                    <characteristic name="To-Wound" typeId="172f-fc84-895b-04b7">3+</characteristic>
+                    <characteristic name="Rend" typeId="0c05-bd2e-b7e7-3925">-</characteristic>
+                    <characteristic name="Damage" typeId="01c2-d16a-8788-e52b">2</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntry>
+        <selectionEntry id="c6a5-3a68-bb5c-177c" name="Dakko Sharp-Stikka" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="2fe8-a2ce-b96e-354b" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="6733-af25-55ad-e9ad" type="min"/>
+          </constraints>
+          <selectionEntries>
+            <selectionEntry id="a259-4b41-d51a-c10e" name="Stinga Bow and Bone Shiv" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="e9a9-60c4-c735-0787" type="max"/>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="1446-6a21-9741-bc46" type="min"/>
+              </constraints>
+              <profiles>
+                <profile id="083e-383f-e6ca-0a96" name="Stinga Bow" hidden="false" typeId="2905-f6bd-06e5-6642" typeName="Weapon">
+                  <characteristics>
+                    <characteristic name="Type" typeId="1a08-195b-76fd-2c2b">Missile</characteristic>
+                    <characteristic name="Range" typeId="1406-f935-3f8e-b27f">18&quot;</characteristic>
+                    <characteristic name="Attacks" typeId="4c19-dba6-f094-5165">2</characteristic>
+                    <characteristic name="To-Hit" typeId="7a4f-9704-2095-96c8">4+</characteristic>
+                    <characteristic name="To-Wound" typeId="172f-fc84-895b-04b7">4+</characteristic>
+                    <characteristic name="Rend" typeId="0c05-bd2e-b7e7-3925">-</characteristic>
+                    <characteristic name="Damage" typeId="01c2-d16a-8788-e52b">1</characteristic>
+                  </characteristics>
+                </profile>
+                <profile id="996a-de9b-5872-8e76" name="Bone Shiv" hidden="false" typeId="2905-f6bd-06e5-6642" typeName="Weapon">
+                  <characteristics>
+                    <characteristic name="Type" typeId="1a08-195b-76fd-2c2b">Melee</characteristic>
+                    <characteristic name="Range" typeId="1406-f935-3f8e-b27f">1&quot;</characteristic>
+                    <characteristic name="Attacks" typeId="4c19-dba6-f094-5165">1</characteristic>
+                    <characteristic name="To-Hit" typeId="7a4f-9704-2095-96c8">4+</characteristic>
+                    <characteristic name="To-Wound" typeId="172f-fc84-895b-04b7">4+</characteristic>
+                    <characteristic name="Rend" typeId="0c05-bd2e-b7e7-3925">-</characteristic>
+                    <characteristic name="Damage" typeId="01c2-d16a-8788-e52b">1</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntry>
+      </selectionEntries>
     </selectionEntry>
   </sharedSelectionEntries>
 </catalogue>
