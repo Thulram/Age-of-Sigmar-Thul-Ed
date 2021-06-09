@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="5b1a-bf72-0ab6-2d76" name="Chaos" revision="5" battleScribeVersion="2.03" authorName="Thulram" library="false" gameSystemId="e832-3291-06be-cab1" gameSystemRevision="4" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="5b1a-bf72-0ab6-2d76" name="Chaos" revision="6" battleScribeVersion="2.03" authorName="Thulram" library="false" gameSystemId="e832-3291-06be-cab1" gameSystemRevision="5" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <categoryEntries>
     <categoryEntry id="fc3d-b24c-012c-9cfc" name="General - Lord of Pain" hidden="false"/>
     <categoryEntry id="43f6-2f55-865c-f431" name="General - Gortle Pulpskull" hidden="false"/>
@@ -2832,6 +2832,27 @@ If a friendly MAGISTER is slain by this effect, roll a dice before removing the 
     <entryLink id="24cc-3115-1308-fa32" name="Nobles of Excess" hidden="false" collective="false" import="true" targetId="56c2-a902-8d33-96ad" type="selectionEntry"/>
     <entryLink id="6a22-637f-54b9-5af9" name="Invidian Plaguehost" hidden="false" collective="false" import="true" targetId="e458-87e6-2020-e274" type="selectionEntry"/>
     <entryLink id="0f66-3085-2309-891f" name="Khagra&apos;s Ravagers" hidden="false" collective="false" import="true" targetId="3f59-9ed6-06ef-ac47" type="selectionEntry"/>
+    <entryLink id="f6a4-9386-0bf5-20b2" name="The Butcher-herd" hidden="false" collective="false" import="true" targetId="9d3d-ea44-ea63-b027" type="selectionEntry"/>
+    <entryLink id="928c-c7da-0d11-0864" name="Dexcessa, The Talon of Slaanesh" hidden="false" collective="false" import="true" targetId="84a8-6768-1da9-5016" type="selectionEntry">
+      <entryLinks>
+        <entryLink id="2b2e-e8ed-e967-8a4a" name="General" hidden="false" collective="false" import="true" targetId="98a4-3d6d-a7b9-399f" type="selectionEntry">
+          <categoryLinks>
+            <categoryLink id="9a27-66bd-226f-237e" name="Named General" hidden="false" targetId="8b3d-7f03-e1f9-eaf5" primary="false"/>
+          </categoryLinks>
+        </entryLink>
+      </entryLinks>
+    </entryLink>
+    <entryLink id="7522-a625-7fa0-408b" name="Synessa, The Voice of Slaanesh" hidden="false" collective="false" import="true" targetId="077d-8b8f-3cfc-84db" type="selectionEntry">
+      <entryLinks>
+        <entryLink id="28c2-edec-2d86-1057" name="General" hidden="false" collective="false" import="true" targetId="98a4-3d6d-a7b9-399f" type="selectionEntry">
+          <categoryLinks>
+            <categoryLink id="1087-4274-4b58-3c7e" name="Named General" hidden="false" targetId="8b3d-7f03-e1f9-eaf5" primary="false"/>
+          </categoryLinks>
+        </entryLink>
+      </entryLinks>
+    </entryLink>
+    <entryLink id="b499-80db-38c3-0a5e" name="The Exquisite Pursuit" hidden="false" collective="false" import="true" targetId="de61-a263-8a35-7779" type="selectionEntry"/>
+    <entryLink id="60e7-fbb7-345a-e5b5" name="Rattachak&apos;s Doom-coven" hidden="false" collective="false" import="true" targetId="250f-4eeb-be15-29ac" type="selectionEntry"/>
   </entryLinks>
   <sharedSelectionEntries>
     <selectionEntry id="f53b-034f-f032-894a" name="Allegiance" hidden="false" collective="false" import="true" type="upgrade">
@@ -8398,6 +8419,251 @@ After rolling a dice for each unit from this battalion, roll a dice for each ene
       </selectionEntryGroups>
       <costs>
         <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="120.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="9d3d-ea44-ea63-b027" name="The Butcher-herd" hidden="false" collective="false" import="true" type="upgrade">
+      <constraints>
+        <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="48b1-4e16-9911-67ee" type="max"/>
+      </constraints>
+      <profiles>
+        <profile id="01ce-18fb-1415-a957" name="Ghorraghan&apos;s Skull-staff" hidden="false" typeId="66c5-932e-004a-574c" typeName="Battalion Abilities">
+          <characteristics>
+            <characteristic name="Battalion Ability" typeId="23f7-32c0-e059-29b2">Add 2 to the Attacks characteristic of Ghorraghan Khai’s Fetish Staff. In addition, if the unmodified hit roll for an attack made with Ghorraghan Khai’s Fetish Staff is 6, that attack inflicts D3 mortal wounds on the target and the attack sequence ends (do not make a wound or save roll).</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="05a3-d030-7917-ca41" name="Infuse with Chaos Energy" hidden="false" typeId="66c5-932e-004a-574c" typeName="Battalion Abilities">
+          <characteristics>
+            <characteristic name="Battalion Ability" typeId="23f7-32c0-e059-29b2">Add 1 to hit rolls for attacks made by Warherd units in this battalion that are wholly within 12&quot; of Ghorraghan Khai.</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <categoryLinks>
+        <categoryLink id="a344-613e-b9a1-ce7b" name="New CategoryLink" hidden="false" targetId="c03a-b1a8-66c6-3637" primary="true"/>
+      </categoryLinks>
+      <selectionEntryGroups>
+        <selectionEntryGroup id="c5e4-4355-f0a1-5737" name="1 Ghorgon" hidden="false" collective="false" import="true">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="11ca-02e3-61c1-d99b" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="f0d5-fb17-580a-c640" type="min"/>
+          </constraints>
+          <entryLinks>
+            <entryLink id="9026-f8e9-83fa-f770" name="Ghorgon" hidden="false" collective="false" import="true" targetId="ac76-a457-780f-f2a7" type="selectionEntry"/>
+          </entryLinks>
+        </selectionEntryGroup>
+        <selectionEntryGroup id="df18-6b46-7afa-4ea5" name="2 Bullgors units" hidden="false" collective="false" import="true">
+          <constraints>
+            <constraint field="selections" scope="parent" value="2.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="0810-fa72-34a0-0b7d" type="max"/>
+            <constraint field="selections" scope="parent" value="2.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="4092-e7bd-4a58-8356" type="min"/>
+          </constraints>
+          <entryLinks>
+            <entryLink id="c6f4-54ad-dd8f-694c" name="Bullgors" hidden="false" collective="false" import="true" targetId="3660-c5d4-c829-81f9" type="selectionEntry">
+              <modifiers>
+                <modifier type="remove" field="category" value="a42d-220e-6a88-7bf6">
+                  <conditionGroups>
+                    <conditionGroup type="or">
+                      <conditions>
+                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4373-740f-1bf3-b0aa" type="instanceOf"/>
+                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="e3a6-45ca-4974-b489" type="instanceOf"/>
+                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="6cd6-b22e-bfcb-9589" type="instanceOf"/>
+                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="c77d-829c-56f6-50e8" type="equalTo"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+              </modifiers>
+              <categoryLinks>
+                <categoryLink id="3c27-8fbb-3bff-7e91" name="BATTLELINE" hidden="false" targetId="a42d-220e-6a88-7bf6" primary="false"/>
+              </categoryLinks>
+            </entryLink>
+          </entryLinks>
+        </selectionEntryGroup>
+        <selectionEntryGroup id="7e95-3373-1318-0355" name="1 Great Bray Shaman (Ghorraghan Khai)" hidden="false" collective="false" import="true">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="b35f-54a6-8786-9521" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="2c72-24a1-2e13-d068" type="min"/>
+          </constraints>
+          <entryLinks>
+            <entryLink id="6f66-6664-5c7d-4d1a" name="Great Bray-Shaman" hidden="false" collective="false" import="true" targetId="0fa1-a648-2716-c96d" type="selectionEntry">
+              <profiles>
+                <profile id="59e6-6062-d51f-b0ab" name="Indomitable Beast" hidden="false" typeId="1504-23bf-8850-4f65" typeName="Command Traits">
+                  <modifiers>
+                    <modifier type="set" field="hidden" value="true">
+                      <conditions>
+                        <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="c661-44d6-0f5b-11ff" type="equalTo"/>
+                      </conditions>
+                    </modifier>
+                  </modifiers>
+                  <characteristics>
+                    <characteristic name="Command Trait" typeId="0145-9acf-f5dc-d543">Add 1 to this general’s Wounds characteristic.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <entryLinks>
+                <entryLink id="8002-b1a0-83eb-204a" name="General" hidden="false" collective="false" import="true" targetId="98a4-3d6d-a7b9-399f" type="selectionEntry">
+                  <categoryLinks>
+                    <categoryLink id="9e51-a6f8-0878-6b7c" name="Great Bray-Shaman" hidden="false" targetId="add9-40c3-0f42-95e3" primary="false"/>
+                    <categoryLink id="c076-86a6-9bfa-a6d2" name="Named General" hidden="false" targetId="8b3d-7f03-e1f9-eaf5" primary="false"/>
+                  </categoryLinks>
+                </entryLink>
+                <entryLink id="6be0-52c4-94f2-77c9" name="Artefacts of Power" hidden="false" collective="false" import="true" targetId="79a3-0cc4-cb04-8668" type="selectionEntryGroup"/>
+              </entryLinks>
+            </entryLink>
+          </entryLinks>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
+      <costs>
+        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="140.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="de61-a263-8a35-7779" name="The Exquisite Pursuit" hidden="false" collective="false" import="true" type="upgrade">
+      <constraints>
+        <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="a11e-e4b2-120d-ce38" type="max"/>
+      </constraints>
+      <profiles>
+        <profile id="187a-8c44-cc5f-6107" name="The Mirror of Twisted Truths" hidden="false" typeId="66c5-932e-004a-574c" typeName="Battalion Abilities">
+          <characteristics>
+            <characteristic name="Battalion Ability" typeId="23f7-32c0-e059-29b2">In your shooting phase, you can either pick 1 enemy unit that is within 3&quot; of Luxion and Vresca or pick 1 enemy unit that is within 12&quot; of the Luxion and Vresca and more than 3&quot; from any other units in your army. Roll a dice for each model in that unit. If that unit has a Wounds characteristic of 1, for each 6, that unit suffers 1 mortal wound. If that unit has a Wounds characteristic of more than 1, for each 6, that unit suffers D3 mortal wounds.</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <categoryLinks>
+        <categoryLink id="06e2-b7d8-4b63-fe79" name="New CategoryLink" hidden="false" targetId="c03a-b1a8-66c6-3637" primary="true"/>
+      </categoryLinks>
+      <selectionEntryGroups>
+        <selectionEntryGroup id="e549-83c5-d261-3820" name="1 Seekers unit" hidden="false" collective="false" import="true">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8d71-2504-089a-f7fd" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d9a2-9861-d494-2916" type="min"/>
+          </constraints>
+          <entryLinks>
+            <entryLink id="bd68-fc6f-f24e-6f40" name="Seekers" hidden="false" collective="false" import="true" targetId="557e-4177-4be2-2d54" type="selectionEntry"/>
+          </entryLinks>
+        </selectionEntryGroup>
+        <selectionEntryGroup id="6448-3d6a-972f-995d" name="1 Fiends unit" hidden="false" collective="false" import="true">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="6e02-a11e-d785-7f9b" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8f93-807d-7828-48a8" type="min"/>
+          </constraints>
+          <entryLinks>
+            <entryLink id="cb56-7b05-6ca2-0dd8" name="Fiends" hidden="false" collective="false" import="true" targetId="b07f-0154-0c3b-91a7" type="selectionEntry"/>
+          </entryLinks>
+        </selectionEntryGroup>
+        <selectionEntryGroup id="6581-37a8-d485-bb03" name="The Contorted Epitome (Luxion and Vresca)" hidden="false" collective="false" import="true">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="731a-4601-ca3e-0b9e" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d449-7b16-8855-27a5" type="min"/>
+          </constraints>
+          <entryLinks>
+            <entryLink id="fec7-ada5-28be-a07f" name="The Contorted Epitome" hidden="false" collective="false" import="true" targetId="98d7-c82a-5c0a-0d98" type="selectionEntry">
+              <entryLinks>
+                <entryLink id="cce0-986d-b9c2-2c57" name="General" hidden="false" collective="false" import="true" targetId="98a4-3d6d-a7b9-399f" type="selectionEntry"/>
+                <entryLink id="a10e-e421-56b8-45b3" name="Artefacts of Power" hidden="false" collective="false" import="true" targetId="79a3-0cc4-cb04-8668" type="selectionEntryGroup"/>
+                <entryLink id="5822-9040-f506-d1bf" name="Command Traits" hidden="false" collective="false" import="true" targetId="a8a9-33dd-ba17-6d58" type="selectionEntryGroup"/>
+              </entryLinks>
+            </entryLink>
+          </entryLinks>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
+      <costs>
+        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="130.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="250f-4eeb-be15-29ac" name="Rattachak&apos;s Doom-coven" hidden="false" collective="false" import="true" type="upgrade">
+      <constraints>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="f7d7-204b-e268-7693" type="max"/>
+      </constraints>
+      <profiles>
+        <profile id="b489-9643-9342-4d8f" name="Rattachak&apos;s More-more-more Doomrocket" hidden="false" typeId="66c5-932e-004a-574c" typeName="Battalion Abilities">
+          <characteristics>
+            <characteristic name="Battalion Ability" typeId="23f7-32c0-e059-29b2">You can re-roll hit rolls for attacks made with Rattachak’s Doomrocket and add 1 to that weapon’s Damage characteristic. In addition, add 1 to the Damage characteristic of Shock Gauntlets used by the STORMFIENDS unit in this battalion while it is wholly within 12&quot; of Rattachak.</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <categoryLinks>
+        <categoryLink id="8a55-77e8-c6c2-aba6" name="New CategoryLink" hidden="false" targetId="c03a-b1a8-66c6-3637" primary="true"/>
+      </categoryLinks>
+      <selectionEntryGroups>
+        <selectionEntryGroup id="cc4e-b338-4cf4-6f76" name="1 Stormfiends unit" hidden="false" collective="false" import="true">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="71ad-17b1-91e3-70bf" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="6674-0c85-c50d-603c" type="min"/>
+          </constraints>
+          <entryLinks>
+            <entryLink id="a689-2725-a2eb-5b76" name="Stormfiends" hidden="false" collective="false" import="true" targetId="3e6f-4fed-a07f-26ce" type="selectionEntry">
+              <modifiers>
+                <modifier type="remove" field="category" value="a42d-220e-6a88-7bf6">
+                  <conditionGroups>
+                    <conditionGroup type="or">
+                      <conditions>
+                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="eb59-f0ad-9828-dad9" type="instanceOf"/>
+                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2934-b35c-a22d-3251" type="greaterThan"/>
+                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="af1e-d301-fe72-672c" type="greaterThan"/>
+                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="1679-25ac-d182-a514" type="greaterThan"/>
+                        <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="32eb-e750-1437-07f5" type="greaterThan"/>
+                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="20a8-54a3-252e-9065" type="greaterThan"/>
+                        <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4373-740f-1bf3-b0aa" type="instanceOf"/>
+                        <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="6cd6-b22e-bfcb-9589" type="instanceOf"/>
+                        <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="e3a6-45ca-4974-b489" type="instanceOf"/>
+                      </conditions>
+                      <conditionGroups>
+                        <conditionGroup type="or">
+                          <conditionGroups>
+                            <conditionGroup type="and">
+                              <conditions>
+                                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="919c-6d43-b39b-f8bf" type="greaterThan"/>
+                                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="a1d4-3a75-46a8-47c0" type="equalTo"/>
+                              </conditions>
+                            </conditionGroup>
+                            <conditionGroup type="and">
+                              <conditions>
+                                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="919c-6d43-b39b-f8bf" type="lessThan"/>
+                                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="a1d4-3a75-46a8-47c0" type="equalTo"/>
+                              </conditions>
+                            </conditionGroup>
+                          </conditionGroups>
+                        </conditionGroup>
+                      </conditionGroups>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+              </modifiers>
+              <categoryLinks>
+                <categoryLink id="9d57-2617-71c7-08cf" name="BATTLELINE" hidden="false" targetId="a42d-220e-6a88-7bf6" primary="false"/>
+              </categoryLinks>
+            </entryLink>
+          </entryLinks>
+        </selectionEntryGroup>
+        <selectionEntryGroup id="16ba-fd69-a613-6f53" name="1 Warp Lightning Cannon" hidden="false" collective="false" import="true">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="ef29-8f06-6066-f7c5" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="cf7d-f93b-7214-8144" type="min"/>
+          </constraints>
+          <entryLinks>
+            <entryLink id="7fdf-59c7-81cc-e03d" name="Warp Lightning Cannon" hidden="false" collective="false" import="true" targetId="a4ed-7087-afc3-fe62" type="selectionEntry"/>
+          </entryLinks>
+        </selectionEntryGroup>
+        <selectionEntryGroup id="94b0-a32b-1142-aa12" name="1 Warlock Bombardier (Rattachak)" hidden="false" collective="false" import="true">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="726c-f641-a4e3-cf5d" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="6282-89da-d7fb-3247" type="min"/>
+          </constraints>
+          <entryLinks>
+            <entryLink id="e57c-d791-4029-5a39" name="Warlock Bombardier" hidden="false" collective="false" import="true" targetId="31ae-e199-8748-4af3" type="selectionEntry">
+              <entryLinks>
+                <entryLink id="be6c-be39-4347-626d" name="General" hidden="false" collective="false" import="true" targetId="98a4-3d6d-a7b9-399f" type="selectionEntry">
+                  <categoryLinks>
+                    <categoryLink id="bb11-e9be-58c4-ca0e" name="General - Clans Skryre" hidden="false" targetId="a1d4-3a75-46a8-47c0" primary="false"/>
+                  </categoryLinks>
+                </entryLink>
+                <entryLink id="cb7e-d41f-1bb1-6aaa" name="Artefacts of Power" hidden="false" collective="false" import="true" targetId="79a3-0cc4-cb04-8668" type="selectionEntryGroup"/>
+                <entryLink id="15aa-7da0-6ae2-58fc" name="Command Traits" hidden="false" collective="false" import="true" targetId="a8a9-33dd-ba17-6d58" type="selectionEntryGroup"/>
+              </entryLinks>
+            </entryLink>
+          </entryLinks>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
+      <costs>
+        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="130.0"/>
       </costs>
     </selectionEntry>
   </sharedSelectionEntries>

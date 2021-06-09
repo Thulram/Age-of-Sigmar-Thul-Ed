@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="1968-130d-9d17-5021" name="Chaos - Beasts of Chaos" revision="3" battleScribeVersion="2.03" authorName="Thulram" library="false" gameSystemId="e832-3291-06be-cab1" gameSystemRevision="3" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="1968-130d-9d17-5021" name="Chaos - Beasts of Chaos" revision="4" battleScribeVersion="2.03" authorName="Thulram" library="false" gameSystemId="e832-3291-06be-cab1" gameSystemRevision="3" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <profileTypes>
     <profileType id="7b36-24ed-f1d3-1262" name="Primordial Summoning Table">
       <characteristicTypes>
@@ -198,6 +198,7 @@
         <categoryLink id="d19d-c0b7-3a3a-888e" name="Hedonite" hidden="false" targetId="27fa-08a5-8122-ff4d" primary="false"/>
       </categoryLinks>
     </entryLink>
+    <entryLink id="6fbf-40e8-a8dc-c43d" name="The Butcher-herd" hidden="false" collective="false" import="true" targetId="79dd-0de7-30cb-ab01" type="selectionEntry"/>
   </entryLinks>
   <sharedSelectionEntries>
     <selectionEntry id="ae63-0aaa-e126-92ed" name="Allegiance" publicationId="f0d1-73ce-b949-8524" hidden="false" collective="false" import="true" type="upgrade">
@@ -367,6 +368,27 @@ If you have 3 or more Primordial Call points at the end of your movement phase, 
                 <profile id="91fd-86b9-2307-b2bb" name="(02) 1 Ghorgon" hidden="false" typeId="7b36-24ed-f1d3-1262" typeName="Primordial Summoning Table">
                   <characteristics>
                     <characteristic name="Primordial Call cost" typeId="bcff-d86c-e8de-7cc6">10</characteristic>
+                  </characteristics>
+                </profile>
+                <profile id="80c9-d0f8-17a8-5124" name="Gor Battle Fury" hidden="false" typeId="c0c2-177b-e761-ec41" typeName="Allegiance Abilities">
+                  <characteristics>
+                    <characteristic name="Allegiance Ability" typeId="0506-f62d-68b3-5499">You can re-roll charge rolls for friendly Gors units if they were reserve units in ambush and have been set up on the battlefield in the same turn.
+
+Designer’s Note: This ability only applies to units that have the Gors warscroll. It does not apply to other units that have the GOR keyword.</characteristic>
+                  </characteristics>
+                </profile>
+                <profile id="c4f9-18fd-e30e-4c9c" name="Warherd Charge" hidden="false" typeId="c0c2-177b-e761-ec41" typeName="Allegiance Abilities">
+                  <characteristics>
+                    <characteristic name="Allegiance Ability" typeId="0506-f62d-68b3-5499">After a friendly WARHERD unit makes a charge move, pick 1 enemy unit within 1&quot; of that unit and roll a dice. Add 2 to the roll if that WARHERD unit is a HERO or has more than 3 models. On a 4+, that enemy unit suffers D3 mortal wounds at the end of the charge phase.</characteristic>
+                  </characteristics>
+                </profile>
+                <profile id="e9c3-6339-f269-0a4d" name="Raging Storm" hidden="false" typeId="c0c2-177b-e761-ec41" typeName="Allegiance Abilities">
+                  <characteristics>
+                    <characteristic name="Allegiance Ability" typeId="0506-f62d-68b3-5499">At the end of the combat phase, you can roll a dice for each friendly THUNDERSCORN unit that is on the battlefield. Add 2 to the roll if the THUNDERSCORN unit is a HERO or has more than 3 models. On a 4+, you can heal 1 wound allocated to that unit.
+
+Then, roll a dice for each enemy unit within 1&quot; of any friendly THUNDERSCORN units. Add 2 to the roll if any of those THUNDERSCORN units are HEROES or if there are more than 3 THUNDERSCORN models within 1&quot; of that unit. On a 4+, that enemy unit suffers 1 mortal wound.
+
+Designer’s Note: If you take a Thunderscorn Stormherd warscroll battalion in your army, do not use the Raging Storm ability on its warscroll. Instead, when using the Raging Storm ability above, you can re-roll the dice roll when determining if any wounds allocated to units from that battalion are healed, then you can re-roll the dice roll when determining if any enemy units within 1&quot; of any units from that battalion suffer 1 mortal wound.</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
@@ -1545,6 +1567,101 @@ After rolling a dice for each unit from this battalion, roll a dice for each ene
       </selectionEntryGroups>
       <costs>
         <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="150.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="79dd-0de7-30cb-ab01" name="The Butcher-herd" hidden="false" collective="false" import="true" type="upgrade">
+      <constraints>
+        <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="7ed8-efd7-0544-244e" type="max"/>
+      </constraints>
+      <profiles>
+        <profile id="fee4-a15a-efc2-92f0" name="Ghorraghan&apos;s Skull-staff" hidden="false" typeId="66c5-932e-004a-574c" typeName="Battalion Abilities">
+          <characteristics>
+            <characteristic name="Battalion Ability" typeId="23f7-32c0-e059-29b2">Add 2 to the Attacks characteristic of Ghorraghan Khai’s Fetish Staff. In addition, if the unmodified hit roll for an attack made with Ghorraghan Khai’s Fetish Staff is 6, that attack inflicts D3 mortal wounds on the target and the attack sequence ends (do not make a wound or save roll).</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="0101-b27f-22aa-c537" name="Infuse with Chaos Energy" hidden="false" typeId="66c5-932e-004a-574c" typeName="Battalion Abilities">
+          <characteristics>
+            <characteristic name="Battalion Ability" typeId="23f7-32c0-e059-29b2">Add 1 to hit rolls for attacks made by Warherd units in this battalion that are wholly within 12&quot; of Ghorraghan Khai.</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <categoryLinks>
+        <categoryLink id="9558-70a4-2214-f026" name="New CategoryLink" hidden="false" targetId="c03a-b1a8-66c6-3637" primary="true"/>
+      </categoryLinks>
+      <selectionEntryGroups>
+        <selectionEntryGroup id="13d6-4581-ef18-f6b7" name="1 Ghorgon" hidden="false" collective="false" import="true">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="102a-cae6-5839-258a" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="30f7-58fa-4ab7-3530" type="min"/>
+          </constraints>
+          <entryLinks>
+            <entryLink id="95c1-78ca-0960-06c7" name="Ghorgon" hidden="false" collective="false" import="true" targetId="ac76-a457-780f-f2a7" type="selectionEntry"/>
+          </entryLinks>
+        </selectionEntryGroup>
+        <selectionEntryGroup id="a44e-b9fb-1659-076e" name="2 Bullgors units" hidden="false" collective="false" import="true">
+          <constraints>
+            <constraint field="selections" scope="parent" value="2.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d0f3-c7a6-c948-6a20" type="max"/>
+            <constraint field="selections" scope="parent" value="2.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="aa4c-c272-e231-c106" type="min"/>
+          </constraints>
+          <entryLinks>
+            <entryLink id="0891-8022-7b54-3033" name="Bullgors" hidden="false" collective="false" import="true" targetId="3660-c5d4-c829-81f9" type="selectionEntry">
+              <modifiers>
+                <modifier type="remove" field="category" value="a42d-220e-6a88-7bf6">
+                  <conditionGroups>
+                    <conditionGroup type="or">
+                      <conditions>
+                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4373-740f-1bf3-b0aa" type="instanceOf"/>
+                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="e3a6-45ca-4974-b489" type="instanceOf"/>
+                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="6cd6-b22e-bfcb-9589" type="instanceOf"/>
+                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="c77d-829c-56f6-50e8" type="equalTo"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+              </modifiers>
+              <categoryLinks>
+                <categoryLink id="9111-6a54-0475-a8fd" name="BATTLELINE" hidden="false" targetId="a42d-220e-6a88-7bf6" primary="false"/>
+              </categoryLinks>
+            </entryLink>
+          </entryLinks>
+        </selectionEntryGroup>
+        <selectionEntryGroup id="daf9-1a42-6002-6721" name="1 Great Bray Shaman (Ghorraghan Khai)" hidden="false" collective="false" import="true">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="e957-3010-b10a-a885" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="cf87-f21b-28cf-b3e6" type="min"/>
+          </constraints>
+          <entryLinks>
+            <entryLink id="e1ab-7211-b98a-453c" name="Great Bray-Shaman" hidden="false" collective="false" import="true" targetId="0fa1-a648-2716-c96d" type="selectionEntry">
+              <profiles>
+                <profile id="7ca7-54ff-ca54-1fb4" name="Indomitable Beast" hidden="false" typeId="1504-23bf-8850-4f65" typeName="Command Traits">
+                  <modifiers>
+                    <modifier type="set" field="hidden" value="true">
+                      <conditions>
+                        <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="c661-44d6-0f5b-11ff" type="equalTo"/>
+                      </conditions>
+                    </modifier>
+                  </modifiers>
+                  <characteristics>
+                    <characteristic name="Command Trait" typeId="0145-9acf-f5dc-d543">Add 1 to this general’s Wounds characteristic.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <entryLinks>
+                <entryLink id="aa87-890b-f0c0-060a" name="General" hidden="false" collective="false" import="true" targetId="98a4-3d6d-a7b9-399f" type="selectionEntry">
+                  <categoryLinks>
+                    <categoryLink id="e3e7-a6be-19b9-f423" name="Great Bray-Shaman" hidden="false" targetId="add9-40c3-0f42-95e3" primary="false"/>
+                    <categoryLink id="f5bf-7f1c-e11a-e598" name="Named General" hidden="false" targetId="8b3d-7f03-e1f9-eaf5" primary="false"/>
+                  </categoryLinks>
+                </entryLink>
+                <entryLink id="ae7d-bf55-629c-1089" name="Artefacts of Power" hidden="false" collective="false" import="true" targetId="768d-19e8-5f48-51a6" type="selectionEntryGroup"/>
+                <entryLink id="b652-7ed3-f5fb-3ab5" name="Beasts of Chaos Spell Lores" hidden="false" collective="false" import="true" targetId="d3c8-df24-ddef-b62d" type="selectionEntryGroup"/>
+              </entryLinks>
+            </entryLink>
+          </entryLinks>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
+      <costs>
+        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="140.0"/>
       </costs>
     </selectionEntry>
   </sharedSelectionEntries>

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="66a6-81a6-dff2-a47d" name="Chaos - Skaventide" revision="4" battleScribeVersion="2.03" authorName="Thulram" library="false" gameSystemId="e832-3291-06be-cab1" gameSystemRevision="4" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="66a6-81a6-dff2-a47d" name="Chaos - Skaventide" revision="5" battleScribeVersion="2.03" authorName="Thulram" library="false" gameSystemId="e832-3291-06be-cab1" gameSystemRevision="4" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <profileTypes>
     <profileType id="c77c-8730-3d02-026d" name="Thanquol Wounds">
       <characteristicTypes>
@@ -41,6 +41,11 @@
         <characteristicType id="a874-4274-a2d0-52d5" name="Gnashing Teeth"/>
         <characteristicType id="9716-40a3-ad23-0a6b" name="Flailing Fists"/>
         <characteristicType id="dba6-7969-9cc3-d354" name="Avalanche of Flesh"/>
+      </characteristicTypes>
+    </profileType>
+    <profileType id="efb6-c499-68bf-1214" name="Clans Moulder Mutation">
+      <characteristicTypes>
+        <characteristicType id="bf44-3c79-6387-a13e" name="Mutation"/>
       </characteristicTypes>
     </profileType>
   </profileTypes>
@@ -718,7 +723,11 @@
         <entryLink id="72fb-2caf-f559-46be" name="Command Traits" hidden="false" collective="false" import="true" targetId="92cc-d426-c551-59a5" type="selectionEntryGroup"/>
       </entryLinks>
     </entryLink>
-    <entryLink id="c367-615b-bca7-e432" name="Hell Pit Abomination" hidden="false" collective="false" import="true" targetId="7236-4671-bbcc-78dd" type="selectionEntry"/>
+    <entryLink id="c367-615b-bca7-e432" name="Hell Pit Abomination" hidden="false" collective="false" import="true" targetId="7236-4671-bbcc-78dd" type="selectionEntry">
+      <entryLinks>
+        <entryLink id="106a-3b2e-45fc-42fc" name="Clans Moulder Mutations" hidden="false" collective="false" import="true" targetId="b97b-ed51-8499-e339" type="selectionEntryGroup"/>
+      </entryLinks>
+    </entryLink>
     <entryLink id="7342-c7d2-8ece-e359" name="Rat Ogors" hidden="false" collective="false" import="true" targetId="a29f-58b1-96db-a117" type="selectionEntry">
       <modifiers>
         <modifier type="remove" field="category" value="a42d-220e-6a88-7bf6">
@@ -760,6 +769,9 @@
       <categoryLinks>
         <categoryLink id="10c2-dfe6-7567-3409" name="BATTLELINE" hidden="false" targetId="a42d-220e-6a88-7bf6" primary="false"/>
       </categoryLinks>
+      <entryLinks>
+        <entryLink id="8cdc-ac92-643e-e42a" name="Clans Moulder Mutations" hidden="false" collective="false" import="true" targetId="b97b-ed51-8499-e339" type="selectionEntryGroup"/>
+      </entryLinks>
     </entryLink>
     <entryLink id="a140-c81e-bfcc-aa4c" name="Rat Swarms" hidden="false" collective="false" import="true" targetId="87f3-cdc4-d43b-d59a" type="selectionEntry"/>
     <entryLink id="3f35-d50e-918c-d0fe" name="Giant Rats" hidden="false" collective="false" import="true" targetId="e27e-3a68-df4b-35ae" type="selectionEntry">
@@ -927,6 +939,7 @@
     <entryLink id="7291-9af3-3181-1950" name="Congregation of Filth" hidden="false" collective="false" import="true" targetId="f8ed-456d-cef2-b05b" type="selectionEntry"/>
     <entryLink id="5cd8-f96a-1c7f-a35c" name="Virulent Procession" hidden="false" collective="false" import="true" targetId="995c-f005-0a72-c9a7" type="selectionEntry"/>
     <entryLink id="6a18-b5b4-0364-7054" name="Warpcog Convocation" hidden="false" collective="false" import="true" targetId="8359-1891-9817-1008" type="selectionEntry"/>
+    <entryLink id="934d-202b-668a-2704" name="Rattachak&apos;s Doom-coven" hidden="false" collective="false" import="true" targetId="4c99-de10-e184-20ab" type="selectionEntry"/>
   </entryLinks>
   <sharedSelectionEntries>
     <selectionEntry id="daa9-a2c4-7176-bd9e" name="Allegiance" hidden="false" collective="false" import="true" type="upgrade">
@@ -978,6 +991,26 @@
                 <profile id="da5f-7a9e-810d-f2eb" name="Strength in Numbers" hidden="false" typeId="c0c2-177b-e761-ec41" typeName="Allegiance Abilities">
                   <characteristics>
                     <characteristic name="Allegiance Ability" typeId="0506-f62d-68b3-5499">When a SKAVENTIDE unit takes a battleshock test, add 2 to its Bravery characteristic instead of 1 for every 10 models in the unit.</characteristic>
+                  </characteristics>
+                </profile>
+                <profile id="b609-5976-b4cb-9948" name="Hidden Weapons Teams" hidden="false" typeId="c0c2-177b-e761-ec41" typeName="Allegiance Abilities">
+                  <characteristics>
+                    <characteristic name="Allegiance Ability" typeId="0506-f62d-68b3-5499">When you select a WEAPON TEAM unit other than a WARP GRINDER to be part of your army, you can pick 1 friendly unit of CLANRATS or STORMVERMIN that has 10 or more models and is already part of your army to be the unit in which that WEAPON TEAM unit is hiding. Record this information on a piece of paper. Do not set up the WEAPON TEAM unit until it is revealed as described next. You can hide up to 1 WEAPON TEAM unit in a CLANRATS or STORMVERMIN unit for every 10 models in that CLANRATS or STORMVERMIN unit.
+
+At the start of your shooting phase, you can reveal 1 or more hidden WEAPON TEAM units. If you do so, set up each hidden WEAPON TEAM unit wholly within 3&quot; of the unit it was hiding in and more than 3&quot; from any enemy units. WEAPON TEAM units can shoot in the turn in which they are revealed as long as the unit they were hiding in did not run in the same turn (it could have retreated).
+
+In addition, at the end of your charge phase, you can reveal 1 or more hidden WEAPON TEAM units that were hiding in a unit that made a charge move in that phase. If you do so, set up each hidden WEAPON TEAM unit wholly within 3&quot; of the unit it was hiding in (it can be set up within 3&quot; of any enemy units and can fight in the following combat phase).
+
+Hidden WEAPON TEAM units are destroyed if the unit they are hiding in is destroyed before they are revealed.</characteristic>
+                  </characteristics>
+                </profile>
+                <profile id="3e62-96d9-d217-539f" name="Clans Moulder Mutations" hidden="false" typeId="ce32-0c40-1990-4c8a" typeName="Restriction">
+                  <characteristics>
+                    <characteristic name="Restriction" typeId="edbe-5fe5-1142-afa6">If a Skaventide army includes any FIGHTING BEAST units, 1 of those FIGHTING BEAST units can have a Clans Moulder mutation.
+
+In addition, when you pick a FIGHTING BEAST unit to benefit from the Prized Creations battle trait at the start of the first battle round, you can choose for it to have a Clans Moulder mutation instead of adding D3 to its Wounds characteristic and re-rolling hit rolls of 1.
+
+Declare which FIGHTING BEAST unit will have the Clans Moulder mutation and then choose or roll for a mutation from the appropriate table. The same FIGHTING BEAST unit cannot have more than 1 Clans Moulder mutation, and an army may not include duplicates of the same mutation.</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
@@ -1362,6 +1395,9 @@ Deadly: Roll a dice for each unit that finishes a normal move or charge move wit
               <categoryLinks>
                 <categoryLink id="39be-d261-5759-05b0" name="BATTLELINE" hidden="false" targetId="a42d-220e-6a88-7bf6" primary="false"/>
               </categoryLinks>
+              <entryLinks>
+                <entryLink id="d1df-2171-aa83-7548" name="Clans Moulder Mutations" hidden="false" collective="false" import="true" targetId="b97b-ed51-8499-e339" type="selectionEntryGroup"/>
+              </entryLinks>
             </entryLink>
           </entryLinks>
         </selectionEntryGroup>
@@ -1429,7 +1465,11 @@ Deadly: Roll a dice for each unit that finishes a normal move or charge move wit
             <constraint field="selections" scope="parent" value="3.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="5072-3e4a-e1ec-c9b6" type="max"/>
           </constraints>
           <entryLinks>
-            <entryLink id="ef03-be3d-f795-a41b" name="Hell Pit Abomination" hidden="false" collective="false" import="true" targetId="7236-4671-bbcc-78dd" type="selectionEntry"/>
+            <entryLink id="ef03-be3d-f795-a41b" name="Hell Pit Abomination" hidden="false" collective="false" import="true" targetId="7236-4671-bbcc-78dd" type="selectionEntry">
+              <entryLinks>
+                <entryLink id="3245-b324-a6d8-4189" name="Clans Moulder Mutations" hidden="false" collective="false" import="true" targetId="b97b-ed51-8499-e339" type="selectionEntryGroup"/>
+              </entryLinks>
+            </entryLink>
           </entryLinks>
         </selectionEntryGroup>
       </selectionEntryGroups>
@@ -2372,6 +2412,105 @@ Deadly: Roll a dice for each unit that finishes a normal move or charge move wit
       </selectionEntryGroups>
       <costs>
         <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="100.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="4c99-de10-e184-20ab" name="Rattachak&apos;s Doom-coven" hidden="false" collective="false" import="true" type="upgrade">
+      <constraints>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d5f3-2f9f-635c-e339" type="max"/>
+      </constraints>
+      <profiles>
+        <profile id="db7f-38aa-cc7d-7bb4" name="Rattachak&apos;s More-more-more Doomrocket" hidden="false" typeId="66c5-932e-004a-574c" typeName="Battalion Abilities">
+          <characteristics>
+            <characteristic name="Battalion Ability" typeId="23f7-32c0-e059-29b2">You can re-roll hit rolls for attacks made with Rattachak’s Doomrocket and add 1 to that weapon’s Damage characteristic. In addition, add 1 to the Damage characteristic of Shock Gauntlets used by the STORMFIENDS unit in this battalion while it is wholly within 12&quot; of Rattachak.</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <categoryLinks>
+        <categoryLink id="8cc6-1e86-e352-427c" name="New CategoryLink" hidden="false" targetId="c03a-b1a8-66c6-3637" primary="true"/>
+      </categoryLinks>
+      <selectionEntryGroups>
+        <selectionEntryGroup id="d34f-0b35-37fe-d8e4" name="1 Stormfiends unit" hidden="false" collective="false" import="true">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="fb8e-a9b5-c650-4a87" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="81e0-8bde-711e-b7fa" type="min"/>
+          </constraints>
+          <entryLinks>
+            <entryLink id="f9cc-0e9e-fe74-ba05" name="Stormfiends" hidden="false" collective="false" import="true" targetId="3e6f-4fed-a07f-26ce" type="selectionEntry">
+              <modifiers>
+                <modifier type="remove" field="category" value="a42d-220e-6a88-7bf6">
+                  <conditionGroups>
+                    <conditionGroup type="or">
+                      <conditions>
+                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="eb59-f0ad-9828-dad9" type="instanceOf"/>
+                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2934-b35c-a22d-3251" type="greaterThan"/>
+                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="af1e-d301-fe72-672c" type="greaterThan"/>
+                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="1679-25ac-d182-a514" type="greaterThan"/>
+                        <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="32eb-e750-1437-07f5" type="greaterThan"/>
+                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="20a8-54a3-252e-9065" type="greaterThan"/>
+                        <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4373-740f-1bf3-b0aa" type="instanceOf"/>
+                        <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="6cd6-b22e-bfcb-9589" type="instanceOf"/>
+                        <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="e3a6-45ca-4974-b489" type="instanceOf"/>
+                      </conditions>
+                      <conditionGroups>
+                        <conditionGroup type="or">
+                          <conditionGroups>
+                            <conditionGroup type="and">
+                              <conditions>
+                                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="919c-6d43-b39b-f8bf" type="greaterThan"/>
+                                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="a1d4-3a75-46a8-47c0" type="equalTo"/>
+                              </conditions>
+                            </conditionGroup>
+                            <conditionGroup type="and">
+                              <conditions>
+                                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="919c-6d43-b39b-f8bf" type="lessThan"/>
+                                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="a1d4-3a75-46a8-47c0" type="equalTo"/>
+                              </conditions>
+                            </conditionGroup>
+                          </conditionGroups>
+                        </conditionGroup>
+                      </conditionGroups>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+              </modifiers>
+              <categoryLinks>
+                <categoryLink id="4dde-264c-8a09-8ab1" name="BATTLELINE" hidden="false" targetId="a42d-220e-6a88-7bf6" primary="false"/>
+              </categoryLinks>
+            </entryLink>
+          </entryLinks>
+        </selectionEntryGroup>
+        <selectionEntryGroup id="7d3b-83c8-e879-99b4" name="1 Warp Lightning Cannon" hidden="false" collective="false" import="true">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="1d10-3488-395b-4d08" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="e3bc-c9f4-22b0-f37e" type="min"/>
+          </constraints>
+          <entryLinks>
+            <entryLink id="ad5e-0dd2-8fa0-4050" name="Warp Lightning Cannon" hidden="false" collective="false" import="true" targetId="a4ed-7087-afc3-fe62" type="selectionEntry"/>
+          </entryLinks>
+        </selectionEntryGroup>
+        <selectionEntryGroup id="9e6e-086a-793d-8f01" name="1 Warlock Bombardier (Rattachak)" hidden="false" collective="false" import="true">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="ed1f-f47e-7753-9508" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="2112-bc1e-9433-0cbd" type="min"/>
+          </constraints>
+          <entryLinks>
+            <entryLink id="42e6-56d4-95f7-0325" name="Warlock Bombardier" hidden="false" collective="false" import="true" targetId="31ae-e199-8748-4af3" type="selectionEntry">
+              <entryLinks>
+                <entryLink id="69d0-87f8-28db-c517" name="General" hidden="false" collective="false" import="true" targetId="98a4-3d6d-a7b9-399f" type="selectionEntry">
+                  <categoryLinks>
+                    <categoryLink id="9f4c-b5d4-dcec-b509" name="General - Clans Skryre" hidden="false" targetId="a1d4-3a75-46a8-47c0" primary="false"/>
+                  </categoryLinks>
+                </entryLink>
+                <entryLink id="34bc-f258-1134-9343" name="Artefacts of Power" hidden="false" collective="false" import="true" targetId="5243-a5a2-153c-c2b6" type="selectionEntryGroup"/>
+                <entryLink id="4661-cf4c-edf5-c59d" name="Command Traits" hidden="false" collective="false" import="true" targetId="92cc-d426-c551-59a5" type="selectionEntryGroup"/>
+                <entryLink id="afd4-3eff-1892-3931" name="Skaventide Spell Lores" hidden="false" collective="false" import="true" targetId="e7ca-7618-0f02-00ef" type="selectionEntryGroup"/>
+              </entryLinks>
+            </entryLink>
+          </entryLinks>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
+      <costs>
+        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="130.0"/>
       </costs>
     </selectionEntry>
   </sharedSelectionEntries>
@@ -3713,6 +3852,123 @@ Deadly: Roll a dice for each unit that finishes a normal move or charge move wit
               <costs>
                 <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
               </costs>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
+    </selectionEntryGroup>
+    <selectionEntryGroup id="b97b-ed51-8499-e339" name="Clans Moulder Mutations" hidden="false" collective="false" import="true">
+      <constraints>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="546f-a3ab-fb1a-5f48" type="max"/>
+        <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="e997-787b-d791-f946" type="max"/>
+      </constraints>
+      <selectionEntryGroups>
+        <selectionEntryGroup id="9340-0881-9f07-5485" name="Hideous Abominations" hidden="false" collective="false" import="true">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="5d82-b6e6-1aa7-35c8" type="notInstanceOf"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="1aee-67df-d9f4-a5a5" type="max"/>
+          </constraints>
+          <selectionEntries>
+            <selectionEntry id="c5a7-e98e-d7fa-a5d3" name="6 ~ Never-never Die-die" hidden="false" collective="false" import="true" type="upgrade">
+              <profiles>
+                <profile id="7f2e-ec60-8b6a-6bb2" name="Never-never Die-die" hidden="false" typeId="efb6-c499-68bf-1214" typeName="Clans Moulder Mutation">
+                  <characteristics>
+                    <characteristic name="Mutation" typeId="bf44-3c79-6387-a13e">You can re-roll the dice when you use this HELL PIT ABOMINATION ’s Too Horrible To Die ability.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+            </selectionEntry>
+            <selectionEntry id="ee66-30a7-dc96-5641" name="4 ~ Accelerated Regeneration" hidden="false" collective="false" import="true" type="upgrade">
+              <profiles>
+                <profile id="c875-56dc-c607-ce27" name="Accelerated Regeneration" hidden="false" typeId="efb6-c499-68bf-1214" typeName="Clans Moulder Mutation">
+                  <characteristics>
+                    <characteristic name="Mutation" typeId="bf44-3c79-6387-a13e">You can use this HELL PIT ABOMINATION ’s Regenerating Monstrosity ability in the enemy hero phase as well as in your hero phase.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+            </selectionEntry>
+            <selectionEntry id="2d3f-e06b-d673-1e1d" name="5 ~ Best-best Warpstone Spikes" hidden="false" collective="false" import="true" type="upgrade">
+              <profiles>
+                <profile id="ec17-59b8-9b87-057c" name="Best-best Warpstone Spikes" hidden="false" typeId="efb6-c499-68bf-1214" typeName="Clans Moulder Mutation">
+                  <characteristics>
+                    <characteristic name="Mutation" typeId="bf44-3c79-6387-a13e">You can re-roll the dice when you use this HELL PIT ABOMINATION ’s Warpstone Spikes ability. In addition, you can re-roll wound rolls of 1 for attacks made with melee weapons by this HELL PIT ABOMINATION .</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+            </selectionEntry>
+            <selectionEntry id="f006-f017-e1df-d9c0" name="3 ~ Quivering Bulk" hidden="false" collective="false" import="true" type="upgrade">
+              <profiles>
+                <profile id="8474-e7ea-daa1-60b0" name="Quivering Bulk" hidden="false" typeId="efb6-c499-68bf-1214" typeName="Clans Moulder Mutation">
+                  <characteristics>
+                    <characteristic name="Mutation" typeId="bf44-3c79-6387-a13e">Add 1 to each dice roll you make for this HELL PIT ABOMINATION ’s Avalanche of Flesh ability.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+            </selectionEntry>
+            <selectionEntry id="0052-b3e1-cc04-0762" name="2 ~ Lumbering Behemoth" hidden="false" collective="false" import="true" type="upgrade">
+              <profiles>
+                <profile id="d132-1b5d-db05-7618" name="Lumbering Behemoth" hidden="false" typeId="efb6-c499-68bf-1214" typeName="Clans Moulder Mutation">
+                  <characteristics>
+                    <characteristic name="Mutation" typeId="bf44-3c79-6387-a13e">This HELL PIT ABOMINATION has a Move characteristic of 7&quot;. In addition, charge rolls for this HELL PIT ABOMINATION are automatically a 7 (do not roll the dice).</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+            </selectionEntry>
+            <selectionEntry id="6548-1d93-072c-b96a" name="1 ~ Toughened Sinews" hidden="false" collective="false" import="true" type="upgrade">
+              <profiles>
+                <profile id="b377-77ab-beb6-3926" name="Toughened Sinews" hidden="false" typeId="efb6-c499-68bf-1214" typeName="Clans Moulder Mutation">
+                  <characteristics>
+                    <characteristic name="Mutation" typeId="bf44-3c79-6387-a13e">This HELL PIT ABOMINATION has a Wounds characteristic of 14 and a Save characteristic of 4+.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
+        <selectionEntryGroup id="2512-074a-4f33-a5f6" name="Big-Big Rat Ogors" hidden="false" collective="false" import="true">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="7fbe-f7f8-9dda-e67c" type="notInstanceOf"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="1cd8-45e2-1986-f3e1" type="max"/>
+          </constraints>
+          <selectionEntries>
+            <selectionEntry id="ea63-f9dd-1196-fedb" name="3 ~ Accelerated Metabolism" hidden="false" collective="false" import="true" type="upgrade">
+              <profiles>
+                <profile id="8ecc-669d-31d2-b723" name="Accelerated Metabolism" hidden="false" typeId="efb6-c499-68bf-1214" typeName="Clans Moulder Mutation">
+                  <characteristics>
+                    <characteristic name="Mutation" typeId="bf44-3c79-6387-a13e">This RAT OGOR unit has a Move characteristic of 8&quot;. In addition, you can heal D3 wounds allocated to this RAT OGOR unit in your hero phase.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+            </selectionEntry>
+            <selectionEntry id="4a1c-f6a0-4d48-268e" name="2 ~ Insanely Rabid" hidden="false" collective="false" import="true" type="upgrade">
+              <profiles>
+                <profile id="4648-b866-7e68-33fc" name="Insanely Rabid" hidden="false" typeId="efb6-c499-68bf-1214" typeName="Clans Moulder Mutation">
+                  <characteristics>
+                    <characteristic name="Mutation" typeId="bf44-3c79-6387-a13e">This RAT OGOR unit’s Tearing Claws, Blades and Fangs have an Attacks characteristic of 6. In addition, you can re-roll charge rolls for this RAT OGOR unit.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+            </selectionEntry>
+            <selectionEntry id="e0ad-4477-5315-9d99" name="1 ~ Toughened Sinews" hidden="false" collective="false" import="true" type="upgrade">
+              <profiles>
+                <profile id="48a1-a7f8-9f90-ebae" name="Toughened Sinews" hidden="false" typeId="efb6-c499-68bf-1214" typeName="Clans Moulder Mutation">
+                  <characteristics>
+                    <characteristic name="Mutation" typeId="bf44-3c79-6387-a13e">This RAT OGOR unit has a Wounds characteristic of 6 and a Save characteristic of 4+.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
             </selectionEntry>
           </selectionEntries>
         </selectionEntryGroup>

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="17e0-7b8f-5bbb-e8c8" name="Chaos - Legion of the First Prince" revision="3" battleScribeVersion="2.03" authorName="Thulram" library="false" gameSystemId="e832-3291-06be-cab1" gameSystemRevision="3" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="17e0-7b8f-5bbb-e8c8" name="Chaos - Legion of the First Prince" revision="4" battleScribeVersion="2.03" authorName="Thulram" library="false" gameSystemId="e832-3291-06be-cab1" gameSystemRevision="3" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <profileTypes>
     <profileType id="b324-3770-f5b4-1780" name="Lord Skreech Wounds">
       <characteristicTypes>
@@ -186,6 +186,8 @@
     <categoryEntry id="a2b5-3fc3-be8d-4040" name="Herald of Khorne on Blood Throne" hidden="false"/>
     <categoryEntry id="f1fa-361c-3a29-a0dc" name="Bloodmaster" hidden="false"/>
     <categoryEntry id="46e1-9794-9f64-dc8a" name="Herald of Khorne" hidden="false"/>
+    <categoryEntry id="ba76-e456-5fbf-0b04" name="Dexcessa" hidden="false"/>
+    <categoryEntry id="c396-cbad-1517-4286" name="Synessa" hidden="false"/>
   </categoryEntries>
   <entryLinks>
     <entryLink id="7c73-9724-30b6-46e8" name="Allegiance" hidden="false" collective="false" import="true" targetId="a3ed-24d6-0a9f-8665" type="selectionEntry">
@@ -695,6 +697,27 @@
     </entryLink>
     <entryLink id="9066-917b-3dac-0b7c" name="Daemon Plague Toads of Nurgle" hidden="false" collective="false" import="true" targetId="f417-a984-2dd6-02eb" type="selectionEntry"/>
     <entryLink id="c372-66d4-d486-1d03" name="Daemon Pox Riders of Nurgle" hidden="false" collective="false" import="true" targetId="421b-8543-8be2-47af" type="selectionEntry"/>
+    <entryLink id="9611-8522-3c8b-77c1" name="Dexcessa, The Talon of Slaanesh" hidden="false" collective="false" import="true" targetId="b9c0-9f16-403e-f161" type="selectionEntry">
+      <entryLinks>
+        <entryLink id="35b6-0432-d166-4f40" name="General" hidden="false" collective="false" import="true" targetId="98a4-3d6d-a7b9-399f" type="selectionEntry">
+          <categoryLinks>
+            <categoryLink id="153e-0f59-f73e-1b72" name="Named General" hidden="false" targetId="8b3d-7f03-e1f9-eaf5" primary="false"/>
+          </categoryLinks>
+        </entryLink>
+      </entryLinks>
+    </entryLink>
+    <entryLink id="49b8-4c68-799a-bcfa" name="Synessa, The Voice of Slaanesh" hidden="false" collective="false" import="true" targetId="9e85-dc26-58a7-6999" type="selectionEntry">
+      <infoLinks>
+        <infoLink id="77c1-00bb-2d8c-8bad" name="The Master&apos;s Command" hidden="false" targetId="9ccb-d378-f9f6-04fe" type="profile"/>
+      </infoLinks>
+      <entryLinks>
+        <entryLink id="4b22-1275-a711-f893" name="General" hidden="false" collective="false" import="true" targetId="98a4-3d6d-a7b9-399f" type="selectionEntry">
+          <categoryLinks>
+            <categoryLink id="2b80-789b-98be-edb1" name="Named General" hidden="false" targetId="8b3d-7f03-e1f9-eaf5" primary="false"/>
+          </categoryLinks>
+        </entryLink>
+      </entryLinks>
+    </entryLink>
   </entryLinks>
   <sharedSelectionEntries>
     <selectionEntry id="a3ed-24d6-0a9f-8665" name="Allegiance" hidden="false" collective="false" import="true" type="upgrade">
@@ -9300,6 +9323,286 @@ If a unit that is affected by this ability is also affected by any rules that wo
       </selectionEntries>
       <costs>
         <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="380.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="b9c0-9f16-403e-f161" name="Dexcessa, The Talon of Slaanesh" hidden="false" collective="false" import="true" type="unit">
+      <constraints>
+        <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="ff54-d863-1725-1452" type="max"/>
+      </constraints>
+      <profiles>
+        <profile id="4c46-cb14-e000-918c" name="Dexcessa, The Talon of Slaanesh" hidden="false" typeId="3956-f6dd-6c88-ae4b" typeName="Unit">
+          <characteristics>
+            <characteristic name="Move" typeId="5bbe-8910-4dfa-7b1c">12&quot;</characteristic>
+            <characteristic name="Wounds" typeId="a0c6-af64-2f24-5759">10</characteristic>
+            <characteristic name="Save" typeId="93b6-2f96-2df7-e330">4+</characteristic>
+            <characteristic name="Bravery" typeId="2420-1c5c-1016-7033">10</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="98d1-97cc-7b88-9a5c" name="Fleeting Dance of Death" hidden="false" typeId="7861-da01-01c0-88d9" typeName="Ability">
+          <characteristics>
+            <characteristic name="Ability" typeId="9bce-4deb-8b79-eaec">This model can run or retreat and still charge later in the same turn.</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="6d91-2b93-ce19-f024" name="Joyous Battle Fury" hidden="false" typeId="7861-da01-01c0-88d9" typeName="Ability">
+          <characteristics>
+            <characteristic name="Ability" typeId="9bce-4deb-8b79-eaec">After this model has fought for the first time, at the start of each battle round, add 1 to the Attacks characteristics of this model’s weapons for the rest of the battle. This effect is cumulative.</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="6fd0-e7ff-6d51-81fa" name="Mesmerising Lepidoptera" hidden="false" typeId="7861-da01-01c0-88d9" typeName="Ability">
+          <characteristics>
+            <characteristic name="Ability" typeId="9bce-4deb-8b79-eaec">Subtract 1 from hit rolls for attacks that target this model.</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="3f07-98ed-af58-6703" name="Sceptre of Slaanesh" hidden="false" typeId="7861-da01-01c0-88d9" typeName="Ability">
+          <characteristics>
+            <characteristic name="Ability" typeId="9bce-4deb-8b79-eaec">Do not take battleshock tests for friendly SLAANESH DAEMON units wholly within 12&quot; of this model. In addition, once per turn, this model can issue a command to a friendly SLAANESH DAEMON unit without a command point being spent.</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoLinks>
+        <infoLink id="ba0e-9fc2-af68-e771" name="Fly" hidden="false" targetId="dd68-953d-c8fb-7075" type="profile"/>
+      </infoLinks>
+      <categoryLinks>
+        <categoryLink id="f776-06cd-9add-703c" name="Chaos" hidden="false" targetId="d8b4-9de1-926f-99b1" primary="false"/>
+        <categoryLink id="d950-4083-90f6-e57c" name="Daemon" hidden="false" targetId="128a-35fa-6f1f-a15d" primary="false"/>
+        <categoryLink id="441e-8ba5-6c9e-c796" name="Hero" hidden="false" targetId="411f-dd41-4ab6-8a05" primary="false"/>
+        <categoryLink id="811f-612d-20dc-1d08" name="New CategoryLink" hidden="false" targetId="93cb-21d9-e1d5-6161" primary="true"/>
+        <categoryLink id="6386-3a71-ab87-3464" name="Monster" hidden="false" targetId="e3bc-f9bd-b6f8-7afd" primary="false"/>
+        <categoryLink id="8152-4519-b5f0-d43c" name="NAMED" hidden="false" targetId="543e-1cc9-6d38-f8b3" primary="false"/>
+        <categoryLink id="1631-a32f-79fc-1500" name="SLAANESH" hidden="false" targetId="58b2-6793-0b10-a246" primary="false"/>
+        <categoryLink id="e671-5b67-4c1b-9515" name="Dexcessa" hidden="false" targetId="ba76-e456-5fbf-0b04" primary="false"/>
+        <categoryLink id="b274-b312-f790-c01d" name="Hedonite" hidden="false" targetId="5c8e-4345-898d-100e" primary="false"/>
+      </categoryLinks>
+      <selectionEntries>
+        <selectionEntry id="397d-87f4-b431-56c5" name="Impaling Talons" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="0471-9673-93e8-a9e1" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="37a6-565b-83b4-5817" type="min"/>
+          </constraints>
+          <profiles>
+            <profile id="489b-65c0-e872-c131" name="Impaling Talons" hidden="false" typeId="2905-f6bd-06e5-6642" typeName="Weapon">
+              <characteristics>
+                <characteristic name="Type" typeId="1a08-195b-76fd-2c2b">Melee</characteristic>
+                <characteristic name="Range" typeId="1406-f935-3f8e-b27f">1&quot;</characteristic>
+                <characteristic name="Attacks" typeId="4c19-dba6-f094-5165">2</characteristic>
+                <characteristic name="To-Hit" typeId="7a4f-9704-2095-96c8">3+</characteristic>
+                <characteristic name="To-Wound" typeId="172f-fc84-895b-04b7">3+</characteristic>
+                <characteristic name="Rend" typeId="0c05-bd2e-b7e7-3925">-2</characteristic>
+                <characteristic name="Damage" typeId="01c2-d16a-8788-e52b">2</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <costs>
+            <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="1569-e299-8ca1-a9fa" name="Scourge of Slaanesh" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="4d4d-534e-a170-12b4" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="146e-728b-b59b-f312" type="min"/>
+          </constraints>
+          <profiles>
+            <profile id="386b-3a23-8625-7354" name="Scourge of Slaanesh" hidden="false" typeId="2905-f6bd-06e5-6642" typeName="Weapon">
+              <characteristics>
+                <characteristic name="Type" typeId="1a08-195b-76fd-2c2b">Melee</characteristic>
+                <characteristic name="Range" typeId="1406-f935-3f8e-b27f">3&quot;</characteristic>
+                <characteristic name="Attacks" typeId="4c19-dba6-f094-5165">4</characteristic>
+                <characteristic name="To-Hit" typeId="7a4f-9704-2095-96c8">2+</characteristic>
+                <characteristic name="To-Wound" typeId="172f-fc84-895b-04b7">3+</characteristic>
+                <characteristic name="Rend" typeId="0c05-bd2e-b7e7-3925">-1</characteristic>
+                <characteristic name="Damage" typeId="01c2-d16a-8788-e52b">2</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <costs>
+            <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
+          </costs>
+        </selectionEntry>
+      </selectionEntries>
+      <costs>
+        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="280.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="9e85-dc26-58a7-6999" name="Synessa, The Voice of Slaanesh" hidden="false" collective="false" import="true" type="unit">
+      <constraints>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="f117-a9fb-6682-7b34" type="max"/>
+      </constraints>
+      <profiles>
+        <profile id="0d8a-56a5-df37-3d78" name="Synessa, The Voice of Slaanesh" hidden="false" typeId="3956-f6dd-6c88-ae4b" typeName="Unit">
+          <characteristics>
+            <characteristic name="Move" typeId="5bbe-8910-4dfa-7b1c">12&quot;</characteristic>
+            <characteristic name="Wounds" typeId="a0c6-af64-2f24-5759">9</characteristic>
+            <characteristic name="Save" typeId="93b6-2f96-2df7-e330">4+</characteristic>
+            <characteristic name="Bravery" typeId="2420-1c5c-1016-7033">10</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="33f7-99f4-45d0-2a6e" name="Synessa" hidden="false" typeId="a62b-2245-5c24-f8bc" typeName="Magic">
+          <characteristics>
+            <characteristic name="Cast/Unbind" typeId="9a5b-68ee-bc46-6a9d">1/1</characteristic>
+            <characteristic name="Spells Known" typeId="25bd-2ad0-e570-e880">Arcane Bolt, Mystic Shield, Whispers of Doubt, all spells from the; Lore of Slaanesh, Forbidden Sorceries of Slaanesh, Lore of Pain and Pleasure</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="5808-9eb5-9244-1c3d" name="Whispers of Doubt" hidden="false" typeId="13da-11a8-b7d1-77a7" typeName="Spell">
+          <characteristics>
+            <characteristic name="Spell" typeId="1170-c916-1b73-ae34">Whispers of Doubt has a casting value of 6. If successfully cast, pick 1 enemy HERO within 3&quot; of the caster and visible to them, and roll 3D6. If the roll is equal to or greater than that HERO’s Bravery characteristic, add 1 to hit rolls for attacks that target that HERO until your next hero phase.</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="f316-1250-a54a-0491" name="The Voice of Slaanesh" hidden="false" typeId="7861-da01-01c0-88d9" typeName="Ability">
+          <characteristics>
+            <characteristic name="Ability" typeId="9bce-4deb-8b79-eaec">If this model issues a command to 1 friendly unit, that friendly unit can be anywhere on the battlefield as long as it is visible to this model (the range of the command ability does not apply). If this model issues a command to more than 1 friendly unit, 1 of those friendly units can be anywhere on the battlefield as long as it is visible to this model (the range of the command ability still applies to the other units).
+
+In addition, if this model successfully casts Whispers of Doubt (see right) or Pavane of Slaanesh (see Battletome: Hedonites of Slaanesh), the HERO affected by the spell can be anywhere on the battlefield as long as that HERO is visible to this model (the range of the spell does not apply).</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="67e1-f5c0-0d3f-8e28" name="Mesmerising Lepidoptera" hidden="false" typeId="7861-da01-01c0-88d9" typeName="Ability">
+          <characteristics>
+            <characteristic name="Ability" typeId="9bce-4deb-8b79-eaec">Subtract 1 from hit rolls for attacks that target this model.</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoLinks>
+        <infoLink id="d65d-b9a8-d460-5f72" name="Fly" hidden="false" targetId="dd68-953d-c8fb-7075" type="profile"/>
+        <infoLink id="f88a-d0ae-c181-e4a2" name="Mystic Shield" hidden="false" targetId="3b74-6720-61fa-1f0c" type="profile"/>
+        <infoLink id="2e20-bf47-a57c-9e6e" name="Arcane Bolt" hidden="false" targetId="2dfe-38cb-0d5e-e85e" type="profile"/>
+      </infoLinks>
+      <categoryLinks>
+        <categoryLink id="60bb-b529-5ede-9246" name="Chaos" hidden="false" targetId="d8b4-9de1-926f-99b1" primary="false"/>
+        <categoryLink id="0cac-8eb8-2d9d-15eb" name="Daemon" hidden="false" targetId="128a-35fa-6f1f-a15d" primary="false"/>
+        <categoryLink id="5134-a44a-25a9-75f7" name="Hero" hidden="false" targetId="411f-dd41-4ab6-8a05" primary="false"/>
+        <categoryLink id="7152-79e0-4c71-a862" name="New CategoryLink" hidden="false" targetId="93cb-21d9-e1d5-6161" primary="true"/>
+        <categoryLink id="ecac-94c6-6576-d31b" name="Monster" hidden="false" targetId="e3bc-f9bd-b6f8-7afd" primary="false"/>
+        <categoryLink id="6927-c00d-a7be-95a2" name="NAMED" hidden="false" targetId="543e-1cc9-6d38-f8b3" primary="false"/>
+        <categoryLink id="6964-b5ae-4aa5-51f9" name="SLAANESH" hidden="false" targetId="58b2-6793-0b10-a246" primary="false"/>
+        <categoryLink id="4678-56c6-3fab-cf66" name="Wizard" hidden="false" targetId="7ee2-0d81-544f-5d7e" primary="false"/>
+        <categoryLink id="9480-f464-d3e5-e8a6" name="Hedonite" hidden="false" targetId="5c8e-4345-898d-100e" primary="false"/>
+        <categoryLink id="07c7-b248-e79e-dfe1" name="Synessa" hidden="false" targetId="c396-cbad-1517-4286" primary="false"/>
+      </categoryLinks>
+      <selectionEntries>
+        <selectionEntry id="0b01-88cf-722c-620d" name="Impaling Talons" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="0863-28bd-01a8-9bec" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8dce-f96b-5ecc-6fae" type="min"/>
+          </constraints>
+          <profiles>
+            <profile id="f84b-402a-b600-870b" name="Impaling Talons" hidden="false" typeId="2905-f6bd-06e5-6642" typeName="Weapon">
+              <characteristics>
+                <characteristic name="Type" typeId="1a08-195b-76fd-2c2b">Melee</characteristic>
+                <characteristic name="Range" typeId="1406-f935-3f8e-b27f">1&quot;</characteristic>
+                <characteristic name="Attacks" typeId="4c19-dba6-f094-5165">3</characteristic>
+                <characteristic name="To-Hit" typeId="7a4f-9704-2095-96c8">3+</characteristic>
+                <characteristic name="To-Wound" typeId="172f-fc84-895b-04b7">3+</characteristic>
+                <characteristic name="Rend" typeId="0c05-bd2e-b7e7-3925">-2</characteristic>
+                <characteristic name="Damage" typeId="01c2-d16a-8788-e52b">2</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <costs>
+            <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="6767-64e0-a68c-db0c" name="Staff of Slaanesh" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="6bd7-1f45-5ac1-0393" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="c90a-8309-42a8-2c94" type="min"/>
+          </constraints>
+          <profiles>
+            <profile id="1799-5406-9f47-23eb" name="Staff of Slaanesh" hidden="false" typeId="2905-f6bd-06e5-6642" typeName="Weapon">
+              <characteristics>
+                <characteristic name="Type" typeId="1a08-195b-76fd-2c2b">Missile</characteristic>
+                <characteristic name="Range" typeId="1406-f935-3f8e-b27f">18&quot;</characteristic>
+                <characteristic name="Attacks" typeId="4c19-dba6-f094-5165">1</characteristic>
+                <characteristic name="To-Hit" typeId="7a4f-9704-2095-96c8">-</characteristic>
+                <characteristic name="To-Wound" typeId="172f-fc84-895b-04b7">-</characteristic>
+                <characteristic name="Rend" typeId="0c05-bd2e-b7e7-3925">-</characteristic>
+                <characteristic name="Damage" typeId="01c2-d16a-8788-e52b">-</characteristic>
+              </characteristics>
+            </profile>
+            <profile id="3ab2-9ab8-4398-325e" name="Staff of Slaanesh" hidden="false" typeId="7861-da01-01c0-88d9" typeName="Ability">
+              <characteristics>
+                <characteristic name="Ability" typeId="9bce-4deb-8b79-eaec">Do not pick a target or use the attack sequence for an attack made with this model’s Staff of Slaanesh. Instead, pick 1 enemy unit within range of this model’s Staff of Slaanesh and visible to them. The opposing player must roll a dice for that unit.
+
+If the roll is less than that unit’s Save characteristic but not a 6, that unit suffers D6 mortal wounds. If the roll is equal to or greater than that unit’s Save characteristic but not a 6, that unit suffers D3 mortal wounds. On a 6, nothing happens.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <costs>
+            <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="5e71-8391-bcbe-8a31" name="Hedonites Spell Lores" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8c90-a895-22bc-b753" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="c863-2f22-7858-2d6a" type="min"/>
+          </constraints>
+          <profiles>
+            <profile id="4edf-cb4c-f20e-6870" name="Paths of the Dark Prince" hidden="false" typeId="13da-11a8-b7d1-77a7" typeName="Spell">
+              <characteristics>
+                <characteristic name="Spell" typeId="1170-c916-1b73-ae34">Paths of the Dark Prince has a casting value of 7. If successfully cast, the caster can fly until your next hero phase.</characteristic>
+              </characteristics>
+            </profile>
+            <profile id="cbc6-19d7-1370-0250" name="Progeny of Damnation" hidden="false" typeId="13da-11a8-b7d1-77a7" typeName="Spell">
+              <characteristics>
+                <characteristic name="Spell" typeId="1170-c916-1b73-ae34">Progeny of Damnation has a casting value of 5. If successfully cast, pick 1 friendly DAEMON HEDONITE HERO within 6&quot; of the caster that is visible to them. You can heal up to D3 wounds allocated to that HERO. If the casting roll was 10+, you can heal D6 wounds allocated to that HERO instead.</characteristic>
+              </characteristics>
+            </profile>
+            <profile id="960e-a8ff-0e1f-245b" name="Slothful Stupor" hidden="false" typeId="13da-11a8-b7d1-77a7" typeName="Spell">
+              <characteristics>
+                <characteristic name="Spell" typeId="1170-c916-1b73-ae34">Slothful Stupor has a casting value of 7. If successfully cast, pick 1 enemy HERO within 12&quot; of the caster that is visible to them. Until your next hero phase, that HERO cannot use command abilities, and cannot run or attempt to charge.</characteristic>
+              </characteristics>
+            </profile>
+            <profile id="dbd5-fa08-8fe3-2b5d" name="Battle Rapture" hidden="false" typeId="13da-11a8-b7d1-77a7" typeName="Spell">
+              <characteristics>
+                <characteristic name="Spell" typeId="1170-c916-1b73-ae34">Battle Rapture has a casting value of 5. If successfully cast, pick 1 friendly MORTAL SLAANESH unit wholly within 18&quot; of the caster that is visible to them. Do not take battleshock tests for that unit until your next hero phase. If the casting roll is 10+, you can pick up to 3 friendly MORTAL SLAANESH units that are wholly within 18&quot; of the caster and visible to them instead of 1.</characteristic>
+              </characteristics>
+            </profile>
+            <profile id="dd69-3961-7ce1-9a93" name="Judgement of Excess" hidden="false" typeId="13da-11a8-b7d1-77a7" typeName="Spell">
+              <characteristics>
+                <characteristic name="Spell" typeId="1170-c916-1b73-ae34">Judgement of Excess has a casting value of 5. If successfully cast, pick 1 enemy unit within 12&quot; of the caster that is visible to them. That unit suffers 1 mortal wound for every 5 models in that unit. If that unit has fewer than 5 models, it suffers 1 mortal wound instead.</characteristic>
+              </characteristics>
+            </profile>
+            <profile id="3ff0-0c1d-5952-511f" name="Dark Delusions" hidden="false" typeId="13da-11a8-b7d1-77a7" typeName="Spell">
+              <characteristics>
+                <characteristic name="Spell" typeId="1170-c916-1b73-ae34">Dark Delusions has a casting value of 4. If successfully cast, pick 1 enemy unit wholly within 18&quot; of the caster that is visible to them and roll 2D6. If the roll is equal to or greater than that unit&apos;s Bravery characteristic add 1 to hit rolls for attacks that target that unit until your next hero phase.</characteristic>
+              </characteristics>
+            </profile>
+            <profile id="2ebd-beed-31f9-b0d3" name="Lash of Slaanesh" hidden="false" typeId="13da-11a8-b7d1-77a7" typeName="Spell">
+              <characteristics>
+                <characteristic name="Spell" typeId="1170-c916-1b73-ae34">Lash of Slaanesh has a casting value of 5. If successfully cast, pick 1 point on the battlefield within 12&quot; of the caster that is visible to them and draw an imaginary straight line 1mm wide between that point and the closest part of the caster’s base. Roll a dice for each enemy model passed across by this line. On a 4+ that model’s unit suffers 1 mortal wound. SLAANESH units are unaffected by this spell.</characteristic>
+              </characteristics>
+            </profile>
+            <profile id="8f2a-2ffc-162c-2910" name="Pavane of Slaanesh" hidden="false" typeId="13da-11a8-b7d1-77a7" typeName="Spell">
+              <characteristics>
+                <characteristic name="Spell" typeId="1170-c916-1b73-ae34">vane of Slaanesh has a casting value of 7. If successfully cast, pick 1 enemy HERO within 6&quot; of the caster that is visible to them, and roll a number of dice equal to that HERO’s Move characteristic. For each 5+, that HERO suffers 1 mortal wound.</characteristic>
+              </characteristics>
+            </profile>
+            <profile id="519f-c10b-079e-9e95" name="Soulslice Shards" hidden="false" typeId="13da-11a8-b7d1-77a7" typeName="Spell">
+              <characteristics>
+                <characteristic name="Spell" typeId="1170-c916-1b73-ae34">Soulslice Shards has a casting value of 5. If successfully cast, pick 1 enemy unit within 18&quot; of the caster that is visible to them, and roll 2D6. If the roll is higher than that unit’s Bravery characteristic, that unit suffers a number of mortal wounds equal to the difference between its Bravery characteristic and the roll.</characteristic>
+              </characteristics>
+            </profile>
+            <profile id="cbec-758e-1d98-fe5d" name="Hysterical Frenzy" hidden="false" typeId="13da-11a8-b7d1-77a7" typeName="Spell">
+              <characteristics>
+                <characteristic name="Spell" typeId="1170-c916-1b73-ae34">Hysterical Frenzy has a casting value of 7. If successfully cast, pick 1 enemy unit wholly within 18&quot; of the caster that is visible to them and roll 1 dice for each model in that unit. For each 6, that unit suffers D3 mortal wounds.</characteristic>
+              </characteristics>
+            </profile>
+            <profile id="a954-8838-5953-0fb5" name="Phantasmagoria" hidden="false" typeId="13da-11a8-b7d1-77a7" typeName="Spell">
+              <characteristics>
+                <characteristic name="Spell" typeId="1170-c916-1b73-ae34">Phantasmagoria has a casting value of 7. If successfully cast, pick 1 enemy unit within 18&quot; of the caster that is visible to them, and roll 6 dice. For each 5+, subtract 1 from that unit’s Bravery characteristic (to a minimum of 1) until your next hero phase.</characteristic>
+              </characteristics>
+            </profile>
+            <profile id="03ca-5fef-d1ae-4564" name="Born of Damnation" hidden="false" typeId="13da-11a8-b7d1-77a7" typeName="Spell">
+              <characteristics>
+                <characteristic name="Spell" typeId="1170-c916-1b73-ae34">Born of Damnation has a casting value of 4. If successfully cast, pick 1 friendly HEDONITE HERO within 6&quot; of the caster that is visible to them. You can heal up to D3 wounds allocated to that HERO.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <costs>
+            <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
+          </costs>
+        </selectionEntry>
+      </selectionEntries>
+      <costs>
+        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="260.0"/>
       </costs>
     </selectionEntry>
   </sharedSelectionEntries>
