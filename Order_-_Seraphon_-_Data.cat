@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="f8f4-998c-1e43-381a" name="Order - Seraphon - Data" revision="5" battleScribeVersion="2.03" authorName="Thulram" library="true" gameSystemId="e832-3291-06be-cab1" gameSystemRevision="5" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="f8f4-998c-1e43-381a" name="Order - Seraphon - Data" revision="6" battleScribeVersion="2.03" authorName="Thulram" library="true" gameSystemId="e832-3291-06be-cab1" gameSystemRevision="6" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <profileTypes>
     <profileType id="71c0-db88-72dc-b20c" name="Celestial Conjuration Table">
       <characteristicTypes>
@@ -106,7 +106,7 @@
         </profile>
         <profile id="6f5b-d92f-ecec-a4ac" name="Foresight" hidden="false" typeId="7861-da01-01c0-88d9" typeName="Ability">
           <characteristics>
-            <characteristic name="Ability" typeId="9bce-4deb-8b79-eaec">At the start of your hero phase, roll 2 dice for this model. For each 4+, you receive 1 command point.</characteristic>
+            <characteristic name="Ability" typeId="9bce-4deb-8b79-eaec">At the start of your hero phase, if any friendly models with this ability are on the battlefield, roll 2 dice. For each 4+, you receive 1 command point.</characteristic>
           </characteristics>
         </profile>
         <profile id="ab8a-b853-f10e-a938" name="Masters of Order" hidden="false" typeId="7861-da01-01c0-88d9" typeName="Ability">
@@ -170,7 +170,7 @@
         </selectionEntry>
       </selectionEntries>
       <costs>
-        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="260.0"/>
+        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="265.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="f2d0-fb23-0f10-de22" name="Lord Kroak" publicationId="ba75-6000-0ab5-fd66" hidden="false" collective="false" import="true" type="unit">
@@ -313,6 +313,9 @@ Each time this spell is successfully cast, pick up to 3 different enemy units wi
               </characteristics>
             </profile>
           </profiles>
+          <costs>
+            <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
+          </costs>
         </selectionEntry>
       </selectionEntries>
       <costs>
@@ -455,7 +458,7 @@ Each time this spell is successfully cast, pick up to 3 different enemy units wi
         </selectionEntryGroup>
       </selectionEntryGroups>
       <costs>
-        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="110.0"/>
+        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="120.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="cdd0-9475-67d3-9873" name="Saurus Sunblood" publicationId="ba75-6000-0ab5-fd66" hidden="false" collective="false" import="true" type="unit">
@@ -534,7 +537,7 @@ Each time this spell is successfully cast, pick up to 3 different enemy units wi
         </selectionEntry>
       </selectionEntries>
       <costs>
-        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="130.0"/>
+        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="125.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="225b-1082-b2e9-6ecf" name="Saurus Oldblood on Carnosaur" publicationId="ba75-6000-0ab5-fd66" hidden="false" collective="false" import="true" type="unit">
@@ -733,7 +736,7 @@ Each time this spell is successfully cast, pick up to 3 different enemy units wi
         </selectionEntry>
       </selectionEntries>
       <costs>
-        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="230.0"/>
+        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="270.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="a611-89cb-30a8-04b4" name="Saurus Eternity Warden" publicationId="ba75-6000-0ab5-fd66" hidden="false" collective="false" import="true" type="unit">
@@ -817,10 +820,31 @@ Each time this spell is successfully cast, pick up to 3 different enemy units wi
         </selectionEntry>
       </selectionEntries>
       <costs>
-        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="110.0"/>
+        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="125.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="f10e-c006-c7e8-f5c1" name="Saurus Guard" publicationId="ba75-6000-0ab5-fd66" hidden="false" collective="false" import="true" type="unit">
+      <modifiers>
+        <modifier type="remove" field="category" value="a42d-220e-6a88-7bf6">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="6cd6-b22e-bfcb-9589" type="instanceOf"/>
+                <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="e3a6-45ca-4974-b489" type="instanceOf"/>
+                <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4373-740f-1bf3-b0aa" type="instanceOf"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+        <modifier type="increment" field="b0b4-6aec-82c2-02ae" value="115.0">
+          <repeats>
+            <repeat field="selections" scope="f10e-c006-c7e8-f5c1" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e20c-48d8-e5e3-1a36" repeats="1" roundUp="false"/>
+          </repeats>
+          <conditions>
+            <condition field="selections" scope="f10e-c006-c7e8-f5c1" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e20c-48d8-e5e3-1a36" type="greaterThan"/>
+          </conditions>
+        </modifier>
+      </modifiers>
       <profiles>
         <profile id="abda-84f1-1fc3-595b" name="Saurus Guard" hidden="false" typeId="3956-f6dd-6c88-ae4b" typeName="Unit">
           <characteristics>
@@ -835,6 +859,11 @@ Each time this spell is successfully cast, pick up to 3 different enemy units wi
             <characteristic name="Ability" typeId="9bce-4deb-8b79-eaec">Roll a dice before you allocate a wound or mortal wound to a friendly SLANN while it is within 3&quot; of any friendly units with this ability. On a 2+, you must allocate that wound or mortal wound to a friendly unit with this ability that is within 3&quot; of that SLANN, instead of to that SLANN.</characteristic>
           </characteristics>
         </profile>
+        <profile id="0f46-f20b-c919-98ae" name="Saurus Guard Alpha" hidden="false" typeId="c23b-5a30-07e2-4706" typeName="Unit Options">
+          <characteristics>
+            <characteristic name="Unit Option" typeId="5879-9a21-e9d2-539d">1 model in this unit can be a Saurus Guard Alpha. Add 1 to the Attacks characteristic of that model’s Celestite Polearm.</characteristic>
+          </characteristics>
+        </profile>
       </profiles>
       <categoryLinks>
         <categoryLink id="5ca2-f25c-ed66-fce2" name="Order" hidden="false" targetId="90c6-6c11-9677-1fa8" primary="false"/>
@@ -842,15 +871,16 @@ Each time this spell is successfully cast, pick up to 3 different enemy units wi
         <categoryLink id="083f-642a-f2e4-476b" name="Saurus" hidden="false" targetId="434b-e843-e075-9f13" primary="false"/>
         <categoryLink id="daa4-071d-df3f-0cb7" name="Saurus Guard" hidden="false" targetId="de09-052d-18b9-4b57" primary="false"/>
         <categoryLink id="599f-8b96-e66b-00d1" name="SERAPHON" hidden="false" targetId="3d8e-f033-36fa-7d92" primary="false"/>
+        <categoryLink id="c9e9-073b-5774-63f7" name="BATTLELINE" hidden="false" targetId="a42d-220e-6a88-7bf6" primary="false"/>
       </categoryLinks>
       <selectionEntries>
         <selectionEntry id="adf0-6e03-b229-106c" name="5 Saurus Guard" hidden="false" collective="false" import="true" type="model">
           <constraints>
-            <constraint field="selections" scope="parent" value="4.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="1a9e-837b-0bcd-9bd7" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="1a9e-837b-0bcd-9bd7" type="max"/>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d37d-170e-52ae-603b" type="min"/>
           </constraints>
           <costs>
-            <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="100.0"/>
+            <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="951a-16a6-bded-acd4" name="Celestite Polearm" hidden="false" collective="false" import="true" type="upgrade">
@@ -897,7 +927,7 @@ Each time this spell is successfully cast, pick up to 3 different enemy units wi
             <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="5d78-dba1-96e7-d6c1" name="CONDITIONAL BATTLELINE" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="a6e1-9f2b-2d45-4674" name="BATTLELINE" hidden="false" collective="false" import="true" type="upgrade">
           <modifiers>
             <modifier type="set" field="hidden" value="true">
               <conditionGroups>
@@ -910,7 +940,7 @@ Each time this spell is successfully cast, pick up to 3 different enemy units wi
                 </conditionGroup>
               </conditionGroups>
             </modifier>
-            <modifier type="set" field="eb08-295e-a323-dc29" value="0.0">
+            <modifier type="set" field="501c-7203-6aee-88c3" value="0.0">
               <conditionGroups>
                 <conditionGroup type="or">
                   <conditions>
@@ -923,13 +953,13 @@ Each time this spell is successfully cast, pick up to 3 different enemy units wi
             </modifier>
           </modifiers>
           <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="e4a9-da6b-3da1-1a0c" type="max"/>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="eb08-295e-a323-dc29" type="min"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="6622-09e8-cd73-2330" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="501c-7203-6aee-88c3" type="min"/>
           </constraints>
           <profiles>
-            <profile id="7055-8267-d8a6-c01e" name="CONDITIONAL BATTLELINE" hidden="false" typeId="77d9-94b6-d8f2-a150" typeName="BATTLELINE">
+            <profile id="14e4-0e24-f1be-09b7" name="BATTLELINE" hidden="false" typeId="77d9-94b6-d8f2-a150" typeName="BATTLELINE">
               <characteristics>
-                <characteristic name="Condition" typeId="820b-20af-6fd8-5f48">Battleline in Seraphon army</characteristic>
+                <characteristic name="Condition" typeId="820b-20af-6fd8-5f48">This unit is Battleline</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -941,21 +971,6 @@ Each time this spell is successfully cast, pick up to 3 different enemy units wi
       <selectionEntryGroups>
         <selectionEntryGroup id="9d17-42dd-4371-c163" name="Unit Options" hidden="false" collective="false" import="true">
           <selectionEntries>
-            <selectionEntry id="0b16-5681-15a6-a34b" name="Saurus Guard Alpha" hidden="false" collective="false" import="true" type="upgrade">
-              <constraints>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="f9b3-01f0-a9f4-d64e" type="max"/>
-              </constraints>
-              <profiles>
-                <profile id="2730-0964-469b-509b" name="Saurus Guard Alpha" hidden="false" typeId="c23b-5a30-07e2-4706" typeName="Unit Options">
-                  <characteristics>
-                    <characteristic name="Unit Option" typeId="5879-9a21-e9d2-539d">1 model in this unit can be a Saurus Guard Alpha. Add 1 to the Attacks characteristic of that model’s Celestite Polearm.</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-              <costs>
-                <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
-              </costs>
-            </selectionEntry>
             <selectionEntry id="b7eb-c599-c1c3-85e0" name="Stardrake Icon Bearer" hidden="false" collective="false" import="true" type="upgrade">
               <modifiers>
                 <modifier type="increment" field="6c6c-0372-b95a-5c4d" value="1.0">
@@ -1009,8 +1024,11 @@ Each time this spell is successfully cast, pick up to 3 different enemy units wi
           </selectionEntries>
         </selectionEntryGroup>
       </selectionEntryGroups>
+      <entryLinks>
+        <entryLink id="6b87-7a2c-c4a7-fc07" name="Unit Reinforcement" hidden="false" collective="false" import="true" targetId="b493-d9e6-82ca-5488" type="selectionEntry"/>
+      </entryLinks>
       <costs>
-        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
+        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="115.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="c56e-c500-14f5-2e01" name="Saurus Scar-Veteran on Carnosaur" publicationId="ba75-6000-0ab5-fd66" hidden="false" collective="false" import="true" type="unit">
@@ -1229,7 +1247,7 @@ Each time this spell is successfully cast, pick up to 3 different enemy units wi
         </selectionEntryGroup>
       </selectionEntryGroups>
       <costs>
-        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="210.0"/>
+        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="215.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="a0ac-be93-da5f-d740" name="Saurus Scar-Veteran on Cold One" publicationId="ba75-6000-0ab5-fd66" hidden="false" collective="false" import="true" type="unit">
@@ -1365,6 +1383,14 @@ Each time this spell is successfully cast, pick up to 3 different enemy units wi
             </conditionGroup>
           </conditionGroups>
         </modifier>
+        <modifier type="increment" field="b0b4-6aec-82c2-02ae" value="105.0">
+          <repeats>
+            <repeat field="selections" scope="24db-696e-aa0f-71fd" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e20c-48d8-e5e3-1a36" repeats="1" roundUp="false"/>
+          </repeats>
+          <conditions>
+            <condition field="selections" scope="24db-696e-aa0f-71fd" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e20c-48d8-e5e3-1a36" type="greaterThan"/>
+          </conditions>
+        </modifier>
       </modifiers>
       <profiles>
         <profile id="a94f-6a12-2ec4-8c5c" name="Saurus Warriors" hidden="false" typeId="3956-f6dd-6c88-ae4b" typeName="Unit">
@@ -1378,6 +1404,11 @@ Each time this spell is successfully cast, pick up to 3 different enemy units wi
         <profile id="afce-91cd-75d1-1beb" name="Ordered Cohort" hidden="false" typeId="7861-da01-01c0-88d9" typeName="Ability">
           <characteristics>
             <characteristic name="Ability" typeId="9bce-4deb-8b79-eaec">Add 1 to the Attacks characteristic of this unit’s Celestite Clubs or Celestite Spears while this unit has 15 or more models.</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="4c3f-1bbb-9b0a-c375" name="Saurus Warrior Alpha" hidden="false" typeId="c23b-5a30-07e2-4706" typeName="Unit Options">
+          <characteristics>
+            <characteristic name="Unit Option" typeId="5879-9a21-e9d2-539d">1 model in this unit can be a Saurus Warrior Alpha. Add 1 to the Attacks characteristic of that model’s Celestite Club or Celestite Spear.</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -1453,19 +1484,12 @@ Each time this spell is successfully cast, pick up to 3 different enemy units wi
           </costs>
         </selectionEntry>
         <selectionEntry id="e0eb-24d1-00ef-afc3" name="10 Saurus Warriors" hidden="false" collective="false" import="true" type="model">
-          <modifiers>
-            <modifier type="set" field="b0b4-6aec-82c2-02ae" value="80.0">
-              <conditions>
-                <condition field="selections" scope="parent" value="4.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" type="equalTo"/>
-              </conditions>
-            </modifier>
-          </modifiers>
           <constraints>
-            <constraint field="selections" scope="parent" value="4.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="bfc7-537e-172d-2239" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="bfc7-537e-172d-2239" type="max"/>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="b874-e603-0fba-f38d" type="min"/>
           </constraints>
           <costs>
-            <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="90.0"/>
+            <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
           </costs>
         </selectionEntry>
       </selectionEntries>
@@ -1516,21 +1540,6 @@ Each time this spell is successfully cast, pick up to 3 different enemy units wi
         </selectionEntryGroup>
         <selectionEntryGroup id="3c18-af8b-de30-5391" name="Unit Options" hidden="false" collective="false" import="true">
           <selectionEntries>
-            <selectionEntry id="7233-4b3d-125e-b132" name="Saurus Warrior Alpha" hidden="false" collective="false" import="true" type="upgrade">
-              <constraints>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="2e36-3fd3-6265-42ed" type="max"/>
-              </constraints>
-              <profiles>
-                <profile id="15c5-a36c-feb1-274b" name="Saurus Warrior Alpha" hidden="false" typeId="c23b-5a30-07e2-4706" typeName="Unit Options">
-                  <characteristics>
-                    <characteristic name="Unit Option" typeId="5879-9a21-e9d2-539d">1 model in this unit can be a Saurus Warrior Alpha. Add 1 to the Attacks characteristic of that model’s Celestite Club or Celestite Spear.</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-              <costs>
-                <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
-              </costs>
-            </selectionEntry>
             <selectionEntry id="5b96-2219-5fce-df1d" name="Stardrake Icon Bearer" hidden="false" collective="false" import="true" type="upgrade">
               <modifiers>
                 <modifier type="increment" field="04ce-c983-1cd5-b602" value="2.0">
@@ -1584,8 +1593,11 @@ Each time this spell is successfully cast, pick up to 3 different enemy units wi
           </selectionEntries>
         </selectionEntryGroup>
       </selectionEntryGroups>
+      <entryLinks>
+        <entryLink id="e492-3a23-2002-6719" name="Unit Reinforcement" hidden="false" collective="false" import="true" targetId="b493-d9e6-82ca-5488" type="selectionEntry"/>
+      </entryLinks>
       <costs>
-        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
+        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="105.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="ffce-50cb-6bec-c254" name="Saurus Astrolith Bearer" publicationId="ba75-6000-0ab5-fd66" hidden="false" collective="false" import="true" type="unit">
@@ -1665,10 +1677,31 @@ Each time this spell is successfully cast, pick up to 3 different enemy units wi
         </selectionEntry>
       </selectionEntries>
       <costs>
-        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="140.0"/>
+        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="150.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="e5f1-a103-0056-8bb2" name="Saurus Knights" publicationId="ba75-6000-0ab5-fd66" hidden="false" collective="false" import="true" type="unit">
+      <modifiers>
+        <modifier type="remove" field="category" value="a42d-220e-6a88-7bf6">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="6cd6-b22e-bfcb-9589" type="instanceOf"/>
+                <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="e3a6-45ca-4974-b489" type="instanceOf"/>
+                <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4373-740f-1bf3-b0aa" type="instanceOf"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+        <modifier type="increment" field="b0b4-6aec-82c2-02ae" value="110.0">
+          <repeats>
+            <repeat field="selections" scope="e5f1-a103-0056-8bb2" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e20c-48d8-e5e3-1a36" repeats="1" roundUp="false"/>
+          </repeats>
+          <conditions>
+            <condition field="selections" scope="e5f1-a103-0056-8bb2" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e20c-48d8-e5e3-1a36" type="greaterThan"/>
+          </conditions>
+        </modifier>
+      </modifiers>
       <profiles>
         <profile id="23d9-0c6b-88de-b593" name="Saurus Knights" hidden="false" typeId="3956-f6dd-6c88-ae4b" typeName="Unit">
           <characteristics>
@@ -1676,6 +1709,11 @@ Each time this spell is successfully cast, pick up to 3 different enemy units wi
             <characteristic name="Wounds" typeId="a0c6-af64-2f24-5759">2</characteristic>
             <characteristic name="Save" typeId="93b6-2f96-2df7-e330">4+</characteristic>
             <characteristic name="Bravery" typeId="2420-1c5c-1016-7033">8</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="93cc-e246-e64e-e0ed" name="Saurus Knight Alpha" hidden="false" typeId="c23b-5a30-07e2-4706" typeName="Unit Options">
+          <characteristics>
+            <characteristic name="Unit Option" typeId="5879-9a21-e9d2-539d">1 model in this unit can be a Saurus Knight Alpha. Add 1 to the Attacks characteristic of that model’s Celestite Blade or Celestite Warspear.</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -1686,15 +1724,16 @@ Each time this spell is successfully cast, pick up to 3 different enemy units wi
         <categoryLink id="9d32-68a1-84a0-a005" name="Saurus" hidden="false" targetId="434b-e843-e075-9f13" primary="false"/>
         <categoryLink id="7560-0dd0-629b-528e" name="Saurus Knights" hidden="false" targetId="b761-57b7-350f-4fb4" primary="false"/>
         <categoryLink id="5281-3e66-1a4e-7a9f" name="SERAPHON" hidden="false" targetId="3d8e-f033-36fa-7d92" primary="false"/>
+        <categoryLink id="d80c-4da2-6712-e772" name="BATTLELINE" hidden="false" targetId="a42d-220e-6a88-7bf6" primary="false"/>
       </categoryLinks>
       <selectionEntries>
         <selectionEntry id="049f-d4a3-fffd-0998" name="5 Saurus Knights" hidden="false" collective="false" import="true" type="model">
           <constraints>
-            <constraint field="selections" scope="parent" value="4.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="049e-37ae-c8e4-3693" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="049e-37ae-c8e4-3693" type="max"/>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="c2ed-5c0b-9d5a-af93" type="min"/>
           </constraints>
           <costs>
-            <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="100.0"/>
+            <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="7cea-d78a-536d-8b30" name="Mount" hidden="false" collective="false" import="true" type="upgrade">
@@ -1759,7 +1798,7 @@ Each time this spell is successfully cast, pick up to 3 different enemy units wi
             <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="1f8c-819e-dfbe-1312" name="CONDITIONAL BATTLELINE" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="a845-9782-2b58-3749" name="BATTLELINE" hidden="false" collective="false" import="true" type="upgrade">
           <modifiers>
             <modifier type="set" field="hidden" value="true">
               <conditionGroups>
@@ -1772,7 +1811,7 @@ Each time this spell is successfully cast, pick up to 3 different enemy units wi
                 </conditionGroup>
               </conditionGroups>
             </modifier>
-            <modifier type="set" field="f9fb-261d-2d95-2d54" value="0.0">
+            <modifier type="set" field="d823-1228-affb-c05b" value="0.0">
               <conditionGroups>
                 <conditionGroup type="or">
                   <conditions>
@@ -1785,13 +1824,13 @@ Each time this spell is successfully cast, pick up to 3 different enemy units wi
             </modifier>
           </modifiers>
           <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8969-3af7-52eb-6b2b" type="max"/>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="f9fb-261d-2d95-2d54" type="min"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="a947-3832-4100-fb64" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d823-1228-affb-c05b" type="min"/>
           </constraints>
           <profiles>
-            <profile id="af49-22f3-b700-d7a5" name="CONDITIONAL BATTLELINE" hidden="false" typeId="77d9-94b6-d8f2-a150" typeName="BATTLELINE">
+            <profile id="ded7-f130-fd48-281e" name="BATTLELINE" hidden="false" typeId="77d9-94b6-d8f2-a150" typeName="BATTLELINE">
               <characteristics>
-                <characteristic name="Condition" typeId="820b-20af-6fd8-5f48">Battleline in Seraphon army</characteristic>
+                <characteristic name="Condition" typeId="820b-20af-6fd8-5f48">This unit is Battleline</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -1803,21 +1842,6 @@ Each time this spell is successfully cast, pick up to 3 different enemy units wi
       <selectionEntryGroups>
         <selectionEntryGroup id="c8e3-5ced-ca68-9198" name="Unit Options" hidden="false" collective="false" import="true">
           <selectionEntries>
-            <selectionEntry id="362b-e7be-fcb2-7485" name="Saurus Knight Alpha" hidden="false" collective="false" import="true" type="upgrade">
-              <constraints>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="5b4d-319c-16ac-2ef2" type="max"/>
-              </constraints>
-              <profiles>
-                <profile id="2b0e-9920-5416-0fe2" name="Saurus Knight Alpha" hidden="false" typeId="c23b-5a30-07e2-4706" typeName="Unit Options">
-                  <characteristics>
-                    <characteristic name="Unit Option" typeId="5879-9a21-e9d2-539d">1 model in this unit can be a Saurus Knight Alpha. Add 1 to the Attacks characteristic of that model’s Celestite Blade or Celestite Warspear.</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-              <costs>
-                <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
-              </costs>
-            </selectionEntry>
             <selectionEntry id="7629-69e9-e307-d814" name="Stardrake Icon Bearer" hidden="false" collective="false" import="true" type="upgrade">
               <modifiers>
                 <modifier type="increment" field="708d-8965-8fc2-b9b8" value="1.0">
@@ -1920,8 +1944,11 @@ Each time this spell is successfully cast, pick up to 3 different enemy units wi
           </selectionEntries>
         </selectionEntryGroup>
       </selectionEntryGroups>
+      <entryLinks>
+        <entryLink id="a29b-afd8-c578-2e93" name="Unit Reinforcement" hidden="false" collective="false" import="true" targetId="b493-d9e6-82ca-5488" type="selectionEntry"/>
+      </entryLinks>
       <costs>
-        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
+        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="110.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="93e0-5922-bfc3-41e0" name="Skink Starseer" publicationId="ba75-6000-0ab5-fd66" hidden="false" collective="false" import="true" type="unit">
@@ -1936,7 +1963,7 @@ Each time this spell is successfully cast, pick up to 3 different enemy units wi
         </profile>
         <profile id="cd33-c283-4312-e803" name="Cosmic Herald" hidden="false" typeId="7861-da01-01c0-88d9" typeName="Ability">
           <characteristics>
-            <characteristic name="Ability" typeId="9bce-4deb-8b79-eaec">At the start of your hero phase, roll a dice for this model. On a 4+, you receive 1 command point.</characteristic>
+            <characteristic name="Ability" typeId="9bce-4deb-8b79-eaec">At the start of your hero phase, if any friendly models with this ability are on the battlefield, roll 1 dice. On a 4+, you receive 1 command point.</characteristic>
           </characteristics>
         </profile>
         <profile id="1f0d-fb0d-c3b7-a2fa" name="Astromancer&apos;s Staff" hidden="false" typeId="7861-da01-01c0-88d9" typeName="Ability">
@@ -2017,7 +2044,7 @@ Each time this spell is successfully cast, pick up to 3 different enemy units wi
         </selectionEntry>
       </selectionEntries>
       <costs>
-        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="140.0"/>
+        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="145.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="0e95-3521-a34d-3ed0" name="Skink Starpriest" publicationId="ba75-6000-0ab5-fd66" hidden="false" collective="false" import="true" type="unit">
@@ -2112,7 +2139,7 @@ Each time this spell is successfully cast, pick up to 3 different enemy units wi
         </selectionEntry>
       </selectionEntries>
       <costs>
-        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="120.0"/>
+        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="130.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="375a-b880-701d-ae25" name="Skink Oracle on Troglodon" publicationId="ba75-6000-0ab5-fd66" hidden="false" collective="false" import="true" type="unit">
@@ -2322,7 +2349,7 @@ Each time this spell is successfully cast, pick up to 3 different enemy units wi
         </selectionEntry>
       </selectionEntries>
       <costs>
-        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="220.0"/>
+        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="270.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="fcd0-b143-b091-f604" name="Skink Priest" publicationId="ba75-6000-0ab5-fd66" hidden="false" collective="false" import="true" type="unit">
@@ -2346,6 +2373,10 @@ Each time this spell is successfully cast, pick up to 3 different enemy units wi
           </characteristics>
         </profile>
       </profiles>
+      <infoLinks>
+        <infoLink id="f31e-d4aa-7e7e-f6ac" name="Smite" hidden="false" targetId="7b66-5f0a-449f-f31a" type="profile"/>
+        <infoLink id="9e96-6072-8705-d6a9" name="Bless" hidden="false" targetId="4c4a-18dc-6a53-5355" type="profile"/>
+      </infoLinks>
       <categoryLinks>
         <categoryLink id="6ca4-4152-f53f-3de9" name="Hero" hidden="false" targetId="411f-dd41-4ab6-8a05" primary="false"/>
         <categoryLink id="75ab-3157-df3b-7efb" name="New CategoryLink" hidden="false" targetId="93cb-21d9-e1d5-6161" primary="true"/>
@@ -2401,10 +2432,31 @@ Each time this spell is successfully cast, pick up to 3 different enemy units wi
         </selectionEntry>
       </selectionEntries>
       <costs>
-        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="70.0"/>
+        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="80.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="2fc4-9e14-cd82-db1f" name="Skinks" publicationId="ba75-6000-0ab5-fd66" hidden="false" collective="false" import="true" type="unit">
+      <modifiers>
+        <modifier type="remove" field="category" value="a42d-220e-6a88-7bf6">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="6cd6-b22e-bfcb-9589" type="instanceOf"/>
+                <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="e3a6-45ca-4974-b489" type="instanceOf"/>
+                <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4373-740f-1bf3-b0aa" type="instanceOf"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+        <modifier type="increment" field="b0b4-6aec-82c2-02ae" value="75.0">
+          <repeats>
+            <repeat field="selections" scope="2fc4-9e14-cd82-db1f" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e20c-48d8-e5e3-1a36" repeats="1" roundUp="false"/>
+          </repeats>
+          <conditions>
+            <condition field="selections" scope="2fc4-9e14-cd82-db1f" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e20c-48d8-e5e3-1a36" type="greaterThan"/>
+          </conditions>
+        </modifier>
+      </modifiers>
       <profiles>
         <profile id="434d-f9c4-f5a9-40dd" name="Skinks" hidden="false" typeId="3956-f6dd-6c88-ae4b" typeName="Unit">
           <characteristics>
@@ -2419,15 +2471,30 @@ Each time this spell is successfully cast, pick up to 3 different enemy units wi
             <characteristic name="Ability" typeId="9bce-4deb-8b79-eaec">Add 1 to the Attacks characteristic of weapons used by this unit while it has 15 or more models.</characteristic>
           </characteristics>
         </profile>
+        <profile id="14a8-352b-fb16-ea97" name="Skink Alpha" hidden="false" typeId="c23b-5a30-07e2-4706" typeName="Unit Options">
+          <characteristics>
+            <characteristic name="Unit Option" typeId="5879-9a21-e9d2-539d">1 model in this unit can be a Skink Alpha. Add 1 to the Attacks characteristic of that model’s melee weapons.</characteristic>
+          </characteristics>
+        </profile>
       </profiles>
       <categoryLinks>
         <categoryLink id="5db2-cf65-b882-fc7d" name="Order" hidden="false" targetId="90c6-6c11-9677-1fa8" primary="false"/>
         <categoryLink id="9dba-7bab-df30-8ccc" name="New CategoryLink" hidden="false" targetId="6230-ed60-e374-add4" primary="true"/>
         <categoryLink id="0eb9-4bf5-feef-4e46" name="SERAPHON" hidden="false" targetId="3d8e-f033-36fa-7d92" primary="false"/>
         <categoryLink id="ab4d-068a-173b-397c" name="Skink(s)" hidden="false" targetId="9433-3f3d-ce07-d058" primary="false"/>
+        <categoryLink id="66b3-4eef-0bb4-b98b" name="BATTLELINE" hidden="false" targetId="a42d-220e-6a88-7bf6" primary="false"/>
       </categoryLinks>
       <selectionEntries>
-        <selectionEntry id="ae44-0e74-bc98-5591" name="CONDITIONAL BATTLELINE" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="0c03-63e7-b60d-6ffd" name="10 Skinks" hidden="false" collective="false" import="true" type="model">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="1e2a-1531-eabe-1117" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="2357-402a-dd6f-90bf" type="min"/>
+          </constraints>
+          <costs>
+            <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="030c-096d-5397-e7e7" name="BATTLELINE" hidden="false" collective="false" import="true" type="upgrade">
           <modifiers>
             <modifier type="set" field="hidden" value="true">
               <conditionGroups>
@@ -2440,7 +2507,7 @@ Each time this spell is successfully cast, pick up to 3 different enemy units wi
                 </conditionGroup>
               </conditionGroups>
             </modifier>
-            <modifier type="set" field="24f9-dcc1-7b65-4051" value="0.0">
+            <modifier type="set" field="ea78-d961-6376-6187" value="0.0">
               <conditionGroups>
                 <conditionGroup type="or">
                   <conditions>
@@ -2453,13 +2520,13 @@ Each time this spell is successfully cast, pick up to 3 different enemy units wi
             </modifier>
           </modifiers>
           <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8bff-7c88-919a-1453" type="max"/>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="24f9-dcc1-7b65-4051" type="min"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="1e24-2a2d-9a19-bd67" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="ea78-d961-6376-6187" type="min"/>
           </constraints>
           <profiles>
-            <profile id="4c47-c0c1-199e-d4e1" name="CONDITIONAL BATTLELINE" hidden="false" typeId="77d9-94b6-d8f2-a150" typeName="BATTLELINE">
+            <profile id="b856-0b26-4b5a-70e0" name="BATTLELINE" hidden="false" typeId="77d9-94b6-d8f2-a150" typeName="BATTLELINE">
               <characteristics>
-                <characteristic name="Condition" typeId="820b-20af-6fd8-5f48">Battleline in Seraphon army</characteristic>
+                <characteristic name="Condition" typeId="820b-20af-6fd8-5f48">This unit is Battleline</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -2467,36 +2534,8 @@ Each time this spell is successfully cast, pick up to 3 different enemy units wi
             <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="0c03-63e7-b60d-6ffd" name="10 Skinks" hidden="false" collective="false" import="true" type="model">
-          <constraints>
-            <constraint field="selections" scope="parent" value="4.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="1e2a-1531-eabe-1117" type="max"/>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="2357-402a-dd6f-90bf" type="min"/>
-          </constraints>
-          <costs>
-            <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="60.0"/>
-          </costs>
-        </selectionEntry>
       </selectionEntries>
       <selectionEntryGroups>
-        <selectionEntryGroup id="2053-bf5e-56f3-eb5a" name="Unit Option" hidden="false" collective="false" import="true">
-          <selectionEntries>
-            <selectionEntry id="4b11-b6df-2765-f6ac" name="Skink Alpha" hidden="false" collective="false" import="true" type="upgrade">
-              <constraints>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="2f91-3a4e-9adb-9701" type="max"/>
-              </constraints>
-              <profiles>
-                <profile id="4931-1e7c-bc68-651a" name="Skink Alpha" hidden="false" typeId="c23b-5a30-07e2-4706" typeName="Unit Options">
-                  <characteristics>
-                    <characteristic name="Unit Option" typeId="5879-9a21-e9d2-539d">1 model in this unit can be a Skink Alpha. Add 1 to the Attacks characteristic of that model’s melee weapons.</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-              <costs>
-                <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
-              </costs>
-            </selectionEntry>
-          </selectionEntries>
-        </selectionEntryGroup>
         <selectionEntryGroup id="f243-60be-5f90-9dc1" name="Weapon Option" hidden="false" collective="false" import="true" defaultSelectionEntryId="17ee-0db1-14ba-8759">
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="032e-f70a-43c0-7b26" type="max"/>
@@ -2626,11 +2665,24 @@ Each time this spell is successfully cast, pick up to 3 different enemy units wi
           </selectionEntries>
         </selectionEntryGroup>
       </selectionEntryGroups>
+      <entryLinks>
+        <entryLink id="a9f3-add2-fce1-e876" name="Unit Reinforcement" hidden="false" collective="false" import="true" targetId="b493-d9e6-82ca-5488" type="selectionEntry"/>
+      </entryLinks>
       <costs>
-        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
+        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="75.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="70f1-54a0-5012-980a" name="Chameleon Skinks" publicationId="ba75-6000-0ab5-fd66" hidden="false" collective="false" import="true" type="unit">
+      <modifiers>
+        <modifier type="increment" field="b0b4-6aec-82c2-02ae" value="115.0">
+          <repeats>
+            <repeat field="selections" scope="70f1-54a0-5012-980a" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e20c-48d8-e5e3-1a36" repeats="1" roundUp="false"/>
+          </repeats>
+          <conditions>
+            <condition field="selections" scope="70f1-54a0-5012-980a" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e20c-48d8-e5e3-1a36" type="greaterThan"/>
+          </conditions>
+        </modifier>
+      </modifiers>
       <profiles>
         <profile id="bdcc-8723-4da8-4e14" name="Chameleon Skinks" hidden="false" typeId="3956-f6dd-6c88-ae4b" typeName="Unit">
           <characteristics>
@@ -2651,7 +2703,7 @@ Any reserve units that are in hiding and not on the battlefield at the start of 
         </profile>
         <profile id="9cc3-0da1-ee34-ab2b" name="Perfect Mimicry" hidden="false" typeId="7861-da01-01c0-88d9" typeName="Ability">
           <characteristics>
-            <characteristic name="Ability" typeId="9bce-4deb-8b79-eaec">The cover modifier adds 3 to save rolls for attacks that target this unit, instead of 1.</characteristic>
+            <characteristic name="Ability" typeId="9bce-4deb-8b79-eaec">Models in this unit that are within 1&quot; of a terrain feature have a ward of 4+.</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -2665,11 +2717,11 @@ Any reserve units that are in hiding and not on the battlefield at the start of 
       <selectionEntries>
         <selectionEntry id="908b-7cf4-d782-3aeb" name="5 Chameleon Skinks" hidden="false" collective="false" import="true" type="model">
           <constraints>
-            <constraint field="selections" scope="parent" value="4.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="2738-460b-e2b9-6804" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="2738-460b-e2b9-6804" type="max"/>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="4e54-14fd-d7fb-d083" type="min"/>
           </constraints>
           <costs>
-            <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="90.0"/>
+            <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="e879-ea23-3156-1802" name="Celestite Dagger" hidden="false" collective="false" import="true" type="upgrade">
@@ -2722,11 +2774,24 @@ Any reserve units that are in hiding and not on the battlefield at the start of 
           </costs>
         </selectionEntry>
       </selectionEntries>
+      <entryLinks>
+        <entryLink id="ed11-7fcc-ff7b-ee02" name="Unit Reinforcement" hidden="false" collective="false" import="true" targetId="b493-d9e6-82ca-5488" type="selectionEntry"/>
+      </entryLinks>
       <costs>
-        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
+        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="115.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="376b-dcfb-aba2-8daf" name="Salamander Hunting Pack" publicationId="ba75-6000-0ab5-fd66" hidden="false" collective="false" import="true" type="unit">
+      <modifiers>
+        <modifier type="increment" field="b0b4-6aec-82c2-02ae" value="120.0">
+          <repeats>
+            <repeat field="selections" scope="376b-dcfb-aba2-8daf" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e20c-48d8-e5e3-1a36" repeats="1" roundUp="false"/>
+          </repeats>
+          <conditions>
+            <condition field="selections" scope="376b-dcfb-aba2-8daf" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e20c-48d8-e5e3-1a36" type="greaterThan"/>
+          </conditions>
+        </modifier>
+      </modifiers>
       <profiles>
         <profile id="0ce5-6113-ca0d-3f74" name="Skink Handlers" hidden="false" typeId="3956-f6dd-6c88-ae4b" typeName="Unit">
           <characteristics>
@@ -2766,11 +2831,11 @@ Any reserve units that are in hiding and not on the battlefield at the start of 
       <selectionEntries>
         <selectionEntry id="ce72-fcbc-126e-740e" name="3 Skink Handlers &amp; 1 Salamander" hidden="false" collective="false" import="true" type="model">
           <constraints>
-            <constraint field="selections" scope="parent" value="3.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="7286-71b6-3667-eb5b" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="7286-71b6-3667-eb5b" type="max"/>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="83dd-9fe6-7072-93d3" type="min"/>
           </constraints>
           <costs>
-            <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="110.0"/>
+            <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="1702-8b42-99d7-ca64" name="Celestite Goad" hidden="false" collective="false" import="true" type="upgrade">
@@ -2840,11 +2905,24 @@ Any reserve units that are in hiding and not on the battlefield at the start of 
           </costs>
         </selectionEntry>
       </selectionEntries>
+      <entryLinks>
+        <entryLink id="d049-5d2d-b207-8143" name="Unit Reinforcement" hidden="false" collective="false" import="true" targetId="b493-d9e6-82ca-5488" type="selectionEntry"/>
+      </entryLinks>
       <costs>
-        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
+        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="120.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="8e60-aff9-c785-9809" name="Razordon Hunting Pack" publicationId="ba75-6000-0ab5-fd66" hidden="false" collective="false" import="true" type="unit">
+      <modifiers>
+        <modifier type="increment" field="b0b4-6aec-82c2-02ae" value="95.0">
+          <repeats>
+            <repeat field="selections" scope="8e60-aff9-c785-9809" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e20c-48d8-e5e3-1a36" repeats="1" roundUp="false"/>
+          </repeats>
+          <conditions>
+            <condition field="selections" scope="8e60-aff9-c785-9809" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e20c-48d8-e5e3-1a36" type="greaterThan"/>
+          </conditions>
+        </modifier>
+      </modifiers>
       <profiles>
         <profile id="c51e-e7bf-01a0-7058" name="Skink Handlers" hidden="false" typeId="3956-f6dd-6c88-ae4b" typeName="Unit">
           <characteristics>
@@ -2884,11 +2962,11 @@ Any reserve units that are in hiding and not on the battlefield at the start of 
       <selectionEntries>
         <selectionEntry id="3d1d-fbd6-97e1-897e" name="3 Skink Handlers &amp; 1 Razordon" hidden="false" collective="false" import="true" type="model">
           <constraints>
-            <constraint field="selections" scope="parent" value="3.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="0ab6-20f0-7f48-659c" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="0ab6-20f0-7f48-659c" type="max"/>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="ce0d-6e2a-75fe-fd22" type="min"/>
           </constraints>
           <costs>
-            <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="80.0"/>
+            <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="240d-5ed5-d037-5eb0" name="Celestite Goad" hidden="false" collective="false" import="true" type="upgrade">
@@ -2963,11 +3041,24 @@ Any reserve units that are in hiding and not on the battlefield at the start of 
           </costs>
         </selectionEntry>
       </selectionEntries>
+      <entryLinks>
+        <entryLink id="1971-bf18-ae68-7876" name="Unit Reinforcement" hidden="false" collective="false" import="true" targetId="b493-d9e6-82ca-5488" type="selectionEntry"/>
+      </entryLinks>
       <costs>
-        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
+        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="95.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="650a-a6e5-101d-fbac" name="Kroxigor" publicationId="ba75-6000-0ab5-fd66" hidden="false" collective="false" import="true" type="unit">
+      <modifiers>
+        <modifier type="increment" field="b0b4-6aec-82c2-02ae" value="150.0">
+          <repeats>
+            <repeat field="selections" scope="650a-a6e5-101d-fbac" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e20c-48d8-e5e3-1a36" repeats="1" roundUp="false"/>
+          </repeats>
+          <conditions>
+            <condition field="selections" scope="650a-a6e5-101d-fbac" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e20c-48d8-e5e3-1a36" type="greaterThan"/>
+          </conditions>
+        </modifier>
+      </modifiers>
       <profiles>
         <profile id="05b1-d5ef-2a2f-ef2b" name="Kroxigor" hidden="false" typeId="3956-f6dd-6c88-ae4b" typeName="Unit">
           <characteristics>
@@ -2992,11 +3083,11 @@ Any reserve units that are in hiding and not on the battlefield at the start of 
       <selectionEntries>
         <selectionEntry id="c4a6-e9b7-1c22-90ba" name="3 Kroxigor" hidden="false" collective="false" import="true" type="model">
           <constraints>
-            <constraint field="selections" scope="parent" value="4.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="4d95-b622-40c8-77a0" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="4d95-b622-40c8-77a0" type="max"/>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="16d0-d852-2210-bbfd" type="min"/>
           </constraints>
           <costs>
-            <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="140.0"/>
+            <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="7e72-5e9d-1a6c-fdd0" name="Drakebite Maul" hidden="false" collective="false" import="true" type="upgrade">
@@ -3091,8 +3182,11 @@ Any reserve units that are in hiding and not on the battlefield at the start of 
           </selectionEntries>
         </selectionEntryGroup>
       </selectionEntryGroups>
+      <entryLinks>
+        <entryLink id="d232-6180-35d5-c70f" name="Unit Reinforcement" hidden="false" collective="false" import="true" targetId="b493-d9e6-82ca-5488" type="selectionEntry"/>
+      </entryLinks>
       <costs>
-        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
+        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="150.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="ba6f-5b56-9e8b-48e2" name="Bastiladon" publicationId="ba75-6000-0ab5-fd66" hidden="false" collective="false" import="true" type="unit">
@@ -3222,7 +3316,7 @@ Any reserve units that are in hiding and not on the battlefield at the start of 
                 </profile>
               </profiles>
               <costs>
-                <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
+                <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="50.0"/>
               </costs>
             </selectionEntry>
             <selectionEntry id="c202-64a2-aca0-d233" name="Ark of Sotek" hidden="false" collective="false" import="true" type="upgrade">
@@ -3252,10 +3346,20 @@ Any reserve units that are in hiding and not on the battlefield at the start of 
         </selectionEntryGroup>
       </selectionEntryGroups>
       <costs>
-        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="220.0"/>
+        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="185.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="189a-1eda-7060-d48f" name="Terradon Riders" publicationId="ba75-6000-0ab5-fd66" hidden="false" collective="false" import="true" type="unit">
+      <modifiers>
+        <modifier type="increment" field="b0b4-6aec-82c2-02ae" value="115.0">
+          <repeats>
+            <repeat field="selections" scope="189a-1eda-7060-d48f" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e20c-48d8-e5e3-1a36" repeats="1" roundUp="false"/>
+          </repeats>
+          <conditions>
+            <condition field="selections" scope="189a-1eda-7060-d48f" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e20c-48d8-e5e3-1a36" type="greaterThan"/>
+          </conditions>
+        </modifier>
+      </modifiers>
       <profiles>
         <profile id="7033-5710-1fea-0e58" name="Terradon Riders" hidden="false" typeId="3956-f6dd-6c88-ae4b" typeName="Unit">
           <characteristics>
@@ -3268,6 +3372,11 @@ Any reserve units that are in hiding and not on the battlefield at the start of 
         <profile id="f32d-a783-e730-6c24" name="Deadly Cargo" hidden="false" typeId="7861-da01-01c0-88d9" typeName="Ability">
           <characteristics>
             <characteristic name="Ability" typeId="9bce-4deb-8b79-eaec">Once per battle, after this unit finishes a move, you can pick 1 enemy unit and roll 1 dice for each model in this unit that passed across any models from that enemy unit. For each 4+, that enemy unit suffers D3 mortal wounds.</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="164a-8238-10fe-83d3" name="Terradon Rider Alpha" hidden="false" typeId="c23b-5a30-07e2-4706" typeName="Unit Options">
+          <characteristics>
+            <characteristic name="Unit Option" typeId="5879-9a21-e9d2-539d">1 model in this unit can be a Terradon Rider Alpha. Add 1 to the Attacks characteristic of that model’s missile weapons.</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -3285,11 +3394,11 @@ Any reserve units that are in hiding and not on the battlefield at the start of 
       <selectionEntries>
         <selectionEntry id="b20d-f2b3-063e-15a8" name="3 Terradon Riders" hidden="false" collective="false" import="true" type="model">
           <constraints>
-            <constraint field="selections" scope="parent" value="4.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="ab16-0d8b-feba-a6b5" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="ab16-0d8b-feba-a6b5" type="max"/>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="0735-0e3c-7dd5-e4b1" type="min"/>
           </constraints>
           <costs>
-            <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="90.0"/>
+            <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="fdae-f08e-fb9b-46f6" name="Mount" hidden="false" collective="false" import="true" type="upgrade">
@@ -3378,31 +3487,25 @@ Any reserve units that are in hiding and not on the battlefield at the start of 
             </selectionEntry>
           </selectionEntries>
         </selectionEntryGroup>
-        <selectionEntryGroup id="8def-8d22-5f19-87aa" name="Unit Option" hidden="false" collective="false" import="true">
-          <selectionEntries>
-            <selectionEntry id="5262-96e9-23ea-ffa2" name="Terradon Rider Alpha" hidden="false" collective="false" import="true" type="upgrade">
-              <constraints>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="5d95-3d20-b33f-b7b1" type="max"/>
-              </constraints>
-              <profiles>
-                <profile id="c778-0a1f-49d6-47bf" name="Terradon Rider Alpha" hidden="false" typeId="c23b-5a30-07e2-4706" typeName="Unit Options">
-                  <characteristics>
-                    <characteristic name="Unit Option" typeId="5879-9a21-e9d2-539d">1 model in this unit can be a Terradon Rider Alpha. Add 1 to the Attacks characteristic of that model’s missile weapons.</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-              <costs>
-                <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
-              </costs>
-            </selectionEntry>
-          </selectionEntries>
-        </selectionEntryGroup>
       </selectionEntryGroups>
+      <entryLinks>
+        <entryLink id="3628-b2f1-7ba7-9388" name="Unit Reinforcement" hidden="false" collective="false" import="true" targetId="b493-d9e6-82ca-5488" type="selectionEntry"/>
+      </entryLinks>
       <costs>
-        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
+        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="115.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="c4e3-c666-7c1c-c52b" name="Ripperdactyl Riders" publicationId="ba75-6000-0ab5-fd66" hidden="false" collective="false" import="true" type="unit">
+      <modifiers>
+        <modifier type="increment" field="b0b4-6aec-82c2-02ae" value="95.0">
+          <repeats>
+            <repeat field="selections" scope="c4e3-c666-7c1c-c52b" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e20c-48d8-e5e3-1a36" repeats="1" roundUp="false"/>
+          </repeats>
+          <conditions>
+            <condition field="selections" scope="c4e3-c666-7c1c-c52b" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e20c-48d8-e5e3-1a36" type="greaterThan"/>
+          </conditions>
+        </modifier>
+      </modifiers>
       <profiles>
         <profile id="d4b5-f0f3-9475-17ed" name="Ripperdactyl Riders" hidden="false" typeId="3956-f6dd-6c88-ae4b" typeName="Unit">
           <characteristics>
@@ -3417,6 +3520,11 @@ Any reserve units that are in hiding and not on the battlefield at the start of 
             <characteristic name="Ability" typeId="9bce-4deb-8b79-eaec">At the start of the combat phase, you can set up 1 Blot Toad marker next to 1 enemy unit. If you do so, you can re-roll hit rolls for attacks made with Tearing Jaws by friendly RIPPERDACTYL units that are wholly within 6&quot; of that enemy unit. At the end of the combat phase, remove the Blot Toad marker; it cannot be used again in that battle.
 
 Designer’s Note: Blot Toads are not units; they are markers that are used to keep track of which enemy units this ability affects and how many times you can use this ability during a battle.</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="39b2-2b28-cc44-fb2a" name="Ripperdactyl Rider Alpha" hidden="false" typeId="c23b-5a30-07e2-4706" typeName="Unit Options">
+          <characteristics>
+            <characteristic name="Unit Option" typeId="5879-9a21-e9d2-539d">1 model in this unit can be a Ripperdactyl Rider Alpha. Add 1 to the Attacks characteristic of that model’s Moonstone Warspear.</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -3434,11 +3542,11 @@ Designer’s Note: Blot Toads are not units; they are markers that are used to k
       <selectionEntries>
         <selectionEntry id="38c6-d06c-e42b-1836" name="3 Ripperdactyl Riders" hidden="false" collective="false" import="true" type="model">
           <constraints>
-            <constraint field="selections" scope="parent" value="4.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="c476-ba94-95e2-8656" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="c476-ba94-95e2-8656" type="max"/>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="0831-b824-de0d-4860" type="min"/>
           </constraints>
           <costs>
-            <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="80.0"/>
+            <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="4b10-eff1-a8be-30b5" name="Moonstone Warspear" hidden="false" collective="false" import="true" type="upgrade">
@@ -3525,29 +3633,11 @@ Designer’s Note: Blot Toads are not units; they are markers that are used to k
           </costs>
         </selectionEntry>
       </selectionEntries>
-      <selectionEntryGroups>
-        <selectionEntryGroup id="405a-0a31-5b21-8f1b" name="Unit Option" hidden="false" collective="false" import="true">
-          <selectionEntries>
-            <selectionEntry id="3a7d-20f2-fdeb-46fa" name="Ripperdactyl Rider Alpha" hidden="false" collective="false" import="true" type="upgrade">
-              <constraints>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="2440-bb87-6982-08d2" type="max"/>
-              </constraints>
-              <profiles>
-                <profile id="cd19-cbf4-ac75-326a" name="Ripperdactyl Rider Alpha" hidden="false" typeId="c23b-5a30-07e2-4706" typeName="Unit Options">
-                  <characteristics>
-                    <characteristic name="Unit Option" typeId="5879-9a21-e9d2-539d">1 model in this unit can be a Ripperdactyl Rider Alpha. Add 1 to the Attacks characteristic of that model’s Moonstone Warspear.</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-              <costs>
-                <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
-              </costs>
-            </selectionEntry>
-          </selectionEntries>
-        </selectionEntryGroup>
-      </selectionEntryGroups>
+      <entryLinks>
+        <entryLink id="d1c1-12a4-2206-6d65" name="Unit Reinforcement" hidden="false" collective="false" import="true" targetId="b493-d9e6-82ca-5488" type="selectionEntry"/>
+      </entryLinks>
       <costs>
-        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
+        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="95.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="7e1c-6ef1-c9ab-1190" name="Terradon Chief" publicationId="ba75-6000-0ab5-fd66" hidden="false" collective="false" import="true" type="unit">
@@ -3648,7 +3738,7 @@ Designer’s Note: Blot Toads are not units; they are markers that are used to k
         </selectionEntry>
       </selectionEntries>
       <costs>
-        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="70.0"/>
+        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="80.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="cc5f-e4f4-5bee-b415" name="Ripperdactyl Chief" publicationId="ba75-6000-0ab5-fd66" hidden="false" collective="false" import="true" type="unit">
@@ -3749,7 +3839,7 @@ Designer’s Note: Blot Toads are not units; they are markers that are used to k
         </selectionEntry>
       </selectionEntries>
       <costs>
-        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="80.0"/>
+        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="85.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="166c-bb29-f70a-13bd" name="Stegadon" publicationId="ba75-6000-0ab5-fd66" hidden="false" collective="false" import="true" type="unit">
@@ -4021,7 +4111,7 @@ Designer’s Note: Blot Toads are not units; they are markers that are used to k
         </selectionEntry>
       </selectionEntries>
       <costs>
-        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="240.0"/>
+        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="265.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="2b38-8179-6a82-4e17" name="Stegadon with Skink Chief" publicationId="ba75-6000-0ab5-fd66" hidden="false" collective="false" import="true" type="unit">
@@ -4306,7 +4396,7 @@ Designer’s Note: Blot Toads are not units; they are markers that are used to k
         </selectionEntry>
       </selectionEntries>
       <costs>
-        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="250.0"/>
+        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="305.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="63dd-fada-ecfa-da5e" name="Engine of the Gods" publicationId="ba75-6000-0ab5-fd66" hidden="false" collective="false" import="true" type="unit">
@@ -4535,7 +4625,7 @@ Roll -- Effect
         </selectionEntry>
       </selectionEntries>
       <costs>
-        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="260.0"/>
+        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="265.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="c523-0d16-b4b8-9cd8" name="Dread Saurian" hidden="false" collective="false" import="true" type="unit">

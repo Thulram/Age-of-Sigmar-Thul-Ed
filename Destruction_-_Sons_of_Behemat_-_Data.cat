@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="d3e0-df05-ed72-ef03" name="Destruction - Sons of Behemat - Data" revision="3" battleScribeVersion="2.03" authorName="Thulram" library="true" gameSystemId="e832-3291-06be-cab1" gameSystemRevision="2" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="d3e0-df05-ed72-ef03" name="Destruction - Sons of Behemat - Data" revision="4" battleScribeVersion="2.03" authorName="Thulram" library="true" gameSystemId="e832-3291-06be-cab1" gameSystemRevision="4" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <profileTypes>
     <profileType id="dbcb-22d9-9c52-8439" name="Mancrusher Gargant Wounds">
       <characteristicTypes>
@@ -13,7 +13,6 @@
         <characteristicType id="7b65-7ab2-845f-b40a" name="Move"/>
         <characteristicType id="62f8-b6d6-7591-4f57" name="Fortcrusha Flail"/>
         <characteristicType id="d409-e5fc-5dbb-f078" name="Hurled Boulder"/>
-        <characteristicType id="acc7-1aaa-00ba-3f3d" name="Smash Down"/>
       </characteristicTypes>
     </profileType>
     <profileType id="7edb-896f-9d6a-0d18" name="Warstomper Wounds">
@@ -49,6 +48,19 @@
   </categoryEntries>
   <sharedSelectionEntries>
     <selectionEntry id="4edc-1f4a-99fa-4cb3" name="Kraken-eater Mega-Gargant" publicationId="e8e1-2291-b555-602d" hidden="false" collective="false" import="true" type="unit">
+      <modifiers>
+        <modifier type="remove" field="category" value="a42d-220e-6a88-7bf6">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="6cd6-b22e-bfcb-9589" type="instanceOf"/>
+                <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="e3a6-45ca-4974-b489" type="instanceOf"/>
+                <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4373-740f-1bf3-b0aa" type="instanceOf"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
       <profiles>
         <profile id="168d-5475-3e0e-de26" name="Kraken-eater Mega-Gargant" hidden="false" typeId="3956-f6dd-6c88-ae4b" typeName="Unit">
           <characteristics>
@@ -121,6 +133,7 @@
         <categoryLink id="2961-ec29-e00a-dd2d" name="Mega-Gargant" hidden="false" targetId="5bc2-1ef2-657c-03f8" primary="false"/>
         <categoryLink id="4e4d-6395-d047-57ec" name="Hero" hidden="false" targetId="411f-dd41-4ab6-8a05" primary="false"/>
         <categoryLink id="aadc-ea09-2b18-aae9" name="SONS OF BEHEMAT" hidden="false" targetId="d33d-312b-9c40-3de5" primary="false"/>
+        <categoryLink id="bca6-3bf1-b6f2-3c18" name="BATTLELINE" hidden="false" targetId="a42d-220e-6a88-7bf6" primary="false"/>
       </categoryLinks>
       <selectionEntries>
         <selectionEntry id="87ee-f7e4-0819-1aaf" name="Almighty Stomp" hidden="false" collective="false" import="true" type="upgrade">
@@ -221,12 +234,65 @@
             <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
           </costs>
         </selectionEntry>
+        <selectionEntry id="980f-bc46-97a7-96cc" name="BATTLELINE" hidden="false" collective="false" import="true" type="upgrade">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4373-740f-1bf3-b0aa" type="instanceOf"/>
+                    <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="e3a6-45ca-4974-b489" type="instanceOf"/>
+                    <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="6cd6-b22e-bfcb-9589" type="instanceOf"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+            <modifier type="set" field="e179-8622-28a9-5cd7" value="0.0">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4373-740f-1bf3-b0aa" type="instanceOf"/>
+                    <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="e3a6-45ca-4974-b489" type="instanceOf"/>
+                    <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="6cd6-b22e-bfcb-9589" type="instanceOf"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="e179-8622-28a9-5cd7" type="min"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="c4d4-b769-ab2f-e3d5" type="max"/>
+          </constraints>
+          <profiles>
+            <profile id="e0e7-6d3c-afea-0347" name="CONDITIONAL BATTLELINE" hidden="false" typeId="77d9-94b6-d8f2-a150" typeName="BATTLELINE">
+              <characteristics>
+                <characteristic name="Condition" typeId="820b-20af-6fd8-5f48">This unit is Battleline</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <costs>
+            <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
+          </costs>
+        </selectionEntry>
       </selectionEntries>
       <costs>
         <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="490.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="6453-cf3c-50fb-db1c" name="Warstomper Mega-Gargant" publicationId="e8e1-2291-b555-602d" hidden="false" collective="false" import="true" type="unit">
+      <modifiers>
+        <modifier type="remove" field="category" value="a42d-220e-6a88-7bf6">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="6cd6-b22e-bfcb-9589" type="instanceOf"/>
+                <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="e3a6-45ca-4974-b489" type="instanceOf"/>
+                <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4373-740f-1bf3-b0aa" type="instanceOf"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
       <profiles>
         <profile id="5e71-f6b8-5d3a-d483" name="Warstomper Mega-Gargant" hidden="false" typeId="3956-f6dd-6c88-ae4b" typeName="Unit">
           <characteristics>
@@ -294,6 +360,7 @@
         <categoryLink id="2b48-8c55-bb1f-3522" name="Hero" hidden="false" targetId="411f-dd41-4ab6-8a05" primary="false"/>
         <categoryLink id="8420-41ab-f7cb-8e36" name="SONS OF BEHEMAT" hidden="false" targetId="d33d-312b-9c40-3de5" primary="false"/>
         <categoryLink id="af80-098c-af21-5a03" name="Warstomper" hidden="false" targetId="077f-3d7c-5af0-67db" primary="false"/>
+        <categoryLink id="dca2-0191-9617-090e" name="BATTLELINE" hidden="false" targetId="a42d-220e-6a88-7bf6" primary="false"/>
       </categoryLinks>
       <selectionEntries>
         <selectionEntry id="7139-6e2e-770b-6a74" name="Jump Up and Down" hidden="false" collective="false" import="true" type="upgrade">
@@ -377,12 +444,65 @@
             <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
           </costs>
         </selectionEntry>
+        <selectionEntry id="211d-2ba9-6bcf-57c9" name="BATTLELINE" hidden="false" collective="false" import="true" type="upgrade">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4373-740f-1bf3-b0aa" type="instanceOf"/>
+                    <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="e3a6-45ca-4974-b489" type="instanceOf"/>
+                    <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="6cd6-b22e-bfcb-9589" type="instanceOf"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+            <modifier type="set" field="7b0a-95f0-f485-08b5" value="0.0">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4373-740f-1bf3-b0aa" type="instanceOf"/>
+                    <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="e3a6-45ca-4974-b489" type="instanceOf"/>
+                    <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="6cd6-b22e-bfcb-9589" type="instanceOf"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="7b0a-95f0-f485-08b5" type="min"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="b5df-f9a5-13cd-8d3f" type="max"/>
+          </constraints>
+          <profiles>
+            <profile id="28f0-efeb-3480-4397" name="CONDITIONAL BATTLELINE" hidden="false" typeId="77d9-94b6-d8f2-a150" typeName="BATTLELINE">
+              <characteristics>
+                <characteristic name="Condition" typeId="820b-20af-6fd8-5f48">This unit is Battleline</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <costs>
+            <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
+          </costs>
+        </selectionEntry>
       </selectionEntries>
       <costs>
-        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="480.0"/>
+        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="470.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="9474-5572-4d71-ebd7" name="Gatebreaker Mega-Gargant" publicationId="e8e1-2291-b555-602d" hidden="false" collective="false" import="true" type="unit">
+      <modifiers>
+        <modifier type="remove" field="category" value="a42d-220e-6a88-7bf6">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="6cd6-b22e-bfcb-9589" type="instanceOf"/>
+                <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="e3a6-45ca-4974-b489" type="instanceOf"/>
+                <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4373-740f-1bf3-b0aa" type="instanceOf"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
       <profiles>
         <profile id="525e-dadd-b160-5cad" name="Gatebreaker Mega-Gargant" hidden="false" typeId="3956-f6dd-6c88-ae4b" typeName="Unit">
           <characteristics>
@@ -397,7 +517,6 @@
             <characteristic name="Move" typeId="7b65-7ab2-845f-b40a">12&quot;</characteristic>
             <characteristic name="Fortcrusha Flail" typeId="62f8-b6d6-7591-4f57">10</characteristic>
             <characteristic name="Hurled Boulder" typeId="d409-e5fc-5dbb-f078">18&quot;</characteristic>
-            <characteristic name="Smash Down" typeId="acc7-1aaa-00ba-3f3d">2+</characteristic>
           </characteristics>
         </profile>
         <profile id="bedf-02a9-b961-5830" name="31+" hidden="false" typeId="37f6-72ba-405b-7d89" typeName="Gatebreaker Wounds">
@@ -405,7 +524,6 @@
             <characteristic name="Move" typeId="7b65-7ab2-845f-b40a">8&quot;</characteristic>
             <characteristic name="Fortcrusha Flail" typeId="62f8-b6d6-7591-4f57">5</characteristic>
             <characteristic name="Hurled Boulder" typeId="d409-e5fc-5dbb-f078">6&quot;</characteristic>
-            <characteristic name="Smash Down" typeId="acc7-1aaa-00ba-3f3d">6+</characteristic>
           </characteristics>
         </profile>
         <profile id="5fd9-c129-832b-0f3b" name="25-30" hidden="false" typeId="37f6-72ba-405b-7d89" typeName="Gatebreaker Wounds">
@@ -413,7 +531,6 @@
             <characteristic name="Move" typeId="7b65-7ab2-845f-b40a">9&quot;</characteristic>
             <characteristic name="Fortcrusha Flail" typeId="62f8-b6d6-7591-4f57">6</characteristic>
             <characteristic name="Hurled Boulder" typeId="d409-e5fc-5dbb-f078">9&quot;</characteristic>
-            <characteristic name="Smash Down" typeId="acc7-1aaa-00ba-3f3d">5+</characteristic>
           </characteristics>
         </profile>
         <profile id="4e86-9a57-100f-117a" name="19-24" hidden="false" typeId="37f6-72ba-405b-7d89" typeName="Gatebreaker Wounds">
@@ -421,7 +538,6 @@
             <characteristic name="Move" typeId="7b65-7ab2-845f-b40a">10&quot;</characteristic>
             <characteristic name="Fortcrusha Flail" typeId="62f8-b6d6-7591-4f57">7</characteristic>
             <characteristic name="Hurled Boulder" typeId="d409-e5fc-5dbb-f078">12&quot;</characteristic>
-            <characteristic name="Smash Down" typeId="acc7-1aaa-00ba-3f3d">4+</characteristic>
           </characteristics>
         </profile>
         <profile id="96da-815c-e836-743e" name="13-18" hidden="false" typeId="37f6-72ba-405b-7d89" typeName="Gatebreaker Wounds">
@@ -429,14 +545,11 @@
             <characteristic name="Move" typeId="7b65-7ab2-845f-b40a">11&quot;</characteristic>
             <characteristic name="Fortcrusha Flail" typeId="62f8-b6d6-7591-4f57">9</characteristic>
             <characteristic name="Hurled Boulder" typeId="d409-e5fc-5dbb-f078">15&quot;</characteristic>
-            <characteristic name="Smash Down" typeId="acc7-1aaa-00ba-3f3d">3+</characteristic>
           </characteristics>
         </profile>
         <profile id="019b-3541-4cdb-9091" name="Smash Down" hidden="false" typeId="7861-da01-01c0-88d9" typeName="Ability">
           <characteristics>
-            <characteristic name="Ability" typeId="9bce-4deb-8b79-eaec">Add 1 to the damage inflicted by each successful attack made by this model that targets a unit that is part of a garrison or is wholly on or within a terrain feature.
-
-In addition, at the end of the combat phase, you can pick 1 terrain feature within 3&quot; of this model and roll a dice. If the roll is equal to or greater than the Smash Down value on this model’s damage table, that terrain feature is reduced to rubble: all of its scenery rules are replaced with the Deadly scenery rule, and its keywords are changed to SCENERY, RUBBLE.</characteristic>
+            <characteristic name="Ability" typeId="9bce-4deb-8b79-eaec">Add 1 to the damage inflicted by each successful attack made by this unit that targets a unit that is part of a garrison or is wholly on or within a terrain feature. In addition, add 1 to the roll when you carry out a Smash To Rubble monstrous rampage with this unit.</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -457,6 +570,7 @@ In addition, at the end of the combat phase, you can pick 1 terrain feature with
         <categoryLink id="6099-0448-4bdd-6ab6" name="Hero" hidden="false" targetId="411f-dd41-4ab6-8a05" primary="false"/>
         <categoryLink id="68c7-d35e-1fcd-01ce" name="SONS OF BEHEMAT" hidden="false" targetId="d33d-312b-9c40-3de5" primary="false"/>
         <categoryLink id="8f6a-ceae-b124-ceab" name="Gatebreaker" hidden="false" targetId="05cb-0307-f445-617b" primary="false"/>
+        <categoryLink id="9f24-ad6d-8e03-38fd" name="BATTLELINE" hidden="false" targetId="a42d-220e-6a88-7bf6" primary="false"/>
       </categoryLinks>
       <selectionEntries>
         <selectionEntry id="94bf-2adc-6be7-ff62" name="Almighty Stomp" hidden="false" collective="false" import="true" type="upgrade">
@@ -557,14 +671,67 @@ In addition, at the end of the combat phase, you can pick 1 terrain feature with
             <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
           </costs>
         </selectionEntry>
+        <selectionEntry id="659a-2a12-6ed0-e7ed" name="BATTLELINE" hidden="false" collective="false" import="true" type="upgrade">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4373-740f-1bf3-b0aa" type="instanceOf"/>
+                    <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="e3a6-45ca-4974-b489" type="instanceOf"/>
+                    <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="6cd6-b22e-bfcb-9589" type="instanceOf"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+            <modifier type="set" field="11ae-b62b-fa33-85ea" value="0.0">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4373-740f-1bf3-b0aa" type="instanceOf"/>
+                    <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="e3a6-45ca-4974-b489" type="instanceOf"/>
+                    <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="6cd6-b22e-bfcb-9589" type="instanceOf"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="11ae-b62b-fa33-85ea" type="min"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="bf32-be51-b1f4-14d2" type="max"/>
+          </constraints>
+          <profiles>
+            <profile id="4e4b-257e-3d3d-f731" name="CONDITIONAL BATTLELINE" hidden="false" typeId="77d9-94b6-d8f2-a150" typeName="BATTLELINE">
+              <characteristics>
+                <characteristic name="Condition" typeId="820b-20af-6fd8-5f48">This unit is Battleline</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <costs>
+            <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
+          </costs>
+        </selectionEntry>
       </selectionEntries>
       <costs>
-        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="490.0"/>
+        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="525.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="78ba-54ba-0520-842d" name="Mancrusher Gargants" publicationId="e8e1-2291-b555-602d" hidden="false" collective="false" import="true" type="unit">
+    <selectionEntry id="78ba-54ba-0520-842d" name="Mancrusher Gargant Mob" publicationId="e8e1-2291-b555-602d" hidden="false" collective="false" import="true" type="unit">
+      <modifiers>
+        <modifier type="remove" field="category" value="a42d-220e-6a88-7bf6">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="6cd6-b22e-bfcb-9589" type="instanceOf"/>
+                <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="e3a6-45ca-4974-b489" type="instanceOf"/>
+                <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4373-740f-1bf3-b0aa" type="instanceOf"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
       <profiles>
-        <profile id="65be-5e24-4bad-7506" name="Mancrusher Gargants" hidden="false" typeId="3956-f6dd-6c88-ae4b" typeName="Unit">
+        <profile id="65be-5e24-4bad-7506" name="Mancrusher Gargant Mob" hidden="false" typeId="3956-f6dd-6c88-ae4b" typeName="Unit">
           <characteristics>
             <characteristic name="Move" typeId="5bbe-8910-4dfa-7b1c">8&quot;</characteristic>
             <characteristic name="Wounds" typeId="a0c6-af64-2f24-5759">12</characteristic>
@@ -634,7 +801,8 @@ In addition, at the end of the combat phase, you can pick 1 terrain feature with
         <categoryLink id="96b5-5508-936c-8a39" name="Mancrusher" hidden="false" targetId="b149-96b5-e2bf-b3bc" primary="false"/>
         <categoryLink id="f266-867b-106e-69f5" name="Monster" hidden="false" targetId="e3bc-f9bd-b6f8-7afd" primary="false"/>
         <categoryLink id="4dae-2cea-e430-d528" name="SONS OF BEHEMAT" hidden="false" targetId="d33d-312b-9c40-3de5" primary="false"/>
-        <categoryLink id="2cdc-c8c0-5ac4-9caa" name="Behemoth" hidden="false" targetId="7f62-b7f5-32d5-e13b" primary="true"/>
+        <categoryLink id="f646-f1ab-5db9-dea0" name="BATTLELINE" hidden="false" targetId="a42d-220e-6a88-7bf6" primary="false"/>
+        <categoryLink id="3cae-e828-4d99-0880" name="New CategoryLink" hidden="false" targetId="6230-ed60-e374-add4" primary="true"/>
       </categoryLinks>
       <selectionEntries>
         <selectionEntry id="0921-852d-b062-75fa" name="&apos;Eadbutt" hidden="false" collective="false" import="true" type="upgrade">
@@ -703,7 +871,7 @@ In addition, at the end of the combat phase, you can pick 1 terrain feature with
             <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="ec78-2695-9276-a30b" name="CONDITIONAL BATTLELINE" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="ec78-2695-9276-a30b" name="BATTLELINE" hidden="false" collective="false" import="true" type="upgrade">
           <modifiers>
             <modifier type="set" field="hidden" value="true">
               <conditionGroups>
@@ -735,7 +903,7 @@ In addition, at the end of the combat phase, you can pick 1 terrain feature with
           <profiles>
             <profile id="ae2a-4b58-4694-0899" name="CONDITIONAL BATTLELINE" hidden="false" typeId="77d9-94b6-d8f2-a150" typeName="BATTLELINE">
               <characteristics>
-                <characteristic name="Condition" typeId="820b-20af-6fd8-5f48">In a Sons of Behemat army, battlefield role is Battleline (not Behemoth) and maximum-sized units count as 3 Battleline units.</characteristic>
+                <characteristic name="Condition" typeId="820b-20af-6fd8-5f48">This unit is Battleline</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -743,25 +911,18 @@ In addition, at the end of the combat phase, you can pick 1 terrain feature with
             <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
           </costs>
         </selectionEntry>
+        <selectionEntry id="03a3-cbd1-f07b-73c1" name="3 Mancrushers" hidden="false" collective="false" import="true" type="model">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="723f-27e5-774b-c9ee" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="5185-9098-1a51-bc57" type="min"/>
+          </constraints>
+          <costs>
+            <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="490.0"/>
+          </costs>
+        </selectionEntry>
       </selectionEntries>
       <costs>
-        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
-      </costs>
-    </selectionEntry>
-    <selectionEntry id="1c46-edc2-6f37-4bf8" name="1 Mancrusher" hidden="false" collective="false" import="true" type="model">
-      <modifiers>
-        <modifier type="set" field="b0b4-6aec-82c2-02ae" value="160.0">
-          <conditions>
-            <condition field="selections" scope="parent" value="3.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" type="equalTo"/>
-          </conditions>
-        </modifier>
-      </modifiers>
-      <constraints>
-        <constraint field="selections" scope="parent" value="3.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="c920-464c-785e-2b61" type="max"/>
-        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="204f-4bd5-2c94-52bc" type="min"/>
-      </constraints>
-      <costs>
-        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="180.0"/>
+        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="490.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="b885-9816-a954-eab5" name="Bonegrinder Mega-Gargant" hidden="false" collective="false" import="true" type="unit">
@@ -907,11 +1068,211 @@ In addition, at the end of the combat phase, you can pick 1 terrain feature with
         <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="500.0"/>
       </costs>
     </selectionEntry>
+    <selectionEntry id="488c-01e0-df1a-9de4" name="Mancrusher Gargant" publicationId="e8e1-2291-b555-602d" hidden="false" collective="false" import="true" type="unit">
+      <modifiers>
+        <modifier type="remove" field="category" value="a42d-220e-6a88-7bf6">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="6cd6-b22e-bfcb-9589" type="instanceOf"/>
+                <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="e3a6-45ca-4974-b489" type="instanceOf"/>
+                <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4373-740f-1bf3-b0aa" type="instanceOf"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+      <profiles>
+        <profile id="bb52-26c9-d7b9-f623" name="Mancrusher Gargant" hidden="false" typeId="3956-f6dd-6c88-ae4b" typeName="Unit">
+          <characteristics>
+            <characteristic name="Move" typeId="5bbe-8910-4dfa-7b1c">8&quot;</characteristic>
+            <characteristic name="Wounds" typeId="a0c6-af64-2f24-5759">12</characteristic>
+            <characteristic name="Save" typeId="93b6-2f96-2df7-e330">5+</characteristic>
+            <characteristic name="Bravery" typeId="2420-1c5c-1016-7033">7</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="eff5-0fa3-6515-ecc0" name="10+" hidden="false" typeId="dbcb-22d9-9c52-8439" typeName="Mancrusher Gargant Wounds">
+          <characteristics>
+            <characteristic name="Stomping Charge" typeId="63cf-c0fa-d065-89a5">6+</characteristic>
+            <characteristic name="Massive Club" typeId="099a-4449-5f62-36a2">4</characteristic>
+            <characteristic name="&apos;Eadbutt" typeId="86e1-ce33-fed7-062f">1</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="1f25-464b-4d0c-a862" name="08-09" hidden="false" typeId="dbcb-22d9-9c52-8439" typeName="Mancrusher Gargant Wounds">
+          <characteristics>
+            <characteristic name="Stomping Charge" typeId="63cf-c0fa-d065-89a5">5+</characteristic>
+            <characteristic name="Massive Club" typeId="099a-4449-5f62-36a2">6</characteristic>
+            <characteristic name="&apos;Eadbutt" typeId="86e1-ce33-fed7-062f">2</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="f9ce-6fa6-8d31-379c" name="00-02" hidden="false" typeId="dbcb-22d9-9c52-8439" typeName="Mancrusher Gargant Wounds">
+          <characteristics>
+            <characteristic name="Stomping Charge" typeId="63cf-c0fa-d065-89a5">2+</characteristic>
+            <characteristic name="Massive Club" typeId="099a-4449-5f62-36a2">10</characteristic>
+            <characteristic name="&apos;Eadbutt" typeId="86e1-ce33-fed7-062f">4</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="bbe0-f228-6cdc-6693" name="05-07" hidden="false" typeId="dbcb-22d9-9c52-8439" typeName="Mancrusher Gargant Wounds">
+          <characteristics>
+            <characteristic name="Stomping Charge" typeId="63cf-c0fa-d065-89a5">4+</characteristic>
+            <characteristic name="Massive Club" typeId="099a-4449-5f62-36a2">8</characteristic>
+            <characteristic name="&apos;Eadbutt" typeId="86e1-ce33-fed7-062f">3</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="78dc-5b91-59cc-8847" name="03-04" hidden="false" typeId="dbcb-22d9-9c52-8439" typeName="Mancrusher Gargant Wounds">
+          <characteristics>
+            <characteristic name="Stomping Charge" typeId="63cf-c0fa-d065-89a5">3+</characteristic>
+            <characteristic name="Massive Club" typeId="099a-4449-5f62-36a2">9</characteristic>
+            <characteristic name="&apos;Eadbutt" typeId="86e1-ce33-fed7-062f">3</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="1271-1ee0-937f-2ce3" name="Keep Up!" hidden="false" typeId="7861-da01-01c0-88d9" typeName="Ability">
+          <characteristics>
+            <characteristic name="Ability" typeId="9bce-4deb-8b79-eaec">If this unit is within 12&quot; of a friendly MEGAGARGANT at the start of the charge phase, it can attempt to charge in that charge phase even if it ran in the same turn.</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="a88c-568a-799e-87ab" name="Stomping Charge" hidden="false" typeId="7861-da01-01c0-88d9" typeName="Ability">
+          <characteristics>
+            <characteristic name="Ability" typeId="9bce-4deb-8b79-eaec">After a model from this unit makes a charge move, pick 1 enemy unit within 1&quot; of it and roll a dice. If the roll is equal to or greater than the Stomping Charge value for the charging model shown on the damage table above, that unit suffers D3 mortal wounds. If this unit has more than 1 model, do not allocate the mortal wounds until all of the models in this unit have made their charge moves.</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="3caa-48f6-82ac-c4d5" name="Stuff &apos;Em In Me Bag" hidden="false" typeId="7861-da01-01c0-88d9" typeName="Ability">
+          <characteristics>
+            <characteristic name="Ability" typeId="9bce-4deb-8b79-eaec">After a model from this unit piles in, you can pick 1 enemy model within 3&quot; of it and roll a dice. If the roll is at least double that model’s Wounds characteristic, it is slain.</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="6c7e-bdf1-e0de-32f2" name="Timber!" hidden="false" typeId="7861-da01-01c0-88d9" typeName="Ability">
+          <characteristics>
+            <characteristic name="Ability" typeId="9bce-4deb-8b79-eaec">If a model from this unit is slain, before removing it from the battlefield, the players must roll off. The winner must pick a point on the battlefield 3&quot; from that model. Each unit within 2&quot; of that point suffers D3 mortal wounds unless it is a GARGANT. The model is then removed from the battlefield.</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <categoryLinks>
+        <categoryLink id="4a56-b5f3-bd09-3178" name="Destruction" hidden="false" targetId="5d33-469f-2bda-51f9" primary="false"/>
+        <categoryLink id="7027-af5a-a998-a84e" name="Gargant" hidden="false" targetId="4fd3-2a65-44c6-e4db" primary="false"/>
+        <categoryLink id="f53f-752e-9bbe-0fa1" name="Mancrusher" hidden="false" targetId="b149-96b5-e2bf-b3bc" primary="false"/>
+        <categoryLink id="3270-05bb-d57f-0569" name="Monster" hidden="false" targetId="e3bc-f9bd-b6f8-7afd" primary="false"/>
+        <categoryLink id="8556-b91e-da87-2bd5" name="SONS OF BEHEMAT" hidden="false" targetId="d33d-312b-9c40-3de5" primary="false"/>
+        <categoryLink id="491c-7602-f702-6f40" name="BATTLELINE" hidden="false" targetId="a42d-220e-6a88-7bf6" primary="false"/>
+        <categoryLink id="b6bf-9ec5-0924-dbe3" name="New CategoryLink" hidden="false" targetId="6230-ed60-e374-add4" primary="true"/>
+      </categoryLinks>
+      <selectionEntries>
+        <selectionEntry id="0e32-cd11-c0ce-4cf2" name="&apos;Eadbutt" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="9f79-7bcf-6b7a-09c2" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="4795-be6a-80c1-57bd" type="min"/>
+          </constraints>
+          <profiles>
+            <profile id="73c7-2d5e-3a24-97a6" name="&apos;Eadbutt" hidden="false" typeId="2905-f6bd-06e5-6642" typeName="Weapon">
+              <characteristics>
+                <characteristic name="Type" typeId="1a08-195b-76fd-2c2b">Melee</characteristic>
+                <characteristic name="Range" typeId="1406-f935-3f8e-b27f">1&quot;</characteristic>
+                <characteristic name="Attacks" typeId="4c19-dba6-f094-5165">1</characteristic>
+                <characteristic name="To-Hit" typeId="7a4f-9704-2095-96c8">4+</characteristic>
+                <characteristic name="To-Wound" typeId="172f-fc84-895b-04b7">3+</characteristic>
+                <characteristic name="Rend" typeId="0c05-bd2e-b7e7-3925">-3</characteristic>
+                <characteristic name="Damage" typeId="01c2-d16a-8788-e52b">*</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <costs>
+            <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="22ab-cbef-df7f-7ce0" name="Massive Club" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="33c0-3ee9-62b7-2a95" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="e62f-d0aa-bbb9-1809" type="min"/>
+          </constraints>
+          <profiles>
+            <profile id="5dff-2299-fd88-a309" name="Massive Club" hidden="false" typeId="2905-f6bd-06e5-6642" typeName="Weapon">
+              <characteristics>
+                <characteristic name="Type" typeId="1a08-195b-76fd-2c2b">Melee</characteristic>
+                <characteristic name="Range" typeId="1406-f935-3f8e-b27f">3&quot;</characteristic>
+                <characteristic name="Attacks" typeId="4c19-dba6-f094-5165">*</characteristic>
+                <characteristic name="To-Hit" typeId="7a4f-9704-2095-96c8">3+</characteristic>
+                <characteristic name="To-Wound" typeId="172f-fc84-895b-04b7">3+</characteristic>
+                <characteristic name="Rend" typeId="0c05-bd2e-b7e7-3925">-1</characteristic>
+                <characteristic name="Damage" typeId="01c2-d16a-8788-e52b">1</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <costs>
+            <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="0bba-2b63-9278-441d" name="Mighty Kick" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="7af7-b33b-5658-3ed4" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="50cf-16d5-b3da-edcb" type="min"/>
+          </constraints>
+          <profiles>
+            <profile id="6018-de54-b4a2-0763" name="Mighty Kick" hidden="false" typeId="2905-f6bd-06e5-6642" typeName="Weapon">
+              <characteristics>
+                <characteristic name="Type" typeId="1a08-195b-76fd-2c2b">Melee</characteristic>
+                <characteristic name="Range" typeId="1406-f935-3f8e-b27f">2&quot;</characteristic>
+                <characteristic name="Attacks" typeId="4c19-dba6-f094-5165">1</characteristic>
+                <characteristic name="To-Hit" typeId="7a4f-9704-2095-96c8">3+</characteristic>
+                <characteristic name="To-Wound" typeId="172f-fc84-895b-04b7">3+</characteristic>
+                <characteristic name="Rend" typeId="0c05-bd2e-b7e7-3925">-2</characteristic>
+                <characteristic name="Damage" typeId="01c2-d16a-8788-e52b">D3</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <costs>
+            <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="6e78-0200-73ed-5af1" name="BATTLELINE" hidden="false" collective="false" import="true" type="upgrade">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4373-740f-1bf3-b0aa" type="instanceOf"/>
+                    <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="e3a6-45ca-4974-b489" type="instanceOf"/>
+                    <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="6cd6-b22e-bfcb-9589" type="instanceOf"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+            <modifier type="set" field="1790-5ac5-5882-0f88" value="0.0">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4373-740f-1bf3-b0aa" type="instanceOf"/>
+                    <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="e3a6-45ca-4974-b489" type="instanceOf"/>
+                    <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="6cd6-b22e-bfcb-9589" type="instanceOf"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="1790-5ac5-5882-0f88" type="min"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="b28d-3b4f-4614-b27c" type="max"/>
+          </constraints>
+          <profiles>
+            <profile id="06c2-ff4a-de99-ce27" name="CONDITIONAL BATTLELINE" hidden="false" typeId="77d9-94b6-d8f2-a150" typeName="BATTLELINE">
+              <characteristics>
+                <characteristic name="Condition" typeId="820b-20af-6fd8-5f48">This unit is Battleline</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <costs>
+            <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
+          </costs>
+        </selectionEntry>
+      </selectionEntries>
+      <costs>
+        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="170.0"/>
+      </costs>
+    </selectionEntry>
   </sharedSelectionEntries>
   <sharedProfiles>
     <profile id="fd02-8090-a246-d844" name="Longshanks" hidden="false" typeId="7861-da01-01c0-88d9" typeName="Ability">
       <characteristics>
-        <characteristic name="Ability" typeId="9bce-4deb-8b79-eaec">When this model makes a normal move, it can ignore models that have a Wounds characteristic of 10 or less, endless spells, magmic invocations, judgements of Khorne, invocations of Khaine and terrain features that are less than 4&quot; tall at their highest point.</characteristic>
+        <characteristic name="Ability" typeId="9bce-4deb-8b79-eaec">When this model makes a move, it can ignore models, endless spells, invocations and terrain features that are less than 4&quot; tall at their highest point.</characteristic>
       </characteristics>
     </profile>
     <profile id="88ff-0d90-6d5b-f2ba" name="Crushing Charge" hidden="false" typeId="7861-da01-01c0-88d9" typeName="Ability">

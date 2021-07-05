@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="99e6-1b00-da35-78db" name="Order - Devoted of Sigmar - Data" revision="1" battleScribeVersion="2.03" authorName="Thulram" library="true" gameSystemId="e832-3291-06be-cab1" gameSystemRevision="1" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="99e6-1b00-da35-78db" name="Order - Devoted of Sigmar - Data" revision="2" battleScribeVersion="2.03" authorName="Thulram" library="true" gameSystemId="e832-3291-06be-cab1" gameSystemRevision="2" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <profileTypes>
     <profileType id="5e84-28f2-8d90-a914" name="War Altar Wounds">
       <characteristicTypes>
@@ -19,6 +19,16 @@
   </categoryEntries>
   <sharedSelectionEntries>
     <selectionEntry id="d488-b3fb-e805-b0ec" name="Flagellants" publicationId="88ce-c2fe-b89c-ed48" hidden="false" collective="false" import="true" type="unit">
+      <modifiers>
+        <modifier type="increment" field="b0b4-6aec-82c2-02ae" value="80.0">
+          <repeats>
+            <repeat field="selections" scope="d488-b3fb-e805-b0ec" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e20c-48d8-e5e3-1a36" repeats="1" roundUp="false"/>
+          </repeats>
+          <conditions>
+            <condition field="selections" scope="d488-b3fb-e805-b0ec" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e20c-48d8-e5e3-1a36" type="greaterThan"/>
+          </conditions>
+        </modifier>
+      </modifiers>
       <profiles>
         <profile id="fbd1-3889-51fd-7627" name="Flagellants" hidden="false" typeId="3956-f6dd-6c88-ae4b" typeName="Unit">
           <characteristics>
@@ -43,6 +53,11 @@
             <characteristic name="Ability" typeId="9bce-4deb-8b79-eaec">Add 1 to the Attacks characteristic of this unit’s melee weapons if any models from this unit have been slain in the same turn. Add 2 to the Attacks characteristic instead of 1 if 5 or more models from this unit have been slain in the same turn.</characteristic>
           </characteristics>
         </profile>
+        <profile id="fe85-1490-8f40-f35d" name="Prophet" hidden="false" typeId="c23b-5a30-07e2-4706" typeName="Unit Options">
+          <characteristics>
+            <characteristic name="Unit Option" typeId="5879-9a21-e9d2-539d">1 model in this unit can be a Prophet. Add 1 to the Attacks characteristic of that model’s melee weapon.</characteristic>
+          </characteristics>
+        </profile>
       </profiles>
       <categoryLinks>
         <categoryLink id="b425-0ed7-918b-7d47" name="CITIES OF SIGMAR" hidden="false" targetId="d20b-b22a-23ee-3ca1" primary="false"/>
@@ -54,19 +69,12 @@
       </categoryLinks>
       <selectionEntries>
         <selectionEntry id="fe7c-b68d-ca14-5dcf" name="10 Flagellants" hidden="false" collective="false" import="true" type="model">
-          <modifiers>
-            <modifier type="set" field="b0b4-6aec-82c2-02ae" value="70.0">
-              <conditions>
-                <condition field="selections" scope="parent" value="4.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" type="equalTo"/>
-              </conditions>
-            </modifier>
-          </modifiers>
           <constraints>
-            <constraint field="selections" scope="parent" value="4.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="80a4-b688-43d0-a79c" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="80a4-b688-43d0-a79c" type="max"/>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="0afb-eda3-c551-302f" type="min"/>
           </constraints>
           <costs>
-            <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="80.0"/>
+            <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="0cbc-71ec-160d-a729" name="CONDITIONAL BATTLELINE" hidden="false" collective="false" import="true" type="upgrade">
@@ -132,29 +140,11 @@
           </costs>
         </selectionEntry>
       </selectionEntries>
-      <selectionEntryGroups>
-        <selectionEntryGroup id="54d1-e8b8-9bfc-229f" name="Unit Options" hidden="false" collective="false" import="true">
-          <selectionEntries>
-            <selectionEntry id="e251-a630-b4ae-0673" name="Prophet" hidden="false" collective="false" import="true" type="upgrade">
-              <constraints>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="796f-e89d-e759-05a3" type="max"/>
-              </constraints>
-              <profiles>
-                <profile id="a5c4-4889-30c5-d661" name="Prophet" hidden="false" typeId="c23b-5a30-07e2-4706" typeName="Unit Options">
-                  <characteristics>
-                    <characteristic name="Unit Option" typeId="5879-9a21-e9d2-539d">1 model in this unit can be a Prophet. Add 1 to the Attacks characteristic of that model’s melee weapon.</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-              <costs>
-                <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
-              </costs>
-            </selectionEntry>
-          </selectionEntries>
-        </selectionEntryGroup>
-      </selectionEntryGroups>
+      <entryLinks>
+        <entryLink id="4752-ba85-9e28-48ec" name="Unit Reinforcement" hidden="false" collective="false" import="true" targetId="b493-d9e6-82ca-5488" type="selectionEntry"/>
+      </entryLinks>
       <costs>
-        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
+        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="80.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="ca04-c38a-0803-971a" name="Excelsior Warpriest [Legends]" hidden="false" collective="false" import="true" type="unit">
@@ -183,6 +173,10 @@
           </characteristics>
         </profile>
       </profiles>
+      <infoLinks>
+        <infoLink id="5436-c52d-5be7-fd18" name="Bless" hidden="false" targetId="4c4a-18dc-6a53-5355" type="profile"/>
+        <infoLink id="542e-5b4c-28af-553e" name="Smite" hidden="false" targetId="7b66-5f0a-449f-f31a" type="profile"/>
+      </infoLinks>
       <categoryLinks>
         <categoryLink id="3bb2-3880-9d86-532b" name="Celestial" hidden="false" targetId="3312-857f-e66d-e32e" primary="false"/>
         <categoryLink id="e85c-1dc4-a3cd-bc5e" name="DEVOTED OF SIGMAR" hidden="false" targetId="258a-715c-b378-b99c" primary="false"/>
@@ -248,6 +242,10 @@ Healing Hands: One model in the unit immediately heals D3 wounds.</characteristi
           </characteristics>
         </profile>
       </profiles>
+      <infoLinks>
+        <infoLink id="f4c0-df6c-acd0-489e" name="Bless" hidden="false" targetId="4c4a-18dc-6a53-5355" type="profile"/>
+        <infoLink id="07f7-abf3-5bd7-4df4" name="Smite" hidden="false" targetId="7b66-5f0a-449f-f31a" type="profile"/>
+      </infoLinks>
       <categoryLinks>
         <categoryLink id="edf0-319b-2b33-6903" name="Celestial" hidden="false" targetId="3312-857f-e66d-e32e" primary="false"/>
         <categoryLink id="c135-cf77-478e-ef6d" name="DEVOTED OF SIGMAR" hidden="false" targetId="258a-715c-b378-b99c" primary="false"/>
@@ -561,6 +559,10 @@ Holy Fervour: Until your next hero phase, you can add 1 to the unit&apos;s run r
           </characteristics>
         </profile>
       </profiles>
+      <infoLinks>
+        <infoLink id="ff5c-0dda-3056-cb8c" name="Bless" hidden="false" targetId="4c4a-18dc-6a53-5355" type="profile"/>
+        <infoLink id="946b-efdb-24d2-e3ad" name="Smite" hidden="false" targetId="7b66-5f0a-449f-f31a" type="profile"/>
+      </infoLinks>
       <categoryLinks>
         <categoryLink id="e0e8-d73b-a7f4-9b84" name="Celestial" hidden="false" targetId="3312-857f-e66d-e32e" primary="false"/>
         <categoryLink id="1d6b-18a2-026c-6052" name="DEVOTED OF SIGMAR" hidden="false" targetId="258a-715c-b378-b99c" primary="false"/>

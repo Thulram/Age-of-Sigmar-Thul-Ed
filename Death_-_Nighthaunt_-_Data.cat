@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="a9fc-3ad2-0bad-01ea" name="Death - Nighthaunt - Data" revision="2" battleScribeVersion="2.03" authorName="Thulram" library="true" gameSystemId="e832-3291-06be-cab1" gameSystemRevision="1" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="a9fc-3ad2-0bad-01ea" name="Death - Nighthaunt - Data" revision="3" battleScribeVersion="2.03" authorName="Thulram" library="true" gameSystemId="e832-3291-06be-cab1" gameSystemRevision="3" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <profileTypes>
     <profileType id="4f6e-8f72-4279-a5ac" name="Black Coach Wounds">
       <characteristicTypes>
@@ -182,7 +182,7 @@
         </selectionEntry>
       </selectionEntries>
       <costs>
-        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="200.0"/>
+        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="215.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="dbdf-5ba5-2edd-ecf3" name="Kurdoss Valentian, the Craven King" publicationId="6918-4599-9a4b-12c8" hidden="false" collective="false" import="true" type="unit">
@@ -192,7 +192,7 @@
       <profiles>
         <profile id="c1d6-f442-5f47-bc43" name="If I Cannot Rule, None Shall Rule!" hidden="false" typeId="7861-da01-01c0-88d9" typeName="Ability">
           <characteristics>
-            <characteristic name="Ability" typeId="9bce-4deb-8b79-eaec">At the start of the enemy hero phase, after the opposing player receives their command point for that turn, roll a dice. On a 5+, subtract 1 from the enemy player’s command points, to a minimum of 0, and you receive 1 command point.</characteristic>
+            <characteristic name="Ability" typeId="9bce-4deb-8b79-eaec">At the start of the hero phase, if your opponent receives a command point for their general being on the battlefield, after they receive that command point, roll a dice. On a 5+, your opponent must subtract 1 from their command points and you receive 1 extra command point.</characteristic>
           </characteristics>
         </profile>
         <profile id="9810-e850-7c77-c928" name="Kurdoss Valentian" hidden="false" typeId="3956-f6dd-6c88-ae4b" typeName="Unit">
@@ -421,7 +421,7 @@
         </selectionEntry>
       </selectionEntries>
       <costs>
-        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="160.0"/>
+        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="165.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="1520-2fbc-84dc-096a" name="Knight of Shrouds" publicationId="6918-4599-9a4b-12c8" hidden="false" collective="false" import="true" type="unit">
@@ -675,7 +675,7 @@
         </selectionEntry>
       </selectionEntries>
       <costs>
-        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="130.0"/>
+        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="135.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="5a2a-ce02-4610-0f8a" name="Spirit Torment" publicationId="6918-4599-9a4b-12c8" hidden="false" collective="false" import="true" type="unit">
@@ -740,10 +740,20 @@ If your army includes more than one SPIRIT TORMENT, at least 3 enemy models must
         </selectionEntry>
       </selectionEntries>
       <costs>
-        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="120.0"/>
+        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="115.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="bc1f-0055-7f7f-951d" name="Chainghasts" publicationId="6918-4599-9a4b-12c8" hidden="false" collective="false" import="true" type="unit">
+      <modifiers>
+        <modifier type="increment" field="b0b4-6aec-82c2-02ae" value="75.0">
+          <repeats>
+            <repeat field="selections" scope="bc1f-0055-7f7f-951d" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e20c-48d8-e5e3-1a36" repeats="1" roundUp="false"/>
+          </repeats>
+          <conditions>
+            <condition field="selections" scope="bc1f-0055-7f7f-951d" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e20c-48d8-e5e3-1a36" type="greaterThan"/>
+          </conditions>
+        </modifier>
+      </modifiers>
       <profiles>
         <profile id="7518-d772-777b-36f1" name="Chainghasts" hidden="false" typeId="3956-f6dd-6c88-ae4b" typeName="Unit">
           <characteristics>
@@ -812,16 +822,16 @@ If your army includes more than one SPIRIT TORMENT, at least 3 enemy models must
         </selectionEntry>
         <selectionEntry id="110f-8e97-0c31-8206" name="2 Chainghasts" hidden="false" collective="false" import="true" type="model">
           <constraints>
-            <constraint field="selections" scope="parent" value="2.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="a392-c92a-1dc0-96d3" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="a392-c92a-1dc0-96d3" type="max"/>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="4b06-d903-6072-bbee" type="min"/>
           </constraints>
-          <costs>
-            <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="70.0"/>
-          </costs>
         </selectionEntry>
       </selectionEntries>
+      <entryLinks>
+        <entryLink id="bf8a-a008-520b-fd05" name="Unit Reinforcement" hidden="false" collective="false" import="true" targetId="b493-d9e6-82ca-5488" type="selectionEntry"/>
+      </entryLinks>
       <costs>
-        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
+        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="75.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="393c-7849-8a58-53ae" name="Dreadblade Harrow" publicationId="6918-4599-9a4b-12c8" hidden="false" collective="false" import="true" type="unit">
@@ -927,7 +937,7 @@ If your army includes more than one SPIRIT TORMENT, at least 3 enemy models must
         </selectionEntry>
       </selectionEntries>
       <costs>
-        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="90.0"/>
+        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="100.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="f4cd-ec81-f76e-955b" name="Lord Executioner" publicationId="6918-4599-9a4b-12c8" hidden="false" collective="false" import="true" type="unit">
@@ -993,7 +1003,7 @@ If your army includes more than one SPIRIT TORMENT, at least 3 enemy models must
         </selectionEntry>
       </selectionEntries>
       <costs>
-        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="80.0"/>
+        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="90.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="da45-962e-d5ce-03a1" name="Tomb Banshee" publicationId="6918-4599-9a4b-12c8" hidden="false" collective="false" import="true" type="unit">
@@ -1115,10 +1125,20 @@ If your army includes more than one SPIRIT TORMENT, at least 3 enemy models must
         </selectionEntry>
       </selectionEntries>
       <costs>
-        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="60.0"/>
+        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="70.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="974d-a5de-c18f-c94b" name="Glaivewraith Stalkers" publicationId="6918-4599-9a4b-12c8" hidden="false" collective="false" import="true" type="unit">
+      <modifiers>
+        <modifier type="increment" field="b0b4-6aec-82c2-02ae" value="65.0">
+          <repeats>
+            <repeat field="selections" scope="974d-a5de-c18f-c94b" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e20c-48d8-e5e3-1a36" repeats="1" roundUp="false"/>
+          </repeats>
+          <conditions>
+            <condition field="selections" scope="974d-a5de-c18f-c94b" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e20c-48d8-e5e3-1a36" type="greaterThan"/>
+          </conditions>
+        </modifier>
+      </modifiers>
       <profiles>
         <profile id="5f41-d5dd-deff-607a" name="Glaivewraith Stalkers" hidden="false" typeId="3956-f6dd-6c88-ae4b" typeName="Unit">
           <characteristics>
@@ -1144,12 +1164,9 @@ If your army includes more than one SPIRIT TORMENT, at least 3 enemy models must
       <selectionEntries>
         <selectionEntry id="af03-6a8c-6bcb-3a70" name="4 Glaivewraith Stalkers" hidden="false" collective="false" import="true" type="model">
           <constraints>
-            <constraint field="selections" scope="parent" value="4.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="c76a-011f-c262-c84b" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="c76a-011f-c262-c84b" type="max"/>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="a29d-dcb6-974c-602f" type="min"/>
           </constraints>
-          <costs>
-            <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="60.0"/>
-          </costs>
         </selectionEntry>
         <selectionEntry id="185d-0b78-38d8-77b2" name="Hunter&apos;s Glaive" hidden="false" collective="false" import="true" type="upgrade">
           <profiles>
@@ -1206,11 +1223,35 @@ If your army includes more than one SPIRIT TORMENT, at least 3 enemy models must
           </selectionEntries>
         </selectionEntryGroup>
       </selectionEntryGroups>
+      <entryLinks>
+        <entryLink id="b16d-03c1-2658-cad7" name="Unit Reinforcement" hidden="false" collective="false" import="true" targetId="b493-d9e6-82ca-5488" type="selectionEntry"/>
+      </entryLinks>
       <costs>
-        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
+        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="65.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="72aa-2798-089a-a52a" name="Grimghast Reapers" publicationId="6918-4599-9a4b-12c8" hidden="false" collective="false" import="true" type="unit">
+      <modifiers>
+        <modifier type="remove" field="category" value="a42d-220e-6a88-7bf6">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="6cd6-b22e-bfcb-9589" type="instanceOf"/>
+                <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="e3a6-45ca-4974-b489" type="instanceOf"/>
+                <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4373-740f-1bf3-b0aa" type="instanceOf"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+        <modifier type="increment" field="b0b4-6aec-82c2-02ae" value="155.0">
+          <repeats>
+            <repeat field="selections" scope="72aa-2798-089a-a52a" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e20c-48d8-e5e3-1a36" repeats="1" roundUp="false"/>
+          </repeats>
+          <conditions>
+            <condition field="selections" scope="72aa-2798-089a-a52a" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e20c-48d8-e5e3-1a36" type="greaterThan"/>
+          </conditions>
+        </modifier>
+      </modifiers>
       <profiles>
         <profile id="f56d-fa3e-3de0-c216" name="Grimghast Reapers" hidden="false" typeId="3956-f6dd-6c88-ae4b" typeName="Unit">
           <characteristics>
@@ -1218,6 +1259,11 @@ If your army includes more than one SPIRIT TORMENT, at least 3 enemy models must
             <characteristic name="Wounds" typeId="a0c6-af64-2f24-5759">1</characteristic>
             <characteristic name="Save" typeId="93b6-2f96-2df7-e330">4+</characteristic>
             <characteristic name="Bravery" typeId="2420-1c5c-1016-7033">10</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="da2b-a06c-5957-87ee" name="Extoller of Shyish" hidden="false" typeId="c23b-5a30-07e2-4706" typeName="Unit Options">
+          <characteristics>
+            <characteristic name="Unit Option" typeId="5879-9a21-e9d2-539d">The leader of this unit is an Extoller of Shyish. An Extoller of Shyish is armed with a Death Knell instead of a Slasher Scythe.</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -1232,108 +1278,14 @@ If your army includes more than one SPIRIT TORMENT, at least 3 enemy models must
         <categoryLink id="670a-9bb5-866d-e974" name="NIGHTHAUNT" hidden="false" targetId="9af1-04d7-aa3e-c8b0" primary="false"/>
         <categoryLink id="981e-2b96-fac8-e7b5" name="New CategoryLink" hidden="false" targetId="6230-ed60-e374-add4" primary="true"/>
         <categoryLink id="1feb-4452-4330-09c2" name="Summonable" hidden="false" targetId="1e79-ca01-523d-e891" primary="false"/>
+        <categoryLink id="9b47-5f07-c36f-1d20" name="BATTLELINE" hidden="false" targetId="a42d-220e-6a88-7bf6" primary="false"/>
       </categoryLinks>
       <selectionEntries>
         <selectionEntry id="0e31-9fcc-6651-ebea" name="10 Grimghast Reapers" hidden="false" collective="false" import="true" type="model">
-          <modifiers>
-            <modifier type="set" field="b0b4-6aec-82c2-02ae" value="140.0">
-              <conditions>
-                <condition field="selections" scope="parent" value="3.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" type="equalTo"/>
-              </conditions>
-            </modifier>
-          </modifiers>
           <constraints>
-            <constraint field="selections" scope="parent" value="3.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="4c23-3d3f-60fa-fe71" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="4c23-3d3f-60fa-fe71" type="max"/>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="0182-fd2c-3d22-c6d7" type="min"/>
           </constraints>
-          <costs>
-            <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="160.0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="d96c-50f4-b303-ae71" name="Extoller of Shyish" hidden="false" collective="false" import="true" type="upgrade">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="144b-63d4-0347-8c32" type="max"/>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8699-a694-2b2f-34fe" type="min"/>
-          </constraints>
-          <profiles>
-            <profile id="c0ce-486e-f1d5-83e1" name="Extoller of Shyish" hidden="false" typeId="c23b-5a30-07e2-4706" typeName="Unit Options">
-              <characteristics>
-                <characteristic name="Unit Option" typeId="5879-9a21-e9d2-539d">The leader of this unit is an Extoller of Shyish. An Extoller of Shyish is armed with a Death Knell instead of a Slasher Scythe.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <selectionEntries>
-            <selectionEntry id="52ce-789e-9adf-abb5" name="Death Knell" hidden="false" collective="false" import="true" type="upgrade">
-              <constraints>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="e34e-bde1-4e33-0185" type="max"/>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="6df4-6403-8b56-5ce8" type="min"/>
-              </constraints>
-              <profiles>
-                <profile id="9ef4-d7b6-3df0-6737" name="Death Knell" hidden="false" typeId="2905-f6bd-06e5-6642" typeName="Weapon">
-                  <characteristics>
-                    <characteristic name="Type" typeId="1a08-195b-76fd-2c2b">Melee</characteristic>
-                    <characteristic name="Range" typeId="1406-f935-3f8e-b27f">2&quot;</characteristic>
-                    <characteristic name="Attacks" typeId="4c19-dba6-f094-5165">1</characteristic>
-                    <characteristic name="To-Hit" typeId="7a4f-9704-2095-96c8">3+</characteristic>
-                    <characteristic name="To-Wound" typeId="172f-fc84-895b-04b7">3+</characteristic>
-                    <characteristic name="Rend" typeId="0c05-bd2e-b7e7-3925">-1</characteristic>
-                    <characteristic name="Damage" typeId="01c2-d16a-8788-e52b">2</characteristic>
-                  </characteristics>
-                </profile>
-                <profile id="5b06-4683-115a-d982" name="For Whom the Bell Tolls" hidden="false" typeId="7861-da01-01c0-88d9" typeName="Ability">
-                  <characteristics>
-                    <characteristic name="Ability" typeId="9bce-4deb-8b79-eaec">Allocate wounds inflicted by a Death Knell after allocating wounds inflicted by Slasher Scythes. For each enemy model that is slain by wounds inflicted by a Death Knell, you can inflict 1 mortal wound on an enemy unit within 3&quot; of the model armed with the Death Knell.</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-              <costs>
-                <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
-              </costs>
-            </selectionEntry>
-          </selectionEntries>
-          <costs>
-            <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="04bb-052e-fcff-cea4" name="CONDITIONAL BATTLELINE" hidden="false" collective="false" import="true" type="upgrade">
-          <modifiers>
-            <modifier type="set" field="hidden" value="true">
-              <conditionGroups>
-                <conditionGroup type="or">
-                  <conditions>
-                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="e3a6-45ca-4974-b489" type="instanceOf"/>
-                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4373-740f-1bf3-b0aa" type="instanceOf"/>
-                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="6cd6-b22e-bfcb-9589" type="instanceOf"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
-            </modifier>
-            <modifier type="set" field="b11b-bbdc-4742-ab6d" value="0.0">
-              <conditionGroups>
-                <conditionGroup type="or">
-                  <conditions>
-                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="e3a6-45ca-4974-b489" type="instanceOf"/>
-                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4373-740f-1bf3-b0aa" type="instanceOf"/>
-                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="6cd6-b22e-bfcb-9589" type="instanceOf"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
-            </modifier>
-          </modifiers>
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="7d27-1ad5-ab52-0db8" type="max"/>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="b11b-bbdc-4742-ab6d" type="min"/>
-          </constraints>
-          <profiles>
-            <profile id="7670-b632-5cbd-5c08" name="CONDITIONAL BATTLELINE" hidden="false" typeId="77d9-94b6-d8f2-a150" typeName="BATTLELINE">
-              <characteristics>
-                <characteristic name="Condition" typeId="820b-20af-6fd8-5f48">Battleline in Nighthaunt army</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <costs>
-            <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
-          </costs>
         </selectionEntry>
         <selectionEntry id="25b9-51e3-c8d8-528b" name="Slasher Scythe" hidden="false" collective="false" import="true" type="upgrade">
           <constraints>
@@ -1362,9 +1314,79 @@ If your army includes more than one SPIRIT TORMENT, at least 3 enemy models must
             <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
           </costs>
         </selectionEntry>
+        <selectionEntry id="7de9-b299-6f2f-2d42" name="BATTLELINE" hidden="false" collective="false" import="true" type="upgrade">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="e3a6-45ca-4974-b489" type="instanceOf"/>
+                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4373-740f-1bf3-b0aa" type="instanceOf"/>
+                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="6cd6-b22e-bfcb-9589" type="instanceOf"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+            <modifier type="set" field="197a-43d4-a23d-edb7" value="0.0">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="e3a6-45ca-4974-b489" type="instanceOf"/>
+                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4373-740f-1bf3-b0aa" type="instanceOf"/>
+                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="6cd6-b22e-bfcb-9589" type="instanceOf"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="9d30-0e4a-8aee-15d0" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="197a-43d4-a23d-edb7" type="min"/>
+          </constraints>
+          <profiles>
+            <profile id="2d26-6870-3881-b7f7" name="BATTLELINE" hidden="false" typeId="77d9-94b6-d8f2-a150" typeName="BATTLELINE">
+              <characteristics>
+                <characteristic name="Condition" typeId="820b-20af-6fd8-5f48">This unit is Battleline</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <costs>
+            <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="16a7-957e-45bc-faff" name="Death Knell" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="be69-71fd-263f-e6ff" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d58c-ba0e-bbf1-34d8" type="min"/>
+          </constraints>
+          <profiles>
+            <profile id="a4c3-819b-108c-7ff6" name="Death Knell" hidden="false" typeId="2905-f6bd-06e5-6642" typeName="Weapon">
+              <characteristics>
+                <characteristic name="Type" typeId="1a08-195b-76fd-2c2b">Melee</characteristic>
+                <characteristic name="Range" typeId="1406-f935-3f8e-b27f">2&quot;</characteristic>
+                <characteristic name="Attacks" typeId="4c19-dba6-f094-5165">1</characteristic>
+                <characteristic name="To-Hit" typeId="7a4f-9704-2095-96c8">3+</characteristic>
+                <characteristic name="To-Wound" typeId="172f-fc84-895b-04b7">3+</characteristic>
+                <characteristic name="Rend" typeId="0c05-bd2e-b7e7-3925">-1</characteristic>
+                <characteristic name="Damage" typeId="01c2-d16a-8788-e52b">2</characteristic>
+              </characteristics>
+            </profile>
+            <profile id="7548-fd5e-cd7c-0d5b" name="For Whom the Bell Tolls" hidden="false" typeId="7861-da01-01c0-88d9" typeName="Ability">
+              <characteristics>
+                <characteristic name="Ability" typeId="9bce-4deb-8b79-eaec">Allocate wounds inflicted by a Death Knell after allocating wounds inflicted by Slasher Scythes. For each enemy model that is slain by wounds inflicted by a Death Knell, you can inflict 1 mortal wound on an enemy unit within 3&quot; of the model armed with the Death Knell.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <costs>
+            <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
+          </costs>
+        </selectionEntry>
       </selectionEntries>
+      <entryLinks>
+        <entryLink id="ff05-0bbd-39a7-7deb" name="Unit Reinforcement" hidden="false" collective="false" import="true" targetId="b493-d9e6-82ca-5488" type="selectionEntry"/>
+      </entryLinks>
       <costs>
-        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
+        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="155.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="01eb-b55b-5907-bb02" name="Chainrasp Horde" publicationId="6918-4599-9a4b-12c8" hidden="false" collective="false" import="true" type="unit">
@@ -1380,6 +1402,14 @@ If your army includes more than one SPIRIT TORMENT, at least 3 enemy models must
             </conditionGroup>
           </conditionGroups>
         </modifier>
+        <modifier type="increment" field="b0b4-6aec-82c2-02ae" value="95.0">
+          <repeats>
+            <repeat field="selections" scope="01eb-b55b-5907-bb02" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e20c-48d8-e5e3-1a36" repeats="1" roundUp="false"/>
+          </repeats>
+          <conditions>
+            <condition field="selections" scope="01eb-b55b-5907-bb02" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e20c-48d8-e5e3-1a36" type="greaterThan"/>
+          </conditions>
+        </modifier>
       </modifiers>
       <profiles>
         <profile id="7537-abfe-e741-6295" name="Chainrasp Horde" hidden="false" typeId="3956-f6dd-6c88-ae4b" typeName="Unit">
@@ -1393,6 +1423,11 @@ If your army includes more than one SPIRIT TORMENT, at least 3 enemy models must
         <profile id="8653-892d-97a4-e583" name="Chilling Horde" hidden="false" typeId="7861-da01-01c0-88d9" typeName="Ability">
           <characteristics>
             <characteristic name="Ability" typeId="9bce-4deb-8b79-eaec">You can re-roll wound rolls of 1 for this unit while it has more than 10 models.</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="ae94-caac-436b-ecdc" name="Dreadwarden" hidden="false" typeId="c23b-5a30-07e2-4706" typeName="Unit Options">
+          <characteristics>
+            <characteristic name="Unit Option" typeId="5879-9a21-e9d2-539d">The leader of this unit is a Dreadwarden. Add 1 to the Attacks characteristic of a Dreadwarden’s Malignant Weapon. In addition, a Chainrasp Horde has a Bravery characteristic of 10 instead of 6 while it includes a Dreadwarden.</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -1411,30 +1446,10 @@ If your army includes more than one SPIRIT TORMENT, at least 3 enemy models must
       </categoryLinks>
       <selectionEntries>
         <selectionEntry id="02a1-6e50-489c-27d0" name="10 Chainrasps" hidden="false" collective="false" import="true" type="model">
-          <modifiers>
-            <modifier type="set" field="b0b4-6aec-82c2-02ae" value="70.0">
-              <conditions>
-                <condition field="selections" scope="parent" value="4.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" type="equalTo"/>
-              </conditions>
-            </modifier>
-            <modifier type="set" field="8a28-c3a7-f548-4415" value="2.0">
-              <conditionGroups>
-                <conditionGroup type="or">
-                  <conditions>
-                    <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="b6d6-a440-37c4-fefe" type="instanceOf"/>
-                    <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="9e07-d1a7-0a95-92ee" type="instanceOf"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
-            </modifier>
-          </modifiers>
           <constraints>
-            <constraint field="selections" scope="parent" value="4.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="5475-7984-db75-30a6" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="5475-7984-db75-30a6" type="max"/>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8a28-c3a7-f548-4415" type="min"/>
           </constraints>
-          <costs>
-            <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="80.0"/>
-          </costs>
         </selectionEntry>
         <selectionEntry id="8c24-549a-07ec-5a0e" name="Malignant Weapon" hidden="false" collective="false" import="true" type="upgrade">
           <constraints>
@@ -1451,22 +1466,6 @@ If your army includes more than one SPIRIT TORMENT, at least 3 enemy models must
                 <characteristic name="To-Wound" typeId="172f-fc84-895b-04b7">4+</characteristic>
                 <characteristic name="Rend" typeId="0c05-bd2e-b7e7-3925">-</characteristic>
                 <characteristic name="Damage" typeId="01c2-d16a-8788-e52b">1</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <costs>
-            <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="8385-204b-7ea8-3edb" name="Dreadwarden" hidden="false" collective="false" import="true" type="upgrade">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="73d0-41f9-a096-2153" type="max"/>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="f077-aafa-e41f-0edb" type="min"/>
-          </constraints>
-          <profiles>
-            <profile id="f2d3-8071-bd6a-ad95" name="Dreadwarden" hidden="false" typeId="c23b-5a30-07e2-4706" typeName="Unit Options">
-              <characteristics>
-                <characteristic name="Unit Option" typeId="5879-9a21-e9d2-539d">The leader of this unit is a Dreadwarden. Add 1 to the Attacks characteristic of a Dreadwarden’s Malignant Weapon. In addition, a Chainrasp Horde has a Bravery characteristic of 10 instead of 6 while it includes a Dreadwarden.</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -1515,11 +1514,24 @@ If your army includes more than one SPIRIT TORMENT, at least 3 enemy models must
           </costs>
         </selectionEntry>
       </selectionEntries>
+      <entryLinks>
+        <entryLink id="fa4f-4883-0072-2eaa" name="Unit Reinforcement" hidden="false" collective="false" import="true" targetId="b493-d9e6-82ca-5488" type="selectionEntry"/>
+      </entryLinks>
       <costs>
-        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
+        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="95.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="1eb0-2abd-6605-b601" name="Bladegheist Revenants" publicationId="6918-4599-9a4b-12c8" hidden="false" collective="false" import="true" type="unit">
+      <modifiers>
+        <modifier type="increment" field="b0b4-6aec-82c2-02ae" value="190.0">
+          <repeats>
+            <repeat field="selections" scope="1eb0-2abd-6605-b601" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e20c-48d8-e5e3-1a36" repeats="1" roundUp="false"/>
+          </repeats>
+          <conditions>
+            <condition field="selections" scope="1eb0-2abd-6605-b601" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e20c-48d8-e5e3-1a36" type="greaterThan"/>
+          </conditions>
+        </modifier>
+      </modifiers>
       <profiles>
         <profile id="bf23-d2d8-d369-f7d0" name="Bladegheist Revenants" hidden="false" typeId="3956-f6dd-6c88-ae4b" typeName="Unit">
           <characteristics>
@@ -1532,6 +1544,11 @@ If your army includes more than one SPIRIT TORMENT, at least 3 enemy models must
         <profile id="591b-8cb9-1906-8e68" name="Fearful Frenzy" hidden="false" typeId="7861-da01-01c0-88d9" typeName="Ability">
           <characteristics>
             <characteristic name="Ability" typeId="9bce-4deb-8b79-eaec">You can re-roll failed hit rolls for attacks made by this unit if it is wholly within 12&quot; of any friendly SPIRIT TORMENTS or CHAINGHASTS.</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="0b44-552e-32a6-86ad" name="Elite" hidden="false" typeId="7861-da01-01c0-88d9" typeName="Ability">
+          <characteristics>
+            <characteristic name="Ability" typeId="9bce-4deb-8b79-eaec">Models in this unit can issue commands to their own unit.</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -1548,21 +1565,11 @@ If your army includes more than one SPIRIT TORMENT, at least 3 enemy models must
         <categoryLink id="736d-ac48-7e50-8b6b" name="Summonable" hidden="false" targetId="1e79-ca01-523d-e891" primary="false"/>
       </categoryLinks>
       <selectionEntries>
-        <selectionEntry id="0fe1-4065-2983-b5d5" name="5 Bladegheists" hidden="false" collective="false" import="true" type="model">
-          <modifiers>
-            <modifier type="set" field="b0b4-6aec-82c2-02ae" value="80.0">
-              <conditions>
-                <condition field="selections" scope="parent" value="4.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" type="equalTo"/>
-              </conditions>
-            </modifier>
-          </modifiers>
+        <selectionEntry id="0fe1-4065-2983-b5d5" name="10 Bladegheists" hidden="false" collective="false" import="true" type="model">
           <constraints>
-            <constraint field="selections" scope="parent" value="4.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="ec68-642f-d9b7-d585" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="ec68-642f-d9b7-d585" type="max"/>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="4997-00bf-bbd2-a5d5" type="min"/>
           </constraints>
-          <costs>
-            <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="90.0"/>
-          </costs>
         </selectionEntry>
         <selectionEntry id="8148-9af6-6ea8-665b" name="Tomb Greatblade" hidden="false" collective="false" import="true" type="upgrade">
           <constraints>
@@ -1592,11 +1599,24 @@ If your army includes more than one SPIRIT TORMENT, at least 3 enemy models must
           </costs>
         </selectionEntry>
       </selectionEntries>
+      <entryLinks>
+        <entryLink id="da9f-b4a1-3be0-40b1" name="Unit Reinforcement" hidden="false" collective="false" import="true" targetId="b493-d9e6-82ca-5488" type="selectionEntry"/>
+      </entryLinks>
       <costs>
-        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
+        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="190.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="f1fd-4f80-21ea-f614" name="Myrmourn Banshees" publicationId="6918-4599-9a4b-12c8" hidden="false" collective="false" import="true" type="unit">
+      <modifiers>
+        <modifier type="increment" field="b0b4-6aec-82c2-02ae" value="75.0">
+          <repeats>
+            <repeat field="selections" scope="f1fd-4f80-21ea-f614" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e20c-48d8-e5e3-1a36" repeats="1" roundUp="false"/>
+          </repeats>
+          <conditions>
+            <condition field="selections" scope="f1fd-4f80-21ea-f614" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e20c-48d8-e5e3-1a36" type="greaterThan"/>
+          </conditions>
+        </modifier>
+      </modifiers>
       <profiles>
         <profile id="60e2-8f2b-87e8-79a8" name="Myrmourn Banshees" hidden="false" typeId="3956-f6dd-6c88-ae4b" typeName="Unit">
           <characteristics>
@@ -1629,12 +1649,9 @@ Once in each of your hero phases, if this unit is within 6&quot; of an ENDLESS S
       <selectionEntries>
         <selectionEntry id="10ba-0619-e505-da5a" name="4 Myrmourn Banshees" hidden="false" collective="false" import="true" type="model">
           <constraints>
-            <constraint field="selections" scope="parent" value="3.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="5179-2452-de94-c735" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="5179-2452-de94-c735" type="max"/>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="0e03-a823-c1f4-88fc" type="min"/>
           </constraints>
-          <costs>
-            <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="70.0"/>
-          </costs>
         </selectionEntry>
         <selectionEntry id="b332-888b-d124-2a2b" name="Chill Dagger" hidden="false" collective="false" import="true" type="upgrade">
           <constraints>
@@ -1659,11 +1676,24 @@ Once in each of your hero phases, if this unit is within 6&quot; of an ENDLESS S
           </costs>
         </selectionEntry>
       </selectionEntries>
+      <entryLinks>
+        <entryLink id="8dc6-41ab-15e2-d6ce" name="Unit Reinforcement" hidden="false" collective="false" import="true" targetId="b493-d9e6-82ca-5488" type="selectionEntry"/>
+      </entryLinks>
       <costs>
-        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
+        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="75.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="a9c6-073c-787e-e9bc" name="Dreadscythe Harridans" publicationId="6918-4599-9a4b-12c8" hidden="false" collective="false" import="true" type="unit">
+      <modifiers>
+        <modifier type="increment" field="b0b4-6aec-82c2-02ae" value="160.0">
+          <repeats>
+            <repeat field="selections" scope="a9c6-073c-787e-e9bc" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e20c-48d8-e5e3-1a36" repeats="1" roundUp="false"/>
+          </repeats>
+          <conditions>
+            <condition field="selections" scope="a9c6-073c-787e-e9bc" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e20c-48d8-e5e3-1a36" type="greaterThan"/>
+          </conditions>
+        </modifier>
+      </modifiers>
       <profiles>
         <profile id="463a-dee0-232b-e27f" name="Dreadscythe Harridans" hidden="false" typeId="3956-f6dd-6c88-ae4b" typeName="Unit">
           <characteristics>
@@ -1692,21 +1722,11 @@ Once in each of your hero phases, if this unit is within 6&quot; of an ENDLESS S
         <categoryLink id="d6ea-0fe5-d90d-62a7" name="Summonable" hidden="false" targetId="1e79-ca01-523d-e891" primary="false"/>
       </categoryLinks>
       <selectionEntries>
-        <selectionEntry id="a582-a5d7-be0c-daa4" name="5 Dreadscythe Harridans" hidden="false" collective="false" import="true" type="model">
-          <modifiers>
-            <modifier type="set" field="b0b4-6aec-82c2-02ae" value="80.0">
-              <conditions>
-                <condition field="selections" scope="parent" value="4.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" type="equalTo"/>
-              </conditions>
-            </modifier>
-          </modifiers>
+        <selectionEntry id="a582-a5d7-be0c-daa4" name="10 Dreadscythe Harridans" hidden="false" collective="false" import="true" type="model">
           <constraints>
-            <constraint field="selections" scope="parent" value="4.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="1bd7-4d07-5d2b-d68a" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="1bd7-4d07-5d2b-d68a" type="max"/>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="20ae-408c-907e-a265" type="min"/>
           </constraints>
-          <costs>
-            <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="90.0"/>
-          </costs>
         </selectionEntry>
         <selectionEntry id="408f-4ed3-e26e-b4ca" name="Slasher Crone" hidden="false" collective="false" import="true" type="upgrade">
           <modifiers>
@@ -1761,11 +1781,35 @@ Once in each of your hero phases, if this unit is within 6&quot; of an ENDLESS S
           </costs>
         </selectionEntry>
       </selectionEntries>
+      <entryLinks>
+        <entryLink id="3b40-ff5f-3ce5-706e" name="Unit Reinforcement" hidden="false" collective="false" import="true" targetId="b493-d9e6-82ca-5488" type="selectionEntry"/>
+      </entryLinks>
       <costs>
-        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
+        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="160.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="dc64-345a-48a6-d911" name="Spirit Hosts" publicationId="6918-4599-9a4b-12c8" hidden="false" collective="false" import="true" type="unit">
+      <modifiers>
+        <modifier type="remove" field="category" value="a42d-220e-6a88-7bf6">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="6cd6-b22e-bfcb-9589" type="instanceOf"/>
+                <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="e3a6-45ca-4974-b489" type="instanceOf"/>
+                <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4373-740f-1bf3-b0aa" type="instanceOf"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+        <modifier type="increment" field="b0b4-6aec-82c2-02ae" value="125.0">
+          <repeats>
+            <repeat field="selections" scope="dc64-345a-48a6-d911" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e20c-48d8-e5e3-1a36" repeats="1" roundUp="false"/>
+          </repeats>
+          <conditions>
+            <condition field="selections" scope="dc64-345a-48a6-d911" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e20c-48d8-e5e3-1a36" type="greaterThan"/>
+          </conditions>
+        </modifier>
+      </modifiers>
       <profiles>
         <profile id="bfb1-481c-581a-0060" name="Spirit Hosts" hidden="false" typeId="3956-f6dd-6c88-ae4b" typeName="Unit">
           <characteristics>
@@ -1791,12 +1835,9 @@ Once in each of your hero phases, if this unit is within 6&quot; of an ENDLESS S
       <selectionEntries>
         <selectionEntry id="2c01-8146-f170-68e5" name="3 Spirit Hosts" hidden="false" collective="false" import="true" type="model">
           <constraints>
-            <constraint field="selections" scope="parent" value="4.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="0f99-56ec-0f17-a66a" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="0f99-56ec-0f17-a66a" type="max"/>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="3a75-35ea-74b1-4b2d" type="min"/>
           </constraints>
-          <costs>
-            <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="120.0"/>
-          </costs>
         </selectionEntry>
         <selectionEntry id="361e-9647-668b-1c87" name="Spectral Claws and Daggers" hidden="false" collective="false" import="true" type="upgrade">
           <constraints>
@@ -1825,7 +1866,7 @@ Once in each of your hero phases, if this unit is within 6&quot; of an ENDLESS S
             <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="29bb-9381-d2d4-a02e" name="CONDITIONAL BATTLELINE" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="20d7-fd0a-6737-b3ed" name="BATTLELINE" hidden="false" collective="false" import="true" type="upgrade">
           <modifiers>
             <modifier type="set" field="hidden" value="true">
               <conditionGroups>
@@ -1838,7 +1879,7 @@ Once in each of your hero phases, if this unit is within 6&quot; of an ENDLESS S
                 </conditionGroup>
               </conditionGroups>
             </modifier>
-            <modifier type="set" field="d14f-3f13-e085-9870" value="0.0">
+            <modifier type="set" field="6f10-768a-9bde-d45c" value="0.0">
               <conditionGroups>
                 <conditionGroup type="or">
                   <conditions>
@@ -1851,13 +1892,13 @@ Once in each of your hero phases, if this unit is within 6&quot; of an ENDLESS S
             </modifier>
           </modifiers>
           <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="cef1-a270-1129-183e" type="max"/>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d14f-3f13-e085-9870" type="min"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="7ce4-60ac-3511-be81" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="6f10-768a-9bde-d45c" type="min"/>
           </constraints>
           <profiles>
-            <profile id="aec7-2729-1276-2a5f" name="CONDITIONAL BATTLELINE" hidden="false" typeId="77d9-94b6-d8f2-a150" typeName="BATTLELINE">
+            <profile id="ddb4-7280-e6bf-d23b" name="BATTLELINE" hidden="false" typeId="77d9-94b6-d8f2-a150" typeName="BATTLELINE">
               <characteristics>
-                <characteristic name="Condition" typeId="820b-20af-6fd8-5f48">Battleline in Nighthaunt army</characteristic>
+                <characteristic name="Condition" typeId="820b-20af-6fd8-5f48">This unit is Battleline</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -1866,11 +1907,35 @@ Once in each of your hero phases, if this unit is within 6&quot; of an ENDLESS S
           </costs>
         </selectionEntry>
       </selectionEntries>
+      <entryLinks>
+        <entryLink id="17ba-0dd9-fcba-98ab" name="Unit Reinforcement" hidden="false" collective="false" import="true" targetId="b493-d9e6-82ca-5488" type="selectionEntry"/>
+      </entryLinks>
       <costs>
-        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
+        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="125.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="92de-57b3-fbb3-40a6" name="Hexwraiths" publicationId="6918-4599-9a4b-12c8" hidden="false" collective="false" import="true" type="unit">
+      <modifiers>
+        <modifier type="remove" field="category" value="a42d-220e-6a88-7bf6">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="6cd6-b22e-bfcb-9589" type="instanceOf"/>
+                <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="e3a6-45ca-4974-b489" type="instanceOf"/>
+                <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4373-740f-1bf3-b0aa" type="instanceOf"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+        <modifier type="increment" field="b0b4-6aec-82c2-02ae" value="150.0">
+          <repeats>
+            <repeat field="selections" scope="92de-57b3-fbb3-40a6" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e20c-48d8-e5e3-1a36" repeats="1" roundUp="false"/>
+          </repeats>
+          <conditions>
+            <condition field="selections" scope="92de-57b3-fbb3-40a6" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e20c-48d8-e5e3-1a36" type="greaterThan"/>
+          </conditions>
+        </modifier>
+      </modifiers>
       <profiles>
         <profile id="9c54-f659-a77b-539f" name="Hexwraiths" hidden="false" typeId="3956-f6dd-6c88-ae4b" typeName="Unit">
           <characteristics>
@@ -1885,6 +1950,11 @@ Once in each of your hero phases, if this unit is within 6&quot; of an ENDLESS S
             <characteristic name="Ability" typeId="9bce-4deb-8b79-eaec">In your movement phase, immediately after this unit has moved, you can pick an enemy unit that has any models that a model from this unit passed across. If you do so, roll a dice for each model from this unit that passed across the enemy unit. For each roll of 5+, that enemy unit suffers 1 mortal wound.</characteristic>
           </characteristics>
         </profile>
+        <profile id="2370-dca8-a4f4-37eb" name="Hellwraith" hidden="false" typeId="c23b-5a30-07e2-4706" typeName="Unit Options">
+          <characteristics>
+            <characteristic name="Unit Option" typeId="5879-9a21-e9d2-539d">The leader of this unit is a Hellwraith. Add 1 to the Attacks characteristic of a Hellwraith’s Spectral Scythe.</characteristic>
+          </characteristics>
+        </profile>
       </profiles>
       <infoLinks>
         <infoLink id="b630-d5e0-c498-496a" name="Ethereal" hidden="false" targetId="c443-5858-8d6e-c443" type="profile"/>
@@ -1897,6 +1967,7 @@ Once in each of your hero phases, if this unit is within 6&quot; of an ENDLESS S
         <categoryLink id="5f7d-bad5-7f17-3377" name="NIGHTHAUNT" hidden="false" targetId="9af1-04d7-aa3e-c8b0" primary="false"/>
         <categoryLink id="4f60-b33c-6558-194f" name="New CategoryLink" hidden="false" targetId="6230-ed60-e374-add4" primary="true"/>
         <categoryLink id="c4cf-f026-74c4-9fd2" name="Summonable" hidden="false" targetId="1e79-ca01-523d-e891" primary="false"/>
+        <categoryLink id="34ca-7f61-4209-40b3" name="BATTLELINE" hidden="false" targetId="a42d-220e-6a88-7bf6" primary="false"/>
       </categoryLinks>
       <selectionEntries>
         <selectionEntry id="5d6b-4ae3-3391-3463" name="Mount" hidden="false" collective="false" import="true" type="upgrade">
@@ -1966,32 +2037,13 @@ Once in each of your hero phases, if this unit is within 6&quot; of an ENDLESS S
             <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="43aa-f029-5f28-4c52" name="Hellwraith" hidden="false" collective="false" import="true" type="upgrade">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="9a2b-a59e-26a3-2712" type="max"/>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="4951-4892-aea7-2aaa" type="min"/>
-          </constraints>
-          <profiles>
-            <profile id="21ee-361c-5f2e-f159" name="Hellwraith" hidden="false" typeId="c23b-5a30-07e2-4706" typeName="Unit Options">
-              <characteristics>
-                <characteristic name="Unit Option" typeId="5879-9a21-e9d2-539d">The leader of this unit is a Hellwraith. Add 1 to the Attacks characteristic of a Hellwraith’s Spectral Scythe.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <costs>
-            <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
-          </costs>
-        </selectionEntry>
         <selectionEntry id="fb61-b7ae-99f6-eb82" name="5 Hexwraiths" hidden="false" collective="false" import="true" type="model">
           <constraints>
-            <constraint field="selections" scope="parent" value="4.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="289a-6641-af1d-0062" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="289a-6641-af1d-0062" type="max"/>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="ed32-7619-cec8-a4b6" type="min"/>
           </constraints>
-          <costs>
-            <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="130.0"/>
-          </costs>
         </selectionEntry>
-        <selectionEntry id="c0db-cb8e-3029-9b89" name="CONDITIONAL BATTLELINE" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="1f93-8ac0-fccf-daa9" name="BATTLELINE" hidden="false" collective="false" import="true" type="upgrade">
           <modifiers>
             <modifier type="set" field="hidden" value="true">
               <conditionGroups>
@@ -2004,7 +2056,7 @@ Once in each of your hero phases, if this unit is within 6&quot; of an ENDLESS S
                 </conditionGroup>
               </conditionGroups>
             </modifier>
-            <modifier type="set" field="7508-099a-ab22-3428" value="0.0">
+            <modifier type="set" field="c39e-17af-cd94-8b6e" value="0.0">
               <conditionGroups>
                 <conditionGroup type="or">
                   <conditions>
@@ -2017,13 +2069,13 @@ Once in each of your hero phases, if this unit is within 6&quot; of an ENDLESS S
             </modifier>
           </modifiers>
           <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="1446-6fe0-65df-dd2e" type="max"/>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="7508-099a-ab22-3428" type="min"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="7ea0-d220-2b28-9dc2" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="c39e-17af-cd94-8b6e" type="min"/>
           </constraints>
           <profiles>
-            <profile id="5019-8dc2-6843-007b" name="CONDITIONAL BATTLELINE" hidden="false" typeId="77d9-94b6-d8f2-a150" typeName="BATTLELINE">
+            <profile id="f336-ba42-d453-0559" name="BATTLELINE" hidden="false" typeId="77d9-94b6-d8f2-a150" typeName="BATTLELINE">
               <characteristics>
-                <characteristic name="Condition" typeId="820b-20af-6fd8-5f48">Battleline in Nighthaunt army</characteristic>
+                <characteristic name="Condition" typeId="820b-20af-6fd8-5f48">This unit is Battleline</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -2032,8 +2084,11 @@ Once in each of your hero phases, if this unit is within 6&quot; of an ENDLESS S
           </costs>
         </selectionEntry>
       </selectionEntries>
+      <entryLinks>
+        <entryLink id="d73a-fa83-f777-2943" name="Unit Reinforcement" hidden="false" collective="false" import="true" targetId="b493-d9e6-82ca-5488" type="selectionEntry"/>
+      </entryLinks>
       <costs>
-        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
+        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="150.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="2329-d342-7083-c4b0" name="Black Coach" publicationId="6918-4599-9a4b-12c8" hidden="false" collective="false" import="true" type="unit">
@@ -2109,6 +2164,7 @@ In addition, if the unmodified hit roll for an attack made with the Relic Bearer
         <categoryLink id="1f96-f69f-4918-902e" name="Death" hidden="false" targetId="4927-09f0-87d8-4a68" primary="false"/>
         <categoryLink id="617e-a412-c419-2e16" name="Malignant" hidden="false" targetId="4128-85eb-b9a7-54f4" primary="false"/>
         <categoryLink id="f744-7409-0c78-5b4e" name="NIGHTHAUNT" hidden="false" targetId="9af1-04d7-aa3e-c8b0" primary="false"/>
+        <categoryLink id="acee-0706-c204-8745" name="Totem" hidden="false" targetId="29de-3558-f0b3-40ea" primary="false"/>
       </categoryLinks>
       <selectionEntries>
         <selectionEntry id="4751-7766-2dc6-8ab6" name="Steeds and Crew" hidden="false" collective="false" import="true" type="upgrade">
@@ -2512,7 +2568,7 @@ In addition, if the unmodified hit roll for an attack made with the Relic Bearer
         </profile>
       </profiles>
       <categoryLinks>
-        <categoryLink id="6ea1-a578-20ba-bcaf" name="New CategoryLink" hidden="false" targetId="c03a-b1a8-66c6-3637" primary="true"/>
+        <categoryLink id="c6a2-0029-4838-72a3" name="New CategoryLink" hidden="false" targetId="3706-e0e8-674f-c41b" primary="true"/>
       </categoryLinks>
       <costs>
         <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="120.0"/>
@@ -2532,7 +2588,7 @@ In addition, if the unmodified hit roll for an attack made with the Relic Bearer
         </profile>
       </profiles>
       <categoryLinks>
-        <categoryLink id="f34f-dc78-4faf-fe1a" name="New CategoryLink" hidden="false" targetId="c03a-b1a8-66c6-3637" primary="true"/>
+        <categoryLink id="659c-105b-b39f-792f" name="New CategoryLink" hidden="false" targetId="3706-e0e8-674f-c41b" primary="true"/>
       </categoryLinks>
       <costs>
         <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="140.0"/>
@@ -2586,6 +2642,9 @@ In addition, if the unmodified hit roll for an attack made with the Relic Bearer
               </characteristics>
             </profile>
           </profiles>
+          <costs>
+            <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
+          </costs>
         </selectionEntry>
         <selectionEntry id="2423-270b-83c4-4006" name="Phantasmal Torture" hidden="false" collective="false" import="true" type="upgrade">
           <constraints>
@@ -2605,6 +2664,9 @@ In addition, if the unmodified hit roll for an attack made with the Relic Bearer
               </characteristics>
             </profile>
           </profiles>
+          <costs>
+            <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
+          </costs>
         </selectionEntry>
       </selectionEntries>
       <costs>

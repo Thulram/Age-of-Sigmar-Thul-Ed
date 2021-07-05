@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="0154-f530-b576-332d" name="Destruction - Ogor Mawtribes" revision="4" battleScribeVersion="2.03" authorName="Thulram" library="false" gameSystemId="e832-3291-06be-cab1" gameSystemRevision="3" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="0154-f530-b576-332d" name="Destruction - Ogor Mawtribes" revision="5" battleScribeVersion="2.03" authorName="Thulram" library="false" gameSystemId="e832-3291-06be-cab1" gameSystemRevision="5" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <profileTypes>
     <profileType id="be3d-81f2-95ae-0aff" name="Mount Traits">
       <characteristicTypes>
@@ -54,6 +54,8 @@
     <categoryEntry id="dfd4-44cb-ad53-68eb" name="General - Icebrow Hunter" hidden="false"/>
     <categoryEntry id="9e4d-3232-3ba8-209b" name="General - Thundertusk Mount" hidden="false"/>
     <categoryEntry id="fb6d-275a-3cb9-cf57" name="General - Gutbuster" hidden="false"/>
+    <categoryEntry id="8cf2-4aa5-a229-8227" name="SpellAllButcher" hidden="false"/>
+    <categoryEntry id="0853-0d24-2d31-ade0" name="PrayerPlusEverwinter" hidden="false"/>
   </categoryEntries>
   <selectionEntries>
     <selectionEntry id="8f4a-0d71-97f3-1850" name="Hrothgorn and Mantrappers (separate units)" hidden="false" collective="false" import="true" type="upgrade">
@@ -85,7 +87,7 @@
         </entryLink>
       </entryLinks>
       <costs>
-        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="160.0"/>
+        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="170.0"/>
       </costs>
     </selectionEntry>
   </selectionEntries>
@@ -167,7 +169,7 @@
                 <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="e3a6-45ca-4974-b489" type="instanceOf"/>
                 <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="6cd6-b22e-bfcb-9589" type="instanceOf"/>
                 <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4373-740f-1bf3-b0aa" type="instanceOf"/>
-                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="f2b4-3fa5-b76d-26d3" type="equalTo"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="b650-c66a-91c5-7354" type="equalTo"/>
                 <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="fb6d-275a-3cb9-cf57" type="equalTo"/>
               </conditions>
             </conditionGroup>
@@ -188,9 +190,9 @@
                 <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="e3a6-45ca-4974-b489" type="instanceOf"/>
                 <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="6cd6-b22e-bfcb-9589" type="instanceOf"/>
                 <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4373-740f-1bf3-b0aa" type="instanceOf"/>
-                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="f2b4-3fa5-b76d-26d3" type="equalTo"/>
                 <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="fb6d-275a-3cb9-cf57" type="equalTo"/>
                 <condition field="selections" scope="36ff-83e5-65e3-16b9" value="2.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" type="lessThan"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="b650-c66a-91c5-7354" type="equalTo"/>
               </conditions>
             </conditionGroup>
           </conditionGroups>
@@ -257,60 +259,46 @@
             <categoryLink id="37b8-0c52-9bd1-1611" name="General - Beastclaw Raider" hidden="false" targetId="b27a-0c94-2da5-ce72" primary="false"/>
           </categoryLinks>
         </entryLink>
-        <entryLink id="a294-dac2-4385-b21b" name="Everwinter Prayers" hidden="false" collective="false" import="true" targetId="c2f5-ea44-a5ae-9be0" type="selectionEntryGroup"/>
+        <entryLink id="a294-dac2-4385-b21b" name="Prayer Scriptures" hidden="false" collective="false" import="true" targetId="a362-d338-3a8e-de04" type="selectionEntryGroup"/>
       </entryLinks>
     </entryLink>
     <entryLink id="ba2f-d98b-7ba7-c638" name="Stonehorn Beastriders" hidden="false" collective="false" import="true" targetId="7f66-137b-03aa-5a7f" type="selectionEntry">
-      <modifiers>
-        <modifier type="remove" field="category" value="a42d-220e-6a88-7bf6">
+      <modifierGroups>
+        <modifierGroup>
           <conditionGroups>
-            <conditionGroup type="or">
+            <conditionGroup type="and">
               <conditions>
-                <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="e3a6-45ca-4974-b489" type="instanceOf"/>
-                <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="6cd6-b22e-bfcb-9589" type="instanceOf"/>
-                <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4373-740f-1bf3-b0aa" type="instanceOf"/>
-                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="f2b4-3fa5-b76d-26d3" type="equalTo"/>
-                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="b27a-0c94-2da5-ce72" type="equalTo"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="b27a-0c94-2da5-ce72" type="greaterThan"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="b650-c66a-91c5-7354" type="greaterThan"/>
               </conditions>
             </conditionGroup>
           </conditionGroups>
-        </modifier>
-        <modifier type="remove" field="category" value="8ae1-74a9-a02d-3cfa">
-          <conditions>
-            <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="a42d-220e-6a88-7bf6" type="equalTo"/>
-          </conditions>
-        </modifier>
-      </modifiers>
-      <categoryLinks>
-        <categoryLink id="4521-6a4c-03d3-cae7" name="BATTLELINE" hidden="false" targetId="a42d-220e-6a88-7bf6" primary="false"/>
-        <categoryLink id="cfc5-d09d-6194-44fe" name="Battleline Behemoth" hidden="false" targetId="8ae1-74a9-a02d-3cfa" primary="false"/>
-      </categoryLinks>
+          <modifiers>
+            <modifier type="add" field="category" value="a42d-220e-6a88-7bf6"/>
+            <modifier type="remove" field="category" value="7f62-b7f5-32d5-e13b"/>
+            <modifier type="set-primary" field="category" value="6230-ed60-e374-add4"/>
+          </modifiers>
+        </modifierGroup>
+      </modifierGroups>
     </entryLink>
     <entryLink id="879b-94d5-05be-e03c" name="Thundertusk Beastriders" hidden="false" collective="false" import="true" targetId="32cd-49ae-c65c-f5a0" type="selectionEntry">
-      <modifiers>
-        <modifier type="remove" field="category" value="a42d-220e-6a88-7bf6">
+      <modifierGroups>
+        <modifierGroup>
           <conditionGroups>
-            <conditionGroup type="or">
+            <conditionGroup type="and">
               <conditions>
-                <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="e3a6-45ca-4974-b489" type="instanceOf"/>
-                <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="6cd6-b22e-bfcb-9589" type="instanceOf"/>
-                <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4373-740f-1bf3-b0aa" type="instanceOf"/>
-                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="f2b4-3fa5-b76d-26d3" type="equalTo"/>
-                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="b27a-0c94-2da5-ce72" type="equalTo"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="b27a-0c94-2da5-ce72" type="greaterThan"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="b650-c66a-91c5-7354" type="greaterThan"/>
               </conditions>
             </conditionGroup>
           </conditionGroups>
-        </modifier>
-        <modifier type="remove" field="category" value="8ae1-74a9-a02d-3cfa">
-          <conditions>
-            <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="a42d-220e-6a88-7bf6" type="equalTo"/>
-          </conditions>
-        </modifier>
-      </modifiers>
-      <categoryLinks>
-        <categoryLink id="ec2d-5ec6-4191-0f8d" name="BATTLELINE" hidden="false" targetId="a42d-220e-6a88-7bf6" primary="false"/>
-        <categoryLink id="fb06-642e-2386-f4ba" name="Battleline Behemoth" hidden="false" targetId="8ae1-74a9-a02d-3cfa" primary="false"/>
-      </categoryLinks>
+          <modifiers>
+            <modifier type="add" field="category" value="a42d-220e-6a88-7bf6"/>
+            <modifier type="remove" field="category" value="7f62-b7f5-32d5-e13b"/>
+            <modifier type="set-primary" field="category" value="6230-ed60-e374-add4"/>
+          </modifiers>
+        </modifierGroup>
+      </modifierGroups>
     </entryLink>
     <entryLink id="b060-a52b-6d96-0df4" name="Frost Sabres" hidden="false" collective="false" import="true" targetId="a9d7-d4ba-3832-6f0d" type="selectionEntry">
       <modifiers>
@@ -321,8 +309,8 @@
                 <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="e3a6-45ca-4974-b489" type="instanceOf"/>
                 <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="6cd6-b22e-bfcb-9589" type="instanceOf"/>
                 <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4373-740f-1bf3-b0aa" type="instanceOf"/>
-                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="f2b4-3fa5-b76d-26d3" type="equalTo"/>
                 <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="dfd4-44cb-ad53-68eb" type="equalTo"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="b650-c66a-91c5-7354" type="equalTo"/>
               </conditions>
             </conditionGroup>
           </conditionGroups>
@@ -352,8 +340,8 @@
                 <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="e3a6-45ca-4974-b489" type="instanceOf"/>
                 <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="6cd6-b22e-bfcb-9589" type="instanceOf"/>
                 <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4373-740f-1bf3-b0aa" type="instanceOf"/>
-                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="f2b4-3fa5-b76d-26d3" type="equalTo"/>
                 <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="9e4d-3232-3ba8-209b" type="equalTo"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="b650-c66a-91c5-7354" type="equalTo"/>
               </conditions>
             </conditionGroup>
           </conditionGroups>
@@ -372,8 +360,8 @@
                 <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="e3a6-45ca-4974-b489" type="instanceOf"/>
                 <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="6cd6-b22e-bfcb-9589" type="instanceOf"/>
                 <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4373-740f-1bf3-b0aa" type="instanceOf"/>
-                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="f2b4-3fa5-b76d-26d3" type="equalTo"/>
                 <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="b27a-0c94-2da5-ce72" type="equalTo"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="b650-c66a-91c5-7354" type="equalTo"/>
               </conditions>
             </conditionGroup>
           </conditionGroups>
@@ -417,51 +405,49 @@
         <categoryLink id="2cf6-6a49-a781-8a38" name="Allegiance" hidden="false" targetId="af41-ae78-5063-3d36" primary="false"/>
         <categoryLink id="45a4-b0ef-60c8-a905" name="List Options" hidden="false" targetId="29f4-e63d-fa5b-1611" primary="true"/>
       </categoryLinks>
-      <selectionEntryGroups>
-        <selectionEntryGroup id="c8a3-e9ef-1218-dad4" name="Allegiance" hidden="false" collective="false" import="true" defaultSelectionEntryId="f2b4-3fa5-b76d-26d3">
+      <selectionEntries>
+        <selectionEntry id="b650-c66a-91c5-7354" name="Ogor Mawtribes" publicationId="ca59-f8ac-3938-b963" hidden="false" collective="false" import="true" type="upgrade">
           <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="5888-838d-8596-a210" type="max"/>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="a3b9-eb9f-c17a-825b" type="min"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="aedc-7e02-d5cd-2260" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="63ab-8fab-6bc6-1aab" type="min"/>
           </constraints>
-          <selectionEntries>
-            <selectionEntry id="f2b4-3fa5-b76d-26d3" name="Ogor Mawtribes" publicationId="ca59-f8ac-3938-b963" hidden="false" collective="false" import="true" type="upgrade">
-              <profiles>
-                <profile id="0be7-d8b4-c697-6ed4" name="Trampling Charge" hidden="false" typeId="c0c2-177b-e761-ec41" typeName="Allegiance Abilities">
-                  <characteristics>
-                    <characteristic name="Allegiance Ability" typeId="0506-f62d-68b3-5499">After an OGOR or RHINOX unit makes a charge move, you can pick 1 enemy unit within 1&quot; of this unit and roll a number of dice equal to the unmodified charge roll for that charge move. Add 2 to each roll if the OGOR unit that made the charge move has 8 or more models or is a MONSTER. For each 6+, that enemy unit suffers 1 mortal wound.</characteristic>
-                  </characteristics>
-                </profile>
-                <profile id="3ced-cdbb-f5d5-025b" name="Grasp of the Everwinter" hidden="false" typeId="c0c2-177b-e761-ec41" typeName="Allegiance Abilities">
-                  <characteristics>
-                    <characteristic name="Allegiance Ability" typeId="0506-f62d-68b3-5499">At the start of your hero phase, roll 1 dice for each enemy unit within 3&quot; of any friendly BEASTCLAW RAIDERS units. If the roll is equal to or less than the number of the current battle round, that unit suffers D3 mortal wounds.</characteristic>
-                  </characteristics>
-                </profile>
-                <profile id="c230-af3d-2a94-1009" name="Might Makes Right" hidden="false" typeId="c0c2-177b-e761-ec41" typeName="Allegiance Abilities">
-                  <characteristics>
-                    <characteristic name="Allegiance Ability" typeId="0506-f62d-68b3-5499">When determining control of an objective, each OGOR counts as 2 models instead of 1, and each OGOR MONSTER counts as 10 models instead of 1.
+          <profiles>
+            <profile id="1b12-038c-41d2-280e" name="Trampling Charge" hidden="false" typeId="c0c2-177b-e761-ec41" typeName="Allegiance Abilities">
+              <characteristics>
+                <characteristic name="Allegiance Ability" typeId="0506-f62d-68b3-5499">After an OGOR or RHINOX unit makes a charge move, you can pick 1 enemy unit within 1&quot; of this unit and roll a number of dice equal to the unmodified charge roll for that charge move. Add 2 to each roll if the OGOR unit that made the charge move has 8 or more models or is a MONSTER. For each 6+, that enemy unit suffers 1 mortal wound.</characteristic>
+              </characteristics>
+            </profile>
+            <profile id="4335-f06b-0fc2-09ec" name="Grasp of the Everwinter" hidden="false" typeId="c0c2-177b-e761-ec41" typeName="Allegiance Abilities">
+              <characteristics>
+                <characteristic name="Allegiance Ability" typeId="0506-f62d-68b3-5499">At the start of your hero phase, roll 1 dice for each enemy unit within 3&quot; of any friendly BEASTCLAW RAIDERS units. If the roll is equal to or less than the number of the current battle round, that unit suffers D3 mortal wounds.</characteristic>
+              </characteristics>
+            </profile>
+            <profile id="21a5-e80f-22e7-ab2f" name="Might Makes Right" hidden="false" typeId="c0c2-177b-e761-ec41" typeName="Allegiance Abilities">
+              <characteristics>
+                <characteristic name="Allegiance Ability" typeId="0506-f62d-68b3-5499">When determining control of an objective, each OGOR counts as 2 models instead of 1, and each OGOR MONSTER counts as 10 models instead of 1.
 
 Designer’s Note: If the battleplan being played does not follow the normal rules for controlling objectives, the Might Makes Right battle trait cannot be used. However, if an Ogor Mawtribes model is eligible to count as multiple models during a battle, the Ogor Mawtribes player can pick whether to use this battle trait or to follow the battleplan. For example, when determining control of an objective during ‘The Relocation Orb’ from the General’s Handbook 2019, an OGOR MONSTER HERO that bears an artefact of power could count as either 10 or 20 models instead of 1.</characteristic>
-                  </characteristics>
-                </profile>
-                <profile id="3168-1436-8003-6a34" name="Ravenous Brutes" hidden="false" typeId="c0c2-177b-e761-ec41" typeName="Allegiance Abilities">
-                  <characteristics>
-                    <characteristic name="Allegiance Ability" typeId="0506-f62d-68b3-5499">If an OGOR unit is more than 3&quot; from any enemy units, it is hungry. If an OGOR unit is within 3&quot; of any enemy units, it is eating. Add 2&quot; to the Move characteristic of a unit that is hungry. Add 2 to the Bravery characteristic of a unit that is eating.</characteristic>
-                  </characteristics>
-                </profile>
-                <profile id="5f70-74fb-6c91-c350" name="Everwinter Prayers" hidden="false" typeId="c0c2-177b-e761-ec41" typeName="Allegiance Abilities">
-                  <characteristics>
-                    <characteristic name="Allegiance Ability" typeId="0506-f62d-68b3-5499">Each BEASTCLAW RAIDERS PRIEST in an Ogor Mawtribes army knows 1 Everwinter prayer from the Manifestations of the Eternal Snowstorm table in addition to any other prayers they know.
+              </characteristics>
+            </profile>
+            <profile id="2c6e-8538-40b6-adf7" name="Ravenous Brutes" hidden="false" typeId="c0c2-177b-e761-ec41" typeName="Allegiance Abilities">
+              <characteristics>
+                <characteristic name="Allegiance Ability" typeId="0506-f62d-68b3-5499">If an OGOR unit is more than 3&quot; from any enemy units, it is hungry. If an OGOR unit is within 3&quot; of any enemy units, it is eating. Add 2&quot; to the Move characteristic of a unit that is hungry. Add 2 to the Bravery characteristic of a unit that is eating.</characteristic>
+              </characteristics>
+            </profile>
+            <profile id="62ac-6772-6dc4-db61" name="Everwinter Prayers" hidden="false" typeId="c0c2-177b-e761-ec41" typeName="Allegiance Abilities">
+              <characteristics>
+                <characteristic name="Allegiance Ability" typeId="0506-f62d-68b3-5499">Each BEASTCLAW RAIDERS PRIEST in an Ogor Mawtribes army knows 1 Everwinter prayer from the Manifestations of the Eternal Snowstorm table in addition to any other prayers they know.
 
 In your hero phase, each friendly BEASTCLAW RAIDERS PRIEST that knows any Everwinter prayers can chant 1 Everwinter prayer. If they do so, make a prayer roll by rolling a dice.
 
 Each Everwinter prayer has a chanting value. If the prayer roll is equal to or greater than the chanting value of the Everwinter prayer, the prayer is answered.
 
 Each Everwinter prayer can only be attempted once per turn, regardless of how many BEASTCLAW RAIDERS PRIESTS know that Everwinter prayer.</characteristic>
-                  </characteristics>
-                </profile>
-                <profile id="94fe-7546-a5f8-dfe3" name="Mawtribes" hidden="false" typeId="c0c2-177b-e761-ec41" typeName="Allegiance Abilities">
-                  <characteristics>
-                    <characteristic name="Allegiance Ability" typeId="0506-f62d-68b3-5499">If your army is a Ogor Mawtribes army, you can give it a Mawtribe keyword from the list below. All OGOR MAWTRIBES units in your army gain that keyword, and you can use the extra abilities listed for that Mawtribe on the page indicated.
+              </characteristics>
+            </profile>
+            <profile id="5f2e-4eaa-241a-7c68" name="Mawtribes" hidden="false" typeId="c0c2-177b-e761-ec41" typeName="Allegiance Abilities">
+              <characteristics>
+                <characteristic name="Allegiance Ability" typeId="0506-f62d-68b3-5499">If your army is a Ogor Mawtribes army, you can give it a Mawtribe keyword from the list below. All OGOR MAWTRIBES units in your army gain that keyword, and you can use the extra abilities listed for that Mawtribe on the page indicated.
 
 • MEATFIST
 • BLOODGULLET
@@ -471,145 +457,143 @@ Each Everwinter prayer can only be attempted once per turn, regardless of how ma
 • WINTERBITE
 
 If a model already has a Mawtribe keyword on its warscroll, it cannot gain another one. This does not preclude you from including the unit in your army.</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-              <selectionEntryGroups>
-                <selectionEntryGroup id="f786-c311-bbdd-1f7a" name="Mawtribe" hidden="false" collective="false" import="true">
-                  <constraints>
-                    <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="9c90-5758-6b7e-bdce" type="max"/>
-                  </constraints>
-                  <categoryLinks>
-                    <categoryLink id="3c73-0e18-2075-cd80" name="Sub-Allegiance" hidden="false" targetId="4fe1-4d42-25cc-d732" primary="false"/>
-                  </categoryLinks>
-                  <selectionEntries>
-                    <selectionEntry id="379f-1008-4afc-0603" name="Meatfist" hidden="false" collective="false" import="true" type="upgrade">
-                      <profiles>
-                        <profile id="2597-677f-7e94-c387" name="Fleshy Stampede" hidden="false" typeId="c0c2-177b-e761-ec41" typeName="Allegiance Abilities">
-                          <characteristics>
-                            <characteristic name="Allegiance Ability" typeId="0506-f62d-68b3-5499">You can roll 1 additional dice when a MEATFIST unit uses the Trampling Charge battle trait.</characteristic>
-                          </characteristics>
-                        </profile>
-                        <profile id="51af-2dac-aff5-a3bd" name="The Unstoppable Feast" hidden="false" typeId="6364-f76d-fc0c-80bc" typeName="Command Abilities">
-                          <characteristics>
-                            <characteristic name="Command Ability" typeId="36cb-f8a4-d94b-8aa8">You can use this command ability at the start of the combat phase. If you do so, pick 1 friendly MEATFIST HERO. Until the end of that phase, add 1 to the Attacks characteristic of friendly MEATFIST OGOR GLUTTONS units’ Gulping Bite while they are wholly within 18&quot; of that HERO. You cannot pick the same unit to benefit from this command ability more than once per combat phase.</characteristic>
-                          </characteristics>
-                        </profile>
-                      </profiles>
-                      <costs>
-                        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
-                      </costs>
-                    </selectionEntry>
-                    <selectionEntry id="5d43-957b-92c8-e54a" name="Bloodgullet" hidden="false" collective="false" import="true" type="upgrade">
-                      <profiles>
-                        <profile id="cb3f-f8c7-68cd-abba" name="Heralds of the Gulping God" hidden="false" typeId="c0c2-177b-e761-ec41" typeName="Allegiance Abilities">
-                          <characteristics>
-                            <characteristic name="Allegiance Ability" typeId="0506-f62d-68b3-5499">BLOODGULLET BUTCHERS know 1 extra spell from the Lore of Gutmagic. In addition, friendly BLOODGULLET BUTCHERS can attempt to cast 1 extra spell in your hero phase.</characteristic>
-                          </characteristics>
-                        </profile>
-                        <profile id="3fcf-2aa1-535f-3334" name="Bloodbath" hidden="false" typeId="6364-f76d-fc0c-80bc" typeName="Command Abilities">
-                          <characteristics>
-                            <characteristic name="Command Ability" typeId="36cb-f8a4-d94b-8aa8">You can use this command ability at the start of the combat phase. If you do so, pick 1 friendly BLOODGULLET BUTCHER. Until the end of that phase, you can re-roll wound rolls for attacks made with melee weapons by friendly BLOODGULLET OGOR GLUTTONS units that are wholly within 12&quot; of that BLOODGULLET BUTCHER.</characteristic>
-                          </characteristics>
-                        </profile>
-                      </profiles>
-                      <costs>
-                        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
-                      </costs>
-                    </selectionEntry>
-                    <selectionEntry id="1889-1992-e1ef-ac62" name="Underguts" hidden="false" collective="false" import="true" type="upgrade">
-                      <profiles>
-                        <profile id="1d9c-5de8-d18c-0ed5" name="Gunmasters" hidden="false" typeId="c0c2-177b-e761-ec41" typeName="Allegiance Abilities">
-                          <characteristics>
-                            <characteristic name="Allegiance Ability" typeId="0506-f62d-68b3-5499">Leadbelcher Guns used by UNDERGUTS LEADBELCHERS units have a Range characteristic of 18&quot; instead of 12&quot;.</characteristic>
-                          </characteristics>
-                        </profile>
-                        <profile id="bab2-2875-8fb1-37e8" name="Thunderous Salvo" hidden="false" typeId="6364-f76d-fc0c-80bc" typeName="Command Abilities">
-                          <characteristics>
-                            <characteristic name="Command Ability" typeId="36cb-f8a4-d94b-8aa8">You can use this command ability at the start of your shooting phase. If you do so, pick 1 friendly UNDERGUTS HERO. Until the end of that phase, add 1 to the Attacks characteristic of missile weapons used by friendly UNDERGUTS IRONBLASTER units wholly within 12&quot; of that UNDERGUTS HERO. You can only use this command ability once per shooting phase.</characteristic>
-                          </characteristics>
-                        </profile>
-                      </profiles>
-                      <costs>
-                        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
-                      </costs>
-                    </selectionEntry>
-                    <selectionEntry id="3f5f-1785-d858-3149" name="Boulderhead" hidden="false" collective="false" import="true" type="upgrade">
-                      <profiles>
-                        <profile id="36a0-ff4b-990c-832b" name="Fearsome Breed" hidden="false" typeId="c0c2-177b-e761-ec41" typeName="Allegiance Abilities">
-                          <characteristics>
-                            <characteristic name="Allegiance Ability" typeId="0506-f62d-68b3-5499">Add 1 to the Wounds characteristic of friendly BOULDERHEAD MONSTERS. In addition, each BOULDERHEAD HERO on STONEHORN or THUNDERTUSK, instead of only 1, can be given a mount trait.</characteristic>
-                          </characteristics>
-                        </profile>
-                        <profile id="d765-6024-3ee5-631b" name="Dig Deep your Heels!" hidden="false" typeId="6364-f76d-fc0c-80bc" typeName="Command Abilities">
-                          <characteristics>
-                            <characteristic name="Command Ability" typeId="36cb-f8a4-d94b-8aa8">You can use this command ability at the start of any phase. If you do so, pick 1 friendly BOULDERHEAD HERO that has a mount. Until the end of that phase, use the top row on that unit’s damage table, regardless of how many wounds it has suffered.</characteristic>
-                          </characteristics>
-                        </profile>
-                        <profile id="5f82-27a2-793b-e49e" name="Deadly Hail" hidden="false" typeId="c0c2-177b-e761-ec41" typeName="Allegiance Abilities">
-                          <characteristics>
-                            <characteristic name="Allegiance Ability" typeId="0506-f62d-68b3-5499">Add 1 to prayer rolls for Pulverising Hailstorm when a BOULDERHEAD PRIEST is chanting that prayer.</characteristic>
-                          </characteristics>
-                        </profile>
-                      </profiles>
-                      <costs>
-                        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
-                      </costs>
-                    </selectionEntry>
-                    <selectionEntry id="cdaa-7a93-7e2c-9793" name="Thunderbellies" hidden="false" collective="false" import="true" type="upgrade">
-                      <profiles>
-                        <profile id="5030-06b3-1e1b-5284" name="Swift Outflank" hidden="false" typeId="c0c2-177b-e761-ec41" typeName="Allegiance Abilities">
-                          <characteristics>
-                            <characteristic name="Allegiance Ability" typeId="0506-f62d-68b3-5499">Friendly THUNDERBELLIES MOURNFANG PACK units wholly within 12&quot; of the edge of the battlefield at the start of your charge phase can charge in that charge phase even if they ran in the same turn.</characteristic>
-                          </characteristics>
-                        </profile>
-                        <profile id="5368-1593-2c04-af6b" name="Rip and Tear" hidden="false" typeId="6364-f76d-fc0c-80bc" typeName="Command Abilities">
-                          <characteristics>
-                            <characteristic name="Command Ability" typeId="36cb-f8a4-d94b-8aa8">You can use this command ability at the start of the combat phase. If you do so, pick 1 enemy unit with 1 or more wounds allocated to it that is within 6&quot; of a THUNDERBELLIES HERO. Until the end of the phase, you can re-roll wound rolls for attacks made by friendly THUNDERBELLIES MOURNFANG PACK units that target that enemy unit.</characteristic>
-                          </characteristics>
-                        </profile>
-                        <profile id="1713-b362-208f-ced1" name="Riders of the Hurricane" hidden="false" typeId="c0c2-177b-e761-ec41" typeName="Allegiance Abilities">
-                          <characteristics>
-                            <characteristic name="Allegiance Ability" typeId="0506-f62d-68b3-5499">Add 1 to prayer rolls for Keening Gale when a THUNDERBELLIES PRIEST is chanting that prayer.</characteristic>
-                          </characteristics>
-                        </profile>
-                      </profiles>
-                      <costs>
-                        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
-                      </costs>
-                    </selectionEntry>
-                    <selectionEntry id="21ea-8e48-5d75-1d93" name="Winterbite" hidden="false" collective="false" import="true" type="upgrade">
-                      <profiles>
-                        <profile id="2f0c-c196-2ab9-d1f9" name="Ghosts in the Blizzard" hidden="false" typeId="c0c2-177b-e761-ec41" typeName="Allegiance Abilities">
-                          <characteristics>
-                            <characteristic name="Allegiance Ability" typeId="0506-f62d-68b3-5499">Subtract 1 from hit rolls for attacks made with missile weapons that target friendly WINTERBITE units that are wholly within your territory.</characteristic>
-                          </characteristics>
-                        </profile>
-                        <profile id="544f-5ced-00f9-7f29" name="Howl of the Wild" hidden="false" typeId="6364-f76d-fc0c-80bc" typeName="Command Abilities">
-                          <characteristics>
-                            <characteristic name="Command Ability" typeId="36cb-f8a4-d94b-8aa8">You can use this command ability at the start of the combat phase. If you do so, pick 1 friendly WINTERBITE HERO. Friendly WINTERBITE FROST SABRES units and WINTERBITE ICEFALL YHETEES units wholly within 12&quot; of that WINTERBITE HERO can fight at the start of that combat phase. These units cannot fight again in that combat phase unless an ability or spell allows them to fight more than once.</characteristic>
-                          </characteristics>
-                        </profile>
-                        <profile id="1742-73af-af10-71bc" name="Call of the Endless White" hidden="false" typeId="c0c2-177b-e761-ec41" typeName="Allegiance Abilities">
-                          <characteristics>
-                            <characteristic name="Allegiance Ability" typeId="0506-f62d-68b3-5499">Add 1 to prayer rolls for Call of the Blizzard when a WINTERBITE PRIEST is chanting that prayer.</characteristic>
-                          </characteristics>
-                        </profile>
-                      </profiles>
-                      <costs>
-                        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
-                      </costs>
-                    </selectionEntry>
-                  </selectionEntries>
-                </selectionEntryGroup>
-              </selectionEntryGroups>
-              <costs>
-                <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
-              </costs>
-            </selectionEntry>
-          </selectionEntries>
-        </selectionEntryGroup>
-      </selectionEntryGroups>
+              </characteristics>
+            </profile>
+          </profiles>
+          <selectionEntryGroups>
+            <selectionEntryGroup id="9c6e-3f96-3cfd-0cb9" name="Mawtribe" hidden="false" collective="false" import="true">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="9209-3427-c858-1d3a" type="max"/>
+              </constraints>
+              <categoryLinks>
+                <categoryLink id="2372-a1a0-7d07-c84a" name="Sub-Allegiance" hidden="false" targetId="4fe1-4d42-25cc-d732" primary="false"/>
+              </categoryLinks>
+              <selectionEntries>
+                <selectionEntry id="2f5f-017f-6ad5-0e2f" name="Meatfist" hidden="false" collective="false" import="true" type="upgrade">
+                  <profiles>
+                    <profile id="afbe-e600-7a28-b9e8" name="Fleshy Stampede" hidden="false" typeId="c0c2-177b-e761-ec41" typeName="Allegiance Abilities">
+                      <characteristics>
+                        <characteristic name="Allegiance Ability" typeId="0506-f62d-68b3-5499">You can roll 1 additional dice when a MEATFIST unit uses the Trampling Charge battle trait.</characteristic>
+                      </characteristics>
+                    </profile>
+                    <profile id="471d-c623-cd49-8ede" name="The Unstoppable Feast" hidden="false" typeId="6364-f76d-fc0c-80bc" typeName="Command Abilities">
+                      <characteristics>
+                        <characteristic name="Command Ability" typeId="36cb-f8a4-d94b-8aa8">You can use this command ability at the start of the combat phase. If you do so, pick 1 friendly MEATFIST HERO. Until the end of that phase, add 1 to the Attacks characteristic of friendly MEATFIST OGOR GLUTTONS units’ Gulping Bite while they are wholly within 18&quot; of that HERO. You cannot pick the same unit to benefit from this command ability more than once per combat phase.</characteristic>
+                      </characteristics>
+                    </profile>
+                  </profiles>
+                  <costs>
+                    <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
+                  </costs>
+                </selectionEntry>
+                <selectionEntry id="da81-1b01-a5ae-cc2e" name="Bloodgullet" hidden="false" collective="false" import="true" type="upgrade">
+                  <profiles>
+                    <profile id="ba03-17ea-4ad9-f355" name="Heralds of the Gulping God" hidden="false" typeId="c0c2-177b-e761-ec41" typeName="Allegiance Abilities">
+                      <characteristics>
+                        <characteristic name="Allegiance Ability" typeId="0506-f62d-68b3-5499">BLOODGULLET BUTCHERS know 1 extra spell from the Lore of Gutmagic. In addition, friendly BLOODGULLET BUTCHERS can attempt to cast 1 extra spell in your hero phase.</characteristic>
+                      </characteristics>
+                    </profile>
+                    <profile id="2f73-e3d4-030b-f3ca" name="Bloodbath" hidden="false" typeId="6364-f76d-fc0c-80bc" typeName="Command Abilities">
+                      <characteristics>
+                        <characteristic name="Command Ability" typeId="36cb-f8a4-d94b-8aa8">You can use this command ability at the start of the combat phase. If you do so, pick 1 friendly BLOODGULLET BUTCHER. Until the end of that phase, you can re-roll wound rolls for attacks made with melee weapons by friendly BLOODGULLET OGOR GLUTTONS units that are wholly within 12&quot; of that BLOODGULLET BUTCHER.</characteristic>
+                      </characteristics>
+                    </profile>
+                  </profiles>
+                  <costs>
+                    <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
+                  </costs>
+                </selectionEntry>
+                <selectionEntry id="24db-e40b-45c7-b3fb" name="Underguts" hidden="false" collective="false" import="true" type="upgrade">
+                  <profiles>
+                    <profile id="0d70-313b-5faf-904a" name="Gunmasters" hidden="false" typeId="c0c2-177b-e761-ec41" typeName="Allegiance Abilities">
+                      <characteristics>
+                        <characteristic name="Allegiance Ability" typeId="0506-f62d-68b3-5499">Leadbelcher Guns used by UNDERGUTS LEADBELCHERS units have a Range characteristic of 18&quot; instead of 12&quot;.</characteristic>
+                      </characteristics>
+                    </profile>
+                    <profile id="ae5a-7ff6-1cab-0a85" name="Thunderous Salvo" hidden="false" typeId="6364-f76d-fc0c-80bc" typeName="Command Abilities">
+                      <characteristics>
+                        <characteristic name="Command Ability" typeId="36cb-f8a4-d94b-8aa8">You can use this command ability at the start of your shooting phase. If you do so, pick 1 friendly UNDERGUTS HERO. Until the end of that phase, add 1 to the Attacks characteristic of missile weapons used by friendly UNDERGUTS IRONBLASTER units wholly within 12&quot; of that UNDERGUTS HERO. You can only use this command ability once per shooting phase.</characteristic>
+                      </characteristics>
+                    </profile>
+                  </profiles>
+                  <costs>
+                    <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
+                  </costs>
+                </selectionEntry>
+                <selectionEntry id="b23e-983e-32d1-15db" name="Boulderhead" hidden="false" collective="false" import="true" type="upgrade">
+                  <profiles>
+                    <profile id="bea0-5b31-f47c-4d16" name="Fearsome Breed" hidden="false" typeId="c0c2-177b-e761-ec41" typeName="Allegiance Abilities">
+                      <characteristics>
+                        <characteristic name="Allegiance Ability" typeId="0506-f62d-68b3-5499">Add 1 to the Wounds characteristic of friendly BOULDERHEAD MONSTERS. In addition, each BOULDERHEAD HERO on STONEHORN or THUNDERTUSK, instead of only 1, can be given a mount trait.</characteristic>
+                      </characteristics>
+                    </profile>
+                    <profile id="b56f-6e9c-c47f-e8c6" name="Dig Deep your Heels!" hidden="false" typeId="6364-f76d-fc0c-80bc" typeName="Command Abilities">
+                      <characteristics>
+                        <characteristic name="Command Ability" typeId="36cb-f8a4-d94b-8aa8">You can use this command ability at the start of any phase. If you do so, pick 1 friendly BOULDERHEAD HERO that has a mount. Until the end of that phase, use the top row on that unit’s damage table, regardless of how many wounds it has suffered.</characteristic>
+                      </characteristics>
+                    </profile>
+                    <profile id="d37e-0a70-4af1-81e7" name="Deadly Hail" hidden="false" typeId="c0c2-177b-e761-ec41" typeName="Allegiance Abilities">
+                      <characteristics>
+                        <characteristic name="Allegiance Ability" typeId="0506-f62d-68b3-5499">Add 1 to chanting rolls for Pulverising Hailstorm when a BOULDERHEAD PRIEST is chanting that prayer.</characteristic>
+                      </characteristics>
+                    </profile>
+                  </profiles>
+                  <costs>
+                    <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
+                  </costs>
+                </selectionEntry>
+                <selectionEntry id="e6c8-5fd5-0598-f08b" name="Thunderbellies" hidden="false" collective="false" import="true" type="upgrade">
+                  <profiles>
+                    <profile id="18fb-6384-72f1-d714" name="Swift Outflank" hidden="false" typeId="c0c2-177b-e761-ec41" typeName="Allegiance Abilities">
+                      <characteristics>
+                        <characteristic name="Allegiance Ability" typeId="0506-f62d-68b3-5499">Friendly THUNDERBELLIES MOURNFANG PACK units wholly within 12&quot; of the edge of the battlefield at the start of your charge phase can charge in that charge phase even if they ran in the same turn.</characteristic>
+                      </characteristics>
+                    </profile>
+                    <profile id="fcb5-e102-5496-6dea" name="Rip and Tear" hidden="false" typeId="6364-f76d-fc0c-80bc" typeName="Command Abilities">
+                      <characteristics>
+                        <characteristic name="Command Ability" typeId="36cb-f8a4-d94b-8aa8">You can use this command ability at the start of the combat phase. If you do so, pick 1 enemy unit with 1 or more wounds allocated to it that is within 6&quot; of a THUNDERBELLIES HERO. Until the end of the phase, you can re-roll wound rolls for attacks made by friendly THUNDERBELLIES MOURNFANG PACK units that target that enemy unit.</characteristic>
+                      </characteristics>
+                    </profile>
+                    <profile id="29cc-08d3-d31a-c35d" name="Riders of the Hurricane" hidden="false" typeId="c0c2-177b-e761-ec41" typeName="Allegiance Abilities">
+                      <characteristics>
+                        <characteristic name="Allegiance Ability" typeId="0506-f62d-68b3-5499">Add 1 to chanting rolls for Keening Gale when a THUNDERBELLIES PRIEST is chanting that prayer.</characteristic>
+                      </characteristics>
+                    </profile>
+                  </profiles>
+                  <costs>
+                    <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
+                  </costs>
+                </selectionEntry>
+                <selectionEntry id="bf9e-c4df-4548-0c51" name="Winterbite" hidden="false" collective="false" import="true" type="upgrade">
+                  <profiles>
+                    <profile id="5fac-127c-fca5-9602" name="Ghosts in the Blizzard" hidden="false" typeId="c0c2-177b-e761-ec41" typeName="Allegiance Abilities">
+                      <characteristics>
+                        <characteristic name="Allegiance Ability" typeId="0506-f62d-68b3-5499">Subtract 1 from hit rolls for attacks made with missile weapons that target friendly WINTERBITE units that are wholly within your territory.</characteristic>
+                      </characteristics>
+                    </profile>
+                    <profile id="672c-34b3-63d8-fc59" name="Howl of the Wild" hidden="false" typeId="6364-f76d-fc0c-80bc" typeName="Command Abilities">
+                      <characteristics>
+                        <characteristic name="Command Ability" typeId="36cb-f8a4-d94b-8aa8">You can use this command ability at the start of the combat phase. If you do so, pick 1 friendly WINTERBITE HERO. Friendly WINTERBITE FROST SABRES units and WINTERBITE ICEFALL YHETEES units wholly within 12&quot; of that WINTERBITE HERO can fight at the start of that combat phase. These units cannot fight again in that combat phase unless an ability or spell allows them to fight more than once.</characteristic>
+                      </characteristics>
+                    </profile>
+                    <profile id="67c6-7a62-7720-250f" name="Call of the Endless White" hidden="false" typeId="c0c2-177b-e761-ec41" typeName="Allegiance Abilities">
+                      <characteristics>
+                        <characteristic name="Allegiance Ability" typeId="0506-f62d-68b3-5499">Add 1 to chanting rolls for Call of the Blizzard when a WINTERBITE PRIEST is chanting that prayer.</characteristic>
+                      </characteristics>
+                    </profile>
+                  </profiles>
+                  <costs>
+                    <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
+                  </costs>
+                </selectionEntry>
+              </selectionEntries>
+            </selectionEntryGroup>
+          </selectionEntryGroups>
+          <costs>
+            <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
+          </costs>
+        </selectionEntry>
+      </selectionEntries>
       <costs>
         <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
       </costs>
@@ -621,36 +605,32 @@ If a model already has a Mawtribe keyword on its warscroll, it cannot gain anoth
       <profiles>
         <profile id="aba7-574a-da64-c9e6" name="Great Mawpot Set-Up" hidden="false" typeId="d508-c1d5-a06f-0103" typeName="Scenery Set-Up">
           <characteristics>
-            <characteristic name="Set-Up Rules" typeId="fb13-8187-bb28-76fe">An Ogor Mawtribes army can include 1 GREAT MAWPOT terrain feature.
-
-After territories have been chosen but before armies are set up, you can set up the GREAT MAWPOT anywhere on the battlefield more than 3&quot; from any other terrain features, more than 12&quot; from enemy territory and more than 6&quot; from any objectives.
-
-If both players can set up a terrain feature before armies are set up, they must roll off, and the winner can choose the order in which the terrain features are set up.
-
-A Great Mawpot is a single terrain feature. It is an obstacle.</characteristic>
+            <characteristic name="Set-Up Rules" typeId="fb13-8187-bb28-76fe">After territories are determined, you can set up this faction terrain feature wholly within your territory and more than 3&quot; from all objectives and other terrain features. If both players can set up faction terrain features at the same time, they must roll off and the winner chooses who sets up their faction terrain features first.</characteristic>
           </characteristics>
         </profile>
         <profile id="bc03-37dc-5a64-e540" name="Vessel of the Gulping God" hidden="false" typeId="1c58-2b3d-482e-2a35" typeName="Scenery Rules">
           <characteristics>
-            <characteristic name="Scenery Rule" typeId="a333-0c4a-7f67-677c">Add 1 to casting or unbinding rolls for OGOR WIZARDS while they are within 1&quot; of a GREAT MAWPOT from your army.</characteristic>
+            <characteristic name="Scenery Rule" typeId="a333-0c4a-7f67-677c">Add 1 to casting, unbinding and dispelling rolls for friendly OGOR WIZARDS that are within 1&quot; of this terrain feature.</characteristic>
           </characteristics>
         </profile>
         <profile id="7866-b90c-2c36-a9bc" name="Battlebroth" hidden="false" typeId="1c58-2b3d-482e-2a35" typeName="Scenery Rules">
           <characteristics>
-            <characteristic name="Scenery Rule" typeId="a333-0c4a-7f67-677c">A GREAT MAWPOT is said to be either full or empty. At the start of the battle, it is full. In your hero phase, 1 friendly OGOR HERO within 6&quot; of a full GREAT MAWPOT from your army can spend all of that GREAT MAWPOT ’s magic. If they do so, you can heal D3 wounds allocated to each friendly OGOR unit wholly within 36&quot; of that GREAT MAWPOT (roll separately for each unit). Once the GREAT MAWPOT ’s magic has been spent, it is empty.</characteristic>
+            <characteristic name="Scenery Rule" typeId="a333-0c4a-7f67-677c">A Great Mawpot is either full or empty. At the start of the battle, it is full. In your hero phase, 1 friendly OGOR HERO within 6&quot; of a full Great Mawpot in your army can spend all of that Great Mawpot’s magic. If they do so, you can heal D3 wounds allocated to each friendly OGOR unit wholly within 36&quot; of that Great Mawpot (roll separately for each unit). Once all of the Great Mawpot’s magic has been spent, it is empty.</characteristic>
           </characteristics>
         </profile>
         <profile id="fe48-773b-2280-4726" name="Throw &apos;Em In" hidden="false" typeId="1c58-2b3d-482e-2a35" typeName="Scenery Rules">
           <characteristics>
-            <characteristic name="Scenery Rule" typeId="a333-0c4a-7f67-677c">If an enemy model is slain within 6&quot; of an empty GREAT MAWPOT from your army, it becomes full.</characteristic>
+            <characteristic name="Scenery Rule" typeId="a333-0c4a-7f67-677c">If an enemy model is slain within 6&quot; of an empty Great Mawpot in your army, it becomes full.</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="17c0-977c-35df-1e14" name="Impassable" hidden="false" typeId="ce32-0c40-1990-4c8a" typeName="Restriction">
+          <characteristics>
+            <characteristic name="Restriction" typeId="edbe-5fe5-1142-afa6">You cannot move models over this terrain feature unless it can fly, and you cannot move a model onto this terrain feature or set up a model on this terrain feature (even if it can fly).</characteristic>
           </characteristics>
         </profile>
       </profiles>
       <categoryLinks>
-        <categoryLink id="58d4-c154-2a06-0681" name="Great Mawpot" hidden="false" targetId="3150-1b4f-2b04-68c8" primary="false"/>
-        <categoryLink id="c31d-3206-82d7-34da" name="New CategoryLink" hidden="false" targetId="ecf9-78bd-d326-2a82" primary="true"/>
-        <categoryLink id="ce85-849e-b89c-434c" name="Scenery" hidden="false" targetId="bab2-426b-5501-5fe8" primary="false"/>
-        <categoryLink id="f03b-8ea4-4e60-aabe" name="OGOR MAWTRIBES" hidden="false" targetId="d684-be47-1dbe-7ca4" primary="false"/>
+        <categoryLink id="bc48-6e17-ecab-2c25" name="New CategoryLink" hidden="false" targetId="29f4-e63d-fa5b-1611" primary="true"/>
       </categoryLinks>
       <costs>
         <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
@@ -665,7 +645,7 @@ A Great Mawpot is a single terrain feature. It is an obstacle.</characteristic>
         </profile>
       </profiles>
       <categoryLinks>
-        <categoryLink id="cfa0-01db-41ea-2332" name="New CategoryLink" hidden="false" targetId="c03a-b1a8-66c6-3637" primary="true"/>
+        <categoryLink id="ccb9-a61e-8810-5ff6" name="New CategoryLink" hidden="false" targetId="3706-e0e8-674f-c41b" primary="true"/>
       </categoryLinks>
       <selectionEntryGroups>
         <selectionEntryGroup id="9d76-cd43-9d15-0d5e" name="1-3 Stonehorn Beastriders" hidden="false" collective="false" import="true">
@@ -674,31 +654,24 @@ A Great Mawpot is a single terrain feature. It is an obstacle.</characteristic>
             <constraint field="selections" scope="parent" value="3.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="51e9-c1e8-50f9-d972" type="max"/>
           </constraints>
           <entryLinks>
-            <entryLink id="ce27-2bf1-19f0-5bf9" name="Stonehorn Beastriders" hidden="false" collective="false" import="true" targetId="7f66-137b-03aa-5a7f" type="selectionEntry">
-              <modifiers>
-                <modifier type="remove" field="category" value="a42d-220e-6a88-7bf6">
+            <entryLink id="bb7c-fd80-3177-1b51" name="Stonehorn Beastriders" hidden="false" collective="false" import="true" targetId="7f66-137b-03aa-5a7f" type="selectionEntry">
+              <modifierGroups>
+                <modifierGroup>
                   <conditionGroups>
-                    <conditionGroup type="or">
+                    <conditionGroup type="and">
                       <conditions>
-                        <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="e3a6-45ca-4974-b489" type="instanceOf"/>
-                        <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="6cd6-b22e-bfcb-9589" type="instanceOf"/>
-                        <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4373-740f-1bf3-b0aa" type="instanceOf"/>
-                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="f2b4-3fa5-b76d-26d3" type="equalTo"/>
-                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="b27a-0c94-2da5-ce72" type="equalTo"/>
+                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="b27a-0c94-2da5-ce72" type="greaterThan"/>
+                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="b650-c66a-91c5-7354" type="greaterThan"/>
                       </conditions>
                     </conditionGroup>
                   </conditionGroups>
-                </modifier>
-                <modifier type="remove" field="category" value="8ae1-74a9-a02d-3cfa">
-                  <conditions>
-                    <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="a42d-220e-6a88-7bf6" type="equalTo"/>
-                  </conditions>
-                </modifier>
-              </modifiers>
-              <categoryLinks>
-                <categoryLink id="a7f2-aa90-af96-450a" name="BATTLELINE" hidden="false" targetId="a42d-220e-6a88-7bf6" primary="false"/>
-                <categoryLink id="0636-e208-3754-e393" name="Battleline Behemoth" hidden="false" targetId="8ae1-74a9-a02d-3cfa" primary="false"/>
-              </categoryLinks>
+                  <modifiers>
+                    <modifier type="add" field="category" value="a42d-220e-6a88-7bf6"/>
+                    <modifier type="remove" field="category" value="7f62-b7f5-32d5-e13b"/>
+                    <modifier type="set-primary" field="category" value="6230-ed60-e374-add4"/>
+                  </modifiers>
+                </modifierGroup>
+              </modifierGroups>
             </entryLink>
           </entryLinks>
         </selectionEntryGroup>
@@ -717,8 +690,8 @@ A Great Mawpot is a single terrain feature. It is an obstacle.</characteristic>
                         <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="e3a6-45ca-4974-b489" type="instanceOf"/>
                         <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="6cd6-b22e-bfcb-9589" type="instanceOf"/>
                         <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4373-740f-1bf3-b0aa" type="instanceOf"/>
-                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="f2b4-3fa5-b76d-26d3" type="equalTo"/>
                         <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="b27a-0c94-2da5-ce72" type="equalTo"/>
+                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="b650-c66a-91c5-7354" type="equalTo"/>
                       </conditions>
                     </conditionGroup>
                   </conditionGroups>
@@ -764,7 +737,7 @@ A Great Mawpot is a single terrain feature. It is an obstacle.</characteristic>
         </profile>
       </profiles>
       <categoryLinks>
-        <categoryLink id="718f-0bd8-4699-390b" name="New CategoryLink" hidden="false" targetId="c03a-b1a8-66c6-3637" primary="true"/>
+        <categoryLink id="22d2-c24c-8840-aaa2" name="New CategoryLink" hidden="false" targetId="3706-e0e8-674f-c41b" primary="true"/>
       </categoryLinks>
       <selectionEntryGroups>
         <selectionEntryGroup id="7397-5cc0-dbb4-69ba" name="1-3 Stonehorn Beastriders" hidden="false" collective="false" import="true">
@@ -773,31 +746,24 @@ A Great Mawpot is a single terrain feature. It is an obstacle.</characteristic>
             <constraint field="selections" scope="parent" value="3.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="1c99-c68a-3129-225b" type="max"/>
           </constraints>
           <entryLinks>
-            <entryLink id="2706-218e-66ba-febd" name="Stonehorn Beastriders" hidden="false" collective="false" import="true" targetId="7f66-137b-03aa-5a7f" type="selectionEntry">
-              <modifiers>
-                <modifier type="remove" field="category" value="a42d-220e-6a88-7bf6">
+            <entryLink id="6aa6-c06d-c1b5-57db" name="Stonehorn Beastriders" hidden="false" collective="false" import="true" targetId="7f66-137b-03aa-5a7f" type="selectionEntry">
+              <modifierGroups>
+                <modifierGroup>
                   <conditionGroups>
-                    <conditionGroup type="or">
+                    <conditionGroup type="and">
                       <conditions>
-                        <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="e3a6-45ca-4974-b489" type="instanceOf"/>
-                        <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="6cd6-b22e-bfcb-9589" type="instanceOf"/>
-                        <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4373-740f-1bf3-b0aa" type="instanceOf"/>
-                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="f2b4-3fa5-b76d-26d3" type="equalTo"/>
-                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="b27a-0c94-2da5-ce72" type="equalTo"/>
+                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="b27a-0c94-2da5-ce72" type="greaterThan"/>
+                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="b650-c66a-91c5-7354" type="greaterThan"/>
                       </conditions>
                     </conditionGroup>
                   </conditionGroups>
-                </modifier>
-                <modifier type="remove" field="category" value="8ae1-74a9-a02d-3cfa">
-                  <conditions>
-                    <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="a42d-220e-6a88-7bf6" type="equalTo"/>
-                  </conditions>
-                </modifier>
-              </modifiers>
-              <categoryLinks>
-                <categoryLink id="34ee-db59-108a-92ba" name="BATTLELINE" hidden="false" targetId="a42d-220e-6a88-7bf6" primary="false"/>
-                <categoryLink id="35de-e7b5-6d3b-8e06" name="Battleline Behemoth" hidden="false" targetId="8ae1-74a9-a02d-3cfa" primary="false"/>
-              </categoryLinks>
+                  <modifiers>
+                    <modifier type="add" field="category" value="a42d-220e-6a88-7bf6"/>
+                    <modifier type="remove" field="category" value="7f62-b7f5-32d5-e13b"/>
+                    <modifier type="set-primary" field="category" value="6230-ed60-e374-add4"/>
+                  </modifiers>
+                </modifierGroup>
+              </modifierGroups>
             </entryLink>
           </entryLinks>
         </selectionEntryGroup>
@@ -816,8 +782,8 @@ A Great Mawpot is a single terrain feature. It is an obstacle.</characteristic>
                         <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="e3a6-45ca-4974-b489" type="instanceOf"/>
                         <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="6cd6-b22e-bfcb-9589" type="instanceOf"/>
                         <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4373-740f-1bf3-b0aa" type="instanceOf"/>
-                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="f2b4-3fa5-b76d-26d3" type="equalTo"/>
                         <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="b27a-0c94-2da5-ce72" type="equalTo"/>
+                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="b650-c66a-91c5-7354" type="equalTo"/>
                       </conditions>
                     </conditionGroup>
                   </conditionGroups>
@@ -863,7 +829,7 @@ A Great Mawpot is a single terrain feature. It is an obstacle.</characteristic>
         </profile>
       </profiles>
       <categoryLinks>
-        <categoryLink id="84f1-4fc1-eaf4-2b19" name="New CategoryLink" hidden="false" targetId="c03a-b1a8-66c6-3637" primary="true"/>
+        <categoryLink id="58dd-984c-e72f-92ab" name="New CategoryLink" hidden="false" targetId="3706-e0e8-674f-c41b" primary="true"/>
       </categoryLinks>
       <selectionEntryGroups>
         <selectionEntryGroup id="45e9-cecc-5272-6968" name="0-3 units of Icefall Yhetees" hidden="false" collective="false" import="true">
@@ -880,8 +846,8 @@ A Great Mawpot is a single terrain feature. It is an obstacle.</characteristic>
                         <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="e3a6-45ca-4974-b489" type="instanceOf"/>
                         <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="6cd6-b22e-bfcb-9589" type="instanceOf"/>
                         <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4373-740f-1bf3-b0aa" type="instanceOf"/>
-                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="f2b4-3fa5-b76d-26d3" type="equalTo"/>
                         <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="9e4d-3232-3ba8-209b" type="equalTo"/>
+                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="b650-c66a-91c5-7354" type="equalTo"/>
                       </conditions>
                     </conditionGroup>
                   </conditionGroups>
@@ -899,31 +865,24 @@ A Great Mawpot is a single terrain feature. It is an obstacle.</characteristic>
             <constraint field="selections" scope="parent" value="9.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="33af-0acc-404f-86ef" type="max"/>
           </constraints>
           <entryLinks>
-            <entryLink id="913f-0a9d-cd4f-4dda" name="Thundertusk Beastriders" hidden="false" collective="false" import="true" targetId="32cd-49ae-c65c-f5a0" type="selectionEntry">
-              <modifiers>
-                <modifier type="remove" field="category" value="a42d-220e-6a88-7bf6">
+            <entryLink id="bf5f-782c-addd-096b" name="Thundertusk Beastriders" hidden="false" collective="false" import="true" targetId="32cd-49ae-c65c-f5a0" type="selectionEntry">
+              <modifierGroups>
+                <modifierGroup>
                   <conditionGroups>
-                    <conditionGroup type="or">
+                    <conditionGroup type="and">
                       <conditions>
-                        <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="e3a6-45ca-4974-b489" type="instanceOf"/>
-                        <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="6cd6-b22e-bfcb-9589" type="instanceOf"/>
-                        <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4373-740f-1bf3-b0aa" type="instanceOf"/>
-                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="f2b4-3fa5-b76d-26d3" type="equalTo"/>
-                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="b27a-0c94-2da5-ce72" type="equalTo"/>
+                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="b27a-0c94-2da5-ce72" type="greaterThan"/>
+                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="b650-c66a-91c5-7354" type="greaterThan"/>
                       </conditions>
                     </conditionGroup>
                   </conditionGroups>
-                </modifier>
-                <modifier type="remove" field="category" value="8ae1-74a9-a02d-3cfa">
-                  <conditions>
-                    <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="a42d-220e-6a88-7bf6" type="equalTo"/>
-                  </conditions>
-                </modifier>
-              </modifiers>
-              <categoryLinks>
-                <categoryLink id="efe5-7022-ba7d-8f5e" name="BATTLELINE" hidden="false" targetId="a42d-220e-6a88-7bf6" primary="false"/>
-                <categoryLink id="64b8-3742-9f57-4a75" name="Battleline Behemoth" hidden="false" targetId="8ae1-74a9-a02d-3cfa" primary="false"/>
-              </categoryLinks>
+                  <modifiers>
+                    <modifier type="add" field="category" value="a42d-220e-6a88-7bf6"/>
+                    <modifier type="remove" field="category" value="7f62-b7f5-32d5-e13b"/>
+                    <modifier type="set-primary" field="category" value="6230-ed60-e374-add4"/>
+                  </modifiers>
+                </modifierGroup>
+              </modifierGroups>
             </entryLink>
           </entryLinks>
         </selectionEntryGroup>
@@ -943,7 +902,7 @@ A Great Mawpot is a single terrain feature. It is an obstacle.</characteristic>
                     <categoryLink id="712c-974a-be61-fa97" name="General - Beastclaw Raider" hidden="false" targetId="b27a-0c94-2da5-ce72" primary="false"/>
                   </categoryLinks>
                 </entryLink>
-                <entryLink id="2eba-edc6-fe0f-8d13" name="Everwinter Prayers" hidden="false" collective="false" import="true" targetId="c2f5-ea44-a5ae-9be0" type="selectionEntryGroup"/>
+                <entryLink id="2eba-edc6-fe0f-8d13" name="Prayer Scriptures" hidden="false" collective="false" import="true" targetId="a362-d338-3a8e-de04" type="selectionEntryGroup"/>
               </entryLinks>
             </entryLink>
           </entryLinks>
@@ -962,7 +921,7 @@ A Great Mawpot is a single terrain feature. It is an obstacle.</characteristic>
         </profile>
       </profiles>
       <categoryLinks>
-        <categoryLink id="ec48-75b1-f33a-27c3" name="New CategoryLink" hidden="false" targetId="c03a-b1a8-66c6-3637" primary="true"/>
+        <categoryLink id="e61f-83ba-0a42-0ab6" name="New CategoryLink" hidden="false" targetId="3706-e0e8-674f-c41b" primary="true"/>
       </categoryLinks>
       <selectionEntryGroups>
         <selectionEntryGroup id="1cf9-f035-dcdc-b13b" name="1-6 Icebrow Hunters" hidden="false" collective="false" import="true">
@@ -999,8 +958,8 @@ A Great Mawpot is a single terrain feature. It is an obstacle.</characteristic>
                         <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="e3a6-45ca-4974-b489" type="instanceOf"/>
                         <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="6cd6-b22e-bfcb-9589" type="instanceOf"/>
                         <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4373-740f-1bf3-b0aa" type="instanceOf"/>
-                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="f2b4-3fa5-b76d-26d3" type="equalTo"/>
                         <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="dfd4-44cb-ad53-68eb" type="equalTo"/>
+                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="b650-c66a-91c5-7354" type="equalTo"/>
                       </conditions>
                     </conditionGroup>
                   </conditionGroups>
@@ -1026,7 +985,7 @@ A Great Mawpot is a single terrain feature. It is an obstacle.</characteristic>
         </profile>
       </profiles>
       <categoryLinks>
-        <categoryLink id="e695-e282-113a-3bac" name="New CategoryLink" hidden="false" targetId="c03a-b1a8-66c6-3637" primary="true"/>
+        <categoryLink id="bb83-a8a8-da0d-568f" name="New CategoryLink" hidden="false" targetId="3706-e0e8-674f-c41b" primary="true"/>
       </categoryLinks>
       <selectionEntryGroups>
         <selectionEntryGroup id="f1f0-6214-1ed3-b3db" name="1 Jorlbad battalion" hidden="false" collective="false" import="true">
@@ -1111,7 +1070,7 @@ A Great Mawpot is a single terrain feature. It is an obstacle.</characteristic>
         </profile>
       </profiles>
       <categoryLinks>
-        <categoryLink id="07fc-71b2-996d-8cfa" name="New CategoryLink" hidden="false" targetId="c03a-b1a8-66c6-3637" primary="true"/>
+        <categoryLink id="b6f3-0b2e-64b8-efbc" name="New CategoryLink" hidden="false" targetId="3706-e0e8-674f-c41b" primary="true"/>
       </categoryLinks>
       <selectionEntryGroups>
         <selectionEntryGroup id="fe7c-45ff-f4b3-cdbd" name="0-2 units of Ironblasters" hidden="false" collective="false" import="true">
@@ -1137,8 +1096,8 @@ A Great Mawpot is a single terrain feature. It is an obstacle.</characteristic>
                         <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="e3a6-45ca-4974-b489" type="instanceOf"/>
                         <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="6cd6-b22e-bfcb-9589" type="instanceOf"/>
                         <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4373-740f-1bf3-b0aa" type="instanceOf"/>
-                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="f2b4-3fa5-b76d-26d3" type="equalTo"/>
                         <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="fb6d-275a-3cb9-cf57" type="equalTo"/>
+                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="b650-c66a-91c5-7354" type="equalTo"/>
                       </conditions>
                     </conditionGroup>
                   </conditionGroups>
@@ -1183,7 +1142,7 @@ A Great Mawpot is a single terrain feature. It is an obstacle.</characteristic>
         </profile>
       </profiles>
       <categoryLinks>
-        <categoryLink id="76d6-4044-5d67-57ee" name="New CategoryLink" hidden="false" targetId="c03a-b1a8-66c6-3637" primary="true"/>
+        <categoryLink id="6247-837e-c876-279f" name="New CategoryLink" hidden="false" targetId="3706-e0e8-674f-c41b" primary="true"/>
       </categoryLinks>
       <selectionEntryGroups>
         <selectionEntryGroup id="2368-a9a8-edd8-7289" name="1-3 units of Ogor Gluttons" hidden="false" collective="false" import="true">
@@ -1238,8 +1197,8 @@ A Great Mawpot is a single terrain feature. It is an obstacle.</characteristic>
                         <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="e3a6-45ca-4974-b489" type="instanceOf"/>
                         <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="6cd6-b22e-bfcb-9589" type="instanceOf"/>
                         <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4373-740f-1bf3-b0aa" type="instanceOf"/>
-                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="f2b4-3fa5-b76d-26d3" type="equalTo"/>
                         <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="fb6d-275a-3cb9-cf57" type="equalTo"/>
+                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="b650-c66a-91c5-7354" type="equalTo"/>
                       </conditions>
                     </conditionGroup>
                   </conditionGroups>
@@ -1266,9 +1225,9 @@ A Great Mawpot is a single terrain feature. It is an obstacle.</characteristic>
                         <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="e3a6-45ca-4974-b489" type="instanceOf"/>
                         <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="6cd6-b22e-bfcb-9589" type="instanceOf"/>
                         <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4373-740f-1bf3-b0aa" type="instanceOf"/>
-                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="f2b4-3fa5-b76d-26d3" type="equalTo"/>
                         <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="fb6d-275a-3cb9-cf57" type="equalTo"/>
                         <condition field="selections" scope="a3b9-6498-439b-b73a" value="2.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" type="lessThan"/>
+                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="b650-c66a-91c5-7354" type="equalTo"/>
                       </conditions>
                     </conditionGroup>
                   </conditionGroups>
@@ -1294,7 +1253,7 @@ A Great Mawpot is a single terrain feature. It is an obstacle.</characteristic>
         </profile>
       </profiles>
       <categoryLinks>
-        <categoryLink id="73ec-4bff-38d4-62fc" name="New CategoryLink" hidden="false" targetId="c03a-b1a8-66c6-3637" primary="true"/>
+        <categoryLink id="254e-5f03-6617-bdcd" name="New CategoryLink" hidden="false" targetId="3706-e0e8-674f-c41b" primary="true"/>
       </categoryLinks>
       <selectionEntryGroups>
         <selectionEntryGroup id="0a3f-1564-731f-cb0e" name="1-3 units of Ogor Gluttons" hidden="false" collective="false" import="true">
@@ -1349,8 +1308,8 @@ A Great Mawpot is a single terrain feature. It is an obstacle.</characteristic>
                         <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="e3a6-45ca-4974-b489" type="instanceOf"/>
                         <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="6cd6-b22e-bfcb-9589" type="instanceOf"/>
                         <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4373-740f-1bf3-b0aa" type="instanceOf"/>
-                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="f2b4-3fa5-b76d-26d3" type="equalTo"/>
                         <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="fb6d-275a-3cb9-cf57" type="equalTo"/>
+                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="b650-c66a-91c5-7354" type="equalTo"/>
                       </conditions>
                     </conditionGroup>
                   </conditionGroups>
@@ -1377,9 +1336,9 @@ A Great Mawpot is a single terrain feature. It is an obstacle.</characteristic>
                         <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="e3a6-45ca-4974-b489" type="instanceOf"/>
                         <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="6cd6-b22e-bfcb-9589" type="instanceOf"/>
                         <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4373-740f-1bf3-b0aa" type="instanceOf"/>
-                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="f2b4-3fa5-b76d-26d3" type="equalTo"/>
                         <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="fb6d-275a-3cb9-cf57" type="equalTo"/>
                         <condition field="selections" scope="6707-6373-46a2-5bf9" value="2.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" type="lessThan"/>
+                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="b650-c66a-91c5-7354" type="equalTo"/>
                       </conditions>
                     </conditionGroup>
                   </conditionGroups>
@@ -1405,7 +1364,7 @@ A Great Mawpot is a single terrain feature. It is an obstacle.</characteristic>
         </profile>
       </profiles>
       <categoryLinks>
-        <categoryLink id="13fa-d3cd-5b46-b42c" name="New CategoryLink" hidden="false" targetId="c03a-b1a8-66c6-3637" primary="true"/>
+        <categoryLink id="34ee-0efe-8c5b-3a98" name="New CategoryLink" hidden="false" targetId="3706-e0e8-674f-c41b" primary="true"/>
       </categoryLinks>
       <selectionEntryGroups>
         <selectionEntryGroup id="c0f0-78fb-bae0-9bf8" name="1-2 Scraplaunchers" hidden="false" collective="false" import="true">
@@ -1440,7 +1399,7 @@ A Great Mawpot is a single terrain feature. It is an obstacle.</characteristic>
         </profile>
       </profiles>
       <categoryLinks>
-        <categoryLink id="10e1-4fac-9e34-517b" name="New CategoryLink" hidden="false" targetId="c03a-b1a8-66c6-3637" primary="true"/>
+        <categoryLink id="9c63-0a14-30d0-755c" name="New CategoryLink" hidden="false" targetId="3706-e0e8-674f-c41b" primary="true"/>
       </categoryLinks>
       <selectionEntryGroups>
         <selectionEntryGroup id="2486-50c7-2514-f603" name="1 Tyrant&apos;s Gutguard battalion" hidden="false" collective="false" import="true">
@@ -1488,39 +1447,36 @@ A Great Mawpot is a single terrain feature. It is an obstacle.</characteristic>
   <sharedSelectionEntryGroups>
     <selectionEntryGroup id="66e4-2d14-7751-2cdf" name="Ogor Mawtribes Mount Traits" publicationId="ca59-f8ac-3938-b963" hidden="false" collective="false" import="true">
       <modifiers>
-        <modifier type="increment" field="47af-f253-660c-0de2" value="1.0">
-          <repeats>
-            <repeat field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="c03a-b1a8-66c6-3637" repeats="1" roundUp="false"/>
-          </repeats>
-          <conditionGroups>
-            <conditionGroup type="and">
-              <conditions>
-                <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="c03a-b1a8-66c6-3637" type="greaterThan"/>
-                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="3f5f-1785-d858-3149" type="equalTo"/>
-              </conditions>
-            </conditionGroup>
-          </conditionGroups>
-        </modifier>
         <modifier type="set" field="47af-f253-660c-0de2" value="-1.0">
           <conditions>
-            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="3f5f-1785-d858-3149" type="greaterThan"/>
+            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="b23e-983e-32d1-15db" type="greaterThan"/>
           </conditions>
         </modifier>
         <modifier type="set" field="hidden" value="true">
           <conditionGroups>
             <conditionGroup type="or">
               <conditions>
-                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="e3a6-45ca-4974-b489" type="instanceOf"/>
                 <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4373-740f-1bf3-b0aa" type="instanceOf"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="e3a6-45ca-4974-b489" type="instanceOf"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="996a-613c-4006-25e3" type="instanceOf"/>
                 <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="6cd6-b22e-bfcb-9589" type="instanceOf"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="b543-cb16-0c79-fbc6" type="instanceOf"/>
               </conditions>
             </conditionGroup>
           </conditionGroups>
         </modifier>
+        <modifier type="increment" field="47af-f253-660c-0de2" value="1.0">
+          <repeats>
+            <repeat field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="99e1-bf54-e3ec-ab80" repeats="1" roundUp="false"/>
+          </repeats>
+          <conditions>
+            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="99e1-bf54-e3ec-ab80" type="greaterThan"/>
+          </conditions>
+        </modifier>
       </modifiers>
       <constraints>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="4b78-ce25-46d4-5fef" type="max"/>
-        <constraint field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="47af-f253-660c-0de2" type="max"/>
+        <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="47af-f253-660c-0de2" type="max"/>
       </constraints>
       <selectionEntryGroups>
         <selectionEntryGroup id="2267-cf68-62aa-b900" name="Stone-skinned Monsters" hidden="false" collective="false" import="true">
@@ -1733,74 +1689,28 @@ A Great Mawpot is a single terrain feature. It is an obstacle.</characteristic>
         </selectionEntryGroup>
       </selectionEntryGroups>
     </selectionEntryGroup>
-    <selectionEntryGroup id="c2f5-ea44-a5ae-9be0" name="Everwinter Prayers" publicationId="ca59-f8ac-3938-b963" hidden="false" collective="false" import="true">
-      <modifiers>
-        <modifier type="set" field="hidden" value="true">
-          <conditionGroups>
-            <conditionGroup type="or">
-              <conditions>
-                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="e3a6-45ca-4974-b489" type="instanceOf"/>
-                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4373-740f-1bf3-b0aa" type="instanceOf"/>
-                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="6cd6-b22e-bfcb-9589" type="instanceOf"/>
-              </conditions>
-            </conditionGroup>
-          </conditionGroups>
-        </modifier>
-      </modifiers>
-      <constraints>
-        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="b788-91a0-8c5c-2a23" type="max"/>
-      </constraints>
-      <selectionEntries>
-        <selectionEntry id="1121-d08f-0e7e-a1b4" name="3 - Call of the Blizzard" hidden="false" collective="false" import="true" type="upgrade">
-          <profiles>
-            <profile id="aa5d-c900-d20f-50db" name="Call of the Blizzard" hidden="false" typeId="161a-85bd-f19e-a5a7" typeName="Prayer">
-              <characteristics>
-                <characteristic name="Prayer" typeId="19bc-965a-768d-defa">This prayer is answered on a 4+. If this prayer is answered, pick 1 friendly unit of ICEFALL YHETEES within 18&quot; of the model chanting this prayer that is visible to them. You can return 1 slain model to that unit.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <costs>
-            <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="3ef0-7fc2-d93f-efad" name="2 - Keening Gale" hidden="false" collective="false" import="true" type="upgrade">
-          <profiles>
-            <profile id="3359-3155-b99d-127e" name="Keening Gale" hidden="false" typeId="161a-85bd-f19e-a5a7" typeName="Prayer">
-              <characteristics>
-                <characteristic name="Prayer" typeId="19bc-965a-768d-defa">This prayer is answered on a 4+. If this prayer is answered, pick 1 friendly MONSTER or MOURNFANG PACK unit wholly within 18&quot; of the model chanting this prayer. Until the start of your next hero phase, add 3&quot; to that unit’s Move characteristic.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <costs>
-            <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="c05a-fcc7-9dc3-cbaf" name="1 - Pulverising Hailstorm" hidden="false" collective="false" import="true" type="upgrade">
-          <profiles>
-            <profile id="1d09-94e5-a615-da4b" name="Pulverising Hailstorm" hidden="false" typeId="161a-85bd-f19e-a5a7" typeName="Prayer">
-              <characteristics>
-                <characteristic name="Prayer" typeId="19bc-965a-768d-defa">This prayer is answered on a 4+. If this prayer is answered, pick a point on the battlefield within 18&quot; of the model chanting this prayer. Roll 1 dice for each unit within 3&quot; of that point. On a 3+, that unit suffers D3 mortal wounds.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <costs>
-            <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
-          </costs>
-        </selectionEntry>
-      </selectionEntries>
-    </selectionEntryGroup>
     <selectionEntryGroup id="61ce-130d-6d33-c6d8" name="Ogor Mawtribes Spell Lores" publicationId="ca59-f8ac-3938-b963" hidden="false" collective="false" import="true">
       <modifiers>
         <modifier type="set" field="hidden" value="true">
           <conditionGroups>
             <conditionGroup type="or">
               <conditions>
-                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="e3a6-45ca-4974-b489" type="instanceOf"/>
                 <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4373-740f-1bf3-b0aa" type="instanceOf"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="e3a6-45ca-4974-b489" type="instanceOf"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="996a-613c-4006-25e3" type="instanceOf"/>
                 <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="6cd6-b22e-bfcb-9589" type="instanceOf"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="b543-cb16-0c79-fbc6" type="instanceOf"/>
               </conditions>
             </conditionGroup>
           </conditionGroups>
+        </modifier>
+        <modifier type="increment" field="823e-8a01-d591-d5a5" value="1.0">
+          <repeats>
+            <repeat field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="9e49-bd7f-45ee-1a96" repeats="1" roundUp="false"/>
+          </repeats>
+          <conditions>
+            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="9e49-bd7f-45ee-1a96" type="greaterThan"/>
+          </conditions>
         </modifier>
       </modifiers>
       <constraints>
@@ -1810,8 +1720,21 @@ A Great Mawpot is a single terrain feature. It is an obstacle.</characteristic>
         <selectionEntryGroup id="bae0-e464-ce40-9645" name="Lore of Gutmagic" hidden="false" collective="false" import="true">
           <modifiers>
             <modifier type="set" field="hidden" value="true">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="f55a-2440-b557-0eb9" type="notInstanceOf"/>
+                    <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="8cf2-4aa5-a229-8227" type="instanceOf"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+            <modifier type="increment" field="f45d-950c-cb83-9e64" value="1.0">
+              <repeats>
+                <repeat field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="9e49-bd7f-45ee-1a96" repeats="1" roundUp="false"/>
+              </repeats>
               <conditions>
-                <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="f55a-2440-b557-0eb9" type="notInstanceOf"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="9e49-bd7f-45ee-1a96" type="greaterThan"/>
               </conditions>
             </modifier>
           </modifiers>
@@ -1820,6 +1743,9 @@ A Great Mawpot is a single terrain feature. It is an obstacle.</characteristic>
           </constraints>
           <selectionEntries>
             <selectionEntry id="7a14-b57e-93fd-9732" name="6 - Greasy Deluge" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="7ccf-fe8e-8080-1328" type="max"/>
+              </constraints>
               <profiles>
                 <profile id="0e56-146a-b7da-2e83" name="Greasy Deluge" hidden="false" typeId="13da-11a8-b7d1-77a7" typeName="Spell">
                   <characteristics>
@@ -1832,6 +1758,9 @@ A Great Mawpot is a single terrain feature. It is an obstacle.</characteristic>
               </costs>
             </selectionEntry>
             <selectionEntry id="4885-6fbb-7c30-ab20" name="5 - Molten Entrails" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="db63-d0fd-056a-c306" type="max"/>
+              </constraints>
               <profiles>
                 <profile id="1fc3-e6bd-4db7-2428" name="Molten Entrails" hidden="false" typeId="13da-11a8-b7d1-77a7" typeName="Spell">
                   <characteristics>
@@ -1844,6 +1773,9 @@ A Great Mawpot is a single terrain feature. It is an obstacle.</characteristic>
               </costs>
             </selectionEntry>
             <selectionEntry id="c936-c531-b94d-2da8" name="2 - Blood Feast" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="ba2a-b992-b1e6-382a" type="max"/>
+              </constraints>
               <profiles>
                 <profile id="9699-2666-e1f7-9471" name="Blood Feast" hidden="false" typeId="13da-11a8-b7d1-77a7" typeName="Spell">
                   <characteristics>
@@ -1856,6 +1788,9 @@ A Great Mawpot is a single terrain feature. It is an obstacle.</characteristic>
               </costs>
             </selectionEntry>
             <selectionEntry id="79d3-3d79-c37a-ca00" name="3 - Ribcracker" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="cd74-1af3-021e-a33b" type="max"/>
+              </constraints>
               <profiles>
                 <profile id="b86d-bce8-15c0-1a71" name="Ribcracker" hidden="false" typeId="13da-11a8-b7d1-77a7" typeName="Spell">
                   <characteristics>
@@ -1868,6 +1803,9 @@ A Great Mawpot is a single terrain feature. It is an obstacle.</characteristic>
               </costs>
             </selectionEntry>
             <selectionEntry id="59f0-d079-152c-ea66" name="4 - Blubbergrub Stench" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="5526-7d50-7829-4d56" type="max"/>
+              </constraints>
               <profiles>
                 <profile id="3e9a-3be8-6a80-4a8a" name="Blubbergrub Stench" hidden="false" typeId="13da-11a8-b7d1-77a7" typeName="Spell">
                   <characteristics>
@@ -1880,6 +1818,9 @@ A Great Mawpot is a single terrain feature. It is an obstacle.</characteristic>
               </costs>
             </selectionEntry>
             <selectionEntry id="c05c-e7cf-523d-7925" name="1 - Fleshcrave Curse" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="29e9-e787-1b28-bd33" type="max"/>
+              </constraints>
               <profiles>
                 <profile id="9d22-9692-362d-a414" name="Fleshcrave Curse" hidden="false" typeId="13da-11a8-b7d1-77a7" typeName="Spell">
                   <characteristics>
@@ -1900,12 +1841,23 @@ A Great Mawpot is a single terrain feature. It is an obstacle.</characteristic>
                 <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="b1c6-6e0c-9086-b6f7" type="notInstanceOf"/>
               </conditions>
             </modifier>
+            <modifier type="increment" field="0a0e-6a6d-9e43-c70b" value="1.0">
+              <repeats>
+                <repeat field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="9e49-bd7f-45ee-1a96" repeats="1" roundUp="false"/>
+              </repeats>
+              <conditions>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="9e49-bd7f-45ee-1a96" type="greaterThan"/>
+              </conditions>
+            </modifier>
           </modifiers>
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="0a0e-6a6d-9e43-c70b" type="max"/>
           </constraints>
           <selectionEntries>
             <selectionEntry id="3660-81aa-8bc1-9d26" name="3 - Tongues of Flame" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="f90f-6784-6f0e-7faa" type="max"/>
+              </constraints>
               <profiles>
                 <profile id="12ea-0840-1038-273d" name="Tongues of Flame" hidden="false" typeId="13da-11a8-b7d1-77a7" typeName="Spell">
                   <characteristics>
@@ -1918,6 +1870,9 @@ A Great Mawpot is a single terrain feature. It is an obstacle.</characteristic>
               </costs>
             </selectionEntry>
             <selectionEntry id="6afe-a0b0-bf6b-00a6" name="2 - Billowing Ash" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="88c5-19f4-fdbc-651c" type="max"/>
+              </constraints>
               <profiles>
                 <profile id="e412-3a25-e80c-d36a" name="Billowing Ash" hidden="false" typeId="13da-11a8-b7d1-77a7" typeName="Spell">
                   <characteristics>
@@ -1930,6 +1885,9 @@ A Great Mawpot is a single terrain feature. It is an obstacle.</characteristic>
               </costs>
             </selectionEntry>
             <selectionEntry id="a041-63f3-88e3-bcf8" name="1 - Fiery Whirlwind" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="66ea-1c09-90d8-d32b" type="max"/>
+              </constraints>
               <profiles>
                 <profile id="13aa-6a77-7424-eb2b" name="Fiery Whirlwind" hidden="false" typeId="13da-11a8-b7d1-77a7" typeName="Spell">
                   <characteristics>
@@ -1944,6 +1902,9 @@ A Great Mawpot is a single terrain feature. It is an obstacle.</characteristic>
           </selectionEntries>
         </selectionEntryGroup>
       </selectionEntryGroups>
+      <entryLinks>
+        <entryLink id="a9bd-b092-740c-1eb8" name="Universal Spell Lore" hidden="false" collective="false" import="true" targetId="93f7-7e2a-3308-d150" type="selectionEntryGroup"/>
+      </entryLinks>
     </selectionEntryGroup>
     <selectionEntryGroup id="622e-a2e6-7a6c-4fb5" name="Artefacts of Power" publicationId="ca59-f8ac-3938-b963" hidden="false" collective="false" import="true">
       <modifiers>
@@ -1951,29 +1912,12 @@ A Great Mawpot is a single terrain feature. It is an obstacle.</characteristic>
           <conditionGroups>
             <conditionGroup type="or">
               <conditions>
-                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="e3a6-45ca-4974-b489" type="instanceOf"/>
                 <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4373-740f-1bf3-b0aa" type="instanceOf"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="e3a6-45ca-4974-b489" type="instanceOf"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="996a-613c-4006-25e3" type="instanceOf"/>
                 <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="6cd6-b22e-bfcb-9589" type="instanceOf"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="b543-cb16-0c79-fbc6" type="instanceOf"/>
               </conditions>
-              <conditionGroups>
-                <conditionGroup type="and">
-                  <conditions>
-                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="7173-5f26-ecf8-c2dc" type="equalTo"/>
-                    <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="d850-b534-1dce-2639" type="notInstanceOf"/>
-                    <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="f55a-2440-b557-0eb9" type="notInstanceOf"/>
-                    <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="020d-c3cb-3c3c-1794" type="notInstanceOf"/>
-                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="02e5-753c-31d2-5e10" type="equalTo"/>
-                  </conditions>
-                  <conditionGroups>
-                    <conditionGroup type="and">
-                      <conditions>
-                        <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="6cc1-29e8-c144-59ea" type="notInstanceOf"/>
-                        <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="95ed-7fe6-f699-3794" type="notInstanceOf"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
-                </conditionGroup>
-              </conditionGroups>
             </conditionGroup>
           </conditionGroups>
         </modifier>
@@ -1984,231 +1928,207 @@ A Great Mawpot is a single terrain feature. It is an obstacle.</characteristic>
       <categoryLinks>
         <categoryLink id="f9d8-e0b1-4be1-5275" name="Artefacts" hidden="false" targetId="ba14-5553-456e-33ad" primary="false"/>
       </categoryLinks>
-      <selectionEntryGroups>
-        <selectionEntryGroup id="4e95-7ecf-5df2-bc0f" name="Sub-Allegiance Artefacts" hidden="false" collective="false" import="true">
+      <selectionEntries>
+        <selectionEntry id="0f75-b494-7109-093a" name="0 -- Brand of the Svard" hidden="false" collective="false" import="true" type="upgrade">
           <modifiers>
             <modifier type="set" field="hidden" value="true">
               <conditions>
-                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="4fe1-4d42-25cc-d732" type="equalTo"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="b23e-983e-32d1-15db" type="equalTo"/>
               </conditions>
+            </modifier>
+            <modifier type="set" field="d374-2d42-9bae-f865" value="1.0">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="b23e-983e-32d1-15db" type="greaterThan"/>
+                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="ba14-5553-456e-33ad" type="greaterThan"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
             </modifier>
           </modifiers>
           <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="88a1-bca2-2cd0-5010" type="max"/>
+            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="bb55-9fd5-4e08-33d6" type="max"/>
+            <constraint field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="d374-2d42-9bae-f865" type="min"/>
           </constraints>
-          <selectionEntries>
-            <selectionEntry id="c873-4f3d-35fe-0a96" name="0 -- Gut-plate of Ghur" hidden="false" collective="false" import="true" type="upgrade">
-              <modifiers>
-                <modifier type="set" field="hidden" value="true">
+          <profiles>
+            <profile id="2ea0-955d-178e-dd26" name="Brand of the Svard" hidden="false" typeId="0c9d-7abe-a53c-6a37" typeName="Artefacts">
+              <characteristics>
+                <characteristic name="Artefact" typeId="44b6-de26-0b54-1318">If the bearer has a mount, add 1 to hit rolls for attacks made with that mount’s melee weapons.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <costs>
+            <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="e101-a354-1022-277c" name="0 -- Frostfang" hidden="false" collective="false" import="true" type="upgrade">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="bf9e-c4df-4548-0c51" type="equalTo"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="80e7-6450-115e-46d8" value="1.0">
+              <conditionGroups>
+                <conditionGroup type="and">
                   <conditions>
-                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="379f-1008-4afc-0603" type="equalTo"/>
+                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="bf9e-c4df-4548-0c51" type="greaterThan"/>
+                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="ba14-5553-456e-33ad" type="greaterThan"/>
                   </conditions>
-                </modifier>
-                <modifier type="set" field="2567-a595-494f-557b" value="1.0">
-                  <conditionGroups>
-                    <conditionGroup type="and">
-                      <conditions>
-                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="379f-1008-4afc-0603" type="greaterThan"/>
-                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="ba14-5553-456e-33ad" type="greaterThan"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
-                </modifier>
-              </modifiers>
-              <constraints>
-                <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="e8b0-9816-fb8c-b625" type="max"/>
-                <constraint field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="2567-a595-494f-557b" type="min"/>
-              </constraints>
-              <profiles>
-                <profile id="7d7b-82cf-dcf3-b5f8" name="Gut-plate of Ghur" hidden="false" typeId="0c9d-7abe-a53c-6a37" typeName="Artefacts">
-                  <characteristics>
-                    <characteristic name="Artefact" typeId="44b6-de26-0b54-1318">The first MEATFIST HERO to receive an artefact of power must be given the Gut-plate of Ghur.
-
-You can re-roll save rolls of 1 for attacks that target the bearer.</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-              <costs>
-                <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
-              </costs>
-            </selectionEntry>
-            <selectionEntry id="4735-6e6d-a2f0-62c0" name="0 -- Frostfang" hidden="false" collective="false" import="true" type="upgrade">
-              <modifiers>
-                <modifier type="set" field="hidden" value="true">
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="3765-4d2f-70d0-fc51" type="max"/>
+            <constraint field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="80e7-6450-115e-46d8" type="min"/>
+          </constraints>
+          <profiles>
+            <profile id="2738-73fd-7ce0-136b" name="Frostfang" hidden="false" typeId="0c9d-7abe-a53c-6a37" typeName="Artefacts">
+              <characteristics>
+                <characteristic name="Artefact" typeId="44b6-de26-0b54-1318">Pick 1 of the bearer’s melee weapons. At the start of each battle round, roll a dice. On a 5+, add 1 to the damage inflicted by attacks made with that weapon for the rest of the battle. This effect is cumulative.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <costs>
+            <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="8595-17a0-428b-cf4f" name="0 -- Gnoblar Blast Keg" hidden="false" collective="false" import="true" type="upgrade">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="24db-e40b-45c7-b3fb" type="equalTo"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="c296-a931-23b4-514b" value="1.0">
+              <conditionGroups>
+                <conditionGroup type="and">
                   <conditions>
-                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="21ea-8e48-5d75-1d93" type="equalTo"/>
+                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="24db-e40b-45c7-b3fb" type="greaterThan"/>
+                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="ba14-5553-456e-33ad" type="greaterThan"/>
                   </conditions>
-                </modifier>
-                <modifier type="set" field="2757-800b-892b-0c3d" value="1.0">
-                  <conditionGroups>
-                    <conditionGroup type="and">
-                      <conditions>
-                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="21ea-8e48-5d75-1d93" type="greaterThan"/>
-                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="ba14-5553-456e-33ad" type="greaterThan"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
-                </modifier>
-              </modifiers>
-              <constraints>
-                <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="dbf9-7352-e5bb-269c" type="max"/>
-                <constraint field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="2757-800b-892b-0c3d" type="min"/>
-              </constraints>
-              <profiles>
-                <profile id="9dbf-d21f-5834-765f" name="Frostfang" hidden="false" typeId="0c9d-7abe-a53c-6a37" typeName="Artefacts">
-                  <characteristics>
-                    <characteristic name="Artefact" typeId="44b6-de26-0b54-1318">The first WINTERBITE HERO to receive an artefact of power must be given the Frostfang.
-
-Pick 1 of the bearer’s melee weapons. At the start of each battle round, roll a dice. On a 5+, add 1 to the damage inflicted by attacks made with that weapon for the rest of the battle. This effect is cumulative.</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-              <costs>
-                <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
-              </costs>
-            </selectionEntry>
-            <selectionEntry id="325f-c420-3110-aecf" name="0 -- Shatterstone" hidden="false" collective="false" import="true" type="upgrade">
-              <modifiers>
-                <modifier type="set" field="hidden" value="true">
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="4835-9da7-ff52-d303" type="max"/>
+            <constraint field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="c296-a931-23b4-514b" type="min"/>
+          </constraints>
+          <profiles>
+            <profile id="3e23-2356-e415-59fa" name="Gnoblar Blast Keg" hidden="false" typeId="0c9d-7abe-a53c-6a37" typeName="Artefacts">
+              <characteristics>
+                <characteristic name="Artefact" typeId="44b6-de26-0b54-1318">Once per battle, at the start of your shooting phase, you can use the Gnoblar Blast Keg. If you do so, pick 1 enemy unit within 9&quot; of the bearer that is visible to them and roll 6 dice. Add 1 to each roll for every 10 models in the target unit. For each 6+, that enemy unit suffers D3 mortal wounds.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <costs>
+            <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="6cfb-5086-4586-0a53" name="0 -- Gut-plate of Ghur" hidden="false" collective="false" import="true" type="upgrade">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2f5f-017f-6ad5-0e2f" type="equalTo"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="d0f9-7f2c-d5b8-1f0a" value="1.0">
+              <conditionGroups>
+                <conditionGroup type="and">
                   <conditions>
-                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="cdaa-7a93-7e2c-9793" type="equalTo"/>
+                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2f5f-017f-6ad5-0e2f" type="greaterThan"/>
+                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="ba14-5553-456e-33ad" type="greaterThan"/>
                   </conditions>
-                </modifier>
-                <modifier type="set" field="3fbb-4be2-90b8-e10c" value="1.0">
-                  <conditionGroups>
-                    <conditionGroup type="and">
-                      <conditions>
-                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="cdaa-7a93-7e2c-9793" type="greaterThan"/>
-                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="ba14-5553-456e-33ad" type="greaterThan"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
-                </modifier>
-              </modifiers>
-              <constraints>
-                <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="068e-99db-0176-f9c4" type="max"/>
-                <constraint field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="3fbb-4be2-90b8-e10c" type="min"/>
-              </constraints>
-              <profiles>
-                <profile id="1fac-6f6e-79db-917d" name="Shatterstone" hidden="false" typeId="0c9d-7abe-a53c-6a37" typeName="Artefacts">
-                  <characteristics>
-                    <characteristic name="Artefact" typeId="44b6-de26-0b54-1318">The first THUNDERBELLIES HERO to receive an artefact of power must be given the Shatterstone.
-
-Enemy units treat terrain features within 12&quot; of the bearer as having the Deadly scenery rule in addition to any other scenery rules they may have.</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-              <costs>
-                <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
-              </costs>
-            </selectionEntry>
-            <selectionEntry id="16dd-0aba-0aab-491e" name="0 -- Brand of the Svard" hidden="false" collective="false" import="true" type="upgrade">
-              <modifiers>
-                <modifier type="set" field="hidden" value="true">
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="da15-5d9f-3b62-4ea6" type="max"/>
+            <constraint field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="d0f9-7f2c-d5b8-1f0a" type="min"/>
+          </constraints>
+          <profiles>
+            <profile id="0010-8a31-8379-d4cd" name="Gut-plate of Ghur" hidden="false" typeId="0c9d-7abe-a53c-6a37" typeName="Artefacts">
+              <characteristics>
+                <characteristic name="Artefact" typeId="44b6-de26-0b54-1318">You can re-roll save rolls of 1 for attacks that target the bearer.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <costs>
+            <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="415c-34b3-f805-dcc5" name="0 -- Shatterstone" hidden="false" collective="false" import="true" type="upgrade">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e6c8-5fd5-0598-f08b" type="equalTo"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="659e-11a2-39ce-d350" value="1.0">
+              <conditionGroups>
+                <conditionGroup type="and">
                   <conditions>
-                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="3f5f-1785-d858-3149" type="equalTo"/>
+                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e6c8-5fd5-0598-f08b" type="greaterThan"/>
+                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="ba14-5553-456e-33ad" type="greaterThan"/>
                   </conditions>
-                </modifier>
-                <modifier type="set" field="1c37-4ec7-d97e-0e32" value="1.0">
-                  <conditionGroups>
-                    <conditionGroup type="and">
-                      <conditions>
-                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="3f5f-1785-d858-3149" type="greaterThan"/>
-                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="ba14-5553-456e-33ad" type="greaterThan"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
-                </modifier>
-              </modifiers>
-              <constraints>
-                <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="eac0-341b-eaf2-7a52" type="max"/>
-                <constraint field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="1c37-4ec7-d97e-0e32" type="min"/>
-              </constraints>
-              <profiles>
-                <profile id="89b9-d610-4d4a-97e6" name="Brand of the Svard" hidden="false" typeId="0c9d-7abe-a53c-6a37" typeName="Artefacts">
-                  <characteristics>
-                    <characteristic name="Artefact" typeId="44b6-de26-0b54-1318">The first BOULDERHEAD HERO to receive an artefact of power must be given the Brand of the Svard.
-
-If the bearer has a mount, add 1 to hit rolls for attacks made with that mount’s melee weapons.</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-              <costs>
-                <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
-              </costs>
-            </selectionEntry>
-            <selectionEntry id="af55-e5b2-816b-ffed" name="0 -- Gnoblar Blast Keg" hidden="false" collective="false" import="true" type="upgrade">
-              <modifiers>
-                <modifier type="set" field="hidden" value="true">
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="fa5e-53dd-d03a-7d62" type="max"/>
+            <constraint field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="659e-11a2-39ce-d350" type="min"/>
+          </constraints>
+          <profiles>
+            <profile id="9a86-42f8-9ed0-4e18" name="Shatterstone" hidden="false" typeId="0c9d-7abe-a53c-6a37" typeName="Artefacts">
+              <characteristics>
+                <characteristic name="Artefact" typeId="44b6-de26-0b54-1318">Enemy units treat terrain features within 12&quot; of the bearer as having the Deadly scenery rule in addition to any other scenery rules they may have.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <costs>
+            <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="13a8-8604-50d6-6c84" name="0 -- Splatter-cleaver" hidden="false" collective="false" import="true" type="upgrade">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="da81-1b01-a5ae-cc2e" type="equalTo"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="b29f-a37d-3fac-e4b2" value="1.0">
+              <conditionGroups>
+                <conditionGroup type="and">
                   <conditions>
-                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="1889-1992-e1ef-ac62" type="equalTo"/>
+                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="da81-1b01-a5ae-cc2e" type="greaterThan"/>
+                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="ba14-5553-456e-33ad" type="greaterThan"/>
                   </conditions>
-                </modifier>
-                <modifier type="set" field="7574-dbb0-d093-2ce5" value="1.0">
-                  <conditionGroups>
-                    <conditionGroup type="and">
-                      <conditions>
-                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="1889-1992-e1ef-ac62" type="greaterThan"/>
-                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="ba14-5553-456e-33ad" type="greaterThan"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
-                </modifier>
-              </modifiers>
-              <constraints>
-                <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="3400-17cf-5534-53ec" type="max"/>
-                <constraint field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="7574-dbb0-d093-2ce5" type="min"/>
-              </constraints>
-              <profiles>
-                <profile id="b8fb-db01-ef7b-1f74" name="Gnoblar Blast Keg" hidden="false" typeId="0c9d-7abe-a53c-6a37" typeName="Artefacts">
-                  <characteristics>
-                    <characteristic name="Artefact" typeId="44b6-de26-0b54-1318">The first UNDERGUTS HERO to receive an artefact of power must be given the Gnoblar Blast Keg.
-
-Once per battle, at the start of your shooting phase, you can use the Gnoblar Blast Keg. If you do so, pick 1 enemy unit within 9&quot; of the bearer that is visible to them and roll 6 dice. Add 1 to each roll for every 10 models in the target unit. For each 6+, that enemy unit suffers D3 mortal wounds.</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-              <costs>
-                <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
-              </costs>
-            </selectionEntry>
-            <selectionEntry id="2418-d5ef-a8c4-065f" name="0 -- Splatter-cleaver" hidden="false" collective="false" import="true" type="upgrade">
-              <modifiers>
-                <modifier type="set" field="hidden" value="true">
-                  <conditions>
-                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="5d43-957b-92c8-e54a" type="equalTo"/>
-                  </conditions>
-                </modifier>
-                <modifier type="set" field="7f81-44cc-87e0-fcba" value="1.0">
-                  <conditionGroups>
-                    <conditionGroup type="and">
-                      <conditions>
-                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="5d43-957b-92c8-e54a" type="greaterThan"/>
-                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="ba14-5553-456e-33ad" type="greaterThan"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
-                </modifier>
-              </modifiers>
-              <constraints>
-                <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="dc21-56e8-9878-97cf" type="max"/>
-                <constraint field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="7f81-44cc-87e0-fcba" type="min"/>
-              </constraints>
-              <profiles>
-                <profile id="2908-0d79-8657-b556" name="Splatter-cleaver" hidden="false" typeId="0c9d-7abe-a53c-6a37" typeName="Artefacts">
-                  <characteristics>
-                    <characteristic name="Artefact" typeId="44b6-de26-0b54-1318">The first BLOODGULLET HERO to receive an artefact of power must be given the Splatter-cleaver.
-
-Pick 1 of the bearer’s melee weapons. At the end of the combat phase, if any wounds inflicted by that weapon in that phase were allocated to an enemy model and not negated, you can heal D3 wounds allocated to each friendly BLOODGULLET OGOR unit wholly within 12&quot; of the bearer (roll separately for each unit).</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-              <costs>
-                <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
-              </costs>
-            </selectionEntry>
-          </selectionEntries>
-        </selectionEntryGroup>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="d415-536f-ea01-e81b" type="max"/>
+            <constraint field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="b29f-a37d-3fac-e4b2" type="min"/>
+          </constraints>
+          <profiles>
+            <profile id="11ae-8d0c-61cc-a6a0" name="Splatter-cleaver" hidden="false" typeId="0c9d-7abe-a53c-6a37" typeName="Artefacts">
+              <characteristics>
+                <characteristic name="Artefact" typeId="44b6-de26-0b54-1318">Pick 1 of the bearer’s melee weapons. At the end of the combat phase, if any wounds inflicted by that weapon in that phase were allocated to an enemy model and not negated, you can heal D3 wounds allocated to each friendly BLOODGULLET OGOR unit wholly within 12&quot; of the bearer (roll separately for each unit).</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <costs>
+            <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
+          </costs>
+        </selectionEntry>
+      </selectionEntries>
+      <selectionEntryGroups>
         <selectionEntryGroup id="1b3d-0062-3197-e917" name="Relics of the Everwinter" hidden="false" collective="false" import="true">
           <modifiers>
             <modifier type="set" field="hidden" value="true">
@@ -2587,8 +2507,7 @@ Pick 1 of the bearer’s melee weapons. At the end of the combat phase, if any w
         </selectionEntryGroup>
       </selectionEntryGroups>
       <entryLinks>
-        <entryLink id="a4ab-3393-0d32-7a53" name="Realm Artefacts" hidden="false" collective="false" import="true" targetId="4df1-d526-85d7-1c93" type="selectionEntryGroup"/>
-        <entryLink id="3ff5-e803-ffc5-96bd" name="Realm Artefacts" hidden="false" collective="false" import="true" targetId="56b5-54f1-dbb4-63c6" type="selectionEntryGroup"/>
+        <entryLink id="3f0c-e834-5c4e-3c67" name="Universal Artefacts of Power" hidden="false" collective="false" import="true" targetId="dbd8-8f6f-f44a-884a" type="selectionEntryGroup"/>
       </entryLinks>
     </selectionEntryGroup>
     <selectionEntryGroup id="ec87-0b07-c4d9-268e" name="Command Traits" publicationId="ca59-f8ac-3938-b963" hidden="false" collective="false" import="true">
@@ -2602,231 +2521,207 @@ Pick 1 of the bearer’s melee weapons. At the end of the combat phase, if any w
       <constraints>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="a56c-c936-b04f-8018" type="max"/>
       </constraints>
-      <selectionEntryGroups>
-        <selectionEntryGroup id="6039-46ba-a556-df08" name="Sub-Allegiance Command Traits" hidden="false" collective="false" import="true">
+      <selectionEntries>
+        <selectionEntry id="b71c-84d3-8d28-4de9" name="0. &apos;Nice Drop of the Red Stuff!&apos;" hidden="false" collective="false" import="true" type="upgrade">
           <modifiers>
             <modifier type="set" field="hidden" value="true">
               <conditions>
-                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4fe1-4d42-25cc-d732" type="equalTo"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="da81-1b01-a5ae-cc2e" type="equalTo"/>
               </conditions>
+            </modifier>
+            <modifier type="set" field="0914-88cd-7507-371d" value="1.0">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="c661-44d6-0f5b-11ff" type="greaterThan"/>
+                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="8b3d-7f03-e1f9-eaf5" type="equalTo"/>
+                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="da81-1b01-a5ae-cc2e" type="greaterThan"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
             </modifier>
           </modifiers>
           <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="c8fa-140d-31ff-85b3" type="max"/>
+            <constraint field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="0914-88cd-7507-371d" type="min"/>
           </constraints>
-          <selectionEntries>
-            <selectionEntry id="e086-701a-6196-9955" name="0. Food for Thought" hidden="false" collective="false" import="true" type="upgrade">
-              <modifiers>
-                <modifier type="set" field="hidden" value="true">
+          <profiles>
+            <profile id="f8bb-05c1-9ebf-e4d1" name="&apos;Nice Drop of the Red Stuff!&apos;" hidden="false" typeId="1504-23bf-8850-4f65" typeName="Command Traits">
+              <characteristics>
+                <characteristic name="Command Trait" typeId="0145-9acf-f5dc-d543">Friendly units that start a pile-in move wholly within 12&quot; of this general can move an extra 3&quot; when they pile in.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <costs>
+            <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="ebb5-c0ad-c9c1-556a" name="0. Food for Thought" hidden="false" collective="false" import="true" type="upgrade">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2f5f-017f-6ad5-0e2f" type="equalTo"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="2aa1-b77a-e771-5f37" value="1.0">
+              <conditionGroups>
+                <conditionGroup type="and">
                   <conditions>
-                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="379f-1008-4afc-0603" type="equalTo"/>
+                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="c661-44d6-0f5b-11ff" type="greaterThan"/>
+                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="8b3d-7f03-e1f9-eaf5" type="equalTo"/>
+                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2f5f-017f-6ad5-0e2f" type="greaterThan"/>
                   </conditions>
-                </modifier>
-                <modifier type="set" field="8c4d-782e-56f9-d0e5" value="1.0">
-                  <conditionGroups>
-                    <conditionGroup type="and">
-                      <conditions>
-                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="c661-44d6-0f5b-11ff" type="greaterThan"/>
-                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="8b3d-7f03-e1f9-eaf5" type="equalTo"/>
-                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="379f-1008-4afc-0603" type="greaterThan"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
-                </modifier>
-              </modifiers>
-              <constraints>
-                <constraint field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="8c4d-782e-56f9-d0e5" type="min"/>
-              </constraints>
-              <profiles>
-                <profile id="4d2d-d34b-8dd4-a907" name="Food for Thought" hidden="false" typeId="1504-23bf-8850-4f65" typeName="Command Traits">
-                  <characteristics>
-                    <characteristic name="Command Trait" typeId="0145-9acf-f5dc-d543">A MEATFIST general must have this command trait.
-
-At the start of your hero phase, if this general is eating, you gain 1 additional command point.</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-              <costs>
-                <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
-              </costs>
-            </selectionEntry>
-            <selectionEntry id="b6ad-8e9c-8dcc-d429" name="0. Wintertouched" hidden="false" collective="false" import="true" type="upgrade">
-              <modifiers>
-                <modifier type="set" field="hidden" value="true">
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="2aa1-b77a-e771-5f37" type="min"/>
+          </constraints>
+          <profiles>
+            <profile id="9189-d1bf-e116-4c02" name="Food for Thought" hidden="false" typeId="1504-23bf-8850-4f65" typeName="Command Traits">
+              <characteristics>
+                <characteristic name="Command Trait" typeId="0145-9acf-f5dc-d543">At the start of your hero phase, if this general is eating, you gain 1 additional command point.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <costs>
+            <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="251c-95a3-ce64-ec96" name="0. Lord of Beasts" hidden="false" collective="false" import="true" type="upgrade">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="b23e-983e-32d1-15db" type="equalTo"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="7a40-40f8-e939-8788" value="1.0">
+              <conditionGroups>
+                <conditionGroup type="and">
                   <conditions>
-                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="21ea-8e48-5d75-1d93" type="equalTo"/>
+                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="c661-44d6-0f5b-11ff" type="greaterThan"/>
+                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="8b3d-7f03-e1f9-eaf5" type="equalTo"/>
+                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="b23e-983e-32d1-15db" type="greaterThan"/>
                   </conditions>
-                </modifier>
-                <modifier type="set" field="3fa9-5308-433f-24c8" value="1.0">
-                  <conditionGroups>
-                    <conditionGroup type="and">
-                      <conditions>
-                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="c661-44d6-0f5b-11ff" type="greaterThan"/>
-                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="8b3d-7f03-e1f9-eaf5" type="equalTo"/>
-                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="21ea-8e48-5d75-1d93" type="greaterThan"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
-                </modifier>
-              </modifiers>
-              <constraints>
-                <constraint field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="3fa9-5308-433f-24c8" type="min"/>
-              </constraints>
-              <profiles>
-                <profile id="ca2b-50c9-2a70-ed1d" name="Wintertouched" hidden="false" typeId="1504-23bf-8850-4f65" typeName="Command Traits">
-                  <characteristics>
-                    <characteristic name="Command Trait" typeId="0145-9acf-f5dc-d543">A WINTERBITE general must have this command trait.
-
-Add 1 to wound rolls for attacks made with melee weapons by friendly WINTERBITE FROST SABRES units and WINTERBITE ICEFALL YHETEES units while they are wholly within 12&quot; of this general.</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-              <costs>
-                <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
-              </costs>
-            </selectionEntry>
-            <selectionEntry id="421e-0c73-390c-f06a" name="0. Storm Chaser" hidden="false" collective="false" import="true" type="upgrade">
-              <modifiers>
-                <modifier type="set" field="hidden" value="true">
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="7a40-40f8-e939-8788" type="min"/>
+          </constraints>
+          <profiles>
+            <profile id="6e1e-6765-a268-405e" name="Lord of Beasts" hidden="false" typeId="1504-23bf-8850-4f65" typeName="Command Traits">
+              <characteristics>
+                <characteristic name="Command Trait" typeId="0145-9acf-f5dc-d543">Friendly BOULDERHEAD MONSTERS that are wholly within 12&quot; of this general at the start of the movement phase can move an extra 1&quot; when they make a normal move during that phase.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <costs>
+            <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="4a49-19a5-d162-11d7" name="0. Mass of Scars" hidden="false" collective="false" import="true" type="upgrade">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="24db-e40b-45c7-b3fb" type="equalTo"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="67b6-9741-d35e-20ce" value="1.0">
+              <conditionGroups>
+                <conditionGroup type="and">
                   <conditions>
-                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="cdaa-7a93-7e2c-9793" type="equalTo"/>
+                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="c661-44d6-0f5b-11ff" type="greaterThan"/>
+                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="8b3d-7f03-e1f9-eaf5" type="equalTo"/>
+                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="24db-e40b-45c7-b3fb" type="greaterThan"/>
                   </conditions>
-                </modifier>
-                <modifier type="set" field="0d16-7f96-cf00-b316" value="1.0">
-                  <conditionGroups>
-                    <conditionGroup type="and">
-                      <conditions>
-                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="c661-44d6-0f5b-11ff" type="greaterThan"/>
-                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="8b3d-7f03-e1f9-eaf5" type="equalTo"/>
-                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="cdaa-7a93-7e2c-9793" type="greaterThan"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
-                </modifier>
-              </modifiers>
-              <constraints>
-                <constraint field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="0d16-7f96-cf00-b316" type="min"/>
-              </constraints>
-              <profiles>
-                <profile id="4bb4-6add-fcc1-0638" name="Storm Chaser" hidden="false" typeId="1504-23bf-8850-4f65" typeName="Command Traits">
-                  <characteristics>
-                    <characteristic name="Command Trait" typeId="0145-9acf-f5dc-d543">A THUNDERBELLIES general must have this command trait.
-
-Add 1 to charge rolls for friendly THUNDERBELLIES units while they are wholly within 18&quot; of this general.</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-              <costs>
-                <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
-              </costs>
-            </selectionEntry>
-            <selectionEntry id="564d-687d-f47a-d18c" name="0. Lord of Beasts" hidden="false" collective="false" import="true" type="upgrade">
-              <modifiers>
-                <modifier type="set" field="hidden" value="true">
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="67b6-9741-d35e-20ce" type="min"/>
+          </constraints>
+          <profiles>
+            <profile id="834f-cea7-78a7-4238" name="Mass of Scars" hidden="false" typeId="1504-23bf-8850-4f65" typeName="Command Traits">
+              <characteristics>
+                <characteristic name="Command Trait" typeId="0145-9acf-f5dc-d543">Subtract 1 from wound rolls for attacks made with missile weapons that target this general.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <costs>
+            <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="d558-165c-260b-df73" name="0. Storm Chaser" hidden="false" collective="false" import="true" type="upgrade">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e6c8-5fd5-0598-f08b" type="equalTo"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="30d8-e8b4-876b-9578" value="1.0">
+              <conditionGroups>
+                <conditionGroup type="and">
                   <conditions>
-                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="3f5f-1785-d858-3149" type="equalTo"/>
+                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="c661-44d6-0f5b-11ff" type="greaterThan"/>
+                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="8b3d-7f03-e1f9-eaf5" type="equalTo"/>
+                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e6c8-5fd5-0598-f08b" type="greaterThan"/>
                   </conditions>
-                </modifier>
-                <modifier type="set" field="1959-5e4d-69c4-f9b2" value="1.0">
-                  <conditionGroups>
-                    <conditionGroup type="and">
-                      <conditions>
-                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="c661-44d6-0f5b-11ff" type="greaterThan"/>
-                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="8b3d-7f03-e1f9-eaf5" type="equalTo"/>
-                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="3f5f-1785-d858-3149" type="greaterThan"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
-                </modifier>
-              </modifiers>
-              <constraints>
-                <constraint field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="1959-5e4d-69c4-f9b2" type="min"/>
-              </constraints>
-              <profiles>
-                <profile id="ec01-17f1-ffb4-1048" name="Lord of Beasts" hidden="false" typeId="1504-23bf-8850-4f65" typeName="Command Traits">
-                  <characteristics>
-                    <characteristic name="Command Trait" typeId="0145-9acf-f5dc-d543">A BOULDERHEAD general must have this command trait.
-
-Friendly BOULDERHEAD MONSTERS that are wholly within 12&quot; of this general at the start of the movement phase can move an extra 1&quot; when they make a normal move during that phase.</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-              <costs>
-                <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
-              </costs>
-            </selectionEntry>
-            <selectionEntry id="c486-cf07-17fb-81a2" name="0. Mass of Scars" hidden="false" collective="false" import="true" type="upgrade">
-              <modifiers>
-                <modifier type="set" field="hidden" value="true">
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="30d8-e8b4-876b-9578" type="min"/>
+          </constraints>
+          <profiles>
+            <profile id="d6ac-4929-6d57-b718" name="Storm Chaser" hidden="false" typeId="1504-23bf-8850-4f65" typeName="Command Traits">
+              <characteristics>
+                <characteristic name="Command Trait" typeId="0145-9acf-f5dc-d543">Add 1 to charge rolls for friendly THUNDERBELLIES units while they are wholly within 18&quot; of this general.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <costs>
+            <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="a0e9-51fe-eca0-4d58" name="0. Wintertouched" hidden="false" collective="false" import="true" type="upgrade">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="bf9e-c4df-4548-0c51" type="equalTo"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="dadb-2a62-f245-ec42" value="1.0">
+              <conditionGroups>
+                <conditionGroup type="and">
                   <conditions>
-                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="1889-1992-e1ef-ac62" type="equalTo"/>
+                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="c661-44d6-0f5b-11ff" type="greaterThan"/>
+                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="8b3d-7f03-e1f9-eaf5" type="equalTo"/>
+                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="bf9e-c4df-4548-0c51" type="greaterThan"/>
                   </conditions>
-                </modifier>
-                <modifier type="set" field="ffb4-a424-0040-4022" value="1.0">
-                  <conditionGroups>
-                    <conditionGroup type="and">
-                      <conditions>
-                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="c661-44d6-0f5b-11ff" type="greaterThan"/>
-                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="8b3d-7f03-e1f9-eaf5" type="equalTo"/>
-                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="1889-1992-e1ef-ac62" type="greaterThan"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
-                </modifier>
-              </modifiers>
-              <constraints>
-                <constraint field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="ffb4-a424-0040-4022" type="min"/>
-              </constraints>
-              <profiles>
-                <profile id="9419-5fd7-008d-54ba" name="Mass of Scars" hidden="false" typeId="1504-23bf-8850-4f65" typeName="Command Traits">
-                  <characteristics>
-                    <characteristic name="Command Trait" typeId="0145-9acf-f5dc-d543">An UNDERGUTS general must have this command trait.
-
-Subtract 1 from wound rolls for attacks made with missile weapons that target this general.</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-              <costs>
-                <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
-              </costs>
-            </selectionEntry>
-            <selectionEntry id="808e-5daf-5b78-036a" name="0. &apos;Nice Drop of the Red Stuff!&apos;" hidden="false" collective="false" import="true" type="upgrade">
-              <modifiers>
-                <modifier type="set" field="hidden" value="true">
-                  <conditions>
-                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="5d43-957b-92c8-e54a" type="equalTo"/>
-                  </conditions>
-                </modifier>
-                <modifier type="set" field="477e-3ed0-bafb-a238" value="1.0">
-                  <conditionGroups>
-                    <conditionGroup type="and">
-                      <conditions>
-                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="c661-44d6-0f5b-11ff" type="greaterThan"/>
-                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="8b3d-7f03-e1f9-eaf5" type="equalTo"/>
-                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="5d43-957b-92c8-e54a" type="greaterThan"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
-                </modifier>
-              </modifiers>
-              <constraints>
-                <constraint field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="477e-3ed0-bafb-a238" type="min"/>
-              </constraints>
-              <profiles>
-                <profile id="2206-a4bf-400f-aefe" name="&apos;Nice Drop of the Red Stuff!&apos;" hidden="false" typeId="1504-23bf-8850-4f65" typeName="Command Traits">
-                  <characteristics>
-                    <characteristic name="Command Trait" typeId="0145-9acf-f5dc-d543">A BLOODGULLET general must have this command trait.
-
-Friendly units that start a pile-in move wholly within 12&quot; of this general can move an extra 3&quot; when they pile in.</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-              <costs>
-                <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
-              </costs>
-            </selectionEntry>
-          </selectionEntries>
-        </selectionEntryGroup>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="dadb-2a62-f245-ec42" type="min"/>
+          </constraints>
+          <profiles>
+            <profile id="a8a3-f2f4-3a2b-2c0d" name="Wintertouched" hidden="false" typeId="1504-23bf-8850-4f65" typeName="Command Traits">
+              <characteristics>
+                <characteristic name="Command Trait" typeId="0145-9acf-f5dc-d543">Add 1 to wound rolls for attacks made with melee weapons by friendly WINTERBITE FROST SABRES units and WINTERBITE ICEFALL YHETEES units while they are wholly within 12&quot; of this general.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <costs>
+            <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
+          </costs>
+        </selectionEntry>
+      </selectionEntries>
+      <selectionEntryGroups>
         <selectionEntryGroup id="b620-d678-5902-7976" name="Traits of the Tyrant" hidden="false" collective="false" import="true">
           <modifiers>
             <modifier type="set" field="hidden" value="true">
@@ -2975,6 +2870,9 @@ Friendly units that start a pile-in move wholly within 12&quot; of this general 
                   </characteristics>
                 </profile>
               </profiles>
+              <categoryLinks>
+                <categoryLink id="c54a-9b3d-3632-0d36" name="SpellAllButcher" hidden="false" targetId="8cf2-4aa5-a229-8227" primary="false"/>
+              </categoryLinks>
               <costs>
                 <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
               </costs>
@@ -3054,12 +2952,19 @@ Friendly units that start a pile-in move wholly within 12&quot; of this general 
                   </characteristics>
                 </profile>
               </profiles>
+              <infoLinks>
+                <infoLink id="aa50-91ed-1ed6-e395" name="Bless" hidden="false" targetId="4c4a-18dc-6a53-5355" type="profile"/>
+                <infoLink id="bccc-1c62-4972-bc2a" name="Smite" hidden="false" targetId="7b66-5f0a-449f-f31a" type="profile"/>
+              </infoLinks>
+              <categoryLinks>
+                <categoryLink id="392e-9557-90ec-dd24" name="PrayerPlusEverwinter" hidden="false" targetId="0853-0d24-2d31-ade0" primary="false"/>
+              </categoryLinks>
               <entryLinks>
-                <entryLink id="f418-f2e6-7c0b-bad3" name="Everwinter Prayers" hidden="false" collective="false" import="true" targetId="c2f5-ea44-a5ae-9be0" type="selectionEntryGroup">
+                <entryLink id="f67b-eca2-c41c-5b1b" name="Prayer Scriptures" hidden="false" collective="false" import="true" targetId="a362-d338-3a8e-de04" type="selectionEntryGroup">
                   <modifiers>
                     <modifier type="set" field="hidden" value="true">
                       <conditions>
-                        <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="f0a9-dd66-8662-61ce" type="notInstanceOf"/>
+                        <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="f0a9-dd66-8662-61ce" type="instanceOf"/>
                       </conditions>
                     </modifier>
                   </modifiers>
@@ -3218,11 +3123,134 @@ Friendly units that start a pile-in move wholly within 12&quot; of this general 
           </selectionEntries>
         </selectionEntryGroup>
       </selectionEntryGroups>
+      <entryLinks>
+        <entryLink id="e3e0-f9a2-6d76-efa2" name="Universal Command Traits" hidden="false" collective="false" import="true" targetId="20f0-6df9-b464-3789" type="selectionEntryGroup"/>
+      </entryLinks>
+    </selectionEntryGroup>
+    <selectionEntryGroup id="a362-d338-3a8e-de04" name="Prayer Scriptures" hidden="false" collective="false" import="true">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4373-740f-1bf3-b0aa" type="instanceOf"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="e3a6-45ca-4974-b489" type="instanceOf"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="996a-613c-4006-25e3" type="instanceOf"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="6cd6-b22e-bfcb-9589" type="instanceOf"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="b543-cb16-0c79-fbc6" type="instanceOf"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+        <modifier type="increment" field="cfac-47d3-831e-37f2" value="1.0">
+          <repeats>
+            <repeat field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="c7bd-c872-ef57-2468" repeats="1" roundUp="false"/>
+          </repeats>
+          <conditions>
+            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="c7bd-c872-ef57-2468" type="greaterThan"/>
+          </conditions>
+        </modifier>
+        <modifier type="increment" field="cfac-47d3-831e-37f2" value="1.0">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="0853-0d24-2d31-ade0" type="instanceOf"/>
+                <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="f0a9-dd66-8662-61ce" type="instanceOf"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+      <constraints>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="cfac-47d3-831e-37f2" type="max"/>
+      </constraints>
+      <selectionEntryGroups>
+        <selectionEntryGroup id="a45f-65e4-33f4-eceb" name="Everwinter Prayers" publicationId="ca59-f8ac-3938-b963" hidden="false" collective="false" import="true">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="c8fa-060e-690f-75c9" type="notInstanceOf"/>
+              </conditions>
+            </modifier>
+            <modifier type="increment" field="5868-efae-c52f-6b44" value="1.0">
+              <repeats>
+                <repeat field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="c7bd-c872-ef57-2468" repeats="1" roundUp="false"/>
+              </repeats>
+              <conditions>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="c7bd-c872-ef57-2468" type="greaterThan"/>
+              </conditions>
+            </modifier>
+            <modifier type="increment" field="5868-efae-c52f-6b44" value="1.0">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="0853-0d24-2d31-ade0" type="instanceOf"/>
+                    <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="f0a9-dd66-8662-61ce" type="instanceOf"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="5868-efae-c52f-6b44" type="max"/>
+          </constraints>
+          <selectionEntries>
+            <selectionEntry id="3086-a2e4-2604-9c1f" name="3 - Call of the Blizzard" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="6020-03d9-8a85-e7f2" type="max"/>
+              </constraints>
+              <profiles>
+                <profile id="aa85-95fd-8dec-df89" name="Call of the Blizzard" hidden="false" typeId="161a-85bd-f19e-a5a7" typeName="Prayer">
+                  <characteristics>
+                    <characteristic name="Prayer" typeId="19bc-965a-768d-defa">Call of the Blizzard is a prayer that has an answer value of 4 and a range of 18&quot;. If answered, pick 1 friendly ICEFALL YHETEES unit wholly within range and visible to the chanter. You can return 1 slain model to that unit.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <costs>
+                <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="4b05-4b4c-efcf-2df3" name="2 - Keening Gale" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="1aa6-8034-eeff-fde1" type="max"/>
+              </constraints>
+              <profiles>
+                <profile id="dd6c-cfc6-006b-9617" name="Keening Gale" hidden="false" typeId="161a-85bd-f19e-a5a7" typeName="Prayer">
+                  <characteristics>
+                    <characteristic name="Prayer" typeId="19bc-965a-768d-defa">Keening Gale is a prayer that has an answer value of 4 and a range of 18&quot;. If answered, pick 1 friendly MONSTER or MOURNFANG PACK wholly within range and visible to the chanter. Add 3&quot; to that unit&apos;s Move characteristic until the start of your next hero phase.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <costs>
+                <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="0e65-31ce-21ad-1e45" name="1 - Pulverising Hailstorm" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="0cfe-bec8-2416-8758" type="max"/>
+              </constraints>
+              <profiles>
+                <profile id="ac4b-b085-a9a2-bd7b" name="Pulverising Hailstorm" hidden="false" typeId="161a-85bd-f19e-a5a7" typeName="Prayer">
+                  <characteristics>
+                    <characteristic name="Prayer" typeId="19bc-965a-768d-defa">Pulversing Hailstorm is a prayer that has an answer value of 4 and a range of 18&quot;. If answered, pick a point on the battlefield within range and visible to the chanter. Roll 1 dice for each unit within 3&quot; of that point. On a 3+, that unit suffers D3 mortal wounds.
+</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <costs>
+                <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
+              </costs>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
+      <entryLinks>
+        <entryLink id="5786-ce26-385c-9d9f" name="Universal Prayer Scripture" hidden="false" collective="false" import="true" targetId="7104-ab27-d136-1df0" type="selectionEntryGroup"/>
+      </entryLinks>
     </selectionEntryGroup>
   </sharedSelectionEntryGroups>
   <catalogueLinks>
     <catalogueLink id="e20a-e9cb-8e56-98aa" name="Destruction - Endless SpellsPrayers" targetId="ff0a-9787-61b7-9603" type="catalogue" importRootEntries="true"/>
-    <catalogueLink id="5a56-3328-d501-e870" name="Malign Artefacts" targetId="5d5b-1959-c979-44ee" type="catalogue" importRootEntries="true"/>
     <catalogueLink id="5f49-93c3-68c7-454b" name="Destruction - Ogor Mawtribes - Data" targetId="5173-04cd-a396-1410" type="catalogue" importRootEntries="true"/>
     <catalogueLink id="c936-31d6-fd22-b5fe" name="Destruction Data" targetId="d8c8-7cbd-0c6d-6c2d" type="catalogue" importRootEntries="true"/>
   </catalogueLinks>

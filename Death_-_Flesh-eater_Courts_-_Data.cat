@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="e25d-7663-b208-2c40" name="Death - Flesh-eater Courts - Data" revision="3" battleScribeVersion="2.03" authorName="Thulram" library="true" gameSystemId="e832-3291-06be-cab1" gameSystemRevision="3" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="e25d-7663-b208-2c40" name="Death - Flesh-eater Courts - Data" revision="4" battleScribeVersion="2.03" authorName="Thulram" library="true" gameSystemId="e832-3291-06be-cab1" gameSystemRevision="4" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <profileTypes>
     <profileType id="1f8c-169e-faa0-5118" name="Royal Terrorgheist Wounds">
       <characteristicTypes>
@@ -255,7 +255,7 @@
         </selectionEntry>
       </selectionEntries>
       <costs>
-        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="420.0"/>
+        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="445.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="df88-9ecd-4e9f-4781" name="Abhorrent Ghoul King on Royal Zombie Dragon" publicationId="d5a9-02d5-d057-1ecf" hidden="false" collective="false" import="true" type="unit">
@@ -455,7 +455,7 @@
         </selectionEntry>
       </selectionEntries>
       <costs>
-        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="440.0"/>
+        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="445.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="eecc-c07e-9afd-1ef4" name="Abhorrent Ghoul King" publicationId="d5a9-02d5-d057-1ecf" hidden="false" collective="false" import="true" type="unit">
@@ -528,7 +528,7 @@
         </selectionEntry>
       </selectionEntries>
       <costs>
-        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="160.0"/>
+        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="165.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="4a35-537a-0c92-55ca" name="Abhorrent Archregent" publicationId="d5a9-02d5-d057-1ecf" hidden="false" collective="false" import="true" type="unit">
@@ -602,7 +602,7 @@
         </selectionEntry>
       </selectionEntries>
       <costs>
-        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="240.0"/>
+        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="245.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="e69e-582c-815e-8b71" name="Varghulf Courtier" publicationId="d5a9-02d5-d057-1ecf" hidden="false" collective="false" import="true" type="unit">
@@ -775,7 +775,7 @@
         </selectionEntry>
       </selectionEntries>
       <costs>
-        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="60.0"/>
+        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="70.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="7f19-bc59-fd81-7780" name="Crypt Ghouls" publicationId="d5a9-02d5-d057-1ecf" hidden="false" collective="false" import="true" type="unit">
@@ -790,6 +790,14 @@
               </conditions>
             </conditionGroup>
           </conditionGroups>
+        </modifier>
+        <modifier type="increment" field="b0b4-6aec-82c2-02ae" value="95.0">
+          <repeats>
+            <repeat field="selections" scope="7f19-bc59-fd81-7780" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e20c-48d8-e5e3-1a36" repeats="1" roundUp="false"/>
+          </repeats>
+          <conditions>
+            <condition field="selections" scope="7f19-bc59-fd81-7780" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e20c-48d8-e5e3-1a36" type="greaterThan"/>
+          </conditions>
         </modifier>
       </modifiers>
       <profiles>
@@ -806,6 +814,11 @@
             <characteristic name="Ability" typeId="9bce-4deb-8b79-eaec">You can re-roll hit rolls of 1 for attacks made by this unit while it is wholly within 18&quot; of any friendly ABHORRANTS.</characteristic>
           </characteristics>
         </profile>
+        <profile id="01b0-dc89-507d-f812" name="Crypt Ghast" hidden="false" typeId="c23b-5a30-07e2-4706" typeName="Unit Options">
+          <characteristics>
+            <characteristic name="Unit Option" typeId="5879-9a21-e9d2-539d">The leader of this unit is a Crypt Ghast. Add 1 to the Attacks characteristic of a Crypt Ghast’s Sharpened Teeth and Filthy Claws.</characteristic>
+          </characteristics>
+        </profile>
       </profiles>
       <categoryLinks>
         <categoryLink id="e950-7f8f-652b-b539" name="Crypt Ghouls" hidden="false" targetId="fb4f-f88c-e303-7a0f" primary="false"/>
@@ -818,20 +831,10 @@
       </categoryLinks>
       <selectionEntries>
         <selectionEntry id="3aef-10c3-53e0-f9ba" name="10 Crypt Ghouls" hidden="false" collective="false" import="true" type="model">
-          <modifiers>
-            <modifier type="set" field="b0b4-6aec-82c2-02ae" value="90.0">
-              <conditions>
-                <condition field="selections" scope="parent" value="4.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" type="equalTo"/>
-              </conditions>
-            </modifier>
-          </modifiers>
           <constraints>
-            <constraint field="selections" scope="parent" value="4.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8e49-a77c-7627-e7e5" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8e49-a77c-7627-e7e5" type="max"/>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="a0ee-1f03-ce1a-8a25" type="min"/>
           </constraints>
-          <costs>
-            <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="100.0"/>
-          </costs>
         </selectionEntry>
         <selectionEntry id="5525-12f7-4d32-d978" name="Sharpened Teeth and Filthy Claws" hidden="false" collective="false" import="true" type="upgrade">
           <constraints>
@@ -901,29 +904,11 @@
           </costs>
         </selectionEntry>
       </selectionEntries>
-      <selectionEntryGroups>
-        <selectionEntryGroup id="8ea0-74f5-7662-24f0" name="Unit Option" hidden="false" collective="false" import="true">
-          <selectionEntries>
-            <selectionEntry id="c6e6-283a-333d-89ce" name="Crypt Ghast" hidden="false" collective="false" import="true" type="upgrade">
-              <constraints>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d474-a215-38b7-537c" type="max"/>
-              </constraints>
-              <profiles>
-                <profile id="e033-2f36-4f11-1c7a" name="Crypt Ghast" hidden="false" typeId="c23b-5a30-07e2-4706" typeName="Unit Options">
-                  <characteristics>
-                    <characteristic name="Unit Option" typeId="5879-9a21-e9d2-539d">The leader of this unit is a Crypt Ghast. Add 1 to the Attacks characteristic of a Crypt Ghast’s Sharpened Teeth and Filthy Claws.</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-              <costs>
-                <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
-              </costs>
-            </selectionEntry>
-          </selectionEntries>
-        </selectionEntryGroup>
-      </selectionEntryGroups>
+      <entryLinks>
+        <entryLink id="35e5-815d-cd08-8dc1" name="Unit Reinforcement" hidden="false" collective="false" import="true" targetId="b493-d9e6-82ca-5488" type="selectionEntry"/>
+      </entryLinks>
       <costs>
-        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
+        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="95.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="4eb1-ceb8-a91b-9058" name="Crypt Infernal Courtier" publicationId="d5a9-02d5-d057-1ecf" hidden="false" collective="false" import="true" type="unit">
@@ -1006,10 +991,20 @@
         </selectionEntry>
       </selectionEntries>
       <costs>
-        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="120.0"/>
+        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="130.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="71aa-cfd6-0c65-d648" name="Crypt Flayers" publicationId="d5a9-02d5-d057-1ecf" hidden="false" collective="false" import="true" type="unit">
+      <modifiers>
+        <modifier type="increment" field="b0b4-6aec-82c2-02ae" value="180.0">
+          <repeats>
+            <repeat field="selections" scope="71aa-cfd6-0c65-d648" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e20c-48d8-e5e3-1a36" repeats="1" roundUp="false"/>
+          </repeats>
+          <conditions>
+            <condition field="selections" scope="71aa-cfd6-0c65-d648" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e20c-48d8-e5e3-1a36" type="greaterThan"/>
+          </conditions>
+        </modifier>
+      </modifiers>
       <profiles>
         <profile id="c4f0-3bb8-1324-1512" name="Crypt Flayers" hidden="false" typeId="3956-f6dd-6c88-ae4b" typeName="Unit">
           <characteristics>
@@ -1017,6 +1012,11 @@
             <characteristic name="Wounds" typeId="a0c6-af64-2f24-5759">4</characteristic>
             <characteristic name="Save" typeId="93b6-2f96-2df7-e330">5+</characteristic>
             <characteristic name="Bravery" typeId="2420-1c5c-1016-7033">10</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="efa3-9c97-5ee8-0cca" name="Crypt Infernal" hidden="false" typeId="c23b-5a30-07e2-4706" typeName="Unit Options">
+          <characteristics>
+            <characteristic name="Unit Option" typeId="5879-9a21-e9d2-539d">The leader of this unit is a Crypt Infernal. Add 1 to the Attacks characteristic of a Crypt Infernal’s Piercing Talons.</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -1034,12 +1034,9 @@
       <selectionEntries>
         <selectionEntry id="1562-b79f-1955-7a0b" name="3 Crypt Flayers" hidden="false" collective="false" import="true" type="model">
           <constraints>
-            <constraint field="selections" scope="parent" value="4.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="5e8c-c70b-9d48-7baf" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="5e8c-c70b-9d48-7baf" type="max"/>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d884-44a0-850d-e007" type="min"/>
           </constraints>
-          <costs>
-            <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="170.0"/>
-          </costs>
         </selectionEntry>
         <selectionEntry id="d7c5-68e9-a9fc-e486" name="Piercing Talons" hidden="false" collective="false" import="true" type="upgrade">
           <constraints>
@@ -1136,29 +1133,11 @@
           </costs>
         </selectionEntry>
       </selectionEntries>
-      <selectionEntryGroups>
-        <selectionEntryGroup id="76ca-ed72-3ee5-7448" name="Unit Option" hidden="false" collective="false" import="true">
-          <selectionEntries>
-            <selectionEntry id="4403-8e74-2f64-deae" name="Crypt Infernal" hidden="false" collective="false" import="true" type="upgrade">
-              <constraints>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="2585-bc76-7e8e-3c77" type="max"/>
-              </constraints>
-              <profiles>
-                <profile id="bca4-ef17-1baa-a9a8" name="Crypt Infernal" hidden="false" typeId="c23b-5a30-07e2-4706" typeName="Unit Options">
-                  <characteristics>
-                    <characteristic name="Unit Option" typeId="5879-9a21-e9d2-539d">The leader of this unit is a Crypt Infernal. Add 1 to the Attacks characteristic of a Crypt Infernal’s Piercing Talons.</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-              <costs>
-                <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
-              </costs>
-            </selectionEntry>
-          </selectionEntries>
-        </selectionEntryGroup>
-      </selectionEntryGroups>
+      <entryLinks>
+        <entryLink id="6c25-981b-1930-717d" name="Unit Reinforcement" hidden="false" collective="false" import="true" targetId="b493-d9e6-82ca-5488" type="selectionEntry"/>
+      </entryLinks>
       <costs>
-        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
+        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="180.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="7865-2e6d-612e-3490" name="Crypt Haunter Courtier" publicationId="d5a9-02d5-d057-1ecf" hidden="false" collective="false" import="true" type="unit">
@@ -1246,10 +1225,20 @@
         </selectionEntry>
       </selectionEntries>
       <costs>
-        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="120.0"/>
+        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="115.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="c86b-9667-c1b4-841a" name="Crypt Horrors" publicationId="d5a9-02d5-d057-1ecf" hidden="false" collective="false" import="true" type="unit">
+      <modifiers>
+        <modifier type="increment" field="b0b4-6aec-82c2-02ae" value="125.0">
+          <repeats>
+            <repeat field="selections" scope="c86b-9667-c1b4-841a" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e20c-48d8-e5e3-1a36" repeats="1" roundUp="false"/>
+          </repeats>
+          <conditions>
+            <condition field="selections" scope="c86b-9667-c1b4-841a" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e20c-48d8-e5e3-1a36" type="greaterThan"/>
+          </conditions>
+        </modifier>
+      </modifiers>
       <profiles>
         <profile id="452d-2aee-ca08-c813" name="Crypt Horrors" hidden="false" typeId="3956-f6dd-6c88-ae4b" typeName="Unit">
           <characteristics>
@@ -1269,6 +1258,11 @@
             <characteristic name="Ability" typeId="9bce-4deb-8b79-eaec">In your hero phase, you can heal 1 wound allocated to this model.</characteristic>
           </characteristics>
         </profile>
+        <profile id="a46e-3a02-bae2-7579" name="Crypt Haunter" hidden="false" typeId="c23b-5a30-07e2-4706" typeName="Unit Options">
+          <characteristics>
+            <characteristic name="Unit Option" typeId="5879-9a21-e9d2-539d">The leader of this unit is a Crypt Haunter. Add 1 to the Attacks characteristic of a Crypt Haunter’s Club and Septic Talons.</characteristic>
+          </characteristics>
+        </profile>
       </profiles>
       <categoryLinks>
         <categoryLink id="30ca-84ca-f556-cc5a" name="Death" hidden="false" targetId="4927-09f0-87d8-4a68" primary="false"/>
@@ -1281,12 +1275,9 @@
       <selectionEntries>
         <selectionEntry id="fe58-ab24-e43b-a010" name="3 Crypt Horrors" hidden="false" collective="false" import="true" type="model">
           <constraints>
-            <constraint field="selections" scope="parent" value="4.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="dcf3-7af2-9547-637d" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="dcf3-7af2-9547-637d" type="max"/>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="018a-f4d2-cb49-9196" type="min"/>
           </constraints>
-          <costs>
-            <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="130.0"/>
-          </costs>
         </selectionEntry>
         <selectionEntry id="6bb1-5023-597f-70cf" name="Club and Septic Talons" hidden="false" collective="false" import="true" type="upgrade">
           <constraints>
@@ -1356,29 +1347,11 @@
           </costs>
         </selectionEntry>
       </selectionEntries>
-      <selectionEntryGroups>
-        <selectionEntryGroup id="1579-298a-3e48-3be0" name="Unit Option" hidden="false" collective="false" import="true">
-          <selectionEntries>
-            <selectionEntry id="7499-a26d-5322-947c" name="Crypt Haunter" hidden="false" collective="false" import="true" type="upgrade">
-              <constraints>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="5046-be77-19f6-f5c7" type="max"/>
-              </constraints>
-              <profiles>
-                <profile id="dcd0-27af-afcf-55fe" name="Crypt Haunter" hidden="false" typeId="c23b-5a30-07e2-4706" typeName="Unit Options">
-                  <characteristics>
-                    <characteristic name="Unit Option" typeId="5879-9a21-e9d2-539d">The leader of this unit is a Crypt Haunter. Add 1 to the Attacks characteristic of a Crypt Haunter’s Club and Septic Talons.</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-              <costs>
-                <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
-              </costs>
-            </selectionEntry>
-          </selectionEntries>
-        </selectionEntryGroup>
-      </selectionEntryGroups>
+      <entryLinks>
+        <entryLink id="904f-3f4e-eea2-76a0" name="Unit Reinforcement" hidden="false" collective="false" import="true" targetId="b493-d9e6-82ca-5488" type="selectionEntry"/>
+      </entryLinks>
       <costs>
-        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
+        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="125.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="6471-cacd-a98b-8074" name="Royal Terrorgheist" publicationId="d5a9-02d5-d057-1ecf" hidden="false" collective="false" import="true" type="unit">
@@ -1567,7 +1540,7 @@
         </selectionEntry>
       </selectionEntries>
       <costs>
-        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="300.0"/>
+        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="305.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="9374-b884-4b54-5d7a" name="Royal Zombie Dragon" publicationId="d5a9-02d5-d057-1ecf" hidden="false" collective="false" import="true" type="unit">
@@ -1740,7 +1713,7 @@
         </selectionEntry>
       </selectionEntries>
       <costs>
-        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="300.0"/>
+        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="295.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="b7c9-ff17-d0e2-4e58" name="Duke Crakmarrow" hidden="false" collective="false" import="true" type="unit">

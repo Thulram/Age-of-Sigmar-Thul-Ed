@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="7399-a48d-8928-2889" name="Order - Cities of Sigmar Duardin - Data" revision="1" battleScribeVersion="2.03" authorName="Thulram" library="true" gameSystemId="e832-3291-06be-cab1" gameSystemRevision="1" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="7399-a48d-8928-2889" name="Order - Cities of Sigmar Duardin - Data" revision="2" battleScribeVersion="2.03" authorName="Thulram" library="true" gameSystemId="e832-3291-06be-cab1" gameSystemRevision="2" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <categoryEntries>
     <categoryEntry id="9d48-97e2-eb19-edbe" name="Dispossessed" hidden="false"/>
     <categoryEntry id="0416-6c61-913d-ee62" name="Warden King" hidden="false"/>
@@ -90,14 +90,24 @@
         </profile>
         <profile id="47f7-4418-6898-b14d" name="Rune Lore" hidden="false" typeId="7861-da01-01c0-88d9" typeName="Ability">
           <characteristics>
-            <characteristic name="Ability" typeId="9bce-4deb-8b79-eaec">In your hero phase, this model can chant 1 of the following prayers. If it does so, pick 1 of the prayers and then make a prayer roll by rolling a dice. On a 1, the prayer is not answered. On a 2+, the prayer is answered.
-
-Ancestral Shield: Pick 1 friendly DISPOSSESSED unit wholly within 12&quot; of this model. Until the start of your next hero phase, roll a dice each time you allocate a wound or mortal wound to that unit. On a 6, that wound or mortal wound is negated.
-
-Forgefire: Pick 1 friendly DISPOSSESSED unit wholly within 12&quot; of this model. Until the start of your next hero phase, improve the Rend characteristic of that unit’s weapons by 1.</characteristic>
+            <characteristic name="Ability" typeId="9bce-4deb-8b79-eaec">This unit knows the Ancestral Shield and Forgefire prayers.</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="1010-a59b-7ec6-af9c" name="Ancestral Shield" hidden="false" typeId="161a-85bd-f19e-a5a7" typeName="Prayer">
+          <characteristics>
+            <characteristic name="Prayer" typeId="19bc-965a-768d-defa">This prayer has an answer value of 2 and a range of 12&quot;. If answered, pick 1 friendly DISPOSSESSED unit wholly within range of the chanter that is visible to them. That unit has a ward of 6+ until the start of your next hero phase.</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="9ac9-225c-9e9b-208e" name="Forgefire" hidden="false" typeId="161a-85bd-f19e-a5a7" typeName="Prayer">
+          <characteristics>
+            <characteristic name="Prayer" typeId="19bc-965a-768d-defa">This prayer has an answer value of 2 and a range of 12&quot;. If answered, pick 1 friendly DISPOSSESSED unit wholly within range of the chanter that is visible to them. Improve the Rend characteristic of that unit’s weapons by 1 until the start of your next hero phase.</characteristic>
           </characteristics>
         </profile>
       </profiles>
+      <infoLinks>
+        <infoLink id="288e-ab74-6357-4ff0" name="Smite" hidden="false" targetId="7b66-5f0a-449f-f31a" type="profile"/>
+        <infoLink id="1ff3-2da5-f084-4936" name="Bless" hidden="false" targetId="4c4a-18dc-6a53-5355" type="profile"/>
+      </infoLinks>
       <categoryLinks>
         <categoryLink id="ba36-e9ac-ef85-3ec1" name="CITIES OF SIGMAR" hidden="false" targetId="d20b-b22a-23ee-3ca1" primary="false"/>
         <categoryLink id="a5ba-17db-f72c-9417" name="Dispossessed" hidden="false" targetId="9d48-97e2-eb19-edbe" primary="false"/>
@@ -155,7 +165,7 @@ Forgefire: Pick 1 friendly DISPOSSESSED unit wholly within 12&quot; of this mode
         </selectionEntry>
       </selectionEntries>
       <costs>
-        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="90.0"/>
+        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="100.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="4050-5f67-9ee9-424f" name="Longbeards" publicationId="88ce-c2fe-b89c-ed48" hidden="false" collective="false" import="true" type="unit">
@@ -170,6 +180,14 @@ Forgefire: Pick 1 friendly DISPOSSESSED unit wholly within 12&quot; of this mode
               </conditions>
             </conditionGroup>
           </conditionGroups>
+        </modifier>
+        <modifier type="increment" field="b0b4-6aec-82c2-02ae" value="105.0">
+          <repeats>
+            <repeat field="selections" scope="4050-5f67-9ee9-424f" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e20c-48d8-e5e3-1a36" repeats="1" roundUp="false"/>
+          </repeats>
+          <conditions>
+            <condition field="selections" scope="4050-5f67-9ee9-424f" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e20c-48d8-e5e3-1a36" type="greaterThan"/>
+          </conditions>
         </modifier>
       </modifiers>
       <profiles>
@@ -190,6 +208,11 @@ Forgefire: Pick 1 friendly DISPOSSESSED unit wholly within 12&quot; of this mode
 ‘Put your back into it, beardling!’: You can reroll wound rolls of 1 for attacks made by friendly DISPOSSESSED units while they are wholly within 12&quot; of any units with this complaint.
 
 ‘Too much damned magic flying about these days!’: A unit with this complaint can attempt to dispel 1 endless spell in your hero phase.</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="4d8d-fca8-df4a-2d80" name="Old Guard" hidden="false" typeId="c23b-5a30-07e2-4706" typeName="Unit Options">
+          <characteristics>
+            <characteristic name="Unit Option" typeId="5879-9a21-e9d2-539d">1 model in this unit can be a Old Guard. Add 1 to the Attacks characteristic of that model’s melee weapon.</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -244,40 +267,18 @@ Forgefire: Pick 1 friendly DISPOSSESSED unit wholly within 12&quot; of this mode
           </costs>
         </selectionEntry>
         <selectionEntry id="db95-d37e-66fa-c22d" name="10 Longbeards" hidden="false" collective="false" import="true" type="model">
-          <modifiers>
-            <modifier type="set" field="b0b4-6aec-82c2-02ae" value="80.0">
-              <conditions>
-                <condition field="selections" scope="4050-5f67-9ee9-424f" value="3.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="db95-d37e-66fa-c22d" type="equalTo"/>
-              </conditions>
-            </modifier>
-          </modifiers>
           <constraints>
-            <constraint field="selections" scope="parent" value="3.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="e3fa-a48c-0a0e-245a" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="e3fa-a48c-0a0e-245a" type="max"/>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="5320-0023-3812-fe4b" type="min"/>
           </constraints>
           <costs>
-            <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="100.0"/>
+            <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
           </costs>
         </selectionEntry>
       </selectionEntries>
       <selectionEntryGroups>
         <selectionEntryGroup id="738b-e1d5-effb-1fdc" name="Unit Options" hidden="false" collective="false" import="true">
           <selectionEntries>
-            <selectionEntry id="5db9-d928-8637-8046" name="Old Guard" hidden="false" collective="false" import="true" type="upgrade">
-              <constraints>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="7a50-34db-d8a1-271f" type="max"/>
-              </constraints>
-              <profiles>
-                <profile id="1f6f-eb5b-65fb-77da" name="Old Guard" hidden="false" typeId="c23b-5a30-07e2-4706" typeName="Unit Options">
-                  <characteristics>
-                    <characteristic name="Unit Option" typeId="5879-9a21-e9d2-539d">1 model in this unit can be a Old Guard. Add 1 to the Attacks characteristic of that model’s melee weapon.</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-              <costs>
-                <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
-              </costs>
-            </selectionEntry>
             <selectionEntry id="718d-d3dd-c0aa-fbaf" name="Standard Bearer" hidden="false" collective="false" import="true" type="upgrade">
               <modifiers>
                 <modifier type="increment" field="c41e-26ba-61ca-1c24" value="1.0">
@@ -380,11 +381,24 @@ Forgefire: Pick 1 friendly DISPOSSESSED unit wholly within 12&quot; of this mode
           </selectionEntries>
         </selectionEntryGroup>
       </selectionEntryGroups>
+      <entryLinks>
+        <entryLink id="2f0d-f5ca-5317-56c4" name="Unit Reinforcement" hidden="false" collective="false" import="true" targetId="b493-d9e6-82ca-5488" type="selectionEntry"/>
+      </entryLinks>
       <costs>
-        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
+        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="105.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="6d3d-4c04-d50d-7fd9" name="Irondrakes" publicationId="88ce-c2fe-b89c-ed48" hidden="false" collective="false" import="true" type="unit">
+      <modifiers>
+        <modifier type="increment" field="b0b4-6aec-82c2-02ae" value="160.0">
+          <repeats>
+            <repeat field="selections" scope="6d3d-4c04-d50d-7fd9" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e20c-48d8-e5e3-1a36" repeats="1" roundUp="false"/>
+          </repeats>
+          <conditions>
+            <condition field="selections" scope="6d3d-4c04-d50d-7fd9" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e20c-48d8-e5e3-1a36" type="greaterThan"/>
+          </conditions>
+        </modifier>
+      </modifiers>
       <profiles>
         <profile id="13ea-7faa-6975-3093" name="Irondrakes" hidden="false" typeId="3956-f6dd-6c88-ae4b" typeName="Unit">
           <characteristics>
@@ -414,13 +428,13 @@ Forgefire: Pick 1 friendly DISPOSSESSED unit wholly within 12&quot; of this mode
         <categoryLink id="b4f8-78eb-18e5-284d" name="New CategoryLink" hidden="false" targetId="6230-ed60-e374-add4" primary="true"/>
       </categoryLinks>
       <selectionEntries>
-        <selectionEntry id="d4eb-6d7d-93f2-eb3d" name="10 Irondrakes" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="d4eb-6d7d-93f2-eb3d" name="10 Irondrakes" hidden="false" collective="false" import="true" type="model">
           <constraints>
-            <constraint field="selections" scope="parent" value="3.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="29c5-a8f6-13b0-f289" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="29c5-a8f6-13b0-f289" type="max"/>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="f693-7287-4add-cb08" type="min"/>
           </constraints>
           <costs>
-            <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="150.0"/>
+            <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="cdb8-e78a-43e7-c208" name="Drakegun and Mailed Fist" hidden="false" collective="false" import="true" type="upgrade">
@@ -675,8 +689,11 @@ Forgefire: Pick 1 friendly DISPOSSESSED unit wholly within 12&quot; of this mode
           </selectionEntries>
         </selectionEntryGroup>
       </selectionEntryGroups>
+      <entryLinks>
+        <entryLink id="51ba-976d-2a0f-8378" name="Unit Reinforcement" hidden="false" collective="false" import="true" targetId="b493-d9e6-82ca-5488" type="selectionEntry"/>
+      </entryLinks>
       <costs>
-        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
+        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="160.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="476d-c8dc-9c4d-87fd" name="Ironbreakers" publicationId="88ce-c2fe-b89c-ed48" hidden="false" collective="false" import="true" type="unit">
@@ -691,6 +708,14 @@ Forgefire: Pick 1 friendly DISPOSSESSED unit wholly within 12&quot; of this mode
               </conditions>
             </conditionGroup>
           </conditionGroups>
+        </modifier>
+        <modifier type="increment" field="b0b4-6aec-82c2-02ae" value="115.0">
+          <repeats>
+            <repeat field="selections" scope="476d-c8dc-9c4d-87fd" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e20c-48d8-e5e3-1a36" repeats="1" roundUp="false"/>
+          </repeats>
+          <conditions>
+            <condition field="selections" scope="476d-c8dc-9c4d-87fd" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e20c-48d8-e5e3-1a36" type="greaterThan"/>
+          </conditions>
         </modifier>
       </modifiers>
       <profiles>
@@ -754,19 +779,12 @@ Forgefire: Pick 1 friendly DISPOSSESSED unit wholly within 12&quot; of this mode
           </costs>
         </selectionEntry>
         <selectionEntry id="01da-9266-4fa1-1370" name="10 Ironbreakers" hidden="false" collective="false" import="true" type="model">
-          <modifiers>
-            <modifier type="set" field="b0b4-6aec-82c2-02ae" value="90.0">
-              <conditions>
-                <condition field="selections" scope="476d-c8dc-9c4d-87fd" value="3.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="01da-9266-4fa1-1370" type="equalTo"/>
-              </conditions>
-            </modifier>
-          </modifiers>
           <constraints>
-            <constraint field="selections" scope="parent" value="3.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="4a5f-c2c5-9dc8-87f4" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="4a5f-c2c5-9dc8-87f4" type="max"/>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="fae9-3d8b-33bd-204a" type="min"/>
           </constraints>
           <costs>
-            <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="110.0"/>
+            <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="bc05-1a77-fd62-0449" name="Ironbreaker Weapon" hidden="false" collective="false" import="true" type="upgrade">
@@ -940,8 +958,11 @@ Forgefire: Pick 1 friendly DISPOSSESSED unit wholly within 12&quot; of this mode
           </selectionEntries>
         </selectionEntryGroup>
       </selectionEntryGroups>
+      <entryLinks>
+        <entryLink id="0c20-c6b7-e204-de02" name="Unit Reinforcement" hidden="false" collective="false" import="true" targetId="b493-d9e6-82ca-5488" type="selectionEntry"/>
+      </entryLinks>
       <costs>
-        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
+        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="115.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="da0b-6716-3626-4dd5" name="Hammerers" publicationId="88ce-c2fe-b89c-ed48" hidden="false" collective="false" import="true" type="unit">
@@ -971,18 +992,18 @@ Forgefire: Pick 1 friendly DISPOSSESSED unit wholly within 12&quot; of this mode
       <selectionEntries>
         <selectionEntry id="cb38-2233-59c5-1d6e" name="10 Hammerers" hidden="false" collective="false" import="true" type="model">
           <modifiers>
-            <modifier type="set" field="b0b4-6aec-82c2-02ae" value="120.0">
+            <modifier type="set" field="0f0d-bc5d-0e63-73a0" value="3.0">
               <conditions>
-                <condition field="selections" scope="da0b-6716-3626-4dd5" value="3.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="cb38-2233-59c5-1d6e" type="equalTo"/>
+                <condition field="selections" scope="da0b-6716-3626-4dd5" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="a42d-220e-6a88-7bf6" type="greaterThan"/>
               </conditions>
             </modifier>
           </modifiers>
           <constraints>
-            <constraint field="selections" scope="parent" value="3.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="0f0d-bc5d-0e63-73a0" type="max"/>
+            <constraint field="selections" scope="parent" value="2.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="0f0d-bc5d-0e63-73a0" type="max"/>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="dbd9-0091-efe1-d7be" type="min"/>
           </constraints>
           <costs>
-            <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="140.0"/>
+            <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="145.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="7e36-7528-85b3-1cad" name="Gromril Great Hammer" hidden="false" collective="false" import="true" type="upgrade">
@@ -1247,10 +1268,20 @@ Forgefire: Pick 1 friendly DISPOSSESSED unit wholly within 12&quot; of this mode
         </selectionEntryGroup>
       </selectionEntryGroups>
       <costs>
-        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="60.0"/>
+        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="70.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="cd6b-49ef-27b4-2cbc" name="Gyrocopters" publicationId="88ce-c2fe-b89c-ed48" hidden="false" collective="false" import="true" type="unit">
+      <modifiers>
+        <modifier type="increment" field="b0b4-6aec-82c2-02ae" value="75.0">
+          <repeats>
+            <repeat field="selections" scope="cd6b-49ef-27b4-2cbc" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e20c-48d8-e5e3-1a36" repeats="1" roundUp="false"/>
+          </repeats>
+          <conditions>
+            <condition field="selections" scope="cd6b-49ef-27b4-2cbc" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e20c-48d8-e5e3-1a36" type="greaterThan"/>
+          </conditions>
+        </modifier>
+      </modifiers>
       <profiles>
         <profile id="84d6-ec2b-1c14-5ead" name="Gyrocopters" hidden="false" typeId="3956-f6dd-6c88-ae4b" typeName="Unit">
           <characteristics>
@@ -1263,6 +1294,11 @@ Forgefire: Pick 1 friendly DISPOSSESSED unit wholly within 12&quot; of this mode
         <profile id="af63-815e-74f0-12ac" name="Guild Bombs" hidden="false" typeId="7861-da01-01c0-88d9" typeName="Ability">
           <characteristics>
             <characteristic name="Ability" typeId="9bce-4deb-8b79-eaec">Once per battle, after this unit has made a normal move, pick 1 enemy unit and roll 1 dice for each model in this unit that passed across any models from that enemy unit. For each 2+, that enemy unit suffers D3 mortal wounds.</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="2adf-0c4a-d1f9-0044" name="Elite" hidden="false" typeId="7861-da01-01c0-88d9" typeName="Ability">
+          <characteristics>
+            <characteristic name="Ability" typeId="9bce-4deb-8b79-eaec">Models in this unit can issue commands to their own unit.</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -1280,19 +1316,12 @@ Forgefire: Pick 1 friendly DISPOSSESSED unit wholly within 12&quot; of this mode
       </categoryLinks>
       <selectionEntries>
         <selectionEntry id="dbd9-299f-ca4d-9368" name="Gyrocopter" hidden="false" collective="false" import="true" type="model">
-          <modifiers>
-            <modifier type="set" field="b0b4-6aec-82c2-02ae" value="60.0">
-              <conditions>
-                <condition field="selections" scope="cd6b-49ef-27b4-2cbc" value="3.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="dbd9-299f-ca4d-9368" type="equalTo"/>
-              </conditions>
-            </modifier>
-          </modifiers>
           <constraints>
-            <constraint field="selections" scope="parent" value="3.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="83f9-1747-96d4-51fb" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="83f9-1747-96d4-51fb" type="max"/>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="64d6-454d-4ae1-2a21" type="min"/>
           </constraints>
           <costs>
-            <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="70.0"/>
+            <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="310c-90e5-3114-31ed" name="Rotor Blades" hidden="false" collective="false" import="true" type="upgrade">
@@ -1369,11 +1398,24 @@ Forgefire: Pick 1 friendly DISPOSSESSED unit wholly within 12&quot; of this mode
           </selectionEntries>
         </selectionEntryGroup>
       </selectionEntryGroups>
+      <entryLinks>
+        <entryLink id="987f-9f3a-0f51-f319" name="Unit Reinforcement" hidden="false" collective="false" import="true" targetId="b493-d9e6-82ca-5488" type="selectionEntry"/>
+      </entryLinks>
       <costs>
-        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
+        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="75.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="cc3e-1d7c-a8e9-bfce" name="Gyrobombers" publicationId="88ce-c2fe-b89c-ed48" hidden="false" collective="false" import="true" type="unit">
+      <modifiers>
+        <modifier type="increment" field="b0b4-6aec-82c2-02ae" value="90.0">
+          <repeats>
+            <repeat field="selections" scope="cc3e-1d7c-a8e9-bfce" value="1.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" childId="e20c-48d8-e5e3-1a36" repeats="1" roundUp="false"/>
+          </repeats>
+          <conditions>
+            <condition field="selections" scope="cc3e-1d7c-a8e9-bfce" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e20c-48d8-e5e3-1a36" type="greaterThan"/>
+          </conditions>
+        </modifier>
+      </modifiers>
       <profiles>
         <profile id="f682-0db7-0e17-aaa1" name="Gyrobombers" hidden="false" typeId="3956-f6dd-6c88-ae4b" typeName="Unit">
           <characteristics>
@@ -1403,19 +1445,12 @@ Forgefire: Pick 1 friendly DISPOSSESSED unit wholly within 12&quot; of this mode
       </categoryLinks>
       <selectionEntries>
         <selectionEntry id="1cb8-0ace-394c-5990" name="Gyrobomber" hidden="false" collective="false" import="true" type="model">
-          <modifiers>
-            <modifier type="set" field="b0b4-6aec-82c2-02ae" value="70.0">
-              <conditions>
-                <condition field="selections" scope="cc3e-1d7c-a8e9-bfce" value="3.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="1cb8-0ace-394c-5990" type="equalTo"/>
-              </conditions>
-            </modifier>
-          </modifiers>
           <constraints>
-            <constraint field="selections" scope="parent" value="3.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="80dc-c4e9-d490-737d" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="80dc-c4e9-d490-737d" type="max"/>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="52e8-6a53-231b-0bbd" type="min"/>
           </constraints>
           <costs>
-            <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="80.0"/>
+            <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="32da-5f5c-fddc-aeb0" name="Rotor Blades" hidden="false" collective="false" import="true" type="upgrade">
@@ -1463,8 +1498,11 @@ Forgefire: Pick 1 friendly DISPOSSESSED unit wholly within 12&quot; of this mode
           </costs>
         </selectionEntry>
       </selectionEntries>
+      <entryLinks>
+        <entryLink id="2c2d-9c0c-5d56-362e" name="Unit Reinforcement" hidden="false" collective="false" import="true" targetId="b493-d9e6-82ca-5488" type="selectionEntry"/>
+      </entryLinks>
       <costs>
-        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
+        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="90.0"/>
       </costs>
     </selectionEntry>
   </sharedSelectionEntries>

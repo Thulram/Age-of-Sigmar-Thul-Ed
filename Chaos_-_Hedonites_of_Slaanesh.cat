@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="97f7-d3e9-f2f4-f0c6" name="Chaos - Hedonites of Slaanesh" revision="9" battleScribeVersion="2.03" authorName="Thulram" library="false" gameSystemId="e832-3291-06be-cab1" gameSystemRevision="9" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="97f7-d3e9-f2f4-f0c6" name="Chaos - Hedonites of Slaanesh" revision="10" battleScribeVersion="2.03" authorName="Thulram" library="false" gameSystemId="e832-3291-06be-cab1" gameSystemRevision="10" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <profileTypes>
     <profileType id="3f2f-edd9-f66c-bb96" name="Keeper of Secrets Wounds">
       <characteristicTypes>
@@ -37,6 +37,36 @@
     <categoryEntry id="1b96-daff-d5f8-97fb" name="Hellstriders" hidden="false"/>
     <categoryEntry id="def7-e9f9-0ebb-61ef" name="Soulfeaster" hidden="false"/>
     <categoryEntry id="0088-a682-195b-9c0d" name="General - Lord of Pain" hidden="false"/>
+    <categoryEntry id="d121-941f-b5b7-ed73" name="Allegiant - Beasts of Chaos" hidden="false">
+      <modifiers>
+        <modifier type="increment" field="8cc3-5020-38b9-717f" value="1.0">
+          <repeats>
+            <repeat field="selections" scope="force" value="4.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="unit" repeats="1" roundUp="false"/>
+          </repeats>
+          <conditions>
+            <condition field="selections" scope="force" value="3.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="unit" type="greaterThan"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <constraints>
+        <constraint field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="8cc3-5020-38b9-717f" type="max"/>
+      </constraints>
+    </categoryEntry>
+    <categoryEntry id="d1de-9ae2-222c-c4c2" name="Allegiant - Slaves to Darkness" hidden="false">
+      <modifiers>
+        <modifier type="increment" field="533e-f5a9-6570-7bd6" value="2.0">
+          <repeats>
+            <repeat field="selections" scope="force" value="4.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="unit" repeats="1" roundUp="false"/>
+          </repeats>
+          <conditions>
+            <condition field="selections" scope="force" value="3.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="unit" type="greaterThan"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <constraints>
+        <constraint field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="533e-f5a9-6570-7bd6" type="max"/>
+      </constraints>
+    </categoryEntry>
   </categoryEntries>
   <entryLinks>
     <entryLink id="7961-c3d8-178d-a78d" name="Allegiance" hidden="false" collective="false" import="true" targetId="c9f6-320e-9425-eb73" type="selectionEntry">
@@ -189,87 +219,82 @@
     </entryLink>
     <entryLink id="bd16-ebec-1480-c5a7" name="Archaon the Everchosen" hidden="false" collective="false" import="true" targetId="b236-3f69-c15f-a954" type="selectionEntry">
       <entryLinks>
-        <entryLink id="d00b-3a46-d0c9-986b" name="General" hidden="false" collective="false" import="true" targetId="98a4-3d6d-a7b9-399f" type="selectionEntry">
-          <categoryLinks>
-            <categoryLink id="f5df-8194-19d0-4346" name="Named General" hidden="false" targetId="8b3d-7f03-e1f9-eaf5" primary="false"/>
-          </categoryLinks>
-        </entryLink>
         <entryLink id="601e-36c8-62f4-963e" name="Hedonites Spell Lores" hidden="false" collective="false" import="true" targetId="87c2-3bb8-b59b-6d11" type="selectionEntryGroup"/>
-        <entryLink id="b6f0-48c7-4c92-cbaa" name="Invaders Host Extra General" hidden="false" collective="false" import="true" targetId="511a-c718-0d06-1bc5" type="selectionEntry"/>
+        <entryLink id="8cc9-2198-4c15-d0cd" name="Bonus General" hidden="false" collective="false" import="true" targetId="c608-7a89-b2b4-124d" type="selectionEntry"/>
       </entryLinks>
     </entryLink>
-    <entryLink id="33f1-a566-16b1-b32b" name="Chaos Chariots" hidden="false" collective="false" import="true" targetId="9dd9-cc5b-2b21-b996" type="selectionEntry"/>
+    <entryLink id="33f1-a566-16b1-b32b" name="Chaos Chariots" hidden="false" collective="false" import="true" targetId="9dd9-cc5b-2b21-b996" type="selectionEntry">
+      <modifiers>
+        <modifier type="remove" field="category" value="a42d-220e-6a88-7bf6"/>
+      </modifiers>
+    </entryLink>
     <entryLink id="a258-63dd-0c12-da65" name="Chaos Chosen" hidden="false" collective="false" import="true" targetId="ea93-8ff3-9b86-c8f0" type="selectionEntry"/>
-    <entryLink id="cb1a-8685-dd0c-c491" name="Chaos Knights" hidden="false" collective="false" import="true" targetId="73fe-2d86-24a1-fe98" type="selectionEntry"/>
+    <entryLink id="cb1a-8685-dd0c-c491" name="Chaos Knights" hidden="false" collective="false" import="true" targetId="73fe-2d86-24a1-fe98" type="selectionEntry">
+      <modifiers>
+        <modifier type="remove" field="category" value="a42d-220e-6a88-7bf6"/>
+      </modifiers>
+    </entryLink>
     <entryLink id="2062-fa7b-4515-3ef4" name="Chaos Lord" hidden="false" collective="false" import="true" targetId="57c2-5dde-47de-fec0" type="selectionEntry">
       <entryLinks>
-        <entryLink id="973e-e0ee-d95d-9e39" name="General" hidden="false" collective="false" import="true" targetId="98a4-3d6d-a7b9-399f" type="selectionEntry"/>
         <entryLink id="9a02-0271-8787-ebf5" name="Artefacts of Power" hidden="false" collective="false" import="true" targetId="a520-01ab-3cef-a486" type="selectionEntryGroup"/>
-        <entryLink id="eaf1-f32f-cce8-5577" name="Command Traits" hidden="false" collective="false" import="true" targetId="548e-e11c-aeda-8d1b" type="selectionEntryGroup"/>
-        <entryLink id="6182-b13d-7e11-fd4a" name="Invaders Host Extra General" hidden="false" collective="false" import="true" targetId="511a-c718-0d06-1bc5" type="selectionEntry"/>
       </entryLinks>
     </entryLink>
     <entryLink id="8ead-d700-56d6-8c61" name="Chaos Lord on Daemonic Mount" hidden="false" collective="false" import="true" targetId="e0d8-c1c4-780e-e06c" type="selectionEntry">
       <entryLinks>
-        <entryLink id="b47f-fcd9-043f-e93a" name="General" hidden="false" collective="false" import="true" targetId="98a4-3d6d-a7b9-399f" type="selectionEntry"/>
         <entryLink id="44a3-9ab2-236a-cf3b" name="Artefacts of Power" hidden="false" collective="false" import="true" targetId="a520-01ab-3cef-a486" type="selectionEntryGroup"/>
-        <entryLink id="e0f2-1446-d5a6-818e" name="Command Traits" hidden="false" collective="false" import="true" targetId="548e-e11c-aeda-8d1b" type="selectionEntryGroup"/>
-        <entryLink id="30d0-997d-80cf-0cee" name="Invaders Host Extra General" hidden="false" collective="false" import="true" targetId="511a-c718-0d06-1bc5" type="selectionEntry"/>
       </entryLinks>
     </entryLink>
     <entryLink id="46d3-fed5-f2d1-2d64" name="Chaos Lord on Karkadrak" hidden="false" collective="false" import="true" targetId="ae17-f81f-42d9-00dc" type="selectionEntry">
       <entryLinks>
-        <entryLink id="c113-bc37-db55-1f82" name="General" hidden="false" collective="false" import="true" targetId="98a4-3d6d-a7b9-399f" type="selectionEntry"/>
         <entryLink id="3a47-c186-5650-d6b3" name="Artefacts of Power" hidden="false" collective="false" import="true" targetId="a520-01ab-3cef-a486" type="selectionEntryGroup"/>
-        <entryLink id="cb7f-fd52-7c60-c710" name="Command Traits" hidden="false" collective="false" import="true" targetId="548e-e11c-aeda-8d1b" type="selectionEntryGroup"/>
-        <entryLink id="8ef6-5788-2864-1a3a" name="Invaders Host Extra General" hidden="false" collective="false" import="true" targetId="511a-c718-0d06-1bc5" type="selectionEntry"/>
       </entryLinks>
     </entryLink>
     <entryLink id="cb1b-d185-936f-2598" name="Chaos Lord on Manticore" hidden="false" collective="false" import="true" targetId="1052-3276-9416-b2a8" type="selectionEntry">
       <entryLinks>
-        <entryLink id="78ca-0abc-276f-ac15" name="General" hidden="false" collective="false" import="true" targetId="98a4-3d6d-a7b9-399f" type="selectionEntry"/>
         <entryLink id="4760-bfa1-0fb8-8d12" name="Artefacts of Power" hidden="false" collective="false" import="true" targetId="a520-01ab-3cef-a486" type="selectionEntryGroup"/>
-        <entryLink id="b629-7aaf-1596-91df" name="Command Traits" hidden="false" collective="false" import="true" targetId="548e-e11c-aeda-8d1b" type="selectionEntryGroup"/>
-        <entryLink id="ee16-2c6c-66b0-10ef" name="Invaders Host Extra General" hidden="false" collective="false" import="true" targetId="511a-c718-0d06-1bc5" type="selectionEntry"/>
       </entryLinks>
     </entryLink>
-    <entryLink id="e8f7-cfa6-840a-13a3" name="Chaos Marauder Horsemen" hidden="false" collective="false" import="true" targetId="fad7-8185-4954-cd2a" type="selectionEntry"/>
-    <entryLink id="45f9-3ab5-4b66-7a3d" name="Chaos Marauders" hidden="false" collective="false" import="true" targetId="e057-b25e-b5b4-4df1" type="selectionEntry"/>
+    <entryLink id="e8f7-cfa6-840a-13a3" name="Chaos Marauder Horsemen" hidden="false" collective="false" import="true" targetId="fad7-8185-4954-cd2a" type="selectionEntry">
+      <modifiers>
+        <modifier type="remove" field="category" value="a42d-220e-6a88-7bf6"/>
+      </modifiers>
+    </entryLink>
+    <entryLink id="45f9-3ab5-4b66-7a3d" name="Chaos Marauders" hidden="false" collective="false" import="true" targetId="e057-b25e-b5b4-4df1" type="selectionEntry">
+      <modifiers>
+        <modifier type="remove" field="category" value="a42d-220e-6a88-7bf6"/>
+      </modifiers>
+    </entryLink>
     <entryLink id="4d4e-f1f3-4109-a22a" name="Chaos Sorcerer Lord on Manticore" hidden="false" collective="false" import="true" targetId="9256-c7f4-4b50-4548" type="selectionEntry">
       <entryLinks>
         <entryLink id="d82b-5fa8-20d6-770e" name="Hedonites Spell Lores" hidden="false" collective="false" import="true" targetId="87c2-3bb8-b59b-6d11" type="selectionEntryGroup"/>
-        <entryLink id="5b1e-6a6f-6e24-32d9" name="General" hidden="false" collective="false" import="true" targetId="98a4-3d6d-a7b9-399f" type="selectionEntry"/>
         <entryLink id="e9f4-dc1a-d2a7-6bff" name="Artefacts of Power" hidden="false" collective="false" import="true" targetId="a520-01ab-3cef-a486" type="selectionEntryGroup"/>
-        <entryLink id="38ee-e4be-6ea9-c044" name="Command Traits" hidden="false" collective="false" import="true" targetId="548e-e11c-aeda-8d1b" type="selectionEntryGroup"/>
-        <entryLink id="c45f-b631-4c36-0fef" name="Invaders Host Extra General" hidden="false" collective="false" import="true" targetId="511a-c718-0d06-1bc5" type="selectionEntry"/>
       </entryLinks>
     </entryLink>
     <entryLink id="1168-f226-f07c-233b" name="Chaos Sorceror Lord" hidden="false" collective="false" import="true" targetId="e75f-c557-c734-1416" type="selectionEntry">
       <entryLinks>
         <entryLink id="c8b8-23d0-036e-d67d" name="Hedonites Spell Lores" hidden="false" collective="false" import="true" targetId="87c2-3bb8-b59b-6d11" type="selectionEntryGroup"/>
-        <entryLink id="6a0c-23f0-9583-22b8" name="General" hidden="false" collective="false" import="true" targetId="98a4-3d6d-a7b9-399f" type="selectionEntry"/>
         <entryLink id="c5c1-9153-fb11-7a59" name="Artefacts of Power" hidden="false" collective="false" import="true" targetId="a520-01ab-3cef-a486" type="selectionEntryGroup"/>
-        <entryLink id="fd0d-9f64-4100-1798" name="Command Traits" hidden="false" collective="false" import="true" targetId="548e-e11c-aeda-8d1b" type="selectionEntryGroup"/>
-        <entryLink id="c13e-3c34-834e-d07b" name="Invaders Host Extra General" hidden="false" collective="false" import="true" targetId="511a-c718-0d06-1bc5" type="selectionEntry"/>
       </entryLinks>
     </entryLink>
-    <entryLink id="b64f-1c4e-d9c6-7387" name="Chaos Warriors" hidden="false" collective="false" import="true" targetId="60a2-6f0e-3dac-fcc4" type="selectionEntry"/>
-    <entryLink id="321b-ffb7-13e1-9c52" name="Chaos Warshrine" hidden="false" collective="false" import="true" targetId="5ba7-fe45-c11e-a8da" type="selectionEntry"/>
+    <entryLink id="b64f-1c4e-d9c6-7387" name="Chaos Warriors" hidden="false" collective="false" import="true" targetId="60a2-6f0e-3dac-fcc4" type="selectionEntry">
+      <modifiers>
+        <modifier type="remove" field="category" value="a42d-220e-6a88-7bf6"/>
+      </modifiers>
+    </entryLink>
+    <entryLink id="321b-ffb7-13e1-9c52" name="Chaos Warshrine" hidden="false" collective="false" import="true" targetId="5ba7-fe45-c11e-a8da" type="selectionEntry">
+      <entryLinks>
+        <entryLink id="459a-dbd4-c2c1-c945" name="Hedonites Prayer Scriptures" hidden="false" collective="false" import="true" targetId="b8bc-66a0-c35b-a31e" type="selectionEntryGroup"/>
+      </entryLinks>
+    </entryLink>
     <entryLink id="44ac-ec75-6066-1a0e" name="Exalted Hero of Chaos" hidden="false" collective="false" import="true" targetId="2b14-92e7-6138-eb76" type="selectionEntry">
       <entryLinks>
-        <entryLink id="fab2-de54-23fe-5414" name="General" hidden="false" collective="false" import="true" targetId="98a4-3d6d-a7b9-399f" type="selectionEntry"/>
         <entryLink id="4cc3-df09-9eae-d879" name="Artefacts of Power" hidden="false" collective="false" import="true" targetId="a520-01ab-3cef-a486" type="selectionEntryGroup"/>
-        <entryLink id="9ed0-2933-ad04-7837" name="Command Traits" hidden="false" collective="false" import="true" targetId="548e-e11c-aeda-8d1b" type="selectionEntryGroup"/>
-        <entryLink id="6665-e501-937b-b6ee" name="Invaders Host Extra General" hidden="false" collective="false" import="true" targetId="511a-c718-0d06-1bc5" type="selectionEntry"/>
       </entryLinks>
     </entryLink>
     <entryLink id="fc76-3493-eff1-e40e" name="Slaves to Darkness Chaos Spawn" hidden="false" collective="false" import="true" targetId="2533-1c28-a6a1-1f76" type="selectionEntry"/>
     <entryLink id="9dd5-3a3f-c07f-004b" name="Slaves to Darkness Daemon Prince" hidden="false" collective="false" import="true" targetId="293f-06ab-2a5a-f895" type="selectionEntry">
       <entryLinks>
-        <entryLink id="7062-0685-f38d-5b50" name="General" hidden="false" collective="false" import="true" targetId="98a4-3d6d-a7b9-399f" type="selectionEntry"/>
         <entryLink id="fd63-0c74-6120-d133" name="Artefacts of Power" hidden="false" collective="false" import="true" targetId="a520-01ab-3cef-a486" type="selectionEntryGroup"/>
-        <entryLink id="97cd-936f-a295-bf90" name="Command Traits" hidden="false" collective="false" import="true" targetId="548e-e11c-aeda-8d1b" type="selectionEntryGroup"/>
-        <entryLink id="3dea-ee3c-6e1f-16a9" name="Invaders Host Extra General" hidden="false" collective="false" import="true" targetId="511a-c718-0d06-1bc5" type="selectionEntry"/>
       </entryLinks>
     </entryLink>
     <entryLink id="5b83-487c-7b0c-f2f7" name="Soul Grinder" hidden="false" collective="false" import="true" targetId="d97a-886d-a857-5e6e" type="selectionEntry"/>
@@ -413,6 +438,151 @@
       </entryLinks>
     </entryLink>
     <entryLink id="3116-0c54-422f-c8fd" name="The Exquisite Pursuit" hidden="false" collective="false" import="true" targetId="35f4-f345-7e8b-83ac" type="selectionEntry"/>
+    <entryLink id="604a-1918-3b08-c818" name="Beastlord" hidden="false" collective="false" import="true" targetId="9e0e-4909-17ad-0438" type="selectionEntry">
+      <categoryLinks>
+        <categoryLink id="77c9-8c4b-222d-d6bf" name="Allegiant - Beasts of Chaos" hidden="false" targetId="d121-941f-b5b7-ed73" primary="false"/>
+      </categoryLinks>
+      <entryLinks>
+        <entryLink id="8767-8645-3eec-0b63" name="Artefacts of Power" hidden="false" collective="false" import="true" targetId="a520-01ab-3cef-a486" type="selectionEntryGroup"/>
+      </entryLinks>
+    </entryLink>
+    <entryLink id="06e1-0a62-2c45-3104" name="Bestigors" hidden="false" collective="false" import="true" targetId="8e23-a1ff-a2dd-7335" type="selectionEntry">
+      <categoryLinks>
+        <categoryLink id="54c6-b282-c648-9b45" name="Allegiant - Beasts of Chaos" hidden="false" targetId="d121-941f-b5b7-ed73" primary="false"/>
+      </categoryLinks>
+    </entryLink>
+    <entryLink id="0899-42df-5a13-e506" name="Bullgors" hidden="false" collective="false" import="true" targetId="3660-c5d4-c829-81f9" type="selectionEntry">
+      <categoryLinks>
+        <categoryLink id="da69-ea05-122a-8f39" name="Allegiant - Beasts of Chaos" hidden="false" targetId="d121-941f-b5b7-ed73" primary="false"/>
+      </categoryLinks>
+    </entryLink>
+    <entryLink id="2d3d-f25a-ee0c-469f" name="Centigors" hidden="false" collective="false" import="true" targetId="6158-d1b8-b8b3-d46b" type="selectionEntry">
+      <categoryLinks>
+        <categoryLink id="53c8-da83-7672-4029" name="Allegiant - Beasts of Chaos" hidden="false" targetId="d121-941f-b5b7-ed73" primary="false"/>
+      </categoryLinks>
+    </entryLink>
+    <entryLink id="b024-4c69-e368-d5d9" name="Chaos Gargant" hidden="false" collective="false" import="true" targetId="37ca-d904-4cb6-8a08" type="selectionEntry">
+      <categoryLinks>
+        <categoryLink id="5b1b-4ded-0f94-eae9" name="Allegiant - Beasts of Chaos" hidden="false" targetId="d121-941f-b5b7-ed73" primary="false"/>
+      </categoryLinks>
+    </entryLink>
+    <entryLink id="ad73-22d8-0916-fb82" name="Chaos Spawn" hidden="false" collective="false" import="true" targetId="cb35-889c-057e-a892" type="selectionEntry">
+      <categoryLinks>
+        <categoryLink id="02de-d300-0e68-0dc3" name="Allegiant - Beasts of Chaos" hidden="false" targetId="d121-941f-b5b7-ed73" primary="false"/>
+      </categoryLinks>
+    </entryLink>
+    <entryLink id="88d5-a78c-3f8e-972c" name="Chaos Warhounds" hidden="false" collective="false" import="true" targetId="e117-3b1e-25e6-282d" type="selectionEntry">
+      <categoryLinks>
+        <categoryLink id="f6db-b0b6-09e5-c5af" name="Allegiant - Beasts of Chaos" hidden="false" targetId="d121-941f-b5b7-ed73" primary="false"/>
+      </categoryLinks>
+    </entryLink>
+    <entryLink id="6937-9949-cde6-4956" name="Chimera" hidden="false" collective="false" import="true" targetId="376f-46a5-c292-8e3a" type="selectionEntry">
+      <categoryLinks>
+        <categoryLink id="3ef6-ff21-08f2-8863" name="Allegiant - Beasts of Chaos" hidden="false" targetId="d121-941f-b5b7-ed73" primary="false"/>
+      </categoryLinks>
+    </entryLink>
+    <entryLink id="a5d1-b629-178e-e815" name="Cockatrice" hidden="false" collective="false" import="true" targetId="66d7-3ab0-6877-ff92" type="selectionEntry">
+      <categoryLinks>
+        <categoryLink id="d352-55bc-8598-4980" name="Allegiant - Beasts of Chaos" hidden="false" targetId="d121-941f-b5b7-ed73" primary="false"/>
+      </categoryLinks>
+    </entryLink>
+    <entryLink id="bf5c-a5ad-c19e-aabf" name="Cygor" hidden="false" collective="false" import="true" targetId="5e64-007b-e2f3-820b" type="selectionEntry">
+      <categoryLinks>
+        <categoryLink id="609b-81cd-27f5-8f3b" name="Allegiant - Beasts of Chaos" hidden="false" targetId="d121-941f-b5b7-ed73" primary="false"/>
+      </categoryLinks>
+    </entryLink>
+    <entryLink id="9949-6a8e-c9fe-98ef" name="Doombull" hidden="false" collective="false" import="true" targetId="7f9f-95a3-b4dc-b597" type="selectionEntry">
+      <categoryLinks>
+        <categoryLink id="a575-b77b-c359-e8e9" name="Allegiant - Beasts of Chaos" hidden="false" targetId="d121-941f-b5b7-ed73" primary="false"/>
+      </categoryLinks>
+      <entryLinks>
+        <entryLink id="3b32-4319-98dd-6dd2" name="Artefacts of Power" hidden="false" collective="false" import="true" targetId="a520-01ab-3cef-a486" type="selectionEntryGroup"/>
+      </entryLinks>
+    </entryLink>
+    <entryLink id="fa42-cc88-ae52-38bb" name="Dragon Ogor Shaggoth" hidden="false" collective="false" import="true" targetId="7dd5-c271-6d90-5705" type="selectionEntry">
+      <categoryLinks>
+        <categoryLink id="f382-fb47-c81d-1882" name="Allegiant - Beasts of Chaos" hidden="false" targetId="d121-941f-b5b7-ed73" primary="false"/>
+      </categoryLinks>
+      <entryLinks>
+        <entryLink id="b71c-8a4c-e651-a1a5" name="Artefacts of Power" hidden="false" collective="false" import="true" targetId="a520-01ab-3cef-a486" type="selectionEntryGroup"/>
+        <entryLink id="f48d-f969-07ea-153a" name="Hedonites Spell Lores" hidden="false" collective="false" import="true" targetId="87c2-3bb8-b59b-6d11" type="selectionEntryGroup"/>
+      </entryLinks>
+    </entryLink>
+    <entryLink id="8d63-7c4a-6257-77da" name="Dragon Ogors" hidden="false" collective="false" import="true" targetId="4700-1580-b11f-ec45" type="selectionEntry">
+      <categoryLinks>
+        <categoryLink id="83cf-b25b-f0e4-16df" name="Allegiant - Beasts of Chaos" hidden="false" targetId="d121-941f-b5b7-ed73" primary="false"/>
+      </categoryLinks>
+    </entryLink>
+    <entryLink id="56e6-1a0c-0026-5133" name="Ghorgon" hidden="false" collective="false" import="true" targetId="ac76-a457-780f-f2a7" type="selectionEntry">
+      <categoryLinks>
+        <categoryLink id="eb9b-fe12-ddfe-26ec" name="Allegiant - Beasts of Chaos" hidden="false" targetId="d121-941f-b5b7-ed73" primary="false"/>
+      </categoryLinks>
+    </entryLink>
+    <entryLink id="98c1-fe0e-7997-4bf3" name="Gors" hidden="false" collective="false" import="true" targetId="4537-b647-f36b-b1d0" type="selectionEntry">
+      <modifiers>
+        <modifier type="remove" field="category" value="a42d-220e-6a88-7bf6"/>
+      </modifiers>
+      <categoryLinks>
+        <categoryLink id="bb3d-d43d-c351-619b" name="Allegiant - Beasts of Chaos" hidden="false" targetId="d121-941f-b5b7-ed73" primary="false"/>
+      </categoryLinks>
+    </entryLink>
+    <entryLink id="1868-d639-9574-4eab" name="Great Bray-Shaman" hidden="false" collective="false" import="true" targetId="0fa1-a648-2716-c96d" type="selectionEntry">
+      <categoryLinks>
+        <categoryLink id="3734-6121-f8ab-1187" name="Allegiant - Beasts of Chaos" hidden="false" targetId="d121-941f-b5b7-ed73" primary="false"/>
+      </categoryLinks>
+      <entryLinks>
+        <entryLink id="80a1-cb64-d9fa-c457" name="Artefacts of Power" hidden="false" collective="false" import="true" targetId="a520-01ab-3cef-a486" type="selectionEntryGroup"/>
+        <entryLink id="57e9-7c16-3549-54a4" name="Hedonites Spell Lores" hidden="false" collective="false" import="true" targetId="87c2-3bb8-b59b-6d11" type="selectionEntryGroup"/>
+      </entryLinks>
+    </entryLink>
+    <entryLink id="cd4c-7a0e-d435-51e0" name="Jabberslythe" hidden="false" collective="false" import="true" targetId="f90e-58fb-1dc0-c921" type="selectionEntry">
+      <categoryLinks>
+        <categoryLink id="234b-480c-aae9-e803" name="Allegiant - Beasts of Chaos" hidden="false" targetId="d121-941f-b5b7-ed73" primary="false"/>
+      </categoryLinks>
+    </entryLink>
+    <entryLink id="358d-ea17-1cdf-683e" name="Razorgors" hidden="false" collective="false" import="true" targetId="b1dd-9a66-a634-095a" type="selectionEntry">
+      <categoryLinks>
+        <categoryLink id="af10-4888-8d86-08d3" name="Allegiant - Beasts of Chaos" hidden="false" targetId="d121-941f-b5b7-ed73" primary="false"/>
+      </categoryLinks>
+    </entryLink>
+    <entryLink id="0b2c-4e6b-3aac-9731" name="Ungors" hidden="false" collective="false" import="true" targetId="dcba-04fd-ff28-5c8d" type="selectionEntry">
+      <modifiers>
+        <modifier type="remove" field="category" value="a42d-220e-6a88-7bf6"/>
+      </modifiers>
+      <categoryLinks>
+        <categoryLink id="4636-b1b6-9318-cb49" name="Allegiant - Beasts of Chaos" hidden="false" targetId="d121-941f-b5b7-ed73" primary="false"/>
+      </categoryLinks>
+    </entryLink>
+    <entryLink id="a871-19f1-aeaa-9c13" name="Tuskgor Chariots" hidden="false" collective="false" import="true" targetId="d7fb-e05b-0ebd-6279" type="selectionEntry">
+      <categoryLinks>
+        <categoryLink id="ff91-59c3-1065-f471" name="Allegiant - Beasts of Chaos" hidden="false" targetId="d121-941f-b5b7-ed73" primary="false"/>
+      </categoryLinks>
+    </entryLink>
+    <entryLink id="2c19-ac28-1b83-837f" name="Ungor Raiders" hidden="false" collective="false" import="true" targetId="3394-027d-be0c-1dec" type="selectionEntry">
+      <categoryLinks>
+        <categoryLink id="7ae7-f541-5f88-c310" name="Allegiant - Beasts of Chaos" hidden="false" targetId="d121-941f-b5b7-ed73" primary="false"/>
+      </categoryLinks>
+    </entryLink>
+    <entryLink id="df5a-ea88-cda2-b926" name="Tzaangors" hidden="false" collective="false" import="true" targetId="57ea-1189-0726-22b1" type="selectionEntry">
+      <categoryLinks>
+        <categoryLink id="e7ba-d3da-6731-f976" name="Allegiant - Beasts of Chaos" hidden="false" targetId="d121-941f-b5b7-ed73" primary="false"/>
+      </categoryLinks>
+    </entryLink>
+    <entryLink id="98d1-e58f-d65b-5cd2" name="Tzaangor Shaman" hidden="false" collective="false" import="true" targetId="e955-c202-0ea2-241b" type="selectionEntry">
+      <categoryLinks>
+        <categoryLink id="5228-f986-7910-565e" name="Allegiant - Beasts of Chaos" hidden="false" targetId="d121-941f-b5b7-ed73" primary="false"/>
+      </categoryLinks>
+    </entryLink>
+    <entryLink id="d848-45c8-f3c3-b90f" name="Tzaangor Skyfires" hidden="false" collective="false" import="true" targetId="b711-24fd-12d7-3016" type="selectionEntry">
+      <categoryLinks>
+        <categoryLink id="b88e-a65e-c601-480e" name="Allegiant - Beasts of Chaos" hidden="false" targetId="d121-941f-b5b7-ed73" primary="false"/>
+      </categoryLinks>
+    </entryLink>
+    <entryLink id="ebb0-098a-ee03-b6da" name="Tzaangor Enlightened" hidden="false" collective="false" import="true" targetId="ce2c-3e13-713e-341d" type="selectionEntry">
+      <categoryLinks>
+        <categoryLink id="af96-510c-1d8e-c1ae" name="Allegiant - Beasts of Chaos" hidden="false" targetId="d121-941f-b5b7-ed73" primary="false"/>
+      </categoryLinks>
+    </entryLink>
   </entryLinks>
   <sharedSelectionEntries>
     <selectionEntry id="c9f6-320e-9425-eb73" name="Allegiance" hidden="false" collective="false" import="true" type="upgrade">
@@ -437,17 +607,14 @@
         <categoryLink id="21f1-f1bd-d964-a320" name="Allegiance" hidden="false" targetId="af41-ae78-5063-3d36" primary="false"/>
         <categoryLink id="d1e6-9591-f3a2-c8fe" name="New CategoryLink" hidden="false" targetId="29f4-e63d-fa5b-1611" primary="true"/>
       </categoryLinks>
-      <selectionEntryGroups>
-        <selectionEntryGroup id="9cc2-006c-b300-05f6" name="Allegiance" hidden="false" collective="false" import="true" defaultSelectionEntryId="f3ed-c7e7-c5bf-be7b">
+      <entryLinks>
+        <entryLink id="d9c9-57fd-1c58-ed26" name="Slaanesh" hidden="false" collective="false" import="true" targetId="e5a1-5b13-485b-ed5d" type="selectionEntry">
           <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="ab88-e21c-ca07-9904" type="max"/>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="e9e1-9008-f4b1-0352" type="min"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="41c5-96d4-b5f1-4bb4" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="b09e-c109-e6e9-c7ce" type="min"/>
           </constraints>
-          <entryLinks>
-            <entryLink id="f3ed-c7e7-c5bf-be7b" name="Slaanesh" hidden="false" collective="false" import="true" targetId="e5a1-5b13-485b-ed5d" type="selectionEntry"/>
-          </entryLinks>
-        </selectionEntryGroup>
-      </selectionEntryGroups>
+        </entryLink>
+      </entryLinks>
       <costs>
         <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
       </costs>
@@ -485,7 +652,7 @@ If that HERO you picked has an artefact of power, instead of suffering 1 mortal 
         <categoryLink id="fb5e-471a-e85a-4f7c" name="Fane of Slaanesh" hidden="false" targetId="9414-ca78-bc34-0cc4" primary="false"/>
         <categoryLink id="b3d8-e963-7178-6af8" name="Scenery" hidden="false" targetId="bab2-426b-5501-5fe8" primary="false"/>
         <categoryLink id="bf88-d8da-1367-5688" name="SLAANESH" hidden="false" targetId="58b2-6793-0b10-a246" primary="false"/>
-        <categoryLink id="780e-0b7b-73f8-7408" name="New CategoryLink" hidden="false" targetId="ecf9-78bd-d326-2a82" primary="true"/>
+        <categoryLink id="9ff5-7d01-60e2-f7b2" name="New CategoryLink" hidden="false" targetId="29f4-e63d-fa5b-1611" primary="true"/>
       </categoryLinks>
       <costs>
         <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
@@ -500,7 +667,7 @@ If that HERO you picked has an artefact of power, instead of suffering 1 mortal 
         </profile>
       </profiles>
       <categoryLinks>
-        <categoryLink id="fcdb-9aa3-1e85-25ab" name="New CategoryLink" hidden="false" targetId="c03a-b1a8-66c6-3637" primary="true"/>
+        <categoryLink id="06bd-29e1-8cf8-a93f" name="New CategoryLink" hidden="false" targetId="3706-e0e8-674f-c41b" primary="true"/>
       </categoryLinks>
       <selectionEntryGroups>
         <selectionEntryGroup id="3fdc-9af8-7937-8f0a" name="0-4 units of Seeker Chariots" hidden="false" collective="false" import="true">
@@ -533,24 +700,7 @@ If that HERO you picked has an artefact of power, instead of suffering 1 mortal 
           </constraints>
           <entryLinks>
             <entryLink id="32b3-38ad-ce1e-1294" name="Seekers" hidden="false" collective="false" import="true" targetId="557e-4177-4be2-2d54" type="selectionEntry"/>
-            <entryLink id="fcaa-edaa-f6ba-f0d0" name="Hellstriders" hidden="false" collective="false" import="true" targetId="6b4e-c19c-2989-76d9" type="selectionEntry">
-              <modifiers>
-                <modifier type="remove" field="category" value="a42d-220e-6a88-7bf6">
-                  <conditionGroups>
-                    <conditionGroup type="or">
-                      <conditions>
-                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4373-740f-1bf3-b0aa" type="instanceOf"/>
-                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="e3a6-45ca-4974-b489" type="instanceOf"/>
-                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="6cd6-b22e-bfcb-9589" type="instanceOf"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
-                </modifier>
-              </modifiers>
-              <categoryLinks>
-                <categoryLink id="28d2-a774-4474-0680" name="BATTLELINE" hidden="false" targetId="a42d-220e-6a88-7bf6" primary="false"/>
-              </categoryLinks>
-            </entryLink>
+            <entryLink id="fcaa-edaa-f6ba-f0d0" name="Hellstriders" hidden="false" collective="false" import="true" targetId="6b4e-c19c-2989-76d9" type="selectionEntry"/>
           </entryLinks>
         </selectionEntryGroup>
       </selectionEntryGroups>
@@ -567,7 +717,7 @@ If that HERO you picked has an artefact of power, instead of suffering 1 mortal 
         </profile>
       </profiles>
       <categoryLinks>
-        <categoryLink id="6875-4357-32a8-3b66" name="New CategoryLink" hidden="false" targetId="c03a-b1a8-66c6-3637" primary="true"/>
+        <categoryLink id="07e0-80bc-ec6e-bac1" name="New CategoryLink" hidden="false" targetId="3706-e0e8-674f-c41b" primary="true"/>
       </categoryLinks>
       <selectionEntryGroups>
         <selectionEntryGroup id="6112-4808-abd9-fca9" name="0-4 featured units in any combination" hidden="false" collective="false" import="true">
@@ -610,7 +760,7 @@ If that HERO you picked has an artefact of power, instead of suffering 1 mortal 
         </profile>
       </profiles>
       <categoryLinks>
-        <categoryLink id="286c-20fb-83d2-00f5" name="New CategoryLink" hidden="false" targetId="c03a-b1a8-66c6-3637" primary="true"/>
+        <categoryLink id="1a3a-4c17-3e3d-633c" name="New CategoryLink" hidden="false" targetId="3706-e0e8-674f-c41b" primary="true"/>
       </categoryLinks>
       <selectionEntryGroups>
         <selectionEntryGroup id="72fb-749d-7f3d-b942" name="3-6 SLAANESH HEROES" hidden="false" collective="false" import="true">
@@ -804,7 +954,7 @@ If that HERO you picked has an artefact of power, instead of suffering 1 mortal 
         </profile>
       </profiles>
       <categoryLinks>
-        <categoryLink id="51f7-6f84-eeb9-8ff9" name="New CategoryLink" hidden="false" targetId="c03a-b1a8-66c6-3637" primary="true"/>
+        <categoryLink id="deed-5e7c-3a81-b71a" name="New CategoryLink" hidden="false" targetId="3706-e0e8-674f-c41b" primary="true"/>
       </categoryLinks>
       <selectionEntryGroups>
         <selectionEntryGroup id="303c-a15b-0e7c-4d06" name="1-3 Epicurean Revellers" hidden="false" collective="false" import="true">
@@ -892,7 +1042,7 @@ If that HERO you picked has an artefact of power, instead of suffering 1 mortal 
         </profile>
       </profiles>
       <categoryLinks>
-        <categoryLink id="cb98-80ce-0a63-44da" name="New CategoryLink" hidden="false" targetId="c03a-b1a8-66c6-3637" primary="true"/>
+        <categoryLink id="9da8-a98d-9aa1-6ad6" name="New CategoryLink" hidden="false" targetId="3706-e0e8-674f-c41b" primary="true"/>
       </categoryLinks>
       <selectionEntryGroups>
         <selectionEntryGroup id="f540-b214-39c7-b6de" name="1-3 Soul Grinder units" hidden="false" collective="false" import="true">
@@ -918,7 +1068,7 @@ If that HERO you picked has an artefact of power, instead of suffering 1 mortal 
         </profile>
       </profiles>
       <categoryLinks>
-        <categoryLink id="eb1b-de02-80ba-afaf" name="New CategoryLink" hidden="false" targetId="c03a-b1a8-66c6-3637" primary="true"/>
+        <categoryLink id="f41d-2a88-d028-d214" name="New CategoryLink" hidden="false" targetId="3706-e0e8-674f-c41b" primary="true"/>
       </categoryLinks>
       <selectionEntryGroups>
         <selectionEntryGroup id="3ff5-4228-c385-ee03" name="0-4 featured units in any combination" hidden="false" collective="false" import="true">
@@ -926,7 +1076,11 @@ If that HERO you picked has an artefact of power, instead of suffering 1 mortal 
             <constraint field="selections" scope="parent" value="4.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="ad9d-d5f3-5be6-45d9" type="max"/>
           </constraints>
           <entryLinks>
-            <entryLink id="fc4c-59a3-7b5a-88c5" name="Chaos Chariots" hidden="false" collective="false" import="true" targetId="9dd9-cc5b-2b21-b996" type="selectionEntry"/>
+            <entryLink id="fc4c-59a3-7b5a-88c5" name="Chaos Chariots" hidden="false" collective="false" import="true" targetId="9dd9-cc5b-2b21-b996" type="selectionEntry">
+              <modifiers>
+                <modifier type="remove" field="category" value="a42d-220e-6a88-7bf6"/>
+              </modifiers>
+            </entryLink>
             <entryLink id="7449-ee3d-af22-8e29" name="Gorebeast Chariots" hidden="false" collective="false" import="true" targetId="ff78-a08a-de5f-8969" type="selectionEntry"/>
           </entryLinks>
         </selectionEntryGroup>
@@ -949,8 +1103,16 @@ If that HERO you picked has an artefact of power, instead of suffering 1 mortal 
             <constraint field="selections" scope="parent" value="2.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="a17d-8ba9-a0cd-67f9" type="min"/>
           </constraints>
           <entryLinks>
-            <entryLink id="af37-084c-d5d1-f591" name="Chaos Knights" hidden="false" collective="false" import="true" targetId="73fe-2d86-24a1-fe98" type="selectionEntry"/>
-            <entryLink id="8297-f19c-8d95-6405" name="Chaos Marauder Horsemen" hidden="false" collective="false" import="true" targetId="fad7-8185-4954-cd2a" type="selectionEntry"/>
+            <entryLink id="af37-084c-d5d1-f591" name="Chaos Knights" hidden="false" collective="false" import="true" targetId="73fe-2d86-24a1-fe98" type="selectionEntry">
+              <modifiers>
+                <modifier type="remove" field="category" value="a42d-220e-6a88-7bf6"/>
+              </modifiers>
+            </entryLink>
+            <entryLink id="8297-f19c-8d95-6405" name="Chaos Marauder Horsemen" hidden="false" collective="false" import="true" targetId="fad7-8185-4954-cd2a" type="selectionEntry">
+              <modifiers>
+                <modifier type="remove" field="category" value="a42d-220e-6a88-7bf6"/>
+              </modifiers>
+            </entryLink>
           </entryLinks>
         </selectionEntryGroup>
       </selectionEntryGroups>
@@ -967,7 +1129,7 @@ If that HERO you picked has an artefact of power, instead of suffering 1 mortal 
         </profile>
       </profiles>
       <categoryLinks>
-        <categoryLink id="2cf7-43ea-bca0-db69" name="New CategoryLink" hidden="false" targetId="c03a-b1a8-66c6-3637" primary="true"/>
+        <categoryLink id="1b90-6a77-984e-630b" name="New CategoryLink" hidden="false" targetId="3706-e0e8-674f-c41b" primary="true"/>
       </categoryLinks>
       <selectionEntryGroups>
         <selectionEntryGroup id="2082-d35f-bbc9-b473" name="0-2 Chaos Spawn units" hidden="false" collective="false" import="true">
@@ -1109,8 +1271,16 @@ If that HERO you picked has an artefact of power, instead of suffering 1 mortal 
           </constraints>
           <entryLinks>
             <entryLink id="c026-693b-60a2-48f4" name="Chaos Chosen" hidden="false" collective="false" import="true" targetId="ea93-8ff3-9b86-c8f0" type="selectionEntry"/>
-            <entryLink id="8ede-a3fa-91a2-2739" name="Chaos Marauders" hidden="false" collective="false" import="true" targetId="e057-b25e-b5b4-4df1" type="selectionEntry"/>
-            <entryLink id="00f4-1230-1db1-b50e" name="Chaos Warriors" hidden="false" collective="false" import="true" targetId="60a2-6f0e-3dac-fcc4" type="selectionEntry"/>
+            <entryLink id="8ede-a3fa-91a2-2739" name="Chaos Marauders" hidden="false" collective="false" import="true" targetId="e057-b25e-b5b4-4df1" type="selectionEntry">
+              <modifiers>
+                <modifier type="remove" field="category" value="a42d-220e-6a88-7bf6"/>
+              </modifiers>
+            </entryLink>
+            <entryLink id="00f4-1230-1db1-b50e" name="Chaos Warriors" hidden="false" collective="false" import="true" targetId="60a2-6f0e-3dac-fcc4" type="selectionEntry">
+              <modifiers>
+                <modifier type="remove" field="category" value="a42d-220e-6a88-7bf6"/>
+              </modifiers>
+            </entryLink>
           </entryLinks>
         </selectionEntryGroup>
       </selectionEntryGroups>
@@ -1127,7 +1297,7 @@ If that HERO you picked has an artefact of power, instead of suffering 1 mortal 
         </profile>
       </profiles>
       <categoryLinks>
-        <categoryLink id="7ddf-fafb-cbb7-4349" name="New CategoryLink" hidden="false" targetId="c03a-b1a8-66c6-3637" primary="true"/>
+        <categoryLink id="2927-577d-a744-cdc3" name="New CategoryLink" hidden="false" targetId="3706-e0e8-674f-c41b" primary="true"/>
       </categoryLinks>
       <selectionEntryGroups>
         <selectionEntryGroup id="b514-39ad-d942-aa87" name="0-2 Daemonsteel Contingents battalions" hidden="false" collective="false" import="true">
@@ -1341,7 +1511,7 @@ If that HERO you picked has an artefact of power, instead of suffering 1 mortal 
         </profile>
       </profiles>
       <categoryLinks>
-        <categoryLink id="e1bd-1ec7-85fd-77bd" name="New CategoryLink" hidden="false" targetId="c03a-b1a8-66c6-3637" primary="true"/>
+        <categoryLink id="59c1-576c-581f-2c84" name="New CategoryLink" hidden="false" targetId="3706-e0e8-674f-c41b" primary="true"/>
       </categoryLinks>
       <selectionEntryGroups>
         <selectionEntryGroup id="ac96-15ef-9412-8f69" name="0-2 featured units in any combination" hidden="false" collective="false" import="true">
@@ -1358,70 +1528,9 @@ If that HERO you picked has an artefact of power, instead of suffering 1 mortal 
             <constraint field="selections" scope="parent" value="6.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="fe51-8186-4a4f-137a" type="max"/>
           </constraints>
           <entryLinks>
-            <entryLink id="12e2-10a9-13d8-18c3" name="Dragon Ogors" hidden="false" collective="false" import="true" targetId="4700-1580-b11f-ec45" type="selectionEntry">
-              <modifiers>
-                <modifier type="remove" field="category" value="a42d-220e-6a88-7bf6">
-                  <conditionGroups>
-                    <conditionGroup type="or">
-                      <conditions>
-                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4373-740f-1bf3-b0aa" type="instanceOf"/>
-                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="e3a6-45ca-4974-b489" type="instanceOf"/>
-                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="6cd6-b22e-bfcb-9589" type="instanceOf"/>
-                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="3ca0-c6b0-8f3c-df36" type="equalTo"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
-                </modifier>
-              </modifiers>
-              <categoryLinks>
-                <categoryLink id="3385-ecf8-295a-617b" name="BATTLELINE" hidden="false" targetId="a42d-220e-6a88-7bf6" primary="false"/>
-              </categoryLinks>
-            </entryLink>
-            <entryLink id="1479-7294-1449-9e9e" name="Bullgors" hidden="false" collective="false" import="true" targetId="3660-c5d4-c829-81f9" type="selectionEntry">
-              <modifiers>
-                <modifier type="remove" field="category" value="a42d-220e-6a88-7bf6">
-                  <conditionGroups>
-                    <conditionGroup type="or">
-                      <conditions>
-                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4373-740f-1bf3-b0aa" type="instanceOf"/>
-                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="e3a6-45ca-4974-b489" type="instanceOf"/>
-                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="6cd6-b22e-bfcb-9589" type="instanceOf"/>
-                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="c77d-829c-56f6-50e8" type="equalTo"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
-                </modifier>
-              </modifiers>
-              <categoryLinks>
-                <categoryLink id="9539-7f0d-f9c3-f31b" name="BATTLELINE" hidden="false" targetId="a42d-220e-6a88-7bf6" primary="false"/>
-              </categoryLinks>
-            </entryLink>
-            <entryLink id="2a65-8009-dcbc-e943" name="Bestigors" hidden="false" collective="false" import="true" targetId="8e23-a1ff-a2dd-7335" type="selectionEntry">
-              <modifiers>
-                <modifier type="remove" field="category" value="a42d-220e-6a88-7bf6">
-                  <conditionGroups>
-                    <conditionGroup type="or">
-                      <conditions>
-                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4373-740f-1bf3-b0aa" type="instanceOf"/>
-                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="e3a6-45ca-4974-b489" type="instanceOf"/>
-                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="6cd6-b22e-bfcb-9589" type="instanceOf"/>
-                      </conditions>
-                      <conditionGroups>
-                        <conditionGroup type="and">
-                          <conditions>
-                            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="721d-5248-9126-34c7" type="equalTo"/>
-                            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="1580-98e7-3ae4-f16a" type="equalTo"/>
-                          </conditions>
-                        </conditionGroup>
-                      </conditionGroups>
-                    </conditionGroup>
-                  </conditionGroups>
-                </modifier>
-              </modifiers>
-              <categoryLinks>
-                <categoryLink id="6145-8c96-f094-ff99" name="BATTLELINE" hidden="false" targetId="a42d-220e-6a88-7bf6" primary="false"/>
-              </categoryLinks>
-            </entryLink>
+            <entryLink id="12e2-10a9-13d8-18c3" name="Dragon Ogors" hidden="false" collective="false" import="true" targetId="4700-1580-b11f-ec45" type="selectionEntry"/>
+            <entryLink id="1479-7294-1449-9e9e" name="Bullgors" hidden="false" collective="false" import="true" targetId="3660-c5d4-c829-81f9" type="selectionEntry"/>
+            <entryLink id="2a65-8009-dcbc-e943" name="Bestigors" hidden="false" collective="false" import="true" targetId="8e23-a1ff-a2dd-7335" type="selectionEntry"/>
           </entryLinks>
         </selectionEntryGroup>
         <selectionEntryGroup id="cd41-5cbf-d782-3a7c" name="3-6 featured units in any combination" hidden="false" collective="false" import="true">
@@ -1430,9 +1539,17 @@ If that HERO you picked has an artefact of power, instead of suffering 1 mortal 
             <constraint field="selections" scope="parent" value="3.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="ac4d-9cba-cebf-89d5" type="min"/>
           </constraints>
           <entryLinks>
-            <entryLink id="f5a7-708d-c256-08af" name="Gors" hidden="false" collective="false" import="true" targetId="4537-b647-f36b-b1d0" type="selectionEntry"/>
+            <entryLink id="f5a7-708d-c256-08af" name="Gors" hidden="false" collective="false" import="true" targetId="4537-b647-f36b-b1d0" type="selectionEntry">
+              <modifiers>
+                <modifier type="remove" field="category" value="a42d-220e-6a88-7bf6"/>
+              </modifiers>
+            </entryLink>
             <entryLink id="781b-65ee-684d-1b4a" name="Ungor Raiders" hidden="false" collective="false" import="true" targetId="3394-027d-be0c-1dec" type="selectionEntry"/>
-            <entryLink id="e389-ce45-cb38-e9b9" name="Ungors" hidden="false" collective="false" import="true" targetId="dcba-04fd-ff28-5c8d" type="selectionEntry"/>
+            <entryLink id="e389-ce45-cb38-e9b9" name="Ungors" hidden="false" collective="false" import="true" targetId="dcba-04fd-ff28-5c8d" type="selectionEntry">
+              <modifiers>
+                <modifier type="remove" field="category" value="a42d-220e-6a88-7bf6"/>
+              </modifiers>
+            </entryLink>
             <entryLink id="e003-cf2d-eb33-9083" name="Tuskgor Chariots" hidden="false" collective="false" import="true" targetId="d7fb-e05b-0ebd-6279" type="selectionEntry"/>
             <entryLink id="dcc0-0ca6-7801-8687" name="Centigors" hidden="false" collective="false" import="true" targetId="6158-d1b8-b8b3-d46b" type="selectionEntry"/>
           </entryLinks>
@@ -1510,8 +1627,8 @@ If that HERO you picked has an artefact of power, instead of suffering 1 mortal 
         </profile>
       </profiles>
       <categoryLinks>
-        <categoryLink id="b0e6-3e45-5bec-4f77" name="New CategoryLink" hidden="false" targetId="c03a-b1a8-66c6-3637" primary="true"/>
         <categoryLink id="f46f-71db-138c-c1cf" name="Pleasurebound Warband" hidden="false" targetId="88c3-24cd-76f5-d659" primary="false"/>
+        <categoryLink id="d504-1023-b26e-2e9c" name="New CategoryLink" hidden="false" targetId="3706-e0e8-674f-c41b" primary="true"/>
       </categoryLinks>
       <selectionEntryGroups>
         <selectionEntryGroup id="9561-9385-fcf6-ab2f" name="1 MORTAL SLAVES TO DARKNESS SLAANESH HERO" hidden="false" collective="false" import="true">
@@ -1759,7 +1876,7 @@ If that HERO you picked has an artefact of power, instead of suffering 1 mortal 
         </profile>
       </profiles>
       <categoryLinks>
-        <categoryLink id="4a62-f997-7d1a-12f5" name="New CategoryLink" hidden="false" targetId="c03a-b1a8-66c6-3637" primary="true"/>
+        <categoryLink id="50e3-948f-3649-ddbd" name="New CategoryLink" hidden="false" targetId="3706-e0e8-674f-c41b" primary="true"/>
       </categoryLinks>
       <selectionEntryGroups>
         <selectionEntryGroup id="d2c0-2e85-d8f9-1ca9" name="3 Blissbarb Archers" hidden="false" collective="false" import="true">
@@ -1768,24 +1885,7 @@ If that HERO you picked has an artefact of power, instead of suffering 1 mortal 
             <constraint field="selections" scope="parent" value="3.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="827a-7f97-7d64-2d2e" type="min"/>
           </constraints>
           <entryLinks>
-            <entryLink id="108b-b503-2414-49c0" name="Blissbarb Archers" hidden="false" collective="false" import="true" targetId="b309-c000-e0c8-b592" type="selectionEntry">
-              <modifiers>
-                <modifier type="remove" field="category" value="a42d-220e-6a88-7bf6">
-                  <conditionGroups>
-                    <conditionGroup type="or">
-                      <conditions>
-                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4373-740f-1bf3-b0aa" type="instanceOf"/>
-                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="e3a6-45ca-4974-b489" type="instanceOf"/>
-                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="6cd6-b22e-bfcb-9589" type="instanceOf"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
-                </modifier>
-              </modifiers>
-              <categoryLinks>
-                <categoryLink id="bb81-493b-4e1a-8653" name="BATTLELINE" hidden="false" targetId="a42d-220e-6a88-7bf6" primary="false"/>
-              </categoryLinks>
-            </entryLink>
+            <entryLink id="108b-b503-2414-49c0" name="Blissbarb Archers" hidden="false" collective="false" import="true" targetId="b309-c000-e0c8-b592" type="selectionEntry"/>
           </entryLinks>
         </selectionEntryGroup>
         <selectionEntryGroup id="3e11-447d-595e-e568" name="3 featured heroes" hidden="false" collective="false" import="true">
@@ -1835,7 +1935,7 @@ If that HERO you picked has an artefact of power, instead of suffering 1 mortal 
         </profile>
       </profiles>
       <categoryLinks>
-        <categoryLink id="0a71-d814-9841-0c2a" name="New CategoryLink" hidden="false" targetId="c03a-b1a8-66c6-3637" primary="true"/>
+        <categoryLink id="29f7-7aea-12a1-f9cb" name="New CategoryLink" hidden="false" targetId="3706-e0e8-674f-c41b" primary="true"/>
       </categoryLinks>
       <selectionEntryGroups>
         <selectionEntryGroup id="d282-ec05-5c07-7234" name="3-6 featured units" hidden="false" collective="false" import="true">
@@ -1884,7 +1984,7 @@ If that HERO you picked has an artefact of power, instead of suffering 1 mortal 
         </profile>
       </profiles>
       <categoryLinks>
-        <categoryLink id="d6ab-9fd3-afcc-f7f6" name="New CategoryLink" hidden="false" targetId="c03a-b1a8-66c6-3637" primary="true"/>
+        <categoryLink id="6609-0742-80fd-864a" name="New CategoryLink" hidden="false" targetId="3706-e0e8-674f-c41b" primary="true"/>
       </categoryLinks>
       <selectionEntryGroups>
         <selectionEntryGroup id="4bf5-de5a-4187-2de4" name="2-3 Blissbarb Seekers" hidden="false" collective="false" import="true">
@@ -1931,7 +2031,7 @@ If that HERO you picked has an artefact of power, instead of suffering 1 mortal 
         </profile>
       </profiles>
       <categoryLinks>
-        <categoryLink id="3979-03a1-32bd-a842" name="New CategoryLink" hidden="false" targetId="c03a-b1a8-66c6-3637" primary="true"/>
+        <categoryLink id="4350-4de0-5b1f-7bcc" name="New CategoryLink" hidden="false" targetId="3706-e0e8-674f-c41b" primary="true"/>
       </categoryLinks>
       <selectionEntryGroups>
         <selectionEntryGroup id="5661-0196-302c-6810" name="1 Seekers unit" hidden="false" collective="false" import="true">
@@ -1982,12 +2082,22 @@ If that HERO you picked has an artefact of power, instead of suffering 1 mortal 
           <conditionGroups>
             <conditionGroup type="or">
               <conditions>
-                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="e3a6-45ca-4974-b489" type="instanceOf"/>
                 <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4373-740f-1bf3-b0aa" type="instanceOf"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="e3a6-45ca-4974-b489" type="instanceOf"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="996a-613c-4006-25e3" type="instanceOf"/>
                 <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="6cd6-b22e-bfcb-9589" type="instanceOf"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="b543-cb16-0c79-fbc6" type="instanceOf"/>
               </conditions>
             </conditionGroup>
           </conditionGroups>
+        </modifier>
+        <modifier type="increment" field="55d0-2ff7-fdd1-7577" value="1.0">
+          <repeats>
+            <repeat field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="9e49-bd7f-45ee-1a96" repeats="1" roundUp="false"/>
+          </repeats>
+          <conditions>
+            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="9e49-bd7f-45ee-1a96" type="greaterThan"/>
+          </conditions>
         </modifier>
       </modifiers>
       <constraints>
@@ -2001,12 +2111,23 @@ If that HERO you picked has an artefact of power, instead of suffering 1 mortal 
                 <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="128a-35fa-6f1f-a15d" type="notInstanceOf"/>
               </conditions>
             </modifier>
+            <modifier type="increment" field="58ea-0406-8136-85a2" value="1.0">
+              <repeats>
+                <repeat field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="9e49-bd7f-45ee-1a96" repeats="1" roundUp="false"/>
+              </repeats>
+              <conditions>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="9e49-bd7f-45ee-1a96" type="greaterThan"/>
+              </conditions>
+            </modifier>
           </modifiers>
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="58ea-0406-8136-85a2" type="max"/>
           </constraints>
           <selectionEntries>
             <selectionEntry id="da92-618e-09aa-8526" name="6 - Born of Damnation" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="9d4e-9a79-272a-5275" type="max"/>
+              </constraints>
               <profiles>
                 <profile id="db36-2e0d-d5b3-793c" name="Born of Damnation" hidden="false" typeId="13da-11a8-b7d1-77a7" typeName="Spell">
                   <characteristics>
@@ -2019,6 +2140,9 @@ If that HERO you picked has an artefact of power, instead of suffering 1 mortal 
               </costs>
             </selectionEntry>
             <selectionEntry id="69ca-6f49-7df0-3a65" name="5 - Phantasmagoria" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="6778-78d6-605e-1cf2" type="max"/>
+              </constraints>
               <profiles>
                 <profile id="1d63-14e5-915c-da8f" name="Phantasmagoria" hidden="false" typeId="13da-11a8-b7d1-77a7" typeName="Spell">
                   <characteristics>
@@ -2031,6 +2155,9 @@ If that HERO you picked has an artefact of power, instead of suffering 1 mortal 
               </costs>
             </selectionEntry>
             <selectionEntry id="1ff6-6554-4190-8263" name="4 - Soulslice Shards" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="de53-5495-b1fe-0749" type="max"/>
+              </constraints>
               <profiles>
                 <profile id="4f45-ec0a-ccf0-a59d" name="Soulslice Shards" hidden="false" typeId="13da-11a8-b7d1-77a7" typeName="Spell">
                   <characteristics>
@@ -2043,6 +2170,9 @@ If that HERO you picked has an artefact of power, instead of suffering 1 mortal 
               </costs>
             </selectionEntry>
             <selectionEntry id="a6fd-3680-f75c-4ac5" name="3 - Hysterical Frenzy" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="08ae-495f-6ad8-bd3c" type="max"/>
+              </constraints>
               <profiles>
                 <profile id="9642-a739-63f2-a242" name="Hysterical Frenzy" hidden="false" typeId="13da-11a8-b7d1-77a7" typeName="Spell">
                   <characteristics>
@@ -2055,6 +2185,9 @@ If that HERO you picked has an artefact of power, instead of suffering 1 mortal 
               </costs>
             </selectionEntry>
             <selectionEntry id="8754-eafa-0b2b-1eda" name="2 - Pavane of Slaanesh" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="2d01-c3ab-d95b-994b" type="max"/>
+              </constraints>
               <profiles>
                 <profile id="2f16-afe2-99ef-a60b" name="Pavane of Slaanesh" hidden="false" typeId="13da-11a8-b7d1-77a7" typeName="Spell">
                   <characteristics>
@@ -2067,6 +2200,9 @@ If that HERO you picked has an artefact of power, instead of suffering 1 mortal 
               </costs>
             </selectionEntry>
             <selectionEntry id="2db8-3903-5160-e56a" name="1 - Lash of Slaanesh" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="1fbc-0b83-00ee-a9fd" type="max"/>
+              </constraints>
               <profiles>
                 <profile id="1636-783b-6b9a-84c1" name="Lash of Slaanesh" hidden="false" typeId="13da-11a8-b7d1-77a7" typeName="Spell">
                   <characteristics>
@@ -2087,12 +2223,23 @@ If that HERO you picked has an artefact of power, instead of suffering 1 mortal 
                 <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="ca90-b9b0-010b-72d0" type="notInstanceOf"/>
               </conditions>
             </modifier>
+            <modifier type="increment" field="0d88-99a4-2a11-10a3" value="1.0">
+              <repeats>
+                <repeat field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="9e49-bd7f-45ee-1a96" repeats="1" roundUp="false"/>
+              </repeats>
+              <conditions>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="9e49-bd7f-45ee-1a96" type="greaterThan"/>
+              </conditions>
+            </modifier>
           </modifiers>
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="0d88-99a4-2a11-10a3" type="max"/>
           </constraints>
           <selectionEntries>
             <selectionEntry id="159a-fad4-6b46-b688" name="3 - Dark Delusions" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="bf25-af21-9dff-37c1" type="max"/>
+              </constraints>
               <profiles>
                 <profile id="8296-c7f0-2e56-b331" name="Dark Delusions" hidden="false" typeId="13da-11a8-b7d1-77a7" typeName="Spell">
                   <characteristics>
@@ -2105,6 +2252,9 @@ If that HERO you picked has an artefact of power, instead of suffering 1 mortal 
               </costs>
             </selectionEntry>
             <selectionEntry id="4ebc-d0ad-e401-840c" name="2 - Judgement of Excess" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="22ec-291f-5067-20bc" type="max"/>
+              </constraints>
               <profiles>
                 <profile id="2213-b342-b6dd-999f" name="Judgement of Excess" hidden="false" typeId="13da-11a8-b7d1-77a7" typeName="Spell">
                   <characteristics>
@@ -2117,6 +2267,9 @@ If that HERO you picked has an artefact of power, instead of suffering 1 mortal 
               </costs>
             </selectionEntry>
             <selectionEntry id="9e08-bb52-4025-1d35" name="1 - Battle Rapture" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="ecb7-494e-f037-9c8e" type="max"/>
+              </constraints>
               <profiles>
                 <profile id="06b1-c7cc-8bc2-d840" name="Battle Rapture" hidden="false" typeId="13da-11a8-b7d1-77a7" typeName="Spell">
                   <characteristics>
@@ -2137,16 +2290,27 @@ If that HERO you picked has an artefact of power, instead of suffering 1 mortal 
                 <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="457a-27e1-4f2b-84d0" type="notInstanceOf"/>
               </conditions>
             </modifier>
+            <modifier type="increment" field="2509-a112-e542-25dc" value="1.0">
+              <repeats>
+                <repeat field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="9e49-bd7f-45ee-1a96" repeats="1" roundUp="false"/>
+              </repeats>
+              <conditions>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="9e49-bd7f-45ee-1a96" type="greaterThan"/>
+              </conditions>
+            </modifier>
           </modifiers>
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="2509-a112-e542-25dc" type="max"/>
           </constraints>
           <selectionEntries>
             <selectionEntry id="67dc-8ed9-d1ef-d698" name="3 - Slothful Stupor" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="cd15-9882-f6f2-6510" type="max"/>
+              </constraints>
               <profiles>
                 <profile id="097b-5a51-0abe-6ad6" name="Slothful Stupor" hidden="false" typeId="13da-11a8-b7d1-77a7" typeName="Spell">
                   <characteristics>
-                    <characteristic name="Spell" typeId="1170-c916-1b73-ae34">Slothful Stupor has a casting value of 7. If successfully cast, pick 1 enemy HERO within 12&quot; of the caster that is visible to them. Until your next hero phase, that HERO cannot use command abilities, and cannot run or attempt to charge.</characteristic>
+                    <characteristic name="Spell" typeId="1170-c916-1b73-ae34">Slothful Stupor has a casting value of 7. If successfully cast, pick 1 enemy HERO within 12&quot; of the caster that is visible to them. Until your next hero phase, that HERO cannot issue or recieve commands and cannot run or attempt to charge.</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
@@ -2155,6 +2319,9 @@ If that HERO you picked has an artefact of power, instead of suffering 1 mortal 
               </costs>
             </selectionEntry>
             <selectionEntry id="0d88-c1f6-72ff-e8ac" name="2 - Progeny of Damnation" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="6fd2-1fc3-d729-7da3" type="max"/>
+              </constraints>
               <profiles>
                 <profile id="d2b6-9fcf-508b-05e4" name="Progeny of Damnation" hidden="false" typeId="13da-11a8-b7d1-77a7" typeName="Spell">
                   <characteristics>
@@ -2167,6 +2334,9 @@ If that HERO you picked has an artefact of power, instead of suffering 1 mortal 
               </costs>
             </selectionEntry>
             <selectionEntry id="105b-2464-ae26-fea0" name="1 - Paths of the Dark Prince" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="9eba-457a-98c6-7409" type="max"/>
+              </constraints>
               <profiles>
                 <profile id="c899-d8ca-b6f6-0850" name="Paths of the Dark Prince" hidden="false" typeId="13da-11a8-b7d1-77a7" typeName="Spell">
                   <characteristics>
@@ -2181,6 +2351,9 @@ If that HERO you picked has an artefact of power, instead of suffering 1 mortal 
           </selectionEntries>
         </selectionEntryGroup>
       </selectionEntryGroups>
+      <entryLinks>
+        <entryLink id="ac60-a56e-03a8-904a" name="Universal Spell Lore" hidden="false" collective="false" import="true" targetId="93f7-7e2a-3308-d150" type="selectionEntryGroup"/>
+      </entryLinks>
     </selectionEntryGroup>
     <selectionEntryGroup id="548e-e11c-aeda-8d1b" name="Command Traits" publicationId="29d6-453f-ecc0-3e4b" hidden="false" collective="false" import="true">
       <modifiers>
@@ -2190,15 +2363,6 @@ If that HERO you picked has an artefact of power, instead of suffering 1 mortal 
               <conditions>
                 <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="c661-44d6-0f5b-11ff" type="equalTo"/>
               </conditions>
-              <conditionGroups>
-                <conditionGroup type="and">
-                  <conditions>
-                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="a15a-dd81-d8ca-0db2" type="equalTo"/>
-                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="441c-7740-77af-9ddc" type="equalTo"/>
-                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="02b3-0743-81d2-87d5" type="equalTo"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
             </conditionGroup>
           </conditionGroups>
         </modifier>
@@ -2494,6 +2658,9 @@ If that HERO you picked has an artefact of power, instead of suffering 1 mortal 
           </selectionEntries>
         </selectionEntryGroup>
       </selectionEntryGroups>
+      <entryLinks>
+        <entryLink id="c656-e7d2-6834-aea7" name="Universal Command Traits" hidden="false" collective="false" import="true" targetId="20f0-6df9-b464-3789" type="selectionEntryGroup"/>
+      </entryLinks>
     </selectionEntryGroup>
     <selectionEntryGroup id="a520-01ab-3cef-a486" name="Artefacts of Power" publicationId="29d6-453f-ecc0-3e4b" hidden="false" collective="false" import="true">
       <modifiers>
@@ -2501,21 +2668,12 @@ If that HERO you picked has an artefact of power, instead of suffering 1 mortal 
           <conditionGroups>
             <conditionGroup type="or">
               <conditions>
-                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="e3a6-45ca-4974-b489" type="instanceOf"/>
                 <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4373-740f-1bf3-b0aa" type="instanceOf"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="e3a6-45ca-4974-b489" type="instanceOf"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="996a-613c-4006-25e3" type="instanceOf"/>
                 <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="6cd6-b22e-bfcb-9589" type="instanceOf"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="b543-cb16-0c79-fbc6" type="instanceOf"/>
               </conditions>
-              <conditionGroups>
-                <conditionGroup type="and">
-                  <conditions>
-                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="a15a-dd81-d8ca-0db2" type="equalTo"/>
-                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="441c-7740-77af-9ddc" type="equalTo"/>
-                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="02b3-0743-81d2-87d5" type="equalTo"/>
-                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="02e5-753c-31d2-5e10" type="equalTo"/>
-                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="7173-5f26-ecf8-c2dc" type="equalTo"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
             </conditionGroup>
           </conditionGroups>
         </modifier>
@@ -2841,8 +2999,38 @@ If that HERO you picked has an artefact of power, instead of suffering 1 mortal 
         </selectionEntryGroup>
       </selectionEntryGroups>
       <entryLinks>
-        <entryLink id="a65a-3ade-d66b-5399" name="Realm Artefacts" hidden="false" collective="false" import="true" targetId="4df1-d526-85d7-1c93" type="selectionEntryGroup"/>
-        <entryLink id="3fc8-794c-4d9d-e6fc" name="Realm Artefacts" hidden="false" collective="false" import="true" targetId="56b5-54f1-dbb4-63c6" type="selectionEntryGroup"/>
+        <entryLink id="475b-b381-d510-8e13" name="Universal Artefacts of Power" hidden="false" collective="false" import="true" targetId="dbd8-8f6f-f44a-884a" type="selectionEntryGroup"/>
+      </entryLinks>
+    </selectionEntryGroup>
+    <selectionEntryGroup id="b8bc-66a0-c35b-a31e" name="Hedonites Prayer Scriptures" hidden="false" collective="false" import="true">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4373-740f-1bf3-b0aa" type="instanceOf"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="e3a6-45ca-4974-b489" type="instanceOf"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="996a-613c-4006-25e3" type="instanceOf"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="6cd6-b22e-bfcb-9589" type="instanceOf"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="b543-cb16-0c79-fbc6" type="instanceOf"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+        <modifier type="increment" field="eb97-d067-216c-7b16" value="1.0">
+          <repeats>
+            <repeat field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="c7bd-c872-ef57-2468" repeats="1" roundUp="false"/>
+          </repeats>
+          <conditions>
+            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="c7bd-c872-ef57-2468" type="greaterThan"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <constraints>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="eb97-d067-216c-7b16" type="max"/>
+      </constraints>
+      <entryLinks>
+        <entryLink id="1c5d-effe-7eba-828f" name="Universal Prayer Scripture" hidden="false" collective="false" import="true" targetId="7104-ab27-d136-1df0" type="selectionEntryGroup"/>
       </entryLinks>
     </selectionEntryGroup>
   </sharedSelectionEntryGroups>
@@ -2853,5 +3041,6 @@ If that HERO you picked has an artefact of power, instead of suffering 1 mortal 
     <catalogueLink id="d9ae-a0a1-84ff-cfc8" name="Chaos - Slaves to Darkness - Data" targetId="0323-3d4f-ac64-f863" type="catalogue" importRootEntries="true"/>
     <catalogueLink id="40cd-3bfd-d815-8f86" name="Chaos - Beasts of Chaos - Data" targetId="174c-6424-9680-8149" type="catalogue" importRootEntries="true"/>
     <catalogueLink id="5e36-e23c-0897-806f" name="Chaos - Hedonites of Slaanesh - Data" targetId="0f80-3aaf-c740-fcc3" type="catalogue" importRootEntries="true"/>
+    <catalogueLink id="0bff-37ac-14f3-551d" name="Chaos - Beasts of Chaos - Data" targetId="174c-6424-9680-8149" type="catalogue" importRootEntries="true"/>
   </catalogueLinks>
 </catalogue>

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="32ef-d338-7c25-1aea" name="Chaos - Disciples of Tzeentch" revision="5" battleScribeVersion="2.03" authorName="Thulram" library="false" gameSystemId="e832-3291-06be-cab1" gameSystemRevision="5" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="32ef-d338-7c25-1aea" name="Chaos - Disciples of Tzeentch" revision="6" battleScribeVersion="2.03" authorName="Thulram" library="false" gameSystemId="e832-3291-06be-cab1" gameSystemRevision="6" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <profileTypes>
     <profileType id="9ec8-5a25-c4f7-aa4f" name="Lord of Change Wounds">
       <characteristicTypes>
@@ -52,6 +52,36 @@
         <constraint field="selections" scope="force" value="3.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="391e-ab4a-30be-0e33" type="max"/>
       </constraints>
     </categoryEntry>
+    <categoryEntry id="4a99-f9c9-0367-e257" name="Allegiant - Beasts of Chaos" hidden="false">
+      <modifiers>
+        <modifier type="increment" field="9d98-4a20-fd70-6634" value="1.0">
+          <repeats>
+            <repeat field="selections" scope="force" value="4.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="unit" repeats="1" roundUp="false"/>
+          </repeats>
+          <conditions>
+            <condition field="selections" scope="force" value="3.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="unit" type="greaterThan"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <constraints>
+        <constraint field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="9d98-4a20-fd70-6634" type="max"/>
+      </constraints>
+    </categoryEntry>
+    <categoryEntry id="f06f-7a6c-ad8f-c293" name="Allegiant - Slaves to Darkness" hidden="false">
+      <modifiers>
+        <modifier type="increment" field="93d7-1018-b7f4-778a" value="2.0">
+          <repeats>
+            <repeat field="selections" scope="force" value="4.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="unit" repeats="1" roundUp="false"/>
+          </repeats>
+          <conditions>
+            <condition field="selections" scope="force" value="3.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="unit" type="greaterThan"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <constraints>
+        <constraint field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="93d7-1018-b7f4-778a" type="max"/>
+      </constraints>
+    </categoryEntry>
   </categoryEntries>
   <selectionEntries>
     <selectionEntry id="1bc4-3b6d-e502-3624" name="Vortemis and The Eyes of the Nine (separate units)" publicationId="97ef-9bf4-54c7-6623" hidden="false" collective="false" import="true" type="upgrade">
@@ -86,7 +116,6 @@ If a friendly MAGISTER is slain by this effect, roll a dice before removing the 
             <profile id="2247-7da8-3860-2b90" name="Vortemis the All-seeing" hidden="false" typeId="a62b-2245-5c24-f8bc" typeName="Magic">
               <characteristics>
                 <characteristic name="Cast/Unbind" typeId="9a5b-68ee-bc46-6a9d">1/1</characteristic>
-                <characteristic name="Spells Known" typeId="25bd-2ad0-e570-e880">Arcane Bolt, Mystic Shield, Sorcerous Insight</characteristic>
               </characteristics>
             </profile>
             <profile id="94d1-088f-63e1-007c" name="Sorcerous Insight" hidden="false" typeId="13da-11a8-b7d1-77a7" typeName="Spell">
@@ -385,7 +414,7 @@ If a friendly MAGISTER is slain by this effect, roll a dice before removing the 
         </selectionEntry>
       </selectionEntries>
       <costs>
-        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="140.0"/>
+        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="215.0"/>
       </costs>
     </selectionEntry>
   </selectionEntries>
@@ -569,7 +598,6 @@ If a friendly MAGISTER is slain by this effect, roll a dice before removing the 
         <entryLink id="3807-4496-ac43-5c88" name="Tzeentch Spell Lores" hidden="false" collective="false" import="true" targetId="fbcd-e766-cdb4-cca4" type="selectionEntryGroup"/>
       </entryLinks>
     </entryLink>
-    <entryLink id="9999-5959-69bf-cb4e" name="Vortemis and The Eyes of the Nine (separate units)" hidden="false" collective="false" import="true" targetId="b5e6-74d7-6279-63a7" type="selectionEntry"/>
     <entryLink id="bf25-9758-bf8a-e8be" name="Fatemaster" hidden="false" collective="false" import="true" targetId="411a-ebc4-3471-39cf" type="selectionEntry">
       <entryLinks>
         <entryLink id="a628-4a0b-35a1-85c8" name="General" hidden="false" collective="false" import="true" targetId="98a4-3d6d-a7b9-399f" type="selectionEntry"/>
@@ -578,27 +606,24 @@ If a friendly MAGISTER is slain by this effect, roll a dice before removing the 
         <entryLink id="8e15-f815-633c-8c9d" name="Tzeentch Spell Lores" hidden="false" collective="false" import="true" targetId="fbcd-e766-cdb4-cca4" type="selectionEntryGroup"/>
       </entryLinks>
     </entryLink>
-    <entryLink id="0d2d-9db7-c702-4b8c" name="Ogroid Thaumaturge" hidden="false" collective="false" import="true" targetId="4a1e-b2ba-ae8c-4400" type="selectionEntry">
-      <entryLinks>
-        <entryLink id="832f-084e-f7b9-ae2b" name="Tzeentch Spell Lores" hidden="false" collective="false" import="true" targetId="fbcd-e766-cdb4-cca4" type="selectionEntryGroup"/>
-        <entryLink id="a48d-e33a-81bf-7b96" name="General" hidden="false" collective="false" import="true" targetId="98a4-3d6d-a7b9-399f" type="selectionEntry"/>
-        <entryLink id="5d82-1ba5-cc32-3548" name="Artefacts of Power" hidden="false" collective="false" import="true" targetId="73f3-d951-284c-8c27" type="selectionEntryGroup"/>
-        <entryLink id="681a-7254-9553-f9c1" name="Command Traits" hidden="false" collective="false" import="true" targetId="4f77-8452-30db-73f1" type="selectionEntryGroup"/>
-      </entryLinks>
-    </entryLink>
     <entryLink id="f9df-ab7c-9821-c217" name="Kairic Acolytes" hidden="false" collective="false" import="true" targetId="5ee5-454d-c8d6-f2fb" type="selectionEntry"/>
     <entryLink id="bf9b-a474-159a-c322" name="Tzeentch Chaos Spawn" hidden="false" collective="false" import="true" targetId="bfe5-eeb2-3246-0a3b" type="selectionEntry"/>
-    <entryLink id="1085-bcb0-53e2-aae0" name="Tzaangor Enlightened" hidden="false" collective="false" import="true" targetId="ce2c-3e13-713e-341d" type="selectionEntry"/>
-    <entryLink id="7c93-014a-6a0a-9bee" name="Tzaangor Enlightened on Discs of Tzeentch" hidden="false" collective="false" import="true" targetId="eeb2-a494-989b-3f4f" type="selectionEntry"/>
+    <entryLink id="1085-bcb0-53e2-aae0" name="Tzaangor Enlightened" hidden="false" collective="false" import="true" targetId="97b1-363d-a889-d81c" type="selectionEntry"/>
+    <entryLink id="7c93-014a-6a0a-9bee" name="Tzaangor Enlightened on Discs of Tzeentch" hidden="false" collective="false" import="true" targetId="4860-604b-99f7-961e" type="selectionEntry"/>
     <entryLink id="f2b4-0cc5-00bd-9ff8" name="Tzaangor Shaman" hidden="false" collective="false" import="true" targetId="e955-c202-0ea2-241b" type="selectionEntry">
+      <categoryLinks>
+        <categoryLink id="53c0-1804-4c9f-aed6" name="Allegiant - Beasts of Chaos" hidden="false" targetId="4a99-f9c9-0367-e257" primary="false"/>
+      </categoryLinks>
       <entryLinks>
-        <entryLink id="7f6d-ed74-366b-2b3b" name="General" hidden="false" collective="false" import="true" targetId="98a4-3d6d-a7b9-399f" type="selectionEntry"/>
         <entryLink id="6ea3-0ce3-cf16-834f" name="Artefacts of Power" hidden="false" collective="false" import="true" targetId="73f3-d951-284c-8c27" type="selectionEntryGroup"/>
         <entryLink id="f65c-df37-316e-f59f" name="Tzeentch Spell Lores" hidden="false" collective="false" import="true" targetId="fbcd-e766-cdb4-cca4" type="selectionEntryGroup"/>
-        <entryLink id="e802-2579-3e2c-0299" name="Command Traits" hidden="false" collective="false" import="true" targetId="4f77-8452-30db-73f1" type="selectionEntryGroup"/>
       </entryLinks>
     </entryLink>
-    <entryLink id="902e-afac-09b1-a7c6" name="Tzaangor Skyfires" hidden="false" collective="false" import="true" targetId="b711-24fd-12d7-3016" type="selectionEntry"/>
+    <entryLink id="902e-afac-09b1-a7c6" name="Tzaangor Skyfires" hidden="false" collective="false" import="true" targetId="b711-24fd-12d7-3016" type="selectionEntry">
+      <categoryLinks>
+        <categoryLink id="bab1-363e-d554-2cdb" name="Allegiant - Beasts of Chaos" hidden="false" targetId="4a99-f9c9-0367-e257" primary="false"/>
+      </categoryLinks>
+    </entryLink>
     <entryLink id="96a0-9edc-bd09-bc98" name="Tzaangors" hidden="false" collective="false" import="true" targetId="c8a1-3aac-fb3a-d4e6" type="selectionEntry"/>
     <entryLink id="2559-96e1-01d5-1918" name="Tzaangor Coven" hidden="false" collective="false" import="true" targetId="3d35-264e-20b2-c4ab" type="selectionEntry">
       <profiles>
@@ -615,7 +640,12 @@ If a friendly MAGISTER is slain by this effect, roll a dice before removing the 
             <constraint field="selections" scope="parent" value="2.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8461-1890-256f-8f8f" type="min"/>
           </constraints>
           <entryLinks>
-            <entryLink id="adda-0da6-97fe-7919" name="Tzaangor Skyfires" hidden="false" collective="false" import="true" targetId="b711-24fd-12d7-3016" type="selectionEntry"/>
+            <entryLink id="adda-0da6-97fe-7919" name="Tzaangor Skyfires" hidden="false" collective="false" import="true" targetId="b711-24fd-12d7-3016" type="selectionEntry">
+              <categoryLinks>
+                <categoryLink id="56f1-152a-4c75-7de0" name="Allegiant - Beasts of Chaos" hidden="false" targetId="4a99-f9c9-0367-e257" primary="false"/>
+              </categoryLinks>
+            </entryLink>
+            <entryLink id="debb-cecc-c563-dedd" name="Tzaangor Skyfires" hidden="false" collective="false" import="true" targetId="e005-a694-830d-6941" type="selectionEntry"/>
           </entryLinks>
         </selectionEntryGroup>
         <selectionEntryGroup id="2e2e-44af-04b1-d0b1" name="2 units of Tzaangor Enlightened" hidden="false" collective="false" import="true">
@@ -624,7 +654,12 @@ If a friendly MAGISTER is slain by this effect, roll a dice before removing the 
             <constraint field="selections" scope="parent" value="2.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="6e50-6a46-636d-6e31" type="min"/>
           </constraints>
           <entryLinks>
-            <entryLink id="12c5-4d73-debe-05f7" name="Tzaangor Enlightened" hidden="false" collective="false" import="true" targetId="ce2c-3e13-713e-341d" type="selectionEntry"/>
+            <entryLink id="12c5-4d73-debe-05f7" name="Tzaangor Enlightened" hidden="false" collective="false" import="true" targetId="ce2c-3e13-713e-341d" type="selectionEntry">
+              <categoryLinks>
+                <categoryLink id="a47f-00b9-c115-af0f" name="Allegiant - Beasts of Chaos" hidden="false" targetId="4a99-f9c9-0367-e257" primary="false"/>
+              </categoryLinks>
+            </entryLink>
+            <entryLink id="0f84-9270-a013-4352" name="Tzaangor Enlightened" hidden="false" collective="false" import="true" targetId="97b1-363d-a889-d81c" type="selectionEntry"/>
           </entryLinks>
         </selectionEntryGroup>
         <selectionEntryGroup id="9756-022f-c293-6d9b" name="2 units of Tzaangors" hidden="false" collective="false" import="true">
@@ -634,6 +669,14 @@ If a friendly MAGISTER is slain by this effect, roll a dice before removing the 
           </constraints>
           <entryLinks>
             <entryLink id="36b5-2aff-59f6-2fc2" name="Tzaangors" hidden="false" collective="false" import="true" targetId="c8a1-3aac-fb3a-d4e6" type="selectionEntry"/>
+            <entryLink id="3436-53dc-1491-5691" name="Tzaangors" hidden="false" collective="false" import="true" targetId="57ea-1189-0726-22b1" type="selectionEntry">
+              <modifiers>
+                <modifier type="remove" field="category" value="a42d-220e-6a88-7bf6"/>
+              </modifiers>
+              <categoryLinks>
+                <categoryLink id="b1b0-993e-9542-da06" name="Allegiant - Beasts of Chaos" hidden="false" targetId="4a99-f9c9-0367-e257" primary="false"/>
+              </categoryLinks>
+            </entryLink>
           </entryLinks>
         </selectionEntryGroup>
       </selectionEntryGroups>
@@ -788,7 +831,6 @@ If a friendly MAGISTER is slain by this effect, roll a dice before removing the 
                     <profile id="5ae4-2e17-44cc-6d94" name="Vortemis the All-seeing" hidden="false" typeId="a62b-2245-5c24-f8bc" typeName="Magic">
                       <characteristics>
                         <characteristic name="Cast/Unbind" typeId="9a5b-68ee-bc46-6a9d">1/1</characteristic>
-                        <characteristic name="Spells Known" typeId="25bd-2ad0-e570-e880">Arcane Bolt, Mystic Shield, Sorcerous Insight</characteristic>
                       </characteristics>
                     </profile>
                     <profile id="f208-07e4-1fe0-2dcb" name="Sorcerous Insight" hidden="false" typeId="13da-11a8-b7d1-77a7" typeName="Spell">
@@ -1138,94 +1180,297 @@ If a friendly MAGISTER is slain by this effect, roll a dice before removing the 
     <entryLink id="faa6-09ed-166e-fdf2" name="Warpflame Host" hidden="false" collective="false" import="true" targetId="fe43-6c0c-a352-6301" type="selectionEntry"/>
     <entryLink id="3895-59a0-503a-acc1" name="Archaon the Everchosen" hidden="false" collective="false" import="true" targetId="b236-3f69-c15f-a954" type="selectionEntry">
       <entryLinks>
-        <entryLink id="693c-c8e6-f933-70f0" name="General" hidden="false" collective="false" import="true" targetId="98a4-3d6d-a7b9-399f" type="selectionEntry">
-          <categoryLinks>
-            <categoryLink id="b2d4-bce6-6743-5720" name="Named General" hidden="false" targetId="8b3d-7f03-e1f9-eaf5" primary="false"/>
-          </categoryLinks>
-        </entryLink>
         <entryLink id="49aa-48b2-d38d-d08a" name="Tzeentch Spell Lores" hidden="false" collective="false" import="true" targetId="fbcd-e766-cdb4-cca4" type="selectionEntryGroup"/>
+        <entryLink id="990c-9c63-065d-4312" name="Bonus General" hidden="false" collective="false" import="true" targetId="c608-7a89-b2b4-124d" type="selectionEntry"/>
       </entryLinks>
     </entryLink>
     <entryLink id="1446-441e-bef8-2399" name="Chaos Lord" hidden="false" collective="false" import="true" targetId="57c2-5dde-47de-fec0" type="selectionEntry">
+      <categoryLinks>
+        <categoryLink id="9e13-94c4-2744-ba98" name="Allegiant - Slaves to Darkness" hidden="false" targetId="f06f-7a6c-ad8f-c293" primary="false"/>
+      </categoryLinks>
       <entryLinks>
-        <entryLink id="2666-426d-c65d-4ac7" name="General" hidden="false" collective="false" import="true" targetId="98a4-3d6d-a7b9-399f" type="selectionEntry"/>
         <entryLink id="f475-5fa3-615c-01ca" name="Artefacts of Power" hidden="false" collective="false" import="true" targetId="73f3-d951-284c-8c27" type="selectionEntryGroup"/>
-        <entryLink id="1600-aa5c-5227-2528" name="Command Traits" hidden="false" collective="false" import="true" targetId="4f77-8452-30db-73f1" type="selectionEntryGroup"/>
       </entryLinks>
     </entryLink>
     <entryLink id="8ef7-34cb-52ef-1dd4" name="Chaos Lord on Daemonic Mount" hidden="false" collective="false" import="true" targetId="e0d8-c1c4-780e-e06c" type="selectionEntry">
+      <categoryLinks>
+        <categoryLink id="a569-6be9-5533-9111" name="Allegiant - Slaves to Darkness" hidden="false" targetId="f06f-7a6c-ad8f-c293" primary="false"/>
+      </categoryLinks>
       <entryLinks>
-        <entryLink id="cbd7-db63-2ad4-aaa4" name="General" hidden="false" collective="false" import="true" targetId="98a4-3d6d-a7b9-399f" type="selectionEntry"/>
         <entryLink id="6b3c-a3f1-fb36-3f07" name="Artefacts of Power" hidden="false" collective="false" import="true" targetId="73f3-d951-284c-8c27" type="selectionEntryGroup"/>
-        <entryLink id="8a28-8efe-44e0-0b72" name="Command Traits" hidden="false" collective="false" import="true" targetId="4f77-8452-30db-73f1" type="selectionEntryGroup"/>
       </entryLinks>
     </entryLink>
     <entryLink id="62b2-0d4f-494b-8305" name="Chaos Lord on Karkadrak" hidden="false" collective="false" import="true" targetId="ae17-f81f-42d9-00dc" type="selectionEntry">
+      <categoryLinks>
+        <categoryLink id="7ae9-b4f7-683b-c012" name="Allegiant - Slaves to Darkness" hidden="false" targetId="f06f-7a6c-ad8f-c293" primary="false"/>
+      </categoryLinks>
       <entryLinks>
-        <entryLink id="02a5-e7db-71bb-cd55" name="General" hidden="false" collective="false" import="true" targetId="98a4-3d6d-a7b9-399f" type="selectionEntry"/>
         <entryLink id="8cfe-6f98-2426-ec60" name="Artefacts of Power" hidden="false" collective="false" import="true" targetId="73f3-d951-284c-8c27" type="selectionEntryGroup"/>
-        <entryLink id="0ea3-520e-f9f4-dab1" name="Command Traits" hidden="false" collective="false" import="true" targetId="4f77-8452-30db-73f1" type="selectionEntryGroup"/>
       </entryLinks>
     </entryLink>
     <entryLink id="95c6-e467-d748-7872" name="Chaos Lord on Manticore" hidden="false" collective="false" import="true" targetId="1052-3276-9416-b2a8" type="selectionEntry">
+      <categoryLinks>
+        <categoryLink id="f741-41ea-cd26-56c4" name="Allegiant - Slaves to Darkness" hidden="false" targetId="f06f-7a6c-ad8f-c293" primary="false"/>
+      </categoryLinks>
       <entryLinks>
-        <entryLink id="3a92-7084-443a-9428" name="General" hidden="false" collective="false" import="true" targetId="98a4-3d6d-a7b9-399f" type="selectionEntry"/>
         <entryLink id="1e92-656b-a9f9-97cc" name="Artefacts of Power" hidden="false" collective="false" import="true" targetId="73f3-d951-284c-8c27" type="selectionEntryGroup"/>
-        <entryLink id="afe1-dee1-3aeb-66d9" name="Command Traits" hidden="false" collective="false" import="true" targetId="4f77-8452-30db-73f1" type="selectionEntryGroup"/>
       </entryLinks>
     </entryLink>
     <entryLink id="6046-825f-7750-7751" name="Chaos Sorcerer Lord on Manticore" hidden="false" collective="false" import="true" targetId="9256-c7f4-4b50-4548" type="selectionEntry">
+      <categoryLinks>
+        <categoryLink id="076c-ce4e-e764-0e16" name="Allegiant - Slaves to Darkness" hidden="false" targetId="f06f-7a6c-ad8f-c293" primary="false"/>
+      </categoryLinks>
       <entryLinks>
         <entryLink id="cc02-4dd8-a706-8fb4" name="Tzeentch Spell Lores" hidden="false" collective="false" import="true" targetId="fbcd-e766-cdb4-cca4" type="selectionEntryGroup"/>
-        <entryLink id="2458-520e-f948-9505" name="General" hidden="false" collective="false" import="true" targetId="98a4-3d6d-a7b9-399f" type="selectionEntry"/>
         <entryLink id="db97-462b-34fb-ed5e" name="Artefacts of Power" hidden="false" collective="false" import="true" targetId="73f3-d951-284c-8c27" type="selectionEntryGroup"/>
-        <entryLink id="182e-001f-2a38-b612" name="Command Traits" hidden="false" collective="false" import="true" targetId="4f77-8452-30db-73f1" type="selectionEntryGroup"/>
       </entryLinks>
     </entryLink>
     <entryLink id="93a3-fb6b-7070-9f03" name="Chaos Sorceror Lord" hidden="false" collective="false" import="true" targetId="e75f-c557-c734-1416" type="selectionEntry">
+      <categoryLinks>
+        <categoryLink id="ad04-65cb-a8d4-d1ab" name="Allegiant - Slaves to Darkness" hidden="false" targetId="f06f-7a6c-ad8f-c293" primary="false"/>
+      </categoryLinks>
       <entryLinks>
         <entryLink id="cf91-a360-a4da-2469" name="Tzeentch Spell Lores" hidden="false" collective="false" import="true" targetId="fbcd-e766-cdb4-cca4" type="selectionEntryGroup"/>
-        <entryLink id="95df-7d54-7aa6-b94a" name="General" hidden="false" collective="false" import="true" targetId="98a4-3d6d-a7b9-399f" type="selectionEntry"/>
         <entryLink id="042e-449a-38c1-eeff" name="Artefacts of Power" hidden="false" collective="false" import="true" targetId="73f3-d951-284c-8c27" type="selectionEntryGroup"/>
-        <entryLink id="d2e0-0e7d-a701-f0a2" name="Command Traits" hidden="false" collective="false" import="true" targetId="4f77-8452-30db-73f1" type="selectionEntryGroup"/>
       </entryLinks>
     </entryLink>
     <entryLink id="6f51-3842-4c81-64aa" name="Exalted Hero of Chaos" hidden="false" collective="false" import="true" targetId="2b14-92e7-6138-eb76" type="selectionEntry">
+      <categoryLinks>
+        <categoryLink id="a62c-afef-3d31-ce0b" name="Allegiant - Slaves to Darkness" hidden="false" targetId="f06f-7a6c-ad8f-c293" primary="false"/>
+      </categoryLinks>
       <entryLinks>
-        <entryLink id="2b22-cad8-2f7b-dc6a" name="General" hidden="false" collective="false" import="true" targetId="98a4-3d6d-a7b9-399f" type="selectionEntry"/>
         <entryLink id="98c3-9f27-622e-1e59" name="Artefacts of Power" hidden="false" collective="false" import="true" targetId="73f3-d951-284c-8c27" type="selectionEntryGroup"/>
-        <entryLink id="fc28-91a3-eb82-0b1a" name="Command Traits" hidden="false" collective="false" import="true" targetId="4f77-8452-30db-73f1" type="selectionEntryGroup"/>
       </entryLinks>
     </entryLink>
     <entryLink id="d183-13ea-3fbf-a611" name="Slaves to Darkness Daemon Prince" hidden="false" collective="false" import="true" targetId="293f-06ab-2a5a-f895" type="selectionEntry">
+      <categoryLinks>
+        <categoryLink id="a4b2-73ff-9975-07c1" name="Allegiant - Slaves to Darkness" hidden="false" targetId="f06f-7a6c-ad8f-c293" primary="false"/>
+      </categoryLinks>
       <entryLinks>
-        <entryLink id="40ea-9da1-c3b8-0ec0" name="General" hidden="false" collective="false" import="true" targetId="98a4-3d6d-a7b9-399f" type="selectionEntry"/>
         <entryLink id="be39-51c0-6568-d5f6" name="Artefacts of Power" hidden="false" collective="false" import="true" targetId="73f3-d951-284c-8c27" type="selectionEntryGroup"/>
-        <entryLink id="5a48-a92c-5dba-b2b4" name="Command Traits" hidden="false" collective="false" import="true" targetId="4f77-8452-30db-73f1" type="selectionEntryGroup"/>
       </entryLinks>
     </entryLink>
-    <entryLink id="3d5f-b381-ca30-90b0" name="Gaunt Summoner on Disc of Tzeentch" hidden="false" collective="false" import="true" targetId="84d5-d05d-0dcf-75e6" type="selectionEntry">
+    <entryLink id="0a48-13ec-ce24-22ed" name="Chaos Chariots" hidden="false" collective="false" import="true" targetId="9dd9-cc5b-2b21-b996" type="selectionEntry">
+      <modifiers>
+        <modifier type="remove" field="category" value="a42d-220e-6a88-7bf6"/>
+      </modifiers>
+      <categoryLinks>
+        <categoryLink id="76cc-338d-c004-b082" name="Allegiant - Slaves to Darkness" hidden="false" targetId="f06f-7a6c-ad8f-c293" primary="false"/>
+      </categoryLinks>
+    </entryLink>
+    <entryLink id="3209-a64f-20ea-32d2" name="Chaos Chosen" hidden="false" collective="false" import="true" targetId="ea93-8ff3-9b86-c8f0" type="selectionEntry">
+      <categoryLinks>
+        <categoryLink id="33be-2669-73f0-b126" name="Allegiant - Slaves to Darkness" hidden="false" targetId="f06f-7a6c-ad8f-c293" primary="false"/>
+      </categoryLinks>
+    </entryLink>
+    <entryLink id="15b4-aa72-7ba3-7379" name="Chaos Knights" hidden="false" collective="false" import="true" targetId="73fe-2d86-24a1-fe98" type="selectionEntry">
+      <modifiers>
+        <modifier type="remove" field="category" value="a42d-220e-6a88-7bf6"/>
+      </modifiers>
+      <categoryLinks>
+        <categoryLink id="9c91-683c-7ed5-974e" name="Allegiant - Slaves to Darkness" hidden="false" targetId="f06f-7a6c-ad8f-c293" primary="false"/>
+      </categoryLinks>
+    </entryLink>
+    <entryLink id="8f08-6edd-92bf-b68e" name="Chaos Marauder Horsemen" hidden="false" collective="false" import="true" targetId="fad7-8185-4954-cd2a" type="selectionEntry">
+      <modifiers>
+        <modifier type="remove" field="category" value="a42d-220e-6a88-7bf6"/>
+      </modifiers>
+      <categoryLinks>
+        <categoryLink id="47e5-d63f-7dc8-3e52" name="Allegiant - Slaves to Darkness" hidden="false" targetId="f06f-7a6c-ad8f-c293" primary="false"/>
+      </categoryLinks>
+    </entryLink>
+    <entryLink id="f064-fb11-23c5-4aab" name="Chaos Marauders" hidden="false" collective="false" import="true" targetId="e057-b25e-b5b4-4df1" type="selectionEntry">
+      <modifiers>
+        <modifier type="remove" field="category" value="a42d-220e-6a88-7bf6"/>
+      </modifiers>
+      <categoryLinks>
+        <categoryLink id="dac4-af8f-2dbd-0ce9" name="Allegiant - Slaves to Darkness" hidden="false" targetId="f06f-7a6c-ad8f-c293" primary="false"/>
+      </categoryLinks>
+    </entryLink>
+    <entryLink id="159e-c349-cc9a-2c90" name="Chaos Warriors" hidden="false" collective="false" import="true" targetId="60a2-6f0e-3dac-fcc4" type="selectionEntry">
+      <modifiers>
+        <modifier type="remove" field="category" value="a42d-220e-6a88-7bf6"/>
+      </modifiers>
+      <categoryLinks>
+        <categoryLink id="1dc7-cc9c-1662-b284" name="Allegiant - Slaves to Darkness" hidden="false" targetId="f06f-7a6c-ad8f-c293" primary="false"/>
+      </categoryLinks>
+    </entryLink>
+    <entryLink id="dba6-53d4-e362-1511" name="Chaos Warshrine" hidden="false" collective="false" import="true" targetId="5ba7-fe45-c11e-a8da" type="selectionEntry">
+      <categoryLinks>
+        <categoryLink id="3b3a-ef17-b191-c61e" name="Allegiant - Slaves to Darkness" hidden="false" targetId="f06f-7a6c-ad8f-c293" primary="false"/>
+      </categoryLinks>
       <entryLinks>
-        <entryLink id="ddd3-a468-8ca1-ce12" name="Tzeentch Spell Lores" hidden="false" collective="false" import="true" targetId="fbcd-e766-cdb4-cca4" type="selectionEntryGroup"/>
-        <entryLink id="393a-f6fc-4684-632a" name="General" hidden="false" collective="false" import="true" targetId="98a4-3d6d-a7b9-399f" type="selectionEntry"/>
-        <entryLink id="8872-d614-21b3-207d" name="Artefacts of Power" hidden="false" collective="false" import="true" targetId="73f3-d951-284c-8c27" type="selectionEntryGroup"/>
-        <entryLink id="0dc6-3190-aee2-e3ec" name="Command Traits" hidden="false" collective="false" import="true" targetId="4f77-8452-30db-73f1" type="selectionEntryGroup"/>
+        <entryLink id="1b84-0b14-b7d2-2b70" name="Tzeentch Prayer Scriptures" hidden="false" collective="false" import="true" targetId="6b97-fbdf-b7cc-777f" type="selectionEntryGroup"/>
       </entryLinks>
     </entryLink>
-    <entryLink id="0a48-13ec-ce24-22ed" name="Chaos Chariots" hidden="false" collective="false" import="true" targetId="9dd9-cc5b-2b21-b996" type="selectionEntry"/>
-    <entryLink id="3209-a64f-20ea-32d2" name="Chaos Chosen" hidden="false" collective="false" import="true" targetId="ea93-8ff3-9b86-c8f0" type="selectionEntry"/>
-    <entryLink id="15b4-aa72-7ba3-7379" name="Chaos Knights" hidden="false" collective="false" import="true" targetId="73fe-2d86-24a1-fe98" type="selectionEntry"/>
-    <entryLink id="8f08-6edd-92bf-b68e" name="Chaos Marauder Horsemen" hidden="false" collective="false" import="true" targetId="fad7-8185-4954-cd2a" type="selectionEntry"/>
-    <entryLink id="f064-fb11-23c5-4aab" name="Chaos Marauders" hidden="false" collective="false" import="true" targetId="e057-b25e-b5b4-4df1" type="selectionEntry"/>
-    <entryLink id="159e-c349-cc9a-2c90" name="Chaos Warriors" hidden="false" collective="false" import="true" targetId="60a2-6f0e-3dac-fcc4" type="selectionEntry"/>
-    <entryLink id="dba6-53d4-e362-1511" name="Chaos Warshrine" hidden="false" collective="false" import="true" targetId="5ba7-fe45-c11e-a8da" type="selectionEntry"/>
-    <entryLink id="c0d9-6b39-5d30-aef4" name="Varanguard" hidden="false" collective="false" import="true" targetId="6b24-be40-5821-6573" type="selectionEntry"/>
-    <entryLink id="9df9-fc00-fd38-319c" name="Soul Grinder" hidden="false" collective="false" import="true" targetId="d97a-886d-a857-5e6e" type="selectionEntry"/>
-    <entryLink id="f481-6b33-9f3e-632c" name="Mutalith Vortex Beast" hidden="false" collective="false" import="true" targetId="28ab-bd2e-2ecb-c1d7" type="selectionEntry"/>
+    <entryLink id="c0d9-6b39-5d30-aef4" name="Varanguard" hidden="false" collective="false" import="true" targetId="6b24-be40-5821-6573" type="selectionEntry">
+      <categoryLinks>
+        <categoryLink id="6ef9-0001-3f91-f083" name="Allegiant - Slaves to Darkness" hidden="false" targetId="f06f-7a6c-ad8f-c293" primary="false"/>
+      </categoryLinks>
+    </entryLink>
+    <entryLink id="9df9-fc00-fd38-319c" name="Soul Grinder" hidden="false" collective="false" import="true" targetId="d97a-886d-a857-5e6e" type="selectionEntry">
+      <categoryLinks>
+        <categoryLink id="cebc-e6c9-b6a6-b517" name="Allegiant - Slaves to Darkness" hidden="false" targetId="f06f-7a6c-ad8f-c293" primary="false"/>
+      </categoryLinks>
+    </entryLink>
     <entryLink id="95d3-5489-47e2-1820" name="Fatesworn Warband" hidden="false" collective="false" import="true" targetId="6920-04d4-8272-a37c" type="selectionEntry"/>
     <entryLink id="a418-c640-12a7-e049" name="Phantasmagoria of Fate" hidden="false" collective="false" import="true" targetId="6e9a-c68b-5853-7da1" type="selectionEntry"/>
     <entryLink id="d916-a5a3-d3b1-e605" name="Horrors of Tzeentch" hidden="false" collective="false" import="true" targetId="5705-36dc-22dc-38ce" type="selectionEntry"/>
     <entryLink id="3496-38ae-4636-50d7" name="Atra&apos;zan&apos;s Blazing Cavalcade" hidden="false" collective="false" import="true" targetId="1a7e-3909-51da-7fd1" type="selectionEntry"/>
+    <entryLink id="6c3c-6bee-f286-6123" name="Beastlord" hidden="false" collective="false" import="true" targetId="9e0e-4909-17ad-0438" type="selectionEntry">
+      <categoryLinks>
+        <categoryLink id="33af-9470-7f7e-a8b7" name="Allegiant - Beasts of Chaos" hidden="false" targetId="4a99-f9c9-0367-e257" primary="false"/>
+      </categoryLinks>
+      <entryLinks>
+        <entryLink id="8412-1f88-23a5-cfc0" name="Artefacts of Power" hidden="false" collective="false" import="true" targetId="73f3-d951-284c-8c27" type="selectionEntryGroup"/>
+      </entryLinks>
+    </entryLink>
+    <entryLink id="4f33-84af-4af8-5bb6" name="Bestigors" hidden="false" collective="false" import="true" targetId="8e23-a1ff-a2dd-7335" type="selectionEntry">
+      <categoryLinks>
+        <categoryLink id="07d3-fb5e-c125-1c47" name="Allegiant - Beasts of Chaos" hidden="false" targetId="4a99-f9c9-0367-e257" primary="false"/>
+      </categoryLinks>
+    </entryLink>
+    <entryLink id="ebb0-7b90-c677-5e33" name="Bullgors" hidden="false" collective="false" import="true" targetId="3660-c5d4-c829-81f9" type="selectionEntry">
+      <categoryLinks>
+        <categoryLink id="c7b7-6cfa-d6fe-58e8" name="Allegiant - Beasts of Chaos" hidden="false" targetId="4a99-f9c9-0367-e257" primary="false"/>
+      </categoryLinks>
+    </entryLink>
+    <entryLink id="a3c4-6639-5d65-2afb" name="Centigors" hidden="false" collective="false" import="true" targetId="6158-d1b8-b8b3-d46b" type="selectionEntry">
+      <categoryLinks>
+        <categoryLink id="2c15-cdeb-2fa3-a35e" name="Allegiant - Beasts of Chaos" hidden="false" targetId="4a99-f9c9-0367-e257" primary="false"/>
+      </categoryLinks>
+    </entryLink>
+    <entryLink id="241c-43ec-57f2-c161" name="Chaos Gargant" hidden="false" collective="false" import="true" targetId="37ca-d904-4cb6-8a08" type="selectionEntry">
+      <categoryLinks>
+        <categoryLink id="43ea-c098-c664-da25" name="Allegiant - Beasts of Chaos" hidden="false" targetId="4a99-f9c9-0367-e257" primary="false"/>
+      </categoryLinks>
+    </entryLink>
+    <entryLink id="3f2a-445b-4ecf-829f" name="Chaos Spawn" hidden="false" collective="false" import="true" targetId="cb35-889c-057e-a892" type="selectionEntry">
+      <categoryLinks>
+        <categoryLink id="29a0-30b6-62b4-4d92" name="Allegiant - Beasts of Chaos" hidden="false" targetId="4a99-f9c9-0367-e257" primary="false"/>
+      </categoryLinks>
+    </entryLink>
+    <entryLink id="a11b-92c0-eff8-f168" name="Chaos Warhounds" hidden="false" collective="false" import="true" targetId="e117-3b1e-25e6-282d" type="selectionEntry">
+      <categoryLinks>
+        <categoryLink id="8670-5294-00ff-31f0" name="Allegiant - Beasts of Chaos" hidden="false" targetId="4a99-f9c9-0367-e257" primary="false"/>
+      </categoryLinks>
+    </entryLink>
+    <entryLink id="ed77-94aa-ac42-2876" name="Cockatrice" hidden="false" collective="false" import="true" targetId="66d7-3ab0-6877-ff92" type="selectionEntry">
+      <categoryLinks>
+        <categoryLink id="ea8f-e1b5-fbd0-cb6c" name="Allegiant - Beasts of Chaos" hidden="false" targetId="4a99-f9c9-0367-e257" primary="false"/>
+      </categoryLinks>
+    </entryLink>
+    <entryLink id="e2e5-45c5-f689-c5f6" name="Chimera" hidden="false" collective="false" import="true" targetId="376f-46a5-c292-8e3a" type="selectionEntry">
+      <categoryLinks>
+        <categoryLink id="93af-f802-5664-68ec" name="Allegiant - Beasts of Chaos" hidden="false" targetId="4a99-f9c9-0367-e257" primary="false"/>
+      </categoryLinks>
+    </entryLink>
+    <entryLink id="d3c5-91f5-b5a2-7729" name="Cygor" hidden="false" collective="false" import="true" targetId="5e64-007b-e2f3-820b" type="selectionEntry">
+      <categoryLinks>
+        <categoryLink id="f398-72ef-7186-fb8c" name="Allegiant - Beasts of Chaos" hidden="false" targetId="4a99-f9c9-0367-e257" primary="false"/>
+      </categoryLinks>
+    </entryLink>
+    <entryLink id="7f40-748c-94e7-68e5" name="Doombull" hidden="false" collective="false" import="true" targetId="7f9f-95a3-b4dc-b597" type="selectionEntry">
+      <categoryLinks>
+        <categoryLink id="7215-71da-4002-165b" name="Allegiant - Beasts of Chaos" hidden="false" targetId="4a99-f9c9-0367-e257" primary="false"/>
+      </categoryLinks>
+      <entryLinks>
+        <entryLink id="6e0c-787e-b88d-6bc8" name="Artefacts of Power" hidden="false" collective="false" import="true" targetId="73f3-d951-284c-8c27" type="selectionEntryGroup"/>
+      </entryLinks>
+    </entryLink>
+    <entryLink id="8670-19b0-3e82-5d7a" name="Dragon Ogor Shaggoth" hidden="false" collective="false" import="true" targetId="7dd5-c271-6d90-5705" type="selectionEntry">
+      <categoryLinks>
+        <categoryLink id="a430-4caf-50cf-f102" name="Allegiant - Beasts of Chaos" hidden="false" targetId="4a99-f9c9-0367-e257" primary="false"/>
+      </categoryLinks>
+      <entryLinks>
+        <entryLink id="85eb-4b9f-c2a6-d0cf" name="Artefacts of Power" hidden="false" collective="false" import="true" targetId="73f3-d951-284c-8c27" type="selectionEntryGroup"/>
+        <entryLink id="a365-1fcc-fd81-6be3" name="Tzeentch Spell Lores" hidden="false" collective="false" import="true" targetId="fbcd-e766-cdb4-cca4" type="selectionEntryGroup"/>
+      </entryLinks>
+    </entryLink>
+    <entryLink id="086f-1d11-64d0-cee3" name="Dragon Ogors" hidden="false" collective="false" import="true" targetId="4700-1580-b11f-ec45" type="selectionEntry">
+      <categoryLinks>
+        <categoryLink id="bf06-bcfb-944c-abe4" name="Allegiant - Beasts of Chaos" hidden="false" targetId="4a99-f9c9-0367-e257" primary="false"/>
+      </categoryLinks>
+    </entryLink>
+    <entryLink id="8ef5-5277-1f99-7320" name="Ghorgon" hidden="false" collective="false" import="true" targetId="ac76-a457-780f-f2a7" type="selectionEntry">
+      <categoryLinks>
+        <categoryLink id="4232-665d-9e45-d394" name="Allegiant - Beasts of Chaos" hidden="false" targetId="4a99-f9c9-0367-e257" primary="false"/>
+      </categoryLinks>
+    </entryLink>
+    <entryLink id="578c-c88e-3486-6135" name="Gors" hidden="false" collective="false" import="true" targetId="4537-b647-f36b-b1d0" type="selectionEntry">
+      <modifiers>
+        <modifier type="remove" field="category" value="a42d-220e-6a88-7bf6"/>
+      </modifiers>
+      <categoryLinks>
+        <categoryLink id="2d88-d55b-f0e8-d0bf" name="Allegiant - Beasts of Chaos" hidden="false" targetId="4a99-f9c9-0367-e257" primary="false"/>
+      </categoryLinks>
+    </entryLink>
+    <entryLink id="2417-1fbc-bab7-7c77" name="Great Bray-Shaman" hidden="false" collective="false" import="true" targetId="0fa1-a648-2716-c96d" type="selectionEntry">
+      <categoryLinks>
+        <categoryLink id="8b51-e4d3-305a-a41f" name="Allegiant - Beasts of Chaos" hidden="false" targetId="4a99-f9c9-0367-e257" primary="false"/>
+      </categoryLinks>
+      <entryLinks>
+        <entryLink id="a105-00c0-8d25-4380" name="Artefacts of Power" hidden="false" collective="false" import="true" targetId="73f3-d951-284c-8c27" type="selectionEntryGroup"/>
+        <entryLink id="2feb-f161-5b74-8030" name="Tzeentch Spell Lores" hidden="false" collective="false" import="true" targetId="fbcd-e766-cdb4-cca4" type="selectionEntryGroup"/>
+      </entryLinks>
+    </entryLink>
+    <entryLink id="5405-0552-5d93-4b59" name="Jabberslythe" hidden="false" collective="false" import="true" targetId="f90e-58fb-1dc0-c921" type="selectionEntry">
+      <categoryLinks>
+        <categoryLink id="e831-808c-2cea-d22f" name="Allegiant - Beasts of Chaos" hidden="false" targetId="4a99-f9c9-0367-e257" primary="false"/>
+      </categoryLinks>
+    </entryLink>
+    <entryLink id="d70d-0227-ad52-e38c" name="Razorgors" hidden="false" collective="false" import="true" targetId="b1dd-9a66-a634-095a" type="selectionEntry">
+      <categoryLinks>
+        <categoryLink id="27b6-228f-f199-33fb" name="Allegiant - Beasts of Chaos" hidden="false" targetId="4a99-f9c9-0367-e257" primary="false"/>
+      </categoryLinks>
+    </entryLink>
+    <entryLink id="1629-a1a4-2aa1-a0ba" name="Tuskgor Chariots" hidden="false" collective="false" import="true" targetId="d7fb-e05b-0ebd-6279" type="selectionEntry">
+      <categoryLinks>
+        <categoryLink id="f9b8-43fb-91f6-aadf" name="Allegiant - Beasts of Chaos" hidden="false" targetId="4a99-f9c9-0367-e257" primary="false"/>
+      </categoryLinks>
+    </entryLink>
+    <entryLink id="c0db-c73d-7020-4224" name="Ungor Raiders" hidden="false" collective="false" import="true" targetId="3394-027d-be0c-1dec" type="selectionEntry">
+      <categoryLinks>
+        <categoryLink id="ed83-8735-a413-3b39" name="Allegiant - Beasts of Chaos" hidden="false" targetId="4a99-f9c9-0367-e257" primary="false"/>
+      </categoryLinks>
+    </entryLink>
+    <entryLink id="4ef8-4b0b-4ed7-37ba" name="Ungors" hidden="false" collective="false" import="true" targetId="dcba-04fd-ff28-5c8d" type="selectionEntry">
+      <modifiers>
+        <modifier type="remove" field="category" value="a42d-220e-6a88-7bf6"/>
+      </modifiers>
+      <categoryLinks>
+        <categoryLink id="7934-e986-8e5e-d263" name="Allegiant - Beasts of Chaos" hidden="false" targetId="4a99-f9c9-0367-e257" primary="false"/>
+      </categoryLinks>
+    </entryLink>
+    <entryLink id="9054-59c8-3dae-52b6" name="Chaos War Mammoth" hidden="false" collective="false" import="true" targetId="1e48-d682-c603-7c73" type="selectionEntry">
+      <categoryLinks>
+        <categoryLink id="c55a-dae7-e6d9-6bdb" name="Allegiant - Slaves to Darkness" hidden="false" targetId="f06f-7a6c-ad8f-c293" primary="false"/>
+      </categoryLinks>
+    </entryLink>
+    <entryLink id="abc4-b0a7-c87e-711e" name="Tzaangor Shaman" hidden="false" collective="false" import="true" targetId="0f1f-bc11-c415-6d46" type="selectionEntry">
+      <entryLinks>
+        <entryLink id="9a65-1c06-7530-d862" name="General" hidden="false" collective="false" import="true" targetId="98a4-3d6d-a7b9-399f" type="selectionEntry"/>
+        <entryLink id="b4c4-99eb-0f2f-c43d" name="Artefacts of Power" hidden="false" collective="false" import="true" targetId="73f3-d951-284c-8c27" type="selectionEntryGroup"/>
+        <entryLink id="7e49-6be3-715d-0ce4" name="Tzeentch Spell Lores" hidden="false" collective="false" import="true" targetId="fbcd-e766-cdb4-cca4" type="selectionEntryGroup"/>
+        <entryLink id="e0bd-b832-149d-33d9" name="Command Traits" hidden="false" collective="false" import="true" targetId="4f77-8452-30db-73f1" type="selectionEntryGroup"/>
+      </entryLinks>
+    </entryLink>
+    <entryLink id="af02-8c29-dac3-4252" name="Tzaangor Enlightened" hidden="false" collective="false" import="true" targetId="ce2c-3e13-713e-341d" type="selectionEntry">
+      <categoryLinks>
+        <categoryLink id="aa89-dd54-f0dc-d95d" name="Allegiant - Beasts of Chaos" hidden="false" targetId="4a99-f9c9-0367-e257" primary="false"/>
+      </categoryLinks>
+    </entryLink>
+    <entryLink id="6a14-5663-d80f-92fa" name="Tzaangor Enlightened on Discs of Tzeentch" hidden="false" collective="false" import="true" targetId="eeb2-a494-989b-3f4f" type="selectionEntry">
+      <categoryLinks>
+        <categoryLink id="8179-ee91-7d27-448c" name="Allegiant - Beasts of Chaos" hidden="false" targetId="4a99-f9c9-0367-e257" primary="false"/>
+      </categoryLinks>
+    </entryLink>
+    <entryLink id="8a15-4c13-6554-27e5" name="Tzaangor Skyfires" hidden="false" collective="false" import="true" targetId="e005-a694-830d-6941" type="selectionEntry"/>
+    <entryLink id="ac60-32f7-a85c-dc8c" name="Tzaangors" hidden="false" collective="false" import="true" targetId="57ea-1189-0726-22b1" type="selectionEntry">
+      <modifiers>
+        <modifier type="remove" field="category" value="a42d-220e-6a88-7bf6"/>
+      </modifiers>
+    </entryLink>
   </entryLinks>
   <sharedSelectionEntries>
     <selectionEntry id="d295-ebf8-1d8c-9941" name="Allegiance" hidden="false" collective="false" import="true" type="upgrade">
@@ -1250,24 +1495,21 @@ If a friendly MAGISTER is slain by this effect, roll a dice before removing the 
         <categoryLink id="1533-3c57-4c24-af49" name="Allegiance" hidden="false" targetId="af41-ae78-5063-3d36" primary="false"/>
         <categoryLink id="f154-a3b4-7a8d-b7e8" name="New CategoryLink" hidden="false" targetId="29f4-e63d-fa5b-1611" primary="true"/>
       </categoryLinks>
-      <selectionEntryGroups>
-        <selectionEntryGroup id="3003-2953-7e2a-734d" name="Allegiance" hidden="false" collective="false" import="true" defaultSelectionEntryId="ce81-e8b5-2ddd-52f8">
+      <entryLinks>
+        <entryLink id="c61a-7eba-606a-43fc" name="Tzeentch" hidden="false" collective="false" import="true" targetId="ab42-c434-3770-073f" type="selectionEntry">
           <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="ca24-469c-e7a3-7b66" type="max"/>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="009c-2406-8f3c-5218" type="min"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="3167-925c-11e7-77f2" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="ef20-1edd-0042-816f" type="min"/>
           </constraints>
-          <entryLinks>
-            <entryLink id="ce81-e8b5-2ddd-52f8" name="Tzeentch" hidden="false" collective="false" import="true" targetId="ab42-c434-3770-073f" type="selectionEntry"/>
-          </entryLinks>
-        </selectionEntryGroup>
-      </selectionEntryGroups>
+        </entryLink>
+      </entryLinks>
       <costs>
         <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="3d35-264e-20b2-c4ab" name="Tzaangor Coven" publicationId="97ef-9bf4-54c7-6623" hidden="false" collective="false" import="true" type="upgrade">
       <categoryLinks>
-        <categoryLink id="30ef-29e9-4c76-b8d4" name="New CategoryLink" hidden="false" targetId="c03a-b1a8-66c6-3637" primary="true"/>
+        <categoryLink id="47f9-08c7-13ce-62a3" name="New CategoryLink" hidden="false" targetId="3706-e0e8-674f-c41b" primary="true"/>
       </categoryLinks>
       <costs>
         <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="180.0"/>
@@ -1275,7 +1517,7 @@ If a friendly MAGISTER is slain by this effect, roll a dice before removing the 
     </selectionEntry>
     <selectionEntry id="214d-e085-5bee-16d8" name="Skyshoal Coven" publicationId="97ef-9bf4-54c7-6623" hidden="false" collective="false" import="true" type="upgrade">
       <categoryLinks>
-        <categoryLink id="06d7-7d0a-f78e-83fc" name="New CategoryLink" hidden="false" targetId="c03a-b1a8-66c6-3637" primary="true"/>
+        <categoryLink id="1b28-ee8a-f0d7-06df" name="New CategoryLink" hidden="false" targetId="3706-e0e8-674f-c41b" primary="true"/>
       </categoryLinks>
       <costs>
         <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="140.0"/>
@@ -1283,7 +1525,7 @@ If a friendly MAGISTER is slain by this effect, roll a dice before removing the 
     </selectionEntry>
     <selectionEntry id="44a9-9dcd-6e0d-57bd" name="Witchfyre Coven" publicationId="97ef-9bf4-54c7-6623" hidden="false" collective="false" import="true" type="upgrade">
       <categoryLinks>
-        <categoryLink id="b0bb-f089-caaf-02a1" name="New CategoryLink" hidden="false" targetId="c03a-b1a8-66c6-3637" primary="true"/>
+        <categoryLink id="7818-f439-0ad1-772c" name="New CategoryLink" hidden="false" targetId="3706-e0e8-674f-c41b" primary="true"/>
       </categoryLinks>
       <costs>
         <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="160.0"/>
@@ -1291,7 +1533,7 @@ If a friendly MAGISTER is slain by this effect, roll a dice before removing the 
     </selectionEntry>
     <selectionEntry id="5be0-764a-7bc6-37a1" name="Alter-kin Coven" publicationId="97ef-9bf4-54c7-6623" hidden="false" collective="false" import="true" type="upgrade">
       <categoryLinks>
-        <categoryLink id="a1a5-f343-f28a-b853" name="New CategoryLink" hidden="false" targetId="c03a-b1a8-66c6-3637" primary="true"/>
+        <categoryLink id="adf6-9f90-75be-dc1f" name="New CategoryLink" hidden="false" targetId="3706-e0e8-674f-c41b" primary="true"/>
       </categoryLinks>
       <costs>
         <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="140.0"/>
@@ -1299,7 +1541,7 @@ If a friendly MAGISTER is slain by this effect, roll a dice before removing the 
     </selectionEntry>
     <selectionEntry id="68f6-2e60-c5a0-b7ec" name="Arcanite Cabal" publicationId="97ef-9bf4-54c7-6623" hidden="false" collective="false" import="true" type="upgrade">
       <categoryLinks>
-        <categoryLink id="36e7-889d-4840-049d" name="New CategoryLink" hidden="false" targetId="c03a-b1a8-66c6-3637" primary="true"/>
+        <categoryLink id="420c-3f33-2d9a-f74a" name="New CategoryLink" hidden="false" targetId="3706-e0e8-674f-c41b" primary="true"/>
       </categoryLinks>
       <costs>
         <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="140.0"/>
@@ -1314,7 +1556,7 @@ If a friendly MAGISTER is slain by this effect, roll a dice before removing the 
         </profile>
       </profiles>
       <categoryLinks>
-        <categoryLink id="2d29-5850-9a41-b624" name="New CategoryLink" hidden="false" targetId="c03a-b1a8-66c6-3637" primary="true"/>
+        <categoryLink id="4214-7a27-39a8-36a8" name="New CategoryLink" hidden="false" targetId="3706-e0e8-674f-c41b" primary="true"/>
       </categoryLinks>
       <selectionEntryGroups>
         <selectionEntryGroup id="f4ac-8c57-66e6-97cf" name="1 Arcanite Cabal battalion" hidden="false" collective="false" import="true">
@@ -1352,7 +1594,7 @@ If a friendly MAGISTER is slain by this effect, roll a dice before removing the 
         </profile>
       </profiles>
       <categoryLinks>
-        <categoryLink id="b024-3125-6c0d-7519" name="New CategoryLink" hidden="false" targetId="c03a-b1a8-66c6-3637" primary="true"/>
+        <categoryLink id="83e9-8053-c972-06e8" name="New CategoryLink" hidden="false" targetId="3706-e0e8-674f-c41b" primary="true"/>
       </categoryLinks>
       <selectionEntryGroups>
         <selectionEntryGroup id="3307-4bfe-114c-f167" name="Kairos Fateweaver" hidden="false" collective="false" import="true">
@@ -1403,7 +1645,7 @@ If a friendly MAGISTER is slain by this effect, roll a dice before removing the 
         </profile>
       </profiles>
       <categoryLinks>
-        <categoryLink id="3f60-fcd1-87c4-c1d2" name="New CategoryLink" hidden="false" targetId="c03a-b1a8-66c6-3637" primary="true"/>
+        <categoryLink id="265d-fd5f-f455-9e36" name="New CategoryLink" hidden="false" targetId="3706-e0e8-674f-c41b" primary="true"/>
       </categoryLinks>
       <selectionEntryGroups>
         <selectionEntryGroup id="73c4-6448-65d8-ab82" name="1 Lord of Change" hidden="false" collective="false" import="true">
@@ -1507,12 +1749,12 @@ If a friendly MAGISTER is slain by this effect, roll a dice before removing the 
       <profiles>
         <profile id="4c20-c745-1aeb-b60a" name="Deceive and Dismay" hidden="false" typeId="66c5-932e-004a-574c" typeName="Battalion Abilities">
           <characteristics>
-            <characteristic name="Battalion Ability" typeId="23f7-32c0-e059-29b2">At the start of your hero phase, if the Lord of Change from this battalion is your general and is on the battlefield, you can pick 1 other friendly unit from this battalion and remove it from the battlefield. If you do so, set up that unit again anywhere on the battlefield more than 9&quot; from any enemy units. The unit you set up in this manner cannot move in the following movement phase.</characteristic>
+            <characteristic name="Battalion Ability" typeId="23f7-32c0-e059-29b2">At the start of your hero phase, if the LORD OF CHANGE in this battalion is your general and is on the battlefield, you can pick 1 other friendly unit in this battalion and remove it from the battlefield. If you do so, set up that unit again anywhere on the battlefield more than 9&quot; from all enemy units. That unit cannot move in the following movement phase.</characteristic>
           </characteristics>
         </profile>
       </profiles>
       <categoryLinks>
-        <categoryLink id="b094-b9aa-3381-7d73" name="New CategoryLink" hidden="false" targetId="c03a-b1a8-66c6-3637" primary="true"/>
+        <categoryLink id="fbdf-cee1-1522-f0bc" name="New CategoryLink" hidden="false" targetId="3706-e0e8-674f-c41b" primary="true"/>
       </categoryLinks>
       <selectionEntryGroups>
         <selectionEntryGroup id="c6ca-1496-4624-a540" name="1 Lord of Change" hidden="false" collective="false" import="true">
@@ -1660,7 +1902,7 @@ If a friendly MAGISTER is slain by this effect, roll a dice before removing the 
         </profile>
       </profiles>
       <categoryLinks>
-        <categoryLink id="b9fb-81d3-4cce-1a2b" name="New CategoryLink" hidden="false" targetId="c03a-b1a8-66c6-3637" primary="true"/>
+        <categoryLink id="22c7-d910-fd79-f9d4" name="New CategoryLink" hidden="false" targetId="3706-e0e8-674f-c41b" primary="true"/>
       </categoryLinks>
       <selectionEntryGroups>
         <selectionEntryGroup id="51b8-f177-92e2-4ed1" name="1 Fateskimmer, Herald of Tzeentch on Burning Chariot" hidden="false" collective="false" import="true">
@@ -1754,7 +1996,7 @@ If a friendly MAGISTER is slain by this effect, roll a dice before removing the 
         </profile>
       </profiles>
       <categoryLinks>
-        <categoryLink id="718e-c32c-32b9-d197" name="New CategoryLink" hidden="false" targetId="c03a-b1a8-66c6-3637" primary="true"/>
+        <categoryLink id="cdad-419c-ffad-a79f" name="New CategoryLink" hidden="false" targetId="3706-e0e8-674f-c41b" primary="true"/>
       </categoryLinks>
       <selectionEntryGroups>
         <selectionEntryGroup id="2a70-4761-5936-4ab4" name="1 Changecaster, Herald of Tzeentch" hidden="false" collective="false" import="true">
@@ -1796,7 +2038,7 @@ If a friendly MAGISTER is slain by this effect, roll a dice before removing the 
         </profile>
       </profiles>
       <categoryLinks>
-        <categoryLink id="990e-ff3b-81e1-a193" name="New CategoryLink" hidden="false" targetId="c03a-b1a8-66c6-3637" primary="true"/>
+        <categoryLink id="ab84-df92-ffc6-dd0e" name="New CategoryLink" hidden="false" targetId="3706-e0e8-674f-c41b" primary="true"/>
       </categoryLinks>
       <selectionEntryGroups>
         <selectionEntryGroup id="5158-ef08-17f5-3834" name="1 unit of Exalted Flamers of Tzeentch" hidden="false" collective="false" import="true">
@@ -1868,7 +2110,7 @@ If a friendly MAGISTER is slain by this effect, roll a dice before removing the 
         </profile>
       </profiles>
       <categoryLinks>
-        <categoryLink id="1ad4-650a-91c9-3ba0" name="New CategoryLink" hidden="false" targetId="c03a-b1a8-66c6-3637" primary="true"/>
+        <categoryLink id="64f0-f427-d433-d129" name="New CategoryLink" hidden="false" targetId="3706-e0e8-674f-c41b" primary="true"/>
       </categoryLinks>
       <selectionEntryGroups>
         <selectionEntryGroup id="c26f-47e6-02b7-995c" name="1 Overseer&apos;s Fate-twisters battalion" hidden="false" collective="false" import="true">
@@ -1916,8 +2158,8 @@ If a friendly MAGISTER is slain by this effect, roll a dice before removing the 
         </profile>
       </profiles>
       <categoryLinks>
-        <categoryLink id="90ba-b554-5507-9456" name="New CategoryLink" hidden="false" targetId="c03a-b1a8-66c6-3637" primary="true"/>
         <categoryLink id="3fae-4b35-9192-06a0" name="Fatesworn Warband" hidden="false" targetId="8696-efe7-3196-3104" primary="false"/>
+        <categoryLink id="e37b-052c-c022-64be" name="New CategoryLink" hidden="false" targetId="3706-e0e8-674f-c41b" primary="true"/>
       </categoryLinks>
       <selectionEntryGroups>
         <selectionEntryGroup id="5e2c-f4ca-9fe0-a9cd" name="1 MORTAL SLAVES TO DARKNESS TZEENTCH HERO" hidden="false" collective="false" import="true">
@@ -2006,58 +2248,30 @@ If a friendly MAGISTER is slain by this effect, roll a dice before removing the 
             <entryLink id="c9a4-bb00-a0f6-a8d0" name="Chaos Chosen" hidden="false" collective="false" import="true" targetId="ea93-8ff3-9b86-c8f0" type="selectionEntry"/>
             <entryLink id="b16b-eb1f-ea35-c61d" name="Chaos Chariots" hidden="false" collective="false" import="true" targetId="9dd9-cc5b-2b21-b996" type="selectionEntry">
               <modifiers>
-                <modifier type="remove" field="category" value="a42d-220e-6a88-7bf6">
-                  <conditionGroups>
-                    <conditionGroup type="or">
-                      <conditions>
-                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="eb59-f0ad-9828-dad9" type="instanceOf"/>
-                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="087e-befa-6f4f-edd7" type="equalTo"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
-                </modifier>
+                <modifier type="remove" field="category" value="a42d-220e-6a88-7bf6"/>
               </modifiers>
-              <categoryLinks>
-                <categoryLink id="3602-ce9c-8ba0-c576" name="BATTLELINE" hidden="false" targetId="a42d-220e-6a88-7bf6" primary="false"/>
-              </categoryLinks>
             </entryLink>
             <entryLink id="429d-247a-d6f9-d7d3" name="Chaos Knights" hidden="false" collective="false" import="true" targetId="73fe-2d86-24a1-fe98" type="selectionEntry">
               <modifiers>
-                <modifier type="remove" field="category" value="a42d-220e-6a88-7bf6">
-                  <conditionGroups>
-                    <conditionGroup type="or">
-                      <conditions>
-                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="eb59-f0ad-9828-dad9" type="instanceOf"/>
-                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="087e-befa-6f4f-edd7" type="equalTo"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
-                </modifier>
+                <modifier type="remove" field="category" value="a42d-220e-6a88-7bf6"/>
               </modifiers>
-              <categoryLinks>
-                <categoryLink id="6f44-d43b-6cb0-1db1" name="BATTLELINE" hidden="false" targetId="a42d-220e-6a88-7bf6" primary="false"/>
-              </categoryLinks>
             </entryLink>
             <entryLink id="f896-9eed-9416-8227" name="Chaos Marauder Horsemen" hidden="false" collective="false" import="true" targetId="fad7-8185-4954-cd2a" type="selectionEntry">
               <modifiers>
-                <modifier type="remove" field="category" value="a42d-220e-6a88-7bf6">
-                  <conditionGroups>
-                    <conditionGroup type="or">
-                      <conditions>
-                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="eb59-f0ad-9828-dad9" type="instanceOf"/>
-                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="087e-befa-6f4f-edd7" type="equalTo"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
-                </modifier>
+                <modifier type="remove" field="category" value="a42d-220e-6a88-7bf6"/>
               </modifiers>
-              <categoryLinks>
-                <categoryLink id="465f-d4c7-3643-30aa" name="BATTLELINE" hidden="false" targetId="a42d-220e-6a88-7bf6" primary="false"/>
-              </categoryLinks>
             </entryLink>
-            <entryLink id="674f-8c62-ebaf-0515" name="Chaos Marauders" hidden="false" collective="false" import="true" targetId="e057-b25e-b5b4-4df1" type="selectionEntry"/>
+            <entryLink id="674f-8c62-ebaf-0515" name="Chaos Marauders" hidden="false" collective="false" import="true" targetId="e057-b25e-b5b4-4df1" type="selectionEntry">
+              <modifiers>
+                <modifier type="remove" field="category" value="a42d-220e-6a88-7bf6"/>
+              </modifiers>
+            </entryLink>
             <entryLink id="476a-9cb6-cbea-a731" name="Chaos Warshrine" hidden="false" collective="false" import="true" targetId="5ba7-fe45-c11e-a8da" type="selectionEntry"/>
-            <entryLink id="9dc7-3bac-6a0e-cfef" name="Chaos Warriors" hidden="false" collective="false" import="true" targetId="60a2-6f0e-3dac-fcc4" type="selectionEntry"/>
+            <entryLink id="9dc7-3bac-6a0e-cfef" name="Chaos Warriors" hidden="false" collective="false" import="true" targetId="60a2-6f0e-3dac-fcc4" type="selectionEntry">
+              <modifiers>
+                <modifier type="remove" field="category" value="a42d-220e-6a88-7bf6"/>
+              </modifiers>
+            </entryLink>
             <entryLink id="9f0c-4395-a8f2-9ebe" name="Gorebeast Chariots" hidden="false" collective="false" import="true" targetId="ff78-a08a-de5f-8969" type="selectionEntry"/>
             <entryLink id="f799-b84c-9c9e-0683" name="Slaves to Darkness Chaos Spawn" hidden="false" collective="false" import="true" targetId="2533-1c28-a6a1-1f76" type="selectionEntry"/>
             <entryLink id="4a9b-fc17-e2fc-de2f" name="Varanguard" hidden="false" collective="false" import="true" targetId="6b24-be40-5821-6573" type="selectionEntry">
@@ -2163,7 +2377,7 @@ If a friendly MAGISTER is slain by this effect, roll a dice before removing the 
         </profile>
       </profiles>
       <categoryLinks>
-        <categoryLink id="6c58-3ac6-e7bd-55ec" name="New CategoryLink" hidden="false" targetId="c03a-b1a8-66c6-3637" primary="true"/>
+        <categoryLink id="b301-cbb3-ec51-8726" name="New CategoryLink" hidden="false" targetId="3706-e0e8-674f-c41b" primary="true"/>
       </categoryLinks>
       <selectionEntryGroups>
         <selectionEntryGroup id="1398-6a51-5f01-a05a" name="0-2 featured units in any combination" hidden="false" collective="false" import="true">
@@ -2380,7 +2594,7 @@ If a friendly MAGISTER is slain by this effect, roll a dice before removing the 
         </profile>
       </profiles>
       <categoryLinks>
-        <categoryLink id="9e69-c67a-16c5-9433" name="New CategoryLink" hidden="false" targetId="c03a-b1a8-66c6-3637" primary="true"/>
+        <categoryLink id="3ef9-e41d-3db8-539c" name="New CategoryLink" hidden="false" targetId="3706-e0e8-674f-c41b" primary="true"/>
       </categoryLinks>
       <selectionEntryGroups>
         <selectionEntryGroup id="c853-1360-96dd-963c" name="1-3 Horrors of Tzeentch units" hidden="false" collective="false" import="true">
@@ -2569,7 +2783,6 @@ Set up the additional models one at a time within 1&quot; of the position that t
                           <characteristics>
                             <characteristic name="Cast/Unbind" typeId="9a5b-68ee-bc46-6a9d">1/1
 This unit is a WIZARD while it has 9 or more Pink Horrors.</characteristic>
-                            <characteristic name="Spells Known" typeId="25bd-2ad0-e570-e880">Channelled Pink Fire</characteristic>
                           </characteristics>
                         </profile>
                         <profile id="0ff7-34c3-1574-72a0" name="Channelled Pink Fire" hidden="false" typeId="13da-11a8-b7d1-77a7" typeName="Spell">
@@ -2742,12 +2955,22 @@ Any number of HORRORS OF TZEENTCH units that have 9 or more Pink Horrors can att
           <conditionGroups>
             <conditionGroup type="or">
               <conditions>
-                <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="6cd6-b22e-bfcb-9589" type="instanceOf"/>
-                <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="e3a6-45ca-4974-b489" type="instanceOf"/>
-                <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4373-740f-1bf3-b0aa" type="instanceOf"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4373-740f-1bf3-b0aa" type="instanceOf"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="e3a6-45ca-4974-b489" type="instanceOf"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="996a-613c-4006-25e3" type="instanceOf"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="6cd6-b22e-bfcb-9589" type="instanceOf"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="b543-cb16-0c79-fbc6" type="instanceOf"/>
               </conditions>
             </conditionGroup>
           </conditionGroups>
+        </modifier>
+        <modifier type="increment" field="7b66-5328-8971-e67a" value="1.0">
+          <repeats>
+            <repeat field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="9e49-bd7f-45ee-1a96" repeats="1" roundUp="false"/>
+          </repeats>
+          <conditions>
+            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="9e49-bd7f-45ee-1a96" type="greaterThan"/>
+          </conditions>
         </modifier>
       </modifiers>
       <constraints>
@@ -2766,12 +2989,23 @@ Any number of HORRORS OF TZEENTCH units that have 9 or more Pink Horrors can att
                 </conditionGroup>
               </conditionGroups>
             </modifier>
+            <modifier type="increment" field="9226-bfba-a0fd-5bff" value="1.0">
+              <repeats>
+                <repeat field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="9e49-bd7f-45ee-1a96" repeats="1" roundUp="false"/>
+              </repeats>
+              <conditions>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="9e49-bd7f-45ee-1a96" type="greaterThan"/>
+              </conditions>
+            </modifier>
           </modifiers>
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="9226-bfba-a0fd-5bff" type="max"/>
           </constraints>
           <selectionEntries>
             <selectionEntry id="17b4-5177-39f0-4e32" name="6 - Treacherous Bond" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="2ffc-2599-14d7-7049" type="max"/>
+              </constraints>
               <profiles>
                 <profile id="2f7e-ddf5-6d3a-2e61" name="Treacherous Bond" hidden="false" typeId="13da-11a8-b7d1-77a7" typeName="Spell">
                   <characteristics>
@@ -2784,6 +3018,9 @@ Any number of HORRORS OF TZEENTCH units that have 9 or more Pink Horrors can att
               </costs>
             </selectionEntry>
             <selectionEntry id="5d6e-d3a1-43d8-0813" name="3 - Glimpse the Future" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="95ea-e967-7e36-54ee" type="max"/>
+              </constraints>
               <profiles>
                 <profile id="89f2-7972-afd6-8303" name="Glimpse the Future" hidden="false" typeId="13da-11a8-b7d1-77a7" typeName="Spell">
                   <characteristics>
@@ -2796,6 +3033,9 @@ Any number of HORRORS OF TZEENTCH units that have 9 or more Pink Horrors can att
               </costs>
             </selectionEntry>
             <selectionEntry id="3493-9e1d-b00f-821c" name="4 - Shield of Fate" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="6b48-1cb9-672e-e50b" type="max"/>
+              </constraints>
               <profiles>
                 <profile id="c6e9-89c8-b982-0303" name="Shield of Fate" hidden="false" typeId="13da-11a8-b7d1-77a7" typeName="Spell">
                   <characteristics>
@@ -2814,6 +3054,9 @@ Any number of HORRORS OF TZEENTCH units that have 9 or more Pink Horrors can att
               </costs>
             </selectionEntry>
             <selectionEntry id="627a-7d57-f8d5-7546" name="2 - Arcane Suggestion" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="5779-e8c1-7dc5-f30b" type="max"/>
+              </constraints>
               <profiles>
                 <profile id="8f15-a9fc-5a45-073e" name="Arcane Suggestion" hidden="false" typeId="13da-11a8-b7d1-77a7" typeName="Spell">
                   <characteristics>
@@ -2832,6 +3075,9 @@ Kneel: Subtract 1 from save rolls for attacks that target that unit until your n
               </costs>
             </selectionEntry>
             <selectionEntry id="aab7-f0f4-a583-7cce" name="5 - Infusion Arcanum" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="0a4e-4a67-d5a7-1260" type="max"/>
+              </constraints>
               <profiles>
                 <profile id="abca-ed6e-6686-a998" name="Infusion Arcanum" hidden="false" typeId="13da-11a8-b7d1-77a7" typeName="Spell">
                   <characteristics>
@@ -2844,6 +3090,9 @@ Kneel: Subtract 1 from save rolls for attacks that target that unit until your n
               </costs>
             </selectionEntry>
             <selectionEntry id="4d8c-3494-831e-dee6" name="1 - Bolt of Tzeentch" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="830f-6219-f4e6-573d" type="max"/>
+              </constraints>
               <profiles>
                 <profile id="ac42-97bd-3ded-1048" name="Bolt of Tzeentch" hidden="false" typeId="13da-11a8-b7d1-77a7" typeName="Spell">
                   <characteristics>
@@ -2864,12 +3113,23 @@ Kneel: Subtract 1 from save rolls for attacks that target that unit until your n
                 <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="128a-35fa-6f1f-a15d" type="notInstanceOf"/>
               </conditions>
             </modifier>
+            <modifier type="increment" field="11d3-bf3d-b4db-750f" value="1.0">
+              <repeats>
+                <repeat field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="9e49-bd7f-45ee-1a96" repeats="1" roundUp="false"/>
+              </repeats>
+              <conditions>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="9e49-bd7f-45ee-1a96" type="greaterThan"/>
+              </conditions>
+            </modifier>
           </modifiers>
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="11d3-bf3d-b4db-750f" type="max"/>
           </constraints>
           <selectionEntries>
             <selectionEntry id="e8ca-645d-3651-e2be" name="6 - Tzeentch&apos;s Firestorm" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="0e35-3594-690c-9d16" type="max"/>
+              </constraints>
               <profiles>
                 <profile id="1de2-131c-54ca-122d" name="6 - Tzeentch&apos;s Firestorm" hidden="false" typeId="13da-11a8-b7d1-77a7" typeName="Spell">
                   <characteristics>
@@ -2882,6 +3142,9 @@ Kneel: Subtract 1 from save rolls for attacks that target that unit until your n
               </costs>
             </selectionEntry>
             <selectionEntry id="dc95-3c67-bdc4-9784" name="5 - Fold Reality" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="50d8-f53c-e8cc-9b7e" type="max"/>
+              </constraints>
               <profiles>
                 <profile id="b70f-7c01-091a-e349" name="5 - Fold Reality" hidden="false" typeId="13da-11a8-b7d1-77a7" typeName="Spell">
                   <characteristics>
@@ -2894,6 +3157,9 @@ Kneel: Subtract 1 from save rolls for attacks that target that unit until your n
               </costs>
             </selectionEntry>
             <selectionEntry id="cf91-e45e-d979-ee73" name="4 - Unchecked Mutation" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="c3f2-233a-5e1e-07bb" type="max"/>
+              </constraints>
               <profiles>
                 <profile id="be6c-d3fc-0942-8123" name="4 - Unchecked Mutation" hidden="false" typeId="13da-11a8-b7d1-77a7" typeName="Spell">
                   <characteristics>
@@ -2906,6 +3172,9 @@ Kneel: Subtract 1 from save rolls for attacks that target that unit until your n
               </costs>
             </selectionEntry>
             <selectionEntry id="1cd6-4895-82c2-b4fa" name="3 - Arcane Transformation" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="bc3e-a039-0b42-5a5d" type="max"/>
+              </constraints>
               <profiles>
                 <profile id="4286-428d-647b-0596" name="3 - Arcane Transformation" hidden="false" typeId="13da-11a8-b7d1-77a7" typeName="Spell">
                   <characteristics>
@@ -2918,6 +3187,9 @@ Kneel: Subtract 1 from save rolls for attacks that target that unit until your n
               </costs>
             </selectionEntry>
             <selectionEntry id="fa3a-6faa-44e4-c137" name="2 - Treason of Tzeentch" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="ce91-0186-c92b-73c1" type="max"/>
+              </constraints>
               <profiles>
                 <profile id="b321-db63-c08d-bd90" name="2 - Treason of Tzeentch" hidden="false" typeId="13da-11a8-b7d1-77a7" typeName="Spell">
                   <characteristics>
@@ -2930,6 +3202,9 @@ Kneel: Subtract 1 from save rolls for attacks that target that unit until your n
               </costs>
             </selectionEntry>
             <selectionEntry id="2a4c-4bd1-5ad8-f7d5" name="1 - Bolt of Tzeentch" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="acaa-00ba-e538-d88f" type="max"/>
+              </constraints>
               <profiles>
                 <profile id="bed2-2611-7157-c297" name="Bolt of Tzeentch" hidden="false" typeId="13da-11a8-b7d1-77a7" typeName="Spell">
                   <characteristics>
@@ -2944,6 +3219,9 @@ Kneel: Subtract 1 from save rolls for attacks that target that unit until your n
           </selectionEntries>
         </selectionEntryGroup>
       </selectionEntryGroups>
+      <entryLinks>
+        <entryLink id="3f92-1b5f-fcf1-2380" name="Universal Spell Lore" hidden="false" collective="false" import="true" targetId="93f7-7e2a-3308-d150" type="selectionEntryGroup"/>
+      </entryLinks>
     </selectionEntryGroup>
     <selectionEntryGroup id="4f77-8452-30db-73f1" name="Command Traits" hidden="false" collective="false" import="true">
       <modifiers>
@@ -2953,16 +3231,6 @@ Kneel: Subtract 1 from save rolls for attacks that target that unit until your n
               <conditions>
                 <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="c661-44d6-0f5b-11ff" type="equalTo"/>
               </conditions>
-              <conditionGroups>
-                <conditionGroup type="and">
-                  <conditions>
-                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="4fe1-4d42-25cc-d732" type="equalTo"/>
-                    <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="aaf1-9815-07ec-6c5e" type="notInstanceOf"/>
-                    <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="ca90-b9b0-010b-72d0" type="notInstanceOf"/>
-                    <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="128a-35fa-6f1f-a15d" type="notInstanceOf"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
             </conditionGroup>
           </conditionGroups>
         </modifier>
@@ -2970,231 +3238,207 @@ Kneel: Subtract 1 from save rolls for attacks that target that unit until your n
       <constraints>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="3fa6-0997-f4fc-176e" type="max"/>
       </constraints>
-      <selectionEntryGroups>
-        <selectionEntryGroup id="8215-a086-e0a9-d6d1" name="Sub-Allegiance Command Traits" hidden="false" collective="false" import="true">
+      <selectionEntries>
+        <selectionEntry id="0d01-7612-e4a8-83ad" name="0. Coruscating Flames" hidden="false" collective="false" import="true" type="upgrade">
           <modifiers>
+            <modifier type="set" field="0fc7-66b0-4df4-6958" value="1.0">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="efc2-e0a3-93f6-d8e3" type="greaterThan"/>
+                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="c661-44d6-0f5b-11ff" type="greaterThan"/>
+                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="8b3d-7f03-e1f9-eaf5" type="equalTo"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
             <modifier type="set" field="hidden" value="true">
               <conditions>
-                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="4fe1-4d42-25cc-d732" type="equalTo"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="efc2-e0a3-93f6-d8e3" type="equalTo"/>
               </conditions>
             </modifier>
           </modifiers>
           <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="a9d0-03ce-8c83-0d24" type="max"/>
+            <constraint field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="0fc7-66b0-4df4-6958" type="min"/>
           </constraints>
-          <selectionEntries>
-            <selectionEntry id="bca7-5b43-3681-5b12" name="0. Coruscating Flames" hidden="false" collective="false" import="true" type="upgrade">
-              <modifiers>
-                <modifier type="set" field="f33b-4de8-65b2-ce9a" value="1.0">
-                  <conditionGroups>
-                    <conditionGroup type="and">
-                      <conditions>
-                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="efc2-e0a3-93f6-d8e3" type="greaterThan"/>
-                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="c661-44d6-0f5b-11ff" type="greaterThan"/>
-                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="8b3d-7f03-e1f9-eaf5" type="equalTo"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
-                </modifier>
-                <modifier type="set" field="hidden" value="true">
+          <profiles>
+            <profile id="4c62-9c22-22f1-9c76" name="Coruscating Flames" hidden="false" typeId="1504-23bf-8850-4f65" typeName="Command Traits">
+              <characteristics>
+                <characteristic name="Command Trait" typeId="0145-9acf-f5dc-d543">Subtract 1 from hit rolls for attacks made with missile weapons that target friendly ETERNAL CONFLAGRATION DAEMON units wholly within 12&quot; of this general.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <costs>
+            <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="81a6-5e6b-f248-d958" name="0. Prophet of the Ostensible" hidden="false" collective="false" import="true" type="upgrade">
+          <modifiers>
+            <modifier type="set" field="3654-0648-1970-4eef" value="1.0">
+              <conditionGroups>
+                <conditionGroup type="and">
                   <conditions>
-                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="efc2-e0a3-93f6-d8e3" type="equalTo"/>
+                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="97d5-659c-12ed-5147" type="greaterThan"/>
+                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="c661-44d6-0f5b-11ff" type="greaterThan"/>
+                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="8b3d-7f03-e1f9-eaf5" type="equalTo"/>
                   </conditions>
-                </modifier>
-              </modifiers>
-              <constraints>
-                <constraint field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="f33b-4de8-65b2-ce9a" type="min"/>
-              </constraints>
-              <profiles>
-                <profile id="45b9-09fe-26b6-8f64" name="Coruscating Flames" hidden="false" typeId="1504-23bf-8850-4f65" typeName="Command Traits">
-                  <characteristics>
-                    <characteristic name="Command Trait" typeId="0145-9acf-f5dc-d543">An ETERNAL CONFLAGRATION general must have this command trait.
-
-Subtract 1 from hit rolls for attacks made with missile weapons that target friendly ETERNAL CONFLAGRATION DAEMON units wholly within 12&quot; of this general.</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-              <costs>
-                <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
-              </costs>
-            </selectionEntry>
-            <selectionEntry id="0ab2-4adc-e71e-6c12" name="0. Prophet of the Ostensible" hidden="false" collective="false" import="true" type="upgrade">
-              <modifiers>
-                <modifier type="set" field="03b2-103f-e3b6-e09a" value="1.0">
-                  <conditionGroups>
-                    <conditionGroup type="and">
-                      <conditions>
-                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="97d5-659c-12ed-5147" type="greaterThan"/>
-                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="c661-44d6-0f5b-11ff" type="greaterThan"/>
-                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="8b3d-7f03-e1f9-eaf5" type="equalTo"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
-                </modifier>
-                <modifier type="set" field="hidden" value="true">
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="97d5-659c-12ed-5147" type="equalTo"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="3654-0648-1970-4eef" type="min"/>
+          </constraints>
+          <profiles>
+            <profile id="d8f2-2f44-9bdb-e0a8" name="Prophet of the Ostensible" hidden="false" typeId="1504-23bf-8850-4f65" typeName="Command Traits">
+              <characteristics>
+                <characteristic name="Command Trait" typeId="0145-9acf-f5dc-d543">If this general is part of your army and on the battlefield at the start of your hero phase, roll a dice. On a 4+, you receive 1 extra command point.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <costs>
+            <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="49cd-62b5-7906-02ef" name="0. Defiant in their Pursuit" hidden="false" collective="false" import="true" type="upgrade">
+          <modifiers>
+            <modifier type="set" field="4dd5-4084-59da-4abd" value="1.0">
+              <conditionGroups>
+                <conditionGroup type="and">
                   <conditions>
-                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="97d5-659c-12ed-5147" type="equalTo"/>
+                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2fc8-97fe-66ff-5a2a" type="greaterThan"/>
+                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="c661-44d6-0f5b-11ff" type="greaterThan"/>
+                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="8b3d-7f03-e1f9-eaf5" type="equalTo"/>
                   </conditions>
-                </modifier>
-              </modifiers>
-              <constraints>
-                <constraint field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="03b2-103f-e3b6-e09a" type="min"/>
-              </constraints>
-              <profiles>
-                <profile id="b3c1-52e4-897f-7393" name="Prophet of the Ostensible" hidden="false" typeId="1504-23bf-8850-4f65" typeName="Command Traits">
-                  <characteristics>
-                    <characteristic name="Command Trait" typeId="0145-9acf-f5dc-d543">A GUILD OF SUMMONERS general must have this command trait.
-
-If this general is part of your army and on the battlefield at the start of your hero phase, roll a dice. On a 4+, you receive 1 extra command point.</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-              <costs>
-                <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
-              </costs>
-            </selectionEntry>
-            <selectionEntry id="dd18-7d71-a587-4133" name="0. Shrouded in Unnatural Flame" hidden="false" collective="false" import="true" type="upgrade">
-              <modifiers>
-                <modifier type="set" field="c64a-a91f-31ca-be7d" value="1.0">
-                  <conditionGroups>
-                    <conditionGroup type="and">
-                      <conditions>
-                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="a956-06c9-0cf0-93bc" type="greaterThan"/>
-                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="c661-44d6-0f5b-11ff" type="greaterThan"/>
-                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="8b3d-7f03-e1f9-eaf5" type="equalTo"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
-                </modifier>
-                <modifier type="set" field="hidden" value="true">
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2fc8-97fe-66ff-5a2a" type="equalTo"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="4dd5-4084-59da-4abd" type="min"/>
+          </constraints>
+          <profiles>
+            <profile id="f9df-1faa-78da-e437" name="Defiant in their Pursuit" hidden="false" typeId="1504-23bf-8850-4f65" typeName="Command Traits">
+              <characteristics>
+                <characteristic name="Command Trait" typeId="0145-9acf-f5dc-d543">Add 2 to the Bravery characteristic of friendly CULT OF THE TRANSIENT FORM units wholly within 12&quot; of this general.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <costs>
+            <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="9688-0f13-bd3b-b321" name="0. Shrouded in Unnatural Flame" hidden="false" collective="false" import="true" type="upgrade">
+          <modifiers>
+            <modifier type="set" field="4a20-6f48-9582-ba77" value="1.0">
+              <conditionGroups>
+                <conditionGroup type="and">
                   <conditions>
-                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="a956-06c9-0cf0-93bc" type="equalTo"/>
+                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="a956-06c9-0cf0-93bc" type="greaterThan"/>
+                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="c661-44d6-0f5b-11ff" type="greaterThan"/>
+                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="8b3d-7f03-e1f9-eaf5" type="equalTo"/>
                   </conditions>
-                </modifier>
-              </modifiers>
-              <constraints>
-                <constraint field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="c64a-a91f-31ca-be7d" type="min"/>
-              </constraints>
-              <profiles>
-                <profile id="36a0-a364-3396-b906" name="Shrouded in Unnatural Flame" hidden="false" typeId="1504-23bf-8850-4f65" typeName="Command Traits">
-                  <characteristics>
-                    <characteristic name="Command Trait" typeId="0145-9acf-f5dc-d543">A PYROFANE CULT general must have this command trait.
-
-Subtract 1 from hit rolls for attacks made with missile weapons that target this general.</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-              <costs>
-                <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
-              </costs>
-            </selectionEntry>
-            <selectionEntry id="3062-a065-6c82-0c78" name="0. Defiant in their Pursuit" hidden="false" collective="false" import="true" type="upgrade">
-              <modifiers>
-                <modifier type="set" field="2d87-a062-e0b9-df29" value="1.0">
-                  <conditionGroups>
-                    <conditionGroup type="and">
-                      <conditions>
-                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2fc8-97fe-66ff-5a2a" type="greaterThan"/>
-                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="c661-44d6-0f5b-11ff" type="greaterThan"/>
-                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="8b3d-7f03-e1f9-eaf5" type="equalTo"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
-                </modifier>
-                <modifier type="set" field="hidden" value="true">
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="a956-06c9-0cf0-93bc" type="equalTo"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="4a20-6f48-9582-ba77" type="min"/>
+          </constraints>
+          <profiles>
+            <profile id="ff71-a939-ccf8-bc7e" name="Shrouded in Unnatural Flame" hidden="false" typeId="1504-23bf-8850-4f65" typeName="Command Traits">
+              <characteristics>
+                <characteristic name="Command Trait" typeId="0145-9acf-f5dc-d543">Subtract 1 from hit rolls for attacks made with missile weapons that target this general.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <costs>
+            <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="4aac-ddca-5e46-9339" name="0. Spell Hunters" hidden="false" collective="false" import="true" type="upgrade">
+          <modifiers>
+            <modifier type="set" field="40fe-8ffc-c751-1f8d" value="1.0">
+              <conditionGroups>
+                <conditionGroup type="and">
                   <conditions>
-                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2fc8-97fe-66ff-5a2a" type="equalTo"/>
+                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="6d73-a938-c00b-9194" type="greaterThan"/>
+                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="c661-44d6-0f5b-11ff" type="greaterThan"/>
+                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="8b3d-7f03-e1f9-eaf5" type="equalTo"/>
                   </conditions>
-                </modifier>
-              </modifiers>
-              <constraints>
-                <constraint field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="2d87-a062-e0b9-df29" type="min"/>
-              </constraints>
-              <profiles>
-                <profile id="a4c4-e915-c088-ed8f" name="Defiant in their Pursuit" hidden="false" typeId="1504-23bf-8850-4f65" typeName="Command Traits">
-                  <characteristics>
-                    <characteristic name="Command Trait" typeId="0145-9acf-f5dc-d543">A CULT OF THE TRANSIENT FORM general must have this command trait.
-
-Add 2 to the Bravery characteristic of friendly CULT OF THE TRANSIENT FORM units wholly within 12&quot; of this general.</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-              <costs>
-                <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
-              </costs>
-            </selectionEntry>
-            <selectionEntry id="0d5c-7381-5c8c-9316" name="0. Spell Hunters" hidden="false" collective="false" import="true" type="upgrade">
-              <modifiers>
-                <modifier type="set" field="b12e-dd4c-0689-1be7" value="1.0">
-                  <conditionGroups>
-                    <conditionGroup type="and">
-                      <conditions>
-                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="6d73-a938-c00b-9194" type="greaterThan"/>
-                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="c661-44d6-0f5b-11ff" type="greaterThan"/>
-                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="8b3d-7f03-e1f9-eaf5" type="equalTo"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
-                </modifier>
-                <modifier type="set" field="hidden" value="true">
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="6d73-a938-c00b-9194" type="equalTo"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="40fe-8ffc-c751-1f8d" type="min"/>
+          </constraints>
+          <profiles>
+            <profile id="6005-f763-24f0-84e5" name="Spell Hunters" hidden="false" typeId="1504-23bf-8850-4f65" typeName="Command Traits">
+              <characteristics>
+                <characteristic name="Command Trait" typeId="0145-9acf-f5dc-d543">After armies have been set up but before the first battle round begins, D3 friendly HOSTS ARCANUM units that can fly can move up to 6&quot;.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <costs>
+            <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="507b-c608-0ace-b4ce" name="0. Will of the Phantom Lord" hidden="false" collective="false" import="true" type="upgrade">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="1314-406c-3c61-19ca" type="equalTo"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="d72e-1a58-b30c-a3a3" value="1.0">
+              <conditionGroups>
+                <conditionGroup type="and">
                   <conditions>
-                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="6d73-a938-c00b-9194" type="equalTo"/>
+                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="1314-406c-3c61-19ca" type="greaterThan"/>
+                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="c661-44d6-0f5b-11ff" type="greaterThan"/>
+                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="8b3d-7f03-e1f9-eaf5" type="equalTo"/>
                   </conditions>
-                </modifier>
-              </modifiers>
-              <constraints>
-                <constraint field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="b12e-dd4c-0689-1be7" type="min"/>
-              </constraints>
-              <profiles>
-                <profile id="8e84-c378-2eaf-d88c" name="Spell Hunters" hidden="false" typeId="1504-23bf-8850-4f65" typeName="Command Traits">
-                  <characteristics>
-                    <characteristic name="Command Trait" typeId="0145-9acf-f5dc-d543">A HOSTS ARCANUM general must have this command trait.
-
-After armies have been set up but before the first battle round begins, D3 friendly HOSTS ARCANUM units that can fly can move up to 6&quot;.</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-              <costs>
-                <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
-              </costs>
-            </selectionEntry>
-            <selectionEntry id="0c22-22b8-447b-bf85" name="0. Will of the Phantom Lord" hidden="false" collective="false" import="true" type="upgrade">
-              <modifiers>
-                <modifier type="set" field="hidden" value="true">
-                  <conditions>
-                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="1314-406c-3c61-19ca" type="equalTo"/>
-                  </conditions>
-                </modifier>
-                <modifier type="set" field="42f5-d6e8-df97-643d" value="1.0">
-                  <conditionGroups>
-                    <conditionGroup type="and">
-                      <conditions>
-                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="1314-406c-3c61-19ca" type="greaterThan"/>
-                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="c661-44d6-0f5b-11ff" type="greaterThan"/>
-                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="8b3d-7f03-e1f9-eaf5" type="equalTo"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
-                </modifier>
-              </modifiers>
-              <constraints>
-                <constraint field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="42f5-d6e8-df97-643d" type="min"/>
-              </constraints>
-              <profiles>
-                <profile id="60aa-9c0e-21d7-5b0d" name="Will of the Phantom Lord" hidden="false" typeId="1504-23bf-8850-4f65" typeName="Command Traits">
-                  <characteristics>
-                    <characteristic name="Command Trait" typeId="0145-9acf-f5dc-d543">A HOSTS DUPLICITOUS general must have this command trait.
-
-You can re-roll casting and unbinding rolls for friendly HOSTS DUPLICITOUS DAEMON WIZARDS while they are wholly within 9&quot; of this general.</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-              <costs>
-                <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
-              </costs>
-            </selectionEntry>
-          </selectionEntries>
-        </selectionEntryGroup>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="d72e-1a58-b30c-a3a3" type="min"/>
+          </constraints>
+          <profiles>
+            <profile id="0189-2747-73c9-4155" name="Will of the Phantom Lord" hidden="false" typeId="1504-23bf-8850-4f65" typeName="Command Traits">
+              <characteristics>
+                <characteristic name="Command Trait" typeId="0145-9acf-f5dc-d543">You can re-roll casting and unbinding rolls for friendly HOSTS DUPLICITOUS DAEMON WIZARDS while they are wholly within 9&quot; of this general.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <costs>
+            <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
+          </costs>
+        </selectionEntry>
+      </selectionEntries>
+      <selectionEntryGroups>
         <selectionEntryGroup id="f59a-fb0b-d89f-906d" name="Tzeentch Arcanites" hidden="false" collective="false" import="true">
           <modifiers>
             <modifier type="set" field="hidden" value="true">
@@ -3605,6 +3849,9 @@ Kneel: Subtract 1 from save rolls for attacks that target that unit until your n
           </selectionEntries>
         </selectionEntryGroup>
       </selectionEntryGroups>
+      <entryLinks>
+        <entryLink id="629b-07d4-3bf9-cfc9" name="Universal Command Traits" hidden="false" collective="false" import="true" targetId="20f0-6df9-b464-3789" type="selectionEntryGroup"/>
+      </entryLinks>
     </selectionEntryGroup>
     <selectionEntryGroup id="73f3-d951-284c-8c27" name="Artefacts of Power" hidden="false" collective="false" import="true">
       <modifiers>
@@ -3614,20 +3861,10 @@ Kneel: Subtract 1 from save rolls for attacks that target that unit until your n
               <conditions>
                 <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4373-740f-1bf3-b0aa" type="instanceOf"/>
                 <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="e3a6-45ca-4974-b489" type="instanceOf"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="996a-613c-4006-25e3" type="instanceOf"/>
                 <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="6cd6-b22e-bfcb-9589" type="instanceOf"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="b543-cb16-0c79-fbc6" type="instanceOf"/>
               </conditions>
-              <conditionGroups>
-                <conditionGroup type="and">
-                  <conditions>
-                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="4fe1-4d42-25cc-d732" type="equalTo"/>
-                    <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="aaf1-9815-07ec-6c5e" type="notInstanceOf"/>
-                    <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="ca90-b9b0-010b-72d0" type="notInstanceOf"/>
-                    <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="128a-35fa-6f1f-a15d" type="notInstanceOf"/>
-                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="7173-5f26-ecf8-c2dc" type="equalTo"/>
-                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="02e5-753c-31d2-5e10" type="equalTo"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
             </conditionGroup>
           </conditionGroups>
         </modifier>
@@ -3638,231 +3875,207 @@ Kneel: Subtract 1 from save rolls for attacks that target that unit until your n
       <categoryLinks>
         <categoryLink id="f5df-3551-5dde-17ed" name="Artefacts" hidden="false" targetId="ba14-5553-456e-33ad" primary="false"/>
       </categoryLinks>
-      <selectionEntryGroups>
-        <selectionEntryGroup id="e6c8-8cb9-b186-5a24" name="Sub-Allegiance Artefacts" hidden="false" collective="false" import="true">
+      <selectionEntries>
+        <selectionEntry id="e200-6471-2152-ca55" name="0 -- Brand of the Split Daemon" hidden="false" collective="false" import="true" type="upgrade">
           <modifiers>
             <modifier type="set" field="hidden" value="true">
               <conditions>
-                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="4fe1-4d42-25cc-d732" type="equalTo"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="1314-406c-3c61-19ca" type="equalTo"/>
               </conditions>
+            </modifier>
+            <modifier type="set" field="cd36-bca8-7163-30fd" value="1.0">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="ba14-5553-456e-33ad" type="greaterThan"/>
+                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="1314-406c-3c61-19ca" type="greaterThan"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
             </modifier>
           </modifiers>
           <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8f72-c123-fb36-da20" type="max"/>
+            <constraint field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="cd36-bca8-7163-30fd" type="min"/>
+            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="88ad-1464-5026-a285" type="max"/>
           </constraints>
-          <selectionEntries>
-            <selectionEntry id="42e4-67bc-566f-7923" name="0 -- Chainfire Amulet" hidden="false" collective="false" import="true" type="upgrade">
-              <modifiers>
-                <modifier type="set" field="hidden" value="true">
+          <profiles>
+            <profile id="a4d5-88f2-d9de-af10" name="Brand of the Split Daemon" hidden="false" typeId="0c9d-7abe-a53c-6a37" typeName="Artefacts">
+              <characteristics>
+                <characteristic name="Artefact" typeId="44b6-de26-0b54-1318">Add 1 to save rolls for attacks that target the bearer.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <costs>
+            <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="b520-ec46-b0da-8c14" name="0 -- Brimstone Familiar" hidden="false" collective="false" import="true" type="upgrade">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="97d5-659c-12ed-5147" type="equalTo"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="e090-dfc5-a80e-cbfd" value="1.0">
+              <conditionGroups>
+                <conditionGroup type="and">
                   <conditions>
-                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="a956-06c9-0cf0-93bc" type="equalTo"/>
+                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="ba14-5553-456e-33ad" type="greaterThan"/>
+                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="97d5-659c-12ed-5147" type="greaterThan"/>
                   </conditions>
-                </modifier>
-                <modifier type="set" field="1750-290c-94f8-a993" value="1.0">
-                  <conditionGroups>
-                    <conditionGroup type="and">
-                      <conditions>
-                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="ba14-5553-456e-33ad" type="greaterThan"/>
-                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="a956-06c9-0cf0-93bc" type="greaterThan"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
-                </modifier>
-              </modifiers>
-              <constraints>
-                <constraint field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="1750-290c-94f8-a993" type="min"/>
-                <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="6b1d-9c4d-9468-e3cc" type="max"/>
-              </constraints>
-              <profiles>
-                <profile id="38e6-947b-189c-ccdc" name="Chainfire Amulet" hidden="false" typeId="0c9d-7abe-a53c-6a37" typeName="Artefacts">
-                  <characteristics>
-                    <characteristic name="Artefact" typeId="44b6-de26-0b54-1318">The first PYROFANE CULT HERO to receive an artefact of power must be given the Chainfire Amulet.
-
-If the unmodified hit roll for an attack made with a missile weapon by the bearer is 6, that attack inflicts D3 mortal wounds on the target and the attack sequence ends (do not make a wound or save roll).</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-              <costs>
-                <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
-              </costs>
-            </selectionEntry>
-            <selectionEntry id="ea85-ab74-ca85-27de" name="0 -- Chaotica Amulet" hidden="false" collective="false" import="true" type="upgrade">
-              <modifiers>
-                <modifier type="set" field="hidden" value="true">
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="e090-dfc5-a80e-cbfd" type="min"/>
+            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="c397-3a99-90e2-16eb" type="max"/>
+          </constraints>
+          <profiles>
+            <profile id="6245-9be4-4713-1947" name="Brimstone Familiar" hidden="false" typeId="0c9d-7abe-a53c-6a37" typeName="Artefacts">
+              <characteristics>
+                <characteristic name="Artefact" typeId="44b6-de26-0b54-1318">Do not take battleshock tests for friendly GUILD OF SUMMONERS units while they are wholly within 12&quot; of the bearer.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <costs>
+            <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="f547-f472-ac10-2b9e" name="0 -- Chainfire Amulet" hidden="false" collective="false" import="true" type="upgrade">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="a956-06c9-0cf0-93bc" type="equalTo"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="5170-fa44-fd8f-0b27" value="1.0">
+              <conditionGroups>
+                <conditionGroup type="and">
                   <conditions>
-                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2fc8-97fe-66ff-5a2a" type="equalTo"/>
+                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="ba14-5553-456e-33ad" type="greaterThan"/>
+                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="a956-06c9-0cf0-93bc" type="greaterThan"/>
                   </conditions>
-                </modifier>
-                <modifier type="set" field="5a2f-a3f2-dd58-2f06" value="1.0">
-                  <conditionGroups>
-                    <conditionGroup type="and">
-                      <conditions>
-                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="ba14-5553-456e-33ad" type="greaterThan"/>
-                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2fc8-97fe-66ff-5a2a" type="greaterThan"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
-                </modifier>
-              </modifiers>
-              <constraints>
-                <constraint field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="5a2f-a3f2-dd58-2f06" type="min"/>
-                <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="8b67-3b09-0f5c-05e7" type="max"/>
-              </constraints>
-              <profiles>
-                <profile id="e21f-5a58-6489-3159" name="Chaotica Amulet" hidden="false" typeId="0c9d-7abe-a53c-6a37" typeName="Artefacts">
-                  <characteristics>
-                    <characteristic name="Artefact" typeId="44b6-de26-0b54-1318">The first CULT OF THE TRANSIENT FORM HERO to receive an artefact of power must be given the Chaotica Amulet.
-
-Add 1 to the bearer’s Wounds characteristic.</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-              <costs>
-                <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
-              </costs>
-            </selectionEntry>
-            <selectionEntry id="42aa-3394-222b-90dd" name="0 -- Brimstone Familiar" hidden="false" collective="false" import="true" type="upgrade">
-              <modifiers>
-                <modifier type="set" field="hidden" value="true">
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="5170-fa44-fd8f-0b27" type="min"/>
+            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="a55f-6251-e731-4be0" type="max"/>
+          </constraints>
+          <profiles>
+            <profile id="eae7-24bc-175e-4a84" name="Chainfire Amulet" hidden="false" typeId="0c9d-7abe-a53c-6a37" typeName="Artefacts">
+              <characteristics>
+                <characteristic name="Artefact" typeId="44b6-de26-0b54-1318">If the unmodified hit roll for an attack made with a missile weapon by the bearer is 6, that attack inflicts D3 mortal wounds on the target and the attack sequence ends (do not make a wound or save roll).</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <costs>
+            <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="16dd-2565-9a27-2e1b" name="0 -- Chaotica Amulet" hidden="false" collective="false" import="true" type="upgrade">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2fc8-97fe-66ff-5a2a" type="equalTo"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="31f0-40cc-0c55-b49a" value="1.0">
+              <conditionGroups>
+                <conditionGroup type="and">
                   <conditions>
-                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="97d5-659c-12ed-5147" type="equalTo"/>
+                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="ba14-5553-456e-33ad" type="greaterThan"/>
+                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2fc8-97fe-66ff-5a2a" type="greaterThan"/>
                   </conditions>
-                </modifier>
-                <modifier type="set" field="83c5-7409-649f-e40f" value="1.0">
-                  <conditionGroups>
-                    <conditionGroup type="and">
-                      <conditions>
-                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="ba14-5553-456e-33ad" type="greaterThan"/>
-                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="97d5-659c-12ed-5147" type="greaterThan"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
-                </modifier>
-              </modifiers>
-              <constraints>
-                <constraint field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="83c5-7409-649f-e40f" type="min"/>
-                <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="3973-3e5f-e7d8-7c7c" type="max"/>
-              </constraints>
-              <profiles>
-                <profile id="4e45-c6ed-b3bd-46b3" name="Brimstone Familiar" hidden="false" typeId="0c9d-7abe-a53c-6a37" typeName="Artefacts">
-                  <characteristics>
-                    <characteristic name="Artefact" typeId="44b6-de26-0b54-1318">The first GUILD OF SUMMONERS HERO to receive an artefact of power must be given a Brimstone Familiar.
-
-Do not take battleshock tests for friendly GUILD OF SUMMONERS units while they are wholly within 12&quot; of the bearer.</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-              <costs>
-                <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
-              </costs>
-            </selectionEntry>
-            <selectionEntry id="ed53-7cb1-57e8-dcf5" name="0 -- The Fanged Circlet" hidden="false" collective="false" import="true" type="upgrade">
-              <modifiers>
-                <modifier type="set" field="hidden" value="true">
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="31f0-40cc-0c55-b49a" type="min"/>
+            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="c459-cb7a-030a-dc7a" type="max"/>
+          </constraints>
+          <profiles>
+            <profile id="8d02-1379-1394-1c34" name="Chaotica Amulet" hidden="false" typeId="0c9d-7abe-a53c-6a37" typeName="Artefacts">
+              <characteristics>
+                <characteristic name="Artefact" typeId="44b6-de26-0b54-1318">Add 1 to the bearer’s Wounds characteristic.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <costs>
+            <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="4f41-e72c-6a09-7106" name="0 -- Shroud of Warpflame" hidden="false" collective="false" import="true" type="upgrade">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="efc2-e0a3-93f6-d8e3" type="equalTo"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="90c7-be68-2558-a5be" value="1.0">
+              <conditionGroups>
+                <conditionGroup type="and">
                   <conditions>
-                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="6d73-a938-c00b-9194" type="equalTo"/>
+                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="ba14-5553-456e-33ad" type="greaterThan"/>
+                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="efc2-e0a3-93f6-d8e3" type="greaterThan"/>
                   </conditions>
-                </modifier>
-                <modifier type="set" field="ba8b-d51f-ec6d-93cd" value="1.0">
-                  <conditionGroups>
-                    <conditionGroup type="and">
-                      <conditions>
-                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="ba14-5553-456e-33ad" type="greaterThan"/>
-                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="6d73-a938-c00b-9194" type="greaterThan"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
-                </modifier>
-              </modifiers>
-              <constraints>
-                <constraint field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="ba8b-d51f-ec6d-93cd" type="min"/>
-                <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="9df2-59ed-0260-5a1e" type="max"/>
-              </constraints>
-              <profiles>
-                <profile id="a64f-5732-a0e3-b8ce" name="The Fanged Circlet" hidden="false" typeId="0c9d-7abe-a53c-6a37" typeName="Artefacts">
-                  <characteristics>
-                    <characteristic name="Artefact" typeId="44b6-de26-0b54-1318">The first HOSTS ARCANUM HERO to receive an artefact of power must be given the Fanged Circlet.
-
-Once per battle, at the start of your hero phase, you can add 1 unit of 6 SCREAMERS OF TZEENTCH to your army. Set up the unit wholly within 9&quot; of the bearer and more than 9&quot; away from any enemy units.</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-              <costs>
-                <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
-              </costs>
-            </selectionEntry>
-            <selectionEntry id="23d4-185a-9624-9669" name="0 -- Brand of the Split Daemon" hidden="false" collective="false" import="true" type="upgrade">
-              <modifiers>
-                <modifier type="set" field="hidden" value="true">
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="90c7-be68-2558-a5be" type="min"/>
+            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="a838-091d-f416-61af" type="max"/>
+          </constraints>
+          <profiles>
+            <profile id="3c2f-b592-076f-c4b0" name="Shroud of Warpflame" hidden="false" typeId="0c9d-7abe-a53c-6a37" typeName="Artefacts">
+              <characteristics>
+                <characteristic name="Artefact" typeId="44b6-de26-0b54-1318">Roll a dice each time you allocate a wound or mortal wound inflicted by a melee weapon to the bearer. On a 3+, the attacking unit suffers 1 mortal wound.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <costs>
+            <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="ce7f-0640-209a-105d" name="0 -- The Fanged Circlet" hidden="false" collective="false" import="true" type="upgrade">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="6d73-a938-c00b-9194" type="equalTo"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="b0a3-d052-a2a9-75f3" value="1.0">
+              <conditionGroups>
+                <conditionGroup type="and">
                   <conditions>
-                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="1314-406c-3c61-19ca" type="equalTo"/>
+                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="ba14-5553-456e-33ad" type="greaterThan"/>
+                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="6d73-a938-c00b-9194" type="greaterThan"/>
                   </conditions>
-                </modifier>
-                <modifier type="set" field="6a68-ad51-5a67-b7ff" value="1.0">
-                  <conditionGroups>
-                    <conditionGroup type="and">
-                      <conditions>
-                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="ba14-5553-456e-33ad" type="greaterThan"/>
-                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="1314-406c-3c61-19ca" type="greaterThan"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
-                </modifier>
-              </modifiers>
-              <constraints>
-                <constraint field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="6a68-ad51-5a67-b7ff" type="min"/>
-                <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="ca27-1375-1965-6988" type="max"/>
-              </constraints>
-              <profiles>
-                <profile id="bc9b-009a-0581-89b3" name="Brand of the Split Daemon" hidden="false" typeId="0c9d-7abe-a53c-6a37" typeName="Artefacts">
-                  <characteristics>
-                    <characteristic name="Artefact" typeId="44b6-de26-0b54-1318">The first HOSTS DUPLICITOUS HERO to receive an artefact of power must be given the Brand of the Split Daemon.
-
-Add 1 to save rolls for attacks that target the bearer.</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-              <costs>
-                <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
-              </costs>
-            </selectionEntry>
-            <selectionEntry id="cfa0-85eb-695a-ad2b" name="0 -- Shroud of Warpflame" hidden="false" collective="false" import="true" type="upgrade">
-              <modifiers>
-                <modifier type="set" field="hidden" value="true">
-                  <conditions>
-                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="efc2-e0a3-93f6-d8e3" type="equalTo"/>
-                  </conditions>
-                </modifier>
-                <modifier type="set" field="be68-0f75-35e5-66d1" value="1.0">
-                  <conditionGroups>
-                    <conditionGroup type="and">
-                      <conditions>
-                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="ba14-5553-456e-33ad" type="greaterThan"/>
-                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="efc2-e0a3-93f6-d8e3" type="greaterThan"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
-                </modifier>
-              </modifiers>
-              <constraints>
-                <constraint field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="be68-0f75-35e5-66d1" type="min"/>
-                <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="979d-e98e-de46-5eaa" type="max"/>
-              </constraints>
-              <profiles>
-                <profile id="b156-6c39-8646-3a24" name="Shroud of Warpflame" hidden="false" typeId="0c9d-7abe-a53c-6a37" typeName="Artefacts">
-                  <characteristics>
-                    <characteristic name="Artefact" typeId="44b6-de26-0b54-1318">The first ETERNAL CONFLAGRATION HERO to receive an artefact of power must be given the Shroud of Warpflame.
-
-Roll a dice each time you allocate a wound or mortal wound inflicted by a melee weapon to the bearer. On a 3+, the attacking unit suffers 1 mortal wound.</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-              <costs>
-                <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
-              </costs>
-            </selectionEntry>
-          </selectionEntries>
-        </selectionEntryGroup>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="b0a3-d052-a2a9-75f3" type="min"/>
+            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="90a8-ae73-74ae-fc56" type="max"/>
+          </constraints>
+          <profiles>
+            <profile id="01b3-439f-89f4-505c" name="The Fanged Circlet" hidden="false" typeId="0c9d-7abe-a53c-6a37" typeName="Artefacts">
+              <characteristics>
+                <characteristic name="Artefact" typeId="44b6-de26-0b54-1318">Once per battle, at the start of your hero phase, you can add 1 unit of 6 SCREAMERS OF TZEENTCH to your army. Set up the unit wholly within 9&quot; of the bearer and more than 9&quot; away from any enemy units.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <costs>
+            <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
+          </costs>
+        </selectionEntry>
+      </selectionEntries>
+      <selectionEntryGroups>
         <selectionEntryGroup id="d4a3-5259-2cbc-a3b5" name="Fated Artefacts" hidden="false" collective="false" import="true">
           <modifiers>
             <modifier type="set" field="hidden" value="true">
@@ -3882,7 +4095,7 @@ Roll a dice each time you allocate a wound or mortal wound inflicted by a melee 
               <profiles>
                 <profile id="73c8-3b63-42e5-1780" name="Paradoxical Shield" hidden="false" typeId="0c9d-7abe-a53c-6a37" typeName="Artefacts">
                   <characteristics>
-                    <characteristic name="Artefact" typeId="44b6-de26-0b54-1318">Add 2 to save rolls for attacks that target the bearer. However, you must re-roll any successful save rolls made for the bearer.</characteristic>
+                    <characteristic name="Artefact" typeId="44b6-de26-0b54-1318">Ignore modifiers (positive and negative) when making save rolls for attacks that target the bearer. However, you must re-roll successful save rolls for attacks that target the bearer.</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
@@ -4191,13 +4404,42 @@ Roll a dice each time you allocate a wound or mortal wound inflicted by a melee 
         </selectionEntryGroup>
       </selectionEntryGroups>
       <entryLinks>
-        <entryLink id="e768-dce5-c9d8-f07c" name="Realm Artefacts" hidden="false" collective="false" import="true" targetId="4df1-d526-85d7-1c93" type="selectionEntryGroup"/>
-        <entryLink id="1453-0efb-b374-b773" name="Realm Artefacts" hidden="false" collective="false" import="true" targetId="56b5-54f1-dbb4-63c6" type="selectionEntryGroup"/>
+        <entryLink id="57e7-33de-a88d-6002" name="Universal Artefacts of Power" hidden="false" collective="false" import="true" targetId="dbd8-8f6f-f44a-884a" type="selectionEntryGroup"/>
+      </entryLinks>
+    </selectionEntryGroup>
+    <selectionEntryGroup id="6b97-fbdf-b7cc-777f" name="Tzeentch Prayer Scriptures" hidden="false" collective="false" import="true">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4373-740f-1bf3-b0aa" type="instanceOf"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="e3a6-45ca-4974-b489" type="instanceOf"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="996a-613c-4006-25e3" type="instanceOf"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="6cd6-b22e-bfcb-9589" type="instanceOf"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="b543-cb16-0c79-fbc6" type="instanceOf"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+        <modifier type="increment" field="213e-ae32-e43a-ebd3" value="1.0">
+          <repeats>
+            <repeat field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="c7bd-c872-ef57-2468" repeats="1" roundUp="false"/>
+          </repeats>
+          <conditions>
+            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="c7bd-c872-ef57-2468" type="greaterThan"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <constraints>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="213e-ae32-e43a-ebd3" type="max"/>
+      </constraints>
+      <entryLinks>
+        <entryLink id="071c-3482-57ec-208a" name="Universal Prayer Scripture" hidden="false" collective="false" import="true" targetId="7104-ab27-d136-1df0" type="selectionEntryGroup"/>
       </entryLinks>
     </selectionEntryGroup>
   </sharedSelectionEntryGroups>
   <catalogueLinks>
-    <catalogueLink id="1731-3e95-5e7e-305b" name="Malign Artefacts" targetId="5d5b-1959-c979-44ee" type="catalogue" importRootEntries="true"/>
     <catalogueLink id="34c5-a6d2-5734-9f10" name="Chaos - Endless SpellsPrayers" targetId="5f46-8b4d-1941-ae15" type="catalogue" importRootEntries="true"/>
     <catalogueLink id="64b8-f8c1-e8fe-ed4e" name="Chaos - Beasts of Chaos - Data" targetId="174c-6424-9680-8149" type="catalogue" importRootEntries="true"/>
     <catalogueLink id="1fd9-b8c5-d149-5446" name="Chaos Data" targetId="2fc2-5782-755c-0fb0" type="catalogue" importRootEntries="true"/>

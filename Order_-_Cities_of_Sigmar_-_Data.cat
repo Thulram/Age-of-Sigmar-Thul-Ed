@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="ea43-7972-d2ab-617a" name="Order - Cities of Sigmar - Data" revision="5" battleScribeVersion="2.03" authorName="Thulram" library="true" gameSystemId="e832-3291-06be-cab1" gameSystemRevision="4" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="ea43-7972-d2ab-617a" name="Order - Cities of Sigmar - Data" revision="6" battleScribeVersion="2.03" authorName="Thulram" library="true" gameSystemId="e832-3291-06be-cab1" gameSystemRevision="6" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <profileTypes>
     <profileType id="6ed8-2f25-715e-ccd5" name="Drakeblood Curse">
       <characteristicTypes>
@@ -387,7 +387,7 @@
         </selectionEntryGroup>
       </selectionEntryGroups>
       <costs>
-        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="320.0"/>
+        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="305.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="93ab-e9db-b9d0-2435" name="Freeguild General" publicationId="88ce-c2fe-b89c-ed48" hidden="false" collective="false" import="true" type="unit">
@@ -454,6 +454,16 @@
       </costs>
     </selectionEntry>
     <selectionEntry id="aa56-bb6e-b77c-f820" name="Demigryph Knights" publicationId="88ce-c2fe-b89c-ed48" hidden="false" collective="false" import="true" type="unit">
+      <modifiers>
+        <modifier type="increment" field="b0b4-6aec-82c2-02ae" value="175.0">
+          <repeats>
+            <repeat field="selections" scope="aa56-bb6e-b77c-f820" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e20c-48d8-e5e3-1a36" repeats="1" roundUp="false"/>
+          </repeats>
+          <conditions>
+            <condition field="selections" scope="aa56-bb6e-b77c-f820" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e20c-48d8-e5e3-1a36" type="greaterThan"/>
+          </conditions>
+        </modifier>
+      </modifiers>
       <profiles>
         <profile id="68a4-e279-3d99-66cc" name="Demigryph Knights" hidden="false" typeId="3956-f6dd-6c88-ae4b" typeName="Unit">
           <characteristics>
@@ -461,6 +471,11 @@
             <characteristic name="Wounds" typeId="a0c6-af64-2f24-5759">4</characteristic>
             <characteristic name="Save" typeId="93b6-2f96-2df7-e330">3+</characteristic>
             <characteristic name="Bravery" typeId="2420-1c5c-1016-7033">6</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="8646-dce4-a6aa-8a7c" name="Preceptor" hidden="false" typeId="c23b-5a30-07e2-4706" typeName="Unit Options">
+          <characteristics>
+            <characteristic name="Unit Option" typeId="5879-9a21-e9d2-539d">1 model in this unit can be a Preceptor. Add 1 to the Attacks characteristic of that model’s Demigryph Knight’s Halberd or Demigryph Knight’s Lance.</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -475,11 +490,11 @@
       <selectionEntries>
         <selectionEntry id="f740-a96b-c2ed-090f" name="3 Demigryph Knights" hidden="false" collective="false" import="true" type="model">
           <constraints>
-            <constraint field="selections" scope="parent" value="4.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="556e-a616-36df-9a27" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="556e-a616-36df-9a27" type="max"/>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="f2bb-cc4b-3dce-16c1" type="min"/>
           </constraints>
           <costs>
-            <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="180.0"/>
+            <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="6ec0-c45f-43e7-f11f" name="CONDITIONAL BATTLELINE" hidden="false" collective="false" import="true" type="upgrade">
@@ -620,21 +635,6 @@
         </selectionEntryGroup>
         <selectionEntryGroup id="a449-79da-1f4e-9884" name="Unit Options" hidden="false" collective="false" import="true">
           <selectionEntries>
-            <selectionEntry id="a4ad-ce8c-4b7c-8ad1" name="Preceptor" hidden="false" collective="false" import="true" type="upgrade">
-              <constraints>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8e80-a8f6-6f4c-5ebe" type="max"/>
-              </constraints>
-              <profiles>
-                <profile id="8a34-9fb0-920b-c7d6" name="Preceptor" hidden="false" typeId="c23b-5a30-07e2-4706" typeName="Unit Options">
-                  <characteristics>
-                    <characteristic name="Unit Option" typeId="5879-9a21-e9d2-539d">1 model in this unit can be a Preceptor. Add 1 to the Attacks characteristic of that model’s Demigryph Knight’s Halberd or Demigryph Knight’s Lance.</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-              <costs>
-                <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
-              </costs>
-            </selectionEntry>
             <selectionEntry id="e9b9-63c5-f467-71a6" name="Standard Bearer" hidden="false" collective="false" import="true" type="upgrade">
               <modifiers>
                 <modifier type="increment" field="0eb4-ff31-ecfd-546c" value="1.0">
@@ -688,11 +688,24 @@
           </selectionEntries>
         </selectionEntryGroup>
       </selectionEntryGroups>
+      <entryLinks>
+        <entryLink id="48d2-77d6-c151-05a0" name="Unit Reinforcement" hidden="false" collective="false" import="true" targetId="b493-d9e6-82ca-5488" type="selectionEntry"/>
+      </entryLinks>
       <costs>
-        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
+        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="175.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="8f55-789d-d376-4f6d" name="Freeguild Greatswords" publicationId="88ce-c2fe-b89c-ed48" hidden="false" collective="false" import="true" type="unit">
+      <modifiers>
+        <modifier type="increment" field="b0b4-6aec-82c2-02ae" value="150.0">
+          <repeats>
+            <repeat field="selections" scope="8f55-789d-d376-4f6d" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e20c-48d8-e5e3-1a36" repeats="1" roundUp="false"/>
+          </repeats>
+          <conditions>
+            <condition field="selections" scope="8f55-789d-d376-4f6d" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e20c-48d8-e5e3-1a36" type="greaterThan"/>
+          </conditions>
+        </modifier>
+      </modifiers>
       <profiles>
         <profile id="8721-6919-78ad-c088" name="Freeguild Greatswords" hidden="false" typeId="3956-f6dd-6c88-ae4b" typeName="Unit">
           <characteristics>
@@ -705,6 +718,11 @@
         <profile id="f698-8921-88eb-0847" name="Oathsworn Honour Guard" hidden="false" typeId="7861-da01-01c0-88d9" typeName="Ability">
           <characteristics>
             <characteristic name="Ability" typeId="9bce-4deb-8b79-eaec">Add 1 to hit rolls for attacks made with melee weapons by this unit if it is wholly within 18&quot; of any friendly FREEGUILD HEROES.</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="81f9-2bd8-5dcf-2d62" name="Guild Champion" hidden="false" typeId="c23b-5a30-07e2-4706" typeName="Unit Options">
+          <characteristics>
+            <characteristic name="Unit Option" typeId="5879-9a21-e9d2-539d">1 model in this unit can be a Guild Champion. Add 1 to the Attacks characteristic of that model’s melee weapon.</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -745,19 +763,12 @@
           </costs>
         </selectionEntry>
         <selectionEntry id="6075-b091-819b-d4d7" name="10 Freeguild Greatswords" hidden="false" collective="false" import="true" type="model">
-          <modifiers>
-            <modifier type="set" field="b0b4-6aec-82c2-02ae" value="120.0">
-              <conditions>
-                <condition field="selections" scope="parent" value="3.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" type="equalTo"/>
-              </conditions>
-            </modifier>
-          </modifiers>
           <constraints>
-            <constraint field="selections" scope="parent" value="3.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="6aa7-9177-420e-ad8e" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="6aa7-9177-420e-ad8e" type="max"/>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="7f02-135f-e85f-008d" type="min"/>
           </constraints>
           <costs>
-            <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="140.0"/>
+            <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="6b88-054d-5d26-6c4c" name="CONDITIONAL BATTLELINE" hidden="false" collective="false" import="true" type="upgrade">
@@ -804,21 +815,6 @@
       <selectionEntryGroups>
         <selectionEntryGroup id="12ae-335d-b174-5455" name="Unit Options" hidden="false" collective="false" import="true">
           <selectionEntries>
-            <selectionEntry id="0efe-ef0f-7ca7-0560" name="Guild Champion" hidden="false" collective="false" import="true" type="upgrade">
-              <constraints>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="597b-ca47-78a9-43bc" type="max"/>
-              </constraints>
-              <profiles>
-                <profile id="4b26-0ee2-c0ac-6fe7" name="Guild Champion" hidden="false" typeId="c23b-5a30-07e2-4706" typeName="Unit Options">
-                  <characteristics>
-                    <characteristic name="Unit Option" typeId="5879-9a21-e9d2-539d">1 model in this unit can be a Guild Champion. Add 1 to the Attacks characteristic of that model’s melee weapon.</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-              <costs>
-                <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
-              </costs>
-            </selectionEntry>
             <selectionEntry id="d2f7-e855-5f73-b962" name="Standard Bearer" hidden="false" collective="false" import="true" type="upgrade">
               <modifiers>
                 <modifier type="increment" field="a94d-b6dc-f2ff-5b3a" value="1.0">
@@ -872,8 +868,11 @@
           </selectionEntries>
         </selectionEntryGroup>
       </selectionEntryGroups>
+      <entryLinks>
+        <entryLink id="636a-b894-fa21-cf45" name="Unit Reinforcement" hidden="false" collective="false" import="true" targetId="b493-d9e6-82ca-5488" type="selectionEntry"/>
+      </entryLinks>
       <costs>
-        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
+        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="150.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="5cc0-c946-ed9f-a335" name="Freeguild Guard" publicationId="88ce-c2fe-b89c-ed48" hidden="false" collective="false" import="true" type="unit">
@@ -889,6 +888,14 @@
             </conditionGroup>
           </conditionGroups>
         </modifier>
+        <modifier type="increment" field="b0b4-6aec-82c2-02ae" value="85.0">
+          <repeats>
+            <repeat field="selections" scope="5cc0-c946-ed9f-a335" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e20c-48d8-e5e3-1a36" repeats="1" roundUp="false"/>
+          </repeats>
+          <conditions>
+            <condition field="selections" scope="5cc0-c946-ed9f-a335" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e20c-48d8-e5e3-1a36" type="greaterThan"/>
+          </conditions>
+        </modifier>
       </modifiers>
       <profiles>
         <profile id="9712-f9b0-85f0-16c7" name="Freeguild Guard" hidden="false" typeId="3956-f6dd-6c88-ae4b" typeName="Unit">
@@ -901,7 +908,12 @@
         </profile>
         <profile id="0865-694d-a049-ae3c" name="Massed Ranks" hidden="false" typeId="7861-da01-01c0-88d9" typeName="Ability">
           <characteristics>
-            <characteristic name="Ability" typeId="9bce-4deb-8b79-eaec">Add 1 to hit rolls for attacks made by this unit if it has 10 or more models. Add 2 to hit rolls instead of 1 if this unit has 20 or more models.</characteristic>
+            <characteristic name="Ability" typeId="9bce-4deb-8b79-eaec">Add 1 to wound rolls for attacks made with Freeguild Spears that target an enemy unit that made a charge move in the same turn.</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="a53d-c94b-9a4a-c279" name="Sergeant" hidden="false" typeId="c23b-5a30-07e2-4706" typeName="Unit Options">
+          <characteristics>
+            <characteristic name="Unit Option" typeId="5879-9a21-e9d2-539d">1 model in this unit can be a Sergeant. Add 1 to the Attacks characteristic of that model’s melee weapon.</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -916,19 +928,12 @@
       </categoryLinks>
       <selectionEntries>
         <selectionEntry id="199a-5cf5-22cf-1925" name="10 Freeguild Guard" hidden="false" collective="false" import="true" type="model">
-          <modifiers>
-            <modifier type="set" field="b0b4-6aec-82c2-02ae" value="70.0">
-              <conditions>
-                <condition field="selections" scope="parent" value="4.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" type="equalTo"/>
-              </conditions>
-            </modifier>
-          </modifiers>
           <constraints>
-            <constraint field="selections" scope="parent" value="4.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="54de-3f8b-2edb-a744" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="54de-3f8b-2edb-a744" type="max"/>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="c1ff-d713-1964-edca" type="min"/>
           </constraints>
           <costs>
-            <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="80.0"/>
+            <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="8ba5-47fe-6be8-b35d" name="BATTLELINE" hidden="false" collective="false" import="true" type="upgrade">
@@ -975,21 +980,6 @@
       <selectionEntryGroups>
         <selectionEntryGroup id="4e73-8b60-7254-4358" name="Unit Options" hidden="false" collective="false" import="true">
           <selectionEntries>
-            <selectionEntry id="4e93-cbc2-6aed-ace9" name="Sergeant" hidden="false" collective="false" import="true" type="upgrade">
-              <constraints>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="ab77-040a-59b8-aede" type="max"/>
-              </constraints>
-              <profiles>
-                <profile id="e9ca-576f-4eb9-9c64" name="Sergeant" hidden="false" typeId="c23b-5a30-07e2-4706" typeName="Unit Options">
-                  <characteristics>
-                    <characteristic name="Unit Option" typeId="5879-9a21-e9d2-539d">1 model in this unit can be a Sergeant. Add 1 to the Attacks characteristic of that model’s melee weapon.</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-              <costs>
-                <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
-              </costs>
-            </selectionEntry>
             <selectionEntry id="7d19-0c80-7111-b285" name="Standard Bearer" hidden="false" collective="false" import="true" type="upgrade">
               <modifiers>
                 <modifier type="increment" field="4a1b-8dce-7d27-ce25" value="1.0">
@@ -1115,11 +1105,24 @@
           </selectionEntries>
         </selectionEntryGroup>
       </selectionEntryGroups>
+      <entryLinks>
+        <entryLink id="6abc-0882-fcc4-a975" name="Unit Reinforcement" hidden="false" collective="false" import="true" targetId="b493-d9e6-82ca-5488" type="selectionEntry"/>
+      </entryLinks>
       <costs>
-        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
+        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="85.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="93c0-fcaf-8d4c-5430" name="Freeguild Outriders" publicationId="88ce-c2fe-b89c-ed48" hidden="false" collective="false" import="true" type="unit">
+      <modifiers>
+        <modifier type="increment" field="b0b4-6aec-82c2-02ae" value="110.0">
+          <repeats>
+            <repeat field="selections" scope="93c0-fcaf-8d4c-5430" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e20c-48d8-e5e3-1a36" repeats="1" roundUp="false"/>
+          </repeats>
+          <conditions>
+            <condition field="selections" scope="93c0-fcaf-8d4c-5430" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e20c-48d8-e5e3-1a36" type="greaterThan"/>
+          </conditions>
+        </modifier>
+      </modifiers>
       <profiles>
         <profile id="43fe-5230-2148-1543" name="Freeguild Outriders" hidden="false" typeId="3956-f6dd-6c88-ae4b" typeName="Unit">
           <characteristics>
@@ -1146,11 +1149,11 @@
       <selectionEntries>
         <selectionEntry id="7fb4-1486-b56e-1bd6" name="5 Freeguild Outriders" hidden="false" collective="false" import="true" type="model">
           <constraints>
-            <constraint field="selections" scope="parent" value="4.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="ffbf-e3ac-35ee-63a2" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="ffbf-e3ac-35ee-63a2" type="max"/>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="cd04-fd50-8a7d-4fe1" type="min"/>
           </constraints>
           <costs>
-            <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="100.0"/>
+            <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="3e71-4a98-6ea3-c5e1" name="CONDITIONAL BATTLELINE" hidden="false" collective="false" import="true" type="upgrade">
@@ -1396,11 +1399,24 @@
           </selectionEntries>
         </selectionEntryGroup>
       </selectionEntryGroups>
+      <entryLinks>
+        <entryLink id="7d01-77d1-5772-7c44" name="Unit Reinforcement" hidden="false" collective="false" import="true" targetId="b493-d9e6-82ca-5488" type="selectionEntry"/>
+      </entryLinks>
       <costs>
-        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
+        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="110.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="7693-c724-f844-fb77" name="Freeguild Pistoliers" publicationId="88ce-c2fe-b89c-ed48" hidden="false" collective="false" import="true" type="unit">
+      <modifiers>
+        <modifier type="increment" field="b0b4-6aec-82c2-02ae" value="105.0">
+          <repeats>
+            <repeat field="selections" scope="7693-c724-f844-fb77" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e20c-48d8-e5e3-1a36" repeats="1" roundUp="false"/>
+          </repeats>
+          <conditions>
+            <condition field="selections" scope="7693-c724-f844-fb77" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e20c-48d8-e5e3-1a36" type="greaterThan"/>
+          </conditions>
+        </modifier>
+      </modifiers>
       <profiles>
         <profile id="c1e2-ebe2-c504-7424" name="Freeguild Pistoliers" hidden="false" typeId="3956-f6dd-6c88-ae4b" typeName="Unit">
           <characteristics>
@@ -1427,11 +1443,11 @@
       <selectionEntries>
         <selectionEntry id="c862-1ec2-b635-5139" name="5 Freeguild Pistoliers" hidden="false" collective="false" import="true" type="model">
           <constraints>
-            <constraint field="selections" scope="parent" value="4.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="639d-dcb3-6c66-945c" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="639d-dcb3-6c66-945c" type="max"/>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="e70b-d26f-1477-9b8e" type="min"/>
           </constraints>
           <costs>
-            <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="100.0"/>
+            <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="5efa-c5bd-6e73-fff8" name="CONDITIONAL BATTLELINE" hidden="false" collective="false" import="true" type="upgrade">
@@ -1648,8 +1664,11 @@
           </selectionEntries>
         </selectionEntryGroup>
       </selectionEntryGroups>
+      <entryLinks>
+        <entryLink id="1e54-f927-2f63-2e39" name="Unit Reinforcement" hidden="false" collective="false" import="true" targetId="b493-d9e6-82ca-5488" type="selectionEntry"/>
+      </entryLinks>
       <costs>
-        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
+        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="105.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="27b7-f2b3-b5f9-7dc3" name="Freeguild Handgunners" publicationId="88ce-c2fe-b89c-ed48" hidden="false" collective="false" import="true" type="unit">
@@ -1665,6 +1684,14 @@
             </conditionGroup>
           </conditionGroups>
         </modifier>
+        <modifier type="increment" field="b0b4-6aec-82c2-02ae" value="105.0">
+          <repeats>
+            <repeat field="selections" scope="27b7-f2b3-b5f9-7dc3" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e20c-48d8-e5e3-1a36" repeats="1" roundUp="false"/>
+          </repeats>
+          <conditions>
+            <condition field="selections" scope="27b7-f2b3-b5f9-7dc3" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e20c-48d8-e5e3-1a36" type="greaterThan"/>
+          </conditions>
+        </modifier>
       </modifiers>
       <profiles>
         <profile id="150b-a824-477a-4ce1" name="Freeguild Handgunners" hidden="false" typeId="3956-f6dd-6c88-ae4b" typeName="Unit">
@@ -1677,7 +1704,7 @@
         </profile>
         <profile id="de4b-dafc-2907-e743" name="Stand and Shoot" hidden="false" typeId="7861-da01-01c0-88d9" typeName="Ability">
           <characteristics>
-            <characteristic name="Ability" typeId="9bce-4deb-8b79-eaec">Once per turn, when an enemy unit ends a charge move within 3&quot; of this unit and there are no other enemy units within 3&quot; of this unit, this unit can shoot.</characteristic>
+            <characteristic name="Ability" typeId="9bce-4deb-8b79-eaec">If an enemy unit finishes a charge move within 3&quot; of this unit, this unit can receive the Unleash Hell command without the command being issued and without a command point being spent.</characteristic>
           </characteristics>
         </profile>
         <profile id="4708-40e5-6971-3ce2" name="Steady Aim" hidden="false" typeId="7861-da01-01c0-88d9" typeName="Ability">
@@ -1698,11 +1725,11 @@
       <selectionEntries>
         <selectionEntry id="5c34-c62a-9cd2-e348" name="10 Freeguild Handgunners" hidden="false" collective="false" import="true" type="model">
           <constraints>
-            <constraint field="selections" scope="parent" value="3.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="0e0b-de42-a716-6672" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="0e0b-de42-a716-6672" type="max"/>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="7844-ccef-b1e3-d556" type="min"/>
           </constraints>
           <costs>
-            <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="100.0"/>
+            <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="dffd-0bb7-a1c0-be5d" name="BATTLELINE" hidden="false" collective="false" import="true" type="upgrade">
@@ -1900,8 +1927,11 @@
           </selectionEntries>
         </selectionEntryGroup>
       </selectionEntryGroups>
+      <entryLinks>
+        <entryLink id="a7e3-e56a-0734-bbed" name="Unit Reinforcement" hidden="false" collective="false" import="true" targetId="b493-d9e6-82ca-5488" type="selectionEntry"/>
+      </entryLinks>
       <costs>
-        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
+        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="105.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="81ed-3b8e-2591-f06d" name="Freeguild Crossbowmen" publicationId="88ce-c2fe-b89c-ed48" hidden="false" collective="false" import="true" type="unit">
@@ -1917,6 +1947,14 @@
             </conditionGroup>
           </conditionGroups>
         </modifier>
+        <modifier type="increment" field="b0b4-6aec-82c2-02ae" value="105.0">
+          <repeats>
+            <repeat field="selections" scope="81ed-3b8e-2591-f06d" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e20c-48d8-e5e3-1a36" repeats="1" roundUp="false"/>
+          </repeats>
+          <conditions>
+            <condition field="selections" scope="81ed-3b8e-2591-f06d" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e20c-48d8-e5e3-1a36" type="greaterThan"/>
+          </conditions>
+        </modifier>
       </modifiers>
       <profiles>
         <profile id="3ca7-def0-b382-d4f3" name="Freeguild Crossbowmen" hidden="false" typeId="3956-f6dd-6c88-ae4b" typeName="Unit">
@@ -1925,6 +1963,11 @@
             <characteristic name="Wounds" typeId="a0c6-af64-2f24-5759">1</characteristic>
             <characteristic name="Save" typeId="93b6-2f96-2df7-e330">6+</characteristic>
             <characteristic name="Bravery" typeId="2420-1c5c-1016-7033">5</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="977b-5ca8-1bce-2b46" name="Marksman" hidden="false" typeId="c23b-5a30-07e2-4706" typeName="Unit Options">
+          <characteristics>
+            <characteristic name="Unit Option" typeId="5879-9a21-e9d2-539d">1 model in this unit can be a Marksman. Add 1 to hit rolls for attacks made with this model’s Freeguild Crossbow.</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -1940,11 +1983,11 @@
       <selectionEntries>
         <selectionEntry id="f870-961d-0f2f-ac05" name="10 Freeguild Crossbowmen" hidden="false" collective="false" import="true" type="model">
           <constraints>
-            <constraint field="selections" scope="parent" value="3.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="652f-6c9a-cabc-4719" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="652f-6c9a-cabc-4719" type="max"/>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="7540-4122-b613-10be" type="min"/>
           </constraints>
           <costs>
-            <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="100.0"/>
+            <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="a3b1-b968-d5ae-ccfc" name="BATTLELINE" hidden="false" collective="false" import="true" type="upgrade">
@@ -2029,21 +2072,6 @@
       <selectionEntryGroups>
         <selectionEntryGroup id="79b1-5e72-173c-876a" name="Unit Options" hidden="false" collective="false" import="true">
           <selectionEntries>
-            <selectionEntry id="af50-826f-e7ee-57a2" name="Marksman" hidden="false" collective="false" import="true" type="upgrade">
-              <constraints>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="7d0e-3824-880e-ad5f" type="max"/>
-              </constraints>
-              <profiles>
-                <profile id="3aed-06d2-2b46-ec0b" name="Marksman" hidden="false" typeId="c23b-5a30-07e2-4706" typeName="Unit Options">
-                  <characteristics>
-                    <characteristic name="Unit Option" typeId="5879-9a21-e9d2-539d">1 model in this unit can be a Marksman. Add 1 to hit rolls for attacks made with this model’s Freeguild Crossbow.</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-              <costs>
-                <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
-              </costs>
-            </selectionEntry>
             <selectionEntry id="1c07-3fe5-6430-07f5" name="Standard Bearer" hidden="false" collective="false" import="true" type="upgrade">
               <modifiers>
                 <modifier type="increment" field="11e1-0777-f736-3d6a" value="1.0">
@@ -2097,11 +2125,24 @@
           </selectionEntries>
         </selectionEntryGroup>
       </selectionEntryGroups>
+      <entryLinks>
+        <entryLink id="c965-3a9e-b76a-efbb" name="Unit Reinforcement" hidden="false" collective="false" import="true" targetId="b493-d9e6-82ca-5488" type="selectionEntry"/>
+      </entryLinks>
       <costs>
-        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
+        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="105.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="eb2c-4c6c-6a7d-c182" name="Flagellants" publicationId="88ce-c2fe-b89c-ed48" hidden="false" collective="false" import="true" type="unit">
+      <modifiers>
+        <modifier type="increment" field="b0b4-6aec-82c2-02ae" value="80.0">
+          <repeats>
+            <repeat field="selections" scope="eb2c-4c6c-6a7d-c182" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e20c-48d8-e5e3-1a36" repeats="1" roundUp="false"/>
+          </repeats>
+          <conditions>
+            <condition field="selections" scope="eb2c-4c6c-6a7d-c182" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e20c-48d8-e5e3-1a36" type="greaterThan"/>
+          </conditions>
+        </modifier>
+      </modifiers>
       <profiles>
         <profile id="02c2-3735-4726-45a0" name="Flagellants" hidden="false" typeId="3956-f6dd-6c88-ae4b" typeName="Unit">
           <characteristics>
@@ -2126,6 +2167,11 @@
             <characteristic name="Ability" typeId="9bce-4deb-8b79-eaec">Add 1 to the Attacks characteristic of this unit’s melee weapons if any models from this unit have been slain in the same turn. Add 2 to the Attacks characteristic instead of 1 if 5 or more models from this unit have been slain in the same turn.</characteristic>
           </characteristics>
         </profile>
+        <profile id="85db-7916-7206-2b20" name="Prophet" hidden="false" typeId="c23b-5a30-07e2-4706" typeName="Unit Options">
+          <characteristics>
+            <characteristic name="Unit Option" typeId="5879-9a21-e9d2-539d">1 model in this unit can be a Prophet. Add 1 to the Attacks characteristic of that model’s melee weapon.</characteristic>
+          </characteristics>
+        </profile>
       </profiles>
       <categoryLinks>
         <categoryLink id="c531-f47e-792c-321b" name="CITIES OF SIGMAR" hidden="false" targetId="d20b-b22a-23ee-3ca1" primary="false"/>
@@ -2137,19 +2183,12 @@
       </categoryLinks>
       <selectionEntries>
         <selectionEntry id="8aae-7925-e719-3ee5" name="10 Flagellants" hidden="false" collective="false" import="true" type="model">
-          <modifiers>
-            <modifier type="set" field="b0b4-6aec-82c2-02ae" value="70.0">
-              <conditions>
-                <condition field="selections" scope="parent" value="4.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" type="equalTo"/>
-              </conditions>
-            </modifier>
-          </modifiers>
           <constraints>
-            <constraint field="selections" scope="parent" value="4.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="b494-d171-7e53-0a05" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="b494-d171-7e53-0a05" type="max"/>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="afa6-e2ed-0e5d-52b9" type="min"/>
           </constraints>
           <costs>
-            <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="80.0"/>
+            <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="5db9-dbb6-40b6-fc90" name="CONDITIONAL BATTLELINE" hidden="false" collective="false" import="true" type="upgrade">
@@ -2215,29 +2254,11 @@
           </costs>
         </selectionEntry>
       </selectionEntries>
-      <selectionEntryGroups>
-        <selectionEntryGroup id="b3de-05c0-eab2-b6c8" name="Unit Options" hidden="false" collective="false" import="true">
-          <selectionEntries>
-            <selectionEntry id="4483-69a0-cdd6-a1ed" name="Prophet" hidden="false" collective="false" import="true" type="upgrade">
-              <constraints>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="b18a-5d89-7aea-41d3" type="max"/>
-              </constraints>
-              <profiles>
-                <profile id="7f07-0903-04b4-1220" name="Prophet" hidden="false" typeId="c23b-5a30-07e2-4706" typeName="Unit Options">
-                  <characteristics>
-                    <characteristic name="Unit Option" typeId="5879-9a21-e9d2-539d">1 model in this unit can be a Prophet. Add 1 to the Attacks characteristic of that model’s melee weapon.</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-              <costs>
-                <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
-              </costs>
-            </selectionEntry>
-          </selectionEntries>
-        </selectionEntryGroup>
-      </selectionEntryGroups>
+      <entryLinks>
+        <entryLink id="bf16-ffcc-6650-cb95" name="Unit Reinforcement" hidden="false" collective="false" import="true" targetId="b493-d9e6-82ca-5488" type="selectionEntry"/>
+      </entryLinks>
       <costs>
-        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
+        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="80.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="fd2d-8df5-bf31-0ad9" name="Battlemage" publicationId="88ce-c2fe-b89c-ed48" hidden="false" collective="false" import="true" type="unit">
@@ -2403,7 +2424,7 @@
         </selectionEntryGroup>
       </selectionEntryGroups>
       <costs>
-        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="110.0"/>
+        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="115.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="9ac4-79ef-1250-f2ee" name="Battlemage on Griffon" publicationId="88ce-c2fe-b89c-ed48" hidden="false" collective="false" import="true" type="unit">
@@ -2575,7 +2596,7 @@
         </selectionEntry>
       </selectionEntries>
       <costs>
-        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="300.0"/>
+        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="275.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="23fb-797b-8727-77a3" name="Luminark of Hysh" publicationId="88ce-c2fe-b89c-ed48" hidden="false" collective="false" import="true" type="unit">
@@ -2752,7 +2773,7 @@
         </selectionEntry>
       </selectionEntries>
       <costs>
-        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="210.0"/>
+        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="220.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="9cc9-f2c1-ee38-6b6e" name="Celestial Hurricanum" publicationId="88ce-c2fe-b89c-ed48" hidden="false" collective="false" import="true" type="unit">
@@ -2929,7 +2950,7 @@
         </selectionEntry>
       </selectionEntries>
       <costs>
-        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="220.0"/>
+        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="230.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="b8b2-7494-343e-6c9c" name="Celestial Hurricanum with Celestial Battlemage" publicationId="88ce-c2fe-b89c-ed48" hidden="false" collective="false" import="true" type="unit">
@@ -3411,7 +3432,7 @@
         </selectionEntry>
       </selectionEntries>
       <costs>
-        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="270.0"/>
+        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="275.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="9c4f-5945-0fe0-d28c" name="Sorceress on Black Dragon" publicationId="88ce-c2fe-b89c-ed48" hidden="false" collective="false" import="true" type="unit">
@@ -3667,7 +3688,7 @@
         </selectionEntryGroup>
       </selectionEntryGroups>
       <costs>
-        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="300.0"/>
+        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="295.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="ca0d-8bfa-981e-a44c" name="Sorceress" publicationId="88ce-c2fe-b89c-ed48" hidden="false" collective="false" import="true" type="unit">
@@ -3737,10 +3758,20 @@
         </selectionEntry>
       </selectionEntries>
       <costs>
-        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="90.0"/>
+        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="95.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="621b-e6a2-018c-ec41" name="Black Guard" publicationId="88ce-c2fe-b89c-ed48" hidden="false" collective="false" import="true" type="unit">
+      <modifiers>
+        <modifier type="increment" field="b0b4-6aec-82c2-02ae" value="135.0">
+          <repeats>
+            <repeat field="selections" scope="621b-e6a2-018c-ec41" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e20c-48d8-e5e3-1a36" repeats="1" roundUp="false"/>
+          </repeats>
+          <conditions>
+            <condition field="selections" scope="621b-e6a2-018c-ec41" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e20c-48d8-e5e3-1a36" type="greaterThan"/>
+          </conditions>
+        </modifier>
+      </modifiers>
       <profiles>
         <profile id="31f2-97c5-2c18-efd6" name="Black Guard" hidden="false" typeId="3956-f6dd-6c88-ae4b" typeName="Unit">
           <characteristics>
@@ -3748,6 +3779,11 @@
             <characteristic name="Wounds" typeId="a0c6-af64-2f24-5759">1</characteristic>
             <characteristic name="Save" typeId="93b6-2f96-2df7-e330">4+</characteristic>
             <characteristic name="Bravery" typeId="2420-1c5c-1016-7033">8</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="f579-2758-ff30-05a5" name="Captain" hidden="false" typeId="c23b-5a30-07e2-4706" typeName="Unit Options">
+          <characteristics>
+            <characteristic name="Unit Option" typeId="5879-9a21-e9d2-539d">1 model in this unit can be a Captain. Add 1 to the Attacks characteristic of that model’s melee weapon.</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -3762,11 +3798,11 @@
       <selectionEntries>
         <selectionEntry id="f585-13e3-eaa8-36af" name="10 Black Guard" hidden="false" collective="false" import="true" type="model">
           <constraints>
-            <constraint field="selections" scope="parent" value="3.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="0605-e826-6be5-6a21" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="0605-e826-6be5-6a21" type="max"/>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="862c-3abd-4032-20b1" type="min"/>
           </constraints>
           <costs>
-            <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="130.0"/>
+            <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="4998-83a1-e62d-a91a" name="CONDITIONAL BATTLELINE" hidden="false" collective="false" import="true" type="upgrade">
@@ -3840,21 +3876,6 @@
       <selectionEntryGroups>
         <selectionEntryGroup id="c8c3-b63d-7a50-68af" name="Unit Options" hidden="false" collective="false" import="true">
           <selectionEntries>
-            <selectionEntry id="aae1-9662-f5d8-0cc1" name="Captain" hidden="false" collective="false" import="true" type="upgrade">
-              <constraints>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="fa91-4edf-9221-9c32" type="max"/>
-              </constraints>
-              <profiles>
-                <profile id="5d63-e136-f9e3-d233" name="Captain" hidden="false" typeId="c23b-5a30-07e2-4706" typeName="Unit Options">
-                  <characteristics>
-                    <characteristic name="Unit Option" typeId="5879-9a21-e9d2-539d">1 model in this unit can be a Captain. Add 1 to the Attacks characteristic of that model’s melee weapon.</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-              <costs>
-                <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
-              </costs>
-            </selectionEntry>
             <selectionEntry id="531f-6419-3b6f-4828" name="Standard Bearer" hidden="false" collective="false" import="true" type="upgrade">
               <modifiers>
                 <modifier type="increment" field="bde0-707e-fe6e-4b8c" value="1.0">
@@ -3908,11 +3929,24 @@
           </selectionEntries>
         </selectionEntryGroup>
       </selectionEntryGroups>
+      <entryLinks>
+        <entryLink id="6d2c-4e5f-a550-4551" name="Unit Reinforcement" hidden="false" collective="false" import="true" targetId="b493-d9e6-82ca-5488" type="selectionEntry"/>
+      </entryLinks>
       <costs>
-        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
+        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="135.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="c8b2-f93a-46f0-6e84" name="Executioners" publicationId="88ce-c2fe-b89c-ed48" hidden="false" collective="false" import="true" type="unit">
+      <modifiers>
+        <modifier type="increment" field="b0b4-6aec-82c2-02ae" value="130.0">
+          <repeats>
+            <repeat field="selections" scope="c8b2-f93a-46f0-6e84" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e20c-48d8-e5e3-1a36" repeats="1" roundUp="false"/>
+          </repeats>
+          <conditions>
+            <condition field="selections" scope="c8b2-f93a-46f0-6e84" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e20c-48d8-e5e3-1a36" type="greaterThan"/>
+          </conditions>
+        </modifier>
+      </modifiers>
       <profiles>
         <profile id="e9ed-c85b-a2ab-7ba3" name="Executioners" hidden="false" typeId="3956-f6dd-6c88-ae4b" typeName="Unit">
           <characteristics>
@@ -3920,6 +3954,11 @@
             <characteristic name="Wounds" typeId="a0c6-af64-2f24-5759">1</characteristic>
             <characteristic name="Save" typeId="93b6-2f96-2df7-e330">4+</characteristic>
             <characteristic name="Bravery" typeId="2420-1c5c-1016-7033">7</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="e285-31e1-ed2d-f57a" name="Draich Master" hidden="false" typeId="c23b-5a30-07e2-4706" typeName="Unit Options">
+          <characteristics>
+            <characteristic name="Unit Option" typeId="5879-9a21-e9d2-539d">1 model in this unit can be a Draich Master. Add 1 to the Attacks characteristic of that model’s melee weapon.</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -3933,19 +3972,12 @@
       </categoryLinks>
       <selectionEntries>
         <selectionEntry id="f32a-16e4-4f30-64a0" name="10 Executioners" hidden="false" collective="false" import="true" type="model">
-          <modifiers>
-            <modifier type="set" field="b0b4-6aec-82c2-02ae" value="100.0">
-              <conditions>
-                <condition field="selections" scope="parent" value="3.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" type="equalTo"/>
-              </conditions>
-            </modifier>
-          </modifiers>
           <constraints>
-            <constraint field="selections" scope="parent" value="3.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8889-ea73-6bc3-20b1" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8889-ea73-6bc3-20b1" type="max"/>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="2da2-fcc6-bec0-7431" type="min"/>
           </constraints>
           <costs>
-            <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="120.0"/>
+            <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="d6e3-84ec-5b01-2f6c" name="CONDITIONAL BATTLELINE" hidden="false" collective="false" import="true" type="upgrade">
@@ -4019,21 +4051,6 @@
       <selectionEntryGroups>
         <selectionEntryGroup id="6f6b-9deb-7994-231d" name="Unit Options" hidden="false" collective="false" import="true">
           <selectionEntries>
-            <selectionEntry id="f012-c518-8bb3-9fea" name="Draich Master" hidden="false" collective="false" import="true" type="upgrade">
-              <constraints>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="7ad3-e3eb-5f20-6c3b" type="max"/>
-              </constraints>
-              <profiles>
-                <profile id="2784-e48d-5953-7876" name="Draich Master" hidden="false" typeId="c23b-5a30-07e2-4706" typeName="Unit Options">
-                  <characteristics>
-                    <characteristic name="Unit Option" typeId="5879-9a21-e9d2-539d">1 model in this unit can be a Draich Master. Add 1 to the Attacks characteristic of that model’s melee weapon.</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-              <costs>
-                <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
-              </costs>
-            </selectionEntry>
             <selectionEntry id="5bcc-5cdb-6a86-c6c6" name="Standard Bearer" hidden="false" collective="false" import="true" type="upgrade">
               <modifiers>
                 <modifier type="increment" field="dc0e-bc4e-2529-edda" value="1.0">
@@ -4087,8 +4104,11 @@
           </selectionEntries>
         </selectionEntryGroup>
       </selectionEntryGroups>
+      <entryLinks>
+        <entryLink id="c91b-5b93-d44b-fd7d" name="Unit Reinforcement" hidden="false" collective="false" import="true" targetId="b493-d9e6-82ca-5488" type="selectionEntry"/>
+      </entryLinks>
       <costs>
-        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
+        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="130.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="fff8-84ba-9327-c684" name="Bleakswords" publicationId="88ce-c2fe-b89c-ed48" hidden="false" collective="false" import="true" type="unit">
@@ -4104,6 +4124,14 @@
             </conditionGroup>
           </conditionGroups>
         </modifier>
+        <modifier type="increment" field="b0b4-6aec-82c2-02ae" value="95.0">
+          <repeats>
+            <repeat field="selections" scope="fff8-84ba-9327-c684" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e20c-48d8-e5e3-1a36" repeats="1" roundUp="false"/>
+          </repeats>
+          <conditions>
+            <condition field="selections" scope="fff8-84ba-9327-c684" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e20c-48d8-e5e3-1a36" type="greaterThan"/>
+          </conditions>
+        </modifier>
       </modifiers>
       <profiles>
         <profile id="0af2-dcb6-2327-b91f" name="Bleakswords" hidden="false" typeId="3956-f6dd-6c88-ae4b" typeName="Unit">
@@ -4112,6 +4140,11 @@
             <characteristic name="Wounds" typeId="a0c6-af64-2f24-5759">1</characteristic>
             <characteristic name="Save" typeId="93b6-2f96-2df7-e330">4+</characteristic>
             <characteristic name="Bravery" typeId="2420-1c5c-1016-7033">6</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="af54-4b41-e294-1812" name="Lordling" hidden="false" typeId="c23b-5a30-07e2-4706" typeName="Unit Options">
+          <characteristics>
+            <characteristic name="Unit Option" typeId="5879-9a21-e9d2-539d">1 model in this unit can be a Lordling. Add 1 to the Attacks characteristic of that model’s melee weapon.</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -4126,19 +4159,12 @@
       </categoryLinks>
       <selectionEntries>
         <selectionEntry id="391c-e8f9-1a1d-1aa7" name="10 Bleakswords" hidden="false" collective="false" import="true" type="model">
-          <modifiers>
-            <modifier type="set" field="b0b4-6aec-82c2-02ae" value="80.0">
-              <conditions>
-                <condition field="selections" scope="parent" value="4.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" type="equalTo"/>
-              </conditions>
-            </modifier>
-          </modifiers>
           <constraints>
-            <constraint field="selections" scope="parent" value="4.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="6bd1-a3b5-ce74-d27e" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="6bd1-a3b5-ce74-d27e" type="max"/>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="47f2-3ed7-fe9f-280d" type="min"/>
           </constraints>
           <costs>
-            <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="90.0"/>
+            <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="d20e-28b3-f339-bb80" name="BATTLELINE" hidden="false" collective="false" import="true" type="upgrade">
@@ -4217,21 +4243,6 @@
       <selectionEntryGroups>
         <selectionEntryGroup id="7356-aa92-57d4-f044" name="Unit Options" hidden="false" collective="false" import="true">
           <selectionEntries>
-            <selectionEntry id="eb60-fe8c-01b9-cbf1" name="Lordling" hidden="false" collective="false" import="true" type="upgrade">
-              <constraints>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="0a27-0331-ceda-9221" type="max"/>
-              </constraints>
-              <profiles>
-                <profile id="5d8f-39de-735b-a9be" name="Lordling" hidden="false" typeId="c23b-5a30-07e2-4706" typeName="Unit Options">
-                  <characteristics>
-                    <characteristic name="Unit Option" typeId="5879-9a21-e9d2-539d">1 model in this unit can be a Lordling. Add 1 to the Attacks characteristic of that model’s melee weapon.</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-              <costs>
-                <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
-              </costs>
-            </selectionEntry>
             <selectionEntry id="a1cb-3808-6e32-50c7" name="Standard Bearer" hidden="false" collective="false" import="true" type="upgrade">
               <modifiers>
                 <modifier type="increment" field="8192-2b1a-5909-88d8" value="1.0">
@@ -4285,8 +4296,11 @@
           </selectionEntries>
         </selectionEntryGroup>
       </selectionEntryGroups>
+      <entryLinks>
+        <entryLink id="4f26-1104-6657-5174" name="Unit Reinforcement" hidden="false" collective="false" import="true" targetId="b493-d9e6-82ca-5488" type="selectionEntry"/>
+      </entryLinks>
       <costs>
-        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
+        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="95.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="848e-a467-b591-291b" name="Dreadspears" publicationId="88ce-c2fe-b89c-ed48" hidden="false" collective="false" import="true" type="unit">
@@ -4302,6 +4316,14 @@
             </conditionGroup>
           </conditionGroups>
         </modifier>
+        <modifier type="increment" field="b0b4-6aec-82c2-02ae" value="90.0">
+          <repeats>
+            <repeat field="selections" scope="848e-a467-b591-291b" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e20c-48d8-e5e3-1a36" repeats="1" roundUp="false"/>
+          </repeats>
+          <conditions>
+            <condition field="selections" scope="848e-a467-b591-291b" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e20c-48d8-e5e3-1a36" type="greaterThan"/>
+          </conditions>
+        </modifier>
       </modifiers>
       <profiles>
         <profile id="2960-771c-8526-5b55" name="Dreadspears" hidden="false" typeId="3956-f6dd-6c88-ae4b" typeName="Unit">
@@ -4310,6 +4332,11 @@
             <characteristic name="Wounds" typeId="a0c6-af64-2f24-5759">1</characteristic>
             <characteristic name="Save" typeId="93b6-2f96-2df7-e330">4+</characteristic>
             <characteristic name="Bravery" typeId="2420-1c5c-1016-7033">6</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="8271-29e3-6155-e3d8" name="Lordling" hidden="false" typeId="c23b-5a30-07e2-4706" typeName="Unit Options">
+          <characteristics>
+            <characteristic name="Unit Option" typeId="5879-9a21-e9d2-539d">1 model in this unit can be a Lordling. Add 1 to the Attacks characteristic of that model’s melee weapon.</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -4324,19 +4351,12 @@
       </categoryLinks>
       <selectionEntries>
         <selectionEntry id="f1c1-3bee-dbbc-4408" name="10 Dreadspears" hidden="false" collective="false" import="true" type="model">
-          <modifiers>
-            <modifier type="set" field="b0b4-6aec-82c2-02ae" value="80.0">
-              <conditions>
-                <condition field="selections" scope="parent" value="4.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" type="equalTo"/>
-              </conditions>
-            </modifier>
-          </modifiers>
           <constraints>
-            <constraint field="selections" scope="parent" value="4.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="a42c-ab6e-db2e-58e4" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="a42c-ab6e-db2e-58e4" type="max"/>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="f17f-7739-1e55-8d91" type="min"/>
           </constraints>
           <costs>
-            <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="90.0"/>
+            <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="36fc-983a-f355-077b" name="BATTLELINE" hidden="false" collective="false" import="true" type="upgrade">
@@ -4415,21 +4435,6 @@
       <selectionEntryGroups>
         <selectionEntryGroup id="53b9-bc9d-5a49-d884" name="Unit Options" hidden="false" collective="false" import="true">
           <selectionEntries>
-            <selectionEntry id="84a0-ebcb-a9dc-8f2b" name="Lordling" hidden="false" collective="false" import="true" type="upgrade">
-              <constraints>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="7147-6ee8-c232-96de" type="max"/>
-              </constraints>
-              <profiles>
-                <profile id="8d23-d92c-eaf0-f47b" name="Lordling" hidden="false" typeId="c23b-5a30-07e2-4706" typeName="Unit Options">
-                  <characteristics>
-                    <characteristic name="Unit Option" typeId="5879-9a21-e9d2-539d">1 model in this unit can be a Lordling. Add 1 to the Attacks characteristic of that model’s melee weapon.</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-              <costs>
-                <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
-              </costs>
-            </selectionEntry>
             <selectionEntry id="e61b-519e-f0f2-4971" name="Standard Bearer" hidden="false" collective="false" import="true" type="upgrade">
               <modifiers>
                 <modifier type="increment" field="ce33-b50e-8151-4985" value="1.0">
@@ -4483,8 +4488,11 @@
           </selectionEntries>
         </selectionEntryGroup>
       </selectionEntryGroups>
+      <entryLinks>
+        <entryLink id="4460-d5d8-ee80-467d" name="Unit Reinforcement" hidden="false" collective="false" import="true" targetId="b493-d9e6-82ca-5488" type="selectionEntry"/>
+      </entryLinks>
       <costs>
-        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
+        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="90.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="332a-070f-d2ce-6ae8" name="Darkshards" publicationId="88ce-c2fe-b89c-ed48" hidden="false" collective="false" import="true" type="unit">
@@ -4500,6 +4508,14 @@
             </conditionGroup>
           </conditionGroups>
         </modifier>
+        <modifier type="increment" field="b0b4-6aec-82c2-02ae" value="115.0">
+          <repeats>
+            <repeat field="selections" scope="332a-070f-d2ce-6ae8" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e20c-48d8-e5e3-1a36" repeats="1" roundUp="false"/>
+          </repeats>
+          <conditions>
+            <condition field="selections" scope="332a-070f-d2ce-6ae8" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e20c-48d8-e5e3-1a36" type="greaterThan"/>
+          </conditions>
+        </modifier>
       </modifiers>
       <profiles>
         <profile id="0a57-e554-9ae6-224d" name="Darkshards" hidden="false" typeId="3956-f6dd-6c88-ae4b" typeName="Unit">
@@ -4508,6 +4524,11 @@
             <characteristic name="Wounds" typeId="a0c6-af64-2f24-5759">1</characteristic>
             <characteristic name="Save" typeId="93b6-2f96-2df7-e330">5+</characteristic>
             <characteristic name="Bravery" typeId="2420-1c5c-1016-7033">6</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="d1d2-c179-b7e5-a7e3" name="Guardmaster" hidden="false" typeId="c23b-5a30-07e2-4706" typeName="Unit Options">
+          <characteristics>
+            <characteristic name="Unit Option" typeId="5879-9a21-e9d2-539d">1 model in this unit can be a Guardmaster. Add 1 to hit rolls for attacks made with this model’s missile weapon.</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -4523,11 +4544,11 @@
       <selectionEntries>
         <selectionEntry id="2696-4871-c3d5-9e7e" name="10 Darkshards" hidden="false" collective="false" import="true" type="model">
           <constraints>
-            <constraint field="selections" scope="parent" value="4.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="80a1-ee53-1a35-1991" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="80a1-ee53-1a35-1991" type="max"/>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="a11a-a877-449b-1483" type="min"/>
           </constraints>
           <costs>
-            <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="100.0"/>
+            <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="779b-cc18-d679-c6a5" name="BATTLELINE" hidden="false" collective="false" import="true" type="upgrade">
@@ -4612,21 +4633,6 @@
       <selectionEntryGroups>
         <selectionEntryGroup id="06c7-b6f4-6043-9b3c" name="Unit Options" hidden="false" collective="false" import="true">
           <selectionEntries>
-            <selectionEntry id="6a9f-bb36-dc75-1103" name="Guardmaster" hidden="false" collective="false" import="true" type="upgrade">
-              <constraints>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="7c3b-1728-2ba9-acb3" type="max"/>
-              </constraints>
-              <profiles>
-                <profile id="f9e2-9ade-2464-45d4" name="Guardmaster" hidden="false" typeId="c23b-5a30-07e2-4706" typeName="Unit Options">
-                  <characteristics>
-                    <characteristic name="Unit Option" typeId="5879-9a21-e9d2-539d">1 model in this unit can be a Guardmaster. Add 1 to hit rolls for attacks made with this model’s missile weapon.</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-              <costs>
-                <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
-              </costs>
-            </selectionEntry>
             <selectionEntry id="1696-1baa-5771-b2b6" name="Standard Bearer" hidden="false" collective="false" import="true" type="upgrade">
               <modifiers>
                 <modifier type="increment" field="9a3a-491a-77a9-36dd" value="1.0">
@@ -4680,8 +4686,11 @@
           </selectionEntries>
         </selectionEntryGroup>
       </selectionEntryGroups>
+      <entryLinks>
+        <entryLink id="33c8-6568-6ea7-0a28" name="Unit Reinforcement" hidden="false" collective="false" import="true" targetId="b493-d9e6-82ca-5488" type="selectionEntry"/>
+      </entryLinks>
       <costs>
-        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
+        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="115.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="89ac-badb-d71a-836f" name="Steam Tank" publicationId="88ce-c2fe-b89c-ed48" hidden="false" collective="false" import="true" type="unit">
@@ -4864,7 +4873,7 @@ If the roll is equal to or greater than the number of wounds currently allocated
         </selectionEntry>
       </selectionEntries>
       <costs>
-        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="180.0"/>
+        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="195.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="1720-527b-5e38-b055" name="Steam Tank with Commander" publicationId="88ce-c2fe-b89c-ed48" hidden="false" collective="false" import="true" type="unit">
@@ -5205,7 +5214,7 @@ If the roll is equal to or greater than the number of wounds currently allocated
         </selectionEntry>
       </selectionEntries>
       <costs>
-        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="120.0"/>
+        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="125.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="33de-3e93-581c-94b3" name="Helstorm Rocket Battery" publicationId="88ce-c2fe-b89c-ed48" hidden="false" collective="false" import="true" type="unit">
@@ -5289,7 +5298,7 @@ If the roll is equal to or greater than the number of wounds currently allocated
         </selectionEntry>
       </selectionEntries>
       <costs>
-        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="130.0"/>
+        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="135.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="43f7-3ee0-c45e-6dd9" name="Anointed" publicationId="88ce-c2fe-b89c-ed48" hidden="false" collective="false" import="true" type="unit">
@@ -5352,10 +5361,20 @@ If the roll is equal to or greater than the number of wounds currently allocated
         </selectionEntry>
       </selectionEntries>
       <costs>
-        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="100.0"/>
+        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="110.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="943c-30ad-737d-9108" name="Phoenix Guard" publicationId="88ce-c2fe-b89c-ed48" hidden="false" collective="false" import="true" type="unit">
+      <modifiers>
+        <modifier type="increment" field="b0b4-6aec-82c2-02ae" value="175.0">
+          <repeats>
+            <repeat field="selections" scope="943c-30ad-737d-9108" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e20c-48d8-e5e3-1a36" repeats="1" roundUp="false"/>
+          </repeats>
+          <conditions>
+            <condition field="selections" scope="943c-30ad-737d-9108" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e20c-48d8-e5e3-1a36" type="greaterThan"/>
+          </conditions>
+        </modifier>
+      </modifiers>
       <profiles>
         <profile id="7cd5-9fb5-0208-d161" name="Phoenix Guard" hidden="false" typeId="3956-f6dd-6c88-ae4b" typeName="Unit">
           <characteristics>
@@ -5373,6 +5392,11 @@ If the roll is equal to or greater than the number of wounds currently allocated
         <profile id="6012-d7f2-b9ba-58d2" name="Emboldened" hidden="false" typeId="7861-da01-01c0-88d9" typeName="Ability">
           <characteristics>
             <characteristic name="Ability" typeId="9bce-4deb-8b79-eaec">Do not take battleshock tests for this unit while it is wholly within 12&quot; of a friendly PHOENIX TEMPLE HERO.</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="27dd-f4cd-3c15-b1a5" name="Keeper of the Flame" hidden="false" typeId="c23b-5a30-07e2-4706" typeName="Unit Options">
+          <characteristics>
+            <characteristic name="Unit Option" typeId="5879-9a21-e9d2-539d">1 model in this unit can be a Keeper of the Flame. Add 1 to the Attacks characteristic of that model’s melee weapon.</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -5408,19 +5432,12 @@ If the roll is equal to or greater than the number of wounds currently allocated
           </costs>
         </selectionEntry>
         <selectionEntry id="161f-cb8e-4982-5e71" name="10 Phoenix Guard" hidden="false" collective="false" import="true" type="model">
-          <modifiers>
-            <modifier type="set" field="b0b4-6aec-82c2-02ae" value="140.0">
-              <conditions>
-                <condition field="selections" scope="parent" value="3.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" type="equalTo"/>
-              </conditions>
-            </modifier>
-          </modifiers>
           <constraints>
-            <constraint field="selections" scope="parent" value="3.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="bc5e-9faf-5701-a72c" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="bc5e-9faf-5701-a72c" type="max"/>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="94fb-78ee-0dbd-702a" type="min"/>
           </constraints>
           <costs>
-            <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="160.0"/>
+            <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="c05b-80a1-c37d-c319" name="CONDITIONAL BATTLELINE" hidden="false" collective="false" import="true" type="upgrade">
@@ -5467,21 +5484,6 @@ If the roll is equal to or greater than the number of wounds currently allocated
       <selectionEntryGroups>
         <selectionEntryGroup id="3d9a-f16a-e9dc-35a4" name="Unit Options" hidden="false" collective="false" import="true">
           <selectionEntries>
-            <selectionEntry id="c3be-15b1-3111-040d" name="Keeper of the Flame" hidden="false" collective="false" import="true" type="upgrade">
-              <constraints>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d5f4-1c35-0388-2182" type="max"/>
-              </constraints>
-              <profiles>
-                <profile id="d86a-a70b-abdc-ab9d" name="Keeper of the Flame" hidden="false" typeId="c23b-5a30-07e2-4706" typeName="Unit Options">
-                  <characteristics>
-                    <characteristic name="Unit Option" typeId="5879-9a21-e9d2-539d">1 model in this unit can be a Keeper of the Flame. Add 1 to the Attacks characteristic of that model’s melee weapon.</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-              <costs>
-                <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
-              </costs>
-            </selectionEntry>
             <selectionEntry id="26c0-fdd1-3077-1410" name="Standard Bearer" hidden="false" collective="false" import="true" type="upgrade">
               <modifiers>
                 <modifier type="increment" field="b517-64a5-2955-d1f7" value="1.0">
@@ -5535,8 +5537,11 @@ If the roll is equal to or greater than the number of wounds currently allocated
           </selectionEntries>
         </selectionEntryGroup>
       </selectionEntryGroups>
+      <entryLinks>
+        <entryLink id="fcd6-6e5b-8ba9-0230" name="Unit Reinforcement" hidden="false" collective="false" import="true" targetId="b493-d9e6-82ca-5488" type="selectionEntry"/>
+      </entryLinks>
       <costs>
-        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
+        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="175.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="cc45-50cc-c8c4-933d" name="Frostheart Phoenix" publicationId="88ce-c2fe-b89c-ed48" hidden="false" collective="false" import="true" type="unit">
@@ -5780,7 +5785,7 @@ If the roll is equal to or greater than the number of wounds currently allocated
         </selectionEntry>
       </selectionEntries>
       <costs>
-        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="320.0"/>
+        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="315.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="4d7c-6bc6-6f4a-f41b" name="Flamespyre Phoenix" publicationId="88ce-c2fe-b89c-ed48" hidden="false" collective="false" import="true" type="unit">
@@ -5881,7 +5886,7 @@ If the roll is equal to or greater than the number of wounds currently allocated
         </selectionEntry>
       </selectionEntries>
       <costs>
-        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="200.0"/>
+        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="205.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="1bbb-3361-4c4f-f567" name="Anointed on Flamespyre Phoenix" publicationId="88ce-c2fe-b89c-ed48" hidden="false" collective="false" import="true" type="unit">
@@ -6034,7 +6039,7 @@ If the roll is equal to or greater than the number of wounds currently allocated
         </selectionEntry>
       </selectionEntries>
       <costs>
-        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="300.0"/>
+        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="290.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="47e9-3045-4a24-c839" name="Dreadlord on Black Dragon" publicationId="88ce-c2fe-b89c-ed48" hidden="false" collective="false" import="true" type="unit">
@@ -6049,36 +6054,36 @@ If the roll is equal to or greater than the number of wounds currently allocated
         </profile>
         <profile id="3ecc-fe54-88bb-f05c" name="00-03" hidden="false" typeId="b915-c543-3bd9-3974" typeName="HERO on Black Dragon Wounds">
           <characteristics>
-            <characteristic name="Move" typeId="1f03-41aa-7e62-fa57">12&quot;</characteristic>
-            <characteristic name="Fearsome Jaws" typeId="d249-28ee-7f27-19ba">2+</characteristic>
+            <characteristic name="Move" typeId="1f03-41aa-7e62-fa57">14&quot;</characteristic>
+            <characteristic name="Fearsome Jaws" typeId="d249-28ee-7f27-19ba">1+</characteristic>
             <characteristic name="Razor-sharp Claws" typeId="485d-1f72-694f-019c">6</characteristic>
           </characteristics>
         </profile>
         <profile id="47f5-1711-6e7a-3792" name="13+" hidden="false" typeId="b915-c543-3bd9-3974" typeName="HERO on Black Dragon Wounds">
           <characteristics>
-            <characteristic name="Move" typeId="1f03-41aa-7e62-fa57">4&quot;</characteristic>
-            <characteristic name="Fearsome Jaws" typeId="d249-28ee-7f27-19ba">4+</characteristic>
+            <characteristic name="Move" typeId="1f03-41aa-7e62-fa57">6&quot;</characteristic>
+            <characteristic name="Fearsome Jaws" typeId="d249-28ee-7f27-19ba">5+</characteristic>
             <characteristic name="Razor-sharp Claws" typeId="485d-1f72-694f-019c">2</characteristic>
           </characteristics>
         </profile>
         <profile id="a61d-3265-113f-b399" name="10-12" hidden="false" typeId="b915-c543-3bd9-3974" typeName="HERO on Black Dragon Wounds">
           <characteristics>
-            <characteristic name="Move" typeId="1f03-41aa-7e62-fa57">6&quot;</characteristic>
+            <characteristic name="Move" typeId="1f03-41aa-7e62-fa57">8&quot;</characteristic>
             <characteristic name="Fearsome Jaws" typeId="d249-28ee-7f27-19ba">4+</characteristic>
             <characteristic name="Razor-sharp Claws" typeId="485d-1f72-694f-019c">3</characteristic>
           </characteristics>
         </profile>
         <profile id="f016-e24d-5eec-d3ff" name="07-09" hidden="false" typeId="b915-c543-3bd9-3974" typeName="HERO on Black Dragon Wounds">
           <characteristics>
-            <characteristic name="Move" typeId="1f03-41aa-7e62-fa57">8&quot;</characteristic>
+            <characteristic name="Move" typeId="1f03-41aa-7e62-fa57">10&quot;</characteristic>
             <characteristic name="Fearsome Jaws" typeId="d249-28ee-7f27-19ba">3+</characteristic>
             <characteristic name="Razor-sharp Claws" typeId="485d-1f72-694f-019c">4</characteristic>
           </characteristics>
         </profile>
         <profile id="91c1-0a08-1a5d-e8cb" name="04-06" hidden="false" typeId="b915-c543-3bd9-3974" typeName="HERO on Black Dragon Wounds">
           <characteristics>
-            <characteristic name="Move" typeId="1f03-41aa-7e62-fa57">10&quot;</characteristic>
-            <characteristic name="Fearsome Jaws" typeId="d249-28ee-7f27-19ba">3+</characteristic>
+            <characteristic name="Move" typeId="1f03-41aa-7e62-fa57">12&quot;</characteristic>
+            <characteristic name="Fearsome Jaws" typeId="d249-28ee-7f27-19ba">2+</characteristic>
             <characteristic name="Razor-sharp Claws" typeId="485d-1f72-694f-019c">5</characteristic>
           </characteristics>
         </profile>
@@ -6342,7 +6347,7 @@ If the roll is equal to or greater than the number of wounds currently allocated
         </selectionEntryGroup>
       </selectionEntryGroups>
       <costs>
-        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="300.0"/>
+        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="290.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="b87b-777b-2872-d687" name="War Hydra" publicationId="88ce-c2fe-b89c-ed48" hidden="false" collective="false" import="true" type="unit">
@@ -6563,6 +6568,16 @@ If the roll is equal to or greater than the number of wounds currently allocated
       </costs>
     </selectionEntry>
     <selectionEntry id="45f9-21c6-b485-6de1" name="Drakespawn Chariots" publicationId="88ce-c2fe-b89c-ed48" hidden="false" collective="false" import="true" type="unit">
+      <modifiers>
+        <modifier type="increment" field="b0b4-6aec-82c2-02ae" value="80.0">
+          <repeats>
+            <repeat field="selections" scope="45f9-21c6-b485-6de1" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e20c-48d8-e5e3-1a36" repeats="1" roundUp="false"/>
+          </repeats>
+          <conditions>
+            <condition field="selections" scope="45f9-21c6-b485-6de1" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e20c-48d8-e5e3-1a36" type="greaterThan"/>
+          </conditions>
+        </modifier>
+      </modifiers>
       <profiles>
         <profile id="7ca4-2cad-be96-409c" name="Drakespawn Chariots" hidden="false" typeId="3956-f6dd-6c88-ae4b" typeName="Unit">
           <characteristics>
@@ -6588,19 +6603,12 @@ If the roll is equal to or greater than the number of wounds currently allocated
       </categoryLinks>
       <selectionEntries>
         <selectionEntry id="a747-7737-ab80-5e9d" name="Drakespawn Chariot" hidden="false" collective="false" import="true" type="model">
-          <modifiers>
-            <modifier type="set" field="b0b4-6aec-82c2-02ae" value="70.0">
-              <conditions>
-                <condition field="selections" scope="parent" value="3.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" type="equalTo"/>
-              </conditions>
-            </modifier>
-          </modifiers>
           <constraints>
-            <constraint field="selections" scope="parent" value="3.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="911c-851f-8c89-2e1f" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="911c-851f-8c89-2e1f" type="max"/>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="fea1-7881-a698-ae48" type="min"/>
           </constraints>
           <costs>
-            <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="80.0"/>
+            <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="185b-2d1a-14b4-c85d" name="Mount" hidden="false" collective="false" import="true" type="upgrade">
@@ -6728,11 +6736,24 @@ If the roll is equal to or greater than the number of wounds currently allocated
           </costs>
         </selectionEntry>
       </selectionEntries>
+      <entryLinks>
+        <entryLink id="1cbd-95dd-daaf-60c2" name="Unit Reinforcement" hidden="false" collective="false" import="true" targetId="b493-d9e6-82ca-5488" type="selectionEntry"/>
+      </entryLinks>
       <costs>
-        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
+        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="80.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="d1c6-32c5-68a4-77d3" name="Drakespawn Knights" publicationId="88ce-c2fe-b89c-ed48" hidden="false" collective="false" import="true" type="unit">
+      <modifiers>
+        <modifier type="increment" field="b0b4-6aec-82c2-02ae" value="125.0">
+          <repeats>
+            <repeat field="selections" scope="d1c6-32c5-68a4-77d3" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e20c-48d8-e5e3-1a36" repeats="1" roundUp="false"/>
+          </repeats>
+          <conditions>
+            <condition field="selections" scope="d1c6-32c5-68a4-77d3" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e20c-48d8-e5e3-1a36" type="greaterThan"/>
+          </conditions>
+        </modifier>
+      </modifiers>
       <profiles>
         <profile id="d0d8-70a6-5f11-117b" name="Drakespawn Knights" hidden="false" typeId="3956-f6dd-6c88-ae4b" typeName="Unit">
           <characteristics>
@@ -6740,6 +6761,11 @@ If the roll is equal to or greater than the number of wounds currently allocated
             <characteristic name="Wounds" typeId="a0c6-af64-2f24-5759">2</characteristic>
             <characteristic name="Save" typeId="93b6-2f96-2df7-e330">3+</characteristic>
             <characteristic name="Bravery" typeId="2420-1c5c-1016-7033">7</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="f90a-f081-5fb3-6595" name="Dread Knight" hidden="false" typeId="c23b-5a30-07e2-4706" typeName="Unit Options">
+          <characteristics>
+            <characteristic name="Unit Option" typeId="5879-9a21-e9d2-539d">1 model in this unit can be a Dread Knight. Add 1 to the Attacks characteristic of that model’s melee weapon.</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -6794,11 +6820,11 @@ If the roll is equal to or greater than the number of wounds currently allocated
         </selectionEntry>
         <selectionEntry id="3264-9714-81d3-565c" name="5 Drakespawn Knights" hidden="false" collective="false" import="true" type="model">
           <constraints>
-            <constraint field="selections" scope="parent" value="4.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="e50c-6b2c-000c-b02a" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="e50c-6b2c-000c-b02a" type="max"/>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="0cd5-3f51-56c8-f31e" type="min"/>
           </constraints>
           <costs>
-            <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="130.0"/>
+            <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="1653-2696-249e-381e" name="Mount" hidden="false" collective="false" import="true" type="upgrade">
@@ -6872,21 +6898,6 @@ If the roll is equal to or greater than the number of wounds currently allocated
       <selectionEntryGroups>
         <selectionEntryGroup id="8bfc-6b8d-8487-588a" name="Unit Options" hidden="false" collective="false" import="true">
           <selectionEntries>
-            <selectionEntry id="ebd5-5153-9e78-5365" name="Dread Knight" hidden="false" collective="false" import="true" type="upgrade">
-              <constraints>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="e1fc-2b3e-5181-ab86" type="max"/>
-              </constraints>
-              <profiles>
-                <profile id="310d-5730-c1aa-8ebb" name="Dread Knight" hidden="false" typeId="c23b-5a30-07e2-4706" typeName="Unit Options">
-                  <characteristics>
-                    <characteristic name="Unit Option" typeId="5879-9a21-e9d2-539d">1 model in this unit can be a Dread Knight. Add 1 to the Attacks characteristic of that model’s melee weapon.</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-              <costs>
-                <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
-              </costs>
-            </selectionEntry>
             <selectionEntry id="74f6-a719-840f-4d2f" name="Standard Bearer" hidden="false" collective="false" import="true" type="upgrade">
               <modifiers>
                 <modifier type="increment" field="0681-b8a0-5972-ac8b" value="1.0">
@@ -6940,8 +6951,11 @@ If the roll is equal to or greater than the number of wounds currently allocated
           </selectionEntries>
         </selectionEntryGroup>
       </selectionEntryGroups>
+      <entryLinks>
+        <entryLink id="a9c2-b5c7-9746-773d" name="Unit Reinforcement" hidden="false" collective="false" import="true" targetId="b493-d9e6-82ca-5488" type="selectionEntry"/>
+      </entryLinks>
       <costs>
-        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
+        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="125.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="1a1c-cc03-aded-38b4" name="Assassin" publicationId="88ce-c2fe-b89c-ed48" hidden="false" collective="false" import="true" type="unit">
@@ -7003,6 +7017,16 @@ If the roll is equal to or greater than the number of wounds currently allocated
       </costs>
     </selectionEntry>
     <selectionEntry id="e881-4ee0-eacc-81f8" name="Shadow Warriors" publicationId="88ce-c2fe-b89c-ed48" hidden="false" collective="false" import="true" type="unit">
+      <modifiers>
+        <modifier type="increment" field="b0b4-6aec-82c2-02ae" value="120.0">
+          <repeats>
+            <repeat field="selections" scope="e881-4ee0-eacc-81f8" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e20c-48d8-e5e3-1a36" repeats="1" roundUp="false"/>
+          </repeats>
+          <conditions>
+            <condition field="selections" scope="e881-4ee0-eacc-81f8" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e20c-48d8-e5e3-1a36" type="greaterThan"/>
+          </conditions>
+        </modifier>
+      </modifiers>
       <profiles>
         <profile id="6012-cd37-6a2a-9253" name="Shadow Warriors" hidden="false" typeId="3956-f6dd-6c88-ae4b" typeName="Unit">
           <characteristics>
@@ -7017,6 +7041,11 @@ If the roll is equal to or greater than the number of wounds currently allocated
             <characteristic name="Ability" typeId="9bce-4deb-8b79-eaec">Instead of setting up this unit on the battlefield, you can place this unit to one side and say that it is set up in the shadows as a reserve unit. If you do so, at the end of your movement phase, you can set up this unit anywhere on the battlefield more than 9&quot; from any enemy units. Any reserve units in the shadows that are not set up on the battlefield before the start of the fourth battle round are destroyed.</characteristic>
           </characteristics>
         </profile>
+        <profile id="146a-9494-fbb7-e496" name="Shadow Walker" hidden="false" typeId="c23b-5a30-07e2-4706" typeName="Unit Options">
+          <characteristics>
+            <characteristic name="Unit Option" typeId="5879-9a21-e9d2-539d">1 model in this unit can be a Shadow Walker. Add 1 to hit rolls for attacks made with that model’s missile weapon.</characteristic>
+          </characteristics>
+        </profile>
       </profiles>
       <categoryLinks>
         <categoryLink id="b79e-a692-b6ed-d310" name="Aelf" hidden="false" targetId="babf-cdeb-b0ab-05db" primary="false"/>
@@ -7029,11 +7058,11 @@ If the roll is equal to or greater than the number of wounds currently allocated
       <selectionEntries>
         <selectionEntry id="d6ff-0159-444c-bab2" name="10 Shadow Warriors" hidden="false" collective="false" import="true" type="model">
           <constraints>
-            <constraint field="selections" scope="parent" value="3.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="2e59-88c8-f509-adc5" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="2e59-88c8-f509-adc5" type="max"/>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="2a86-3063-3be5-5d3e" type="min"/>
           </constraints>
           <costs>
-            <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="110.0"/>
+            <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="1c03-83e3-35a9-4c3c" name="CONDITIONAL BATTLELINE" hidden="false" collective="false" import="true" type="upgrade">
@@ -7126,32 +7155,24 @@ If the roll is equal to or greater than the number of wounds currently allocated
           </costs>
         </selectionEntry>
       </selectionEntries>
-      <selectionEntryGroups>
-        <selectionEntryGroup id="3733-f6a2-e0a7-165b" name="Unit Option" hidden="false" collective="false" import="true">
-          <selectionEntries>
-            <selectionEntry id="0ee8-d8f9-76b3-de1c" name="Shadow Walker" hidden="false" collective="false" import="true" type="upgrade">
-              <constraints>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="9a1c-8629-4ced-bb2a" type="max"/>
-              </constraints>
-              <profiles>
-                <profile id="f7c6-20db-c7d5-82bf" name="Shadow Walker" hidden="false" typeId="c23b-5a30-07e2-4706" typeName="Unit Options">
-                  <characteristics>
-                    <characteristic name="Unit Option" typeId="5879-9a21-e9d2-539d">1 model in this unit can be a Shadow Walker. Add 1 to hit rolls for attacks made with that model’s missile weapon.</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-              <costs>
-                <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
-              </costs>
-            </selectionEntry>
-          </selectionEntries>
-        </selectionEntryGroup>
-      </selectionEntryGroups>
+      <entryLinks>
+        <entryLink id="9658-7d4b-db4d-46a5" name="Unit Reinforcement" hidden="false" collective="false" import="true" targetId="b493-d9e6-82ca-5488" type="selectionEntry"/>
+      </entryLinks>
       <costs>
-        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
+        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="120.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="804b-d7b4-6223-6526" name="Dark Riders" publicationId="88ce-c2fe-b89c-ed48" hidden="false" collective="false" import="true" type="unit">
+      <modifiers>
+        <modifier type="increment" field="b0b4-6aec-82c2-02ae" value="115.0">
+          <repeats>
+            <repeat field="selections" scope="804b-d7b4-6223-6526" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e20c-48d8-e5e3-1a36" repeats="1" roundUp="false"/>
+          </repeats>
+          <conditions>
+            <condition field="selections" scope="804b-d7b4-6223-6526" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e20c-48d8-e5e3-1a36" type="greaterThan"/>
+          </conditions>
+        </modifier>
+      </modifiers>
       <profiles>
         <profile id="d673-8b63-3f05-d12f" name="Dark Riders" hidden="false" typeId="3956-f6dd-6c88-ae4b" typeName="Unit">
           <characteristics>
@@ -7164,6 +7185,11 @@ If the roll is equal to or greater than the number of wounds currently allocated
         <profile id="eb17-a230-f0b0-08d2" name="Sow Terror and Confusion" hidden="false" typeId="7861-da01-01c0-88d9" typeName="Ability">
           <characteristics>
             <characteristic name="Ability" typeId="9bce-4deb-8b79-eaec">Subtract 1 from the Bravery characteristic of enemy units while they are within 12&quot; of any friendly DARK RIDERS.</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="963d-220c-7116-e018" name="Herald" hidden="false" typeId="c23b-5a30-07e2-4706" typeName="Unit Options">
+          <characteristics>
+            <characteristic name="Unit Option" typeId="5879-9a21-e9d2-539d">1 model in this unit can be a Herald. Add 1 to hit rolls for attacks made with that model’s missile weapon.</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -7217,19 +7243,12 @@ If the roll is equal to or greater than the number of wounds currently allocated
           </costs>
         </selectionEntry>
         <selectionEntry id="5cdc-919b-3d8c-7449" name="5 Dark Riders" hidden="false" collective="false" import="true" type="model">
-          <modifiers>
-            <modifier type="set" field="b0b4-6aec-82c2-02ae" value="90.0">
-              <conditions>
-                <condition field="selections" scope="parent" value="4.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" type="equalTo"/>
-              </conditions>
-            </modifier>
-          </modifiers>
           <constraints>
-            <constraint field="selections" scope="parent" value="4.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="10fe-25cd-1882-ead8" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="10fe-25cd-1882-ead8" type="max"/>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d6ed-0386-5806-7713" type="min"/>
           </constraints>
           <costs>
-            <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="110.0"/>
+            <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="e8a9-3105-74e6-acaa" name="Mount" hidden="false" collective="false" import="true" type="upgrade">
@@ -7325,21 +7344,6 @@ If the roll is equal to or greater than the number of wounds currently allocated
       <selectionEntryGroups>
         <selectionEntryGroup id="9196-1191-1f58-89ca" name="Unit Options" hidden="false" collective="false" import="true">
           <selectionEntries>
-            <selectionEntry id="cb20-fc1f-47cf-be03" name="Herald" hidden="false" collective="false" import="true" type="upgrade">
-              <constraints>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="ceb8-017d-6983-f4d3" type="max"/>
-              </constraints>
-              <profiles>
-                <profile id="c4c1-2f35-7531-2f0a" name="Herald" hidden="false" typeId="c23b-5a30-07e2-4706" typeName="Unit Options">
-                  <characteristics>
-                    <characteristic name="Unit Option" typeId="5879-9a21-e9d2-539d">1 model in this unit can be a Herald. Add 1 to hit rolls for attacks made with that model’s missile weapon.</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-              <costs>
-                <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
-              </costs>
-            </selectionEntry>
             <selectionEntry id="5e68-fdd6-88bc-b163" name="Standard Bearer" hidden="false" collective="false" import="true" type="upgrade">
               <modifiers>
                 <modifier type="increment" field="a3de-28fc-70eb-cbc0" value="1.0">
@@ -7393,8 +7397,11 @@ If the roll is equal to or greater than the number of wounds currently allocated
           </selectionEntries>
         </selectionEntryGroup>
       </selectionEntryGroups>
+      <entryLinks>
+        <entryLink id="9a32-e511-01ff-44c6" name="Unit Reinforcement" hidden="false" collective="false" import="true" targetId="b493-d9e6-82ca-5488" type="selectionEntry"/>
+      </entryLinks>
       <costs>
-        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
+        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="115.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="d037-4415-f9f5-0214" name="Kharibdyss" publicationId="88ce-c2fe-b89c-ed48" hidden="false" collective="false" import="true" type="unit">
@@ -7616,7 +7623,7 @@ If the roll is equal to or greater than the number of wounds currently allocated
         </selectionEntry>
       </selectionEntries>
       <costs>
-        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="170.0"/>
+        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="165.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="230f-dd74-5a55-2227" name="Black Ark Fleetmaster" publicationId="88ce-c2fe-b89c-ed48" hidden="false" collective="false" import="true" type="unit">
@@ -7701,10 +7708,20 @@ If the roll is equal to or greater than the number of wounds currently allocated
         </selectionEntry>
       </selectionEntries>
       <costs>
-        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="60.0"/>
+        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="70.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="21a0-7f0c-2840-f652" name="Black Ark Corsairs" publicationId="88ce-c2fe-b89c-ed48" hidden="false" collective="false" import="true" type="unit">
+      <modifiers>
+        <modifier type="increment" field="b0b4-6aec-82c2-02ae" value="85.0">
+          <repeats>
+            <repeat field="selections" scope="21a0-7f0c-2840-f652" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e20c-48d8-e5e3-1a36" repeats="1" roundUp="false"/>
+          </repeats>
+          <conditions>
+            <condition field="selections" scope="21a0-7f0c-2840-f652" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e20c-48d8-e5e3-1a36" type="greaterThan"/>
+          </conditions>
+        </modifier>
+      </modifiers>
       <profiles>
         <profile id="3c81-37bc-d0fb-60ab" name="Black Ark Corsairs" hidden="false" typeId="3956-f6dd-6c88-ae4b" typeName="Unit">
           <characteristics>
@@ -7724,6 +7741,11 @@ If the roll is equal to or greater than the number of wounds currently allocated
             <characteristic name="Ability" typeId="9bce-4deb-8b79-eaec">Add 1 to hit rolls for attacks made by this unit if it has 15 or more models.</characteristic>
           </characteristics>
         </profile>
+        <profile id="5603-1ab4-5e07-d285" name="Reaver" hidden="false" typeId="c23b-5a30-07e2-4706" typeName="Unit Options">
+          <characteristics>
+            <characteristic name="Unit Option" typeId="5879-9a21-e9d2-539d">1 model in this unit can be a Reaver. Add 1 to hit rolls for attacks made by this model.</characteristic>
+          </characteristics>
+        </profile>
       </profiles>
       <categoryLinks>
         <categoryLink id="f503-8fcb-c08d-750c" name="Aelf" hidden="false" targetId="babf-cdeb-b0ab-05db" primary="false"/>
@@ -7735,19 +7757,12 @@ If the roll is equal to or greater than the number of wounds currently allocated
       </categoryLinks>
       <selectionEntries>
         <selectionEntry id="caac-b509-7d05-461b" name="10 Black Ark Corsairs" hidden="false" collective="false" import="true" type="model">
-          <modifiers>
-            <modifier type="set" field="b0b4-6aec-82c2-02ae" value="70.0">
-              <conditions>
-                <condition field="selections" scope="parent" value="4.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" type="equalTo"/>
-              </conditions>
-            </modifier>
-          </modifiers>
           <constraints>
-            <constraint field="selections" scope="parent" value="4.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="975a-fce8-9243-4a4e" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="975a-fce8-9243-4a4e" type="max"/>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="b6bb-99c6-330d-3f86" type="min"/>
           </constraints>
           <costs>
-            <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="80.0"/>
+            <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="b815-e2ba-d433-abb7" name="Vicious Blade" hidden="false" collective="false" import="true" type="upgrade">
@@ -7816,21 +7831,6 @@ If the roll is equal to or greater than the number of wounds currently allocated
       <selectionEntryGroups>
         <selectionEntryGroup id="38d4-1b36-08bf-1289" name="Unit Options" hidden="false" collective="false" import="true">
           <selectionEntries>
-            <selectionEntry id="0d8e-fc0b-333f-5ce1" name="Reaver" hidden="false" collective="false" import="true" type="upgrade">
-              <constraints>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="ae73-c85f-a7ae-4929" type="max"/>
-              </constraints>
-              <profiles>
-                <profile id="4f7b-31ac-f276-4843" name="Reaver" hidden="false" typeId="c23b-5a30-07e2-4706" typeName="Unit Options">
-                  <characteristics>
-                    <characteristic name="Unit Option" typeId="5879-9a21-e9d2-539d">1 model in this unit can be a Reaver. Add 1 to hit rolls for attacks made by this model.</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-              <costs>
-                <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
-              </costs>
-            </selectionEntry>
             <selectionEntry id="a206-1daf-e1ff-d045" name="Standard Bearer" hidden="false" collective="false" import="true" type="upgrade">
               <modifiers>
                 <modifier type="increment" field="981a-3c16-e2b1-09de" value="1.0">
@@ -7928,11 +7928,24 @@ If the roll is equal to or greater than the number of wounds currently allocated
           </selectionEntries>
         </selectionEntryGroup>
       </selectionEntryGroups>
+      <entryLinks>
+        <entryLink id="b15d-f618-4fbc-b0e9" name="Unit Reinforcement" hidden="false" collective="false" import="true" targetId="b493-d9e6-82ca-5488" type="selectionEntry"/>
+      </entryLinks>
       <costs>
-        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
+        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="85.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="76a2-5b04-6d05-5e93" name="Scourgerunner Chariots" publicationId="88ce-c2fe-b89c-ed48" hidden="false" collective="false" import="true" type="unit">
+      <modifiers>
+        <modifier type="increment" field="b0b4-6aec-82c2-02ae" value="80.0">
+          <repeats>
+            <repeat field="selections" scope="76a2-5b04-6d05-5e93" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e20c-48d8-e5e3-1a36" repeats="1" roundUp="false"/>
+          </repeats>
+          <conditions>
+            <condition field="selections" scope="76a2-5b04-6d05-5e93" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e20c-48d8-e5e3-1a36" type="greaterThan"/>
+          </conditions>
+        </modifier>
+      </modifiers>
       <profiles>
         <profile id="c800-1320-b408-a771" name="Scourgerunner Chariots" hidden="false" typeId="3956-f6dd-6c88-ae4b" typeName="Unit">
           <characteristics>
@@ -7954,19 +7967,16 @@ If the roll is equal to or greater than the number of wounds currently allocated
       <selectionEntries>
         <selectionEntry id="cbb3-ffb8-17e1-ad32" name="Scourgerunner Chariot" hidden="false" collective="false" import="true" type="model">
           <modifiers>
-            <modifier type="set" field="b0b4-6aec-82c2-02ae" value="70.0">
+            <modifier type="set" field="627f-3e85-a6f7-6b65" value="3.0">
               <conditions>
-                <condition field="selections" scope="parent" value="3.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" type="equalTo"/>
+                <condition field="selections" scope="76a2-5b04-6d05-5e93" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="a42d-220e-6a88-7bf6" type="greaterThan"/>
               </conditions>
             </modifier>
           </modifiers>
           <constraints>
-            <constraint field="selections" scope="parent" value="3.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="627f-3e85-a6f7-6b65" type="max"/>
+            <constraint field="selections" scope="parent" value="2.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="627f-3e85-a6f7-6b65" type="max"/>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="c123-0c66-bbcf-8c53" type="min"/>
           </constraints>
-          <costs>
-            <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="80.0"/>
-          </costs>
         </selectionEntry>
         <selectionEntry id="41c3-f5f2-dba1-52cf" name="Mount" hidden="false" collective="false" import="true" type="upgrade">
           <constraints>
@@ -8119,30 +8129,34 @@ If the roll is equal to or greater than the number of wounds currently allocated
             <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
           </costs>
         </selectionEntry>
+        <selectionEntry id="f818-a413-6f00-5472" name="High Beastmaster" hidden="false" collective="false" import="true" type="upgrade">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="76a2-5b04-6d05-5e93" value="2.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e20c-48d8-e5e3-1a36" type="lessThan"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="3f2c-b3b2-673d-374f" type="max"/>
+          </constraints>
+          <profiles>
+            <profile id="af3a-7573-2a5a-c3f1" name="High Beastmaster" hidden="false" typeId="c23b-5a30-07e2-4706" typeName="Unit Options">
+              <characteristics>
+                <characteristic name="Unit Option" typeId="5879-9a21-e9d2-539d">1 model in this unit can be a High Beastmaster. Add 1 to hit rolls for attacks made with that model’s missile weapons.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <costs>
+            <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
+          </costs>
+        </selectionEntry>
       </selectionEntries>
-      <selectionEntryGroups>
-        <selectionEntryGroup id="31c8-ee30-8d84-2672" name="Unit Option" hidden="false" collective="false" import="true">
-          <selectionEntries>
-            <selectionEntry id="972d-3f23-2482-1564" name="High Beastmaster" hidden="false" collective="false" import="true" type="upgrade">
-              <constraints>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="a6bc-23ef-9bb6-fc5c" type="max"/>
-              </constraints>
-              <profiles>
-                <profile id="3cc9-7e2a-67cd-3c18" name="High Beastmaster" hidden="false" typeId="c23b-5a30-07e2-4706" typeName="Unit Options">
-                  <characteristics>
-                    <characteristic name="Unit Option" typeId="5879-9a21-e9d2-539d">1 model in this unit can be a High Beastmaster. Add 1 to hit rolls for attacks made with that model’s missile weapons.</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-              <costs>
-                <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
-              </costs>
-            </selectionEntry>
-          </selectionEntries>
-        </selectionEntryGroup>
-      </selectionEntryGroups>
+      <entryLinks>
+        <entryLink id="5c18-4cf0-41cd-48d5" name="Unit Reinforcement" hidden="false" collective="false" import="true" targetId="b493-d9e6-82ca-5488" type="selectionEntry"/>
+      </entryLinks>
       <costs>
-        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
+        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="80.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="6551-60d4-be7f-bb58" name="Nomad Prince" publicationId="88ce-c2fe-b89c-ed48" hidden="false" collective="false" import="true" type="unit">
@@ -8200,7 +8214,7 @@ If the roll is equal to or greater than the number of wounds currently allocated
         </selectionEntry>
       </selectionEntries>
       <costs>
-        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="120.0"/>
+        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="110.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="ae8a-2d2b-bb8e-6b40" name="Eternal Guard" publicationId="88ce-c2fe-b89c-ed48" hidden="false" collective="false" import="true" type="unit">
@@ -8216,6 +8230,14 @@ If the roll is equal to or greater than the number of wounds currently allocated
             </conditionGroup>
           </conditionGroups>
         </modifier>
+        <modifier type="increment" field="b0b4-6aec-82c2-02ae" value="125.0">
+          <repeats>
+            <repeat field="selections" scope="ae8a-2d2b-bb8e-6b40" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e20c-48d8-e5e3-1a36" repeats="1" roundUp="false"/>
+          </repeats>
+          <conditions>
+            <condition field="selections" scope="ae8a-2d2b-bb8e-6b40" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e20c-48d8-e5e3-1a36" type="greaterThan"/>
+          </conditions>
+        </modifier>
       </modifiers>
       <profiles>
         <profile id="2df0-afa6-3186-720b" name="Eternal Guard" hidden="false" typeId="3956-f6dd-6c88-ae4b" typeName="Unit">
@@ -8229,6 +8251,11 @@ If the roll is equal to or greater than the number of wounds currently allocated
         <profile id="88db-7d3c-3df8-32e0" name="Fortress of Boughs" hidden="false" typeId="7861-da01-01c0-88d9" typeName="Ability">
           <characteristics>
             <characteristic name="Ability" typeId="9bce-4deb-8b79-eaec">Add 1 to save rolls for attacks that target this unit if this unit has not made a move in the same turn.</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="27f3-fdd9-1cca-0f97" name="Eternal Warden" hidden="false" typeId="c23b-5a30-07e2-4706" typeName="Unit Options">
+          <characteristics>
+            <characteristic name="Unit Option" typeId="5879-9a21-e9d2-539d">1 model in this unit can be an Eternal Warden. Add 1 to the Attacks characteristic of that model’s melee weapon.</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -8270,19 +8297,12 @@ If the roll is equal to or greater than the number of wounds currently allocated
           </costs>
         </selectionEntry>
         <selectionEntry id="0f99-4cb4-d570-b8de" name="10 Eternal Guard" hidden="false" collective="false" import="true" type="model">
-          <modifiers>
-            <modifier type="set" field="b0b4-6aec-82c2-02ae" value="110.0">
-              <conditions>
-                <condition field="selections" scope="parent" value="3.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" type="equalTo"/>
-              </conditions>
-            </modifier>
-          </modifiers>
           <constraints>
-            <constraint field="selections" scope="parent" value="3.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="a71a-a226-0184-5392" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="a71a-a226-0184-5392" type="max"/>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="cfdf-5660-6096-cdbc" type="min"/>
           </constraints>
           <costs>
-            <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="130.0"/>
+            <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="5c43-4279-dc55-583c" name="BATTLELINE" hidden="false" collective="false" import="true" type="upgrade">
@@ -8329,21 +8349,6 @@ If the roll is equal to or greater than the number of wounds currently allocated
       <selectionEntryGroups>
         <selectionEntryGroup id="4fdf-584d-d978-47fa" name="Unit Options" hidden="false" collective="false" import="true">
           <selectionEntries>
-            <selectionEntry id="27af-35f4-00fa-e760" name="Eternal Warden" hidden="false" collective="false" import="true" type="upgrade">
-              <constraints>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="e836-8b6f-3598-531f" type="max"/>
-              </constraints>
-              <profiles>
-                <profile id="e9d9-5531-a304-db9c" name="Eternal Warden" hidden="false" typeId="c23b-5a30-07e2-4706" typeName="Unit Options">
-                  <characteristics>
-                    <characteristic name="Unit Option" typeId="5879-9a21-e9d2-539d">1 model in this unit can be an Eternal Warden. Add 1 to the Attacks characteristic of that model’s melee weapon.</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-              <costs>
-                <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
-              </costs>
-            </selectionEntry>
             <selectionEntry id="09ca-7098-c33e-e04f" name="Standard Bearer" hidden="false" collective="false" import="true" type="upgrade">
               <modifiers>
                 <modifier type="increment" field="299a-bd8f-f5a4-46f1" value="1.0">
@@ -8397,11 +8402,24 @@ If the roll is equal to or greater than the number of wounds currently allocated
           </selectionEntries>
         </selectionEntryGroup>
       </selectionEntryGroups>
+      <entryLinks>
+        <entryLink id="8b04-4972-6bb8-439d" name="Unit Reinforcement" hidden="false" collective="false" import="true" targetId="b493-d9e6-82ca-5488" type="selectionEntry"/>
+      </entryLinks>
       <costs>
-        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
+        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="125.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="9794-1788-248d-24d2" name="Wildwood Rangers" publicationId="88ce-c2fe-b89c-ed48" hidden="false" collective="false" import="true" type="unit">
+      <modifiers>
+        <modifier type="increment" field="b0b4-6aec-82c2-02ae" value="135.0">
+          <repeats>
+            <repeat field="selections" scope="9794-1788-248d-24d2" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e20c-48d8-e5e3-1a36" repeats="1" roundUp="false"/>
+          </repeats>
+          <conditions>
+            <condition field="selections" scope="9794-1788-248d-24d2" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e20c-48d8-e5e3-1a36" type="greaterThan"/>
+          </conditions>
+        </modifier>
+      </modifiers>
       <profiles>
         <profile id="e20e-3026-aacf-6a13" name="Wildwood Rangers" hidden="false" typeId="3956-f6dd-6c88-ae4b" typeName="Unit">
           <characteristics>
@@ -8409,6 +8427,11 @@ If the roll is equal to or greater than the number of wounds currently allocated
             <characteristic name="Wounds" typeId="a0c6-af64-2f24-5759">1</characteristic>
             <characteristic name="Save" typeId="93b6-2f96-2df7-e330">5+</characteristic>
             <characteristic name="Bravery" typeId="2420-1c5c-1016-7033">7</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="c22d-3e57-8857-5dc4" name="Wildwood Waraden" hidden="false" typeId="c23b-5a30-07e2-4706" typeName="Unit Options">
+          <characteristics>
+            <characteristic name="Unit Option" typeId="5879-9a21-e9d2-539d">1 model in this unit can be a Wildwood Warden. Add 1 to the Attacks characteristic of that model’s melee weapon.</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -8450,11 +8473,11 @@ If the roll is equal to or greater than the number of wounds currently allocated
         </selectionEntry>
         <selectionEntry id="c077-c35b-8a01-2d73" name="10 Wildwood Rangers" hidden="false" collective="false" import="true" type="model">
           <constraints>
-            <constraint field="selections" scope="parent" value="3.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="689c-892f-ee24-5da6" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="689c-892f-ee24-5da6" type="max"/>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="07f9-5d34-ef77-5db7" type="min"/>
           </constraints>
           <costs>
-            <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="130.0"/>
+            <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="a4f0-f608-b146-6639" name="CONDITIONAL BATTLELINE" hidden="false" collective="false" import="true" type="upgrade">
@@ -8501,21 +8524,6 @@ If the roll is equal to or greater than the number of wounds currently allocated
       <selectionEntryGroups>
         <selectionEntryGroup id="8845-0a2a-1316-6e3d" name="Unit Options" hidden="false" collective="false" import="true">
           <selectionEntries>
-            <selectionEntry id="de25-5df6-a001-f442" name="Wildwood Warden" hidden="false" collective="false" import="true" type="upgrade">
-              <constraints>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="4b03-b4a5-974d-4850" type="max"/>
-              </constraints>
-              <profiles>
-                <profile id="1622-c521-23b2-1c95" name="Wildwood Waraden" hidden="false" typeId="c23b-5a30-07e2-4706" typeName="Unit Options">
-                  <characteristics>
-                    <characteristic name="Unit Option" typeId="5879-9a21-e9d2-539d">1 model in this unit can be a Wildwood Warden. Add 1 to the Attacks characteristic of that model’s melee weapon.</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-              <costs>
-                <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
-              </costs>
-            </selectionEntry>
             <selectionEntry id="7b2a-d000-79e6-dd46" name="Standard Bearer" hidden="false" collective="false" import="true" type="upgrade">
               <modifiers>
                 <modifier type="increment" field="df40-0098-6041-2912" value="1.0">
@@ -8569,11 +8577,24 @@ If the roll is equal to or greater than the number of wounds currently allocated
           </selectionEntries>
         </selectionEntryGroup>
       </selectionEntryGroups>
+      <entryLinks>
+        <entryLink id="f4fd-4dc0-dfaf-5378" name="Unit Reinforcement" hidden="false" collective="false" import="true" targetId="b493-d9e6-82ca-5488" type="selectionEntry"/>
+      </entryLinks>
       <costs>
-        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
+        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="135.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="d7c5-c814-1ee1-49ee" name="Wild Riders" publicationId="88ce-c2fe-b89c-ed48" hidden="false" collective="false" import="true" type="unit">
+      <modifiers>
+        <modifier type="increment" field="b0b4-6aec-82c2-02ae" value="120.0">
+          <repeats>
+            <repeat field="selections" scope="d7c5-c814-1ee1-49ee" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e20c-48d8-e5e3-1a36" repeats="1" roundUp="false"/>
+          </repeats>
+          <conditions>
+            <condition field="selections" scope="d7c5-c814-1ee1-49ee" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e20c-48d8-e5e3-1a36" type="greaterThan"/>
+          </conditions>
+        </modifier>
+      </modifiers>
       <profiles>
         <profile id="0ee9-8a31-c673-24b1" name="Wild Riders" hidden="false" typeId="3956-f6dd-6c88-ae4b" typeName="Unit">
           <characteristics>
@@ -8581,6 +8602,11 @@ If the roll is equal to or greater than the number of wounds currently allocated
             <characteristic name="Wounds" typeId="a0c6-af64-2f24-5759">2</characteristic>
             <characteristic name="Save" typeId="93b6-2f96-2df7-e330">5+</characteristic>
             <characteristic name="Bravery" typeId="2420-1c5c-1016-7033">8</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="7121-2490-bade-efcc" name="Wild Hunter" hidden="false" typeId="c23b-5a30-07e2-4706" typeName="Unit Options">
+          <characteristics>
+            <characteristic name="Unit Option" typeId="5879-9a21-e9d2-539d">1 model in this unit can be a Wild Hunter. Add 1 to the Attacks characteristic of that model’s Hunting Spear.</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -8635,11 +8661,11 @@ If the roll is equal to or greater than the number of wounds currently allocated
         </selectionEntry>
         <selectionEntry id="b8d5-babf-3980-c2c1" name="5 Wild Riders" hidden="false" collective="false" import="true" type="model">
           <constraints>
-            <constraint field="selections" scope="parent" value="4.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="bb93-126a-ce74-ad12" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="bb93-126a-ce74-ad12" type="max"/>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="f71b-2470-5f76-1e2b" type="min"/>
           </constraints>
           <costs>
-            <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="130.0"/>
+            <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="795d-a14f-82bb-2a4a" name="Mount" hidden="false" collective="false" import="true" type="upgrade">
@@ -8713,21 +8739,6 @@ If the roll is equal to or greater than the number of wounds currently allocated
       <selectionEntryGroups>
         <selectionEntryGroup id="626c-60bd-b3e5-c029" name="Unit Options" hidden="false" collective="false" import="true">
           <selectionEntries>
-            <selectionEntry id="e484-4e9d-a594-8200" name="Wild Hunter" hidden="false" collective="false" import="true" type="upgrade">
-              <constraints>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="5d1b-be99-e05e-5e80" type="max"/>
-              </constraints>
-              <profiles>
-                <profile id="38de-8ab8-e092-ee8e" name="Wild Hunter" hidden="false" typeId="c23b-5a30-07e2-4706" typeName="Unit Options">
-                  <characteristics>
-                    <characteristic name="Unit Option" typeId="5879-9a21-e9d2-539d">1 model in this unit can be a Wild Hunter. Add 1 to the Attacks characteristic of that model’s Hunting Spear.</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-              <costs>
-                <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
-              </costs>
-            </selectionEntry>
             <selectionEntry id="2dca-496b-fd3f-bbc8" name="Standard Bearer" hidden="false" collective="false" import="true" type="upgrade">
               <modifiers>
                 <modifier type="increment" field="52c4-0016-06f2-7d74" value="1.0">
@@ -8781,11 +8792,24 @@ If the roll is equal to or greater than the number of wounds currently allocated
           </selectionEntries>
         </selectionEntryGroup>
       </selectionEntryGroups>
+      <entryLinks>
+        <entryLink id="5f50-db80-eac2-db69" name="Unit Reinforcement" hidden="false" collective="false" import="true" targetId="b493-d9e6-82ca-5488" type="selectionEntry"/>
+      </entryLinks>
       <costs>
-        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
+        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="120.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="2417-6bad-cab6-7400" name="Sisters of the Thorn" publicationId="88ce-c2fe-b89c-ed48" hidden="false" collective="false" import="true" type="unit">
+      <modifiers>
+        <modifier type="increment" field="b0b4-6aec-82c2-02ae" value="130.0">
+          <repeats>
+            <repeat field="selections" scope="2417-6bad-cab6-7400" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e20c-48d8-e5e3-1a36" repeats="1" roundUp="false"/>
+          </repeats>
+          <conditions>
+            <condition field="selections" scope="2417-6bad-cab6-7400" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="d33d-312b-9c40-3de5" type="greaterThan"/>
+          </conditions>
+        </modifier>
+      </modifiers>
       <profiles>
         <profile id="79e0-703e-afe8-119c" name="Sisters of the Thorn" hidden="false" typeId="3956-f6dd-6c88-ae4b" typeName="Unit">
           <characteristics>
@@ -8811,6 +8835,11 @@ If the roll is equal to or greater than the number of wounds currently allocated
             <characteristic name="Spell" typeId="1170-c916-1b73-ae34">Armour of Thorns has a casting value of 7. If successfully cast, pick 1 friendly WANDERERS unit wholly within 18&quot; of the caster that is visible to them. Until that unit moves, that unit is treated as being in cover.
 
 In addition, until that unit moves, if the unmodified save roll for an attack made with a melee weapon that targets that unit is 6, the attacking unit suffers 1 mortal wound after all of its attacks have been resolved.</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="dc11-ec3a-bfd0-9096" name="Handmaiden of the Thorn" hidden="false" typeId="c23b-5a30-07e2-4706" typeName="Unit Options">
+          <characteristics>
+            <characteristic name="Unit Option" typeId="5879-9a21-e9d2-539d">1 model in this unit can be a Handmaiden of the Thorn. Add 1 to the Attacks characteristic of that model’s Deepwood Coven Staff.</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -8866,11 +8895,11 @@ In addition, until that unit moves, if the unmodified save roll for an attack ma
         </selectionEntry>
         <selectionEntry id="d5f6-4618-6d2f-aba0" name="5 Sisters of the Thorn" hidden="false" collective="false" import="true" type="model">
           <constraints>
-            <constraint field="selections" scope="parent" value="4.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="70ec-422a-2935-2b38" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="70ec-422a-2935-2b38" type="max"/>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="3d0d-0296-7070-59fc" type="min"/>
           </constraints>
           <costs>
-            <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="130.0"/>
+            <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="52d6-a2bf-d891-8fdd" name="Mount" hidden="false" collective="false" import="true" type="upgrade">
@@ -8961,21 +8990,6 @@ In addition, until that unit moves, if the unmodified save roll for an attack ma
       <selectionEntryGroups>
         <selectionEntryGroup id="68e7-5ae6-37bf-8f0f" name="Unit Options" hidden="false" collective="false" import="true">
           <selectionEntries>
-            <selectionEntry id="848c-eead-702c-f8bc" name="Handmaiden of the Thorn" hidden="false" collective="false" import="true" type="upgrade">
-              <constraints>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="dca8-a175-ea85-43c3" type="max"/>
-              </constraints>
-              <profiles>
-                <profile id="e4ce-704f-4630-ef16" name="Handmaiden of the Thorn" hidden="false" typeId="c23b-5a30-07e2-4706" typeName="Unit Options">
-                  <characteristics>
-                    <characteristic name="Unit Option" typeId="5879-9a21-e9d2-539d">1 model in this unit can be a Handmaiden of the Thorn. Add 1 to the Attacks characteristic of that model’s Deepwood Coven Staff.</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-              <costs>
-                <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
-              </costs>
-            </selectionEntry>
             <selectionEntry id="8293-5e0b-7e0e-64a3" name="Standard Bearer" hidden="false" collective="false" import="true" type="upgrade">
               <modifiers>
                 <modifier type="increment" field="99ca-b52b-de85-92d8" value="1.0">
@@ -9029,11 +9043,24 @@ In addition, until that unit moves, if the unmodified save roll for an attack ma
           </selectionEntries>
         </selectionEntryGroup>
       </selectionEntryGroups>
+      <entryLinks>
+        <entryLink id="60e9-ab75-9d4e-6265" name="Unit Reinforcement" hidden="false" collective="false" import="true" targetId="b493-d9e6-82ca-5488" type="selectionEntry"/>
+      </entryLinks>
       <costs>
-        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
+        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="130.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="cc9c-c95d-c455-10f3" name="Sisters of the Watch" publicationId="88ce-c2fe-b89c-ed48" hidden="false" collective="false" import="true" type="unit">
+      <modifiers>
+        <modifier type="increment" field="b0b4-6aec-82c2-02ae" value="180.0">
+          <repeats>
+            <repeat field="selections" scope="cc9c-c95d-c455-10f3" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e20c-48d8-e5e3-1a36" repeats="1" roundUp="false"/>
+          </repeats>
+          <conditions>
+            <condition field="selections" scope="cc9c-c95d-c455-10f3" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e20c-48d8-e5e3-1a36" type="greaterThan"/>
+          </conditions>
+        </modifier>
+      </modifiers>
       <profiles>
         <profile id="37f9-2891-cb14-0a4d" name="Sisters of the Watch" hidden="false" typeId="3956-f6dd-6c88-ae4b" typeName="Unit">
           <characteristics>
@@ -9045,7 +9072,12 @@ In addition, until that unit moves, if the unmodified save roll for an attack ma
         </profile>
         <profile id="e9d7-2a9c-9676-69af" name="Loose Until the Last" hidden="false" typeId="7861-da01-01c0-88d9" typeName="Ability">
           <characteristics>
-            <characteristic name="Ability" typeId="9bce-4deb-8b79-eaec">Once per turn, if an enemy unit ends a charge move within 3&quot; of this unit and there are no other enemy units within 3&quot; of this unit, this unit can shoot.</characteristic>
+            <characteristic name="Ability" typeId="9bce-4deb-8b79-eaec">If an enemy unit finishes a charge move within 3&quot; of this unit, this unit can receive the Unleash Hell command without the command being issued and without a command point being spent.</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="de0a-265f-d010-b648" name="High Sister" hidden="false" typeId="c23b-5a30-07e2-4706" typeName="Unit Options">
+          <characteristics>
+            <characteristic name="Unit Option" typeId="5879-9a21-e9d2-539d">1 model in this unit can be a High Sister. Add 1 to the Attacks characteristic of that model’s missile weapon.</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -9092,11 +9124,11 @@ In addition, until that unit moves, if the unmodified save roll for an attack ma
         </selectionEntry>
         <selectionEntry id="0a40-b6a8-0267-9657" name="10 Sisters of the Watch" hidden="false" collective="false" import="true" type="model">
           <constraints>
-            <constraint field="selections" scope="parent" value="3.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="892b-504c-b52e-6548" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="892b-504c-b52e-6548" type="max"/>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="5da8-a5bb-25ef-4b3a" type="min"/>
           </constraints>
           <costs>
-            <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="160.0"/>
+            <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="13b2-ef87-4c29-8d3c" name="CONDITIONAL BATTLELINE" hidden="false" collective="false" import="true" type="upgrade">
@@ -9162,29 +9194,11 @@ In addition, until that unit moves, if the unmodified save roll for an attack ma
           </costs>
         </selectionEntry>
       </selectionEntries>
-      <selectionEntryGroups>
-        <selectionEntryGroup id="79d6-a34d-c6ac-7416" name="Unit Option" hidden="false" collective="false" import="true">
-          <selectionEntries>
-            <selectionEntry id="b68c-1c97-6496-33c8" name="High Sister" hidden="false" collective="false" import="true" type="upgrade">
-              <constraints>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="fd3f-b520-784e-352c" type="max"/>
-              </constraints>
-              <profiles>
-                <profile id="4225-956a-a9e8-9460" name="High Sister" hidden="false" typeId="c23b-5a30-07e2-4706" typeName="Unit Options">
-                  <characteristics>
-                    <characteristic name="Unit Option" typeId="5879-9a21-e9d2-539d">1 model in this unit can be a High Sister. Add 1 to the Attacks characteristic of that model’s missile weapon.</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-              <costs>
-                <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
-              </costs>
-            </selectionEntry>
-          </selectionEntries>
-        </selectionEntryGroup>
-      </selectionEntryGroups>
+      <entryLinks>
+        <entryLink id="1efa-8f89-234d-f3a2" name="Unit Reinforcement" hidden="false" collective="false" import="true" targetId="b493-d9e6-82ca-5488" type="selectionEntry"/>
+      </entryLinks>
       <costs>
-        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
+        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="180.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="81d0-0bd2-29e7-cf1d" name="Captain Emelda Braskov" hidden="false" collective="false" import="true" type="unit">
@@ -9699,7 +9713,7 @@ Cometary Blast: Pick a point on the battlefield within 18&quot; of this model th
         <profile id="e70a-c5dd-eb30-ef42" name="Doralia ven Denst" hidden="false" typeId="3956-f6dd-6c88-ae4b" typeName="Unit">
           <characteristics>
             <characteristic name="Move" typeId="5bbe-8910-4dfa-7b1c">5&quot;</characteristic>
-            <characteristic name="Wounds" typeId="a0c6-af64-2f24-5759"></characteristic>
+            <characteristic name="Wounds" typeId="a0c6-af64-2f24-5759"/>
             <characteristic name="Save" typeId="93b6-2f96-2df7-e330">4+</characteristic>
             <characteristic name="Bravery" typeId="2420-1c5c-1016-7033">8</characteristic>
           </characteristics>
@@ -9746,6 +9760,9 @@ In addition, when this model fights or shoots, you can choose an endless spell t
               </characteristics>
             </profile>
           </profiles>
+          <costs>
+            <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
+          </costs>
         </selectionEntry>
         <selectionEntry id="082c-93a1-44a9-270e" name="Crossbow" hidden="false" collective="false" import="true" type="upgrade">
           <constraints>
@@ -9770,6 +9787,9 @@ In addition, when this model fights or shoots, you can choose an endless spell t
               </characteristics>
             </profile>
           </profiles>
+          <costs>
+            <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
+          </costs>
         </selectionEntry>
       </selectionEntries>
       <costs>
@@ -9836,6 +9856,9 @@ In addition, when this model fights or shoots, you can choose an endless spell t
               </characteristics>
             </profile>
           </profiles>
+          <costs>
+            <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
+          </costs>
         </selectionEntry>
         <selectionEntry id="bc44-a389-0976-39d7" name="Pistol" hidden="false" collective="false" import="true" type="upgrade">
           <constraints>
@@ -9855,6 +9878,9 @@ In addition, when this model fights or shoots, you can choose an endless spell t
               </characteristics>
             </profile>
           </profiles>
+          <costs>
+            <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
+          </costs>
         </selectionEntry>
       </selectionEntries>
       <costs>

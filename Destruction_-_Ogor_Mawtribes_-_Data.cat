@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="5173-04cd-a396-1410" name="Destruction - Ogor Mawtribes - Data" revision="2" battleScribeVersion="2.03" authorName="Thulram" library="true" gameSystemId="e832-3291-06be-cab1" gameSystemRevision="2" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="5173-04cd-a396-1410" name="Destruction - Ogor Mawtribes - Data" revision="3" battleScribeVersion="2.03" authorName="Thulram" library="true" gameSystemId="e832-3291-06be-cab1" gameSystemRevision="3" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <profileTypes>
     <profileType id="be3d-81f2-95ae-0aff" name="Mount Traits">
       <characteristicTypes>
@@ -22,7 +22,6 @@
     </profileType>
   </profileTypes>
   <categoryEntries>
-    <categoryEntry id="3150-1b4f-2b04-68c8" name="Great Mawpot" hidden="false"/>
     <categoryEntry id="d850-b534-1dce-2639" name="Tyrant" hidden="false"/>
     <categoryEntry id="f221-6c2e-d1a0-0adb" name="Gutbusters" hidden="false"/>
     <categoryEntry id="db1a-a465-fadb-a56a" name="Ogor" hidden="false"/>
@@ -425,7 +424,7 @@ Bonecrusher: Roll a dice for each enemy unit within 6&quot; of this model. On a 
         <entryLink id="7107-a8b0-1ec8-e7b2" name="Gulping Bite" hidden="false" collective="false" import="true" targetId="d6b5-daca-46a7-272f" type="selectionEntry"/>
       </entryLinks>
       <costs>
-        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="140.0"/>
+        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="135.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="3ce8-49a2-0ccd-98bd" name="Ogor Gluttons" publicationId="ca59-f8ac-3938-b963" hidden="false" collective="false" import="true" type="unit">
@@ -441,6 +440,14 @@ Bonecrusher: Roll a dice for each enemy unit within 6&quot; of this model. On a 
             </conditionGroup>
           </conditionGroups>
         </modifier>
+        <modifier type="increment" field="b0b4-6aec-82c2-02ae" value="260.0">
+          <repeats>
+            <repeat field="selections" scope="3ce8-49a2-0ccd-98bd" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e20c-48d8-e5e3-1a36" repeats="1" roundUp="false"/>
+          </repeats>
+          <conditions>
+            <condition field="selections" scope="3ce8-49a2-0ccd-98bd" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e20c-48d8-e5e3-1a36" type="greaterThan"/>
+          </conditions>
+        </modifier>
       </modifiers>
       <profiles>
         <profile id="8d0f-e4e4-fe2d-77b1" name="Ogor Gluttons" hidden="false" typeId="3956-f6dd-6c88-ae4b" typeName="Unit">
@@ -449,6 +456,11 @@ Bonecrusher: Roll a dice for each enemy unit within 6&quot; of this model. On a 
             <characteristic name="Wounds" typeId="a0c6-af64-2f24-5759">4</characteristic>
             <characteristic name="Save" typeId="93b6-2f96-2df7-e330">5+</characteristic>
             <characteristic name="Bravery" typeId="2420-1c5c-1016-7033">6</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="596a-0811-5d49-f1ce" name="Crusher" hidden="false" typeId="c23b-5a30-07e2-4706" typeName="Unit Options">
+          <characteristics>
+            <characteristic name="Unit Option" typeId="5879-9a21-e9d2-539d">1 model in this unit can be a Crusher. Add 1 to the Attacks characteristic of that model’s Club(s) or Blade(s).</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -462,20 +474,13 @@ Bonecrusher: Roll a dice for each enemy unit within 6&quot; of this model. On a 
         <categoryLink id="0d1a-197d-56fd-3d56" name="New CategoryLink" hidden="false" targetId="6230-ed60-e374-add4" primary="true"/>
       </categoryLinks>
       <selectionEntries>
-        <selectionEntry id="ac9d-b2e7-167c-bb30" name="3 Ogor Gluttons" hidden="false" collective="false" import="true" type="model">
-          <modifiers>
-            <modifier type="set" field="b0b4-6aec-82c2-02ae" value="100.0">
-              <conditions>
-                <condition field="selections" scope="parent" value="4.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" type="equalTo"/>
-              </conditions>
-            </modifier>
-          </modifiers>
+        <selectionEntry id="ac9d-b2e7-167c-bb30" name="6 Ogor Gluttons" hidden="false" collective="false" import="true" type="model">
           <constraints>
-            <constraint field="selections" scope="parent" value="4.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="6eba-30fd-280c-8f77" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="6eba-30fd-280c-8f77" type="max"/>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="c1e4-b563-b094-b30e" type="min"/>
           </constraints>
           <costs>
-            <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="120.0"/>
+            <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="7b66-5dba-83c3-e8d6" name="BATTLELINE" hidden="false" collective="false" import="true" type="upgrade">
@@ -576,21 +581,6 @@ Bonecrusher: Roll a dice for each enemy unit within 6&quot; of this model. On a 
         </selectionEntryGroup>
         <selectionEntryGroup id="f087-fcb2-b818-83da" name="Unit Options" hidden="false" collective="false" import="true">
           <selectionEntries>
-            <selectionEntry id="0479-790f-e50d-9e9c" name="Crusher" hidden="false" collective="false" import="true" type="upgrade">
-              <constraints>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="15d4-7cc6-fd79-e699" type="max"/>
-              </constraints>
-              <profiles>
-                <profile id="1c63-04bb-2684-5961" name="Crusher" hidden="false" typeId="c23b-5a30-07e2-4706" typeName="Unit Options">
-                  <characteristics>
-                    <characteristic name="Unit Option" typeId="5879-9a21-e9d2-539d">1 model in this unit can be a Crusher. Add 1 to the Attacks characteristic of that model’s Club(s) or Blade(s).</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-              <costs>
-                <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
-              </costs>
-            </selectionEntry>
             <selectionEntry id="2cfe-7e74-3512-2f2e" name="Bellower" hidden="false" collective="false" import="true" type="upgrade">
               <modifiers>
                 <modifier type="increment" field="8c6f-58e2-172a-da86" value="1.0">
@@ -696,12 +686,23 @@ Bonecrusher: Roll a dice for each enemy unit within 6&quot; of this model. On a 
       </selectionEntryGroups>
       <entryLinks>
         <entryLink id="dd1b-250f-ab7a-3de6" name="Gulping Bite" hidden="false" collective="false" import="true" targetId="d6b5-daca-46a7-272f" type="selectionEntry"/>
+        <entryLink id="39d2-d81c-0ec1-0403" name="Unit Reinforcement" hidden="false" collective="false" import="true" targetId="b493-d9e6-82ca-5488" type="selectionEntry"/>
       </entryLinks>
       <costs>
-        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
+        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="260.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="de76-7be8-ae76-f4a8" name="Ironguts" publicationId="ca59-f8ac-3938-b963" hidden="false" collective="false" import="true" type="unit">
+      <modifiers>
+        <modifier type="increment" field="b0b4-6aec-82c2-02ae" value="245.0">
+          <repeats>
+            <repeat field="selections" scope="de76-7be8-ae76-f4a8" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e20c-48d8-e5e3-1a36" repeats="1" roundUp="false"/>
+          </repeats>
+          <conditions>
+            <condition field="selections" scope="de76-7be8-ae76-f4a8" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e20c-48d8-e5e3-1a36" type="greaterThan"/>
+          </conditions>
+        </modifier>
+      </modifiers>
       <profiles>
         <profile id="dd63-3c22-b355-49d4" name="Ironguts" hidden="false" typeId="3956-f6dd-6c88-ae4b" typeName="Unit">
           <characteristics>
@@ -716,6 +717,11 @@ Bonecrusher: Roll a dice for each enemy unit within 6&quot; of this model. On a 
             <characteristic name="Ability" typeId="9bce-4deb-8b79-eaec">Once per battle, in your hero phase, if at least 1 OGOR model from your army has fled the battle, you can use this ability. If you do so, you can re-roll hit, wound and save rolls of 1 for this unit until your next hero phase.</characteristic>
           </characteristics>
         </profile>
+        <profile id="aad3-7f27-2fb2-e4c0" name="Gutlord" hidden="false" typeId="c23b-5a30-07e2-4706" typeName="Unit Options">
+          <characteristics>
+            <characteristic name="Unit Option" typeId="5879-9a21-e9d2-539d">1 model in this unit can be a Gutlord. Add 1 to the Attacks characteristic of that model’s Mighty Bashing Weapon.</characteristic>
+          </characteristics>
+        </profile>
       </profiles>
       <categoryLinks>
         <categoryLink id="5eae-3d5e-3dd2-2814" name="Destruction" hidden="false" targetId="5d33-469f-2bda-51f9" primary="false"/>
@@ -728,11 +734,11 @@ Bonecrusher: Roll a dice for each enemy unit within 6&quot; of this model. On a 
       <selectionEntries>
         <selectionEntry id="2ad6-c6be-c594-fec5" name="4 Ironguts" hidden="false" collective="false" import="true" type="model">
           <constraints>
-            <constraint field="selections" scope="parent" value="3.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="788f-b09a-68d0-2652" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="788f-b09a-68d0-2652" type="max"/>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="ad9b-2d0c-40c6-43e3" type="min"/>
           </constraints>
           <costs>
-            <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="220.0"/>
+            <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="860b-ce1e-d477-a0f0" name="CONDITIONAL BATTLELINE" hidden="false" collective="false" import="true" type="upgrade">
@@ -801,21 +807,6 @@ Bonecrusher: Roll a dice for each enemy unit within 6&quot; of this model. On a 
       <selectionEntryGroups>
         <selectionEntryGroup id="08de-5bb9-4e59-6bc5" name="Unit Options" hidden="false" collective="false" import="true">
           <selectionEntries>
-            <selectionEntry id="9eba-c2f1-5caa-a559" name="Gutlord" hidden="false" collective="false" import="true" type="upgrade">
-              <constraints>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="24f7-ccbf-acf3-99f4" type="max"/>
-              </constraints>
-              <profiles>
-                <profile id="bf06-e450-8e15-55f9" name="Gutlord" hidden="false" typeId="c23b-5a30-07e2-4706" typeName="Unit Options">
-                  <characteristics>
-                    <characteristic name="Unit Option" typeId="5879-9a21-e9d2-539d">1 model in this unit can be a Gutlord. Add 1 to the Attacks characteristic of that model’s Mighty Bashing Weapon.</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-              <costs>
-                <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
-              </costs>
-            </selectionEntry>
             <selectionEntry id="4ad4-d341-ba8e-b137" name="Bellower" hidden="false" collective="false" import="true" type="upgrade">
               <modifiers>
                 <modifier type="increment" field="ba87-81dd-6397-49c5" value="1.0">
@@ -873,12 +864,23 @@ In addition, each time a unit with any Rune Maw Bearers is affected by a spell o
       </selectionEntryGroups>
       <entryLinks>
         <entryLink id="1647-13b4-861e-86b2" name="Gulping Bite" hidden="false" collective="false" import="true" targetId="d6b5-daca-46a7-272f" type="selectionEntry"/>
+        <entryLink id="e8b3-b84e-5cb1-7ab4" name="Unit Reinforcement" hidden="false" collective="false" import="true" targetId="b493-d9e6-82ca-5488" type="selectionEntry"/>
       </entryLinks>
       <costs>
-        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
+        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="245.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="b0b0-6ea9-77c0-6ce3" name="Gorgers" publicationId="ca59-f8ac-3938-b963" hidden="false" collective="false" import="true" type="unit">
+      <modifiers>
+        <modifier type="increment" field="b0b4-6aec-82c2-02ae" value="80.0">
+          <repeats>
+            <repeat field="selections" scope="b0b0-6ea9-77c0-6ce3" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e20c-48d8-e5e3-1a36" repeats="1" roundUp="false"/>
+          </repeats>
+          <conditions>
+            <condition field="selections" scope="b0b0-6ea9-77c0-6ce3" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="d33d-312b-9c40-3de5" type="greaterThan"/>
+          </conditions>
+        </modifier>
+      </modifiers>
       <profiles>
         <profile id="8a30-768f-d3f5-c8f9" name="Gorgers" hidden="false" typeId="3956-f6dd-6c88-ae4b" typeName="Unit">
           <characteristics>
@@ -910,11 +912,11 @@ In addition, each time a unit with any Rune Maw Bearers is affected by a spell o
       <selectionEntries>
         <selectionEntry id="fae5-5088-7d38-fe07" name="Gorger" hidden="false" collective="false" import="true" type="model">
           <constraints>
-            <constraint field="selections" scope="parent" value="3.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="f1e3-e48d-3707-956d" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="f1e3-e48d-3707-956d" type="max"/>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="a1d5-62b1-b479-9f71" type="min"/>
           </constraints>
           <costs>
-            <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="80.0"/>
+            <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="1136-cbe2-4052-79e4" name="Distensible Jaw" hidden="false" collective="false" import="true" type="upgrade">
@@ -962,11 +964,24 @@ In addition, each time a unit with any Rune Maw Bearers is affected by a spell o
           </costs>
         </selectionEntry>
       </selectionEntries>
+      <entryLinks>
+        <entryLink id="c4cf-813b-40f7-7a6e" name="Unit Reinforcement" hidden="false" collective="false" import="true" targetId="b493-d9e6-82ca-5488" type="selectionEntry"/>
+      </entryLinks>
       <costs>
-        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
+        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="80.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="002f-ca0b-f27e-d448" name="Leadbelchers" publicationId="ca59-f8ac-3938-b963" hidden="false" collective="false" import="true" type="unit">
+      <modifiers>
+        <modifier type="increment" field="b0b4-6aec-82c2-02ae" value="180.0">
+          <repeats>
+            <repeat field="selections" scope="002f-ca0b-f27e-d448" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e20c-48d8-e5e3-1a36" repeats="1" roundUp="false"/>
+          </repeats>
+          <conditions>
+            <condition field="selections" scope="002f-ca0b-f27e-d448" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e20c-48d8-e5e3-1a36" type="greaterThan"/>
+          </conditions>
+        </modifier>
+      </modifiers>
       <profiles>
         <profile id="8ab9-6252-158b-01a2" name="Leadbelchers" hidden="false" typeId="3956-f6dd-6c88-ae4b" typeName="Unit">
           <characteristics>
@@ -974,6 +989,11 @@ In addition, each time a unit with any Rune Maw Bearers is affected by a spell o
             <characteristic name="Wounds" typeId="a0c6-af64-2f24-5759">4</characteristic>
             <characteristic name="Save" typeId="93b6-2f96-2df7-e330">5+</characteristic>
             <characteristic name="Bravery" typeId="2420-1c5c-1016-7033">6</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="06fd-0876-7e1d-5071" name="Thunderfist" hidden="false" typeId="c23b-5a30-07e2-4706" typeName="Unit Options">
+          <characteristics>
+            <characteristic name="Unit Option" typeId="5879-9a21-e9d2-539d">1 model in this unit can be a Thunderfist. Add 1 to the Attacks characteristic of that model’s Bludgeoning Blow.</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -986,13 +1006,13 @@ In addition, each time a unit with any Rune Maw Bearers is affected by a spell o
         <categoryLink id="7cec-9228-43ec-7b32" name="New CategoryLink" hidden="false" targetId="6230-ed60-e374-add4" primary="true"/>
       </categoryLinks>
       <selectionEntries>
-        <selectionEntry id="a258-149d-446a-cc8d" name="2 Leadbelchers" hidden="false" collective="false" import="true" type="model">
+        <selectionEntry id="a258-149d-446a-cc8d" name="4 Leadbelchers" hidden="false" collective="false" import="true" type="model">
           <constraints>
-            <constraint field="selections" scope="parent" value="6.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="a638-ecc1-d2bc-8eb4" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="a638-ecc1-d2bc-8eb4" type="max"/>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="4723-894f-9c5d-f1a0" type="min"/>
           </constraints>
           <costs>
-            <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="80.0"/>
+            <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="d092-6eae-9df7-b350" name="CONDITIONAL BATTLELINE" hidden="false" collective="false" import="true" type="upgrade">
@@ -1085,32 +1105,12 @@ In addition, each time a unit with any Rune Maw Bearers is affected by a spell o
           </costs>
         </selectionEntry>
       </selectionEntries>
-      <selectionEntryGroups>
-        <selectionEntryGroup id="fe57-1e15-045b-ae83" name="Unit Option" hidden="false" collective="false" import="true">
-          <selectionEntries>
-            <selectionEntry id="34a2-6fcf-f26c-8282" name="Thunderfist" hidden="false" collective="false" import="true" type="upgrade">
-              <constraints>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="9152-d437-ae2c-47ae" type="max"/>
-              </constraints>
-              <profiles>
-                <profile id="844e-8db8-dbeb-7ce4" name="Thunderfist" hidden="false" typeId="c23b-5a30-07e2-4706" typeName="Unit Options">
-                  <characteristics>
-                    <characteristic name="Unit Option" typeId="5879-9a21-e9d2-539d">1 model in this unit can be a Thunderfist. Add 1 to the Attacks characteristic of that model’s Bludgeoning Blow.</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-              <costs>
-                <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
-              </costs>
-            </selectionEntry>
-          </selectionEntries>
-        </selectionEntryGroup>
-      </selectionEntryGroups>
       <entryLinks>
         <entryLink id="3230-bb21-4827-dc4c" name="Gulping Bite" hidden="false" collective="false" import="true" targetId="d6b5-daca-46a7-272f" type="selectionEntry"/>
+        <entryLink id="1f98-06f7-7341-6d32" name="Unit Reinforcement" hidden="false" collective="false" import="true" targetId="b493-d9e6-82ca-5488" type="selectionEntry"/>
       </entryLinks>
       <costs>
-        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
+        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="180.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="dd37-103c-9df1-8673" name="Ironblaster" publicationId="ca59-f8ac-3938-b963" hidden="false" collective="false" import="true" type="unit">
@@ -1245,7 +1245,7 @@ In addition, each time a unit with any Rune Maw Bearers is affected by a spell o
         </selectionEntry>
       </selectionEntries>
       <costs>
-        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="120.0"/>
+        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="130.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="dc14-93c8-96ea-3f5d" name="Gnoblar Scraplauncher" publicationId="ca59-f8ac-3938-b963" hidden="false" collective="false" import="true" type="unit">
@@ -1347,10 +1347,20 @@ In addition, each time a unit with any Rune Maw Bearers is affected by a spell o
         </selectionEntry>
       </selectionEntries>
       <costs>
-        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="120.0"/>
+        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="130.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="2364-2324-c29a-90c5" name="Gnoblars" publicationId="ca59-f8ac-3938-b963" hidden="false" collective="false" import="true" type="unit">
+      <modifiers>
+        <modifier type="increment" field="b0b4-6aec-82c2-02ae" value="120.0">
+          <repeats>
+            <repeat field="selections" scope="2364-2324-c29a-90c5" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e20c-48d8-e5e3-1a36" repeats="1" roundUp="false"/>
+          </repeats>
+          <conditions>
+            <condition field="selections" scope="2364-2324-c29a-90c5" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e20c-48d8-e5e3-1a36" type="greaterThan"/>
+          </conditions>
+        </modifier>
+      </modifiers>
       <profiles>
         <profile id="6307-e8cc-cae6-42a7" name="Gnoblars" hidden="false" typeId="3956-f6dd-6c88-ae4b" typeName="Unit">
           <characteristics>
@@ -1370,6 +1380,11 @@ In addition, each time a unit with any Rune Maw Bearers is affected by a spell o
             <characteristic name="Ability" typeId="9bce-4deb-8b79-eaec">Roll 1 dice for each enemy unit that is within 3&quot; of a model from this unit after that enemy unit finishes a charge move. On a 6, that enemy unit suffers D3 mortal wounds.</characteristic>
           </characteristics>
         </profile>
+        <profile id="7d05-4f01-93ce-2624" name="Groinbiter" hidden="false" typeId="c23b-5a30-07e2-4706" typeName="Unit Options">
+          <characteristics>
+            <characteristic name="Unit Option" typeId="5879-9a21-e9d2-539d">1 model in this unit can be a Groinbiter. Add 1 to the Attacks characteristic of that model’s Motley Assortment of Weapons.</characteristic>
+          </characteristics>
+        </profile>
       </profiles>
       <categoryLinks>
         <categoryLink id="fb45-647e-1979-b217" name="Destruction" hidden="false" targetId="5d33-469f-2bda-51f9" primary="false"/>
@@ -1380,20 +1395,13 @@ In addition, each time a unit with any Rune Maw Bearers is affected by a spell o
         <categoryLink id="619b-b327-1884-bb7b" name="Grot" hidden="false" targetId="2585-3204-347c-9c7e" primary="false"/>
       </categoryLinks>
       <selectionEntries>
-        <selectionEntry id="0b9d-a798-9d04-177b" name="20 Gnoblars" hidden="false" collective="false" import="true" type="upgrade">
-          <modifiers>
-            <modifier type="set" field="b0b4-6aec-82c2-02ae" value="90.0">
-              <conditions>
-                <condition field="selections" scope="parent" value="3.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" type="equalTo"/>
-              </conditions>
-            </modifier>
-          </modifiers>
+        <selectionEntry id="0b9d-a798-9d04-177b" name="20 Gnoblars" hidden="false" collective="false" import="true" type="model">
           <constraints>
-            <constraint field="selections" scope="parent" value="3.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="9f1b-152a-c5bb-95b2" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="9f1b-152a-c5bb-95b2" type="max"/>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8cc8-e1d4-3157-e206" type="min"/>
           </constraints>
           <costs>
-            <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="100.0"/>
+            <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="6444-3a5d-5808-6a75" name="Motley Assortment of Weapons" hidden="false" collective="false" import="true" type="upgrade">
@@ -1441,29 +1449,11 @@ In addition, each time a unit with any Rune Maw Bearers is affected by a spell o
           </costs>
         </selectionEntry>
       </selectionEntries>
-      <selectionEntryGroups>
-        <selectionEntryGroup id="adf2-4f4e-3b03-1fd1" name="Unit Option" hidden="false" collective="false" import="true">
-          <selectionEntries>
-            <selectionEntry id="5218-02ea-8131-5f58" name="Groinbiter" hidden="false" collective="false" import="true" type="upgrade">
-              <constraints>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="bcc6-bbc3-1cf9-d154" type="max"/>
-              </constraints>
-              <profiles>
-                <profile id="d955-eec0-dc17-0d91" name="Groinbiter" hidden="false" typeId="c23b-5a30-07e2-4706" typeName="Unit Options">
-                  <characteristics>
-                    <characteristic name="Unit Option" typeId="5879-9a21-e9d2-539d">1 model in this unit can be a Groinbiter. Add 1 to the Attacks characteristic of that model’s Motley Assortment of Weapons.</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-              <costs>
-                <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
-              </costs>
-            </selectionEntry>
-          </selectionEntries>
-        </selectionEntryGroup>
-      </selectionEntryGroups>
+      <entryLinks>
+        <entryLink id="132e-6d46-1aed-f9d3" name="Unit Reinforcement" hidden="false" collective="false" import="true" targetId="b493-d9e6-82ca-5488" type="selectionEntry"/>
+      </entryLinks>
       <costs>
-        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
+        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="120.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="d5d6-9977-4cf5-260e" name="Firebelly" publicationId="ca59-f8ac-3938-b963" hidden="false" collective="false" import="true" type="unit">
@@ -1555,10 +1545,20 @@ In addition, if this spell is successfully cast, add 1 to save rolls for attacks
         </selectionEntry>
       </selectionEntries>
       <costs>
-        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="120.0"/>
+        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="125.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="165a-5d01-3b35-d857" name="Maneaters" publicationId="ca59-f8ac-3938-b963" hidden="false" collective="false" import="true" type="unit">
+      <modifiers>
+        <modifier type="increment" field="b0b4-6aec-82c2-02ae" value="180.0">
+          <repeats>
+            <repeat field="selections" scope="165a-5d01-3b35-d857" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e20c-48d8-e5e3-1a36" repeats="1" roundUp="false"/>
+          </repeats>
+          <conditions>
+            <condition field="selections" scope="165a-5d01-3b35-d857" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e20c-48d8-e5e3-1a36" type="greaterThan"/>
+          </conditions>
+        </modifier>
+      </modifiers>
       <profiles>
         <profile id="7b19-3117-081f-8fb5" name="Maneaters" hidden="false" typeId="3956-f6dd-6c88-ae4b" typeName="Unit">
           <characteristics>
@@ -1581,6 +1581,11 @@ Striders: This unit can run and still charge later in the same turn.
 Stubborn: Do not take battleshock tests for this unit.</characteristic>
           </characteristics>
         </profile>
+        <profile id="a988-6a04-b507-b9a2" name="Elite" hidden="false" typeId="7861-da01-01c0-88d9" typeName="Ability">
+          <characteristics>
+            <characteristic name="Ability" typeId="9bce-4deb-8b79-eaec">Models in this unit can issue commands to their own unit.</characteristic>
+          </characteristics>
+        </profile>
       </profiles>
       <categoryLinks>
         <categoryLink id="e17c-295f-9ca4-3fc5" name="Destruction" hidden="false" targetId="5d33-469f-2bda-51f9" primary="false"/>
@@ -1592,11 +1597,11 @@ Stubborn: Do not take battleshock tests for this unit.</characteristic>
       <selectionEntries>
         <selectionEntry id="bd06-67d0-58ae-d704" name="3 Maneaters" hidden="false" collective="false" import="true" type="model">
           <constraints>
-            <constraint field="selections" scope="parent" value="4.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="0343-2864-55c7-54a5" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="0343-2864-55c7-54a5" type="max"/>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="846d-0869-28e1-0a5e" type="min"/>
           </constraints>
           <costs>
-            <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="180.0"/>
+            <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="539e-31f8-348c-c995" name="Slicers and Bashers" hidden="false" collective="false" import="true" type="upgrade">
@@ -1646,9 +1651,10 @@ Stubborn: Do not take battleshock tests for this unit.</characteristic>
       </selectionEntries>
       <entryLinks>
         <entryLink id="d65c-fb27-0b9c-1466" name="Gulping Bite" hidden="false" collective="false" import="true" targetId="d6b5-daca-46a7-272f" type="selectionEntry"/>
+        <entryLink id="a8cb-9230-114d-2d97" name="Unit Reinforcement" hidden="false" collective="false" import="true" targetId="b493-d9e6-82ca-5488" type="selectionEntry"/>
       </entryLinks>
       <costs>
-        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
+        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="180.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="2c94-55b4-d89b-d64d" name="Frostlord on Stonehorn" publicationId="ca59-f8ac-3938-b963" hidden="false" collective="false" import="true" type="unit">
@@ -1822,7 +1828,7 @@ Stubborn: Do not take battleshock tests for this unit.</characteristic>
         </selectionEntry>
       </selectionEntries>
       <costs>
-        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="400.0"/>
+        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="430.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="a540-afa7-fa1b-7256" name="Huskard on Stonehorn" publicationId="ca59-f8ac-3938-b963" hidden="false" collective="false" import="true" type="unit">
@@ -2032,7 +2038,7 @@ Stubborn: Do not take battleshock tests for this unit.</characteristic>
         </selectionEntryGroup>
       </selectionEntryGroups>
       <costs>
-        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="320.0"/>
+        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="340.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="c48f-f39a-af6d-9cb5" name="Frostlord on Thundertusk" publicationId="ca59-f8ac-3938-b963" hidden="false" collective="false" import="true" type="unit">
@@ -2206,7 +2212,7 @@ Stubborn: Do not take battleshock tests for this unit.</characteristic>
         </selectionEntry>
       </selectionEntries>
       <costs>
-        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="350.0"/>
+        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="385.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="7fdd-a029-909b-1bab" name="Huskard on Thundertusk" publicationId="ca59-f8ac-3938-b963" hidden="false" collective="false" import="true" type="unit">
@@ -2261,17 +2267,17 @@ Stubborn: Do not take battleshock tests for this unit.</characteristic>
         </profile>
         <profile id="338b-2bdb-9b15-6599" name="Blizzard Speaker" hidden="false" typeId="7861-da01-01c0-88d9" typeName="Ability">
           <characteristics>
-            <characteristic name="Ability" typeId="9bce-4deb-8b79-eaec">In your hero phase, this model can chant either the Winter&apos;s Endurance or Winter&apos;s Strength prayers. If it does so, pick one of the prayers and then make a prayer roll by rolling a dice. Add 1 to the roll for each other friendly THUNDERTUSK within 18&quot; of this model. On a 1-3, the prayer is not answered. On a 4+, the prayer is answered.</characteristic>
+            <characteristic name="Ability" typeId="9bce-4deb-8b79-eaec">Add 1 to chanting rolls for this unit for each other friendly THUNDERTUSK within 18&quot; of this unit. In addition, this unit knows the Winter&apos;s Endurance and Winter&apos;s Strength prayers.</characteristic>
           </characteristics>
         </profile>
         <profile id="0a72-ca5b-9d15-dd8e" name="Winter&apos;s Endurance" hidden="false" typeId="161a-85bd-f19e-a5a7" typeName="Prayer">
           <characteristics>
-            <characteristic name="Prayer" typeId="19bc-965a-768d-defa">If this prayer is answered, pick 1 friendly BEASTCLAW RAIDERS unit wholly within 18&quot; of this model. You can heal D3 wounds allocated to that unit.</characteristic>
+            <characteristic name="Prayer" typeId="19bc-965a-768d-defa">This prayer has an answer value of 4 and a range of 18&quot;. If answered, pick 1 friendly BEASTCLAW RAIDERS unit wholly within range and visible to the chanter. You can heal D3 wounds allocated to that unit.</characteristic>
           </characteristics>
         </profile>
         <profile id="1488-f1c6-a638-490b" name="Winter&apos;s Strength" hidden="false" typeId="161a-85bd-f19e-a5a7" typeName="Prayer">
           <characteristics>
-            <characteristic name="Prayer" typeId="19bc-965a-768d-defa">If this prayer is answered, pick 1 friendly BEASTCLAW RAIDERS unit wholly within 18&quot; of this model. Until the start of your next hero phase, add 1 to wound rolls for attacks made with melee weapons by that unit.</characteristic>
+            <characteristic name="Prayer" typeId="19bc-965a-768d-defa">This prayer has an answer value of 4 and a range of 18&quot;. If answered, pick 1 friendly BEASTCLAW RAIDERS unit wholly within range and visible to the chanter. Add 1 to wound rolls for attacks made with melee weapons by that unit until the start of your next hero phase.</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -2427,7 +2433,7 @@ Stubborn: Do not take battleshock tests for this unit.</characteristic>
         </selectionEntryGroup>
       </selectionEntryGroups>
       <costs>
-        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="300.0"/>
+        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="335.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="7f66-137b-03aa-5a7f" name="Stonehorn Beastriders" publicationId="ca59-f8ac-3938-b963" hidden="false" collective="false" import="true" type="unit">
@@ -2674,7 +2680,7 @@ Stubborn: Do not take battleshock tests for this unit.</characteristic>
         </selectionEntryGroup>
       </selectionEntryGroups>
       <costs>
-        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="300.0"/>
+        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="320.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="32cd-49ae-c65c-f5a0" name="Thundertusk Beastriders" publicationId="ca59-f8ac-3938-b963" hidden="false" collective="false" import="true" type="unit">
@@ -2921,7 +2927,7 @@ Stubborn: Do not take battleshock tests for this unit.</characteristic>
         </selectionEntryGroup>
       </selectionEntryGroups>
       <costs>
-        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="270.0"/>
+        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="285.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="a3dc-d5b9-82b1-c3ac" name="Icebrow Hunter" publicationId="ca59-f8ac-3938-b963" hidden="false" collective="false" import="true" type="unit">
@@ -2981,7 +2987,8 @@ At the end of your movement phase, you can set up this model anywhere on the bat
             </profile>
             <profile id="2019-54a5-5e8a-fa8a" name="Mighty Throw" hidden="false" typeId="7861-da01-01c0-88d9" typeName="Ability">
               <characteristics>
-                <characteristic name="Ability" typeId="9bce-4deb-8b79-eaec">This model can run and still shoot with its Great Throwing Spear later in the same turn. In addition, this model’s Great Throwing Spear has a Damage characteristic of D6 instead of D3 and a Range characteristic of 18&quot; instead of 9&quot; if it ran in the same turn.</characteristic>
+                <characteristic name="Ability" typeId="9bce-4deb-8b79-eaec">This model can run and still shoot with its Great Throwing Spear later in the same turn. In addition, this unit’s Great Throwing Spear has a Damage characteristic of D6 instead of D3 and a Range characteristic of 18&quot; instead of 9&quot; if it ran in the same turn.
+</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -3038,10 +3045,20 @@ At the end of your movement phase, you can set up this model anywhere on the bat
         <entryLink id="cec1-09cf-dd36-e6de" name="Gulping Bite" hidden="false" collective="false" import="true" targetId="d6b5-daca-46a7-272f" type="selectionEntry"/>
       </entryLinks>
       <costs>
-        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="120.0"/>
+        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="125.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="a9d7-d4ba-3832-6f0d" name="Frost Sabres" publicationId="ca59-f8ac-3938-b963" hidden="false" collective="false" import="true" type="unit">
+      <modifiers>
+        <modifier type="increment" field="b0b4-6aec-82c2-02ae" value="55.0">
+          <repeats>
+            <repeat field="selections" scope="a9d7-d4ba-3832-6f0d" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e20c-48d8-e5e3-1a36" repeats="1" roundUp="false"/>
+          </repeats>
+          <conditions>
+            <condition field="selections" scope="a9d7-d4ba-3832-6f0d" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e20c-48d8-e5e3-1a36" type="greaterThan"/>
+          </conditions>
+        </modifier>
+      </modifiers>
       <profiles>
         <profile id="9d83-f368-ecc0-546b" name="Frost Sabres" hidden="false" typeId="3956-f6dd-6c88-ae4b" typeName="Unit">
           <characteristics>
@@ -3069,11 +3086,11 @@ In addition, add 2 to the Bravery characteristic of this unit while it is wholly
       <selectionEntries>
         <selectionEntry id="6b29-d87d-9526-8c08" name="2 Frost Sabres" hidden="false" collective="false" import="true" type="model">
           <constraints>
-            <constraint field="selections" scope="parent" value="6.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="6d7f-3f17-eff2-62f2" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="6d7f-3f17-eff2-62f2" type="max"/>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d632-7097-3389-37bc" type="min"/>
           </constraints>
           <costs>
-            <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="40.0"/>
+            <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="4fb2-a4c0-91db-b85b" name="Elongated Fangs" hidden="false" collective="false" import="true" type="upgrade">
@@ -3139,11 +3156,24 @@ In addition, add 2 to the Bravery characteristic of this unit while it is wholly
           </costs>
         </selectionEntry>
       </selectionEntries>
+      <entryLinks>
+        <entryLink id="3e2e-866c-82f4-717a" name="Unit Reinforcement" hidden="false" collective="false" import="true" targetId="b493-d9e6-82ca-5488" type="selectionEntry"/>
+      </entryLinks>
       <costs>
-        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
+        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="55.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="8ab8-85c1-f7b3-c8c7" name="Icefall Yhetees" publicationId="ca59-f8ac-3938-b963" hidden="false" collective="false" import="true" type="unit">
+      <modifiers>
+        <modifier type="increment" field="b0b4-6aec-82c2-02ae" value="120.0">
+          <repeats>
+            <repeat field="selections" scope="8ab8-85c1-f7b3-c8c7" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e20c-48d8-e5e3-1a36" repeats="1" roundUp="false"/>
+          </repeats>
+          <conditions>
+            <condition field="selections" scope="8ab8-85c1-f7b3-c8c7" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e20c-48d8-e5e3-1a36" type="greaterThan"/>
+          </conditions>
+        </modifier>
+      </modifiers>
       <profiles>
         <profile id="2460-bc19-c7f8-78e8" name="Icefall Yhetees" hidden="false" typeId="3956-f6dd-6c88-ae4b" typeName="Unit">
           <characteristics>
@@ -3179,11 +3209,11 @@ In addition, add 2 to the Bravery characteristic of this unit while it is wholly
       <selectionEntries>
         <selectionEntry id="7451-f3da-e5db-07b0" name="3 Icefall Yhetees" hidden="false" collective="false" import="true" type="model">
           <constraints>
-            <constraint field="selections" scope="parent" value="4.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="9948-bc51-51a2-666f" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="9948-bc51-51a2-666f" type="max"/>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="af53-277d-e1a9-3338" type="min"/>
           </constraints>
           <costs>
-            <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="110.0"/>
+            <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="6f00-0e26-b385-00c3" name="CONDITIONAL BATTLELINE" hidden="false" collective="false" import="true" type="upgrade">
@@ -3249,11 +3279,24 @@ In addition, add 2 to the Bravery characteristic of this unit while it is wholly
           </costs>
         </selectionEntry>
       </selectionEntries>
+      <entryLinks>
+        <entryLink id="399b-6c68-2be8-7d0f" name="Unit Reinforcement" hidden="false" collective="false" import="true" targetId="b493-d9e6-82ca-5488" type="selectionEntry"/>
+      </entryLinks>
       <costs>
-        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
+        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="120.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="ffbb-ebf7-80a7-7598" name="Mournfang Pack" publicationId="ca59-f8ac-3938-b963" hidden="false" collective="false" import="true" type="unit">
+      <modifiers>
+        <modifier type="increment" field="b0b4-6aec-82c2-02ae" value="160.0">
+          <repeats>
+            <repeat field="selections" scope="ffbb-ebf7-80a7-7598" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e20c-48d8-e5e3-1a36" repeats="1" roundUp="false"/>
+          </repeats>
+          <conditions>
+            <condition field="selections" scope="ffbb-ebf7-80a7-7598" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e20c-48d8-e5e3-1a36" type="greaterThan"/>
+          </conditions>
+        </modifier>
+      </modifiers>
       <profiles>
         <profile id="89f3-6ac4-0440-bb11" name="Mournfang Pack" hidden="false" typeId="3956-f6dd-6c88-ae4b" typeName="Unit">
           <characteristics>
@@ -3275,11 +3318,11 @@ In addition, add 2 to the Bravery characteristic of this unit while it is wholly
       <selectionEntries>
         <selectionEntry id="b073-b164-65d8-a960" name="2 Mournfangs" hidden="false" collective="false" import="true" type="model">
           <constraints>
-            <constraint field="selections" scope="parent" value="6.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="b670-fb44-5055-eb18" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="b670-fb44-5055-eb18" type="max"/>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="eea1-df8b-47e1-8a50" type="min"/>
           </constraints>
           <costs>
-            <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="140.0"/>
+            <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="48af-78ac-61ef-d1da" name="CONDITIONAL BATTLELINE" hidden="false" collective="false" import="true" type="upgrade">
@@ -3511,8 +3554,11 @@ In addition, add 2 to the Bravery characteristic of this unit while it is wholly
           </selectionEntries>
         </selectionEntryGroup>
       </selectionEntryGroups>
+      <entryLinks>
+        <entryLink id="3e9c-ecbe-8fea-e6b4" name="Unit Reinforcement" hidden="false" collective="false" import="true" targetId="b493-d9e6-82ca-5488" type="selectionEntry"/>
+      </entryLinks>
       <costs>
-        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
+        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="160.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="d0f0-6a6f-86f7-046a" name="Hrothgorn" hidden="false" collective="false" import="true" type="unit">

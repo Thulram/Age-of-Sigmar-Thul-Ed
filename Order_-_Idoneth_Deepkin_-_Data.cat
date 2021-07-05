@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="53db-fccc-828d-aacf" name="Order - Idoneth Deepkin - Data" revision="3" battleScribeVersion="2.03" authorName="Thulram" library="true" gameSystemId="e832-3291-06be-cab1" gameSystemRevision="2" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="53db-fccc-828d-aacf" name="Order - Idoneth Deepkin - Data" revision="6" battleScribeVersion="2.03" authorName="Thulram" library="true" gameSystemId="e832-3291-06be-cab1" gameSystemRevision="6" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <profileTypes>
     <profileType id="3081-447d-82e2-cdb3" name="Leviadon Wounds">
       <characteristicTypes>
@@ -33,6 +33,9 @@
     <categoryEntry id="b524-d787-bf53-1a7b" name="Reavers" hidden="false"/>
     <categoryEntry id="0105-60b2-8105-dcbd" name="General - Akhelian" hidden="true"/>
     <categoryEntry id="8d8d-c85a-9ff6-5d9c" name="General - Isharann" hidden="true"/>
+    <categoryEntry id="49dd-c705-7c0a-446d" name="Ionrach" hidden="false"/>
+    <categoryEntry id="eff3-6c94-9bf4-cba6" name="Elathain Ill-fated" hidden="false"/>
+    <categoryEntry id="8412-ee61-bba8-43b4" name="Elathain&apos;s Soulraid" hidden="false"/>
   </categoryEntries>
   <sharedSelectionEntries>
     <selectionEntry id="a326-6869-5806-2c0d" name="Allegiance" hidden="false" collective="false" import="true" type="upgrade">
@@ -57,23 +60,21 @@
         <categoryLink id="ce44-c44a-b6b3-1526" name="Allegiance" hidden="false" targetId="af41-ae78-5063-3d36" primary="false"/>
         <categoryLink id="2601-e127-195c-6d51" name="New CategoryLink" hidden="false" targetId="29f4-e63d-fa5b-1611" primary="true"/>
       </categoryLinks>
-      <selectionEntryGroups>
-        <selectionEntryGroup id="cf47-3a02-2ffe-2cf1" name="Allegiance" hidden="false" collective="false" import="true" defaultSelectionEntryId="eeb8-65d3-79ea-26f4">
+      <selectionEntries>
+        <selectionEntry id="e46b-caf7-8b4b-2202" name="Idoneth Deepkin" publicationId="dea8-e4a3-2500-1a33" hidden="false" collective="false" import="true" type="upgrade">
           <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="1b7b-a736-7dc8-1039" type="max"/>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8195-ba1b-8f05-44f7" type="min"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="9320-2395-320a-e16b" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="c198-72e7-e3c8-ff5a" type="min"/>
           </constraints>
-          <selectionEntries>
-            <selectionEntry id="eeb8-65d3-79ea-26f4" name="Idoneth Deepkin" publicationId="dea8-e4a3-2500-1a33" hidden="false" collective="false" import="true" type="upgrade">
-              <profiles>
-                <profile id="28c1-b04d-fd57-77f6" name="Forgotten Nightmares" hidden="false" typeId="c0c2-177b-e761-ec41" typeName="Allegiance Abilities">
-                  <characteristics>
-                    <characteristic name="Allegiance Ability" typeId="0506-f62d-68b3-5499">Missileweapons can only be used to target an IDONETH DEEPKINunit with this battle trait if it is the closest visible enemy unit.</characteristic>
-                  </characteristics>
-                </profile>
-                <profile id="a788-f368-94a2-1cee" name="Tides of Death" hidden="false" typeId="c0c2-177b-e761-ec41" typeName="Allegiance Abilities">
-                  <characteristics>
-                    <characteristic name="Allegiance Ability" typeId="0506-f62d-68b3-5499">IDONETHDEEPKINunits with this battle trait have a different Tides of Death ability each battle round, as shown on the Tides of Death table below.
+          <profiles>
+            <profile id="9e96-baa8-2585-6e7f" name="Forgotten Nightmares" hidden="false" typeId="c0c2-177b-e761-ec41" typeName="Allegiance Abilities">
+              <characteristics>
+                <characteristic name="Allegiance Ability" typeId="0506-f62d-68b3-5499">Missileweapons can only be used to target an IDONETH DEEPKINunit with this battle trait if it is the closest visible enemy unit.</characteristic>
+              </characteristics>
+            </profile>
+            <profile id="d4a9-ba58-4da4-f858" name="Tides of Death" hidden="false" typeId="c0c2-177b-e761-ec41" typeName="Allegiance Abilities">
+              <characteristics>
+                <characteristic name="Allegiance Ability" typeId="0506-f62d-68b3-5499">IDONETHDEEPKINunits with this battle trait have a different Tides of Death ability each battle round, as shown on the Tides of Death table below.
 
 Battle Round -- Ability
 
@@ -81,154 +82,152 @@ Battle Round -- Ability
 
 2 -- Flood Tide: In this battle round, all units with the Tides of Death battle trait that run can still either shoot or charge in the same turn (but not both).
 
-3 -- High Tide: In this battle round, units with the Tides of Death battle trait fight at the start of the combat phase.
+3 -- High Tide: In this battle round, the strike-first effect applies to units with the Tides of Death battle trait.
 
 4 -- Ebb Tide: In this battle round, all units with the Tides of Death battle trait that retreat can still either shoot or charge in the same turn (but not both).
 
 5+ --: Repeat the four Tides of Death steps, starting with Low Tide</characteristic>
-                  </characteristics>
-                </profile>
-                <profile id="b868-4f18-e3bd-29c4" name="The Enclaves" hidden="false" typeId="c0c2-177b-e761-ec41" typeName="Allegiance Abilities">
-                  <characteristics>
-                    <characteristic name="Allegiance Ability" typeId="0506-f62d-68b3-5499">You can organise your collection of Idoneth Deepkin miniatures as an army from one of the major Idoneth enclaves. All Idoneth Deepkin units and warscroll battalions in the army are then considered to be from that enclave. For example, if you decided to organise your collection into an army from Ionrach Enclave,each unit would be considered a Ionrach unit, and each warscroll battalion would be considered a Ionrach warscroll battalion. This does not change their allegiance, but does give you access to some additional rules you can use for your army.
+              </characteristics>
+            </profile>
+            <profile id="e7cd-328d-0be1-0d1a" name="The Enclaves" hidden="false" typeId="c0c2-177b-e761-ec41" typeName="Allegiance Abilities">
+              <characteristics>
+                <characteristic name="Allegiance Ability" typeId="0506-f62d-68b3-5499">You can organise your collection of Idoneth Deepkin miniatures as an army from one of the major Idoneth enclaves. All Idoneth Deepkin units and warscroll battalions in the army are then considered to be from that enclave. For example, if you decided to organise your collection into an army from Ionrach Enclave,each unit would be considered a Ionrach unit, and each warscroll battalion would be considered a Ionrach warscroll battalion. This does not change their allegiance, but does give you access to some additional rules you can use for your army.
 
 When you organise your collection to be an army from one of the enclaves listed in this section, you can use extra abilities, and may gain access to a bespoke command trait or new spell. In addition, you can include additional units in certain warscroll battalions.
 
 You can choose to organise your collection of Idoneth Deepkin miniatures as an army from an enclave of your own devising. If you do so, simply pick the enclave that most closely matches the background of your own enclave, and use its rules for your enclave.</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-              <selectionEntryGroups>
-                <selectionEntryGroup id="db08-8a93-f523-f9ee" name="Enclave" hidden="false" collective="false" import="true">
-                  <constraints>
-                    <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="f3c9-b6c0-ecf6-d267" type="max"/>
-                  </constraints>
-                  <selectionEntries>
-                    <selectionEntry id="d31f-2c7c-2f36-4768" name="Ionrach" hidden="false" collective="false" import="true" type="upgrade">
-                      <profiles>
-                        <profile id="19b1-a80c-2f80-1e29" name="Strong in Magic" hidden="false" typeId="c0c2-177b-e761-ec41" typeName="Allegiance Abilities">
-                          <characteristics>
-                            <characteristic name="Allegiance Ability" typeId="0506-f62d-68b3-5499">Add 1 to casting and unbinding rolls for Ionrach WIZARDS.</characteristic>
-                          </characteristics>
-                        </profile>
-                      </profiles>
-                      <categoryLinks>
-                        <categoryLink id="ef53-7eda-267a-27bc" name="Sub-Allegiance" hidden="false" targetId="4fe1-4d42-25cc-d732" primary="false"/>
-                      </categoryLinks>
-                      <costs>
-                        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
-                      </costs>
-                    </selectionEntry>
-                    <selectionEntry id="956f-e432-c27a-7e49" name="Dhom-hain" hidden="false" collective="false" import="true" type="upgrade">
-                      <profiles>
-                        <profile id="80ff-64a6-e805-bb56" name="Savage Fighters" hidden="false" typeId="c0c2-177b-e761-ec41" typeName="Allegiance Abilities">
-                          <characteristics>
-                            <characteristic name="Allegiance Ability" typeId="0506-f62d-68b3-5499">In your combat phase, re-roll hit rolls of 1 for Dhom-hain AKHELIANand Dhom-hain NAMARTI units that made a charge move in the same turn.</characteristic>
-                          </characteristics>
-                        </profile>
-                        <profile id="f4c2-babb-d635-f9a1" name="Deep Questors" hidden="false" typeId="c0c2-177b-e761-ec41" typeName="Allegiance Abilities">
-                          <characteristics>
-                            <characteristic name="Allegiance Ability" typeId="0506-f62d-68b3-5499">You can re-roll failed wound rolls for Dhom-hain AKHELIAN units if the target is a MONSTER.</characteristic>
-                          </characteristics>
-                        </profile>
-                      </profiles>
-                      <categoryLinks>
-                        <categoryLink id="fbd9-f401-9298-ac3b" name="Sub-Allegiance" hidden="false" targetId="4fe1-4d42-25cc-d732" primary="false"/>
-                      </categoryLinks>
-                      <costs>
-                        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
-                      </costs>
-                    </selectionEntry>
-                    <selectionEntry id="d904-1694-8788-3b25" name="Fuethan" hidden="false" collective="false" import="true" type="upgrade">
-                      <profiles>
-                        <profile id="3183-89c3-5b03-6259" name="Revel in Slaughter" hidden="false" typeId="c0c2-177b-e761-ec41" typeName="Allegiance Abilities">
-                          <characteristics>
-                            <characteristic name="Allegiance Ability" typeId="0506-f62d-68b3-5499">You can re-roll hit rolls of 1 for Fuethán units that are affected by the Flood Tide ability from the Tides of Death table. In addition, whenever a Fuethán unit would be affected by the Ebb Tide ability from the Tides of Death table, they are instead affected by the Flood Tide ability from the same table.</characteristic>
-                          </characteristics>
-                        </profile>
-                        <profile id="498e-516d-71a8-ef4c" name="Fiercest of Creatures" hidden="false" typeId="c0c2-177b-e761-ec41" typeName="Allegiance Abilities">
-                          <characteristics>
-                            <characteristic name="Allegiance Ability" typeId="0506-f62d-68b3-5499">In the combat phase, re-roll wound rolls of 1 for Fuethán mounts.</characteristic>
-                          </characteristics>
-                        </profile>
-                      </profiles>
-                      <categoryLinks>
-                        <categoryLink id="5ba9-8f8a-efd2-9449" name="Sub-Allegiance" hidden="false" targetId="4fe1-4d42-25cc-d732" primary="false"/>
-                      </categoryLinks>
-                      <costs>
-                        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
-                      </costs>
-                    </selectionEntry>
-                    <selectionEntry id="5d39-8d1b-4ff7-57fd" name="Nautilar" hidden="false" collective="false" import="true" type="upgrade">
-                      <profiles>
-                        <profile id="4886-6bd0-ad7d-91f7" name="Consummate Defenders" hidden="false" typeId="c0c2-177b-e761-ec41" typeName="Allegiance Abilities">
-                          <characteristics>
-                            <characteristic name="Allegiance Ability" typeId="0506-f62d-68b3-5499">You can re-roll failed hit rolls for Nautilar units in the combat phase if the target made a charge move in the same turn.</characteristic>
-                          </characteristics>
-                        </profile>
-                        <profile id="1e37-bd5a-ef73-188b" name="Magic" hidden="false" typeId="c0c2-177b-e761-ec41" typeName="Allegiance Abilities">
-                          <characteristics>
-                            <characteristic name="Allegiance Ability" typeId="0506-f62d-68b3-5499">Nautilar Tidecasters know the Protective Barrier spell instead of a spell from the Lore of the Deeps.</characteristic>
-                          </characteristics>
-                        </profile>
-                      </profiles>
-                      <categoryLinks>
-                        <categoryLink id="a314-f755-21a5-0b86" name="Sub-Allegiance" hidden="false" targetId="4fe1-4d42-25cc-d732" primary="false"/>
-                      </categoryLinks>
-                      <costs>
-                        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
-                      </costs>
-                    </selectionEntry>
-                    <selectionEntry id="03aa-2b0e-8cf7-3d86" name="Mor&apos;phann" hidden="false" collective="false" import="true" type="upgrade">
-                      <profiles>
-                        <profile id="6de9-80a0-71fc-e694" name="Soul-magic Adepts" hidden="false" typeId="c0c2-177b-e761-ec41" typeName="Allegiance Abilities">
-                          <characteristics>
-                            <characteristic name="Allegiance Ability" typeId="0506-f62d-68b3-5499">When a Mor’phann Isharann Soulrender uses their Lurelight ability, add 3 to the number of models that are returned.</characteristic>
-                          </characteristics>
-                        </profile>
-                        <profile id="9ed8-50fa-e5af-fe7a" name="Magic" hidden="false" typeId="c0c2-177b-e761-ec41" typeName="Allegiance Abilities">
-                          <characteristics>
-                            <characteristic name="Allegiance Ability" typeId="0506-f62d-68b3-5499">Mor’phann Tidecasters know the Freezing Mists spell instead of a spell from the Lore of the Deeps.</characteristic>
-                          </characteristics>
-                        </profile>
-                      </profiles>
-                      <categoryLinks>
-                        <categoryLink id="5230-5f99-b477-eeb7" name="Sub-Allegiance" hidden="false" targetId="4fe1-4d42-25cc-d732" primary="false"/>
-                      </categoryLinks>
-                      <costs>
-                        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
-                      </costs>
-                    </selectionEntry>
-                    <selectionEntry id="5a84-23b5-f799-e76b" name="Briomdar" hidden="false" collective="false" import="true" type="upgrade">
-                      <profiles>
-                        <profile id="5d3b-9677-02d4-be31" name="Supreme Soulscryer" hidden="false" typeId="c0c2-177b-e761-ec41" typeName="Allegiance Abilities">
-                          <characteristics>
-                            <characteristic name="Allegiance Ability" typeId="0506-f62d-68b3-5499">If a Briomdar Soulscryer uses their Finder ofWays ability, up to three friendly Briomdar units can join them instead of only two. In addition, you can set up the units that join a Briomdar Soulscryer wholly within 18&quot;of the Soulscryer instead of wholly within 12&quot;of the Soulscryer.</characteristic>
-                          </characteristics>
-                        </profile>
-                        <profile id="2e1a-e9ab-3738-20d9" name="Unstoppable Raiders" hidden="false" typeId="c0c2-177b-e761-ec41" typeName="Allegiance Abilities">
-                          <characteristics>
-                            <characteristic name="Allegiance Ability" typeId="0506-f62d-68b3-5499">Briomdar units that cannot normally fly ignore terrain features when they move, as if they could fly. Note that this does not allow them to ignore enemy models when they move.</characteristic>
-                          </characteristics>
-                        </profile>
-                      </profiles>
-                      <categoryLinks>
-                        <categoryLink id="c734-5078-8948-e766" name="Sub-Allegiance" hidden="false" targetId="4fe1-4d42-25cc-d732" primary="false"/>
-                      </categoryLinks>
-                      <costs>
-                        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
-                      </costs>
-                    </selectionEntry>
-                  </selectionEntries>
-                </selectionEntryGroup>
-              </selectionEntryGroups>
-              <costs>
-                <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
-              </costs>
-            </selectionEntry>
-          </selectionEntries>
-        </selectionEntryGroup>
-      </selectionEntryGroups>
+              </characteristics>
+            </profile>
+          </profiles>
+          <selectionEntryGroups>
+            <selectionEntryGroup id="9bdb-de7f-a187-4581" name="Enclave" hidden="false" collective="false" import="true">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="e253-ccfa-ba12-80fe" type="max"/>
+              </constraints>
+              <selectionEntries>
+                <selectionEntry id="6266-258e-3cd9-1e1f" name="Ionrach" hidden="false" collective="false" import="true" type="upgrade">
+                  <profiles>
+                    <profile id="1acc-a199-903d-485d" name="Strong in Magic" hidden="false" typeId="c0c2-177b-e761-ec41" typeName="Allegiance Abilities">
+                      <characteristics>
+                        <characteristic name="Allegiance Ability" typeId="0506-f62d-68b3-5499">Add 1 to casting and unbinding rolls for Ionrach WIZARDS.</characteristic>
+                      </characteristics>
+                    </profile>
+                  </profiles>
+                  <categoryLinks>
+                    <categoryLink id="66e3-7cb5-356c-4bcb" name="Sub-Allegiance" hidden="false" targetId="4fe1-4d42-25cc-d732" primary="false"/>
+                  </categoryLinks>
+                  <costs>
+                    <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
+                  </costs>
+                </selectionEntry>
+                <selectionEntry id="ed12-b68a-0cd2-4e35" name="Dhom-hain" hidden="false" collective="false" import="true" type="upgrade">
+                  <profiles>
+                    <profile id="147e-a427-ecc8-085a" name="Savage Fighters" hidden="false" typeId="c0c2-177b-e761-ec41" typeName="Allegiance Abilities">
+                      <characteristics>
+                        <characteristic name="Allegiance Ability" typeId="0506-f62d-68b3-5499">In your combat phase, re-roll hit rolls of 1 for Dhom-hain AKHELIANand Dhom-hain NAMARTI units that made a charge move in the same turn.</characteristic>
+                      </characteristics>
+                    </profile>
+                    <profile id="9237-2dfc-af0b-98f0" name="Deep Questors" hidden="false" typeId="c0c2-177b-e761-ec41" typeName="Allegiance Abilities">
+                      <characteristics>
+                        <characteristic name="Allegiance Ability" typeId="0506-f62d-68b3-5499">You can re-roll failed wound rolls for Dhom-hain AKHELIAN units if the target is a MONSTER.</characteristic>
+                      </characteristics>
+                    </profile>
+                  </profiles>
+                  <categoryLinks>
+                    <categoryLink id="1e30-84af-7b6a-0a64" name="Sub-Allegiance" hidden="false" targetId="4fe1-4d42-25cc-d732" primary="false"/>
+                  </categoryLinks>
+                  <costs>
+                    <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
+                  </costs>
+                </selectionEntry>
+                <selectionEntry id="1534-47a4-f7ec-e42a" name="Fuethan" hidden="false" collective="false" import="true" type="upgrade">
+                  <profiles>
+                    <profile id="9241-e703-95fb-24f4" name="Revel in Slaughter" hidden="false" typeId="c0c2-177b-e761-ec41" typeName="Allegiance Abilities">
+                      <characteristics>
+                        <characteristic name="Allegiance Ability" typeId="0506-f62d-68b3-5499">You can re-roll hit rolls of 1 for Fuethán units that are affected by the Flood Tide ability from the Tides of Death table. In addition, whenever a Fuethán unit would be affected by the Ebb Tide ability from the Tides of Death table, they are instead affected by the Flood Tide ability from the same table.</characteristic>
+                      </characteristics>
+                    </profile>
+                    <profile id="ae47-b666-71f6-54c4" name="Fiercest of Creatures" hidden="false" typeId="c0c2-177b-e761-ec41" typeName="Allegiance Abilities">
+                      <characteristics>
+                        <characteristic name="Allegiance Ability" typeId="0506-f62d-68b3-5499">In the combat phase, re-roll wound rolls of 1 for Fuethán mounts.</characteristic>
+                      </characteristics>
+                    </profile>
+                  </profiles>
+                  <categoryLinks>
+                    <categoryLink id="1cb2-8f36-fc24-48ad" name="Sub-Allegiance" hidden="false" targetId="4fe1-4d42-25cc-d732" primary="false"/>
+                  </categoryLinks>
+                  <costs>
+                    <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
+                  </costs>
+                </selectionEntry>
+                <selectionEntry id="3c47-d09e-d0c8-8682" name="Nautilar" hidden="false" collective="false" import="true" type="upgrade">
+                  <profiles>
+                    <profile id="1a84-e8f4-fe14-88b1" name="Consummate Defenders" hidden="false" typeId="c0c2-177b-e761-ec41" typeName="Allegiance Abilities">
+                      <characteristics>
+                        <characteristic name="Allegiance Ability" typeId="0506-f62d-68b3-5499">You can re-roll failed hit rolls for Nautilar units in the combat phase if the target made a charge move in the same turn.</characteristic>
+                      </characteristics>
+                    </profile>
+                    <profile id="7280-afdd-4b6b-0ade" name="Magic" hidden="false" typeId="c0c2-177b-e761-ec41" typeName="Allegiance Abilities">
+                      <characteristics>
+                        <characteristic name="Allegiance Ability" typeId="0506-f62d-68b3-5499">Nautilar Tidecasters know the Protective Barrier spell instead of a spell from the Lore of the Deeps.</characteristic>
+                      </characteristics>
+                    </profile>
+                  </profiles>
+                  <categoryLinks>
+                    <categoryLink id="b2fc-a35e-8ad7-e221" name="Sub-Allegiance" hidden="false" targetId="4fe1-4d42-25cc-d732" primary="false"/>
+                  </categoryLinks>
+                  <costs>
+                    <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
+                  </costs>
+                </selectionEntry>
+                <selectionEntry id="d8e3-6b13-4d03-10c3" name="Mor&apos;phann" hidden="false" collective="false" import="true" type="upgrade">
+                  <profiles>
+                    <profile id="e757-d5ad-8715-e90c" name="Soul-magic Adepts" hidden="false" typeId="c0c2-177b-e761-ec41" typeName="Allegiance Abilities">
+                      <characteristics>
+                        <characteristic name="Allegiance Ability" typeId="0506-f62d-68b3-5499">When a Mor’phann Isharann Soulrender uses their Lurelight ability, add 3 to the number of models that are returned.</characteristic>
+                      </characteristics>
+                    </profile>
+                    <profile id="eb85-3466-7915-5563" name="Magic" hidden="false" typeId="c0c2-177b-e761-ec41" typeName="Allegiance Abilities">
+                      <characteristics>
+                        <characteristic name="Allegiance Ability" typeId="0506-f62d-68b3-5499">Mor’phann Tidecasters know the Freezing Mists spell instead of a spell from the Lore of the Deeps.</characteristic>
+                      </characteristics>
+                    </profile>
+                  </profiles>
+                  <categoryLinks>
+                    <categoryLink id="6c93-8806-e0d4-2a10" name="Sub-Allegiance" hidden="false" targetId="4fe1-4d42-25cc-d732" primary="false"/>
+                  </categoryLinks>
+                  <costs>
+                    <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
+                  </costs>
+                </selectionEntry>
+                <selectionEntry id="7dc8-4a42-c9b4-ae5b" name="Briomdar" hidden="false" collective="false" import="true" type="upgrade">
+                  <profiles>
+                    <profile id="2e34-c610-f24d-0416" name="Supreme Soulscryer" hidden="false" typeId="c0c2-177b-e761-ec41" typeName="Allegiance Abilities">
+                      <characteristics>
+                        <characteristic name="Allegiance Ability" typeId="0506-f62d-68b3-5499">If a Briomdar Soulscryer uses their Finder ofWays ability, up to three friendly Briomdar units can join them instead of only two. In addition, you can set up the units that join a Briomdar Soulscryer wholly within 18&quot;of the Soulscryer instead of wholly within 12&quot;of the Soulscryer.</characteristic>
+                      </characteristics>
+                    </profile>
+                    <profile id="04ad-5958-3f2c-75d9" name="Unstoppable Raiders" hidden="false" typeId="c0c2-177b-e761-ec41" typeName="Allegiance Abilities">
+                      <characteristics>
+                        <characteristic name="Allegiance Ability" typeId="0506-f62d-68b3-5499">Briomdar units that cannot normally fly ignore terrain features when they move, as if they could fly. Note that this does not allow them to ignore enemy models when they move.</characteristic>
+                      </characteristics>
+                    </profile>
+                  </profiles>
+                  <categoryLinks>
+                    <categoryLink id="8c37-b33e-4b0c-f9e0" name="Sub-Allegiance" hidden="false" targetId="4fe1-4d42-25cc-d732" primary="false"/>
+                  </categoryLinks>
+                  <costs>
+                    <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
+                  </costs>
+                </selectionEntry>
+              </selectionEntries>
+            </selectionEntryGroup>
+          </selectionEntryGroups>
+          <costs>
+            <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
+          </costs>
+        </selectionEntry>
+      </selectionEntries>
       <costs>
         <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
       </costs>
@@ -397,7 +396,7 @@ This model can retreat and still charge later in the same turn.</characteristic>
           <modifiers>
             <modifier type="set" field="hidden" value="true">
               <conditions>
-                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="03aa-2b0e-8cf7-3d86" type="equalTo"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="d8e3-6b13-4d03-10c3" type="equalTo"/>
               </conditions>
             </modifier>
           </modifiers>
@@ -409,7 +408,7 @@ This model can retreat and still charge later in the same turn.</characteristic>
           <modifiers>
             <modifier type="set" field="hidden" value="true">
               <conditions>
-                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="5d39-8d1b-4ff7-57fd" type="equalTo"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="3c47-d09e-d0c8-8682" type="equalTo"/>
               </conditions>
             </modifier>
           </modifiers>
@@ -534,7 +533,7 @@ This model can retreat and still charge later in the same turn.</characteristic>
         </selectionEntry>
       </selectionEntries>
       <costs>
-        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="330.0"/>
+        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="355.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="c845-b087-db61-0de9" name="Volturnos, High King of the Deep" publicationId="dea8-e4a3-2500-1a33" hidden="false" collective="false" import="true" type="unit">
@@ -564,7 +563,7 @@ This model can retreat and still charge later in the same turn.</characteristic>
         </profile>
         <profile id="031d-d0e8-bb95-2296" name="Supreme Lord of Tides" hidden="false" typeId="6364-f76d-fc0c-80bc" typeName="Command Abilities">
           <characteristics>
-            <characteristic name="Command Ability" typeId="36cb-f8a4-d94b-8aa8">You can use this command ability if Volturnos is your general and the High Tide ability from the Tides of Death table applies for the battle round. If you do so, pick up to 3 friendly IDONETH DEEPKIN units wholly within 18&quot; of Volturnos. Add 1 to the Attacks characteristic of melee weapons used by those units until your next hero phase.</characteristic>
+            <characteristic name="Command Ability" typeId="36cb-f8a4-d94b-8aa8">You can use this command ability if a friendly VOLTURNOS is on the battlefield and the High Tide ability from the Tides of Death table applies for the battle round. If you do so, pick up to 3 different friendly IDONETH DEEPKIN units wholly within 18&quot; of that friendly VOLTURNOS. Add 1 to the Attacks characteristic of melee weapons used by those units until your next hero phase.</characteristic>
           </characteristics>
         </profile>
         <profile id="1272-2076-d57a-afed" name="Volturnos, High King of the Deep" hidden="false" typeId="3956-f6dd-6c88-ae4b" typeName="Unit">
@@ -664,7 +663,7 @@ This model can retreat and still charge later in the same turn.</characteristic>
         </selectionEntry>
       </selectionEntries>
       <costs>
-        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="270.0"/>
+        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="260.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="c32d-2a55-5429-1400" name="Akhelian King" publicationId="dea8-e4a3-2500-1a33" hidden="false" collective="false" import="true" type="unit">
@@ -907,7 +906,7 @@ This model can retreat and still charge later in the same turn.</characteristic>
         </selectionEntry>
       </selectionEntries>
       <costs>
-        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="100.0"/>
+        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="105.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="d784-f042-83d2-8405" name="Isharann Soulscryer" publicationId="dea8-e4a3-2500-1a33" hidden="false" collective="false" import="true" type="unit">
@@ -931,6 +930,10 @@ This model can retreat and still charge later in the same turn.</characteristic>
           </characteristics>
         </profile>
       </profiles>
+      <infoLinks>
+        <infoLink id="1eca-d14b-7b9f-6d3c" name="Bless" hidden="false" targetId="4c4a-18dc-6a53-5355" type="profile"/>
+        <infoLink id="9ef5-7b7f-a0eb-993f" name="Smite" hidden="false" targetId="7b66-5f0a-449f-f31a" type="profile"/>
+      </infoLinks>
       <categoryLinks>
         <categoryLink id="c958-1e4e-2b07-402a" name="Aelf" hidden="false" targetId="babf-cdeb-b0ab-05db" primary="false"/>
         <categoryLink id="306f-91a9-98a1-7a56" name="Hero" hidden="false" targetId="411f-dd41-4ab6-8a05" primary="false"/>
@@ -988,7 +991,7 @@ This model can retreat and still charge later in the same turn.</characteristic>
         </selectionEntry>
       </selectionEntries>
       <costs>
-        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="130.0"/>
+        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="140.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="0258-122c-611c-c775" name="Isharann Soulrender" publicationId="dea8-e4a3-2500-1a33" hidden="false" collective="false" import="true" type="unit">
@@ -1068,7 +1071,7 @@ This model can retreat and still charge later in the same turn.</characteristic>
         </selectionEntry>
       </selectionEntries>
       <costs>
-        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="80.0"/>
+        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="90.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="3d2d-5cb1-998d-d23e" name="Lotann, Warden of the Soul Ledgers" publicationId="dea8-e4a3-2500-1a33" hidden="false" collective="false" import="true" type="unit">
@@ -1196,10 +1199,20 @@ This model can retreat and still charge later in the same turn.</characteristic>
         </selectionEntry>
       </selectionEntries>
       <costs>
-        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="70.0"/>
+        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="75.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="8229-98fb-0346-d7eb" name="Akhelian Allopexes" publicationId="dea8-e4a3-2500-1a33" hidden="false" collective="false" import="true" type="unit">
+      <modifiers>
+        <modifier type="increment" field="b0b4-6aec-82c2-02ae" value="125.0">
+          <repeats>
+            <repeat field="selections" scope="8229-98fb-0346-d7eb" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e20c-48d8-e5e3-1a36" repeats="1" roundUp="false"/>
+          </repeats>
+          <conditions>
+            <condition field="selections" scope="8229-98fb-0346-d7eb" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e20c-48d8-e5e3-1a36" type="greaterThan"/>
+          </conditions>
+        </modifier>
+      </modifiers>
       <profiles>
         <profile id="d4f0-02cd-a4c7-8a04" name="Akhelian Allopexes" hidden="false" typeId="3956-f6dd-6c88-ae4b" typeName="Unit">
           <characteristics>
@@ -1224,11 +1237,11 @@ This model can retreat and still charge later in the same turn.</characteristic>
       <selectionEntries>
         <selectionEntry id="97f2-da35-9278-e2ff" name="Akhelian Allopex" hidden="false" collective="false" import="true" type="model">
           <constraints>
-            <constraint field="selections" scope="parent" value="3.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="85d3-5c4e-9d8f-0f42" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="85d3-5c4e-9d8f-0f42" type="max"/>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="9fb6-4d4e-a151-323c" type="min"/>
           </constraints>
           <costs>
-            <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="110.0"/>
+            <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="e99a-cc15-140b-b2ed" name="Ferocious Bite" hidden="false" collective="false" import="true" type="upgrade">
@@ -1332,8 +1345,11 @@ This model can retreat and still charge later in the same turn.</characteristic>
           </selectionEntries>
         </selectionEntryGroup>
       </selectionEntryGroups>
+      <entryLinks>
+        <entryLink id="f556-6c72-07c3-a315" name="Unit Reinforcement" hidden="false" collective="false" import="true" targetId="b493-d9e6-82ca-5488" type="selectionEntry"/>
+      </entryLinks>
       <costs>
-        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
+        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="125.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="9b90-77ab-d5ae-7934" name="Akhelian Leviadon" publicationId="dea8-e4a3-2500-1a33" hidden="false" collective="false" import="true" type="unit">
@@ -1493,10 +1509,20 @@ This model can retreat and still charge later in the same turn.</characteristic>
         </selectionEntry>
       </selectionEntries>
       <costs>
-        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="340.0"/>
+        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="380.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="f5a7-7053-5818-7599" name="Akhelian Morsarr Guard" publicationId="dea8-e4a3-2500-1a33" hidden="false" collective="false" import="true" type="unit">
+      <modifiers>
+        <modifier type="increment" field="b0b4-6aec-82c2-02ae" value="195.0">
+          <repeats>
+            <repeat field="selections" scope="f5a7-7053-5818-7599" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e20c-48d8-e5e3-1a36" repeats="1" roundUp="false"/>
+          </repeats>
+          <conditions>
+            <condition field="selections" scope="f5a7-7053-5818-7599" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e20c-48d8-e5e3-1a36" type="greaterThan"/>
+          </conditions>
+        </modifier>
+      </modifiers>
       <profiles>
         <profile id="d637-f5cb-fcc6-a0e8" name="Akhelian Morsarr Guard" hidden="false" typeId="3956-f6dd-6c88-ae4b" typeName="Unit">
           <characteristics>
@@ -1509,6 +1535,11 @@ This model can retreat and still charge later in the same turn.</characteristic>
         <profile id="56c0-70cc-0562-f51e" name="Biovoltaic Blast" hidden="false" typeId="7861-da01-01c0-88d9" typeName="Ability">
           <characteristics>
             <characteristic name="Ability" typeId="9bce-4deb-8b79-eaec">Once per battle, at the start of a combat phase, you can say that this unit will unleash the biovoltaic energy stored in its voltspears. If you do so, roll 1 dice for each model in this unit. For each 3+, pick an enemy unit within 3&quot; of this unit. That unit suffers 1 mortal wound. For each 6+, the unit that is picked suffers D3 mortal wounds instead.</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="7087-e01e-b843-d547" name="Lochian Prince" hidden="false" typeId="c23b-5a30-07e2-4706" typeName="Unit Options">
+          <characteristics>
+            <characteristic name="Unit Option" typeId="5879-9a21-e9d2-539d">This unit can led by a Lochian Prince. Add 1 to the Attacks characteristic of a Lochian Prince’s Voltspear.</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -1527,11 +1558,11 @@ This model can retreat and still charge later in the same turn.</characteristic>
       <selectionEntries>
         <selectionEntry id="9ff2-36bb-7823-16e8" name="3 Morsarr Guard" hidden="false" collective="false" import="true" type="model">
           <constraints>
-            <constraint field="selections" scope="parent" value="4.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="822c-4125-271d-bfcd" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="822c-4125-271d-bfcd" type="max"/>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="e0d7-60fb-1ff5-85ec" type="min"/>
           </constraints>
           <costs>
-            <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="170.0"/>
+            <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="19a4-bfde-bf61-4712" name="Fangmora&apos;s Lashing Tail" hidden="false" collective="false" import="true" type="upgrade">
@@ -1648,23 +1679,6 @@ This model can retreat and still charge later in the same turn.</characteristic>
       </selectionEntries>
       <selectionEntryGroups>
         <selectionEntryGroup id="7674-e3b6-3286-0684" name="Unit Options" hidden="false" collective="false" import="true">
-          <selectionEntries>
-            <selectionEntry id="07d5-2a09-260b-7e17" name="Lochian Prince" hidden="false" collective="false" import="true" type="upgrade">
-              <constraints>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="a2f0-4ff7-12db-f97b" type="max"/>
-              </constraints>
-              <profiles>
-                <profile id="66e9-b655-9157-ff8c" name="Lochian Prince" hidden="false" typeId="c23b-5a30-07e2-4706" typeName="Unit Options">
-                  <characteristics>
-                    <characteristic name="Unit Option" typeId="5879-9a21-e9d2-539d">This unit can led by a Lochian Prince. Add 1 to the Attacks characteristic of a Lochian Prince’s Voltspear.</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-              <costs>
-                <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
-              </costs>
-            </selectionEntry>
-          </selectionEntries>
           <selectionEntryGroups>
             <selectionEntryGroup id="ea6f-0d03-f624-42f3" name="Command Group" hidden="false" collective="false" import="true">
               <modifiers>
@@ -1674,11 +1688,6 @@ This model can retreat and still charge later in the same turn.</characteristic>
                   </repeats>
                   <conditions>
                     <condition field="selections" scope="f5a7-7053-5818-7599" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="9ff2-36bb-7823-16e8" type="greaterThan"/>
-                  </conditions>
-                </modifier>
-                <modifier type="decrement" field="e87f-925d-8f7b-797c" value="1.0">
-                  <conditions>
-                    <condition field="selections" scope="f5a7-7053-5818-7599" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="07d5-2a09-260b-7e17" type="greaterThan"/>
                   </conditions>
                 </modifier>
               </modifiers>
@@ -1715,11 +1724,24 @@ This model can retreat and still charge later in the same turn.</characteristic>
           </selectionEntryGroups>
         </selectionEntryGroup>
       </selectionEntryGroups>
+      <entryLinks>
+        <entryLink id="ebfe-2d49-1450-a2ed" name="Unit Reinforcement" hidden="false" collective="false" import="true" targetId="b493-d9e6-82ca-5488" type="selectionEntry"/>
+      </entryLinks>
       <costs>
-        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
+        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="195.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="f377-d0cc-5ff0-c9ba" name="Akhelian Ishlaen Guard" publicationId="dea8-e4a3-2500-1a33" hidden="false" collective="false" import="true" type="unit">
+      <modifiers>
+        <modifier type="increment" field="b0b4-6aec-82c2-02ae" value="155.0">
+          <repeats>
+            <repeat field="selections" scope="f377-d0cc-5ff0-c9ba" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e20c-48d8-e5e3-1a36" repeats="1" roundUp="false"/>
+          </repeats>
+          <conditions>
+            <condition field="selections" scope="f377-d0cc-5ff0-c9ba" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e20c-48d8-e5e3-1a36" type="greaterThan"/>
+          </conditions>
+        </modifier>
+      </modifiers>
       <profiles>
         <profile id="862a-c00f-f51c-5af1" name="Akhelian Ishlaen Guard" hidden="false" typeId="3956-f6dd-6c88-ae4b" typeName="Unit">
           <characteristics>
@@ -1732,6 +1754,11 @@ This model can retreat and still charge later in the same turn.</characteristic>
         <profile id="4e86-550e-33fe-7060" name="Biovoltaic Barrier" hidden="false" typeId="7861-da01-01c0-88d9" typeName="Ability">
           <characteristics>
             <characteristic name="Ability" typeId="9bce-4deb-8b79-eaec">Ignore the Rend characteristic of attacks against this unit when making save rolls for this unit. In addition, this unit has a Savecharacteristic of 3+ instead of 4+ if it made a charge move in the same turn.</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="ea55-7e97-f67a-0313" name="Lochian Prince" hidden="false" typeId="c23b-5a30-07e2-4706" typeName="Unit Options">
+          <characteristics>
+            <characteristic name="Unit Option" typeId="5879-9a21-e9d2-539d">This unit can led by a Lochian Prince. Add 1 to the Attacks characteristic of a Lochian Prince’s Helsabre.</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -1750,11 +1777,11 @@ This model can retreat and still charge later in the same turn.</characteristic>
       <selectionEntries>
         <selectionEntry id="88b8-1f45-4d00-35a9" name="3 Ishlaen Guard" hidden="false" collective="false" import="true" type="model">
           <constraints>
-            <constraint field="selections" scope="parent" value="4.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d5ed-beb7-ba0c-9625" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d5ed-beb7-ba0c-9625" type="max"/>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="4034-7582-7679-2056" type="min"/>
           </constraints>
           <costs>
-            <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="140.0"/>
+            <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="abf9-8e24-b5de-0e6f" name="Fangmora&apos;s Lashing Tail" hidden="false" collective="false" import="true" type="upgrade">
@@ -1866,23 +1893,6 @@ This model can retreat and still charge later in the same turn.</characteristic>
       </selectionEntries>
       <selectionEntryGroups>
         <selectionEntryGroup id="b3bb-84df-95d9-f80b" name="Unit Options" hidden="false" collective="false" import="true">
-          <selectionEntries>
-            <selectionEntry id="fcf5-35bf-f111-b47a" name="Lochian Prince" hidden="false" collective="false" import="true" type="upgrade">
-              <constraints>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="aee5-439e-0048-cd9a" type="max"/>
-              </constraints>
-              <profiles>
-                <profile id="f231-7c0c-5ad6-7dfa" name="Lochian Prince" hidden="false" typeId="c23b-5a30-07e2-4706" typeName="Unit Options">
-                  <characteristics>
-                    <characteristic name="Unit Option" typeId="5879-9a21-e9d2-539d">This unit can led by a Lochian Prince. Add 1 to the Attacks characteristic of a Lochian Prince’s Helsabre.</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-              <costs>
-                <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
-              </costs>
-            </selectionEntry>
-          </selectionEntries>
           <selectionEntryGroups>
             <selectionEntryGroup id="c5c8-0d4d-6906-9a69" name="Command Group" hidden="false" collective="false" import="true">
               <modifiers>
@@ -1892,11 +1902,6 @@ This model can retreat and still charge later in the same turn.</characteristic>
                   </repeats>
                   <conditions>
                     <condition field="selections" scope="f377-d0cc-5ff0-c9ba" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="88b8-1f45-4d00-35a9" type="greaterThan"/>
-                  </conditions>
-                </modifier>
-                <modifier type="decrement" field="e96e-10ac-7e9c-32cb" value="1.0">
-                  <conditions>
-                    <condition field="selections" scope="f377-d0cc-5ff0-c9ba" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="fcf5-35bf-f111-b47a" type="greaterThan"/>
                   </conditions>
                 </modifier>
               </modifiers>
@@ -1933,8 +1938,11 @@ This model can retreat and still charge later in the same turn.</characteristic>
           </selectionEntryGroups>
         </selectionEntryGroup>
       </selectionEntryGroups>
+      <entryLinks>
+        <entryLink id="1b47-332b-104e-fc39" name="Unit Reinforcement" hidden="false" collective="false" import="true" targetId="b493-d9e6-82ca-5488" type="selectionEntry"/>
+      </entryLinks>
       <costs>
-        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
+        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="155.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="9d96-79c5-f89b-592a" name="Namarti Thralls" publicationId="dea8-e4a3-2500-1a33" hidden="false" collective="false" import="true" type="unit">
@@ -1950,9 +1958,12 @@ This model can retreat and still charge later in the same turn.</characteristic>
             </conditionGroup>
           </conditionGroups>
         </modifier>
-        <modifier type="set" field="b0b4-6aec-82c2-02ae" value="320.0">
+        <modifier type="increment" field="b0b4-6aec-82c2-02ae" value="120.0">
+          <repeats>
+            <repeat field="selections" scope="9d96-79c5-f89b-592a" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e20c-48d8-e5e3-1a36" repeats="1" roundUp="false"/>
+          </repeats>
           <conditions>
-            <condition field="selections" scope="9d96-79c5-f89b-592a" value="3.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" type="equalTo"/>
+            <condition field="selections" scope="9d96-79c5-f89b-592a" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e20c-48d8-e5e3-1a36" type="greaterThan"/>
           </conditions>
         </modifier>
       </modifiers>
@@ -1977,19 +1988,12 @@ This model can retreat and still charge later in the same turn.</characteristic>
       </categoryLinks>
       <selectionEntries>
         <selectionEntry id="7ac1-3d89-79e5-977e" name="10 Namarti Thralls" hidden="false" collective="false" import="true" type="model">
-          <modifiers>
-            <modifier type="set" field="b0b4-6aec-82c2-02ae" value="0.0">
-              <conditions>
-                <condition field="selections" scope="parent" value="3.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" type="equalTo"/>
-              </conditions>
-            </modifier>
-          </modifiers>
           <constraints>
-            <constraint field="selections" scope="parent" value="3.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="88ad-19ea-8331-0783" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="88ad-19ea-8331-0783" type="max"/>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="5d8e-e43d-c298-8b2b" type="min"/>
           </constraints>
           <costs>
-            <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="120.0"/>
+            <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="ff89-b36d-056c-b9ba" name="Lanmari Blade" hidden="false" collective="false" import="true" type="upgrade">
@@ -2080,7 +2084,7 @@ This model can retreat and still charge later in the same turn.</characteristic>
               <profiles>
                 <profile id="c0e8-4a70-3da2-06b5" name="Icon Bearer" hidden="false" typeId="c23b-5a30-07e2-4706" typeName="Unit Options">
                   <characteristics>
-                    <characteristic name="Unit Option" typeId="5879-9a21-e9d2-539d">1 in every 10 models in this unit can be icon bearers. You can reroll battleshock tests for a unit of Namarti Thralls that includes any icon bearers. In addition, add 1 to the Attacks characteristic of an icon bearer’s Lanmari Blade.</characteristic>
+                    <characteristic name="Unit Option" typeId="5879-9a21-e9d2-539d">1 in every 10 models in this unit can be an Icon Bearer. You can reroll battleshock tests for a unit of Namarti Thralls that includes any icon bearers. In addition, add 1 to the Attacks characteristic of an icon bearer’s Lanmari Blade.</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
@@ -2091,11 +2095,24 @@ This model can retreat and still charge later in the same turn.</characteristic>
           </selectionEntries>
         </selectionEntryGroup>
       </selectionEntryGroups>
+      <entryLinks>
+        <entryLink id="d8c7-cb11-aaca-e1fe" name="Unit Reinforcement" hidden="false" collective="false" import="true" targetId="b493-d9e6-82ca-5488" type="selectionEntry"/>
+      </entryLinks>
       <costs>
-        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
+        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="120.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="52d3-6c54-1d17-0285" name="Namarti Reavers" publicationId="dea8-e4a3-2500-1a33" hidden="false" collective="false" import="true" type="unit">
+      <modifiers>
+        <modifier type="increment" field="b0b4-6aec-82c2-02ae" value="115.0">
+          <repeats>
+            <repeat field="selections" scope="52d3-6c54-1d17-0285" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e20c-48d8-e5e3-1a36" repeats="1" roundUp="false"/>
+          </repeats>
+          <conditions>
+            <condition field="selections" scope="52d3-6c54-1d17-0285" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e20c-48d8-e5e3-1a36" type="greaterThan"/>
+          </conditions>
+        </modifier>
+      </modifiers>
       <profiles>
         <profile id="867a-f368-0831-5f8d" name="Namarti Reavers" hidden="false" typeId="3956-f6dd-6c88-ae4b" typeName="Unit">
           <characteristics>
@@ -2122,11 +2139,11 @@ This model can retreat and still charge later in the same turn.</characteristic>
       <selectionEntries>
         <selectionEntry id="dbeb-ac24-aba0-5450" name="10 Namarti Reavers" hidden="false" collective="false" import="true" type="model">
           <constraints>
-            <constraint field="selections" scope="parent" value="3.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="71ea-9408-8165-079c" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="71ea-9408-8165-079c" type="max"/>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="fa2b-7546-be97-b9da" type="min"/>
           </constraints>
           <costs>
-            <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="120.0"/>
+            <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="cd68-db02-1d97-86e4" name="Keening Blade" hidden="false" collective="false" import="true" type="upgrade">
@@ -2250,7 +2267,7 @@ This model can retreat and still charge later in the same turn.</characteristic>
               <profiles>
                 <profile id="acd5-8c96-4ae9-a040" name="Icon Bearer" hidden="false" typeId="c23b-5a30-07e2-4706" typeName="Unit Options">
                   <characteristics>
-                    <characteristic name="Unit Option" typeId="5879-9a21-e9d2-539d">1 in every 10 models in this unit can be icon bearers. You can reroll battleshock tests for a unit of Namarti Thralls that includes any icon bearers. In addition, add 1 to the Attacks characteristic of an icon bearer’s Keening Blade.</characteristic>
+                    <characteristic name="Unit Option" typeId="5879-9a21-e9d2-539d">1 in every 10 models in this unit can be an Icon Bearer. You can reroll battleshock tests for a unit of Namarti Thralls that includes any icon bearers. In addition, add 1 to the Attacks characteristic of an icon bearer’s Keening Blade.</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
@@ -2261,12 +2278,289 @@ This model can retreat and still charge later in the same turn.</characteristic>
           </selectionEntries>
         </selectionEntryGroup>
       </selectionEntryGroups>
+      <entryLinks>
+        <entryLink id="30f3-99c5-a2aa-5f56" name="Unit Reinforcement" hidden="false" collective="false" import="true" targetId="b493-d9e6-82ca-5488" type="selectionEntry"/>
+      </entryLinks>
+      <costs>
+        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="115.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="ec0c-b248-d8a9-925b" name="Elathain Ill-fated" hidden="false" collective="false" import="true" type="unit">
+      <profiles>
+        <profile id="18ff-34fb-2ed6-844e" name="Elathain Ill-fated" hidden="false" typeId="3956-f6dd-6c88-ae4b" typeName="Unit">
+          <characteristics>
+            <characteristic name="Move" typeId="5bbe-8910-4dfa-7b1c">6&quot;</characteristic>
+            <characteristic name="Wounds" typeId="a0c6-af64-2f24-5759">5</characteristic>
+            <characteristic name="Save" typeId="93b6-2f96-2df7-e330">4</characteristic>
+            <characteristic name="Bravery" typeId="2420-1c5c-1016-7033">8</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="03df-b3cb-6862-51a8" name="Lurelight" hidden="false" typeId="7861-da01-01c0-88d9" typeName="Ability">
+          <characteristics>
+            <characteristic name="Ability" typeId="9bce-4deb-8b79-eaec">At the end of your battleshock phase, pick 1 friendly Namarti unit wholly within 12&quot; of this model, or pick a friendly Elathain’s Soulraid unit in which Tammael has been slain that is wholly within 12&quot; of this model. If you picked a Namarti unit, roll a D3. Add 1 to the roll for each enemy model that was slain by wounds inflicted by this model’s Talúnsickle and Soulnet in the combat phase of the same turn, then return a number of slain models to that unit up to the value of the roll. If you picked Elathain’s Soulraid, return Tammael to that unit.</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <categoryLinks>
+        <categoryLink id="c580-95ce-867f-1cb0" name="Aelf" hidden="false" targetId="babf-cdeb-b0ab-05db" primary="false"/>
+        <categoryLink id="d413-431a-1563-26e2" name="Elathain Ill-fated" hidden="false" targetId="eff3-6c94-9bf4-cba6" primary="false"/>
+        <categoryLink id="2b0b-13f7-78b6-d8c3" name="Hero" hidden="false" targetId="411f-dd41-4ab6-8a05" primary="false"/>
+        <categoryLink id="6f3e-bcdb-ffb3-3907" name="Ionrach" hidden="false" targetId="49dd-c705-7c0a-446d" primary="false"/>
+        <categoryLink id="71e8-92c4-e997-edce" name="Isharann" hidden="false" targetId="c48e-3291-4b37-ebdf" primary="false"/>
+        <categoryLink id="40c0-ab51-66de-62bc" name="IDONETH DEEPKIN" hidden="false" targetId="c6a3-55bb-de84-3ad0" primary="false"/>
+        <categoryLink id="16da-1f12-c6ac-3135" name="NAMED" hidden="false" targetId="543e-1cc9-6d38-f8b3" primary="false"/>
+        <categoryLink id="549a-6991-f7a3-7b15" name="Order" hidden="false" targetId="90c6-6c11-9677-1fa8" primary="false"/>
+        <categoryLink id="f1f3-dc28-bfcc-66f4" name="Soulrender" hidden="false" targetId="5864-c0c2-76d9-a840" primary="false"/>
+      </categoryLinks>
+      <selectionEntries>
+        <selectionEntry id="fcd4-c66e-2f62-575c" name="Talúnsickle and Soulnet" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="c722-1ead-0774-edc9" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="e97f-4bab-a3f5-7e32" type="min"/>
+          </constraints>
+          <profiles>
+            <profile id="5eec-8350-9c31-b2ba" name="Talúnsickle and Soulnet" hidden="false" typeId="2905-f6bd-06e5-6642" typeName="Weapon">
+              <characteristics>
+                <characteristic name="Type" typeId="1a08-195b-76fd-2c2b">Melee</characteristic>
+                <characteristic name="Range" typeId="1406-f935-3f8e-b27f">2&quot;</characteristic>
+                <characteristic name="Attacks" typeId="4c19-dba6-f094-5165">2</characteristic>
+                <characteristic name="To-Hit" typeId="7a4f-9704-2095-96c8">3+</characteristic>
+                <characteristic name="To-Wound" typeId="172f-fc84-895b-04b7">3+</characteristic>
+                <characteristic name="Rend" typeId="0c05-bd2e-b7e7-3925">-1</characteristic>
+                <characteristic name="Damage" typeId="01c2-d16a-8788-e52b">2</characteristic>
+              </characteristics>
+            </profile>
+            <profile id="b63d-243a-6b4f-a1a5" name="Soulnet" hidden="false" typeId="7861-da01-01c0-88d9" typeName="Ability">
+              <characteristics>
+                <characteristic name="Ability" typeId="9bce-4deb-8b79-eaec">At the start of the combat phase, pick 1 enemy Hero within 3&quot; of this model and roll a dice. Subtract 2 from the roll if that Hero is a Monster. On a 4+, you can re-roll hit rolls for attacks made with this model&apos;s Talúnsickle and Soulnet that target that Hero in that combat phase.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <costs>
+            <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="0aed-a2e5-2f84-0b6e" name="Companion" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="a3c1-3380-b7f6-29c2" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="ed07-6140-3d0e-c8da" type="min"/>
+          </constraints>
+          <profiles>
+            <profile id="cdbd-cd74-9c28-97d3" name="Companion" hidden="false" typeId="61e3-eba4-7222-dee7" typeName="Mount/Companion">
+              <characteristics>
+                <characteristic name="Mount/Companion" typeId="e368-06f5-5b4f-64a3">Elathain is accompanied by a Darktrench Eel that attacks with its Envenomed Bite. For rules purposes, it is treated in the same manner as a mount.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <selectionEntries>
+            <selectionEntry id="e68d-29a2-9f11-3ac6" name="Envenomed Bite" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="f2e9-5069-3623-6be3" type="max"/>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="169e-ac79-5c70-4c59" type="min"/>
+              </constraints>
+              <profiles>
+                <profile id="755d-c96a-8646-d6b8" name="Envenomed Bite" hidden="false" typeId="2905-f6bd-06e5-6642" typeName="Weapon">
+                  <characteristics>
+                    <characteristic name="Type" typeId="1a08-195b-76fd-2c2b">Melee</characteristic>
+                    <characteristic name="Range" typeId="1406-f935-3f8e-b27f">3&quot;</characteristic>
+                    <characteristic name="Attacks" typeId="4c19-dba6-f094-5165">4</characteristic>
+                    <characteristic name="To-Hit" typeId="7a4f-9704-2095-96c8">4+</characteristic>
+                    <characteristic name="To-Wound" typeId="172f-fc84-895b-04b7">4+</characteristic>
+                    <characteristic name="Rend" typeId="0c05-bd2e-b7e7-3925">-</characteristic>
+                    <characteristic name="Damage" typeId="01c2-d16a-8788-e52b">1</characteristic>
+                  </characteristics>
+                </profile>
+                <profile id="a3c9-130b-f3e8-268f" name="Envenomed Bite" hidden="false" typeId="7861-da01-01c0-88d9" typeName="Ability">
+                  <characteristics>
+                    <characteristic name="Ability" typeId="9bce-4deb-8b79-eaec">If the unmodified hit roll for an attack made with an Envenomed Bite is 6, that attack inflicts 1 mortal wound on the target and the attack sequence ends (do not make a wound or save roll).</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <costs>
+                <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
+              </costs>
+            </selectionEntry>
+          </selectionEntries>
+          <costs>
+            <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
+          </costs>
+        </selectionEntry>
+      </selectionEntries>
+      <costs>
+        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="b188-5b5c-e894-6621" name="Elathain&apos;s Soulraid" hidden="false" collective="false" import="true" type="unit">
+      <profiles>
+        <profile id="3384-9793-53de-8cbb" name="Elathain&apos;s Soulraid" hidden="false" typeId="3956-f6dd-6c88-ae4b" typeName="Unit">
+          <characteristics>
+            <characteristic name="Move" typeId="5bbe-8910-4dfa-7b1c">6&quot;</characteristic>
+            <characteristic name="Wounds" typeId="a0c6-af64-2f24-5759">1</characteristic>
+            <characteristic name="Save" typeId="93b6-2f96-2df7-e330">5+</characteristic>
+            <characteristic name="Bravery" typeId="2420-1c5c-1016-7033">6</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <categoryLinks>
+        <categoryLink id="5fbf-4a76-66ab-e8f0" name="Aelf" hidden="false" targetId="babf-cdeb-b0ab-05db" primary="false"/>
+        <categoryLink id="8936-ac0f-67f2-2e1c" name="Elathain&apos;s Soulraid" hidden="false" targetId="8412-ee61-bba8-43b4" primary="false"/>
+        <categoryLink id="b925-c85f-44a5-62e1" name="Ionrach" hidden="false" targetId="49dd-c705-7c0a-446d" primary="false"/>
+        <categoryLink id="1672-c83f-661f-86ed" name="IDONETH DEEPKIN" hidden="false" targetId="c6a3-55bb-de84-3ad0" primary="false"/>
+        <categoryLink id="452e-f036-c040-1e57" name="Order" hidden="false" targetId="90c6-6c11-9677-1fa8" primary="false"/>
+      </categoryLinks>
+      <selectionEntries>
+        <selectionEntry id="6562-5071-d910-8493" name="Fuirann" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="b083-431f-3045-eaeb" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="edec-78cb-bbd7-9154" type="min"/>
+          </constraints>
+          <selectionEntries>
+            <selectionEntry id="88d8-c057-cc06-b274" name="Helsabre and Shield" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="53dd-91a1-96b4-06d7" type="max"/>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="9e97-29c7-6e10-22a7" type="min"/>
+              </constraints>
+              <profiles>
+                <profile id="ac54-6648-fefa-3900" name="Helsabre" hidden="false" typeId="2905-f6bd-06e5-6642" typeName="Weapon">
+                  <characteristics>
+                    <characteristic name="Type" typeId="1a08-195b-76fd-2c2b">Melee</characteristic>
+                    <characteristic name="Range" typeId="1406-f935-3f8e-b27f">1&quot;</characteristic>
+                    <characteristic name="Attacks" typeId="4c19-dba6-f094-5165">3</characteristic>
+                    <characteristic name="To-Hit" typeId="7a4f-9704-2095-96c8">3+</characteristic>
+                    <characteristic name="To-Wound" typeId="172f-fc84-895b-04b7">3+</characteristic>
+                    <characteristic name="Rend" typeId="0c05-bd2e-b7e7-3925">-</characteristic>
+                    <characteristic name="Damage" typeId="01c2-d16a-8788-e52b">1</characteristic>
+                  </characteristics>
+                </profile>
+                <profile id="c9df-d318-38a7-b04c" name="Fuirann&apos;s Shield" hidden="false" typeId="7861-da01-01c0-88d9" typeName="Ability">
+                  <characteristics>
+                    <characteristic name="Ability" typeId="9bce-4deb-8b79-eaec">Roll a dice each time you allocate a wound or mortal wound to Fuirann. On a 6, that wound or mortal wound is negated.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <costs>
+                <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
+              </costs>
+            </selectionEntry>
+          </selectionEntries>
+          <costs>
+            <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="1a36-9d80-cef9-13d4" name="Spinefin" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="ff9f-8ba8-9d39-6502" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="1e23-c660-5c0e-493d" type="min"/>
+          </constraints>
+          <selectionEntries>
+            <selectionEntry id="9d9c-efc1-b528-07bc" name="Nasty Bite" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="378c-c39f-b74b-dc21" type="max"/>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="7197-3b28-9aa6-a0e1" type="min"/>
+              </constraints>
+              <profiles>
+                <profile id="47d3-a28f-1357-098f" name="Nasty Bite" hidden="false" typeId="2905-f6bd-06e5-6642" typeName="Weapon">
+                  <characteristics>
+                    <characteristic name="Type" typeId="1a08-195b-76fd-2c2b">Melee</characteristic>
+                    <characteristic name="Range" typeId="1406-f935-3f8e-b27f">1&quot;</characteristic>
+                    <characteristic name="Attacks" typeId="4c19-dba6-f094-5165">4</characteristic>
+                    <characteristic name="To-Hit" typeId="7a4f-9704-2095-96c8">3+</characteristic>
+                    <characteristic name="To-Wound" typeId="172f-fc84-895b-04b7">5+</characteristic>
+                    <characteristic name="Rend" typeId="0c05-bd2e-b7e7-3925">-</characteristic>
+                    <characteristic name="Damage" typeId="01c2-d16a-8788-e52b">1</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <costs>
+                <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
+              </costs>
+            </selectionEntry>
+          </selectionEntries>
+          <costs>
+            <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="45cb-4505-bb8b-5d45" name="Duinclaw" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="83e6-ddb4-bf5b-78ae" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="c748-9402-52a4-080a" type="min"/>
+          </constraints>
+          <selectionEntries>
+            <selectionEntry id="e8d3-2549-adca-b2ca" name="Crushing Claws" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="77f5-d09f-8e61-b84e" type="max"/>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="b391-3fb1-c9dc-003a" type="min"/>
+              </constraints>
+              <profiles>
+                <profile id="1c23-9f33-6597-217e" name="Crushing Claws" hidden="false" typeId="2905-f6bd-06e5-6642" typeName="Weapon">
+                  <characteristics>
+                    <characteristic name="Type" typeId="1a08-195b-76fd-2c2b">Melee</characteristic>
+                    <characteristic name="Range" typeId="1406-f935-3f8e-b27f">1&quot;</characteristic>
+                    <characteristic name="Attacks" typeId="4c19-dba6-f094-5165">2</characteristic>
+                    <characteristic name="To-Hit" typeId="7a4f-9704-2095-96c8">4+</characteristic>
+                    <characteristic name="To-Wound" typeId="172f-fc84-895b-04b7">2+</characteristic>
+                    <characteristic name="Rend" typeId="0c05-bd2e-b7e7-3925">-1</characteristic>
+                    <characteristic name="Damage" typeId="01c2-d16a-8788-e52b">1</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <costs>
+                <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
+              </costs>
+            </selectionEntry>
+          </selectionEntries>
+          <costs>
+            <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="37d2-abc7-31c6-0d5b" name="Tammael" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="ba5e-f5be-8d3b-7e34" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="a816-44eb-be9f-3e1b" type="min"/>
+          </constraints>
+          <selectionEntries>
+            <selectionEntry id="c7f1-f2d2-4a49-0837" name="Riptide Harpoon" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8290-dd22-d2ae-a917" type="max"/>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="7f77-fc1b-6b89-ee00" type="min"/>
+              </constraints>
+              <profiles>
+                <profile id="69eb-90ba-4b13-4cd0" name="Riptide Harpoon (missile)" hidden="false" typeId="2905-f6bd-06e5-6642" typeName="Weapon">
+                  <characteristics>
+                    <characteristic name="Type" typeId="1a08-195b-76fd-2c2b">Missile</characteristic>
+                    <characteristic name="Range" typeId="1406-f935-3f8e-b27f">9&quot;</characteristic>
+                    <characteristic name="Attacks" typeId="4c19-dba6-f094-5165">1</characteristic>
+                    <characteristic name="To-Hit" typeId="7a4f-9704-2095-96c8">3+</characteristic>
+                    <characteristic name="To-Wound" typeId="172f-fc84-895b-04b7">3+</characteristic>
+                    <characteristic name="Rend" typeId="0c05-bd2e-b7e7-3925">-</characteristic>
+                    <characteristic name="Damage" typeId="01c2-d16a-8788-e52b">2</characteristic>
+                  </characteristics>
+                </profile>
+                <profile id="e870-deb6-4547-f0ad" name="Riptide Harpoon (melee)" hidden="false" typeId="2905-f6bd-06e5-6642" typeName="Weapon">
+                  <characteristics>
+                    <characteristic name="Type" typeId="1a08-195b-76fd-2c2b">Melee</characteristic>
+                    <characteristic name="Range" typeId="1406-f935-3f8e-b27f">2&quot;</characteristic>
+                    <characteristic name="Attacks" typeId="4c19-dba6-f094-5165">1</characteristic>
+                    <characteristic name="To-Hit" typeId="7a4f-9704-2095-96c8">3+</characteristic>
+                    <characteristic name="To-Wound" typeId="172f-fc84-895b-04b7">3+</characteristic>
+                    <characteristic name="Rend" typeId="0c05-bd2e-b7e7-3925">-</characteristic>
+                    <characteristic name="Damage" typeId="01c2-d16a-8788-e52b">2</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <costs>
+                <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
+              </costs>
+            </selectionEntry>
+          </selectionEntries>
+          <costs>
+            <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
+          </costs>
+        </selectionEntry>
+      </selectionEntries>
       <costs>
         <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
       </costs>
     </selectionEntry>
   </sharedSelectionEntries>
-  <catalogueLinks>
-    <catalogueLink id="f751-820c-d1ac-2d94" name="Malign Artefacts" targetId="5d5b-1959-c979-44ee" type="catalogue" importRootEntries="true"/>
-  </catalogueLinks>
 </catalogue>

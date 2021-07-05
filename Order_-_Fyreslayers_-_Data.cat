@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="b308-9b80-759a-5873" name="Order - Fyreslayers - Data" revision="2" battleScribeVersion="2.03" authorName="Thulram" library="true" gameSystemId="e832-3291-06be-cab1" gameSystemRevision="1" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="b308-9b80-759a-5873" name="Order - Fyreslayers - Data" revision="3" battleScribeVersion="2.03" authorName="Thulram" library="true" gameSystemId="e832-3291-06be-cab1" gameSystemRevision="3" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <profileTypes>
     <profileType id="bd47-b513-a373-3222" name="HERO on Magmadroth Wounds">
       <characteristicTypes>
@@ -244,7 +244,7 @@
         </selectionEntry>
       </selectionEntries>
       <costs>
-        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="270.0"/>
+        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="285.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="0eeb-18ce-3241-0856" name="Auric Runeson on Magmadroth" publicationId="486b-93d3-3587-5477" hidden="false" collective="false" import="true" type="unit">
@@ -500,7 +500,7 @@
         </selectionEntryGroup>
       </selectionEntryGroups>
       <costs>
-        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="230.0"/>
+        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="240.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="d252-c422-c736-5fa6" name="Auric Runesmiter on Magmadroth" publicationId="486b-93d3-3587-5477" hidden="false" collective="false" import="true" type="unit">
@@ -553,12 +553,16 @@
             <characteristic name="Ability" typeId="9bce-4deb-8b79-eaec">Once per battle, during your hero phase, you can say this model has consumed a nugget of ur-gold. If you do so, add 1 to save rolls for attacks that target friendly FYRESLAYERS units wholly within 12&quot; of this model until the start of your next hero phase.</characteristic>
           </characteristics>
         </profile>
-        <profile id="5ab4-19f8-a5b4-17f4" name="Runic Empowerment" hidden="false" typeId="7861-da01-01c0-88d9" typeName="Ability">
+        <profile id="5ab4-19f8-a5b4-17f4" name="Runic Empowerment" hidden="false" typeId="161a-85bd-f19e-a5a7" typeName="Prayer">
           <characteristics>
-            <characteristic name="Ability" typeId="9bce-4deb-8b79-eaec">At the start of your hero phase, this model can chant this prayer. If they do so, make a prayer roll by rolling a dice. On a 1-2, the prayer is not answered. On a 3+ the prayer is answered. If this prayer is answered, pick a friendly FYRESLAYERS unit wholly within 12&quot; of this model, or wholly within 18&quot; of this model if this model is armed with a Forge Key. You can re-roll wound rolls for attacks made by that unit until the start of your next hero phase.</characteristic>
+            <characteristic name="Prayer" typeId="19bc-965a-768d-defa">Runic Empowerment is a prayer that has an answer value of 3 and a range of 12&quot;. If the chanter carries a Forge Key, this prayer has a range of 18&quot; instead. If answered, pick 1 friendly Fyreslayers unit wholly within range and visible to the chanter. Add 1 to wound rolls for attacks made by that unit until the start of your next hero phase.</characteristic>
           </characteristics>
         </profile>
       </profiles>
+      <infoLinks>
+        <infoLink id="fd09-f7c0-59bf-e0f4" name="Smite" hidden="false" targetId="7b66-5f0a-449f-f31a" type="profile"/>
+        <infoLink id="b2a6-01c5-7e99-e4ac" name="Bless" hidden="false" targetId="4c4a-18dc-6a53-5355" type="profile"/>
+      </infoLinks>
       <categoryLinks>
         <categoryLink id="de24-0084-56e3-a27b" name="Behemoth" hidden="false" targetId="7f62-b7f5-32d5-e13b" primary="false"/>
         <categoryLink id="5940-bceb-18f6-cb8f" name="Duardin" hidden="false" targetId="3434-9baa-1e9a-4ebd" primary="false"/>
@@ -741,7 +745,7 @@
         </selectionEntryGroup>
       </selectionEntryGroups>
       <costs>
-        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="250.0"/>
+        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="275.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="b5cd-c1f9-23b0-8ae9" name="Fjul-Grimnir" publicationId="486b-93d3-3587-5477" hidden="false" collective="false" import="true" type="unit">
@@ -977,6 +981,14 @@
             </conditionGroup>
           </conditionGroups>
         </modifier>
+        <modifier type="increment" field="b0b4-6aec-82c2-02ae" value="160.0">
+          <repeats>
+            <repeat field="selections" scope="b6d2-484d-67e4-98e1" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e20c-48d8-e5e3-1a36" repeats="1" roundUp="false"/>
+          </repeats>
+          <conditions>
+            <condition field="selections" scope="b6d2-484d-67e4-98e1" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e20c-48d8-e5e3-1a36" type="greaterThan"/>
+          </conditions>
+        </modifier>
       </modifiers>
       <profiles>
         <profile id="6475-5459-3336-4b80" name="Vulkite Berzerkers" hidden="false" typeId="3956-f6dd-6c88-ae4b" typeName="Unit">
@@ -992,6 +1004,11 @@
             <characteristic name="Spell" typeId="1170-c916-1b73-ae34">Once per battle, at the start of the combat phase, you can choose to unleash this unit’s berserk fury. If you do so, until the end of that phase, if a model from this unit is slain, before that model is removed from play, that model can make a pile-in move and then attack with all of the melee weapons it is armed with.</characteristic>
           </characteristics>
         </profile>
+        <profile id="6549-b921-48a7-0f08" name="Karl" hidden="false" typeId="c23b-5a30-07e2-4706" typeName="Unit Options">
+          <characteristics>
+            <characteristic name="Unit Option" typeId="5879-9a21-e9d2-539d">1 model in this unit can be a Karl. Add 1 to the Attacks characteristic of that model’s melee weapons.</characteristic>
+          </characteristics>
+        </profile>
       </profiles>
       <categoryLinks>
         <categoryLink id="04ed-3e32-af28-cd5d" name="Duardin" hidden="false" targetId="3434-9baa-1e9a-4ebd" primary="false"/>
@@ -1004,11 +1021,11 @@
       <selectionEntries>
         <selectionEntry id="8272-b72e-16f6-10bd" name="10 Vulkite Berzerkers" hidden="false" collective="false" import="true" type="model">
           <constraints>
-            <constraint field="selections" scope="parent" value="3.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="3c93-b83a-180e-046e" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="3c93-b83a-180e-046e" type="max"/>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="59e0-5a72-fd8a-8b33" type="min"/>
           </constraints>
           <costs>
-            <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="140.0"/>
+            <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="12f2-3251-a966-978b" name="BATTLELINE" hidden="false" collective="false" import="true" type="upgrade">
@@ -1152,23 +1169,8 @@
             </selectionEntry>
           </selectionEntries>
         </selectionEntryGroup>
-        <selectionEntryGroup id="f09d-788f-f73a-cc96" name="Unit Options" hidden="false" collective="false" import="true">
+        <selectionEntryGroup id="f09d-788f-f73a-cc96" name="Unit Option" hidden="false" collective="false" import="true">
           <selectionEntries>
-            <selectionEntry id="2bc1-a375-d9fa-40e7" name="Karl" hidden="false" collective="false" import="true" type="upgrade">
-              <constraints>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="f4cc-45d2-0dee-39b1" type="max"/>
-              </constraints>
-              <profiles>
-                <profile id="4b91-de4b-98c0-1389" name="Karl" hidden="false" typeId="c23b-5a30-07e2-4706" typeName="Unit Options">
-                  <characteristics>
-                    <characteristic name="Unit Option" typeId="5879-9a21-e9d2-539d">1 model in this unit can be a Karl. Add 1 to the Attacks characteristic of that model’s melee weapons.</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-              <costs>
-                <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
-              </costs>
-            </selectionEntry>
             <selectionEntry id="3397-a0c7-6e47-34e6" name="Horn of Grimnir" hidden="false" collective="false" import="true" type="upgrade">
               <modifiers>
                 <modifier type="increment" field="1b02-3136-98b3-b5e2" value="2.0">
@@ -1197,8 +1199,11 @@
           </selectionEntries>
         </selectionEntryGroup>
       </selectionEntryGroups>
+      <entryLinks>
+        <entryLink id="8ec7-3c8b-d970-5f48" name="Unit Reinforcement" hidden="false" collective="false" import="true" targetId="b493-d9e6-82ca-5488" type="selectionEntry"/>
+      </entryLinks>
       <costs>
-        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
+        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="160.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="468c-e387-1283-fa8b" name="Auric Runefather" publicationId="486b-93d3-3587-5477" hidden="false" collective="false" import="true" type="unit">
@@ -1401,7 +1406,7 @@
         </selectionEntryGroup>
       </selectionEntryGroups>
       <costs>
-        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="100.0"/>
+        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="90.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="d33a-9fdc-973a-014a" name="Battlesmith" publicationId="486b-93d3-3587-5477" hidden="false" collective="false" import="true" type="unit">
@@ -1481,7 +1486,7 @@
         </selectionEntry>
       </selectionEntries>
       <costs>
-        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="140.0"/>
+        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="125.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="fa40-ec77-33c4-0a4f" name="Auric Runemaster" publicationId="486b-93d3-3587-5477" hidden="false" collective="false" import="true" type="unit">
@@ -1499,12 +1504,16 @@
             <characteristic name="Ability" typeId="9bce-4deb-8b79-eaec">In your hero phase, you can pick 1 enemy unit within 12&quot; of this model and roll 2 dice. If you roll at least one 6, for the rest of the battle, you can re-roll hit rolls of 1 for attacks made by friendly FYRESLAYERS units that target that unit. If you roll two or more 6s, for the rest of the battle, you can re-roll hit and wound rolls of 1 for attacks made by friendly FYRESLAYERS units that target that unit instead.</characteristic>
           </characteristics>
         </profile>
-        <profile id="b7c3-3d0e-d9f6-a0f4" name="Volcano&apos;s Call" hidden="false" typeId="7861-da01-01c0-88d9" typeName="Ability">
+        <profile id="b7c3-3d0e-d9f6-a0f4" name="Volcano&apos;s Call" hidden="false" typeId="161a-85bd-f19e-a5a7" typeName="Prayer">
           <characteristics>
-            <characteristic name="Ability" typeId="9bce-4deb-8b79-eaec">At the start of your hero phase, this model can chant this prayer. If they do so, make a prayer roll by rolling a dice. On a 1-2, the prayer is not answered. On a 3+ the prayer is answered. If this prayer is answered, pick a terrain feature within 18&quot; of this model. Roll a dice for each model within 1&quot; of that terrain feature. For each roll of a 6, that model’s unit suffers 1 mortal wound. In addition, until your next hero phase, that terrain feature has the ‘Deadly’ scenery rule in addition to any other scenery rules it may have.</characteristic>
+            <characteristic name="Prayer" typeId="19bc-965a-768d-defa">Volcano’s Call is a prayer that has an answer value of 3 and a range of 18&quot;. If answered, pick 1 terrain feature wholly within range and visible to the chanter. Roll a dice for each model within 1&quot; of that terrain feature. For each 6, that model’s unit suffers 1 mortal wound.</characteristic>
           </characteristics>
         </profile>
       </profiles>
+      <infoLinks>
+        <infoLink id="3369-620c-7e34-c3fb" name="Smite" hidden="false" targetId="7b66-5f0a-449f-f31a" type="profile"/>
+        <infoLink id="e625-5736-c159-aaa3" name="Bless" hidden="false" targetId="4c4a-18dc-6a53-5355" type="profile"/>
+      </infoLinks>
       <categoryLinks>
         <categoryLink id="b45c-99ec-03be-a190" name="Auric Runemaster" hidden="false" targetId="abc4-8f17-c585-de40" primary="false"/>
         <categoryLink id="2933-696e-fc50-11fe" name="Duardin" hidden="false" targetId="3434-9baa-1e9a-4ebd" primary="false"/>
@@ -1583,7 +1592,7 @@
         </selectionEntry>
       </selectionEntries>
       <costs>
-        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="120.0"/>
+        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="115.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="4f60-7967-3eb6-0055" name="Grimwrath Berzerker" publicationId="486b-93d3-3587-5477" hidden="false" collective="false" import="true" type="unit">
@@ -1679,7 +1688,7 @@
         </selectionEntry>
       </selectionEntries>
       <costs>
-        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="110.0"/>
+        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="120.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="36e0-fccd-6e89-19b2" name="Doomseeker" publicationId="486b-93d3-3587-5477" hidden="false" collective="false" import="true" type="unit">
@@ -1782,7 +1791,7 @@ In addition, in the combat phase, if this model is slain while it is within 3&qu
         </selectionEntry>
       </selectionEntries>
       <costs>
-        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="90.0"/>
+        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="95.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="b07d-e7f1-80eb-f1fe" name="Auric Runesmiter" publicationId="486b-93d3-3587-5477" hidden="false" collective="false" import="true" type="unit">
@@ -1800,12 +1809,16 @@ In addition, in the combat phase, if this model is slain while it is within 3&qu
             <characteristic name="Ability" typeId="9bce-4deb-8b79-eaec">Instead of setting up this model on the battlefield, you can place this model to one side and say that it is set up underground as a reserve unit. If you do so, when you would set up another friendly FYRESLAYERS unit, instead of setting up that unit on the battlefield, you can say that it is joining this model underground as a reserve unit. 1 unit can join this model in this way. At the end of your movement phase, you can set up this model anywhere on the battlefield, more than 9&quot; from any enemy units; then set up any unit that joined this model wholly within 12&quot; of this model and more than 9&quot; from any enemy units. Any reserve units underground that are not set up on the battlefield before the start of the fourth battle round are destroyed.</characteristic>
           </characteristics>
         </profile>
-        <profile id="1af6-1333-378d-4fcb" name="Runic Empowerment" hidden="false" typeId="7861-da01-01c0-88d9" typeName="Ability">
+        <profile id="f12c-808b-87fb-9d4a" name="Runic Empowerment" hidden="false" typeId="161a-85bd-f19e-a5a7" typeName="Prayer">
           <characteristics>
-            <characteristic name="Ability" typeId="9bce-4deb-8b79-eaec">At the start of your hero phase, this model can chant this prayer. If they do so, make a prayer roll by rolling a dice. On a 1-2, the prayer is not answered. On a 3+ the prayer is answered. If this prayer is answered, pick a friendly FYRESLAYERS unit wholly within 12&quot; of this model, or wholly within 18&quot; of this model if this model is armed with a Forge Key. You can re-roll wound rolls for attacks made by that unit until the start of your next hero phase.</characteristic>
+            <characteristic name="Prayer" typeId="19bc-965a-768d-defa">Runic Empowerment is a prayer that has an answer value of 3 and a range of 12&quot;. If the chanter carries a Forge Key, this prayer has a range of 18&quot; instead. If answered, pick 1 friendly Fyreslayers unit wholly within range and visible to the chanter. Add 1 to wound rolls for attacks made by that unit until the start of your next hero phase.</characteristic>
           </characteristics>
         </profile>
       </profiles>
+      <infoLinks>
+        <infoLink id="5da5-8347-a2b8-839f" name="Smite" hidden="false" targetId="7b66-5f0a-449f-f31a" type="profile"/>
+        <infoLink id="cedf-9d1b-c131-fec6" name="Bless" hidden="false" targetId="4c4a-18dc-6a53-5355" type="profile"/>
+      </infoLinks>
       <categoryLinks>
         <categoryLink id="7024-a723-241a-102d" name="Duardin" hidden="false" targetId="3434-9baa-1e9a-4ebd" primary="false"/>
         <categoryLink id="9948-9299-e774-dde4" name="FYRESLAYERS" hidden="false" targetId="804e-5726-7202-6944" primary="false"/>
@@ -1899,6 +1912,16 @@ In addition, in the combat phase, if this model is slain while it is within 3&qu
       </costs>
     </selectionEntry>
     <selectionEntry id="a0d8-825a-0690-c40a" name="Auric Hearthguard" publicationId="486b-93d3-3587-5477" hidden="false" collective="false" import="true" type="unit">
+      <modifiers>
+        <modifier type="increment" field="b0b4-6aec-82c2-02ae" value="125.0">
+          <repeats>
+            <repeat field="selections" scope="a0d8-825a-0690-c40a" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e20c-48d8-e5e3-1a36" repeats="1" roundUp="false"/>
+          </repeats>
+          <conditions>
+            <condition field="selections" scope="a0d8-825a-0690-c40a" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e20c-48d8-e5e3-1a36" type="greaterThan"/>
+          </conditions>
+        </modifier>
+      </modifiers>
       <profiles>
         <profile id="33e9-8f93-1200-cd6e" name="Auric Hearthguard" hidden="false" typeId="3956-f6dd-6c88-ae4b" typeName="Unit">
           <characteristics>
@@ -1913,6 +1936,11 @@ In addition, in the combat phase, if this model is slain while it is within 3&qu
             <characteristic name="Ability" typeId="9bce-4deb-8b79-eaec">Roll a dice each time you allocate a wound or mortal wound to a friendly FYRESLAYERS HERO that is not mounted on a MAGMADROTH and is within 3&quot; of any friendly units with this ability. On a 4+ that wound or mortal wound is negated, and you must choose a friendly unit with this ability that is within 3&quot; to suffer 1 mortal wound after all wounds or mortal wounds have been allocated to that friendly HERO.</characteristic>
           </characteristics>
         </profile>
+        <profile id="b8f6-7827-7137-b1bd" name="Karl" hidden="false" typeId="c23b-5a30-07e2-4706" typeName="Unit Options">
+          <characteristics>
+            <characteristic name="Unit Option" typeId="5879-9a21-e9d2-539d">1 model in this unit can be a Karl. Add 1 to the Attacks characteristic of that model’s Magmapike missile weapon.</characteristic>
+          </characteristics>
+        </profile>
       </profiles>
       <categoryLinks>
         <categoryLink id="e677-2761-6514-8181" name="Auric Hearthguard" hidden="false" targetId="3964-7546-7ac8-9403" primary="false"/>
@@ -1923,19 +1951,12 @@ In addition, in the combat phase, if this model is slain while it is within 3&qu
       </categoryLinks>
       <selectionEntries>
         <selectionEntry id="4983-ed45-8b47-6127" name="5 Auric Hearthguard" hidden="false" collective="false" import="true" type="model">
-          <modifiers>
-            <modifier type="set" field="b0b4-6aec-82c2-02ae" value="100.0">
-              <conditions>
-                <condition field="selections" scope="a0d8-825a-0690-c40a" value="6.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4983-ed45-8b47-6127" type="equalTo"/>
-              </conditions>
-            </modifier>
-          </modifiers>
           <constraints>
-            <constraint field="selections" scope="parent" value="6.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="140d-9832-0950-417a" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="140d-9832-0950-417a" type="max"/>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="70b8-5828-88f7-1bbb" type="min"/>
           </constraints>
           <costs>
-            <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="120.0"/>
+            <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="0aa0-070f-3281-f379" name="Fyresteel Throwing Axe" hidden="false" collective="false" import="true" type="upgrade">
@@ -2039,32 +2060,24 @@ In addition, in the combat phase, if this model is slain while it is within 3&qu
           </costs>
         </selectionEntry>
       </selectionEntries>
-      <selectionEntryGroups>
-        <selectionEntryGroup id="d23d-aa50-b626-a0ce" name="Unit Option" hidden="false" collective="false" import="true">
-          <selectionEntries>
-            <selectionEntry id="aa3e-ee74-1aa0-bcc9" name="Karl" hidden="false" collective="false" import="true" type="upgrade">
-              <constraints>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="3a25-759f-962b-eb53" type="max"/>
-              </constraints>
-              <profiles>
-                <profile id="946b-3361-70a2-15cd" name="Karl" hidden="false" typeId="c23b-5a30-07e2-4706" typeName="Unit Options">
-                  <characteristics>
-                    <characteristic name="Unit Option" typeId="5879-9a21-e9d2-539d">1 model in this unit can be a Karl. Add 1 to the Attacks characteristic of that model’s Magmapike missile weapon.</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-              <costs>
-                <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
-              </costs>
-            </selectionEntry>
-          </selectionEntries>
-        </selectionEntryGroup>
-      </selectionEntryGroups>
+      <entryLinks>
+        <entryLink id="2379-972e-03b5-05d9" name="Unit Reinforcement" hidden="false" collective="false" import="true" targetId="b493-d9e6-82ca-5488" type="selectionEntry"/>
+      </entryLinks>
       <costs>
-        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
+        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="125.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="b690-3453-6e18-fa8e" name="Hearthguard Berzerkers" publicationId="486b-93d3-3587-5477" hidden="false" collective="false" import="true" type="unit">
+      <modifiers>
+        <modifier type="increment" field="b0b4-6aec-82c2-02ae" value="125.0">
+          <repeats>
+            <repeat field="selections" scope="b690-3453-6e18-fa8e" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e20c-48d8-e5e3-1a36" repeats="1" roundUp="false"/>
+          </repeats>
+          <conditions>
+            <condition field="selections" scope="b690-3453-6e18-fa8e" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e20c-48d8-e5e3-1a36" type="greaterThan"/>
+          </conditions>
+        </modifier>
+      </modifiers>
       <profiles>
         <profile id="c2ba-0b97-006a-2548" name="Hearthguard Berzerkers" hidden="false" typeId="3956-f6dd-6c88-ae4b" typeName="Unit">
           <characteristics>
@@ -2079,6 +2092,11 @@ In addition, in the combat phase, if this model is slain while it is within 3&qu
             <characteristic name="Ability" typeId="9bce-4deb-8b79-eaec">Roll a dice each time you allocate a wound or mortal wound to this unit. Add 2 to the roll if there are any friendly FYRESLAYERS HEROES within 10&quot; of this unit. On a 6+ that wound or mortal wound is negated.</characteristic>
           </characteristics>
         </profile>
+        <profile id="ce7f-a31a-2bf4-dcd1" name="Karl" hidden="false" typeId="c23b-5a30-07e2-4706" typeName="Unit Options">
+          <characteristics>
+            <characteristic name="Unit Option" typeId="5879-9a21-e9d2-539d">1 model in this unit can be a Karl. Add 1 to the Attacks characteristic of that model’s melee weapons.</characteristic>
+          </characteristics>
+        </profile>
       </profiles>
       <categoryLinks>
         <categoryLink id="4234-c52e-acf6-d45b" name="Duardin" hidden="false" targetId="3434-9baa-1e9a-4ebd" primary="false"/>
@@ -2089,19 +2107,12 @@ In addition, in the combat phase, if this model is slain while it is within 3&qu
       </categoryLinks>
       <selectionEntries>
         <selectionEntry id="8610-5ac8-9d11-ffbe" name="5 Hearthguard Berzerkers" hidden="false" collective="false" import="true" type="model">
-          <modifiers>
-            <modifier type="set" field="b0b4-6aec-82c2-02ae" value="100.0">
-              <conditions>
-                <condition field="selections" scope="b690-3453-6e18-fa8e" value="4.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="8610-5ac8-9d11-ffbe" type="equalTo"/>
-              </conditions>
-            </modifier>
-          </modifiers>
           <constraints>
-            <constraint field="selections" scope="parent" value="4.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="9cac-d071-3d5c-1d27" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="9cac-d071-3d5c-1d27" type="max"/>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="282a-7041-abc9-70a2" type="min"/>
           </constraints>
           <costs>
-            <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="120.0"/>
+            <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="4c09-08d5-fed1-1624" name="Fyresteel Throwing Axe" hidden="false" collective="false" import="true" type="upgrade">
@@ -2168,25 +2179,6 @@ In addition, in the combat phase, if this model is slain while it is within 3&qu
         </selectionEntry>
       </selectionEntries>
       <selectionEntryGroups>
-        <selectionEntryGroup id="4d08-5b75-f605-35b9" name="Unit Option" hidden="false" collective="false" import="true">
-          <selectionEntries>
-            <selectionEntry id="387f-73db-1860-382a" name="Karl" hidden="false" collective="false" import="true" type="upgrade">
-              <constraints>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="b5e8-611c-9e99-b582" type="max"/>
-              </constraints>
-              <profiles>
-                <profile id="8d13-5cb6-9d59-3877" name="Karl" hidden="false" typeId="c23b-5a30-07e2-4706" typeName="Unit Options">
-                  <characteristics>
-                    <characteristic name="Unit Option" typeId="5879-9a21-e9d2-539d">1 model in this unit can be a Karl. Add 1 to the Attacks characteristic of that model’s melee weapons.</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-              <costs>
-                <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
-              </costs>
-            </selectionEntry>
-          </selectionEntries>
-        </selectionEntryGroup>
         <selectionEntryGroup id="dd1f-9ea2-20af-d7dc" name="Weapon Option" hidden="false" collective="false" import="true" defaultSelectionEntryId="3585-6725-e08d-3fb6">
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="279b-797c-2693-83b2" type="max"/>
@@ -2237,8 +2229,11 @@ In addition, in the combat phase, if this model is slain while it is within 3&qu
           </selectionEntries>
         </selectionEntryGroup>
       </selectionEntryGroups>
+      <entryLinks>
+        <entryLink id="1149-4147-99bd-38a2" name="Unit Reinforcement" hidden="false" collective="false" import="true" targetId="b493-d9e6-82ca-5488" type="selectionEntry"/>
+      </entryLinks>
       <costs>
-        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
+        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="125.0"/>
       </costs>
     </selectionEntry>
   </sharedSelectionEntries>
