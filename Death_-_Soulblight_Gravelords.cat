@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="42b6-af80-93f1-282e" name="Death - Soulblight Gravelords" revision="4" battleScribeVersion="2.03" authorName="Thulram" library="false" gameSystemId="e832-3291-06be-cab1" gameSystemRevision="4" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="42b6-af80-93f1-282e" name="Death - Soulblight Gravelords" revision="5" battleScribeVersion="2.03" authorName="Thulram" library="false" gameSystemId="e832-3291-06be-cab1" gameSystemRevision="5" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <categoryEntries>
     <categoryEntry id="6933-5eb4-7ca1-1095" name="General - Wight King" hidden="false"/>
   </categoryEntries>
@@ -409,10 +409,6 @@
     <entryLink id="32cb-dd90-432a-3b3a" name="Legion of Shyish" hidden="false" collective="false" import="true" targetId="2b40-7e9f-9dec-a197" type="selectionEntry"/>
     <entryLink id="2356-9a57-0b33-339d" name="Red Banqueters" hidden="false" collective="false" import="true" targetId="c2c7-733b-e9e8-c23e" type="selectionEntry"/>
     <entryLink id="ee5c-00b4-0c46-6ddd" name="Radukar the Wolf" hidden="false" collective="false" import="true" targetId="47da-4a42-dcac-b0ae" type="selectionEntry">
-      <constraints>
-        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d4cb-5f0c-b7a6-26c3" type="max"/>
-        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="f3bc-c486-0cec-6eb8" type="min"/>
-      </constraints>
       <infoLinks>
         <infoLink id="5b80-ae5f-2d90-cb02" name="Invigorating Aura" hidden="false" targetId="6bd3-5cf8-70ea-5dfe" type="profile"/>
       </infoLinks>
@@ -1094,6 +1090,14 @@ Cursed Abominations are unique enhancements.</characteristic>
             </conditionGroup>
           </conditionGroups>
         </modifier>
+        <modifier type="increment" field="b887-2037-3a3a-3ef4" value="1.0">
+          <repeats>
+            <repeat field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="9e49-bd7f-45ee-1a96" repeats="1" roundUp="false"/>
+          </repeats>
+          <conditions>
+            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="9e49-bd7f-45ee-1a96" type="greaterThan"/>
+          </conditions>
+        </modifier>
       </modifiers>
       <constraints>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="b887-2037-3a3a-3ef4" type="max"/>
@@ -1329,6 +1333,9 @@ Cursed Abominations are unique enhancements.</characteristic>
           </selectionEntries>
         </selectionEntryGroup>
       </selectionEntryGroups>
+      <entryLinks>
+        <entryLink id="fa94-cdda-e9aa-cfd1" name="Universal Spell Lore" hidden="false" collective="false" import="true" targetId="93f7-7e2a-3308-d150" type="selectionEntryGroup"/>
+      </entryLinks>
     </selectionEntryGroup>
     <selectionEntryGroup id="dcdc-b60d-f5ae-5ed2" name="Command Traits" hidden="false" collective="false" import="true">
       <modifiers>
@@ -1737,6 +1744,9 @@ Cursed Abominations are unique enhancements.</characteristic>
           </selectionEntries>
         </selectionEntryGroup>
       </selectionEntryGroups>
+      <entryLinks>
+        <entryLink id="9379-deb9-c8bf-cd96" name="Universal Command Traits" hidden="false" collective="false" import="true" targetId="20f0-6df9-b464-3789" type="selectionEntryGroup"/>
+      </entryLinks>
     </selectionEntryGroup>
     <selectionEntryGroup id="25c8-a6a2-222e-4bfa" name="Cursed Mutation" hidden="false" collective="false" import="true">
       <modifiers>
@@ -2314,6 +2324,9 @@ Cursed Abominations are unique enhancements.</characteristic>
           </selectionEntries>
         </selectionEntryGroup>
       </selectionEntryGroups>
+      <entryLinks>
+        <entryLink id="6e0a-c3e8-6df8-dc7b" name="Artefacts of Power" hidden="false" collective="false" import="true" targetId="6256-4995-02f1-c4ca" type="selectionEntryGroup"/>
+      </entryLinks>
     </selectionEntryGroup>
   </sharedSelectionEntryGroups>
   <sharedProfiles>

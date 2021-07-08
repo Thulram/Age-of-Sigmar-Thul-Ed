@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<gameSystem id="e832-3291-06be-cab1" name="Age of Sigmar - Thul Ed" revision="13" battleScribeVersion="2.03" authorName="Thulram" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
+<gameSystem id="e832-3291-06be-cab1" name="Age of Sigmar - Thul Ed" revision="14" battleScribeVersion="2.03" authorName="Thulram" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
   <publications>
     <publication id="bf0c-0cbf-1f5d-5885" name="Chaos Battletome - Blades of Khorne"/>
     <publication id="6ce4-e8a3-f18f-be55" name="Order Battletome - Daughters of Khaine"/>
@@ -199,6 +199,14 @@
             <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="606f-9b75-948c-bf2c" type="greaterThan"/>
           </conditions>
         </modifier>
+        <modifier type="increment" field="657e-7a1f-6e74-9082" value="1.0">
+          <repeats>
+            <repeat field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="6af4-da37-ff6c-84cb" repeats="1" roundUp="false"/>
+          </repeats>
+          <conditions>
+            <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="6af4-da37-ff6c-84cb" type="greaterThan"/>
+          </conditions>
+        </modifier>
       </modifiers>
       <constraints>
         <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="657e-7a1f-6e74-9082" type="max"/>
@@ -208,7 +216,7 @@
     <categoryEntry id="ecf9-78bd-d326-2a82" name="Endless Spells &amp; Invocations" hidden="false"/>
     <categoryEntry id="bab2-426b-5501-5fe8" name="Scenery" hidden="false"/>
     <categoryEntry id="c661-44d6-0f5b-11ff" name="General" hidden="false"/>
-    <categoryEntry id="543e-1cc9-6d38-f8b3" name="NAMED" hidden="false"/>
+    <categoryEntry id="543e-1cc9-6d38-f8b3" name="Unique" hidden="false"/>
     <categoryEntry id="af41-ae78-5063-3d36" name="Allegiance" hidden="false"/>
     <categoryEntry id="8682-7852-3c08-0371" name="Daemon Prince" hidden="false"/>
     <categoryEntry id="babf-cdeb-b0ab-05db" name="Aelf" hidden="false"/>
@@ -1848,7 +1856,7 @@
         <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="9d72-7f48-e191-69cf" name="Extra Enhancement" hidden="false" collective="false" import="true" type="upgrade">
+    <selectionEntry id="9d72-7f48-e191-69cf" name="Extra Enhancements" hidden="false" collective="false" import="true" type="upgrade">
       <constraints>
         <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="b570-2ce3-7118-7a76" type="max"/>
       </constraints>
@@ -1893,9 +1901,6 @@
               </costs>
             </selectionEntry>
             <selectionEntry id="6af4-da37-ff6c-84cb" name="Extra Artefact" hidden="false" collective="false" import="true" type="upgrade">
-              <categoryLinks>
-                <categoryLink id="16dd-d4a7-2bd1-540d" name="ArtefactPlus" hidden="false" targetId="606f-9b75-948c-bf2c" primary="false"/>
-              </categoryLinks>
               <costs>
                 <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
               </costs>
