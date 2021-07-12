@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="211c-7c04-0893-df84" name="Death - Soulblight Gravelords - Data" revision="8" battleScribeVersion="2.03" authorName="Thulram" library="true" gameSystemId="e832-3291-06be-cab1" gameSystemRevision="7" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="211c-7c04-0893-df84" name="Death - Soulblight Gravelords - Data" revision="9" battleScribeVersion="2.03" authorName="Thulram" library="true" gameSystemId="e832-3291-06be-cab1" gameSystemRevision="9" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <profileTypes>
     <profileType id="9672-45eb-7076-5519" name="Mannfred Wounds">
       <characteristicTypes>
@@ -1020,7 +1020,7 @@
             <characteristic name="Ability" typeId="9bce-4deb-8b79-eaec">In your movement phase, if this unit is within 3&quot; of an enemy unit, it can make a normal move. If it does so, it can pass across other models with a Wounds characteristic of 3 or less (that do not have a mount) in the same manner as a model that can fly. After this unit has made a normal move, roll a dice for each enemy unit that has any models passed across by any models in this unit. On a 2+, that enemy unit suffers D3 mortal wounds.</characteristic>
           </characteristics>
         </profile>
-        <profile id="2c16-f5b3-b5ed-dae6" name="Kastellan" hidden="false" typeId="c23b-5a30-07e2-4706" typeName="Unit Options">
+        <profile id="54ce-91c3-33d5-c252" name="Kastellan" hidden="false" typeId="c23b-5a30-07e2-4706" typeName="Unit Options">
           <characteristics>
             <characteristic name="Unit Option" typeId="5879-9a21-e9d2-539d">1 model in this unit can be a Kastellan. Add 1 to the Attacks characteristic of a Kastellan&apos;s Templar Lance or Blade.</characteristic>
           </characteristics>
@@ -1073,46 +1073,6 @@
             <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="dd45-17d4-86f9-be79" name="CONDITIONAL BATTLELINE" hidden="false" collective="false" import="true" type="upgrade">
-          <modifiers>
-            <modifier type="set" field="hidden" value="true">
-              <conditionGroups>
-                <conditionGroup type="or">
-                  <conditions>
-                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="e3a6-45ca-4974-b489" type="instanceOf"/>
-                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="6cd6-b22e-bfcb-9589" type="instanceOf"/>
-                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4373-740f-1bf3-b0aa" type="instanceOf"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
-            </modifier>
-            <modifier type="set" field="ae3b-47d6-41f7-b678" value="0.0">
-              <conditionGroups>
-                <conditionGroup type="or">
-                  <conditions>
-                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="e3a6-45ca-4974-b489" type="instanceOf"/>
-                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="6cd6-b22e-bfcb-9589" type="instanceOf"/>
-                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4373-740f-1bf3-b0aa" type="instanceOf"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
-            </modifier>
-          </modifiers>
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="a09e-3e71-6aba-2900" type="max"/>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="ae3b-47d6-41f7-b678" type="min"/>
-          </constraints>
-          <profiles>
-            <profile id="0339-27d4-39d9-d5a5" name="CONDITIONAL BATTLELINE" hidden="false" typeId="77d9-94b6-d8f2-a150" typeName="BATTLELINE">
-              <characteristics>
-                <characteristic name="Condition" typeId="820b-20af-6fd8-5f48">Battleline if KASTELAI DYNASTY</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <costs>
-            <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
-          </costs>
-        </selectionEntry>
         <selectionEntry id="7d14-9806-9ba2-a86b" name="Mount" hidden="false" collective="false" import="true" type="upgrade">
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="c2d4-f8c1-549d-cc1e" type="max"/>
@@ -1155,21 +1115,21 @@
         </selectionEntry>
       </selectionEntries>
       <selectionEntryGroups>
-        <selectionEntryGroup id="eeb5-74aa-38f6-0030" name="Unit Option" hidden="false" collective="false" import="true">
+        <selectionEntryGroup id="eeb5-74aa-38f6-0030" name="Unit Options" hidden="false" collective="false" import="true">
           <selectionEntries>
             <selectionEntry id="2345-4128-fdb3-5aca" name="Standard Bearer" hidden="false" collective="false" import="true" type="upgrade">
               <modifiers>
                 <modifier type="increment" field="80a8-ef68-91ef-a536" value="1.0">
                   <repeats>
-                    <repeat field="selections" scope="bac1-b8ab-b909-b0f0" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
+                    <repeat field="selections" scope="bac1-b8ab-b909-b0f0" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e20c-48d8-e5e3-1a36" repeats="1" roundUp="false"/>
                   </repeats>
                   <conditions>
-                    <condition field="selections" scope="bac1-b8ab-b909-b0f0" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="model" type="greaterThan"/>
+                    <condition field="selections" scope="bac1-b8ab-b909-b0f0" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e20c-48d8-e5e3-1a36" type="greaterThan"/>
                   </conditions>
                 </modifier>
               </modifiers>
               <constraints>
-                <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="80a8-ef68-91ef-a536" type="max"/>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="80a8-ef68-91ef-a536" type="max"/>
               </constraints>
               <profiles>
                 <profile id="eb55-b065-c389-3845" name="Standard Bearer" hidden="false" typeId="c23b-5a30-07e2-4706" typeName="Unit Options">
@@ -1186,7 +1146,16 @@
         </selectionEntryGroup>
       </selectionEntryGroups>
       <entryLinks>
-        <entryLink id="d297-5417-fc69-3121" name="Unit Reinforcement" hidden="false" collective="false" import="true" targetId="b493-d9e6-82ca-5488" type="selectionEntry"/>
+        <entryLink id="cefc-cb37-225e-0294" name="Unit Reinforcement" hidden="false" collective="false" import="true" targetId="b493-d9e6-82ca-5488" type="selectionEntry"/>
+        <entryLink id="cfd9-151c-084e-1268" name="CONDITIONAL BATTLELINE" hidden="false" collective="false" import="true" targetId="6a2c-7fc7-e348-ca8c" type="selectionEntry">
+          <profiles>
+            <profile id="c5a6-09d6-0d23-d61c" name="CONDITIONAL BATTLELINE" hidden="false" typeId="77d9-94b6-d8f2-a150" typeName="BATTLELINE">
+              <characteristics>
+                <characteristic name="Condition" typeId="820b-20af-6fd8-5f48">Battleline if KASTELAI DYNASTY</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+        </entryLink>
       </entryLinks>
       <costs>
         <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="195.0"/>
@@ -1222,7 +1191,7 @@
             <characteristic name="Ability" typeId="9bce-4deb-8b79-eaec">Instead of setting up this unit on the battlefield, you can place it to one side and say that it is circling high above as a reserve unit. If you do so, at the end of your movement phase, you can set up this unit on the battlefield more than 9&quot; from any enemy units. At the start of the fourth battle round, any models that are still in reserve are slain.</characteristic>
           </characteristics>
         </profile>
-        <profile id="b5d8-99a2-601b-e159" name="Vargoyle" hidden="false" typeId="c23b-5a30-07e2-4706" typeName="Unit Options">
+        <profile id="5bde-2a71-1983-d251" name="Vargoyle" hidden="false" typeId="c23b-5a30-07e2-4706" typeName="Unit Options">
           <characteristics>
             <characteristic name="Unit Option" typeId="5879-9a21-e9d2-539d">1 model in this unit can be a Vargoyle. Add 1 to the Attacks characteristic of a Vargoyle&apos;s Murderous Fangs and Talons.</characteristic>
           </characteristics>
@@ -1244,46 +1213,6 @@
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="1e1b-1c2f-f6c8-3d04" type="max"/>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="9f70-e42c-0c58-cfb3" type="min"/>
           </constraints>
-          <costs>
-            <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="f72e-249f-db2e-5448" name="CONDITIONAL BATTLELINE" hidden="false" collective="false" import="true" type="upgrade">
-          <modifiers>
-            <modifier type="set" field="hidden" value="true">
-              <conditionGroups>
-                <conditionGroup type="or">
-                  <conditions>
-                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="e3a6-45ca-4974-b489" type="instanceOf"/>
-                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="6cd6-b22e-bfcb-9589" type="instanceOf"/>
-                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4373-740f-1bf3-b0aa" type="instanceOf"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
-            </modifier>
-            <modifier type="set" field="f77f-0d9e-cee3-59a3" value="0.0">
-              <conditionGroups>
-                <conditionGroup type="or">
-                  <conditions>
-                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="e3a6-45ca-4974-b489" type="instanceOf"/>
-                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="6cd6-b22e-bfcb-9589" type="instanceOf"/>
-                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4373-740f-1bf3-b0aa" type="instanceOf"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
-            </modifier>
-          </modifiers>
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="154c-9689-bb69-b7a3" type="max"/>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="f77f-0d9e-cee3-59a3" type="min"/>
-          </constraints>
-          <profiles>
-            <profile id="4c7a-9970-be56-477e" name="CONDITIONAL BATTLELINE" hidden="false" typeId="77d9-94b6-d8f2-a150" typeName="BATTLELINE">
-              <characteristics>
-                <characteristic name="Condition" typeId="820b-20af-6fd8-5f48">Battleline if LEGION OF NIGHT</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
           <costs>
             <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
           </costs>
@@ -1312,224 +1241,19 @@
         </selectionEntry>
       </selectionEntries>
       <entryLinks>
-        <entryLink id="12d3-fd97-13f6-113c" name="Unit Reinforcement" hidden="false" collective="false" import="true" targetId="b493-d9e6-82ca-5488" type="selectionEntry"/>
+        <entryLink id="b3ee-7938-9cbd-ab50" name="Unit Reinforcement" hidden="false" collective="false" import="true" targetId="b493-d9e6-82ca-5488" type="selectionEntry"/>
+        <entryLink id="b3c9-e253-28c7-6c98" name="CONDITIONAL BATTLELINE" hidden="false" collective="false" import="true" targetId="6a2c-7fc7-e348-ca8c" type="selectionEntry">
+          <profiles>
+            <profile id="7d96-2dc0-63d8-d0a5" name="CONDITIONAL BATTLELINE" hidden="false" typeId="77d9-94b6-d8f2-a150" typeName="BATTLELINE">
+              <characteristics>
+                <characteristic name="Condition" typeId="820b-20af-6fd8-5f48">Battleline if LEGION OF NIGHT</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+        </entryLink>
       </entryLinks>
       <costs>
         <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="155.0"/>
-      </costs>
-    </selectionEntry>
-    <selectionEntry id="f732-b81f-aa14-1fec" name="Morghast Archai" publicationId="4522-98a4-f23e-c0df" hidden="false" collective="false" import="true" type="unit">
-      <modifiers>
-        <modifier type="increment" field="b0b4-6aec-82c2-02ae" value="190.0">
-          <repeats>
-            <repeat field="selections" scope="f732-b81f-aa14-1fec" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e20c-48d8-e5e3-1a36" repeats="1" roundUp="false"/>
-          </repeats>
-          <conditions>
-            <condition field="selections" scope="f732-b81f-aa14-1fec" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e20c-48d8-e5e3-1a36" type="greaterThan"/>
-          </conditions>
-        </modifier>
-      </modifiers>
-      <profiles>
-        <profile id="4d2f-4541-f7da-77bb" name="Morghast Archai" hidden="false" typeId="3956-f6dd-6c88-ae4b" typeName="Unit">
-          <characteristics>
-            <characteristic name="Move" typeId="5bbe-8910-4dfa-7b1c">9&quot;</characteristic>
-            <characteristic name="Wounds" typeId="a0c6-af64-2f24-5759">6</characteristic>
-            <characteristic name="Save" typeId="93b6-2f96-2df7-e330">4+</characteristic>
-            <characteristic name="Bravery" typeId="2420-1c5c-1016-7033">10</characteristic>
-          </characteristics>
-        </profile>
-        <profile id="a1a9-eae3-91b1-31cd" name="Heralds of the Accursed One" hidden="false" typeId="7861-da01-01c0-88d9" typeName="Ability">
-          <characteristics>
-            <characteristic name="Ability" typeId="9bce-4deb-8b79-eaec">Subtract 1 from the Bravery characteristic of enemy units while they are within 6&quot; of any friendly MORGHASTS.</characteristic>
-          </characteristics>
-        </profile>
-        <profile id="0ed4-2e84-605a-0445" name="Ebon-wrought Armour" hidden="false" typeId="7861-da01-01c0-88d9" typeName="Ability">
-          <characteristics>
-            <characteristic name="Ability" typeId="9bce-4deb-8b79-eaec">Each time you allocate a mortal wound to this unit, roll a dice. On a 5+, that mortal wound is negated.</characteristic>
-          </characteristics>
-        </profile>
-      </profiles>
-      <infoLinks>
-        <infoLink id="f031-2d44-06f4-4449" name="Fly" hidden="false" targetId="dd68-953d-c8fb-7075" type="profile"/>
-      </infoLinks>
-      <categoryLinks>
-        <categoryLink id="eb71-f9e9-b487-58f3" name="Death" hidden="false" targetId="4927-09f0-87d8-4a68" primary="false"/>
-        <categoryLink id="0cdb-5cdc-3f57-6d92" name="Deathlords" hidden="false" targetId="34cf-de80-35b8-8efc" primary="false"/>
-        <categoryLink id="7498-cdb4-0b6f-9309" name="OSSIARCH BONEREAPERS" hidden="false" targetId="47fb-62a4-9300-3d17" primary="false"/>
-        <categoryLink id="ee8d-f211-8c69-2f3a" name="New CategoryLink" hidden="false" targetId="6230-ed60-e374-add4" primary="true"/>
-        <categoryLink id="5006-a7af-0026-348d" name="Morghast" hidden="false" targetId="209a-3c33-7a63-c532" primary="false"/>
-        <categoryLink id="25bc-45e7-f380-5eed" name="Morghast Archai" hidden="false" targetId="e2b1-37df-c433-716f" primary="false"/>
-        <categoryLink id="498d-cbf7-7b1a-14e7" name="Hekatos" hidden="false" targetId="0289-da4a-21c3-abde" primary="false"/>
-      </categoryLinks>
-      <selectionEntries>
-        <selectionEntry id="71ef-5431-2423-6d96" name="2 Morghast Archai" hidden="false" collective="false" import="true" type="model">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="c1a6-21a8-0988-f921" type="max"/>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="bbef-3940-0a3e-700a" type="min"/>
-          </constraints>
-          <costs>
-            <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
-          </costs>
-        </selectionEntry>
-      </selectionEntries>
-      <selectionEntryGroups>
-        <selectionEntryGroup id="a91b-7bf6-a3e5-830d" name="Weapon Option" hidden="false" collective="false" import="true">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8d4d-fd59-7040-80f8" type="max"/>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="975d-d651-06e0-f3a2" type="min"/>
-          </constraints>
-          <selectionEntries>
-            <selectionEntry id="7609-80f9-4f5e-5a75" name="Spirit Halberd" hidden="false" collective="false" import="true" type="upgrade">
-              <profiles>
-                <profile id="bb23-4d88-ef5c-06bf" name="Spirit Halberd" hidden="false" typeId="2905-f6bd-06e5-6642" typeName="Weapon">
-                  <characteristics>
-                    <characteristic name="Type" typeId="1a08-195b-76fd-2c2b">Melee</characteristic>
-                    <characteristic name="Range" typeId="1406-f935-3f8e-b27f">2&quot;</characteristic>
-                    <characteristic name="Attacks" typeId="4c19-dba6-f094-5165">3</characteristic>
-                    <characteristic name="To-Hit" typeId="7a4f-9704-2095-96c8">3+</characteristic>
-                    <characteristic name="To-Wound" typeId="172f-fc84-895b-04b7">3+</characteristic>
-                    <characteristic name="Rend" typeId="0c05-bd2e-b7e7-3925">-2</characteristic>
-                    <characteristic name="Damage" typeId="01c2-d16a-8788-e52b">3</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-              <costs>
-                <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
-              </costs>
-            </selectionEntry>
-            <selectionEntry id="9499-f447-041a-8f55" name="Spirit Swords" hidden="false" collective="false" import="true" type="upgrade">
-              <profiles>
-                <profile id="fb20-e0cf-3085-5660" name="Spirit Swords" hidden="false" typeId="2905-f6bd-06e5-6642" typeName="Weapon">
-                  <characteristics>
-                    <characteristic name="Type" typeId="1a08-195b-76fd-2c2b">Melee</characteristic>
-                    <characteristic name="Range" typeId="1406-f935-3f8e-b27f">1&quot;</characteristic>
-                    <characteristic name="Attacks" typeId="4c19-dba6-f094-5165">5</characteristic>
-                    <characteristic name="To-Hit" typeId="7a4f-9704-2095-96c8">3+</characteristic>
-                    <characteristic name="To-Wound" typeId="172f-fc84-895b-04b7">3+</characteristic>
-                    <characteristic name="Rend" typeId="0c05-bd2e-b7e7-3925">-1</characteristic>
-                    <characteristic name="Damage" typeId="01c2-d16a-8788-e52b">2</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-              <costs>
-                <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
-              </costs>
-            </selectionEntry>
-          </selectionEntries>
-        </selectionEntryGroup>
-      </selectionEntryGroups>
-      <entryLinks>
-        <entryLink id="9536-119d-5bf4-89a1" name="Unit Reinforcement" hidden="false" collective="false" import="true" targetId="b493-d9e6-82ca-5488" type="selectionEntry"/>
-      </entryLinks>
-      <costs>
-        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="190.0"/>
-      </costs>
-    </selectionEntry>
-    <selectionEntry id="992b-4eda-6c29-1650" name="Morghast Harbingers" publicationId="4522-98a4-f23e-c0df" hidden="false" collective="false" import="true" type="unit">
-      <modifiers>
-        <modifier type="increment" field="b0b4-6aec-82c2-02ae" value="190.0">
-          <repeats>
-            <repeat field="selections" scope="992b-4eda-6c29-1650" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e20c-48d8-e5e3-1a36" repeats="1" roundUp="false"/>
-          </repeats>
-          <conditions>
-            <condition field="selections" scope="992b-4eda-6c29-1650" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e20c-48d8-e5e3-1a36" type="greaterThan"/>
-          </conditions>
-        </modifier>
-      </modifiers>
-      <profiles>
-        <profile id="5916-ea84-1f06-6ec2" name="Morghast Harbingers" hidden="false" typeId="3956-f6dd-6c88-ae4b" typeName="Unit">
-          <characteristics>
-            <characteristic name="Move" typeId="5bbe-8910-4dfa-7b1c">9&quot;</characteristic>
-            <characteristic name="Wounds" typeId="a0c6-af64-2f24-5759">6</characteristic>
-            <characteristic name="Save" typeId="93b6-2f96-2df7-e330">4+</characteristic>
-            <characteristic name="Bravery" typeId="2420-1c5c-1016-7033">10</characteristic>
-          </characteristics>
-        </profile>
-        <profile id="66fa-871e-001c-cdc8" name="Heralds of the Accursed One" hidden="false" typeId="7861-da01-01c0-88d9" typeName="Ability">
-          <characteristics>
-            <characteristic name="Ability" typeId="9bce-4deb-8b79-eaec">Subtract 1 from the Bravery characteristic of enemy units while they are within 6&quot; of any friendly MORGHASTS.</characteristic>
-          </characteristics>
-        </profile>
-        <profile id="4ceb-2cc0-1ffb-690e" name="Harbingers of Death" hidden="false" typeId="7861-da01-01c0-88d9" typeName="Ability">
-          <characteristics>
-            <characteristic name="Ability" typeId="9bce-4deb-8b79-eaec">You can attempt to charge with this unit if it is within 18&quot; of the enemy instead of 12&quot;. Roll 3D6 instead of 2D6 when making a charge roll for this unit.</characteristic>
-          </characteristics>
-        </profile>
-      </profiles>
-      <infoLinks>
-        <infoLink id="336c-53c5-c560-4963" name="Fly" hidden="false" targetId="dd68-953d-c8fb-7075" type="profile"/>
-      </infoLinks>
-      <categoryLinks>
-        <categoryLink id="87ca-b595-5dda-4065" name="Death" hidden="false" targetId="4927-09f0-87d8-4a68" primary="false"/>
-        <categoryLink id="a0c4-fc72-0f19-baaf" name="Deathlords" hidden="false" targetId="34cf-de80-35b8-8efc" primary="false"/>
-        <categoryLink id="b261-a45a-6ac4-f291" name="OSSIARCH BONEREAPERS" hidden="false" targetId="47fb-62a4-9300-3d17" primary="false"/>
-        <categoryLink id="d5f8-355f-785d-0189" name="New CategoryLink" hidden="false" targetId="6230-ed60-e374-add4" primary="true"/>
-        <categoryLink id="7897-0ab7-33dd-070f" name="Hekatos" hidden="false" targetId="0289-da4a-21c3-abde" primary="false"/>
-        <categoryLink id="e466-8459-6b21-0635" name="Morghast" hidden="false" targetId="209a-3c33-7a63-c532" primary="false"/>
-        <categoryLink id="dd70-aabd-1980-0718" name="Morghast Harbingers" hidden="false" targetId="737d-becf-7165-8c73" primary="false"/>
-      </categoryLinks>
-      <selectionEntries>
-        <selectionEntry id="4738-c650-53ee-cf47" name="2 Morghast Harbingers" hidden="false" collective="false" import="true" type="model">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="540d-a9d5-2b81-f2ac" type="max"/>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="4d9c-4b1b-37ce-fb76" type="min"/>
-          </constraints>
-          <costs>
-            <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
-          </costs>
-        </selectionEntry>
-      </selectionEntries>
-      <selectionEntryGroups>
-        <selectionEntryGroup id="f637-cf39-1717-3f2e" name="Weapon Option" hidden="false" collective="false" import="true">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="80de-3113-0027-91e7" type="max"/>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="42da-91b3-3203-4a32" type="min"/>
-          </constraints>
-          <selectionEntries>
-            <selectionEntry id="74e5-110a-07cb-96ca" name="Spirit Halberd" hidden="false" collective="false" import="true" type="upgrade">
-              <profiles>
-                <profile id="c277-d0db-b076-eb30" name="Spirit Halberd" hidden="false" typeId="2905-f6bd-06e5-6642" typeName="Weapon">
-                  <characteristics>
-                    <characteristic name="Type" typeId="1a08-195b-76fd-2c2b">Melee</characteristic>
-                    <characteristic name="Range" typeId="1406-f935-3f8e-b27f">2&quot;</characteristic>
-                    <characteristic name="Attacks" typeId="4c19-dba6-f094-5165">3</characteristic>
-                    <characteristic name="To-Hit" typeId="7a4f-9704-2095-96c8">3+</characteristic>
-                    <characteristic name="To-Wound" typeId="172f-fc84-895b-04b7">3+</characteristic>
-                    <characteristic name="Rend" typeId="0c05-bd2e-b7e7-3925">-2</characteristic>
-                    <characteristic name="Damage" typeId="01c2-d16a-8788-e52b">3</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-              <costs>
-                <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
-              </costs>
-            </selectionEntry>
-            <selectionEntry id="951a-3306-befe-ab1b" name="Spirit Swords" hidden="false" collective="false" import="true" type="upgrade">
-              <profiles>
-                <profile id="81f6-873f-988e-4066" name="Spirit Swords" hidden="false" typeId="2905-f6bd-06e5-6642" typeName="Weapon">
-                  <characteristics>
-                    <characteristic name="Type" typeId="1a08-195b-76fd-2c2b">Melee</characteristic>
-                    <characteristic name="Range" typeId="1406-f935-3f8e-b27f">1&quot;</characteristic>
-                    <characteristic name="Attacks" typeId="4c19-dba6-f094-5165">5</characteristic>
-                    <characteristic name="To-Hit" typeId="7a4f-9704-2095-96c8">3+</characteristic>
-                    <characteristic name="To-Wound" typeId="172f-fc84-895b-04b7">3+</characteristic>
-                    <characteristic name="Rend" typeId="0c05-bd2e-b7e7-3925">-1</characteristic>
-                    <characteristic name="Damage" typeId="01c2-d16a-8788-e52b">2</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-              <costs>
-                <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
-              </costs>
-            </selectionEntry>
-          </selectionEntries>
-        </selectionEntryGroup>
-      </selectionEntryGroups>
-      <entryLinks>
-        <entryLink id="cbae-ca82-ed2f-7ff4" name="Unit Reinforcement" hidden="false" collective="false" import="true" targetId="b493-d9e6-82ca-5488" type="selectionEntry"/>
-      </entryLinks>
-      <costs>
-        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="190.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="ecb4-f1ee-17bd-0d41" name="Bat Swarms" publicationId="bda7-507d-2337-b03f" hidden="false" collective="false" import="true" type="unit">
@@ -1607,7 +1331,7 @@
         </selectionEntry>
       </selectionEntries>
       <entryLinks>
-        <entryLink id="6ccd-2a75-9153-ba31" name="Unit Reinforcement" hidden="false" collective="false" import="true" targetId="b493-d9e6-82ca-5488" type="selectionEntry"/>
+        <entryLink id="d5cb-bde0-c45d-39a8" name="Unit Reinforcement" hidden="false" collective="false" import="true" targetId="b493-d9e6-82ca-5488" type="selectionEntry"/>
       </entryLinks>
       <costs>
         <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="80.0"/>
@@ -1683,7 +1407,7 @@
         </selectionEntry>
       </selectionEntries>
       <entryLinks>
-        <entryLink id="fd18-8d51-ea2d-caf4" name="Unit Reinforcement" hidden="false" collective="false" import="true" targetId="b493-d9e6-82ca-5488" type="selectionEntry"/>
+        <entryLink id="93e6-c06f-4444-acb1" name="Unit Reinforcement" hidden="false" collective="false" import="true" targetId="b493-d9e6-82ca-5488" type="selectionEntry"/>
       </entryLinks>
       <costs>
         <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="75.0"/>
@@ -2392,6 +2116,19 @@
             <condition field="selections" scope="de72-99b6-8324-0811" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e20c-48d8-e5e3-1a36" type="greaterThan"/>
           </conditions>
         </modifier>
+        <modifier type="remove" field="category" value="a42d-220e-6a88-7bf6">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="e3a6-45ca-4974-b489" type="instanceOf"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="6cd6-b22e-bfcb-9589" type="instanceOf"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="996a-613c-4006-25e3" type="instanceOf"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4373-740f-1bf3-b0aa" type="instanceOf"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="b543-cb16-0c79-fbc6" type="instanceOf"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
       </modifiers>
       <profiles>
         <profile id="df4a-4c65-59d5-a42e" name="Zombies" hidden="false" typeId="3956-f6dd-6c88-ae4b" typeName="Unit">
@@ -2453,49 +2190,10 @@
             <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="508e-df27-3803-14b0" name="CONDITIONAL BATTLELINE" hidden="false" collective="false" import="true" type="upgrade">
-          <modifiers>
-            <modifier type="set" field="hidden" value="true">
-              <conditionGroups>
-                <conditionGroup type="or">
-                  <conditions>
-                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="e3a6-45ca-4974-b489" type="instanceOf"/>
-                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="6cd6-b22e-bfcb-9589" type="instanceOf"/>
-                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4373-740f-1bf3-b0aa" type="instanceOf"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
-            </modifier>
-            <modifier type="set" field="4469-8ea8-6d01-0b42" value="0.0">
-              <conditionGroups>
-                <conditionGroup type="or">
-                  <conditions>
-                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="e3a6-45ca-4974-b489" type="instanceOf"/>
-                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="6cd6-b22e-bfcb-9589" type="instanceOf"/>
-                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4373-740f-1bf3-b0aa" type="instanceOf"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
-            </modifier>
-          </modifiers>
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="f484-6304-2171-8e42" type="max"/>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="4469-8ea8-6d01-0b42" type="min"/>
-          </constraints>
-          <profiles>
-            <profile id="b1da-4eee-9f49-683b" name="CONDITIONAL BATTLELINE" hidden="false" typeId="77d9-94b6-d8f2-a150" typeName="BATTLELINE">
-              <characteristics>
-                <characteristic name="Condition" typeId="820b-20af-6fd8-5f48">Battleline in a Soulblight Gravelords army</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <costs>
-            <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
-          </costs>
-        </selectionEntry>
       </selectionEntries>
       <entryLinks>
-        <entryLink id="e59d-06c2-5317-9aff" name="Unit Reinforcement" hidden="false" collective="false" import="true" targetId="b493-d9e6-82ca-5488" type="selectionEntry"/>
+        <entryLink id="1e7e-2a89-0c4c-9633" name="Unit Reinforcement" hidden="false" collective="false" import="true" targetId="b493-d9e6-82ca-5488" type="selectionEntry"/>
+        <entryLink id="c706-4db9-2e79-39fa" name="BATTLELINE" hidden="false" collective="false" import="true" targetId="be1f-d384-9fe4-789d" type="selectionEntry"/>
       </entryLinks>
       <costs>
         <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="115.0"/>
@@ -3048,7 +2746,7 @@
             <characteristic name="Ability" typeId="9bce-4deb-8b79-eaec">After this unit makes a charge move, you can pick 1 enemy unit within 1&quot; of this unit and roll a dice. On a 2+, that eney unit suffers D3 mortal wounds.</characteristic>
           </characteristics>
         </profile>
-        <profile id="b617-4024-a1c4-1ba3" name="Lord of Bones" hidden="false" typeId="6364-f76d-fc0c-80bc" typeName="Command Abilities">
+        <profile id="50f8-78bf-39fb-08b1" name="Lord of Bones" hidden="false" typeId="6364-f76d-fc0c-80bc" typeName="Command Abilities">
           <characteristics>
             <characteristic name="Command Ability" typeId="36cb-f8a4-d94b-8aa8">You can use this command ability at the start of the combat phase. If you do so, pick 1 friendly DEATHRATTLE unit wholly within 12&quot; of this model. Until the end of that phase, you can re-roll hit rolls of 1 for attacks made with melee weapons by that unit.</characteristic>
           </characteristics>
@@ -3213,7 +2911,7 @@
             <characteristic name="Ability" typeId="9bce-4deb-8b79-eaec">After this unit makes a charge move, you can pick 1 enemy unit within 1&quot; of this unit and roll a dice. On a 2+, that eney unit suffers D3 mortal wounds.</characteristic>
           </characteristics>
         </profile>
-        <profile id="acb0-ecfb-a5ac-c3a2" name="Hellknight" hidden="false" typeId="c23b-5a30-07e2-4706" typeName="Unit Options">
+        <profile id="dbb4-9ebf-e571-b7e0" name="Hellknight" hidden="false" typeId="c23b-5a30-07e2-4706" typeName="Unit Options">
           <characteristics>
             <characteristic name="Unit Option" typeId="5879-9a21-e9d2-539d">1 model in this unit can be a Hellknight. Add 1 to the Attacks characteristic of that model&apos;s Barrow Lance.</characteristic>
           </characteristics>
@@ -3252,46 +2950,6 @@
                 <characteristic name="To-Wound" typeId="172f-fc84-895b-04b7">3+</characteristic>
                 <characteristic name="Rend" typeId="0c05-bd2e-b7e7-3925">-</characteristic>
                 <characteristic name="Damage" typeId="01c2-d16a-8788-e52b">1</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <costs>
-            <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="391d-6481-c5fa-910e" name="CONDITIONAL BATTLELINE" hidden="false" collective="false" import="true" type="upgrade">
-          <modifiers>
-            <modifier type="set" field="hidden" value="true">
-              <conditionGroups>
-                <conditionGroup type="or">
-                  <conditions>
-                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="e3a6-45ca-4974-b489" type="instanceOf"/>
-                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="6cd6-b22e-bfcb-9589" type="instanceOf"/>
-                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4373-740f-1bf3-b0aa" type="instanceOf"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
-            </modifier>
-            <modifier type="set" field="4682-a3d0-1095-ef61" value="0.0">
-              <conditionGroups>
-                <conditionGroup type="or">
-                  <conditions>
-                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="e3a6-45ca-4974-b489" type="instanceOf"/>
-                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="6cd6-b22e-bfcb-9589" type="instanceOf"/>
-                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4373-740f-1bf3-b0aa" type="instanceOf"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
-            </modifier>
-          </modifiers>
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="45d5-3333-b4c8-1c98" type="max"/>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="4682-a3d0-1095-ef61" type="min"/>
-          </constraints>
-          <profiles>
-            <profile id="ff27-53ad-06a8-8dad" name="CONDITIONAL BATTLELINE" hidden="false" typeId="77d9-94b6-d8f2-a150" typeName="BATTLELINE">
-              <characteristics>
-                <characteristic name="Condition" typeId="820b-20af-6fd8-5f48">Battleline if LEGION OF BLOOD</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -3347,15 +3005,15 @@
               <modifiers>
                 <modifier type="increment" field="fd22-30c7-a831-2319" value="1.0">
                   <repeats>
-                    <repeat field="selections" scope="8d25-e2ba-9940-fced" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="9bfa-603f-b48e-e726" repeats="1" roundUp="false"/>
+                    <repeat field="selections" scope="8d25-e2ba-9940-fced" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e20c-48d8-e5e3-1a36" repeats="1" roundUp="false"/>
                   </repeats>
                   <conditions>
-                    <condition field="selections" scope="8d25-e2ba-9940-fced" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="9bfa-603f-b48e-e726" type="greaterThan"/>
+                    <condition field="selections" scope="8d25-e2ba-9940-fced" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e20c-48d8-e5e3-1a36" type="greaterThan"/>
                   </conditions>
                 </modifier>
               </modifiers>
               <constraints>
-                <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="fd22-30c7-a831-2319" type="max"/>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="fd22-30c7-a831-2319" type="max"/>
               </constraints>
               <profiles>
                 <profile id="faba-09ee-b72a-ccd5" name="Standard Bearer" hidden="false" typeId="c23b-5a30-07e2-4706" typeName="Unit Options">
@@ -3372,15 +3030,15 @@
               <modifiers>
                 <modifier type="increment" field="56ed-92b8-0d2c-8996" value="1.0">
                   <repeats>
-                    <repeat field="selections" scope="8d25-e2ba-9940-fced" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
+                    <repeat field="selections" scope="8d25-e2ba-9940-fced" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e20c-48d8-e5e3-1a36" repeats="1" roundUp="false"/>
                   </repeats>
                   <conditions>
-                    <condition field="selections" scope="8d25-e2ba-9940-fced" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="model" type="greaterThan"/>
+                    <condition field="selections" scope="8d25-e2ba-9940-fced" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e20c-48d8-e5e3-1a36" type="greaterThan"/>
                   </conditions>
                 </modifier>
               </modifiers>
               <constraints>
-                <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="56ed-92b8-0d2c-8996" type="max"/>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="56ed-92b8-0d2c-8996" type="max"/>
               </constraints>
               <profiles>
                 <profile id="d02c-1edd-2b48-2bfd" name="Hornblower" hidden="false" typeId="c23b-5a30-07e2-4706" typeName="Unit Options">
@@ -3397,7 +3055,16 @@
         </selectionEntryGroup>
       </selectionEntryGroups>
       <entryLinks>
-        <entryLink id="60de-33fe-58dd-20e8" name="Unit Reinforcement" hidden="false" collective="false" import="true" targetId="b493-d9e6-82ca-5488" type="selectionEntry"/>
+        <entryLink id="2491-e5bf-bc51-28c0" name="Unit Reinforcement" hidden="false" collective="false" import="true" targetId="b493-d9e6-82ca-5488" type="selectionEntry"/>
+        <entryLink id="5c2e-58ce-7597-31a3" name="CONDITIONAL BATTLELINE" hidden="false" collective="false" import="true" targetId="6a2c-7fc7-e348-ca8c" type="selectionEntry">
+          <profiles>
+            <profile id="ee56-6686-f3ab-916d" name="CONDITIONAL BATTLELINE" hidden="false" typeId="77d9-94b6-d8f2-a150" typeName="BATTLELINE">
+              <characteristics>
+                <characteristic name="Condition" typeId="820b-20af-6fd8-5f48">Battleline if LEGION OF BLOOD</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+        </entryLink>
       </entryLinks>
       <costs>
         <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="120.0"/>
@@ -3428,7 +3095,7 @@
             <characteristic name="Ability" typeId="9bce-4deb-8b79-eaec">If the unmodified wound roll for an attack made with a melee weapon is 6, the target suffes 1 mortal wound in addition to any normal damage.</characteristic>
           </characteristics>
         </profile>
-        <profile id="a786-9fcf-fcaa-0dc2" name="Seneschal" hidden="false" typeId="c23b-5a30-07e2-4706" typeName="Unit Options">
+        <profile id="0135-c613-ed3d-a562" name="Seneschal" hidden="false" typeId="c23b-5a30-07e2-4706" typeName="Unit Options">
           <characteristics>
             <characteristic name="Unit Option" typeId="5879-9a21-e9d2-539d">1 model in this unit can be a Seneschal. Add 1 to the Attacks characteristic of that model&apos;s Wight Blade or Great Wight Blade.</characteristic>
           </characteristics>
@@ -3452,46 +3119,6 @@
             <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="ee3b-3e01-c0e0-3423" name="CONDITIONAL BATTLELINE" hidden="false" collective="false" import="true" type="upgrade">
-          <modifiers>
-            <modifier type="set" field="hidden" value="true">
-              <conditionGroups>
-                <conditionGroup type="or">
-                  <conditions>
-                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="e3a6-45ca-4974-b489" type="instanceOf"/>
-                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="6cd6-b22e-bfcb-9589" type="instanceOf"/>
-                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4373-740f-1bf3-b0aa" type="instanceOf"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
-            </modifier>
-            <modifier type="set" field="ef7f-7a99-dd3e-bc84" value="0.0">
-              <conditionGroups>
-                <conditionGroup type="or">
-                  <conditions>
-                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="e3a6-45ca-4974-b489" type="instanceOf"/>
-                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="6cd6-b22e-bfcb-9589" type="instanceOf"/>
-                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4373-740f-1bf3-b0aa" type="instanceOf"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
-            </modifier>
-          </modifiers>
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="55e0-b65e-3aae-a1e2" type="max"/>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="ef7f-7a99-dd3e-bc84" type="min"/>
-          </constraints>
-          <profiles>
-            <profile id="8665-db38-67d9-81ee" name="CONDITIONAL BATTLELINE" hidden="false" typeId="77d9-94b6-d8f2-a150" typeName="BATTLELINE">
-              <characteristics>
-                <characteristic name="Condition" typeId="820b-20af-6fd8-5f48">Battleline if general is WIGHT KING</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <costs>
-            <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
-          </costs>
-        </selectionEntry>
       </selectionEntries>
       <selectionEntryGroups>
         <selectionEntryGroup id="9ca4-ea65-2476-6bf6" name="Unit Options" hidden="false" collective="false" import="true">
@@ -3500,15 +3127,15 @@
               <modifiers>
                 <modifier type="increment" field="b9ff-677c-6860-ad1b" value="1.0">
                   <repeats>
-                    <repeat field="selections" scope="f997-8325-c4e8-d77d" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
+                    <repeat field="selections" scope="f997-8325-c4e8-d77d" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e20c-48d8-e5e3-1a36" repeats="1" roundUp="false"/>
                   </repeats>
                   <conditions>
-                    <condition field="selections" scope="f997-8325-c4e8-d77d" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="model" type="greaterThan"/>
+                    <condition field="selections" scope="f997-8325-c4e8-d77d" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e20c-48d8-e5e3-1a36" type="greaterThan"/>
                   </conditions>
                 </modifier>
               </modifiers>
               <constraints>
-                <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="b9ff-677c-6860-ad1b" type="max"/>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="b9ff-677c-6860-ad1b" type="max"/>
               </constraints>
               <profiles>
                 <profile id="9f36-1fe0-8aa9-e87e" name="Standard Bearer" hidden="false" typeId="c23b-5a30-07e2-4706" typeName="Unit Options">
@@ -3525,15 +3152,15 @@
               <modifiers>
                 <modifier type="increment" field="d069-b007-2484-3a88" value="1.0">
                   <repeats>
-                    <repeat field="selections" scope="f997-8325-c4e8-d77d" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
+                    <repeat field="selections" scope="f997-8325-c4e8-d77d" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e20c-48d8-e5e3-1a36" repeats="1" roundUp="false"/>
                   </repeats>
                   <conditions>
-                    <condition field="selections" scope="f997-8325-c4e8-d77d" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="model" type="greaterThan"/>
+                    <condition field="selections" scope="f997-8325-c4e8-d77d" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e20c-48d8-e5e3-1a36" type="greaterThan"/>
                   </conditions>
                 </modifier>
               </modifiers>
               <constraints>
-                <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d069-b007-2484-3a88" type="max"/>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d069-b007-2484-3a88" type="max"/>
               </constraints>
               <profiles>
                 <profile id="d062-00fc-e22d-fe1a" name="Hornblower" hidden="false" typeId="c23b-5a30-07e2-4706" typeName="Unit Options">
@@ -3599,7 +3226,16 @@
         </selectionEntryGroup>
       </selectionEntryGroups>
       <entryLinks>
-        <entryLink id="ed26-2992-c535-af5d" name="Unit Reinforcement" hidden="false" collective="false" import="true" targetId="b493-d9e6-82ca-5488" type="selectionEntry"/>
+        <entryLink id="a9c4-ff3b-d794-aaf3" name="Unit Reinforcement" hidden="false" collective="false" import="true" targetId="b493-d9e6-82ca-5488" type="selectionEntry"/>
+        <entryLink id="660b-8a45-418f-3036" name="CONDITIONAL BATTLELINE" hidden="false" collective="false" import="true" targetId="6a2c-7fc7-e348-ca8c" type="selectionEntry">
+          <profiles>
+            <profile id="ac5d-de4a-f5eb-300c" name="CONDITIONAL BATTLELINE" hidden="false" typeId="77d9-94b6-d8f2-a150" typeName="BATTLELINE">
+              <characteristics>
+                <characteristic name="Condition" typeId="820b-20af-6fd8-5f48">Battleline if general is WIGHT KING</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+        </entryLink>
       </entryLinks>
       <costs>
         <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="140.0"/>
@@ -3607,17 +3243,6 @@
     </selectionEntry>
     <selectionEntry id="f55e-ecda-25f5-0d08" name="Deathrattle Skeletons" publicationId="bda7-507d-2337-b03f" hidden="false" collective="false" import="true" type="unit">
       <modifiers>
-        <modifier type="remove" field="category" value="a42d-220e-6a88-7bf6">
-          <conditionGroups>
-            <conditionGroup type="or">
-              <conditions>
-                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="e3a6-45ca-4974-b489" type="instanceOf"/>
-                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4373-740f-1bf3-b0aa" type="instanceOf"/>
-                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="6cd6-b22e-bfcb-9589" type="instanceOf"/>
-              </conditions>
-            </conditionGroup>
-          </conditionGroups>
-        </modifier>
         <modifier type="increment" field="b0b4-6aec-82c2-02ae" value="85.0">
           <repeats>
             <repeat field="selections" scope="f55e-ecda-25f5-0d08" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e20c-48d8-e5e3-1a36" repeats="1" roundUp="false"/>
@@ -3625,6 +3250,19 @@
           <conditions>
             <condition field="selections" scope="f55e-ecda-25f5-0d08" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e20c-48d8-e5e3-1a36" type="greaterThan"/>
           </conditions>
+        </modifier>
+        <modifier type="remove" field="category" value="a42d-220e-6a88-7bf6">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="e3a6-45ca-4974-b489" type="instanceOf"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="6cd6-b22e-bfcb-9589" type="instanceOf"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="996a-613c-4006-25e3" type="instanceOf"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4373-740f-1bf3-b0aa" type="instanceOf"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="b543-cb16-0c79-fbc6" type="instanceOf"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
         </modifier>
       </modifiers>
       <profiles>
@@ -3661,46 +3299,6 @@
             <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="57d1-2735-5a1a-341b" name="BATTLELINE" hidden="false" collective="false" import="true" type="upgrade">
-          <modifiers>
-            <modifier type="set" field="hidden" value="true">
-              <conditionGroups>
-                <conditionGroup type="or">
-                  <conditions>
-                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="e3a6-45ca-4974-b489" type="instanceOf"/>
-                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="6cd6-b22e-bfcb-9589" type="instanceOf"/>
-                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4373-740f-1bf3-b0aa" type="instanceOf"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
-            </modifier>
-            <modifier type="set" field="a8e6-e394-e562-1da2" value="0.0">
-              <conditionGroups>
-                <conditionGroup type="or">
-                  <conditions>
-                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="e3a6-45ca-4974-b489" type="instanceOf"/>
-                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="6cd6-b22e-bfcb-9589" type="instanceOf"/>
-                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4373-740f-1bf3-b0aa" type="instanceOf"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
-            </modifier>
-          </modifiers>
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="cf57-7163-fd8e-dbfc" type="max"/>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="a8e6-e394-e562-1da2" type="min"/>
-          </constraints>
-          <profiles>
-            <profile id="6f8b-8ae4-8c52-3cdc" name="BATTLELINE" hidden="false" typeId="77d9-94b6-d8f2-a150" typeName="BATTLELINE">
-              <characteristics>
-                <characteristic name="Condition" typeId="820b-20af-6fd8-5f48">This unit is battleline</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <costs>
-            <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
-          </costs>
-        </selectionEntry>
         <selectionEntry id="8af1-19b5-cdf4-018b" name="Ancient Blade or Spear" hidden="false" collective="false" import="true" type="upgrade">
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="5f5c-be42-35b9-0920" type="max"/>
@@ -3731,15 +3329,15 @@
               <modifiers>
                 <modifier type="increment" field="9f29-7ba0-9192-1ddd" value="1.0">
                   <repeats>
-                    <repeat field="selections" scope="f55e-ecda-25f5-0d08" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
+                    <repeat field="selections" scope="f55e-ecda-25f5-0d08" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e20c-48d8-e5e3-1a36" repeats="1" roundUp="false"/>
                   </repeats>
                   <conditions>
-                    <condition field="selections" scope="f55e-ecda-25f5-0d08" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="model" type="greaterThan"/>
+                    <condition field="selections" scope="f55e-ecda-25f5-0d08" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e20c-48d8-e5e3-1a36" type="greaterThan"/>
                   </conditions>
                 </modifier>
               </modifiers>
               <constraints>
-                <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="9f29-7ba0-9192-1ddd" type="max"/>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="9f29-7ba0-9192-1ddd" type="max"/>
               </constraints>
               <profiles>
                 <profile id="6bb7-2ccd-4a57-8141" name="Standard Bearer" hidden="false" typeId="c23b-5a30-07e2-4706" typeName="Unit Options">
@@ -3817,137 +3415,15 @@
         </selectionEntryGroup>
       </selectionEntryGroups>
       <entryLinks>
-        <entryLink id="9a68-a536-20e8-ad02" name="Unit Reinforcement" hidden="false" collective="false" import="true" targetId="b493-d9e6-82ca-5488" type="selectionEntry"/>
+        <entryLink id="3542-ef42-c404-7da8" name="Unit Reinforcement" hidden="false" collective="false" import="true" targetId="b493-d9e6-82ca-5488" type="selectionEntry"/>
+        <entryLink id="9661-0d95-c5a0-233e" name="BATTLELINE" hidden="false" collective="false" import="true" targetId="be1f-d384-9fe4-789d" type="selectionEntry"/>
       </entryLinks>
       <costs>
         <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="85.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="b374-17f3-0ca4-718d" name="Legion Black Coach" publicationId="bda7-507d-2337-b03f" hidden="false" collective="false" import="true" type="unit">
-      <profiles>
-        <profile id="1efa-11b8-07d6-f99d" name="Legion Black Coach" hidden="false" typeId="3956-f6dd-6c88-ae4b" typeName="Unit">
-          <characteristics>
-            <characteristic name="Move" typeId="5bbe-8910-4dfa-7b1c">10&quot;</characteristic>
-            <characteristic name="Wounds" typeId="a0c6-af64-2f24-5759">7</characteristic>
-            <characteristic name="Save" typeId="93b6-2f96-2df7-e330">4+</characteristic>
-            <characteristic name="Bravery" typeId="2420-1c5c-1016-7033">10</characteristic>
-          </characteristics>
-        </profile>
-        <profile id="8d63-2e5e-76fd-297f" name="Evocation of Death" hidden="false" typeId="7861-da01-01c0-88d9" typeName="Ability">
-          <characteristics>
-            <characteristic name="Ability" typeId="9bce-4deb-8b79-eaec">In your hero phase, roll a dice for each friendly DEATH WIZARD within 12&quot; of this model. For each roll of 6, the Black Coach gains a level of power for the rest of the battle; these are cumulative and grant the following abilities:
-
-First Level - Gleaming Scythes: After this model completes a charge, pick and enemy unit within 1&quot; of this model. That unit suffers D3 mortal wounds.
-
-Second Level - Unholy Vigour: This model has a Move characteristic of 14&quot; instead of 10&quot;.
-
-Third Level - Witch-fire: Add 1 to hit rolls for this model.
-
-Fourth Level - Howling Winds: This model can fly.
-
-Fifth Level - Nimbus of Darkness: This model can attempt to unbind one spell in the enemy hero phase as if it were a WIZARD.</characteristic>
-          </characteristics>
-        </profile>
-      </profiles>
-      <categoryLinks>
-        <categoryLink id="db52-8168-86a5-5fae" name="Death" hidden="false" targetId="4927-09f0-87d8-4a68" primary="false"/>
-        <categoryLink id="691e-7bee-875d-bde1" name="Legion Black Coach" hidden="false" targetId="b587-4785-e189-bf92" primary="false"/>
-        <categoryLink id="9aa5-cfef-88d2-3ca9" name="Hero" hidden="false" targetId="411f-dd41-4ab6-8a05" primary="false"/>
-        <categoryLink id="e1da-fdd2-74a4-1760" name="Malignant" hidden="false" targetId="424e-7d8e-3ce5-9749" primary="false"/>
-        <categoryLink id="e639-bbee-9ee5-0efe" name="NIGHTHAUNT" hidden="false" targetId="9af1-04d7-aa3e-c8b0" primary="false"/>
-        <categoryLink id="0cb8-89b9-822c-07d6" name="New CategoryLink" hidden="false" targetId="6230-ed60-e374-add4" primary="true"/>
-      </categoryLinks>
-      <selectionEntries>
-        <selectionEntry id="dc43-39fd-f3e6-be30" name="Mount" hidden="false" collective="false" import="true" type="upgrade">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d19b-3b2b-64f3-61b1" type="max"/>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="e02a-362a-675d-88ab" type="min"/>
-          </constraints>
-          <profiles>
-            <profile id="2e4a-7747-5e06-0728" name="Mount" hidden="false" typeId="61e3-eba4-7222-dee7" typeName="Mount/Companion">
-              <characteristics>
-                <characteristic name="Mount/Companion" typeId="e368-06f5-5b4f-64a3">A Black Coach is pulled along by skeletal Nightmares that lash out at the foe with their Hooves and Teeth.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <selectionEntries>
-            <selectionEntry id="a46f-b833-7fbd-21e2" name="Nightmare&apos;s Hooves and Teeth" hidden="false" collective="false" import="true" type="upgrade">
-              <constraints>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="9dcc-dd66-94c1-6268" type="max"/>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="c1f0-7153-b0db-2ec0" type="min"/>
-              </constraints>
-              <profiles>
-                <profile id="5055-c0f9-43f6-c4c8" name="Hooves and Teeth" hidden="false" typeId="2905-f6bd-06e5-6642" typeName="Weapon">
-                  <characteristics>
-                    <characteristic name="Type" typeId="1a08-195b-76fd-2c2b">Melee</characteristic>
-                    <characteristic name="Range" typeId="1406-f935-3f8e-b27f">1&quot;</characteristic>
-                    <characteristic name="Attacks" typeId="4c19-dba6-f094-5165">4</characteristic>
-                    <characteristic name="To-Hit" typeId="7a4f-9704-2095-96c8">4+</characteristic>
-                    <characteristic name="To-Wound" typeId="172f-fc84-895b-04b7">4+</characteristic>
-                    <characteristic name="Rend" typeId="0c05-bd2e-b7e7-3925">-</characteristic>
-                    <characteristic name="Damage" typeId="01c2-d16a-8788-e52b">1</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-              <costs>
-                <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
-              </costs>
-            </selectionEntry>
-          </selectionEntries>
-          <costs>
-            <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="9fbc-0d39-6e29-8f5e" name="Cairn Wraith&apos;s Reaper Scythe" hidden="false" collective="false" import="true" type="upgrade">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="7756-4384-1b53-4649" type="max"/>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="4e31-e243-6f3c-f626" type="min"/>
-          </constraints>
-          <profiles>
-            <profile id="7dba-a7d3-73e4-256e" name="Reaper Scythe" hidden="false" typeId="2905-f6bd-06e5-6642" typeName="Weapon">
-              <characteristics>
-                <characteristic name="Type" typeId="1a08-195b-76fd-2c2b">Melee</characteristic>
-                <characteristic name="Range" typeId="1406-f935-3f8e-b27f">1&quot;</characteristic>
-                <characteristic name="Attacks" typeId="4c19-dba6-f094-5165">3</characteristic>
-                <characteristic name="To-Hit" typeId="7a4f-9704-2095-96c8">4+</characteristic>
-                <characteristic name="To-Wound" typeId="172f-fc84-895b-04b7">3+</characteristic>
-                <characteristic name="Rend" typeId="0c05-bd2e-b7e7-3925">-1</characteristic>
-                <characteristic name="Damage" typeId="01c2-d16a-8788-e52b">2</characteristic>
-              </characteristics>
-            </profile>
-            <profile id="947b-4a7b-e307-00ca" name="Reaped Like Corn" hidden="false" typeId="7861-da01-01c0-88d9" typeName="Ability">
-              <characteristics>
-                <characteristic name="Ability" typeId="9bce-4deb-8b79-eaec">If the target unit has 5 or more models, you can re-roll failed hit rolls for the Cairn Wraith&apos;s Reaper Scythe.</characteristic>
-              </characteristics>
-            </profile>
-            <profile id="0a10-df18-395f-0a1f" name="Frightful Touch" hidden="false" typeId="7861-da01-01c0-88d9" typeName="Ability">
-              <characteristics>
-                <characteristic name="Ability" typeId="9bce-4deb-8b79-eaec">Each time you make a hit roll of 6+ for the Cairn Wraith&apos;s Reaper Scythe, that attack inflicts 2 mortal wounds instead of the normal damage (do not make a wound or save roll).</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <costs>
-            <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
-          </costs>
-        </selectionEntry>
-      </selectionEntries>
-      <costs>
-        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="120.0"/>
-      </costs>
-    </selectionEntry>
     <selectionEntry id="2554-5fb7-41bd-7459" name="Dire Wolves" publicationId="bda7-507d-2337-b03f" hidden="false" collective="false" import="true" type="unit">
       <modifiers>
-        <modifier type="remove" field="category" value="a42d-220e-6a88-7bf6">
-          <conditionGroups>
-            <conditionGroup type="or">
-              <conditions>
-                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="e3a6-45ca-4974-b489" type="instanceOf"/>
-                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4373-740f-1bf3-b0aa" type="instanceOf"/>
-                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="6cd6-b22e-bfcb-9589" type="instanceOf"/>
-              </conditions>
-            </conditionGroup>
-          </conditionGroups>
-        </modifier>
         <modifier type="increment" field="b0b4-6aec-82c2-02ae" value="135.0">
           <repeats>
             <repeat field="selections" scope="2554-5fb7-41bd-7459" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e20c-48d8-e5e3-1a36" repeats="1" roundUp="false"/>
@@ -3955,6 +3431,19 @@ Fifth Level - Nimbus of Darkness: This model can attempt to unbind one spell in 
           <conditions>
             <condition field="selections" scope="2554-5fb7-41bd-7459" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e20c-48d8-e5e3-1a36" type="greaterThan"/>
           </conditions>
+        </modifier>
+        <modifier type="remove" field="category" value="a42d-220e-6a88-7bf6">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="e3a6-45ca-4974-b489" type="instanceOf"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="6cd6-b22e-bfcb-9589" type="instanceOf"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="996a-613c-4006-25e3" type="instanceOf"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4373-740f-1bf3-b0aa" type="instanceOf"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="b543-cb16-0c79-fbc6" type="instanceOf"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
         </modifier>
       </modifiers>
       <profiles>
@@ -3995,69 +3484,29 @@ Fifth Level - Nimbus of Darkness: This model can attempt to unbind one spell in 
           <modifiers>
             <modifier type="increment" field="9947-c434-4232-dca5" value="1.0">
               <repeats>
-                <repeat field="selections" scope="2554-5fb7-41bd-7459" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
+                <repeat field="selections" scope="2554-5fb7-41bd-7459" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e20c-48d8-e5e3-1a36" repeats="1" roundUp="false"/>
               </repeats>
               <conditions>
-                <condition field="selections" scope="2554-5fb7-41bd-7459" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="model" type="greaterThan"/>
+                <condition field="selections" scope="2554-5fb7-41bd-7459" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e20c-48d8-e5e3-1a36" type="greaterThan"/>
               </conditions>
             </modifier>
             <modifier type="increment" field="426a-e568-7034-83af" value="1.0">
               <repeats>
-                <repeat field="selections" scope="2554-5fb7-41bd-7459" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
+                <repeat field="selections" scope="2554-5fb7-41bd-7459" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e20c-48d8-e5e3-1a36" repeats="1" roundUp="false"/>
               </repeats>
               <conditions>
-                <condition field="selections" scope="2554-5fb7-41bd-7459" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="model" type="greaterThan"/>
+                <condition field="selections" scope="2554-5fb7-41bd-7459" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e20c-48d8-e5e3-1a36" type="greaterThan"/>
               </conditions>
             </modifier>
           </modifiers>
           <constraints>
-            <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="9947-c434-4232-dca5" type="max"/>
-            <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="426a-e568-7034-83af" type="min"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="9947-c434-4232-dca5" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="426a-e568-7034-83af" type="min"/>
           </constraints>
           <profiles>
             <profile id="3cb4-ba73-5e24-df42" name="Doom Wolf" hidden="false" typeId="c23b-5a30-07e2-4706" typeName="Unit Options">
               <characteristics>
                 <characteristic name="Unit Option" typeId="5879-9a21-e9d2-539d">1 in every 10 models in this unit must be a Doom Wolf. Add 1 to the Attacks characteristic of that model&apos;s Rotting Fangs and Claws.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <costs>
-            <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="e627-7b44-e49f-8db5" name="BATTLELINE" hidden="false" collective="false" import="true" type="upgrade">
-          <modifiers>
-            <modifier type="set" field="hidden" value="true">
-              <conditionGroups>
-                <conditionGroup type="or">
-                  <conditions>
-                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="e3a6-45ca-4974-b489" type="instanceOf"/>
-                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="6cd6-b22e-bfcb-9589" type="instanceOf"/>
-                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4373-740f-1bf3-b0aa" type="instanceOf"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
-            </modifier>
-            <modifier type="set" field="019f-96f0-8b14-ed57" value="0.0">
-              <conditionGroups>
-                <conditionGroup type="or">
-                  <conditions>
-                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="e3a6-45ca-4974-b489" type="instanceOf"/>
-                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="6cd6-b22e-bfcb-9589" type="instanceOf"/>
-                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4373-740f-1bf3-b0aa" type="instanceOf"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
-            </modifier>
-          </modifiers>
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="22b1-46b1-f565-09d2" type="max"/>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="019f-96f0-8b14-ed57" type="min"/>
-          </constraints>
-          <profiles>
-            <profile id="c875-7ff5-8d5f-4227" name="BATTLELINE" hidden="false" typeId="77d9-94b6-d8f2-a150" typeName="BATTLELINE">
-              <characteristics>
-                <characteristic name="Condition" typeId="820b-20af-6fd8-5f48">This unit is battleline</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -4089,7 +3538,8 @@ Fifth Level - Nimbus of Darkness: This model can attempt to unbind one spell in 
         </selectionEntry>
       </selectionEntries>
       <entryLinks>
-        <entryLink id="ff24-9d8d-f583-1902" name="Unit Reinforcement" hidden="false" collective="false" import="true" targetId="b493-d9e6-82ca-5488" type="selectionEntry"/>
+        <entryLink id="5e68-ea45-1343-3e50" name="Unit Reinforcement" hidden="false" collective="false" import="true" targetId="b493-d9e6-82ca-5488" type="selectionEntry"/>
+        <entryLink id="f9fc-7453-ea75-e86c" name="BATTLELINE" hidden="false" collective="false" import="true" targetId="be1f-d384-9fe4-789d" type="selectionEntry"/>
       </entryLinks>
       <costs>
         <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="135.0"/>
@@ -4307,7 +3757,7 @@ Fifth Level - Nimbus of Darkness: This model can attempt to unbind one spell in 
     </selectionEntry>
     <selectionEntry id="47da-4a42-dcac-b0ae" name="Radukar the Wolf" hidden="false" collective="false" import="true" type="unit">
       <constraints>
-        <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="bd04-621f-3473-e265" type="max"/>
+        <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="7a6b-5f75-93b7-14af" type="max"/>
       </constraints>
       <profiles>
         <profile id="14c4-39db-ebb0-29b9" name="Radukar the Wolf" hidden="false" typeId="3956-f6dd-6c88-ae4b" typeName="Unit">
@@ -4349,7 +3799,7 @@ Fifth Level - Nimbus of Darkness: This model can attempt to unbind one spell in 
         <categoryLink id="810b-5c39-814f-1e66" name="Vyrkos Dynasty" hidden="false" targetId="9ee9-4f7f-71b0-b6d3" primary="false"/>
         <categoryLink id="868b-076f-76f6-e7d9" name="Wizard" hidden="false" targetId="7ee2-0d81-544f-5d7e" primary="false"/>
         <categoryLink id="03e8-aa4d-2d90-97b1" name="Radukar the Wolf" hidden="false" targetId="4141-a6d6-8364-429b" primary="false"/>
-        <categoryLink id="4c8f-21c7-2917-2d4e" name="New CategoryLink" hidden="false" targetId="93cb-21d9-e1d5-6161" primary="true"/>
+        <categoryLink id="58c2-bda1-d1d9-7d15" name="New CategoryLink" hidden="false" targetId="93cb-21d9-e1d5-6161" primary="true"/>
       </categoryLinks>
       <selectionEntries>
         <selectionEntry id="721b-b9db-8c54-d615" name="Vyrkos Barrow-blade" hidden="false" collective="false" import="true" type="upgrade">
@@ -4385,6 +3835,16 @@ Fifth Level - Nimbus of Darkness: This model can attempt to unbind one spell in 
       </costs>
     </selectionEntry>
     <selectionEntry id="374f-b4b2-4eb2-dad5" name="Kosargi Nightguard" hidden="false" collective="false" import="true" type="unit">
+      <modifiers>
+        <modifier type="increment" field="b0b4-6aec-82c2-02ae" value="95.0">
+          <repeats>
+            <repeat field="selections" scope="374f-b4b2-4eb2-dad5" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e20c-48d8-e5e3-1a36" repeats="1" roundUp="false"/>
+          </repeats>
+          <conditions>
+            <condition field="selections" scope="374f-b4b2-4eb2-dad5" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e20c-48d8-e5e3-1a36" type="greaterThan"/>
+          </conditions>
+        </modifier>
+      </modifiers>
       <profiles>
         <profile id="8f3a-5391-511d-79d8" name="Kosargi Nightguard" hidden="false" typeId="3956-f6dd-6c88-ae4b" typeName="Unit">
           <characteristics>
@@ -4412,6 +3872,7 @@ Fifth Level - Nimbus of Darkness: This model can attempt to unbind one spell in 
         <categoryLink id="1f4b-2f51-ac0f-c160" name="DEADWALKERS" hidden="false" targetId="c39a-1807-5202-de32" primary="false"/>
         <categoryLink id="4293-73ca-8105-19e0" name="SOULBLIGHT GRAVELORDS" hidden="false" targetId="6811-fd64-f9fe-1027" primary="false"/>
         <categoryLink id="fa24-56c3-0a18-1cb6" name="Vyrkos Dynasty" hidden="false" targetId="9ee9-4f7f-71b0-b6d3" primary="false"/>
+        <categoryLink id="8d55-52eb-b14a-4bbd" name="New CategoryLink" hidden="false" targetId="6230-ed60-e374-add4" primary="true"/>
       </categoryLinks>
       <selectionEntries>
         <selectionEntry id="c35c-8753-61a0-b60e" name="2x Kosargi Nightguard" hidden="false" collective="false" import="true" type="model">
@@ -4446,8 +3907,11 @@ Fifth Level - Nimbus of Darkness: This model can attempt to unbind one spell in 
           </costs>
         </selectionEntry>
       </selectionEntries>
+      <entryLinks>
+        <entryLink id="52a9-cf82-bf5f-130c" name="Unit Reinforcement" hidden="false" collective="false" import="true" targetId="b493-d9e6-82ca-5488" type="selectionEntry"/>
+      </entryLinks>
       <costs>
-        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
+        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="95.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="2cc6-6fea-2a3a-8502" name="Vyrkos Blood-born" hidden="false" collective="false" import="true" type="unit">
@@ -4482,6 +3946,7 @@ Fifth Level - Nimbus of Darkness: This model can attempt to unbind one spell in 
         <categoryLink id="3647-5ac7-3659-5666" name="Vampire" hidden="false" targetId="c246-93a6-6af1-ff6b" primary="false"/>
         <categoryLink id="3612-70d9-cdc0-0595" name="Vyrkos Dynasty" hidden="false" targetId="9ee9-4f7f-71b0-b6d3" primary="false"/>
         <categoryLink id="f9be-ea89-77e9-3bc4" name="SOULBLIGHT GRAVELORDS" hidden="false" targetId="6811-fd64-f9fe-1027" primary="false"/>
+        <categoryLink id="3577-c818-5157-3045" name="New CategoryLink" hidden="false" targetId="6230-ed60-e374-add4" primary="true"/>
       </categoryLinks>
       <selectionEntries>
         <selectionEntry id="5d11-072e-1274-646e" name="3x Vyrkos Blood-born" hidden="false" collective="false" import="true" type="model">
@@ -4522,7 +3987,7 @@ Fifth Level - Nimbus of Darkness: This model can attempt to unbind one spell in 
         </selectionEntry>
       </selectionEntries>
       <entryLinks>
-        <entryLink id="8d4a-339d-6198-23f3" name="Unit Reinforcement" hidden="false" collective="false" import="true" targetId="b493-d9e6-82ca-5488" type="selectionEntry"/>
+        <entryLink id="11c2-94d8-69ea-0c17" name="Unit Reinforcement" hidden="false" collective="false" import="true" targetId="b493-d9e6-82ca-5488" type="selectionEntry"/>
       </entryLinks>
       <costs>
         <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="125.0"/>
@@ -4555,7 +4020,7 @@ Fifth Level - Nimbus of Darkness: This model can attempt to unbind one spell in 
         <categoryLink id="565d-90af-5ec1-4a1c" name="Vampire" hidden="false" targetId="c246-93a6-6af1-ff6b" primary="false"/>
         <categoryLink id="016e-6a3e-6bc4-319e" name="SOULBLIGHT GRAVELORDS" hidden="false" targetId="6811-fd64-f9fe-1027" primary="false"/>
         <categoryLink id="f60f-da90-d51e-7532" name="Vyrkos Dynasty" hidden="false" targetId="9ee9-4f7f-71b0-b6d3" primary="false"/>
-        <categoryLink id="a464-2cd2-73e0-8110" name="New CategoryLink" hidden="false" targetId="6230-ed60-e374-add4" primary="true"/>
+        <categoryLink id="8f52-3df2-3d36-457c" name="New CategoryLink" hidden="false" targetId="6230-ed60-e374-add4" primary="true"/>
       </categoryLinks>
       <selectionEntries>
         <selectionEntry id="1d2a-99eb-f2a0-dada" name="Gaping Maw" hidden="false" collective="false" import="true" type="upgrade">
@@ -4609,7 +4074,7 @@ Fifth Level - Nimbus of Darkness: This model can attempt to unbind one spell in 
     </selectionEntry>
     <selectionEntry id="0a5b-cee3-575e-a4da" name="Torgillius the Chamberlain" hidden="false" collective="false" import="true" type="unit">
       <constraints>
-        <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="78e9-83e1-505c-4019" type="max"/>
+        <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="ed9d-5517-bbb5-82bb" type="max"/>
       </constraints>
       <profiles>
         <profile id="34fc-b1f0-b99a-fd03" name="Torgillius the Chamberlain" hidden="false" typeId="3956-f6dd-6c88-ae4b" typeName="Unit">
@@ -4655,7 +4120,7 @@ Fifth Level - Nimbus of Darkness: This model can attempt to unbind one spell in 
         <categoryLink id="c21c-c93e-e626-d046" name="Wizard" hidden="false" targetId="7ee2-0d81-544f-5d7e" primary="false"/>
         <categoryLink id="6257-14ff-4cab-c2cd" name="Vyrkos Dynasty" hidden="false" targetId="9ee9-4f7f-71b0-b6d3" primary="false"/>
         <categoryLink id="16a3-c4e8-5d62-8c41" name="SOULBLIGHT GRAVELORDS" hidden="false" targetId="6811-fd64-f9fe-1027" primary="false"/>
-        <categoryLink id="670d-f2ea-8a22-f64a" name="New CategoryLink" hidden="false" targetId="93cb-21d9-e1d5-6161" primary="true"/>
+        <categoryLink id="b7a3-0b40-3eb8-ea9a" name="New CategoryLink" hidden="false" targetId="93cb-21d9-e1d5-6161" primary="true"/>
       </categoryLinks>
       <selectionEntries>
         <selectionEntry id="6a81-30fb-2e8a-c4e9" name="Companion" hidden="false" collective="false" import="true" type="upgrade">
@@ -4705,7 +4170,7 @@ Fifth Level - Nimbus of Darkness: This model can attempt to unbind one spell in 
     </selectionEntry>
     <selectionEntry id="70cb-15ea-1cc4-c304" name="Gorslav the Gravekeeper" hidden="false" collective="false" import="true" type="unit">
       <constraints>
-        <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="3143-64da-d640-b699" type="max"/>
+        <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="7edf-2b23-bc48-14a0" type="max"/>
       </constraints>
       <profiles>
         <profile id="498a-fd7e-82e0-2029" name="Gorslav the Gravekeeper" hidden="false" typeId="3956-f6dd-6c88-ae4b" typeName="Unit">
@@ -4735,7 +4200,7 @@ Fifth Level - Nimbus of Darkness: This model can attempt to unbind one spell in 
         <categoryLink id="5ed6-49d6-79f7-8787" name="NAMED" hidden="false" targetId="543e-1cc9-6d38-f8b3" primary="false"/>
         <categoryLink id="eed7-9102-2ab8-147f" name="SOULBLIGHT GRAVELORDS" hidden="false" targetId="6811-fd64-f9fe-1027" primary="false"/>
         <categoryLink id="0e31-afc9-125d-9601" name="Vyrkos Dynasty" hidden="false" targetId="9ee9-4f7f-71b0-b6d3" primary="false"/>
-        <categoryLink id="614b-dc33-7d43-4307" name="New CategoryLink" hidden="false" targetId="93cb-21d9-e1d5-6161" primary="true"/>
+        <categoryLink id="3b6a-5255-074f-b132" name="New CategoryLink" hidden="false" targetId="93cb-21d9-e1d5-6161" primary="true"/>
       </categoryLinks>
       <selectionEntries>
         <selectionEntry id="af4a-0d15-408b-c534" name="Gravekeeper&apos;s Spade" hidden="false" collective="false" import="true" type="upgrade">
@@ -4767,7 +4232,7 @@ Fifth Level - Nimbus of Darkness: This model can attempt to unbind one spell in 
     </selectionEntry>
     <selectionEntry id="dddc-7af2-f709-8bc0" name="Watch Captain Halgrim" hidden="false" collective="false" import="true" type="unit">
       <constraints>
-        <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="81c5-6d28-a5ce-42a7" type="max"/>
+        <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="37ef-1e47-62e5-10cc" type="max"/>
       </constraints>
       <profiles>
         <profile id="784c-4310-219f-076b" name="Watch Captain Halgrim" hidden="false" typeId="3956-f6dd-6c88-ae4b" typeName="Unit">
@@ -4792,7 +4257,7 @@ Fifth Level - Nimbus of Darkness: This model can attempt to unbind one spell in 
         <categoryLink id="5727-b3fa-06c0-b4c7" name="Watch Captain Halgrim" hidden="false" targetId="4458-531d-00cb-d246" primary="false"/>
         <categoryLink id="dc66-e213-1929-3fd4" name="Vyrkos Dynasty" hidden="false" targetId="9ee9-4f7f-71b0-b6d3" primary="false"/>
         <categoryLink id="bb7d-c77e-6bb9-34d6" name="SOULBLIGHT GRAVELORDS" hidden="false" targetId="6811-fd64-f9fe-1027" primary="false"/>
-        <categoryLink id="54f6-3a54-b921-d45a" name="New CategoryLink" hidden="false" targetId="93cb-21d9-e1d5-6161" primary="true"/>
+        <categoryLink id="b655-1ac9-0d85-aa1e" name="New CategoryLink" hidden="false" targetId="93cb-21d9-e1d5-6161" primary="true"/>
       </categoryLinks>
       <selectionEntries>
         <selectionEntry id="522c-885a-3c4f-6f11" name="Cursed Halberd" hidden="false" collective="false" import="true" type="upgrade">
