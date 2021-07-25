@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="f8f4-998c-1e43-381a" name="Order - Seraphon - Data" revision="6" battleScribeVersion="2.03" authorName="Thulram" library="true" gameSystemId="e832-3291-06be-cab1" gameSystemRevision="6" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="f8f4-998c-1e43-381a" name="Order - Seraphon - Data" revision="7" battleScribeVersion="2.03" authorName="Thulram" library="true" gameSystemId="e832-3291-06be-cab1" gameSystemRevision="6" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <profileTypes>
     <profileType id="71c0-db88-72dc-b20c" name="Celestial Conjuration Table">
       <characteristicTypes>
@@ -117,7 +117,6 @@
         <profile id="7040-a037-f1f1-19ff" name="Slann Starmaster" hidden="false" typeId="a62b-2245-5c24-f8bc" typeName="Magic">
           <characteristics>
             <characteristic name="Cast/Unbind" typeId="9a5b-68ee-bc46-6a9d">3/3</characteristic>
-            <characteristic name="Spells Known" typeId="25bd-2ad0-e570-e880">Arcane Bolt, Mystic Shield, Comet&apos;s Call</characteristic>
           </characteristics>
         </profile>
         <profile id="cb93-78c2-de7d-bada" name="Comet&apos;s Call" hidden="false" typeId="13da-11a8-b7d1-77a7" typeName="Spell">
@@ -221,7 +220,6 @@ Designer’s Note: If Lord Kroak suffers 18 or more wounds or mortal wounds befo
         <profile id="aece-fd68-2cbb-a466" name="Lord Kroak" hidden="false" typeId="a62b-2245-5c24-f8bc" typeName="Magic">
           <characteristics>
             <characteristic name="Cast/Unbind" typeId="9a5b-68ee-bc46-6a9d">4/4</characteristic>
-            <characteristic name="Spells Known" typeId="25bd-2ad0-e570-e880">Arcane Bolt, Mystic Shield, Celestial Deliverance, Comet&apos;s Call, all spells from Lore of Celestial Domination</characteristic>
           </characteristics>
         </profile>
         <profile id="3eed-dbf1-6ebe-f1a6" name="Celestial Deliverance" hidden="false" typeId="13da-11a8-b7d1-77a7" typeName="Spell">
@@ -927,46 +925,6 @@ Each time this spell is successfully cast, pick up to 3 different enemy units wi
             <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="a6e1-9f2b-2d45-4674" name="BATTLELINE" hidden="false" collective="false" import="true" type="upgrade">
-          <modifiers>
-            <modifier type="set" field="hidden" value="true">
-              <conditionGroups>
-                <conditionGroup type="or">
-                  <conditions>
-                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="e3a6-45ca-4974-b489" type="instanceOf"/>
-                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4373-740f-1bf3-b0aa" type="instanceOf"/>
-                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="6cd6-b22e-bfcb-9589" type="instanceOf"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
-            </modifier>
-            <modifier type="set" field="501c-7203-6aee-88c3" value="0.0">
-              <conditionGroups>
-                <conditionGroup type="or">
-                  <conditions>
-                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="e3a6-45ca-4974-b489" type="instanceOf"/>
-                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4373-740f-1bf3-b0aa" type="instanceOf"/>
-                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="6cd6-b22e-bfcb-9589" type="instanceOf"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
-            </modifier>
-          </modifiers>
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="6622-09e8-cd73-2330" type="max"/>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="501c-7203-6aee-88c3" type="min"/>
-          </constraints>
-          <profiles>
-            <profile id="14e4-0e24-f1be-09b7" name="BATTLELINE" hidden="false" typeId="77d9-94b6-d8f2-a150" typeName="BATTLELINE">
-              <characteristics>
-                <characteristic name="Condition" typeId="820b-20af-6fd8-5f48">This unit is Battleline</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <costs>
-            <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
-          </costs>
-        </selectionEntry>
       </selectionEntries>
       <selectionEntryGroups>
         <selectionEntryGroup id="9d17-42dd-4371-c163" name="Unit Options" hidden="false" collective="false" import="true">
@@ -975,15 +933,15 @@ Each time this spell is successfully cast, pick up to 3 different enemy units wi
               <modifiers>
                 <modifier type="increment" field="6c6c-0372-b95a-5c4d" value="1.0">
                   <repeats>
-                    <repeat field="selections" scope="f10e-c006-c7e8-f5c1" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
+                    <repeat field="selections" scope="f10e-c006-c7e8-f5c1" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e20c-48d8-e5e3-1a36" repeats="1" roundUp="false"/>
                   </repeats>
                   <conditions>
-                    <condition field="selections" scope="f10e-c006-c7e8-f5c1" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" type="greaterThan"/>
+                    <condition field="selections" scope="f10e-c006-c7e8-f5c1" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e20c-48d8-e5e3-1a36" type="greaterThan"/>
                   </conditions>
                 </modifier>
               </modifiers>
               <constraints>
-                <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="6c6c-0372-b95a-5c4d" type="max"/>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="6c6c-0372-b95a-5c4d" type="max"/>
               </constraints>
               <profiles>
                 <profile id="ec50-0587-2493-dd32" name="Stardrake Icon Bearer" hidden="false" typeId="c23b-5a30-07e2-4706" typeName="Unit Options">
@@ -1000,15 +958,15 @@ Each time this spell is successfully cast, pick up to 3 different enemy units wi
               <modifiers>
                 <modifier type="increment" field="13d0-7c8e-5208-5753" value="1.0">
                   <repeats>
-                    <repeat field="selections" scope="f10e-c006-c7e8-f5c1" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
+                    <repeat field="selections" scope="f10e-c006-c7e8-f5c1" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e20c-48d8-e5e3-1a36" repeats="1" roundUp="false"/>
                   </repeats>
                   <conditions>
-                    <condition field="selections" scope="f10e-c006-c7e8-f5c1" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" type="greaterThan"/>
+                    <condition field="selections" scope="f10e-c006-c7e8-f5c1" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e20c-48d8-e5e3-1a36" type="greaterThan"/>
                   </conditions>
                 </modifier>
               </modifiers>
               <constraints>
-                <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="13d0-7c8e-5208-5753" type="max"/>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="13d0-7c8e-5208-5753" type="max"/>
               </constraints>
               <profiles>
                 <profile id="6ee5-a66a-dcbe-d287" name="Wardrummer" hidden="false" typeId="c23b-5a30-07e2-4706" typeName="Unit Options">
@@ -1026,6 +984,7 @@ Each time this spell is successfully cast, pick up to 3 different enemy units wi
       </selectionEntryGroups>
       <entryLinks>
         <entryLink id="6b87-7a2c-c4a7-fc07" name="Unit Reinforcement" hidden="false" collective="false" import="true" targetId="b493-d9e6-82ca-5488" type="selectionEntry"/>
+        <entryLink id="da6f-114b-fd66-7958" name="BATTLELINE" hidden="false" collective="false" import="true" targetId="be1f-d384-9fe4-789d" type="selectionEntry"/>
       </entryLinks>
       <costs>
         <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="115.0"/>
@@ -1443,46 +1402,6 @@ Each time this spell is successfully cast, pick up to 3 different enemy units wi
             <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="59b9-45ca-33e5-4bc8" name="BATTLELINE" hidden="false" collective="false" import="true" type="upgrade">
-          <modifiers>
-            <modifier type="set" field="hidden" value="true">
-              <conditionGroups>
-                <conditionGroup type="or">
-                  <conditions>
-                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="e3a6-45ca-4974-b489" type="instanceOf"/>
-                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4373-740f-1bf3-b0aa" type="instanceOf"/>
-                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="6cd6-b22e-bfcb-9589" type="instanceOf"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
-            </modifier>
-            <modifier type="set" field="b296-8ddc-3ca1-1f9b" value="0.0">
-              <conditionGroups>
-                <conditionGroup type="or">
-                  <conditions>
-                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="e3a6-45ca-4974-b489" type="instanceOf"/>
-                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4373-740f-1bf3-b0aa" type="instanceOf"/>
-                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="6cd6-b22e-bfcb-9589" type="instanceOf"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
-            </modifier>
-          </modifiers>
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="920b-2d0f-4749-25de" type="max"/>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="b296-8ddc-3ca1-1f9b" type="min"/>
-          </constraints>
-          <profiles>
-            <profile id="7e09-ec91-7d1b-a3de" name="BATTLELINE" hidden="false" typeId="77d9-94b6-d8f2-a150" typeName="BATTLELINE">
-              <characteristics>
-                <characteristic name="Condition" typeId="820b-20af-6fd8-5f48">This unit is Battleline</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <costs>
-            <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
-          </costs>
-        </selectionEntry>
         <selectionEntry id="e0eb-24d1-00ef-afc3" name="10 Saurus Warriors" hidden="false" collective="false" import="true" type="model">
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="bfc7-537e-172d-2239" type="max"/>
@@ -1544,15 +1463,15 @@ Each time this spell is successfully cast, pick up to 3 different enemy units wi
               <modifiers>
                 <modifier type="increment" field="04ce-c983-1cd5-b602" value="2.0">
                   <repeats>
-                    <repeat field="selections" scope="24db-696e-aa0f-71fd" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
+                    <repeat field="selections" scope="24db-696e-aa0f-71fd" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e20c-48d8-e5e3-1a36" repeats="1" roundUp="false"/>
                   </repeats>
                   <conditions>
-                    <condition field="selections" scope="24db-696e-aa0f-71fd" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" type="greaterThan"/>
+                    <condition field="selections" scope="24db-696e-aa0f-71fd" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e20c-48d8-e5e3-1a36" type="greaterThan"/>
                   </conditions>
                 </modifier>
               </modifiers>
               <constraints>
-                <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="04ce-c983-1cd5-b602" type="max"/>
+                <constraint field="selections" scope="parent" value="2.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="04ce-c983-1cd5-b602" type="max"/>
               </constraints>
               <profiles>
                 <profile id="b668-9057-143b-0a37" name="Stardrake Icon Bearer" hidden="false" typeId="c23b-5a30-07e2-4706" typeName="Unit Options">
@@ -1569,15 +1488,15 @@ Each time this spell is successfully cast, pick up to 3 different enemy units wi
               <modifiers>
                 <modifier type="increment" field="d167-69c9-2038-0342" value="2.0">
                   <repeats>
-                    <repeat field="selections" scope="24db-696e-aa0f-71fd" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
+                    <repeat field="selections" scope="24db-696e-aa0f-71fd" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e20c-48d8-e5e3-1a36" repeats="1" roundUp="false"/>
                   </repeats>
                   <conditions>
-                    <condition field="selections" scope="24db-696e-aa0f-71fd" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" type="greaterThan"/>
+                    <condition field="selections" scope="24db-696e-aa0f-71fd" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e20c-48d8-e5e3-1a36" type="greaterThan"/>
                   </conditions>
                 </modifier>
               </modifiers>
               <constraints>
-                <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d167-69c9-2038-0342" type="max"/>
+                <constraint field="selections" scope="parent" value="2.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d167-69c9-2038-0342" type="max"/>
               </constraints>
               <profiles>
                 <profile id="d567-7cb6-9b77-da87" name="Wardrummer" hidden="false" typeId="c23b-5a30-07e2-4706" typeName="Unit Options">
@@ -1595,6 +1514,7 @@ Each time this spell is successfully cast, pick up to 3 different enemy units wi
       </selectionEntryGroups>
       <entryLinks>
         <entryLink id="e492-3a23-2002-6719" name="Unit Reinforcement" hidden="false" collective="false" import="true" targetId="b493-d9e6-82ca-5488" type="selectionEntry"/>
+        <entryLink id="5455-eca3-b764-4073" name="BATTLELINE" hidden="false" collective="false" import="true" targetId="be1f-d384-9fe4-789d" type="selectionEntry"/>
       </entryLinks>
       <costs>
         <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="105.0"/>
@@ -1798,46 +1718,6 @@ Each time this spell is successfully cast, pick up to 3 different enemy units wi
             <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="a845-9782-2b58-3749" name="BATTLELINE" hidden="false" collective="false" import="true" type="upgrade">
-          <modifiers>
-            <modifier type="set" field="hidden" value="true">
-              <conditionGroups>
-                <conditionGroup type="or">
-                  <conditions>
-                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="e3a6-45ca-4974-b489" type="instanceOf"/>
-                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4373-740f-1bf3-b0aa" type="instanceOf"/>
-                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="6cd6-b22e-bfcb-9589" type="instanceOf"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
-            </modifier>
-            <modifier type="set" field="d823-1228-affb-c05b" value="0.0">
-              <conditionGroups>
-                <conditionGroup type="or">
-                  <conditions>
-                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="e3a6-45ca-4974-b489" type="instanceOf"/>
-                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4373-740f-1bf3-b0aa" type="instanceOf"/>
-                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="6cd6-b22e-bfcb-9589" type="instanceOf"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
-            </modifier>
-          </modifiers>
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="a947-3832-4100-fb64" type="max"/>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d823-1228-affb-c05b" type="min"/>
-          </constraints>
-          <profiles>
-            <profile id="ded7-f130-fd48-281e" name="BATTLELINE" hidden="false" typeId="77d9-94b6-d8f2-a150" typeName="BATTLELINE">
-              <characteristics>
-                <characteristic name="Condition" typeId="820b-20af-6fd8-5f48">This unit is Battleline</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <costs>
-            <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
-          </costs>
-        </selectionEntry>
       </selectionEntries>
       <selectionEntryGroups>
         <selectionEntryGroup id="c8e3-5ced-ca68-9198" name="Unit Options" hidden="false" collective="false" import="true">
@@ -1846,15 +1726,15 @@ Each time this spell is successfully cast, pick up to 3 different enemy units wi
               <modifiers>
                 <modifier type="increment" field="708d-8965-8fc2-b9b8" value="1.0">
                   <repeats>
-                    <repeat field="selections" scope="e5f1-a103-0056-8bb2" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
+                    <repeat field="selections" scope="e5f1-a103-0056-8bb2" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e20c-48d8-e5e3-1a36" repeats="1" roundUp="false"/>
                   </repeats>
                   <conditions>
-                    <condition field="selections" scope="e5f1-a103-0056-8bb2" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" type="greaterThan"/>
+                    <condition field="selections" scope="e5f1-a103-0056-8bb2" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e20c-48d8-e5e3-1a36" type="greaterThan"/>
                   </conditions>
                 </modifier>
               </modifiers>
               <constraints>
-                <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="708d-8965-8fc2-b9b8" type="max"/>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="708d-8965-8fc2-b9b8" type="max"/>
               </constraints>
               <profiles>
                 <profile id="f696-f20e-861a-54bf" name="Stardrake Icon Bearer" hidden="false" typeId="c23b-5a30-07e2-4706" typeName="Unit Options">
@@ -1871,15 +1751,15 @@ Each time this spell is successfully cast, pick up to 3 different enemy units wi
               <modifiers>
                 <modifier type="increment" field="671e-44bd-347e-256c" value="1.0">
                   <repeats>
-                    <repeat field="selections" scope="e5f1-a103-0056-8bb2" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
+                    <repeat field="selections" scope="e5f1-a103-0056-8bb2" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e20c-48d8-e5e3-1a36" repeats="1" roundUp="false"/>
                   </repeats>
                   <conditions>
-                    <condition field="selections" scope="e5f1-a103-0056-8bb2" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" type="greaterThan"/>
+                    <condition field="selections" scope="e5f1-a103-0056-8bb2" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e20c-48d8-e5e3-1a36" type="greaterThan"/>
                   </conditions>
                 </modifier>
               </modifiers>
               <constraints>
-                <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="671e-44bd-347e-256c" type="max"/>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="671e-44bd-347e-256c" type="max"/>
               </constraints>
               <profiles>
                 <profile id="5305-6ad3-e252-dafd" name="Wardrummer" hidden="false" typeId="c23b-5a30-07e2-4706" typeName="Unit Options">
@@ -1946,6 +1826,7 @@ Each time this spell is successfully cast, pick up to 3 different enemy units wi
       </selectionEntryGroups>
       <entryLinks>
         <entryLink id="a29b-afd8-c578-2e93" name="Unit Reinforcement" hidden="false" collective="false" import="true" targetId="b493-d9e6-82ca-5488" type="selectionEntry"/>
+        <entryLink id="3f5f-1ee5-b6ea-c2db" name="BATTLELINE" hidden="false" collective="false" import="true" targetId="be1f-d384-9fe4-789d" type="selectionEntry"/>
       </entryLinks>
       <costs>
         <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="110.0"/>
@@ -1974,7 +1855,6 @@ Each time this spell is successfully cast, pick up to 3 different enemy units wi
         <profile id="cb1e-9af1-38ab-af84" name="Skink Starseer" hidden="false" typeId="a62b-2245-5c24-f8bc" typeName="Magic">
           <characteristics>
             <characteristic name="Cast/Unbind" typeId="9a5b-68ee-bc46-6a9d">1/1</characteristic>
-            <characteristic name="Spells Known" typeId="25bd-2ad0-e570-e880">Arcane Bolt, Mystic Shield, Control Fate</characteristic>
           </characteristics>
         </profile>
         <profile id="adbe-cc21-1a1e-02e0" name="Control Fate" hidden="false" typeId="13da-11a8-b7d1-77a7" typeName="Spell">
@@ -2070,7 +1950,6 @@ Each time this spell is successfully cast, pick up to 3 different enemy units wi
         <profile id="a9b6-ab4e-6c2d-bc18" name="Skink Starpriest" hidden="false" typeId="a62b-2245-5c24-f8bc" typeName="Magic">
           <characteristics>
             <characteristic name="Cast/Unbind" typeId="9a5b-68ee-bc46-6a9d">1/1</characteristic>
-            <characteristic name="Spells Known" typeId="25bd-2ad0-e570-e880">Arcane Bolt, Mystic Shield, Blazing Starlight</characteristic>
           </characteristics>
         </profile>
         <profile id="5c3b-b506-2a62-e4e6" name="Blazing Starlight" hidden="false" typeId="13da-11a8-b7d1-77a7" typeName="Spell">
@@ -2205,7 +2084,6 @@ Each time this spell is successfully cast, pick up to 3 different enemy units wi
         <profile id="8fa1-eacc-43f1-0cac" name="Skink Oracle on Troglodon" hidden="false" typeId="a62b-2245-5c24-f8bc" typeName="Magic">
           <characteristics>
             <characteristic name="Cast/Unbind" typeId="9a5b-68ee-bc46-6a9d">1/1</characteristic>
-            <characteristic name="Spells Known" typeId="25bd-2ad0-e570-e880">Arcane Bolt, Mystic Shield, Comet&apos;s Call</characteristic>
           </characteristics>
         </profile>
         <profile id="c2db-8aec-91ca-8587" name="Comet&apos;s Call" hidden="false" typeId="13da-11a8-b7d1-77a7" typeName="Spell">
@@ -2494,46 +2372,6 @@ Each time this spell is successfully cast, pick up to 3 different enemy units wi
             <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="030c-096d-5397-e7e7" name="BATTLELINE" hidden="false" collective="false" import="true" type="upgrade">
-          <modifiers>
-            <modifier type="set" field="hidden" value="true">
-              <conditionGroups>
-                <conditionGroup type="or">
-                  <conditions>
-                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="e3a6-45ca-4974-b489" type="instanceOf"/>
-                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4373-740f-1bf3-b0aa" type="instanceOf"/>
-                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="6cd6-b22e-bfcb-9589" type="instanceOf"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
-            </modifier>
-            <modifier type="set" field="ea78-d961-6376-6187" value="0.0">
-              <conditionGroups>
-                <conditionGroup type="or">
-                  <conditions>
-                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="e3a6-45ca-4974-b489" type="instanceOf"/>
-                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4373-740f-1bf3-b0aa" type="instanceOf"/>
-                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="6cd6-b22e-bfcb-9589" type="instanceOf"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
-            </modifier>
-          </modifiers>
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="1e24-2a2d-9a19-bd67" type="max"/>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="ea78-d961-6376-6187" type="min"/>
-          </constraints>
-          <profiles>
-            <profile id="b856-0b26-4b5a-70e0" name="BATTLELINE" hidden="false" typeId="77d9-94b6-d8f2-a150" typeName="BATTLELINE">
-              <characteristics>
-                <characteristic name="Condition" typeId="820b-20af-6fd8-5f48">This unit is Battleline</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <costs>
-            <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
-          </costs>
-        </selectionEntry>
       </selectionEntries>
       <selectionEntryGroups>
         <selectionEntryGroup id="f243-60be-5f90-9dc1" name="Weapon Option" hidden="false" collective="false" import="true" defaultSelectionEntryId="17ee-0db1-14ba-8759">
@@ -2667,6 +2505,7 @@ Each time this spell is successfully cast, pick up to 3 different enemy units wi
       </selectionEntryGroups>
       <entryLinks>
         <entryLink id="a9f3-add2-fce1-e876" name="Unit Reinforcement" hidden="false" collective="false" import="true" targetId="b493-d9e6-82ca-5488" type="selectionEntry"/>
+        <entryLink id="a442-447b-6595-21e2" name="BATTLELINE" hidden="false" collective="false" import="true" targetId="be1f-d384-9fe4-789d" type="selectionEntry"/>
       </entryLinks>
       <costs>
         <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="75.0"/>
@@ -2724,7 +2563,7 @@ Any reserve units that are in hiding and not on the battlefield at the start of 
             <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="e879-ea23-3156-1802" name="Celestite Dagger" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="e879-ea23-3156-1802" name="Dartpipe &amp; Celestite Dagger" hidden="false" collective="false" import="true" type="upgrade">
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="7f1f-f24d-d692-4224" type="max"/>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="4f06-f7dd-986d-58dd" type="min"/>
@@ -2741,18 +2580,7 @@ Any reserve units that are in hiding and not on the battlefield at the start of 
                 <characteristic name="Damage" typeId="01c2-d16a-8788-e52b">1</characteristic>
               </characteristics>
             </profile>
-          </profiles>
-          <costs>
-            <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="a17c-3b8e-c1cb-f3fc" name="Dartpipe" hidden="false" collective="false" import="true" type="upgrade">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="10e2-a461-76d5-52eb" type="max"/>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="c7cd-c6dc-1a3b-4e72" type="min"/>
-          </constraints>
-          <profiles>
-            <profile id="be3e-f829-df8a-c166" name="Dartpipe" hidden="false" typeId="2905-f6bd-06e5-6642" typeName="Weapon">
+            <profile id="2fae-5cf7-5731-719d" name="Dartpipe" hidden="false" typeId="2905-f6bd-06e5-6642" typeName="Weapon">
               <characteristics>
                 <characteristic name="Type" typeId="1a08-195b-76fd-2c2b">Missile</characteristic>
                 <characteristic name="Range" typeId="1406-f935-3f8e-b27f">16&quot;</characteristic>
@@ -2763,7 +2591,7 @@ Any reserve units that are in hiding and not on the battlefield at the start of 
                 <characteristic name="Damage" typeId="01c2-d16a-8788-e52b">1</characteristic>
               </characteristics>
             </profile>
-            <profile id="211d-8f16-841d-55d2" name="Star-venom" hidden="false" typeId="7861-da01-01c0-88d9" typeName="Ability">
+            <profile id="c949-4a4f-02b5-2f62" name="Star-venom" hidden="false" typeId="7861-da01-01c0-88d9" typeName="Ability">
               <characteristics>
                 <characteristic name="Ability" typeId="9bce-4deb-8b79-eaec">If the unmodified hit roll for an attack made with a Dartpipe is 6, that attack inflicts 1 mortal wound on the target and the attack sequence ends (do not make a wound or save roll).</characteristic>
               </characteristics>
@@ -3147,15 +2975,15 @@ Any reserve units that are in hiding and not on the battlefield at the start of 
               <modifiers>
                 <modifier type="increment" field="04ef-4834-bd80-e101" value="1.0">
                   <repeats>
-                    <repeat field="selections" scope="650a-a6e5-101d-fbac" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
+                    <repeat field="selections" scope="650a-a6e5-101d-fbac" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e20c-48d8-e5e3-1a36" repeats="1" roundUp="false"/>
                   </repeats>
                   <conditions>
-                    <condition field="selections" scope="650a-a6e5-101d-fbac" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" type="greaterThan"/>
+                    <condition field="selections" scope="650a-a6e5-101d-fbac" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e20c-48d8-e5e3-1a36" type="greaterThan"/>
                   </conditions>
                 </modifier>
               </modifiers>
               <constraints>
-                <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="04ef-4834-bd80-e101" type="max"/>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="04ef-4834-bd80-e101" type="max"/>
               </constraints>
               <profiles>
                 <profile id="15ec-6d27-1e19-f6b9" name="Moon Hammer" hidden="false" typeId="2905-f6bd-06e5-6642" typeName="Weapon">
@@ -4069,47 +3897,18 @@ Designer’s Note: Blot Toads are not units; they are markers that are used to k
             <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="4dde-8d71-9aad-940e" name="CONDITIONAL BATTLELINE" hidden="false" collective="false" import="true" type="upgrade">
-          <modifiers>
-            <modifier type="set" field="hidden" value="true">
-              <conditionGroups>
-                <conditionGroup type="or">
-                  <conditions>
-                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="e3a6-45ca-4974-b489" type="instanceOf"/>
-                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4373-740f-1bf3-b0aa" type="instanceOf"/>
-                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="6cd6-b22e-bfcb-9589" type="instanceOf"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
-            </modifier>
-            <modifier type="set" field="ce68-5088-8372-0bab" value="0.0">
-              <conditionGroups>
-                <conditionGroup type="or">
-                  <conditions>
-                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="e3a6-45ca-4974-b489" type="instanceOf"/>
-                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4373-740f-1bf3-b0aa" type="instanceOf"/>
-                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="6cd6-b22e-bfcb-9589" type="instanceOf"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
-            </modifier>
-          </modifiers>
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8dc9-5710-e694-b8f9" type="max"/>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="ce68-5088-8372-0bab" type="min"/>
-          </constraints>
+      </selectionEntries>
+      <entryLinks>
+        <entryLink id="2748-8086-c88a-0b13" name="CONDITIONAL BATTLELINE" hidden="false" collective="false" import="true" targetId="6a2c-7fc7-e348-ca8c" type="selectionEntry">
           <profiles>
-            <profile id="fe56-9a53-0538-9782" name="CONDITIONAL BATTLELINE" hidden="false" typeId="77d9-94b6-d8f2-a150" typeName="BATTLELINE">
+            <profile id="3d73-672a-de1d-525c" name="CONDITIONAL BATTLELINE" hidden="false" typeId="77d9-94b6-d8f2-a150" typeName="BATTLELINE">
               <characteristics>
                 <characteristic name="Condition" typeId="820b-20af-6fd8-5f48">Battleline if THUNDER LIZARD</characteristic>
               </characteristics>
             </profile>
           </profiles>
-          <costs>
-            <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
-          </costs>
-        </selectionEntry>
-      </selectionEntries>
+        </entryLink>
+      </entryLinks>
       <costs>
         <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="265.0"/>
       </costs>

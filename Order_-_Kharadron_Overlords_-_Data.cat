@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="8b6f-df16-b345-222b" name="Order - Kharadron Overlords - Data" revision="6" battleScribeVersion="2.03" authorName="Thulram" library="true" gameSystemId="e832-3291-06be-cab1" gameSystemRevision="6" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="8b6f-df16-b345-222b" name="Order - Kharadron Overlords - Data" revision="7" battleScribeVersion="2.03" authorName="Thulram" library="true" gameSystemId="e832-3291-06be-cab1" gameSystemRevision="6" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <profileTypes>
     <profileType id="5bd0-50e9-b771-b170" name="Skyvessel Wounds">
       <characteristicTypes>
@@ -769,46 +769,6 @@ If you do so, you can re-roll any of the dice that determine how many wounds are
             <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="7075-5bf9-87c9-20cc" name="BATTLELINE" hidden="false" collective="false" import="true" type="upgrade">
-          <modifiers>
-            <modifier type="set" field="hidden" value="true">
-              <conditionGroups>
-                <conditionGroup type="or">
-                  <conditions>
-                    <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="6cd6-b22e-bfcb-9589" type="instanceOf"/>
-                    <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="e3a6-45ca-4974-b489" type="instanceOf"/>
-                    <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4373-740f-1bf3-b0aa" type="instanceOf"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
-            </modifier>
-            <modifier type="set" field="475d-55dc-71fd-e3bd" value="0.0">
-              <conditionGroups>
-                <conditionGroup type="or">
-                  <conditions>
-                    <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="6cd6-b22e-bfcb-9589" type="instanceOf"/>
-                    <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="e3a6-45ca-4974-b489" type="instanceOf"/>
-                    <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4373-740f-1bf3-b0aa" type="instanceOf"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
-            </modifier>
-          </modifiers>
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="475d-55dc-71fd-e3bd" type="min"/>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="7fee-e168-7098-7204" type="max"/>
-          </constraints>
-          <profiles>
-            <profile id="f1fe-7ffc-0a9b-233d" name="BATTLELINE" hidden="false" typeId="77d9-94b6-d8f2-a150" typeName="BATTLELINE">
-              <characteristics>
-                <characteristic name="Condition" typeId="820b-20af-6fd8-5f48">This unit is Battleline</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <costs>
-            <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
-          </costs>
-        </selectionEntry>
         <selectionEntry id="31a9-1922-1486-69a5" name="Company Captain" hidden="false" collective="false" import="true" type="upgrade">
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="dfd2-b705-7ef2-0be8" type="max"/>
@@ -878,15 +838,15 @@ If you do so, you can re-roll any of the dice that determine how many wounds are
               <modifiers>
                 <modifier type="increment" field="00b7-bc05-eae7-be00" value="1.0">
                   <repeats>
-                    <repeat field="selections" scope="4716-8815-4d3c-a9e2" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="158a-f0cf-f86c-3df2" repeats="1" roundUp="false"/>
+                    <repeat field="selections" scope="4716-8815-4d3c-a9e2" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e20c-48d8-e5e3-1a36" repeats="1" roundUp="false"/>
                   </repeats>
                   <conditions>
-                    <condition field="selections" scope="4716-8815-4d3c-a9e2" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="158a-f0cf-f86c-3df2" type="greaterThan"/>
+                    <condition field="selections" scope="4716-8815-4d3c-a9e2" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e20c-48d8-e5e3-1a36" type="greaterThan"/>
                   </conditions>
                 </modifier>
               </modifiers>
               <constraints>
-                <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="00b7-bc05-eae7-be00" type="max"/>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="00b7-bc05-eae7-be00" type="max"/>
               </constraints>
               <profiles>
                 <profile id="e04e-b09a-4853-ee1b" name="Aethermatic Volley Gun" hidden="false" typeId="2905-f6bd-06e5-6642" typeName="Weapon">
@@ -920,15 +880,15 @@ If you do so, you can re-roll any of the dice that determine how many wounds are
               <modifiers>
                 <modifier type="increment" field="2f99-e7b5-8c4b-8398" value="1.0">
                   <repeats>
-                    <repeat field="selections" scope="4716-8815-4d3c-a9e2" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="158a-f0cf-f86c-3df2" repeats="1" roundUp="false"/>
+                    <repeat field="selections" scope="4716-8815-4d3c-a9e2" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e20c-48d8-e5e3-1a36" repeats="1" roundUp="false"/>
                   </repeats>
                   <conditions>
-                    <condition field="selections" scope="4716-8815-4d3c-a9e2" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="158a-f0cf-f86c-3df2" type="greaterThan"/>
+                    <condition field="selections" scope="4716-8815-4d3c-a9e2" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e20c-48d8-e5e3-1a36" type="greaterThan"/>
                   </conditions>
                 </modifier>
               </modifiers>
               <constraints>
-                <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="2f99-e7b5-8c4b-8398" type="max"/>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="2f99-e7b5-8c4b-8398" type="max"/>
               </constraints>
               <profiles>
                 <profile id="98d0-4038-5fb4-0c3f" name="Gun Butt" hidden="false" typeId="2905-f6bd-06e5-6642" typeName="Weapon">
@@ -962,15 +922,15 @@ If you do so, you can re-roll any of the dice that determine how many wounds are
               <modifiers>
                 <modifier type="increment" field="1eea-af22-95d5-7df0" value="1.0">
                   <repeats>
-                    <repeat field="selections" scope="4716-8815-4d3c-a9e2" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="158a-f0cf-f86c-3df2" repeats="1" roundUp="false"/>
+                    <repeat field="selections" scope="4716-8815-4d3c-a9e2" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e20c-48d8-e5e3-1a36" repeats="1" roundUp="false"/>
                   </repeats>
                   <conditions>
-                    <condition field="selections" scope="4716-8815-4d3c-a9e2" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="158a-f0cf-f86c-3df2" type="greaterThan"/>
+                    <condition field="selections" scope="4716-8815-4d3c-a9e2" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e20c-48d8-e5e3-1a36" type="greaterThan"/>
                   </conditions>
                 </modifier>
               </modifiers>
               <constraints>
-                <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="1eea-af22-95d5-7df0" type="max"/>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="1eea-af22-95d5-7df0" type="max"/>
               </constraints>
               <profiles>
                 <profile id="e920-1923-0dc4-da26" name="Skypike" hidden="false" typeId="2905-f6bd-06e5-6642" typeName="Weapon">
@@ -994,6 +954,7 @@ If you do so, you can re-roll any of the dice that determine how many wounds are
       </selectionEntryGroups>
       <entryLinks>
         <entryLink id="2ad4-29af-0c4b-62ae" name="Unit Reinforcement" hidden="false" collective="false" import="true" targetId="b493-d9e6-82ca-5488" type="selectionEntry"/>
+        <entryLink id="486f-cc11-19d4-dceb" name="BATTLELINE" hidden="false" collective="false" import="true" targetId="be1f-d384-9fe4-789d" type="selectionEntry"/>
       </entryLinks>
       <costs>
         <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="100.0"/>
@@ -1672,46 +1633,6 @@ An attack made by a weapon that is in range of this model can target either this
             <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="8aa3-5c13-2360-0dec" name="CONDITIONAL BATTLELINE" hidden="false" collective="false" import="true" type="upgrade">
-          <modifiers>
-            <modifier type="set" field="hidden" value="true">
-              <conditionGroups>
-                <conditionGroup type="or">
-                  <conditions>
-                    <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="6cd6-b22e-bfcb-9589" type="instanceOf"/>
-                    <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="e3a6-45ca-4974-b489" type="instanceOf"/>
-                    <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4373-740f-1bf3-b0aa" type="instanceOf"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
-            </modifier>
-            <modifier type="set" field="683c-cb18-ee63-dca4" value="0.0">
-              <conditionGroups>
-                <conditionGroup type="or">
-                  <conditions>
-                    <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="6cd6-b22e-bfcb-9589" type="instanceOf"/>
-                    <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="e3a6-45ca-4974-b489" type="instanceOf"/>
-                    <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4373-740f-1bf3-b0aa" type="instanceOf"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
-            </modifier>
-          </modifiers>
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="683c-cb18-ee63-dca4" type="min"/>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="9cf4-bfcf-6e4c-f310" type="max"/>
-          </constraints>
-          <profiles>
-            <profile id="0c64-f54b-a10c-76e1" name="CONDITIONAL BATTLELINE" hidden="false" typeId="77d9-94b6-d8f2-a150" typeName="BATTLELINE">
-              <characteristics>
-                <characteristic name="Condition" typeId="820b-20af-6fd8-5f48">Battleline if BARAK-ZILFIN</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <costs>
-            <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
-          </costs>
-        </selectionEntry>
       </selectionEntries>
       <selectionEntryGroups>
         <selectionEntryGroup id="bad6-3a0f-908c-36dc" name="Weapon Option" hidden="false" collective="false" import="true" defaultSelectionEntryId="cb37-1a7f-e3bb-3ea0">
@@ -1780,6 +1701,17 @@ An attack made by a weapon that is in range of this model can target either this
           </selectionEntries>
         </selectionEntryGroup>
       </selectionEntryGroups>
+      <entryLinks>
+        <entryLink id="60c6-366f-d805-008c" name="CONDITIONAL BATTLELINE" hidden="false" collective="false" import="true" targetId="6a2c-7fc7-e348-ca8c" type="selectionEntry">
+          <profiles>
+            <profile id="2699-c514-37bf-a617" name="CONDITIONAL BATTLELINE" hidden="false" typeId="77d9-94b6-d8f2-a150" typeName="BATTLELINE">
+              <characteristics>
+                <characteristic name="Condition" typeId="820b-20af-6fd8-5f48">Battleline if BARAK-ZILFIN</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+        </entryLink>
+      </entryLinks>
       <costs>
         <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="250.0"/>
       </costs>
@@ -1848,29 +1780,6 @@ An attack made by a weapon that is in range of this model can target either this
                 <characteristic name="To-Wound" typeId="172f-fc84-895b-04b7">4+</characteristic>
                 <characteristic name="Rend" typeId="0c05-bd2e-b7e7-3925">-</characteristic>
                 <characteristic name="Damage" typeId="01c2-d16a-8788-e52b">1</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <costs>
-            <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="2e85-63e5-9cb9-2876" name="CONDITIONAL BATTLELINE" hidden="false" collective="false" import="true" type="upgrade">
-          <modifiers>
-            <modifier type="set" field="hidden" value="true">
-              <conditions>
-                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="eb59-f0ad-9828-dad9" type="instanceOf"/>
-              </conditions>
-            </modifier>
-          </modifiers>
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="36f8-e148-e853-1c8c" type="min"/>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="78a5-c171-1527-d3d4" type="max"/>
-          </constraints>
-          <profiles>
-            <profile id="0a96-9518-d1c6-546b" name="CONDITIONAL BATTLELINE" hidden="false" typeId="77d9-94b6-d8f2-a150" typeName="BATTLELINE">
-              <characteristics>
-                <characteristic name="Condition" typeId="820b-20af-6fd8-5f48">Battleline if BARAK-URBAZ</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -1968,6 +1877,17 @@ An attack made by a weapon that is in range of this model can target either this
           </selectionEntries>
         </selectionEntryGroup>
       </selectionEntryGroups>
+      <entryLinks>
+        <entryLink id="83ac-586d-2054-7d21" name="CONDITIONAL BATTLELINE" hidden="false" collective="false" import="true" targetId="6a2c-7fc7-e348-ca8c" type="selectionEntry">
+          <profiles>
+            <profile id="f1d8-a62c-6128-cd3f" name="CONDITIONAL BATTLELINE" hidden="false" typeId="77d9-94b6-d8f2-a150" typeName="BATTLELINE">
+              <characteristics>
+                <characteristic name="Condition" typeId="820b-20af-6fd8-5f48">Battleline if BARAK-URBAZ</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+        </entryLink>
+      </entryLinks>
       <costs>
         <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="155.0"/>
       </costs>
@@ -2055,29 +1975,6 @@ An attack made by a weapon that is in range of this model can target either this
             <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="9aa0-cb45-e64c-1965" name="CONDITIONAL BATTLELINE" hidden="false" collective="false" import="true" type="upgrade">
-          <modifiers>
-            <modifier type="set" field="hidden" value="true">
-              <conditions>
-                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="eb59-f0ad-9828-dad9" type="instanceOf"/>
-              </conditions>
-            </modifier>
-          </modifiers>
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="6dba-9b08-16e8-a495" type="min"/>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="6b82-2c2c-f985-6466" type="max"/>
-          </constraints>
-          <profiles>
-            <profile id="86bf-40a6-dfcb-f06a" name="CONDITIONAL BATTLELINE" hidden="false" typeId="77d9-94b6-d8f2-a150" typeName="BATTLELINE">
-              <characteristics>
-                <characteristic name="Condition" typeId="820b-20af-6fd8-5f48">Battleline if BARAK-NAR</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <costs>
-            <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
-          </costs>
-        </selectionEntry>
       </selectionEntries>
       <selectionEntryGroups>
         <selectionEntryGroup id="a6f9-cd81-54c6-7d7e" name="Unit Options" hidden="false" collective="false" import="true">
@@ -2085,6 +1982,7 @@ An attack made by a weapon that is in range of this model can target either this
             <selectionEntry id="6f92-f4ef-0f5b-a0e4" name="Gunnery Sergeant" hidden="false" collective="false" import="true" type="upgrade">
               <constraints>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="1790-4b51-bea9-28f2" type="max"/>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="9249-df59-f668-d309" type="min"/>
               </constraints>
               <profiles>
                 <profile id="2ab4-922e-44be-e1a8" name="Gunnery Sergeant" hidden="false" typeId="c23b-5a30-07e2-4706" typeName="Unit Options">
@@ -2147,15 +2045,15 @@ An attack made by a weapon that is in range of this model can target either this
               <modifiers>
                 <modifier type="increment" field="f569-7448-4678-2516" value="1.0">
                   <repeats>
-                    <repeat field="selections" scope="506e-d55c-cc7f-162a" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="311a-42e4-58fa-c75e" repeats="1" roundUp="false"/>
+                    <repeat field="selections" scope="506e-d55c-cc7f-162a" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e20c-48d8-e5e3-1a36" repeats="1" roundUp="false"/>
                   </repeats>
                   <conditions>
-                    <condition field="selections" scope="506e-d55c-cc7f-162a" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="311a-42e4-58fa-c75e" type="greaterThan"/>
+                    <condition field="selections" scope="506e-d55c-cc7f-162a" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e20c-48d8-e5e3-1a36" type="greaterThan"/>
                   </conditions>
                 </modifier>
               </modifiers>
               <constraints>
-                <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="f569-7448-4678-2516" type="max"/>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="f569-7448-4678-2516" type="max"/>
               </constraints>
               <profiles>
                 <profile id="2221-4e1a-2064-031f" name="Honour Bearer" hidden="false" typeId="c23b-5a30-07e2-4706" typeName="Unit Options">
@@ -2176,15 +2074,15 @@ An attack made by a weapon that is in range of this model can target either this
               <modifiers>
                 <modifier type="increment" field="9bf9-70c7-1667-a10c" value="1.0">
                   <repeats>
-                    <repeat field="selections" scope="506e-d55c-cc7f-162a" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="311a-42e4-58fa-c75e" repeats="1" roundUp="false"/>
+                    <repeat field="selections" scope="506e-d55c-cc7f-162a" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e20c-48d8-e5e3-1a36" repeats="1" roundUp="false"/>
                   </repeats>
                   <conditions>
-                    <condition field="selections" scope="506e-d55c-cc7f-162a" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="311a-42e4-58fa-c75e" type="greaterThan"/>
+                    <condition field="selections" scope="506e-d55c-cc7f-162a" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e20c-48d8-e5e3-1a36" type="greaterThan"/>
                   </conditions>
                 </modifier>
               </modifiers>
               <constraints>
-                <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="9bf9-70c7-1667-a10c" type="max"/>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="9bf9-70c7-1667-a10c" type="max"/>
               </constraints>
               <profiles>
                 <profile id="a4ba-a318-7438-367c" name="Gun Butt" hidden="false" typeId="2905-f6bd-06e5-6642" typeName="Weapon">
@@ -2223,15 +2121,15 @@ An attack made by a weapon that is in range of this model can target either this
               <modifiers>
                 <modifier type="increment" field="2bb4-4055-37c5-a53c" value="1.0">
                   <repeats>
-                    <repeat field="selections" scope="506e-d55c-cc7f-162a" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="311a-42e4-58fa-c75e" repeats="1" roundUp="false"/>
+                    <repeat field="selections" scope="506e-d55c-cc7f-162a" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e20c-48d8-e5e3-1a36" repeats="1" roundUp="false"/>
                   </repeats>
                   <conditions>
-                    <condition field="selections" scope="506e-d55c-cc7f-162a" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="311a-42e4-58fa-c75e" type="greaterThan"/>
+                    <condition field="selections" scope="506e-d55c-cc7f-162a" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e20c-48d8-e5e3-1a36" type="greaterThan"/>
                   </conditions>
                 </modifier>
               </modifiers>
               <constraints>
-                <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="2bb4-4055-37c5-a53c" type="max"/>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="2bb4-4055-37c5-a53c" type="max"/>
               </constraints>
               <profiles>
                 <profile id="21ec-c47a-7fec-8ae7" name="Gun Butt" hidden="false" typeId="2905-f6bd-06e5-6642" typeName="Weapon">
@@ -2265,15 +2163,15 @@ An attack made by a weapon that is in range of this model can target either this
               <modifiers>
                 <modifier type="increment" field="0dd1-a845-396f-b1e0" value="1.0">
                   <repeats>
-                    <repeat field="selections" scope="506e-d55c-cc7f-162a" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="311a-42e4-58fa-c75e" repeats="1" roundUp="false"/>
+                    <repeat field="selections" scope="506e-d55c-cc7f-162a" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e20c-48d8-e5e3-1a36" repeats="1" roundUp="false"/>
                   </repeats>
                   <conditions>
-                    <condition field="selections" scope="506e-d55c-cc7f-162a" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="311a-42e4-58fa-c75e" type="greaterThan"/>
+                    <condition field="selections" scope="506e-d55c-cc7f-162a" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e20c-48d8-e5e3-1a36" type="greaterThan"/>
                   </conditions>
                 </modifier>
               </modifiers>
               <constraints>
-                <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="0dd1-a845-396f-b1e0" type="max"/>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="0dd1-a845-396f-b1e0" type="max"/>
               </constraints>
               <profiles>
                 <profile id="9485-d7d1-7cb7-b2d2" name="Gun Butt" hidden="false" typeId="2905-f6bd-06e5-6642" typeName="Weapon">
@@ -2307,15 +2205,15 @@ An attack made by a weapon that is in range of this model can target either this
               <modifiers>
                 <modifier type="increment" field="13b5-2660-27c6-ca3d" value="1.0">
                   <repeats>
-                    <repeat field="selections" scope="506e-d55c-cc7f-162a" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="311a-42e4-58fa-c75e" repeats="1" roundUp="false"/>
+                    <repeat field="selections" scope="506e-d55c-cc7f-162a" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e20c-48d8-e5e3-1a36" repeats="1" roundUp="false"/>
                   </repeats>
                   <conditions>
-                    <condition field="selections" scope="506e-d55c-cc7f-162a" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="311a-42e4-58fa-c75e" type="greaterThan"/>
+                    <condition field="selections" scope="506e-d55c-cc7f-162a" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e20c-48d8-e5e3-1a36" type="greaterThan"/>
                   </conditions>
                 </modifier>
               </modifiers>
               <constraints>
-                <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="13b5-2660-27c6-ca3d" type="max"/>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="13b5-2660-27c6-ca3d" type="max"/>
               </constraints>
               <profiles>
                 <profile id="ef06-af04-c416-fce8" name="Gun Butt" hidden="false" typeId="2905-f6bd-06e5-6642" typeName="Weapon">
@@ -2350,6 +2248,15 @@ An attack made by a weapon that is in range of this model can target either this
       </selectionEntryGroups>
       <entryLinks>
         <entryLink id="99ee-cea4-2748-b49e" name="Unit Reinforcement" hidden="false" collective="false" import="true" targetId="b493-d9e6-82ca-5488" type="selectionEntry"/>
+        <entryLink id="efbb-9aad-3217-bdcd" name="CONDITIONAL BATTLELINE" hidden="false" collective="false" import="true" targetId="6a2c-7fc7-e348-ca8c" type="selectionEntry">
+          <profiles>
+            <profile id="63ec-f4d2-2829-5f71" name="CONDITIONAL BATTLELINE" hidden="false" typeId="77d9-94b6-d8f2-a150" typeName="BATTLELINE">
+              <characteristics>
+                <characteristic name="Condition" typeId="820b-20af-6fd8-5f48">Battleline if BARAK-NAR</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+        </entryLink>
       </entryLinks>
       <costs>
         <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="135.0"/>
@@ -2460,46 +2367,6 @@ No more than 7 models can hitch a lift on the same SKYVESSEL in the same turn.</
             <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="e429-b9d4-1012-6cce" name="CONDITIONAL BATTLELINE" hidden="false" collective="false" import="true" type="upgrade">
-          <modifiers>
-            <modifier type="set" field="hidden" value="true">
-              <conditionGroups>
-                <conditionGroup type="or">
-                  <conditions>
-                    <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="6cd6-b22e-bfcb-9589" type="instanceOf"/>
-                    <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="e3a6-45ca-4974-b489" type="instanceOf"/>
-                    <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4373-740f-1bf3-b0aa" type="instanceOf"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
-            </modifier>
-            <modifier type="set" field="6208-91e4-edc1-a769" value="0.0">
-              <conditionGroups>
-                <conditionGroup type="or">
-                  <conditions>
-                    <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="6cd6-b22e-bfcb-9589" type="instanceOf"/>
-                    <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="e3a6-45ca-4974-b489" type="instanceOf"/>
-                    <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4373-740f-1bf3-b0aa" type="instanceOf"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
-            </modifier>
-          </modifiers>
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="6208-91e4-edc1-a769" type="min"/>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="0d45-474b-2861-9b8d" type="max"/>
-          </constraints>
-          <profiles>
-            <profile id="bc0d-6b9f-9af2-e804" name="CONDITIONAL BATTLELINE" hidden="false" typeId="77d9-94b6-d8f2-a150" typeName="BATTLELINE">
-              <characteristics>
-                <characteristic name="Condition" typeId="820b-20af-6fd8-5f48">Battleline if general is Endrinmaster with Dirigible Suit</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <costs>
-            <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
-          </costs>
-        </selectionEntry>
       </selectionEntries>
       <selectionEntryGroups>
         <selectionEntryGroup id="aea9-b91f-45f7-adc2" name="Replacement Weapon Options" hidden="false" collective="false" import="true">
@@ -2508,15 +2375,15 @@ No more than 7 models can hitch a lift on the same SKYVESSEL in the same turn.</
               <modifiers>
                 <modifier type="increment" field="0710-9ea6-036f-0124" value="1.0">
                   <repeats>
-                    <repeat field="selections" scope="efa1-470f-83ba-9d41" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="bb1a-f654-1094-cd6f" repeats="1" roundUp="false"/>
+                    <repeat field="selections" scope="efa1-470f-83ba-9d41" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e20c-48d8-e5e3-1a36" repeats="1" roundUp="false"/>
                   </repeats>
                   <conditions>
-                    <condition field="selections" scope="efa1-470f-83ba-9d41" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="bb1a-f654-1094-cd6f" type="greaterThan"/>
+                    <condition field="selections" scope="efa1-470f-83ba-9d41" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e20c-48d8-e5e3-1a36" type="greaterThan"/>
                   </conditions>
                 </modifier>
               </modifiers>
               <constraints>
-                <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="0710-9ea6-036f-0124" type="max"/>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="0710-9ea6-036f-0124" type="max"/>
               </constraints>
               <profiles>
                 <profile id="60e5-8836-9fd6-da8c" name="Aethermatic Volley Gun" hidden="false" typeId="2905-f6bd-06e5-6642" typeName="Weapon">
@@ -2552,15 +2419,15 @@ No more than 7 models can hitch a lift on the same SKYVESSEL in the same turn.</
               <modifiers>
                 <modifier type="increment" field="0e98-c31f-c592-a508" value="1.0">
                   <repeats>
-                    <repeat field="selections" scope="efa1-470f-83ba-9d41" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="bb1a-f654-1094-cd6f" repeats="1" roundUp="false"/>
+                    <repeat field="selections" scope="efa1-470f-83ba-9d41" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e20c-48d8-e5e3-1a36" repeats="1" roundUp="false"/>
                   </repeats>
                   <conditions>
-                    <condition field="selections" scope="efa1-470f-83ba-9d41" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="bb1a-f654-1094-cd6f" type="greaterThan"/>
+                    <condition field="selections" scope="efa1-470f-83ba-9d41" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e20c-48d8-e5e3-1a36" type="greaterThan"/>
                   </conditions>
                 </modifier>
               </modifiers>
               <constraints>
-                <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="0e98-c31f-c592-a508" type="max"/>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="0e98-c31f-c592-a508" type="max"/>
               </constraints>
               <selectionEntries>
                 <selectionEntry id="ce68-2998-9b15-f34b" name="Drill Launcher and Gun Butt" hidden="false" collective="false" import="true" type="upgrade">
@@ -2672,6 +2539,15 @@ No more than 7 models can hitch a lift on the same SKYVESSEL in the same turn.</
       </selectionEntryGroups>
       <entryLinks>
         <entryLink id="42d9-87ae-ac55-56df" name="Unit Reinforcement" hidden="false" collective="false" import="true" targetId="b493-d9e6-82ca-5488" type="selectionEntry"/>
+        <entryLink id="5142-e4e3-76ec-ba90" name="CONDITIONAL BATTLELINE" hidden="false" collective="false" import="true" targetId="6a2c-7fc7-e348-ca8c" type="selectionEntry">
+          <profiles>
+            <profile id="f9ac-65f0-e85f-cc24" name="CONDITIONAL BATTLELINE" hidden="false" typeId="77d9-94b6-d8f2-a150" typeName="BATTLELINE">
+              <characteristics>
+                <characteristic name="Condition" typeId="820b-20af-6fd8-5f48">Battleline if general is Endrinmaster with Dirigible Suit</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+        </entryLink>
       </entryLinks>
       <costs>
         <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="120.0"/>
@@ -2787,46 +2663,6 @@ No more than 7 models can hitch a lift on the same SKYVESSEL in the same turn.</
             <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="75a4-498d-ef19-bd22" name="CONDITIONAL BATTLELINE" hidden="false" collective="false" import="true" type="upgrade">
-          <modifiers>
-            <modifier type="set" field="hidden" value="true">
-              <conditionGroups>
-                <conditionGroup type="or">
-                  <conditions>
-                    <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="6cd6-b22e-bfcb-9589" type="instanceOf"/>
-                    <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="e3a6-45ca-4974-b489" type="instanceOf"/>
-                    <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4373-740f-1bf3-b0aa" type="instanceOf"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
-            </modifier>
-            <modifier type="set" field="57d2-1465-542b-8fd7" value="0.0">
-              <conditionGroups>
-                <conditionGroup type="or">
-                  <conditions>
-                    <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="6cd6-b22e-bfcb-9589" type="instanceOf"/>
-                    <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="e3a6-45ca-4974-b489" type="instanceOf"/>
-                    <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4373-740f-1bf3-b0aa" type="instanceOf"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
-            </modifier>
-          </modifiers>
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="57d2-1465-542b-8fd7" type="min"/>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="75b2-a76a-77cd-613f" type="max"/>
-          </constraints>
-          <profiles>
-            <profile id="f96b-eb01-5eb7-a0b2" name="CONDITIONAL BATTLELINE" hidden="false" typeId="77d9-94b6-d8f2-a150" typeName="BATTLELINE">
-              <characteristics>
-                <characteristic name="Condition" typeId="820b-20af-6fd8-5f48">Battleline if general is Endrinmaster with Dirigible Suit</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <costs>
-            <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
-          </costs>
-        </selectionEntry>
       </selectionEntries>
       <selectionEntryGroups>
         <selectionEntryGroup id="4aff-a450-fe31-3ed4" name="Replacement Weapon Options" hidden="false" collective="false" import="true">
@@ -2835,15 +2671,15 @@ No more than 7 models can hitch a lift on the same SKYVESSEL in the same turn.</
               <modifiers>
                 <modifier type="increment" field="418c-2b7d-b25f-69d3" value="1.0">
                   <repeats>
-                    <repeat field="selections" scope="c9fd-6b4b-eb3a-150d" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="7d37-437d-445e-5440" repeats="1" roundUp="false"/>
+                    <repeat field="selections" scope="c9fd-6b4b-eb3a-150d" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e20c-48d8-e5e3-1a36" repeats="1" roundUp="false"/>
                   </repeats>
                   <conditions>
-                    <condition field="selections" scope="c9fd-6b4b-eb3a-150d" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="7d37-437d-445e-5440" type="greaterThan"/>
+                    <condition field="selections" scope="c9fd-6b4b-eb3a-150d" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e20c-48d8-e5e3-1a36" type="greaterThan"/>
                   </conditions>
                 </modifier>
               </modifiers>
               <constraints>
-                <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="418c-2b7d-b25f-69d3" type="max"/>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="418c-2b7d-b25f-69d3" type="max"/>
               </constraints>
               <profiles>
                 <profile id="658d-a117-94d9-8c66" name="Aethermatic Volley Gun" hidden="false" typeId="2905-f6bd-06e5-6642" typeName="Weapon">
@@ -2879,15 +2715,15 @@ No more than 7 models can hitch a lift on the same SKYVESSEL in the same turn.</
               <modifiers>
                 <modifier type="increment" field="05ed-a1e3-c691-6d89" value="1.0">
                   <repeats>
-                    <repeat field="selections" scope="c9fd-6b4b-eb3a-150d" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="7d37-437d-445e-5440" repeats="1" roundUp="false"/>
+                    <repeat field="selections" scope="c9fd-6b4b-eb3a-150d" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e20c-48d8-e5e3-1a36" repeats="1" roundUp="false"/>
                   </repeats>
                   <conditions>
-                    <condition field="selections" scope="c9fd-6b4b-eb3a-150d" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="7d37-437d-445e-5440" type="greaterThan"/>
+                    <condition field="selections" scope="c9fd-6b4b-eb3a-150d" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e20c-48d8-e5e3-1a36" type="greaterThan"/>
                   </conditions>
                 </modifier>
               </modifiers>
               <constraints>
-                <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="05ed-a1e3-c691-6d89" type="max"/>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="05ed-a1e3-c691-6d89" type="max"/>
               </constraints>
               <selectionEntries>
                 <selectionEntry id="168e-8aff-30b1-32e0" name="Drill Launcher and Gun Butt" hidden="false" collective="false" import="true" type="upgrade">
@@ -2999,6 +2835,15 @@ No more than 7 models can hitch a lift on the same SKYVESSEL in the same turn.</
       </selectionEntryGroups>
       <entryLinks>
         <entryLink id="02a5-b2a2-9646-89aa" name="Unit Reinforcement" hidden="false" collective="false" import="true" targetId="b493-d9e6-82ca-5488" type="selectionEntry"/>
+        <entryLink id="0cf4-928f-9e99-a6af" name="CONDITIONAL BATTLELINE" hidden="false" collective="false" import="true" targetId="6a2c-7fc7-e348-ca8c" type="selectionEntry">
+          <profiles>
+            <profile id="d543-8673-0304-0076" name="CONDITIONAL BATTLELINE" hidden="false" typeId="77d9-94b6-d8f2-a150" typeName="BATTLELINE">
+              <characteristics>
+                <characteristic name="Condition" typeId="820b-20af-6fd8-5f48">Battleline if general is Endrinmaster with Dirigible Suit</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+        </entryLink>
       </entryLinks>
       <costs>
         <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="115.0"/>

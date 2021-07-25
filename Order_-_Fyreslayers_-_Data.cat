@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="b308-9b80-759a-5873" name="Order - Fyreslayers - Data" revision="3" battleScribeVersion="2.03" authorName="Thulram" library="true" gameSystemId="e832-3291-06be-cab1" gameSystemRevision="3" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="b308-9b80-759a-5873" name="Order - Fyreslayers - Data" revision="4" battleScribeVersion="2.03" authorName="Thulram" library="true" gameSystemId="e832-3291-06be-cab1" gameSystemRevision="3" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <profileTypes>
     <profileType id="bd47-b513-a373-3222" name="HERO on Magmadroth Wounds">
       <characteristicTypes>
@@ -1028,46 +1028,6 @@
             <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="12f2-3251-a966-978b" name="BATTLELINE" hidden="false" collective="false" import="true" type="upgrade">
-          <modifiers>
-            <modifier type="set" field="hidden" value="true">
-              <conditionGroups>
-                <conditionGroup type="or">
-                  <conditions>
-                    <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="e3a6-45ca-4974-b489" type="instanceOf"/>
-                    <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="6cd6-b22e-bfcb-9589" type="instanceOf"/>
-                    <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4373-740f-1bf3-b0aa" type="instanceOf"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
-            </modifier>
-            <modifier type="set" field="09ca-1480-6815-378c" value="0.0">
-              <conditionGroups>
-                <conditionGroup type="or">
-                  <conditions>
-                    <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="e3a6-45ca-4974-b489" type="instanceOf"/>
-                    <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="6cd6-b22e-bfcb-9589" type="instanceOf"/>
-                    <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4373-740f-1bf3-b0aa" type="instanceOf"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
-            </modifier>
-          </modifiers>
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="09ca-1480-6815-378c" type="min"/>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="eb4d-f830-33c5-8749" type="max"/>
-          </constraints>
-          <profiles>
-            <profile id="fb54-941b-466a-dc6e" name="BATTLELINE" hidden="false" typeId="77d9-94b6-d8f2-a150" typeName="BATTLELINE">
-              <characteristics>
-                <characteristic name="Condition" typeId="820b-20af-6fd8-5f48">This unit is Battleline</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <costs>
-            <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
-          </costs>
-        </selectionEntry>
         <selectionEntry id="b620-1dca-cc5d-5ca0" name="Fyresteel Throwing Axes" hidden="false" collective="false" import="true" type="upgrade">
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8629-9fac-a50b-8e78" type="max"/>
@@ -1175,15 +1135,15 @@
               <modifiers>
                 <modifier type="increment" field="1b02-3136-98b3-b5e2" value="2.0">
                   <repeats>
-                    <repeat field="selections" scope="b6d2-484d-67e4-98e1" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="8272-b72e-16f6-10bd" repeats="1" roundUp="false"/>
+                    <repeat field="selections" scope="b6d2-484d-67e4-98e1" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e20c-48d8-e5e3-1a36" repeats="1" roundUp="false"/>
                   </repeats>
                   <conditions>
-                    <condition field="selections" scope="b6d2-484d-67e4-98e1" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="8272-b72e-16f6-10bd" type="greaterThan"/>
+                    <condition field="selections" scope="b6d2-484d-67e4-98e1" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e20c-48d8-e5e3-1a36" type="greaterThan"/>
                   </conditions>
                 </modifier>
               </modifiers>
               <constraints>
-                <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="1b02-3136-98b3-b5e2" type="max"/>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="1b02-3136-98b3-b5e2" type="max"/>
               </constraints>
               <profiles>
                 <profile id="c8ed-5838-9f0b-cc20" name="Horn of Grimnir" hidden="false" typeId="c23b-5a30-07e2-4706" typeName="Unit Options">
@@ -1201,6 +1161,7 @@
       </selectionEntryGroups>
       <entryLinks>
         <entryLink id="8ec7-3c8b-d970-5f48" name="Unit Reinforcement" hidden="false" collective="false" import="true" targetId="b493-d9e6-82ca-5488" type="selectionEntry"/>
+        <entryLink id="c155-16d5-02bb-07eb" name="BATTLELINE" hidden="false" collective="false" import="true" targetId="be1f-d384-9fe4-789d" type="selectionEntry"/>
       </entryLinks>
       <costs>
         <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="160.0"/>
@@ -2019,49 +1980,18 @@ In addition, in the combat phase, if this model is slain while it is within 3&qu
             <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="0420-51b3-6f10-d820" name="CONDITIONAL BATTLELINE" hidden="false" collective="false" import="true" type="upgrade">
-          <modifiers>
-            <modifier type="set" field="hidden" value="true">
-              <conditionGroups>
-                <conditionGroup type="or">
-                  <conditions>
-                    <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="e3a6-45ca-4974-b489" type="instanceOf"/>
-                    <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="6cd6-b22e-bfcb-9589" type="instanceOf"/>
-                    <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4373-740f-1bf3-b0aa" type="instanceOf"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
-            </modifier>
-            <modifier type="set" field="628c-28b6-0e5e-6e00" value="0.0">
-              <conditionGroups>
-                <conditionGroup type="or">
-                  <conditions>
-                    <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="e3a6-45ca-4974-b489" type="instanceOf"/>
-                    <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="6cd6-b22e-bfcb-9589" type="instanceOf"/>
-                    <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4373-740f-1bf3-b0aa" type="instanceOf"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
-            </modifier>
-          </modifiers>
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="628c-28b6-0e5e-6e00" type="min"/>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="e71d-f8d7-6376-f544" type="max"/>
-          </constraints>
+      </selectionEntries>
+      <entryLinks>
+        <entryLink id="2379-972e-03b5-05d9" name="Unit Reinforcement" hidden="false" collective="false" import="true" targetId="b493-d9e6-82ca-5488" type="selectionEntry"/>
+        <entryLink id="06cc-b8a8-60a4-f67b" name="CONDITIONAL BATTLELINE" hidden="false" collective="false" import="true" targetId="6a2c-7fc7-e348-ca8c" type="selectionEntry">
           <profiles>
-            <profile id="76e8-4a30-43f0-9949" name="CONDITIONAL BATTLELINE" hidden="false" typeId="77d9-94b6-d8f2-a150" typeName="BATTLELINE">
+            <profile id="dd36-ed6c-063e-7541" name="CONDITIONAL BATTLELINE" hidden="false" typeId="77d9-94b6-d8f2-a150" typeName="BATTLELINE">
               <characteristics>
                 <characteristic name="Condition" typeId="820b-20af-6fd8-5f48">Battleline in Fyreslayers army if general is an Auric Runemaster</characteristic>
               </characteristics>
             </profile>
           </profiles>
-          <costs>
-            <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
-          </costs>
-        </selectionEntry>
-      </selectionEntries>
-      <entryLinks>
-        <entryLink id="2379-972e-03b5-05d9" name="Unit Reinforcement" hidden="false" collective="false" import="true" targetId="b493-d9e6-82ca-5488" type="selectionEntry"/>
+        </entryLink>
       </entryLinks>
       <costs>
         <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="125.0"/>
@@ -2137,46 +2067,6 @@ In addition, in the combat phase, if this model is slain while it is within 3&qu
             <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="97c1-1a36-a613-c6f4" name="CONDITIONAL BATTLELINE" hidden="false" collective="false" import="true" type="upgrade">
-          <modifiers>
-            <modifier type="set" field="hidden" value="true">
-              <conditionGroups>
-                <conditionGroup type="or">
-                  <conditions>
-                    <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="e3a6-45ca-4974-b489" type="instanceOf"/>
-                    <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="6cd6-b22e-bfcb-9589" type="instanceOf"/>
-                    <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4373-740f-1bf3-b0aa" type="instanceOf"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
-            </modifier>
-            <modifier type="set" field="1ea6-6c97-8586-65c7" value="0.0">
-              <conditionGroups>
-                <conditionGroup type="or">
-                  <conditions>
-                    <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="e3a6-45ca-4974-b489" type="instanceOf"/>
-                    <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="6cd6-b22e-bfcb-9589" type="instanceOf"/>
-                    <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4373-740f-1bf3-b0aa" type="instanceOf"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
-            </modifier>
-          </modifiers>
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="1ea6-6c97-8586-65c7" type="min"/>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="0677-b5c9-c9c5-a3ef" type="max"/>
-          </constraints>
-          <profiles>
-            <profile id="5b2b-d7f0-6067-8d91" name="CONDITIONAL BATTLELINE" hidden="false" typeId="77d9-94b6-d8f2-a150" typeName="BATTLELINE">
-              <characteristics>
-                <characteristic name="Condition" typeId="820b-20af-6fd8-5f48">Battleline in Fyreslayers army if general is an AURIC RUNEFATHER</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <costs>
-            <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
-          </costs>
-        </selectionEntry>
       </selectionEntries>
       <selectionEntryGroups>
         <selectionEntryGroup id="dd1f-9ea2-20af-d7dc" name="Weapon Option" hidden="false" collective="false" import="true" defaultSelectionEntryId="3585-6725-e08d-3fb6">
@@ -2231,6 +2121,15 @@ In addition, in the combat phase, if this model is slain while it is within 3&qu
       </selectionEntryGroups>
       <entryLinks>
         <entryLink id="1149-4147-99bd-38a2" name="Unit Reinforcement" hidden="false" collective="false" import="true" targetId="b493-d9e6-82ca-5488" type="selectionEntry"/>
+        <entryLink id="f18b-f067-a9d1-6c7e" name="CONDITIONAL BATTLELINE" hidden="false" collective="false" import="true" targetId="6a2c-7fc7-e348-ca8c" type="selectionEntry">
+          <profiles>
+            <profile id="7d8b-f520-32f1-c0cf" name="CONDITIONAL BATTLELINE" hidden="false" typeId="77d9-94b6-d8f2-a150" typeName="BATTLELINE">
+              <characteristics>
+                <characteristic name="Condition" typeId="820b-20af-6fd8-5f48">Battleline in Fyreslayers army if general is an AURIC RUNEFATHER</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+        </entryLink>
       </entryLinks>
       <costs>
         <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="125.0"/>

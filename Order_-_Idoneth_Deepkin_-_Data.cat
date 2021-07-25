@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="53db-fccc-828d-aacf" name="Order - Idoneth Deepkin - Data" revision="6" battleScribeVersion="2.03" authorName="Thulram" library="true" gameSystemId="e832-3291-06be-cab1" gameSystemRevision="6" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="53db-fccc-828d-aacf" name="Order - Idoneth Deepkin - Data" revision="8" battleScribeVersion="2.03" authorName="Thulram" library="true" gameSystemId="e832-3291-06be-cab1" gameSystemRevision="7" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <profileTypes>
     <profileType id="3081-447d-82e2-cdb3" name="Leviadon Wounds">
       <characteristicTypes>
@@ -379,7 +379,6 @@ This model can retreat and still charge later in the same turn.</characteristic>
         <profile id="f097-e564-0087-f3af" name="Eidolon of Mathlann, Aspect of the Sea" hidden="false" typeId="a62b-2245-5c24-f8bc" typeName="Magic">
           <characteristics>
             <characteristic name="Cast/Unbind" typeId="9a5b-68ee-bc46-6a9d">2/2</characteristic>
-            <characteristic name="Spells Known" typeId="25bd-2ad0-e570-e880">Arcane Bolt, Mystic Shield, Cloying Sea Mists, Tsunami of Terror</characteristic>
           </characteristics>
         </profile>
         <profile id="48f8-5a76-e8fd-828e" name="Cloying Sea Mists" hidden="false" typeId="13da-11a8-b7d1-77a7" typeName="Spell">
@@ -390,30 +389,6 @@ This model can retreat and still charge later in the same turn.</characteristic>
         <profile id="5d09-851f-cae2-4bc1" name="Tsunami of Terror" hidden="false" typeId="13da-11a8-b7d1-77a7" typeName="Spell">
           <characteristics>
             <characteristic name="Spell" typeId="1170-c916-1b73-ae34">Tsunami of Terror has a casting value of 7. If successfully cast, pick up to D6 enemy units within 12&quot; of the caster and visible to them. Until your next hero phase, subtract 1 from hit rolls for attacks made by those units, and subtract 1 from the Bravery characteristic of those units.</characteristic>
-          </characteristics>
-        </profile>
-        <profile id="4b8e-61b2-8831-712e" name="Freezing Mists" hidden="false" typeId="13da-11a8-b7d1-77a7" typeName="Spell">
-          <modifiers>
-            <modifier type="set" field="hidden" value="true">
-              <conditions>
-                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="d8e3-6b13-4d03-10c3" type="equalTo"/>
-              </conditions>
-            </modifier>
-          </modifiers>
-          <characteristics>
-            <characteristic name="Spell" typeId="1170-c916-1b73-ae34">Freezing Mists has a casting value of 6. If successfully cast, pick an enemy unit within 12&quot; of the caster that is visible to them. Until your next hero phase, that unit can only move 1&quot; when it piles in, and any abilities that would increase its pile in move are ignored.</characteristic>
-          </characteristics>
-        </profile>
-        <profile id="cc7f-c817-a0c3-b0aa" name="Protective Barrier" hidden="false" typeId="13da-11a8-b7d1-77a7" typeName="Spell">
-          <modifiers>
-            <modifier type="set" field="hidden" value="true">
-              <conditions>
-                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="3c47-d09e-d0c8-8682" type="equalTo"/>
-              </conditions>
-            </modifier>
-          </modifiers>
-          <characteristics>
-            <characteristic name="Spell" typeId="1170-c916-1b73-ae34">Protective Barrier has a casting value of 4. If successfully cast, pick a friendly Nautilar unit within 12&quot; of the caster that is visible to them. Until your next hero phase, worsen the Rend characteristic of attacks that target that unit by 1 (to a minimum of ‘-’).</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -858,12 +833,35 @@ This model can retreat and still charge later in the same turn.</characteristic>
         <profile id="5581-d3f7-36fc-588d" name="Isharann Tidecaster" hidden="false" typeId="a62b-2245-5c24-f8bc" typeName="Magic">
           <characteristics>
             <characteristic name="Cast/Unbind" typeId="9a5b-68ee-bc46-6a9d">1/1</characteristic>
-            <characteristic name="Spells Known" typeId="25bd-2ad0-e570-e880">Arcane Bolt, Mystic Shield, Riptide</characteristic>
           </characteristics>
         </profile>
         <profile id="3245-1fe1-2e64-6805" name="Riptide" hidden="false" typeId="13da-11a8-b7d1-77a7" typeName="Spell">
           <characteristics>
             <characteristic name="Spell" typeId="1170-c916-1b73-ae34">Riptide has a casting value of 7. If successfully cast, pick an enemy unit within 18&quot; of the caster that is visible to them. Until your next hero phase, subtract 1 from hit rolls for that unit. In addition, at the start of your next hero phase the unit suffers D3 mortal wounds.</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="fb7e-a62b-9ff7-c041" name="Freezing Mists" hidden="false" typeId="13da-11a8-b7d1-77a7" typeName="Spell">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="d8e3-6b13-4d03-10c3" type="equalTo"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <characteristics>
+            <characteristic name="Spell" typeId="1170-c916-1b73-ae34">Freezing Mists has a casting value of 6. If successfully cast, pick an enemy unit within 12&quot; of the caster that is visible to them. Until your next hero phase, that unit can only move 1&quot; when it piles in, and any abilities that would increase its pile in move are ignored.</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="8c1a-4fdd-0738-0b21" name="Protective Barrier" hidden="false" typeId="13da-11a8-b7d1-77a7" typeName="Spell">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="3c47-d09e-d0c8-8682" type="equalTo"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <characteristics>
+            <characteristic name="Spell" typeId="1170-c916-1b73-ae34">Protective Barrier has a casting value of 4. If successfully cast, pick a friendly Nautilar unit within 12&quot; of the caster that is visible to them. Until your next hero phase, worsen the Rend characteristic of attacks that target that unit by 1 (to a minimum of ‘-’).</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -1636,46 +1634,6 @@ This model can retreat and still charge later in the same turn.</characteristic>
             <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="54eb-a9cf-1621-24f9" name="CONDITIONAL BATTLELINE" hidden="false" collective="false" import="true" type="upgrade">
-          <modifiers>
-            <modifier type="set" field="hidden" value="true">
-              <conditionGroups>
-                <conditionGroup type="or">
-                  <conditions>
-                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="e3a6-45ca-4974-b489" type="instanceOf"/>
-                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4373-740f-1bf3-b0aa" type="instanceOf"/>
-                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="6cd6-b22e-bfcb-9589" type="instanceOf"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
-            </modifier>
-            <modifier type="set" field="d3e8-bafe-d4e0-f1c9" value="0.0">
-              <conditionGroups>
-                <conditionGroup type="or">
-                  <conditions>
-                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="e3a6-45ca-4974-b489" type="instanceOf"/>
-                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4373-740f-1bf3-b0aa" type="instanceOf"/>
-                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="6cd6-b22e-bfcb-9589" type="instanceOf"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
-            </modifier>
-          </modifiers>
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d3e8-bafe-d4e0-f1c9" type="min"/>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="41b8-95fd-ac6b-88d0" type="max"/>
-          </constraints>
-          <profiles>
-            <profile id="b915-1546-a61b-0973" name="CONDITIONAL BATTLELINE" hidden="false" typeId="77d9-94b6-d8f2-a150" typeName="BATTLELINE">
-              <characteristics>
-                <characteristic name="Condition" typeId="820b-20af-6fd8-5f48">Battleline in Idoneth Deepkin army if general is an AKHELIAN HERO</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <costs>
-            <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
-          </costs>
-        </selectionEntry>
       </selectionEntries>
       <selectionEntryGroups>
         <selectionEntryGroup id="7674-e3b6-3286-0684" name="Unit Options" hidden="false" collective="false" import="true">
@@ -1684,15 +1642,15 @@ This model can retreat and still charge later in the same turn.</characteristic>
               <modifiers>
                 <modifier type="increment" field="e87f-925d-8f7b-797c" value="3.0">
                   <repeats>
-                    <repeat field="selections" scope="f5a7-7053-5818-7599" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="9ff2-36bb-7823-16e8" repeats="1" roundUp="false"/>
+                    <repeat field="selections" scope="f5a7-7053-5818-7599" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e20c-48d8-e5e3-1a36" repeats="1" roundUp="false"/>
                   </repeats>
                   <conditions>
-                    <condition field="selections" scope="f5a7-7053-5818-7599" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="9ff2-36bb-7823-16e8" type="greaterThan"/>
+                    <condition field="selections" scope="f5a7-7053-5818-7599" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e20c-48d8-e5e3-1a36" type="greaterThan"/>
                   </conditions>
                 </modifier>
               </modifiers>
               <constraints>
-                <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="e87f-925d-8f7b-797c" type="max"/>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="e87f-925d-8f7b-797c" type="max"/>
               </constraints>
               <selectionEntries>
                 <selectionEntry id="b124-de99-c557-acb2" name="Standard Bearer" hidden="false" collective="false" import="true" type="upgrade">
@@ -1726,6 +1684,15 @@ This model can retreat and still charge later in the same turn.</characteristic>
       </selectionEntryGroups>
       <entryLinks>
         <entryLink id="ebfe-2d49-1450-a2ed" name="Unit Reinforcement" hidden="false" collective="false" import="true" targetId="b493-d9e6-82ca-5488" type="selectionEntry"/>
+        <entryLink id="a96a-5263-37b4-f725" name="CONDITIONAL BATTLELINE" hidden="false" collective="false" import="true" targetId="6a2c-7fc7-e348-ca8c" type="selectionEntry">
+          <profiles>
+            <profile id="c0d4-719a-962b-353e" name="CONDITIONAL BATTLELINE" hidden="false" typeId="77d9-94b6-d8f2-a150" typeName="BATTLELINE">
+              <characteristics>
+                <characteristic name="Condition" typeId="820b-20af-6fd8-5f48">Battleline in Idoneth Deepkin army if general is an AKHELIAN HERO</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+        </entryLink>
       </entryLinks>
       <costs>
         <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="195.0"/>
@@ -1850,46 +1817,6 @@ This model can retreat and still charge later in the same turn.</characteristic>
             <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="85c4-eede-33ab-94fd" name="CONDITIONAL BATTLELINE" hidden="false" collective="false" import="true" type="upgrade">
-          <modifiers>
-            <modifier type="set" field="hidden" value="true">
-              <conditionGroups>
-                <conditionGroup type="or">
-                  <conditions>
-                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="e3a6-45ca-4974-b489" type="instanceOf"/>
-                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4373-740f-1bf3-b0aa" type="instanceOf"/>
-                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="6cd6-b22e-bfcb-9589" type="instanceOf"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
-            </modifier>
-            <modifier type="set" field="f45c-b43d-53da-47dd" value="0.0">
-              <conditionGroups>
-                <conditionGroup type="or">
-                  <conditions>
-                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="e3a6-45ca-4974-b489" type="instanceOf"/>
-                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4373-740f-1bf3-b0aa" type="instanceOf"/>
-                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="6cd6-b22e-bfcb-9589" type="instanceOf"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
-            </modifier>
-          </modifiers>
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="f45c-b43d-53da-47dd" type="min"/>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="3080-84a0-750d-ea10" type="max"/>
-          </constraints>
-          <profiles>
-            <profile id="2563-686f-28eb-77bf" name="CONDITIONAL BATTLELINE" hidden="false" typeId="77d9-94b6-d8f2-a150" typeName="BATTLELINE">
-              <characteristics>
-                <characteristic name="Condition" typeId="820b-20af-6fd8-5f48">Battleline in Idoneth Deepkin army if general is an AKHELIAN HERO</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <costs>
-            <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
-          </costs>
-        </selectionEntry>
       </selectionEntries>
       <selectionEntryGroups>
         <selectionEntryGroup id="b3bb-84df-95d9-f80b" name="Unit Options" hidden="false" collective="false" import="true">
@@ -1898,15 +1825,15 @@ This model can retreat and still charge later in the same turn.</characteristic>
               <modifiers>
                 <modifier type="increment" field="e96e-10ac-7e9c-32cb" value="3.0">
                   <repeats>
-                    <repeat field="selections" scope="f377-d0cc-5ff0-c9ba" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="88b8-1f45-4d00-35a9" repeats="1" roundUp="false"/>
+                    <repeat field="selections" scope="f377-d0cc-5ff0-c9ba" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e20c-48d8-e5e3-1a36" repeats="1" roundUp="false"/>
                   </repeats>
                   <conditions>
-                    <condition field="selections" scope="f377-d0cc-5ff0-c9ba" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="88b8-1f45-4d00-35a9" type="greaterThan"/>
+                    <condition field="selections" scope="f377-d0cc-5ff0-c9ba" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e20c-48d8-e5e3-1a36" type="greaterThan"/>
                   </conditions>
                 </modifier>
               </modifiers>
               <constraints>
-                <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="e96e-10ac-7e9c-32cb" type="max"/>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="e96e-10ac-7e9c-32cb" type="max"/>
               </constraints>
               <selectionEntries>
                 <selectionEntry id="c3e2-ae4c-949a-d186" name="Standard Bearer" hidden="false" collective="false" import="true" type="upgrade">
@@ -1940,6 +1867,15 @@ This model can retreat and still charge later in the same turn.</characteristic>
       </selectionEntryGroups>
       <entryLinks>
         <entryLink id="1b47-332b-104e-fc39" name="Unit Reinforcement" hidden="false" collective="false" import="true" targetId="b493-d9e6-82ca-5488" type="selectionEntry"/>
+        <entryLink id="944a-3837-d107-2247" name="CONDITIONAL BATTLELINE" hidden="false" collective="false" import="true" targetId="6a2c-7fc7-e348-ca8c" type="selectionEntry">
+          <profiles>
+            <profile id="84ef-a00e-f95a-df64" name="CONDITIONAL BATTLELINE" hidden="false" typeId="77d9-94b6-d8f2-a150" typeName="BATTLELINE">
+              <characteristics>
+                <characteristic name="Condition" typeId="820b-20af-6fd8-5f48">Battleline in Idoneth Deepkin army if general is an AKHELIAN HERO</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+        </entryLink>
       </entryLinks>
       <costs>
         <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="155.0"/>
@@ -2023,46 +1959,6 @@ This model can retreat and still charge later in the same turn.</characteristic>
             <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="1d33-d1ef-611b-ca80" name="BATTLELINE" hidden="false" collective="false" import="true" type="upgrade">
-          <modifiers>
-            <modifier type="set" field="hidden" value="true">
-              <conditionGroups>
-                <conditionGroup type="or">
-                  <conditions>
-                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="e3a6-45ca-4974-b489" type="instanceOf"/>
-                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4373-740f-1bf3-b0aa" type="instanceOf"/>
-                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="6cd6-b22e-bfcb-9589" type="instanceOf"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
-            </modifier>
-            <modifier type="set" field="3ef0-5c76-d40e-b45e" value="0.0">
-              <conditionGroups>
-                <conditionGroup type="or">
-                  <conditions>
-                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="e3a6-45ca-4974-b489" type="instanceOf"/>
-                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4373-740f-1bf3-b0aa" type="instanceOf"/>
-                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="6cd6-b22e-bfcb-9589" type="instanceOf"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
-            </modifier>
-          </modifiers>
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="3ef0-5c76-d40e-b45e" type="min"/>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="e984-72c7-2581-d6cb" type="max"/>
-          </constraints>
-          <profiles>
-            <profile id="afb6-cc7d-dd69-657a" name="BATTLELINE" hidden="false" typeId="77d9-94b6-d8f2-a150" typeName="BATTLELINE">
-              <characteristics>
-                <characteristic name="Condition" typeId="820b-20af-6fd8-5f48">This unit is battleline</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <costs>
-            <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
-          </costs>
-        </selectionEntry>
       </selectionEntries>
       <selectionEntryGroups>
         <selectionEntryGroup id="05b3-5af3-58ac-7167" name="Unit Option" hidden="false" collective="false" import="true">
@@ -2071,15 +1967,15 @@ This model can retreat and still charge later in the same turn.</characteristic>
               <modifiers>
                 <modifier type="increment" field="7952-9ca7-6c1d-bbe0" value="1.0">
                   <repeats>
-                    <repeat field="selections" scope="9d96-79c5-f89b-592a" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="7ac1-3d89-79e5-977e" repeats="1" roundUp="false"/>
+                    <repeat field="selections" scope="9d96-79c5-f89b-592a" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e20c-48d8-e5e3-1a36" repeats="1" roundUp="false"/>
                   </repeats>
                   <conditions>
-                    <condition field="selections" scope="9d96-79c5-f89b-592a" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="7ac1-3d89-79e5-977e" type="greaterThan"/>
+                    <condition field="selections" scope="9d96-79c5-f89b-592a" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e20c-48d8-e5e3-1a36" type="greaterThan"/>
                   </conditions>
                 </modifier>
               </modifiers>
               <constraints>
-                <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="7952-9ca7-6c1d-bbe0" type="max"/>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="7952-9ca7-6c1d-bbe0" type="max"/>
               </constraints>
               <profiles>
                 <profile id="c0e8-4a70-3da2-06b5" name="Icon Bearer" hidden="false" typeId="c23b-5a30-07e2-4706" typeName="Unit Options">
@@ -2097,6 +1993,7 @@ This model can retreat and still charge later in the same turn.</characteristic>
       </selectionEntryGroups>
       <entryLinks>
         <entryLink id="d8c7-cb11-aaca-e1fe" name="Unit Reinforcement" hidden="false" collective="false" import="true" targetId="b493-d9e6-82ca-5488" type="selectionEntry"/>
+        <entryLink id="62b7-6d1f-bbc9-315c" name="BATTLELINE" hidden="false" collective="false" import="true" targetId="be1f-d384-9fe4-789d" type="selectionEntry"/>
       </entryLinks>
       <costs>
         <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="120.0"/>
@@ -2168,46 +2065,6 @@ This model can retreat and still charge later in the same turn.</characteristic>
             <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="3f1c-86b0-6545-6acf" name="CONDITIONAL BATTLELINE" hidden="false" collective="false" import="true" type="upgrade">
-          <modifiers>
-            <modifier type="set" field="hidden" value="true">
-              <conditionGroups>
-                <conditionGroup type="or">
-                  <conditions>
-                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="e3a6-45ca-4974-b489" type="instanceOf"/>
-                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4373-740f-1bf3-b0aa" type="instanceOf"/>
-                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="6cd6-b22e-bfcb-9589" type="instanceOf"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
-            </modifier>
-            <modifier type="set" field="5ab2-8ae3-d4e7-6637" value="0.0">
-              <conditionGroups>
-                <conditionGroup type="or">
-                  <conditions>
-                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="e3a6-45ca-4974-b489" type="instanceOf"/>
-                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4373-740f-1bf3-b0aa" type="instanceOf"/>
-                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="6cd6-b22e-bfcb-9589" type="instanceOf"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
-            </modifier>
-          </modifiers>
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="5ab2-8ae3-d4e7-6637" type="min"/>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="06bd-a912-4058-8402" type="max"/>
-          </constraints>
-          <profiles>
-            <profile id="7cde-5f4b-5307-4510" name="CONDITIONAL BATTLELINE" hidden="false" typeId="77d9-94b6-d8f2-a150" typeName="BATTLELINE">
-              <characteristics>
-                <characteristic name="Condition" typeId="820b-20af-6fd8-5f48">Battleline in Idoneth Deepkin army if general is an ISHARANN HERO</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <costs>
-            <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
-          </costs>
-        </selectionEntry>
         <selectionEntry id="6cdc-f852-6774-f9ce" name="Whisperbow" hidden="false" collective="false" import="true" type="upgrade">
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="5841-feb3-4032-66d6" type="max"/>
@@ -2254,15 +2111,15 @@ This model can retreat and still charge later in the same turn.</characteristic>
               <modifiers>
                 <modifier type="increment" field="e1d1-90b7-b685-3633" value="1.0">
                   <repeats>
-                    <repeat field="selections" scope="52d3-6c54-1d17-0285" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="dbeb-ac24-aba0-5450" repeats="1" roundUp="false"/>
+                    <repeat field="selections" scope="52d3-6c54-1d17-0285" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e20c-48d8-e5e3-1a36" repeats="1" roundUp="false"/>
                   </repeats>
                   <conditions>
-                    <condition field="selections" scope="52d3-6c54-1d17-0285" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="dbeb-ac24-aba0-5450" type="greaterThan"/>
+                    <condition field="selections" scope="52d3-6c54-1d17-0285" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e20c-48d8-e5e3-1a36" type="greaterThan"/>
                   </conditions>
                 </modifier>
               </modifiers>
               <constraints>
-                <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="e1d1-90b7-b685-3633" type="max"/>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="e1d1-90b7-b685-3633" type="max"/>
               </constraints>
               <profiles>
                 <profile id="acd5-8c96-4ae9-a040" name="Icon Bearer" hidden="false" typeId="c23b-5a30-07e2-4706" typeName="Unit Options">
@@ -2280,6 +2137,15 @@ This model can retreat and still charge later in the same turn.</characteristic>
       </selectionEntryGroups>
       <entryLinks>
         <entryLink id="30f3-99c5-a2aa-5f56" name="Unit Reinforcement" hidden="false" collective="false" import="true" targetId="b493-d9e6-82ca-5488" type="selectionEntry"/>
+        <entryLink id="4d16-f9be-fe69-87cd" name="CONDITIONAL BATTLELINE" hidden="false" collective="false" import="true" targetId="6a2c-7fc7-e348-ca8c" type="selectionEntry">
+          <profiles>
+            <profile id="7eba-fbc0-de84-65ed" name="CONDITIONAL BATTLELINE" hidden="false" typeId="77d9-94b6-d8f2-a150" typeName="BATTLELINE">
+              <characteristics>
+                <characteristic name="Condition" typeId="820b-20af-6fd8-5f48">Battleline in Idoneth Deepkin army if general is an ISHARANN HERO</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+        </entryLink>
       </entryLinks>
       <costs>
         <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="115.0"/>

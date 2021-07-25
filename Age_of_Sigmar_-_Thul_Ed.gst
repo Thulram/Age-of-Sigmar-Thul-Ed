@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<gameSystem id="e832-3291-06be-cab1" name="Age of Sigmar - Thul Ed" revision="14" battleScribeVersion="2.03" authorName="Thulram" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
+<gameSystem id="e832-3291-06be-cab1" name="Age of Sigmar - Thul Ed" revision="15" battleScribeVersion="2.03" authorName="Thulram" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
   <publications>
     <publication id="bf0c-0cbf-1f5d-5885" name="Chaos Battletome - Blades of Khorne"/>
     <publication id="6ce4-e8a3-f18f-be55" name="Order Battletome - Daughters of Khaine"/>
@@ -2786,6 +2786,11 @@ At the start of your hero phase, you receive 1 extra command point if any friend
           </repeats>
           <conditions>
             <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="9e49-bd7f-45ee-1a96" type="greaterThan"/>
+          </conditions>
+        </modifier>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="543e-1cc9-6d38-f8b3" type="instanceOf"/>
           </conditions>
         </modifier>
       </modifiers>

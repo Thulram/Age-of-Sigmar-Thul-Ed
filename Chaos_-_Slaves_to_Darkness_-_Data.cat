@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="0323-3d4f-ac64-f863" name="Chaos - Slaves to Darkness - Data" revision="8" battleScribeVersion="2.03" authorName="Thulram" library="true" gameSystemId="e832-3291-06be-cab1" gameSystemRevision="8" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="0323-3d4f-ac64-f863" name="Chaos - Slaves to Darkness - Data" revision="9" battleScribeVersion="2.03" authorName="Thulram" library="true" gameSystemId="e832-3291-06be-cab1" gameSystemRevision="8" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <profileTypes>
     <profileType id="6d8f-5fb8-9cc5-2146" name="Archaon Wounds">
       <characteristicTypes>
@@ -2681,16 +2681,6 @@ In addition, add 1 to the Damage characteristic of this model’s Rune-etched Ax
             <characteristic name="Unit Option" typeId="5879-9a21-e9d2-539d">1 model in this unit can be an Exalted Champion. Add 1 to the Attacks characteristic of that model’s melee weapon.</characteristic>
           </characteristics>
         </profile>
-        <profile id="1882-f297-7edf-7a6e" name="Icon Bearer" hidden="false" typeId="c23b-5a30-07e2-4706" typeName="Unit Options">
-          <characteristics>
-            <characteristic name="Unit Option" typeId="5879-9a21-e9d2-539d">1 in every 5 models in this unit can be an Icon Bearer. Subtract 1 from the Bravery characteristic of enemy units while they are within 6&quot; of any friendly Icon Bearers.</characteristic>
-          </characteristics>
-        </profile>
-        <profile id="80b4-de35-0e0b-9ebb" name="Skull Drummer" hidden="false" typeId="c23b-5a30-07e2-4706" typeName="Unit Options">
-          <characteristics>
-            <characteristic name="Unit Option" typeId="5879-9a21-e9d2-539d">1 in every 5 models in this unit can be a Skull Drummer. Add 1 to run and charge rolls for this unit while it includes any Skull Drummers.</characteristic>
-          </characteristics>
-        </profile>
       </profiles>
       <categoryLinks>
         <categoryLink id="2f9c-e58e-6db8-2382" name="Chaos" hidden="false" targetId="d8b4-9de1-926f-99b1" primary="false"/>
@@ -2738,6 +2728,56 @@ In addition, add 1 to the Damage characteristic of this model’s Rune-etched Ax
           </costs>
         </selectionEntry>
       </selectionEntries>
+      <selectionEntryGroups>
+        <selectionEntryGroup id="8b9d-66fc-0a04-143a" name="Unit Options" hidden="false" collective="false" import="true">
+          <selectionEntries>
+            <selectionEntry id="c1ac-c02e-63b8-df59" name="Icon Bearer" hidden="false" collective="false" import="true" type="upgrade">
+              <modifiers>
+                <modifier type="increment" field="c0af-54b7-5493-4f6d" value="1.0">
+                  <repeats>
+                    <repeat field="selections" scope="ea93-8ff3-9b86-c8f0" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e20c-48d8-e5e3-1a36" repeats="1" roundUp="false"/>
+                  </repeats>
+                  <conditions>
+                    <condition field="selections" scope="ea93-8ff3-9b86-c8f0" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e20c-48d8-e5e3-1a36" type="greaterThan"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="c0af-54b7-5493-4f6d" type="max"/>
+              </constraints>
+              <profiles>
+                <profile id="04d7-9a95-6a14-2c51" name="Icon Bearer" hidden="false" typeId="c23b-5a30-07e2-4706" typeName="Unit Options">
+                  <characteristics>
+                    <characteristic name="Unit Option" typeId="5879-9a21-e9d2-539d">1 in every 5 models in this unit can be an Icon Bearer. Subtract 1 from the Bravery characteristic of enemy units while they are within 6&quot; of any friendly Icon Bearers.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+            </selectionEntry>
+            <selectionEntry id="c17c-7f23-be69-0df9" name="Skull Drummer" hidden="false" collective="false" import="true" type="upgrade">
+              <modifiers>
+                <modifier type="increment" field="d9a9-a9d4-f2ae-85d8" value="1.0">
+                  <repeats>
+                    <repeat field="selections" scope="ea93-8ff3-9b86-c8f0" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e20c-48d8-e5e3-1a36" repeats="1" roundUp="false"/>
+                  </repeats>
+                  <conditions>
+                    <condition field="selections" scope="ea93-8ff3-9b86-c8f0" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e20c-48d8-e5e3-1a36" type="greaterThan"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d9a9-a9d4-f2ae-85d8" type="max"/>
+              </constraints>
+              <profiles>
+                <profile id="fc9e-3966-65c8-3ba0" name="Skull Drummer" hidden="false" typeId="c23b-5a30-07e2-4706" typeName="Unit Options">
+                  <characteristics>
+                    <characteristic name="Unit Option" typeId="5879-9a21-e9d2-539d">1 in every 5 models in this unit can be a Skull Drummer. Add 1 to run and charge rolls for this unit while it includes any Skull Drummers.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
       <entryLinks>
         <entryLink id="06c3-ae5b-e060-3ec5" name="Mark of Chaos" hidden="false" collective="false" import="true" targetId="7b9f-eff9-b978-9129" type="selectionEntry"/>
         <entryLink id="6d23-2213-2b94-d959" name="Unit Reinforcement" hidden="false" collective="false" import="true" targetId="b493-d9e6-82ca-5488" type="selectionEntry"/>
@@ -3201,16 +3241,6 @@ In addition, add 1 to the Damage characteristic of this model’s Rune-etched Ax
             <characteristic name="Ability" typeId="9bce-4deb-8b79-eaec">Subtract 1 from the Bravery characteristic of enemy units within 3&quot; of any friendly units with this ability in the battleshock phase.</characteristic>
           </characteristics>
         </profile>
-        <profile id="0b45-8cb4-34c4-b825" name="Hornblower" hidden="false" typeId="c23b-5a30-07e2-4706" typeName="Unit Options">
-          <characteristics>
-            <characteristic name="Unit Option" typeId="5879-9a21-e9d2-539d">1 in every 5 models in this unit can be a Hornblower. Add 1 to run and charge rolls for a unit that includes any Hornblowers.</characteristic>
-          </characteristics>
-        </profile>
-        <profile id="ec92-e8a9-a3ba-3376" name="Standard Bearer" hidden="false" typeId="c23b-5a30-07e2-4706" typeName="Unit Options">
-          <characteristics>
-            <characteristic name="Unit Option" typeId="5879-9a21-e9d2-539d">1 in every 5 models in this unit can be a Standard Bearer. Add 1 to the Bravery characteristic of this unit while it includes any Standard Bearers.</characteristic>
-          </characteristics>
-        </profile>
       </profiles>
       <categoryLinks>
         <categoryLink id="77d1-3a40-b40f-a9dc" name="Chaos" hidden="false" targetId="d8b4-9de1-926f-99b1" primary="false"/>
@@ -3380,6 +3410,111 @@ In addition, add 1 to the Damage characteristic of this model’s Rune-etched Ax
             </selectionEntry>
           </selectionEntries>
         </selectionEntryGroup>
+        <selectionEntryGroup id="9050-07c0-e8bf-0515" name="Unit Options" publicationId="3fe3-bddd-c287-5968" hidden="false" collective="false" import="true">
+          <selectionEntries>
+            <selectionEntry id="bd8e-d1fe-5e18-92f3" name="Doom Knight" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="7b16-5210-8dd0-b575" type="max"/>
+              </constraints>
+              <profiles>
+                <profile id="a322-7e74-86d2-2a0f" name="Doom Knight" hidden="false" typeId="c23b-5a30-07e2-4706" typeName="Unit Options">
+                  <characteristics>
+                    <characteristic name="Unit Option" typeId="5879-9a21-e9d2-539d">1 model in this unit can be a Doom Knight. Add 1 to the Attacks characteristic that model’s melee weapons (excluding its mount). In addition, that model can replace its weapon option with a Cursed Flail and Chaos Runeshield.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <selectionEntryGroups>
+                <selectionEntryGroup id="bfa2-abc0-3d5a-6363" name="Doom Knight Weapon Option" hidden="false" collective="false" import="true" defaultSelectionEntryId="d810-a1e3-2afa-9e67">
+                  <constraints>
+                    <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="5b72-df43-62df-9abf" type="max"/>
+                    <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="7e4e-2fa7-9151-7c73" type="min"/>
+                  </constraints>
+                  <selectionEntries>
+                    <selectionEntry id="d810-a1e3-2afa-9e67" name="- Default Unit Option" hidden="false" collective="false" import="true" type="upgrade">
+                      <costs>
+                        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
+                      </costs>
+                    </selectionEntry>
+                    <selectionEntry id="f900-f73c-32c4-66fc" name="Cursed Flail and Chaos Runeshield" hidden="false" collective="false" import="true" type="upgrade">
+                      <profiles>
+                        <profile id="8aa4-90ed-0a6a-70de" name="Cursed Flail" hidden="false" typeId="2905-f6bd-06e5-6642" typeName="Weapon">
+                          <characteristics>
+                            <characteristic name="Type" typeId="1a08-195b-76fd-2c2b">Melee</characteristic>
+                            <characteristic name="Range" typeId="1406-f935-3f8e-b27f">2&quot;</characteristic>
+                            <characteristic name="Attacks" typeId="4c19-dba6-f094-5165">D6</characteristic>
+                            <characteristic name="To-Hit" typeId="7a4f-9704-2095-96c8">4+</characteristic>
+                            <characteristic name="To-Wound" typeId="172f-fc84-895b-04b7">3+</characteristic>
+                            <characteristic name="Rend" typeId="0c05-bd2e-b7e7-3925">-</characteristic>
+                            <characteristic name="Damage" typeId="01c2-d16a-8788-e52b">1</characteristic>
+                          </characteristics>
+                        </profile>
+                      </profiles>
+                      <infoLinks>
+                        <infoLink id="7582-3134-2552-5a73" name="Chaos Runeshield" hidden="false" targetId="402b-581b-afcd-89f6" type="profile"/>
+                      </infoLinks>
+                      <costs>
+                        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
+                      </costs>
+                    </selectionEntry>
+                  </selectionEntries>
+                </selectionEntryGroup>
+              </selectionEntryGroups>
+              <costs>
+                <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="05c5-94fd-cbcc-4ba9" name="Standard Bearer" hidden="false" collective="false" import="true" type="upgrade">
+              <modifiers>
+                <modifier type="increment" field="a23c-d64e-7b93-0719" value="1.0">
+                  <repeats>
+                    <repeat field="selections" scope="73fe-2d86-24a1-fe98" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e20c-48d8-e5e3-1a36" repeats="1" roundUp="false"/>
+                  </repeats>
+                  <conditions>
+                    <condition field="selections" scope="73fe-2d86-24a1-fe98" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e20c-48d8-e5e3-1a36" type="greaterThan"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="a23c-d64e-7b93-0719" type="max"/>
+              </constraints>
+              <profiles>
+                <profile id="57f0-4381-039b-ba58" name="Standard Bearer" hidden="false" typeId="c23b-5a30-07e2-4706" typeName="Unit Options">
+                  <characteristics>
+                    <characteristic name="Unit Option" typeId="5879-9a21-e9d2-539d">1 in every 5 models in this unit can be a Standard Bearer. Add 1 to the Bravery characteristic of this unit while it includes any Standard Bearers.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <costs>
+                <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="0f4b-f32f-6b20-d06c" name="Hornblower" hidden="false" collective="false" import="true" type="upgrade">
+              <modifiers>
+                <modifier type="increment" field="90c5-4601-0a6b-181b" value="1.0">
+                  <repeats>
+                    <repeat field="selections" scope="73fe-2d86-24a1-fe98" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e20c-48d8-e5e3-1a36" repeats="1" roundUp="false"/>
+                  </repeats>
+                  <conditions>
+                    <condition field="selections" scope="73fe-2d86-24a1-fe98" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e20c-48d8-e5e3-1a36" type="greaterThan"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="90c5-4601-0a6b-181b" type="max"/>
+              </constraints>
+              <profiles>
+                <profile id="cc54-bf5f-ff69-a107" name="Hornblower" hidden="false" typeId="c23b-5a30-07e2-4706" typeName="Unit Options">
+                  <characteristics>
+                    <characteristic name="Unit Option" typeId="5879-9a21-e9d2-539d">1 in every 5 models in this unit can be a Hornblower. Add 1 to run and charge rolls for a unit that includes any Hornblowers.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <costs>
+                <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
+              </costs>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
       </selectionEntryGroups>
       <entryLinks>
         <entryLink id="db79-d1a2-90f2-f7bc" name="Mark of Chaos" hidden="false" collective="false" import="true" targetId="7b9f-eff9-b978-9129" type="selectionEntry"/>
@@ -3429,16 +3564,6 @@ In addition, add 1 to the Damage characteristic of this model’s Rune-etched Ax
         <profile id="2105-2f3d-3d42-b0f0" name="Aspiring Champion" hidden="false" typeId="c23b-5a30-07e2-4706" typeName="Unit Options">
           <characteristics>
             <characteristic name="Unit Option" typeId="5879-9a21-e9d2-539d">1 model in this unit can be an Aspiring Champion. Add 1 to the Attacks characteristic of that model’s melee weapons.</characteristic>
-          </characteristics>
-        </profile>
-        <profile id="6056-2b64-c4b5-ea61" name="Hornblower" hidden="false" typeId="c23b-5a30-07e2-4706" typeName="Unit Options">
-          <characteristics>
-            <characteristic name="Unit Option" typeId="5879-9a21-e9d2-539d">1 in every 5 models in this unit can be a Hornblower. Add 1 to run and charge rolls for this unit while it includes any Hornblowers.</characteristic>
-          </characteristics>
-        </profile>
-        <profile id="ce45-dc83-882f-5a55" name="Standard Bearer" hidden="false" typeId="c23b-5a30-07e2-4706" typeName="Unit Options">
-          <characteristics>
-            <characteristic name="Unit Option" typeId="5879-9a21-e9d2-539d">1 in every 5 models in this unit can be a Standard Bearer. Add 1 to the Bravery characteristic of this unit while it includes any Standard Bearers.</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -3554,6 +3679,60 @@ In addition, add 1 to the Damage characteristic of this model’s Rune-etched Ax
             </selectionEntry>
           </selectionEntries>
         </selectionEntryGroup>
+        <selectionEntryGroup id="e6c1-2081-0c10-24ac" name="Unit Options" hidden="false" collective="false" import="true">
+          <selectionEntries>
+            <selectionEntry id="6f82-33f0-c0af-e05b" name="Standard Bearer" hidden="false" collective="false" import="true" type="upgrade">
+              <modifiers>
+                <modifier type="increment" field="4ecc-c57c-b5e8-a937" value="1.0">
+                  <repeats>
+                    <repeat field="selections" scope="60a2-6f0e-3dac-fcc4" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e20c-48d8-e5e3-1a36" repeats="1" roundUp="false"/>
+                  </repeats>
+                  <conditions>
+                    <condition field="selections" scope="60a2-6f0e-3dac-fcc4" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e20c-48d8-e5e3-1a36" type="greaterThan"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+              <constraints>
+                <constraint field="selections" scope="parent" value="2.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="4ecc-c57c-b5e8-a937" type="max"/>
+              </constraints>
+              <profiles>
+                <profile id="de23-2ac5-15e7-8373" name="Standard Bearer" hidden="false" typeId="c23b-5a30-07e2-4706" typeName="Unit Options">
+                  <characteristics>
+                    <characteristic name="Unit Option" typeId="5879-9a21-e9d2-539d">1 in every 5 models in this unit can be a Standard Bearer. Add 1 to the Bravery characteristic of this unit while it includes any Standard Bearers.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <costs>
+                <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="5561-3062-fd6e-6c1c" name="Hornblower" hidden="false" collective="false" import="true" type="upgrade">
+              <modifiers>
+                <modifier type="increment" field="d509-a2ee-4a33-88f9" value="1.0">
+                  <repeats>
+                    <repeat field="selections" scope="60a2-6f0e-3dac-fcc4" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e20c-48d8-e5e3-1a36" repeats="1" roundUp="false"/>
+                  </repeats>
+                  <conditions>
+                    <condition field="selections" scope="60a2-6f0e-3dac-fcc4" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e20c-48d8-e5e3-1a36" type="greaterThan"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+              <constraints>
+                <constraint field="selections" scope="parent" value="2.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d509-a2ee-4a33-88f9" type="max"/>
+              </constraints>
+              <profiles>
+                <profile id="d7ab-f89f-37c5-6486" name="Hornblower" hidden="false" typeId="c23b-5a30-07e2-4706" typeName="Unit Options">
+                  <characteristics>
+                    <characteristic name="Unit Option" typeId="5879-9a21-e9d2-539d">1 in every 5 models in this unit can be a Hornblower. Add 1 to run and charge rolls for this unit while it includes any Hornblowers.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <costs>
+                <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
+              </costs>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
       </selectionEntryGroups>
       <entryLinks>
         <entryLink id="fad5-6746-15ec-a803" name="Mark of Chaos" hidden="false" collective="false" import="true" targetId="7b9f-eff9-b978-9129" type="selectionEntry"/>
@@ -3613,11 +3792,6 @@ In addition, add 1 to the Damage characteristic of this model’s Rune-etched Ax
         <profile id="40a7-e2d8-2962-4ad8" name="Marauder Chieftain" hidden="false" typeId="c23b-5a30-07e2-4706" typeName="Unit Options">
           <characteristics>
             <characteristic name="Unit Option" typeId="5879-9a21-e9d2-539d">1 model in this unit can be a Marauder Chieftain. Add 1 to the Attacks characteristic of that model’s melee weapons.</characteristic>
-          </characteristics>
-        </profile>
-        <profile id="fbab-a30b-6c9f-e1c2" name="Barbarian Drummer" hidden="false" typeId="c23b-5a30-07e2-4706" typeName="Unit Options">
-          <characteristics>
-            <characteristic name="Unit Option" typeId="5879-9a21-e9d2-539d">1 in every 5 models in this unit can be a Barbarian Drummer. Add 1 to run and charge rolls for this unit while it includes any Barbarian Drummers.</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -3691,6 +3865,60 @@ In addition, add 1 to the Damage characteristic of this model’s Rune-etched Ax
             </selectionEntry>
           </selectionEntries>
         </selectionEntryGroup>
+        <selectionEntryGroup id="9ad6-2c2d-ea69-934d" name="Unit Options" hidden="false" collective="false" import="true">
+          <selectionEntries>
+            <selectionEntry id="7d20-bc96-ae81-f2a9" name="Icon Bearer" hidden="false" collective="false" import="true" type="upgrade">
+              <modifiers>
+                <modifier type="increment" field="7809-2526-673c-8fc9" value="2.0">
+                  <repeats>
+                    <repeat field="selections" scope="e057-b25e-b5b4-4df1" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e20c-48d8-e5e3-1a36" repeats="1" roundUp="false"/>
+                  </repeats>
+                  <conditions>
+                    <condition field="selections" scope="e057-b25e-b5b4-4df1" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e20c-48d8-e5e3-1a36" type="greaterThan"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+              <constraints>
+                <constraint field="selections" scope="parent" value="2.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="7809-2526-673c-8fc9" type="max"/>
+              </constraints>
+              <profiles>
+                <profile id="a9cb-4494-7892-1a19" name="Icon Bearer" hidden="false" typeId="c23b-5a30-07e2-4706" typeName="Unit Options">
+                  <characteristics>
+                    <characteristic name="Unit Option" typeId="5879-9a21-e9d2-539d">1 in every 5 models in this unit can be an Icon Bearer. Subtract 1 from the Bravery characteristic of enemy units while they are within 6&quot; of any friendly Icon Bearers.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <costs>
+                <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="bc66-055f-3059-8b16" name="Barbarian Drummer" hidden="false" collective="false" import="true" type="upgrade">
+              <modifiers>
+                <modifier type="increment" field="b0ce-6cc5-7752-6369" value="2.0">
+                  <repeats>
+                    <repeat field="selections" scope="e057-b25e-b5b4-4df1" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e20c-48d8-e5e3-1a36" repeats="1" roundUp="false"/>
+                  </repeats>
+                  <conditions>
+                    <condition field="selections" scope="e057-b25e-b5b4-4df1" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e20c-48d8-e5e3-1a36" type="greaterThan"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+              <constraints>
+                <constraint field="selections" scope="parent" value="2.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="b0ce-6cc5-7752-6369" type="max"/>
+              </constraints>
+              <profiles>
+                <profile id="dafd-edda-427b-143a" name="Barbarian Drummer" hidden="false" typeId="c23b-5a30-07e2-4706" typeName="Unit Options">
+                  <characteristics>
+                    <characteristic name="Unit Option" typeId="5879-9a21-e9d2-539d">1 in every 5 models in this unit can be a Barbarian Drummer. Add 1 to run and charge rolls for this unit while it includes any Barbarian Drummers.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <costs>
+                <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
+              </costs>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
       </selectionEntryGroups>
       <entryLinks>
         <entryLink id="6d01-43b8-bcd8-2fe6" name="Mark of Chaos" hidden="false" collective="false" import="true" targetId="7b9f-eff9-b978-9129" type="selectionEntry"/>
@@ -3742,19 +3970,9 @@ In addition, add 1 to the Damage characteristic of this model’s Rune-etched Ax
             <characteristic name="Ability" typeId="9bce-4deb-8b79-eaec">Add 1 to hit rolls for attacks made by this unit while it has at least 10 models.</characteristic>
           </characteristics>
         </profile>
-        <profile id="e6b1-4e90-2180-8c11" name="Hornblower" hidden="false" typeId="c23b-5a30-07e2-4706" typeName="Unit Options">
-          <characteristics>
-            <characteristic name="Unit Option" typeId="5879-9a21-e9d2-539d">1 in every 5 models in this unit can be a Hornblower. Add 1 to run and charge rolls for this unit while it includes any Hornblowers.</characteristic>
-          </characteristics>
-        </profile>
         <profile id="4be8-fadd-4103-d17e" name="Horsemaster" hidden="false" typeId="c23b-5a30-07e2-4706" typeName="Unit Options">
           <characteristics>
             <characteristic name="Unit Option" typeId="5879-9a21-e9d2-539d">1 model in this unit can be a Horsemaster. Add 1 to the Attacks characteristic of a Horsemaster’s melee weapons.</characteristic>
-          </characteristics>
-        </profile>
-        <profile id="f13b-2205-f6d1-6c86" name="Icon Bearer" hidden="false" typeId="c23b-5a30-07e2-4706" typeName="Unit Options">
-          <characteristics>
-            <characteristic name="Unit Option" typeId="5879-9a21-e9d2-539d">1 in every 5 models in this unit can be an Icon Bearer. Subtract 1 from the Bravery characteristic of enemy units while they are within 6&quot; of any friendly Icon Bearers.</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -3882,6 +4100,60 @@ In addition, add 1 to the Damage characteristic of this model’s Rune-etched Ax
                     <characteristic name="To-Wound" typeId="172f-fc84-895b-04b7">3+</characteristic>
                     <characteristic name="Rend" typeId="0c05-bd2e-b7e7-3925">-1</characteristic>
                     <characteristic name="Damage" typeId="01c2-d16a-8788-e52b">1</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <costs>
+                <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
+              </costs>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
+        <selectionEntryGroup id="02d6-f991-a506-bdca" name="Unit Options" hidden="false" collective="false" import="true">
+          <selectionEntries>
+            <selectionEntry id="f6a3-7ca5-27a6-dbc8" name="Icon Bearer" hidden="false" collective="false" import="true" type="upgrade">
+              <modifiers>
+                <modifier type="increment" field="9e8a-7564-24f0-d718" value="1.0">
+                  <repeats>
+                    <repeat field="selections" scope="fad7-8185-4954-cd2a" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e20c-48d8-e5e3-1a36" repeats="1" roundUp="false"/>
+                  </repeats>
+                  <conditions>
+                    <condition field="selections" scope="fad7-8185-4954-cd2a" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e20c-48d8-e5e3-1a36" type="greaterThan"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="9e8a-7564-24f0-d718" type="max"/>
+              </constraints>
+              <profiles>
+                <profile id="3237-257d-208e-9cbc" name="Icon Bearer" hidden="false" typeId="c23b-5a30-07e2-4706" typeName="Unit Options">
+                  <characteristics>
+                    <characteristic name="Unit Option" typeId="5879-9a21-e9d2-539d">1 in every 5 models in this unit can be an Icon Bearer. Subtract 1 from the Bravery characteristic of enemy units while they are within 6&quot; of any friendly Icon Bearers.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <costs>
+                <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="f0c2-0f85-1898-82e9" name="Hornblower" hidden="false" collective="false" import="true" type="upgrade">
+              <modifiers>
+                <modifier type="increment" field="8074-c331-4321-2475" value="1.0">
+                  <repeats>
+                    <repeat field="selections" scope="fad7-8185-4954-cd2a" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e20c-48d8-e5e3-1a36" repeats="1" roundUp="false"/>
+                  </repeats>
+                  <conditions>
+                    <condition field="selections" scope="fad7-8185-4954-cd2a" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e20c-48d8-e5e3-1a36" type="greaterThan"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8074-c331-4321-2475" type="max"/>
+              </constraints>
+              <profiles>
+                <profile id="d318-6258-6d2f-a3d1" name="Hornblower" hidden="false" typeId="c23b-5a30-07e2-4706" typeName="Unit Options">
+                  <characteristics>
+                    <characteristic name="Unit Option" typeId="5879-9a21-e9d2-539d">1 in every 5 models in this unit can be a Hornblower. Add 1 to run and charge rolls for this unit while it includes any Hornblowers.</characteristic>
                   </characteristics>
                 </profile>
               </profiles>

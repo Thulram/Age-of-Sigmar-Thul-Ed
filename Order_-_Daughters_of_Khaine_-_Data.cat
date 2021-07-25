@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="6529-a3f6-42f7-7556" name="Order - Daughters of Khaine - Data" revision="8" battleScribeVersion="2.03" authorName="Thulram" library="true" gameSystemId="e832-3291-06be-cab1" gameSystemRevision="8" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="6529-a3f6-42f7-7556" name="Order - Daughters of Khaine - Data" revision="9" battleScribeVersion="2.03" authorName="Thulram" library="true" gameSystemId="e832-3291-06be-cab1" gameSystemRevision="8" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <profileTypes>
     <profileType id="0d12-66d5-133a-d36d" name="Morathi Wounds">
       <characteristicTypes>
@@ -800,46 +800,6 @@ This model cannot move and cannot attack with its Torrent of Burning Blood or Av
             <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="f33a-5911-b493-0734" name="BATTLELINE" hidden="false" collective="false" import="true" type="upgrade">
-          <modifiers>
-            <modifier type="set" field="hidden" value="true">
-              <conditionGroups>
-                <conditionGroup type="or">
-                  <conditions>
-                    <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="6cd6-b22e-bfcb-9589" type="instanceOf"/>
-                    <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="e3a6-45ca-4974-b489" type="instanceOf"/>
-                    <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4373-740f-1bf3-b0aa" type="instanceOf"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
-            </modifier>
-            <modifier type="set" field="e3de-fcf3-0353-4d7c" value="0.0">
-              <conditionGroups>
-                <conditionGroup type="or">
-                  <conditions>
-                    <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="6cd6-b22e-bfcb-9589" type="instanceOf"/>
-                    <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="e3a6-45ca-4974-b489" type="instanceOf"/>
-                    <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4373-740f-1bf3-b0aa" type="instanceOf"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
-            </modifier>
-          </modifiers>
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="e3de-fcf3-0353-4d7c" type="min"/>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8240-b85c-a03e-f9eb" type="max"/>
-          </constraints>
-          <profiles>
-            <profile id="954e-7287-d64e-39f6" name="BATTLELINE" hidden="false" typeId="77d9-94b6-d8f2-a150" typeName="BATTLELINE">
-              <characteristics>
-                <characteristic name="Condition" typeId="820b-20af-6fd8-5f48">Battleline in Daughters of Khaine army.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <costs>
-            <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
-          </costs>
-        </selectionEntry>
       </selectionEntries>
       <selectionEntryGroups>
         <selectionEntryGroup id="7728-ff22-21d3-c228" name="Weapon Option" hidden="false" collective="false" import="true" defaultSelectionEntryId="33d9-c379-c0d1-90eb">
@@ -902,15 +862,15 @@ This model cannot move and cannot attack with its Torrent of Burning Blood or Av
               <modifiers>
                 <modifier type="increment" field="060a-0893-80d9-4ecc" value="2.0">
                   <repeats>
-                    <repeat field="selections" scope="a90f-18fa-f3ce-877d" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
+                    <repeat field="selections" scope="a90f-18fa-f3ce-877d" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e20c-48d8-e5e3-1a36" repeats="1" roundUp="false"/>
                   </repeats>
                   <conditions>
-                    <condition field="selections" scope="a90f-18fa-f3ce-877d" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" type="greaterThan"/>
+                    <condition field="selections" scope="a90f-18fa-f3ce-877d" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e20c-48d8-e5e3-1a36" type="greaterThan"/>
                   </conditions>
                 </modifier>
               </modifiers>
               <constraints>
-                <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="060a-0893-80d9-4ecc" type="max"/>
+                <constraint field="selections" scope="parent" value="2.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="060a-0893-80d9-4ecc" type="max"/>
               </constraints>
               <profiles>
                 <profile id="60c1-61fc-eb07-a3b5" name="Hornblower" hidden="false" typeId="c23b-5a30-07e2-4706" typeName="Unit Options">
@@ -927,15 +887,15 @@ This model cannot move and cannot attack with its Torrent of Burning Blood or Av
               <modifiers>
                 <modifier type="increment" field="a4cc-a106-f85f-a8b4" value="2.0">
                   <repeats>
-                    <repeat field="selections" scope="a90f-18fa-f3ce-877d" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
+                    <repeat field="selections" scope="a90f-18fa-f3ce-877d" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e20c-48d8-e5e3-1a36" repeats="1" roundUp="false"/>
                   </repeats>
                   <conditions>
-                    <condition field="selections" scope="a90f-18fa-f3ce-877d" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" type="greaterThan"/>
+                    <condition field="selections" scope="a90f-18fa-f3ce-877d" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e20c-48d8-e5e3-1a36" type="greaterThan"/>
                   </conditions>
                 </modifier>
               </modifiers>
               <constraints>
-                <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="a4cc-a106-f85f-a8b4" type="max"/>
+                <constraint field="selections" scope="parent" value="2.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="a4cc-a106-f85f-a8b4" type="max"/>
               </constraints>
               <profiles>
                 <profile id="8571-e5ce-281a-11be" name="Standard Bearer" hidden="false" typeId="c23b-5a30-07e2-4706" typeName="Unit Options">
@@ -953,6 +913,7 @@ This model cannot move and cannot attack with its Torrent of Burning Blood or Av
       </selectionEntryGroups>
       <entryLinks>
         <entryLink id="caba-80d2-85e7-5dcd" name="Unit Reinforcement" hidden="false" collective="false" import="true" targetId="b493-d9e6-82ca-5488" type="selectionEntry"/>
+        <entryLink id="ae00-c5ef-9840-5ae8" name="BATTLELINE" hidden="false" collective="false" import="true" targetId="be1f-d384-9fe4-789d" type="selectionEntry"/>
       </entryLinks>
       <costs>
         <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="120.0"/>
@@ -1013,46 +974,6 @@ This model cannot move and cannot attack with its Torrent of Burning Blood or Av
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="b565-6d79-6dd5-67ae" type="max"/>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="92ba-3e26-7a93-9ba2" type="min"/>
           </constraints>
-          <costs>
-            <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="54b5-67ce-daa2-8ec7" name="BATTLELINE" hidden="false" collective="false" import="true" type="upgrade">
-          <modifiers>
-            <modifier type="set" field="hidden" value="true">
-              <conditionGroups>
-                <conditionGroup type="or">
-                  <conditions>
-                    <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="6cd6-b22e-bfcb-9589" type="instanceOf"/>
-                    <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="e3a6-45ca-4974-b489" type="instanceOf"/>
-                    <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4373-740f-1bf3-b0aa" type="instanceOf"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
-            </modifier>
-            <modifier type="set" field="9b2f-9d79-fa8d-c54c" value="0.0">
-              <conditionGroups>
-                <conditionGroup type="or">
-                  <conditions>
-                    <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="6cd6-b22e-bfcb-9589" type="instanceOf"/>
-                    <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="e3a6-45ca-4974-b489" type="instanceOf"/>
-                    <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4373-740f-1bf3-b0aa" type="instanceOf"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
-            </modifier>
-          </modifiers>
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="9b2f-9d79-fa8d-c54c" type="min"/>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8745-41e2-0677-c961" type="max"/>
-          </constraints>
-          <profiles>
-            <profile id="f475-1cbe-f3a6-7918" name="BATTLELINE" hidden="false" typeId="77d9-94b6-d8f2-a150" typeName="BATTLELINE">
-              <characteristics>
-                <characteristic name="Condition" typeId="820b-20af-6fd8-5f48">Battleline in Daughters of Khaine army.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
           <costs>
             <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
           </costs>
@@ -1125,15 +1046,15 @@ This model cannot move and cannot attack with its Torrent of Burning Blood or Av
               <modifiers>
                 <modifier type="increment" field="7561-ef96-dca3-8eb0" value="2.0">
                   <repeats>
-                    <repeat field="selections" scope="cc3b-c9b5-d947-8fdf" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
+                    <repeat field="selections" scope="cc3b-c9b5-d947-8fdf" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e20c-48d8-e5e3-1a36" repeats="1" roundUp="false"/>
                   </repeats>
                   <conditions>
-                    <condition field="selections" scope="cc3b-c9b5-d947-8fdf" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" type="greaterThan"/>
+                    <condition field="selections" scope="cc3b-c9b5-d947-8fdf" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e20c-48d8-e5e3-1a36" type="greaterThan"/>
                   </conditions>
                 </modifier>
               </modifiers>
               <constraints>
-                <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="7561-ef96-dca3-8eb0" type="max"/>
+                <constraint field="selections" scope="parent" value="2.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="7561-ef96-dca3-8eb0" type="max"/>
               </constraints>
               <profiles>
                 <profile id="54f6-ea9a-354d-5f90" name="Standard Bearer" hidden="false" typeId="c23b-5a30-07e2-4706" typeName="Unit Options">
@@ -1150,15 +1071,15 @@ This model cannot move and cannot attack with its Torrent of Burning Blood or Av
               <modifiers>
                 <modifier type="increment" field="9f6a-ddde-f74d-9e47" value="2.0">
                   <repeats>
-                    <repeat field="selections" scope="cc3b-c9b5-d947-8fdf" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
+                    <repeat field="selections" scope="cc3b-c9b5-d947-8fdf" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e20c-48d8-e5e3-1a36" repeats="1" roundUp="false"/>
                   </repeats>
                   <conditions>
-                    <condition field="selections" scope="cc3b-c9b5-d947-8fdf" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" type="greaterThan"/>
+                    <condition field="selections" scope="cc3b-c9b5-d947-8fdf" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e20c-48d8-e5e3-1a36" type="greaterThan"/>
                   </conditions>
                 </modifier>
               </modifiers>
               <constraints>
-                <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="9f6a-ddde-f74d-9e47" type="max"/>
+                <constraint field="selections" scope="parent" value="2.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="9f6a-ddde-f74d-9e47" type="max"/>
               </constraints>
               <profiles>
                 <profile id="2dcb-eb4a-bef6-bf86" name="Hornblower" hidden="false" typeId="c23b-5a30-07e2-4706" typeName="Unit Options">
@@ -1176,6 +1097,7 @@ This model cannot move and cannot attack with its Torrent of Burning Blood or Av
       </selectionEntryGroups>
       <entryLinks>
         <entryLink id="b08d-c8e9-5326-0c40" name="Unit Reinforcement" hidden="false" collective="false" import="true" targetId="b493-d9e6-82ca-5488" type="selectionEntry"/>
+        <entryLink id="399e-6eee-3fc9-4acc" name="BATTLELINE" hidden="false" collective="false" import="true" targetId="be1f-d384-9fe4-789d" type="selectionEntry"/>
       </entryLinks>
       <costs>
         <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="135.0"/>
@@ -1232,7 +1154,6 @@ This model cannot move and cannot attack with its Torrent of Burning Blood or Av
         <profile id="7c43-76aa-6758-cd05" name="Bloodwrack Shrine" hidden="false" typeId="a62b-2245-5c24-f8bc" typeName="Magic">
           <characteristics>
             <characteristic name="Cast/Unbind" typeId="9a5b-68ee-bc46-6a9d">1/2</characteristic>
-            <characteristic name="Spells Known" typeId="25bd-2ad0-e570-e880">Arcane Bolt, Mystic Shield, Enfeebling Foe</characteristic>
           </characteristics>
         </profile>
         <profile id="33db-7c7f-1cce-6a88" name="Enfeebling Foe" hidden="false" typeId="13da-11a8-b7d1-77a7" typeName="Spell">
@@ -1397,7 +1318,6 @@ This model cannot move and cannot attack with its Torrent of Burning Blood or Av
         <profile id="f627-1dc2-cc24-aeea" name="Bloodwrack Medusa" hidden="false" typeId="a62b-2245-5c24-f8bc" typeName="Magic">
           <characteristics>
             <characteristic name="Cast/Unbind" typeId="9a5b-68ee-bc46-6a9d">1/2</characteristic>
-            <characteristic name="Spells Known" typeId="25bd-2ad0-e570-e880">Arcane Bolt, Mystic Shield, Enfeebling Foe</characteristic>
           </characteristics>
         </profile>
         <profile id="0686-2903-3fda-8088" name="Enfeebling Foe" hidden="false" typeId="13da-11a8-b7d1-77a7" typeName="Spell">
@@ -1525,11 +1445,6 @@ This model cannot move and cannot attack with its Torrent of Burning Blood or Av
     </selectionEntry>
     <selectionEntry id="98f2-239d-947c-fb81" name="Doomfire Warlocks" publicationId="6ce4-e8a3-f18f-be55" hidden="false" collective="false" import="true" type="unit">
       <modifiers>
-        <modifier type="set" field="b0b4-6aec-82c2-02ae" value="280.0">
-          <conditions>
-            <condition field="selections" scope="98f2-239d-947c-fb81" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="091f-7960-08d9-3515" type="greaterThan"/>
-          </conditions>
-        </modifier>
         <modifier type="increment" field="b0b4-6aec-82c2-02ae" value="140.0">
           <repeats>
             <repeat field="selections" scope="98f2-239d-947c-fb81" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e20c-48d8-e5e3-1a36" repeats="1" roundUp="false"/>
@@ -1556,7 +1471,6 @@ This model cannot move and cannot attack with its Torrent of Burning Blood or Av
         <profile id="251a-6b50-4dcc-0e29" name="Doomfire Warlocks" hidden="false" typeId="a62b-2245-5c24-f8bc" typeName="Magic">
           <characteristics>
             <characteristic name="Cast/Unbind" typeId="9a5b-68ee-bc46-6a9d">1/1</characteristic>
-            <characteristic name="Spells Known" typeId="25bd-2ad0-e570-e880">Arcane Bolt, Mystic Shield, Doomfire</characteristic>
           </characteristics>
         </profile>
         <profile id="1608-a204-9fb4-b10d" name="Doomfire" hidden="false" typeId="13da-11a8-b7d1-77a7" typeName="Spell">
@@ -1743,49 +1657,18 @@ This model cannot move and cannot attack with its Torrent of Burning Blood or Av
             <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="9762-6b3e-c9c6-5571" name="CONDITIONAL BATTLELINE" hidden="false" collective="false" import="true" type="upgrade">
-          <modifiers>
-            <modifier type="set" field="hidden" value="true">
-              <conditionGroups>
-                <conditionGroup type="or">
-                  <conditions>
-                    <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="6cd6-b22e-bfcb-9589" type="instanceOf"/>
-                    <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="e3a6-45ca-4974-b489" type="instanceOf"/>
-                    <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4373-740f-1bf3-b0aa" type="instanceOf"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
-            </modifier>
-            <modifier type="set" field="8941-d92e-85e3-a178" value="0.0">
-              <conditionGroups>
-                <conditionGroup type="or">
-                  <conditions>
-                    <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="6cd6-b22e-bfcb-9589" type="instanceOf"/>
-                    <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="e3a6-45ca-4974-b489" type="instanceOf"/>
-                    <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4373-740f-1bf3-b0aa" type="instanceOf"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
-            </modifier>
-          </modifiers>
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8941-d92e-85e3-a178" type="min"/>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="5025-5799-7ad8-198b" type="max"/>
-          </constraints>
+      </selectionEntries>
+      <entryLinks>
+        <entryLink id="fbc2-3a9e-4d45-7725" name="Unit Reinforcement" hidden="false" collective="false" import="true" targetId="b493-d9e6-82ca-5488" type="selectionEntry"/>
+        <entryLink id="fa06-4257-24fc-295f" name="CONDITIONAL BATTLELINE" hidden="false" collective="false" import="true" targetId="6a2c-7fc7-e348-ca8c" type="selectionEntry">
           <profiles>
-            <profile id="e5de-c784-ec40-f62f" name="CONDITIONAL BATTLELINE" hidden="false" typeId="77d9-94b6-d8f2-a150" typeName="BATTLELINE">
+            <profile id="db7a-e78d-581f-b548" name="CONDITIONAL BATTLELINE" hidden="false" typeId="77d9-94b6-d8f2-a150" typeName="BATTLELINE">
               <characteristics>
                 <characteristic name="Condition" typeId="820b-20af-6fd8-5f48">Battleline if general is a BLOODWRACK MEDUSA or MELUSAI IRONSCALE</characteristic>
               </characteristics>
             </profile>
           </profiles>
-          <costs>
-            <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
-          </costs>
-        </selectionEntry>
-      </selectionEntries>
-      <entryLinks>
-        <entryLink id="fbc2-3a9e-4d45-7725" name="Unit Reinforcement" hidden="false" collective="false" import="true" targetId="b493-d9e6-82ca-5488" type="selectionEntry"/>
+        </entryLink>
       </entryLinks>
       <costs>
         <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="140.0"/>
@@ -1872,46 +1755,6 @@ This model cannot move and cannot attack with its Torrent of Burning Blood or Av
             <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="687a-bfe9-2172-e260" name="CONDITIONAL BATTLELINE" hidden="false" collective="false" import="true" type="upgrade">
-          <modifiers>
-            <modifier type="set" field="hidden" value="true">
-              <conditionGroups>
-                <conditionGroup type="or">
-                  <conditions>
-                    <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="6cd6-b22e-bfcb-9589" type="instanceOf"/>
-                    <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="e3a6-45ca-4974-b489" type="instanceOf"/>
-                    <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4373-740f-1bf3-b0aa" type="instanceOf"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
-            </modifier>
-            <modifier type="set" field="ff94-d9c9-6d06-85a3" value="0.0">
-              <conditionGroups>
-                <conditionGroup type="or">
-                  <conditions>
-                    <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="6cd6-b22e-bfcb-9589" type="instanceOf"/>
-                    <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="e3a6-45ca-4974-b489" type="instanceOf"/>
-                    <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4373-740f-1bf3-b0aa" type="instanceOf"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
-            </modifier>
-          </modifiers>
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="ff94-d9c9-6d06-85a3" type="min"/>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8861-64f7-d5ff-eb31" type="max"/>
-          </constraints>
-          <profiles>
-            <profile id="c76e-1741-0dfa-ec17" name="CONDITIONAL BATTLELINE" hidden="false" typeId="77d9-94b6-d8f2-a150" typeName="BATTLELINE">
-              <characteristics>
-                <characteristic name="Condition" typeId="820b-20af-6fd8-5f48">Battleline if general is a BLOODWRACK MEDUSA or MELUSAI IRONSCALE</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <costs>
-            <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
-          </costs>
-        </selectionEntry>
         <selectionEntry id="737f-f4f9-935b-0d98" name="Blood Wyrm" hidden="false" collective="false" import="true" type="upgrade">
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="1dab-4d34-d63d-aaba" type="min"/>
@@ -1937,6 +1780,15 @@ This model cannot move and cannot attack with its Torrent of Burning Blood or Av
       </selectionEntries>
       <entryLinks>
         <entryLink id="723f-c4cb-d4f2-8552" name="Unit Reinforcement" hidden="false" collective="false" import="true" targetId="b493-d9e6-82ca-5488" type="selectionEntry"/>
+        <entryLink id="1bb3-13b9-fac1-9f4e" name="CONDITIONAL BATTLELINE" hidden="false" collective="false" import="true" targetId="6a2c-7fc7-e348-ca8c" type="selectionEntry">
+          <profiles>
+            <profile id="ae7c-65cd-1824-d447" name="CONDITIONAL BATTLELINE" hidden="false" typeId="77d9-94b6-d8f2-a150" typeName="BATTLELINE">
+              <characteristics>
+                <characteristic name="Condition" typeId="820b-20af-6fd8-5f48">Battleline if general is a BLOODWRACK MEDUSA or MELUSAI IRONSCALE</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+        </entryLink>
       </entryLinks>
       <costs>
         <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="170.0"/>
@@ -2376,7 +2228,6 @@ If the Shadow Queen is slain, after her model is removed from play, this model i
         <profile id="35c3-7d51-62d0-2293" name="Morathi-Khaine" hidden="false" typeId="a62b-2245-5c24-f8bc" typeName="Magic">
           <characteristics>
             <characteristic name="Cast/Unbind" typeId="9a5b-68ee-bc46-6a9d">3/2; Add 1 to casting, dispelling and unbinding rolls</characteristic>
-            <characteristic name="Spells Known" typeId="25bd-2ad0-e570-e880">Arcane Bolt, Mystic Shield, Black Horror of Ulgu</characteristic>
           </characteristics>
         </profile>
         <profile id="6a73-e7fd-cd76-2bbd" name="Morathi-Khaine" hidden="false" typeId="ce32-0c40-1990-4c8a" typeName="Restriction">

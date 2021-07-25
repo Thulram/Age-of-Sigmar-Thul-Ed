@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="5173-04cd-a396-1410" name="Destruction - Ogor Mawtribes - Data" revision="3" battleScribeVersion="2.03" authorName="Thulram" library="true" gameSystemId="e832-3291-06be-cab1" gameSystemRevision="3" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="5173-04cd-a396-1410" name="Destruction - Ogor Mawtribes - Data" revision="4" battleScribeVersion="2.03" authorName="Thulram" library="true" gameSystemId="e832-3291-06be-cab1" gameSystemRevision="3" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <profileTypes>
     <profileType id="be3d-81f2-95ae-0aff" name="Mount Traits">
       <characteristicTypes>
@@ -208,7 +208,6 @@ Bonecrusher: Roll a dice for each enemy unit within 6&quot; of this model. On a 
         <profile id="ecf9-5da7-0dfa-e66c" name="Slaughtermaster" hidden="false" typeId="a62b-2245-5c24-f8bc" typeName="Magic">
           <characteristics>
             <characteristic name="Cast/Unbind" typeId="9a5b-68ee-bc46-6a9d">1/1</characteristic>
-            <characteristic name="Spells Known" typeId="25bd-2ad0-e570-e880">Arcane Bolt, Mystic Shield, Rockchomper</characteristic>
           </characteristics>
         </profile>
         <profile id="82c8-350e-3aba-e514" name="Rockchomper" hidden="false" typeId="13da-11a8-b7d1-77a7" typeName="Spell">
@@ -343,7 +342,6 @@ Bonecrusher: Roll a dice for each enemy unit within 6&quot; of this model. On a 
         <profile id="d494-2ffb-8a93-cb7d" name="Slaughtermaster" hidden="false" typeId="a62b-2245-5c24-f8bc" typeName="Magic">
           <characteristics>
             <characteristic name="Cast/Unbind" typeId="9a5b-68ee-bc46-6a9d">1/1</characteristic>
-            <characteristic name="Spells Known" typeId="25bd-2ad0-e570-e880">Arcane Bolt, Mystic Shield, Voracious Maw</characteristic>
           </characteristics>
         </profile>
         <profile id="f178-9ca3-1367-9a59" name="Voracious Maw" hidden="false" typeId="13da-11a8-b7d1-77a7" typeName="Spell">
@@ -585,15 +583,15 @@ Bonecrusher: Roll a dice for each enemy unit within 6&quot; of this model. On a 
               <modifiers>
                 <modifier type="increment" field="8c6f-58e2-172a-da86" value="1.0">
                   <repeats>
-                    <repeat field="selections" scope="3ce8-49a2-0ccd-98bd" value="2.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="ac9d-b2e7-167c-bb30" repeats="1" roundUp="false"/>
+                    <repeat field="selections" scope="3ce8-49a2-0ccd-98bd" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e20c-48d8-e5e3-1a36" repeats="1" roundUp="false"/>
                   </repeats>
                   <conditions>
-                    <condition field="selections" scope="3ce8-49a2-0ccd-98bd" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="ac9d-b2e7-167c-bb30" type="greaterThan"/>
+                    <condition field="selections" scope="3ce8-49a2-0ccd-98bd" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e20c-48d8-e5e3-1a36" type="greaterThan"/>
                   </conditions>
                 </modifier>
               </modifiers>
               <constraints>
-                <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8c6f-58e2-172a-da86" type="max"/>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8c6f-58e2-172a-da86" type="max"/>
               </constraints>
               <profiles>
                 <profile id="7282-a73c-315b-6b98" name="Bellower" hidden="false" typeId="c23b-5a30-07e2-4706" typeName="Unit Options">
@@ -606,82 +604,68 @@ Bonecrusher: Roll a dice for each enemy unit within 6&quot; of this model. On a 
                 <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
               </costs>
             </selectionEntry>
-            <selectionEntry id="6a2d-e848-229f-ff9d" name="Standard Bearers" hidden="false" collective="false" import="true" type="upgrade">
-              <constraints>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="61b6-2193-cea9-e6dc" type="max"/>
-              </constraints>
-              <profiles>
-                <profile id="c7a7-0d00-e0bf-4f56" name="Standard Bearers" hidden="false" typeId="c23b-5a30-07e2-4706" typeName="Unit Options">
-                  <characteristics>
-                    <characteristic name="Unit Option" typeId="5879-9a21-e9d2-539d">1 in every 6 models in this unit can be a Beast Skull Bearer, and 1 in every 6 models in this unit can be a Tribal Banner Bearer.</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-              <selectionEntryGroups>
-                <selectionEntryGroup id="fbb6-eef3-6486-9927" name="Standard Bearers" hidden="false" collective="false" import="true">
+          </selectionEntries>
+          <selectionEntryGroups>
+            <selectionEntryGroup id="a606-f708-d8e8-22d7" name="Standard Bearers" hidden="false" collective="false" import="true">
+              <selectionEntries>
+                <selectionEntry id="87dc-2979-3daa-6a95" name="Beast Skull Bearer" hidden="false" collective="false" import="true" type="upgrade">
                   <modifiers>
-                    <modifier type="increment" field="3bb5-5c68-7388-a5fa" value="1.0">
+                    <modifier type="increment" field="6e52-4d3f-74cf-0e3a" value="1.0">
                       <repeats>
-                        <repeat field="selections" scope="3ce8-49a2-0ccd-98bd" value="2.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="ac9d-b2e7-167c-bb30" repeats="1" roundUp="false"/>
+                        <repeat field="selections" scope="3ce8-49a2-0ccd-98bd" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e20c-48d8-e5e3-1a36" repeats="1" roundUp="false"/>
                       </repeats>
                       <conditions>
-                        <condition field="selections" scope="3ce8-49a2-0ccd-98bd" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="ac9d-b2e7-167c-bb30" type="greaterThan"/>
+                        <condition field="selections" scope="3ce8-49a2-0ccd-98bd" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e20c-48d8-e5e3-1a36" type="greaterThan"/>
                       </conditions>
                     </modifier>
                   </modifiers>
                   <constraints>
-                    <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="3bb5-5c68-7388-a5fa" type="max"/>
+                    <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="6e52-4d3f-74cf-0e3a" type="max"/>
                   </constraints>
-                  <selectionEntries>
-                    <selectionEntry id="91c7-6f85-d36b-2ce7" name="Beast Skull Bearer" hidden="false" collective="false" import="true" type="upgrade">
-                      <profiles>
-                        <profile id="d3b4-1293-7303-5162" name="Beast Skull Bearer" hidden="false" typeId="c23b-5a30-07e2-4706" typeName="Unit Options">
-                          <characteristics>
-                            <characteristic name="Unit Option" typeId="5879-9a21-e9d2-539d">You can re-roll charge rolls for this unit while it includes any Beast Skull Bearers.</characteristic>
-                          </characteristics>
-                        </profile>
-                      </profiles>
-                      <costs>
-                        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
-                      </costs>
-                    </selectionEntry>
-                    <selectionEntry id="8f7f-b313-98b4-2660" name="Tribal Banner Bearer" hidden="false" collective="false" import="true" type="upgrade">
-                      <profiles>
-                        <profile id="b896-f41d-3653-4dbe" name="Tribal Banner Bearer" hidden="false" typeId="c23b-5a30-07e2-4706" typeName="Unit Options">
-                          <characteristics>
-                            <characteristic name="Unit Option" typeId="5879-9a21-e9d2-539d">Add 1 to the Bravery characteristic of this unit while it includes any Tribal Banner Bearers.</characteristic>
-                          </characteristics>
-                        </profile>
-                      </profiles>
-                      <selectionEntries>
-                        <selectionEntry id="6f5b-c40b-834a-c842" name="Lookout Gnoblar" hidden="false" collective="false" import="true" type="upgrade">
-                          <constraints>
-                            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="bff1-0c72-5448-feec" type="max"/>
-                          </constraints>
-                          <profiles>
-                            <profile id="ab1f-b12f-6500-8944" name="Lookout Gnoblar" hidden="false" typeId="c23b-5a30-07e2-4706" typeName="Unit Options">
-                              <characteristics>
-                                <characteristic name="Unit Option" typeId="5879-9a21-e9d2-539d">Any Tribal Banner Bearers in this unit can have a Lookout Gnoblar. Roll a dice each time you allocate a wound inflicted by a missile weapon to a unit that includes any Lookout Gnoblars. On a 6, that wound is negated.</characteristic>
-                              </characteristics>
-                            </profile>
-                          </profiles>
-                          <costs>
-                            <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
-                          </costs>
-                        </selectionEntry>
-                      </selectionEntries>
-                      <costs>
-                        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
-                      </costs>
-                    </selectionEntry>
-                  </selectionEntries>
-                </selectionEntryGroup>
-              </selectionEntryGroups>
-              <costs>
-                <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
-              </costs>
-            </selectionEntry>
-          </selectionEntries>
+                  <profiles>
+                    <profile id="b7ed-d47f-6e03-a024" name="Beast Skull Bearer" hidden="false" typeId="c23b-5a30-07e2-4706" typeName="Unit Options">
+                      <characteristics>
+                        <characteristic name="Unit Option" typeId="5879-9a21-e9d2-539d">You can re-roll charge rolls for this unit while it includes any Beast Skull Bearers.</characteristic>
+                      </characteristics>
+                    </profile>
+                  </profiles>
+                  <costs>
+                    <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
+                  </costs>
+                </selectionEntry>
+                <selectionEntry id="752d-3fe7-c8e9-07e8" name="Tribal Banner Bearer" hidden="false" collective="false" import="true" type="upgrade">
+                  <modifiers>
+                    <modifier type="increment" field="5459-9c84-eb55-e18e" value="1.0">
+                      <repeats>
+                        <repeat field="selections" scope="3ce8-49a2-0ccd-98bd" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e20c-48d8-e5e3-1a36" repeats="1" roundUp="false"/>
+                      </repeats>
+                      <conditions>
+                        <condition field="selections" scope="3ce8-49a2-0ccd-98bd" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e20c-48d8-e5e3-1a36" type="greaterThan"/>
+                      </conditions>
+                    </modifier>
+                  </modifiers>
+                  <constraints>
+                    <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="5459-9c84-eb55-e18e" type="max"/>
+                  </constraints>
+                  <profiles>
+                    <profile id="cc22-c960-0f23-1f55" name="Tribal Banner Bearer" hidden="false" typeId="c23b-5a30-07e2-4706" typeName="Unit Options">
+                      <characteristics>
+                        <characteristic name="Unit Option" typeId="5879-9a21-e9d2-539d">Add 1 to the Bravery characteristic of this unit while it includes any Tribal Banner Bearers.</characteristic>
+                      </characteristics>
+                    </profile>
+                    <profile id="0d3b-7172-bb63-b7b2" name="Lookout Gnoblar" hidden="false" typeId="c23b-5a30-07e2-4706" typeName="Unit Options">
+                      <characteristics>
+                        <characteristic name="Unit Option" typeId="5879-9a21-e9d2-539d">Any Tribal Banner Bearers in this unit can have a Lookout Gnoblar. Roll a dice each time you allocate a wound inflicted by a missile weapon to a unit that includes any Lookout Gnoblars. On a 6, that wound is negated.</characteristic>
+                      </characteristics>
+                    </profile>
+                  </profiles>
+                  <costs>
+                    <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
+                  </costs>
+                </selectionEntry>
+              </selectionEntries>
+            </selectionEntryGroup>
+          </selectionEntryGroups>
         </selectionEntryGroup>
       </selectionEntryGroups>
       <entryLinks>
@@ -811,15 +795,15 @@ Bonecrusher: Roll a dice for each enemy unit within 6&quot; of this model. On a 
               <modifiers>
                 <modifier type="increment" field="ba87-81dd-6397-49c5" value="1.0">
                   <repeats>
-                    <repeat field="selections" scope="de76-7be8-ae76-f4a8" value="2.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="2ad6-c6be-c594-fec5" repeats="1" roundUp="false"/>
+                    <repeat field="selections" scope="de76-7be8-ae76-f4a8" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e20c-48d8-e5e3-1a36" repeats="1" roundUp="false"/>
                   </repeats>
                   <conditions>
-                    <condition field="selections" scope="de76-7be8-ae76-f4a8" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="2ad6-c6be-c594-fec5" type="greaterThan"/>
+                    <condition field="selections" scope="de76-7be8-ae76-f4a8" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e20c-48d8-e5e3-1a36" type="greaterThan"/>
                   </conditions>
                 </modifier>
               </modifiers>
               <constraints>
-                <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="ba87-81dd-6397-49c5" type="max"/>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="ba87-81dd-6397-49c5" type="max"/>
               </constraints>
               <profiles>
                 <profile id="ecaa-25e0-9471-46ab" name="Bellower" hidden="false" typeId="c23b-5a30-07e2-4706" typeName="Unit Options">
@@ -836,15 +820,15 @@ Bonecrusher: Roll a dice for each enemy unit within 6&quot; of this model. On a 
               <modifiers>
                 <modifier type="increment" field="9d05-85ad-51dc-faaf" value="1.0">
                   <repeats>
-                    <repeat field="selections" scope="de76-7be8-ae76-f4a8" value="2.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="2ad6-c6be-c594-fec5" repeats="1" roundUp="false"/>
+                    <repeat field="selections" scope="de76-7be8-ae76-f4a8" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e20c-48d8-e5e3-1a36" repeats="1" roundUp="false"/>
                   </repeats>
                   <conditions>
-                    <condition field="selections" scope="de76-7be8-ae76-f4a8" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="2ad6-c6be-c594-fec5" type="greaterThan"/>
+                    <condition field="selections" scope="de76-7be8-ae76-f4a8" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e20c-48d8-e5e3-1a36" type="greaterThan"/>
                   </conditions>
                 </modifier>
               </modifiers>
               <constraints>
-                <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="9d05-85ad-51dc-faaf" type="max"/>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="9d05-85ad-51dc-faaf" type="max"/>
               </constraints>
               <profiles>
                 <profile id="911c-9bc5-7825-3508" name="Rune Maw Bearer" hidden="false" typeId="c23b-5a30-07e2-4706" typeName="Unit Options">
@@ -1469,7 +1453,6 @@ In addition, each time a unit with any Rune Maw Bearers is affected by a spell o
         <profile id="b6b2-73ff-df4d-d869" name="Firebelly" hidden="false" typeId="a62b-2245-5c24-f8bc" typeName="Magic">
           <characteristics>
             <characteristic name="Cast/Unbind" typeId="9a5b-68ee-bc46-6a9d">1/1</characteristic>
-            <characteristic name="Spells Known" typeId="25bd-2ad0-e570-e880">Arcane Bolt, Mystic Shield, Cascading Fire-cloak</characteristic>
           </characteristics>
         </profile>
         <profile id="4caf-c1b1-13f5-1454" name="Cascading Fire-cloak" hidden="false" typeId="13da-11a8-b7d1-77a7" typeName="Spell">
