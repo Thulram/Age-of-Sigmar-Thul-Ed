@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="4143-6a49-d5e6-4331" name="Chaos - Disciples of Tzeentch - Data" revision="4" battleScribeVersion="2.03" authorName="Thulram" library="true" gameSystemId="e832-3291-06be-cab1" gameSystemRevision="3" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="4143-6a49-d5e6-4331" name="Chaos - Disciples of Tzeentch - Data" revision="5" battleScribeVersion="2.03" authorName="Thulram" library="true" gameSystemId="e832-3291-06be-cab1" gameSystemRevision="4" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <profileTypes>
     <profileType id="9ec8-5a25-c4f7-aa4f" name="Lord of Change Wounds">
       <characteristicTypes>
@@ -1984,6 +1984,60 @@ Iridescent Horrors, Pink Horrors and Blue Horrors that flee cannot Split and Spl
             <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
           </costs>
         </selectionEntry>
+        <selectionEntry id="a7a8-6daf-1731-eb96" name="Unit Reinforcement" hidden="false" collective="false" import="true" type="upgrade">
+          <modifiers>
+            <modifier type="remove" field="category" value="e20c-48d8-e5e3-1a36">
+              <conditions>
+                <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="upgrade" type="equalTo"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="1f3c-f574-f4cf-cb29" type="max"/>
+          </constraints>
+          <categoryLinks>
+            <categoryLink id="d549-b1a6-1a24-e7b2" name="Reinforcement" hidden="false" targetId="e20c-48d8-e5e3-1a36" primary="false"/>
+          </categoryLinks>
+          <selectionEntryGroups>
+            <selectionEntryGroup id="0247-eb68-2ac1-7ae3" name="Unit Reinforcement" hidden="false" collective="false" import="true" defaultSelectionEntryId="b080-e2a7-fa5e-a383">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="1484-90ff-04b0-0b84" type="max"/>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="a2be-4265-e046-6728" type="min"/>
+              </constraints>
+              <selectionEntries>
+                <selectionEntry id="5338-b2fc-8df9-7bf3" name="(x3) Double reinforced" hidden="false" collective="false" import="true" type="upgrade">
+                  <modifiers>
+                    <modifier type="set" field="hidden" value="true">
+                      <conditions>
+                        <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="a42d-220e-6a88-7bf6" type="notInstanceOf"/>
+                      </conditions>
+                    </modifier>
+                  </modifiers>
+                  <constraints>
+                    <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="0a49-7d39-8822-d782" type="max"/>
+                  </constraints>
+                  <categoryLinks>
+                    <categoryLink id="7c29-d127-bcdc-b010" name="Reinforcement" hidden="false" targetId="e20c-48d8-e5e3-1a36" primary="false"/>
+                  </categoryLinks>
+                  <costs>
+                    <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
+                  </costs>
+                </selectionEntry>
+                <selectionEntry id="b080-e2a7-fa5e-a383" name="(x2) Single reinforced" hidden="false" collective="false" import="true" type="upgrade">
+                  <constraints>
+                    <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="125f-06b2-6648-ede5" type="max"/>
+                  </constraints>
+                  <costs>
+                    <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
+                  </costs>
+                </selectionEntry>
+              </selectionEntries>
+            </selectionEntryGroup>
+          </selectionEntryGroups>
+          <costs>
+            <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
+          </costs>
+        </selectionEntry>
       </selectionEntries>
       <selectionEntryGroups>
         <selectionEntryGroup id="3ce9-b7d1-0e5b-5118" name="Horrors of Tzeentch" hidden="false" collective="false" import="true">
@@ -1993,14 +2047,14 @@ Iridescent Horrors, Pink Horrors and Blue Horrors that flee cannot Split and Spl
                 <conditionGroup type="and">
                   <conditions>
                     <condition field="selections" scope="5705-36dc-22dc-38ce" value="2.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e4a1-cb9a-86c8-6a81" type="greaterThan"/>
-                    <condition field="selections" scope="5705-36dc-22dc-38ce" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="73b6-ef4b-f686-6c12" type="greaterThan"/>
+                    <condition field="selections" scope="5705-36dc-22dc-38ce" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e20c-48d8-e5e3-1a36" type="greaterThan"/>
                   </conditions>
                 </conditionGroup>
               </conditionGroups>
             </modifier>
             <modifier type="set" field="85bf-95b3-ba47-e6f6" value="2.0">
               <conditions>
-                <condition field="selections" scope="5705-36dc-22dc-38ce" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="bd49-6b7c-0658-3b82" type="greaterThan"/>
+                <condition field="selections" scope="5705-36dc-22dc-38ce" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e20c-48d8-e5e3-1a36" type="greaterThan"/>
               </conditions>
             </modifier>
           </modifiers>
@@ -2075,60 +2129,6 @@ Any number of HORRORS OF TZEENTCH units that have 9 or more Pink Horrors can att
               </constraints>
               <costs>
                 <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="115.0"/>
-              </costs>
-            </selectionEntry>
-            <selectionEntry id="d051-614e-7328-3649" name="Unit Reinforcement" hidden="false" collective="false" import="true" type="upgrade">
-              <modifiers>
-                <modifier type="remove" field="category" value="e20c-48d8-e5e3-1a36">
-                  <conditions>
-                    <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="upgrade" type="equalTo"/>
-                  </conditions>
-                </modifier>
-              </modifiers>
-              <constraints>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="4114-afb8-0aa9-8ee0" type="max"/>
-              </constraints>
-              <categoryLinks>
-                <categoryLink id="d768-49c7-b4a1-d3ab" name="Reinforcement" hidden="false" targetId="e20c-48d8-e5e3-1a36" primary="false"/>
-              </categoryLinks>
-              <selectionEntryGroups>
-                <selectionEntryGroup id="c859-87b6-dd8e-f4d2" name="Unit Reinforcement" hidden="false" collective="false" import="true">
-                  <constraints>
-                    <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="1354-202d-195e-904e" type="max"/>
-                    <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="08d1-ed05-0d5a-af59" type="min"/>
-                  </constraints>
-                  <selectionEntries>
-                    <selectionEntry id="73b6-ef4b-f686-6c12" name="(x3) Double reinforced" hidden="false" collective="false" import="true" type="upgrade">
-                      <modifiers>
-                        <modifier type="set" field="hidden" value="true">
-                          <conditions>
-                            <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="a42d-220e-6a88-7bf6" type="notInstanceOf"/>
-                          </conditions>
-                        </modifier>
-                      </modifiers>
-                      <constraints>
-                        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="6576-930e-956f-0b43" type="max"/>
-                      </constraints>
-                      <categoryLinks>
-                        <categoryLink id="efeb-5ba9-3ddc-706f" name="Reinforcement" hidden="false" targetId="e20c-48d8-e5e3-1a36" primary="false"/>
-                      </categoryLinks>
-                      <costs>
-                        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
-                      </costs>
-                    </selectionEntry>
-                    <selectionEntry id="bd49-6b7c-0658-3b82" name="(x2) Single reinforced" hidden="false" collective="false" import="true" type="upgrade">
-                      <constraints>
-                        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="1ab7-35d2-777f-7989" type="max"/>
-                      </constraints>
-                      <costs>
-                        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
-                      </costs>
-                    </selectionEntry>
-                  </selectionEntries>
-                </selectionEntryGroup>
-              </selectionEntryGroups>
-              <costs>
-                <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
               </costs>
             </selectionEntry>
           </selectionEntries>
