@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<gameSystem id="e832-3291-06be-cab1" name="Age of Sigmar - Thul Ed" revision="17" battleScribeVersion="2.03" authorName="Thulram" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
+<gameSystem id="e832-3291-06be-cab1" name="Age of Sigmar - Thul Ed" revision="18" battleScribeVersion="2.03" authorName="Thulram" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
   <publications>
     <publication id="bf0c-0cbf-1f5d-5885" name="Chaos Battletome - Blades of Khorne"/>
     <publication id="6ce4-e8a3-f18f-be55" name="Order Battletome - Daughters of Khaine"/>
@@ -259,7 +259,6 @@
     <categoryEntry id="3d6d-d56b-ed5b-01cb" name="Chamon" hidden="false"/>
     <categoryEntry id="e6a6-c6c5-7e4c-f31e" name="Hysh" hidden="false"/>
     <categoryEntry id="b347-5473-3854-2c40" name="Shyish (realm)" hidden="false"/>
-    <categoryEntry id="c88c-d582-e6ab-aebd" name="GREENSKINZ" hidden="false"/>
     <categoryEntry id="77c4-0c41-aba2-b536" name="LEGION OF AZGORH" hidden="false"/>
     <categoryEntry id="9759-9d1a-05b7-a22d" name="SKAVEN" hidden="false"/>
     <categoryEntry id="b4ba-caec-0644-d577" name="Human" hidden="false"/>
@@ -326,6 +325,10 @@
     <categoryEntry id="99e1-bf54-e3ec-ab80" name="MountTraitPlus" hidden="false"/>
     <categoryEntry id="5d50-548d-d917-283c" name="KRULEBOYZ" hidden="false"/>
     <categoryEntry id="e388-0edb-9ff2-cda6" name="ORRUK WARCLANS" hidden="false"/>
+    <categoryEntry id="f7c8-8ef4-f9a5-435f" name="MAGGOTKIN OF NURGLE" hidden="false"/>
+    <categoryEntry id="660a-ffea-1ea6-c5fc" name="BLADES OF KHORNE" hidden="false"/>
+    <categoryEntry id="5598-0d67-0b62-8fa3" name="HEDONITES OF SLAANESH" hidden="false"/>
+    <categoryEntry id="2f02-6491-a31b-5b52" name="DISCIPLES OF TZEENTCH" hidden="false"/>
   </categoryEntries>
   <forceEntries>
     <forceEntry id="582e-fd89-8731-30c8" name="-Pitched Battle - 2000pts" hidden="false">
@@ -3191,6 +3194,11 @@ At the start of your hero phase, you receive 1 extra command point if any friend
     <profile id="7b66-5f0a-449f-f31a" name="Smite" hidden="false" typeId="161a-85bd-f19e-a5a7" typeName="Prayer">
       <characteristics>
         <characteristic name="Prayer" typeId="19bc-965a-768d-defa">Smite is a prayer that has an answer value of 2 and a range of 48&quot;. If answered, pick 1 enemy Priest within range and visible to the chanter. That enemy Priest suffers 1 mortal wound. If the chanting roll was 6 or more, that enemy Priest suffers D3 mortal wounds instead of 1.</characteristic>
+      </characteristics>
+    </profile>
+    <profile id="63bb-20bf-782c-c8c0" name="Elite" hidden="false" typeId="ce32-0c40-1990-4c8a" typeName="Restriction">
+      <characteristics>
+        <characteristic name="Restriction" typeId="edbe-5fe5-1142-afa6">Models in this unit can issue commands to their own unit.</characteristic>
       </characteristics>
     </profile>
   </sharedProfiles>

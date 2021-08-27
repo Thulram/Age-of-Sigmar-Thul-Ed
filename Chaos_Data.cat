@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="2fc2-5782-755c-0fb0" name="Chaos Data" revision="7" battleScribeVersion="2.03" library="true" gameSystemId="e832-3291-06be-cab1" gameSystemRevision="7" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="2fc2-5782-755c-0fb0" name="Chaos Data" revision="9" battleScribeVersion="2.03" library="true" gameSystemId="e832-3291-06be-cab1" gameSystemRevision="8" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <profileTypes>
     <profileType id="8c83-705b-eae0-877a" name="Blood Tithe Rewards Table">
       <characteristicTypes>
@@ -203,7 +203,7 @@ If you have 2 or more Blood Tithe points at the end of your movement phase, you 
 A Blades of Khorne army cannot include coalition units with the SLAANESH, TZEENTCH, or WIZARD keyword.
 
 COALITION UNITS
-Coalition units are ignored when determining if the units in the army are from a single faction. Coalition units cannot be generals.
+Coalition units do not count towards the number of Battleline units in your army. However, they do count towards the maximum number of Leader, Behemoth and Artillery units in your army. Coalition units cannot be generals. In addition, Coalition units are ignored when determining if the units in your army are from a single faction.
 
 Designer’s Note: Coalition units are not allied units, so the limitations that apply to allied units do not apply to them. This means that coalition units can be given one of your army’s enhancements, as long as they have the correct keywords or are of the correct unit type needed to receive it.</characteristic>
           </characteristics>
@@ -463,7 +463,7 @@ If a unit already has a Host of Slaanesh keyword on its warsroll, it cannot gain
 - 1 in every 4 units in the army can be a coalition unit from the Beasts of Chaos faction. Those units gain the SLAANESH keyword. A Hedonites of Slaanesh army cannot include coalition units with the KHORNE keyword.
 
 COALITION UNITS
-Coalition units are ignored when determining if the units in the army are from a single faction. Coalition units cannot be generals.
+Coalition units do not count towards the number of Battleline units in your army. However, they do count towards the maximum number of Leader, Behemoth and Artillery units in your army. Coalition units cannot be generals. In addition, Coalition units are ignored when determining if the units in your army are from a single faction.
 
 Designer’s Note: Coalition units are not allied units, so the limitations that apply to allied units do not apply to them. This means that coalition units can be given one of your army’s enhancements, as long as they have the correct keywords or are of the correct unit type needed to receive it.</characteristic>
           </characteristics>
@@ -803,7 +803,7 @@ Ability: Each TZEENTCH model in the unit that completed this agenda counts as 2 
 - 1 in every 4 units in the army can be a coalition unit from the Beasts of Chaos faction. Those units gain the TZEENTCH keyword. A Disciples of Tzeentch army cannot include coalition units with the KHORNE or NURGLE keyword.
 
 COALITION UNITS
-Coalition units are ignored when determining if the units in the army are from a single faction. Coalition units cannot be generals.
+Coalition units do not count towards the number of Battleline units in your army. However, they do count towards the maximum number of Leader, Behemoth and Artillery units in your army. Coalition units cannot be generals. In addition, Coalition units are ignored when determining if the units in your army are from a single faction.
 
 Designer’s Note: Coalition units are not allied units, so the limitations that apply to allied units do not apply to them. This means that coalition units can be given one of your army’s enhancements, as long as they have the correct keywords or are of the correct unit type needed to receive it.</characteristic>
           </characteristics>
@@ -1073,7 +1073,7 @@ Summoned units must be set up wholly within 12&quot; of a Feculent Gnarmaw or a 
 - 1 in every 4 units in the army can be a coalition unit from the Beasts of Chaos faction that does not have the TZEENTCH keyword. Those units gain the NURGLE keyword.
 
 COALITION UNITS
-Coalition units are ignored when determining if the units in the army are from a single faction. Coalition units cannot be generals.
+Coalition units do not count towards the number of Battleline units in your army. However, they do count towards the maximum number of Leader, Behemoth and Artillery units in your army. Coalition units cannot be generals. In addition, Coalition units are ignored when determining if the units in your army are from a single faction.
 
 Designer’s Note: Coalition units are not allied units, so the limitations that apply to allied units do not apply to them. This means that coalition units can be given one of your army’s enhancements, as long as they have the correct keywords or are of the correct unit type needed to receive it.</characteristic>
           </characteristics>
@@ -1087,33 +1087,6 @@ Designer’s Note: Coalition units are not allied units, so the limitations that
           <categoryLinks>
             <categoryLink id="0430-2cb8-cc94-b8c8" name="Sub-Allegiance" hidden="false" targetId="4fe1-4d42-25cc-d732" primary="false"/>
           </categoryLinks>
-          <selectionEntries>
-            <selectionEntry id="0b00-d192-7482-cae5" name="Tamurkhan&apos;s Horde" hidden="false" collective="false" import="true" type="upgrade">
-              <constraints>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="4cd3-c825-47f3-bf98" type="max"/>
-              </constraints>
-              <profiles>
-                <profile id="2907-3f9b-675b-ba2c" name="Winds of Corruption" hidden="false" typeId="c0c2-177b-e761-ec41" typeName="Allegiance Abilities">
-                  <characteristics>
-                    <characteristic name="Allegiance Ability" typeId="0506-f62d-68b3-5499">Subtract 1 from run and charge rolls for enemy units.</characteristic>
-                  </characteristics>
-                </profile>
-                <profile id="a57f-c573-f769-cb5e" name="Shout of Command" hidden="false" typeId="6364-f76d-fc0c-80bc" typeName="Command Abilities">
-                  <characteristics>
-                    <characteristic name="Command Ability" typeId="36cb-f8a4-d94b-8aa8">You can use this command ability at the start of your charge phase. If you do so, pick 1 friendly Tamurkhan’s Horde Hero. You can re-roll charge rolls for friendly Tamurkhan’s Horde units while they are wholly within 14&quot; of that Hero in that phase.</characteristic>
-                  </characteristics>
-                </profile>
-                <profile id="08d8-27b4-687a-e8d1" name="Tamurkhan&apos;s Horde Army" hidden="false" typeId="ce32-0c40-1990-4c8a" typeName="Restriction">
-                  <characteristics>
-                    <characteristic name="Restriction" typeId="edbe-5fe5-1142-afa6">After you have chosen the Maggotkin of Nurgle allegiance for your army, you can give it the Tamurkhan’s Horde keyword. All Maggotkin of Nurgle units in your army gain that keyword (with the exception of named characters that do not already have the Tamurkhan’s Horde keyword on their warscroll). All units with that keyword benefit from the allegiance abilities listed below, in addition to the allegiance abilities in Battletome: Maggotkin of Nurgle.</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-              <costs>
-                <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
-              </costs>
-            </selectionEntry>
-          </selectionEntries>
           <selectionEntryGroups>
             <selectionEntryGroup id="20d8-2da8-c3e4-a3f8" name="Host of Chaos" hidden="false" collective="false" import="true">
               <constraints>
@@ -1198,94 +1171,4 @@ Designer’s Note: Coalition units are not allied units, so the limitations that
       </costs>
     </selectionEntry>
   </sharedSelectionEntries>
-  <sharedSelectionEntryGroups>
-    <selectionEntryGroup id="813e-1ce5-508c-df76" name="Tamurkhan&apos;s Horde Artefact" hidden="false" collective="false" import="true">
-      <modifiers>
-        <modifier type="set" field="hidden" value="true">
-          <conditions>
-            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="0b00-d192-7482-cae5" type="equalTo"/>
-          </conditions>
-        </modifier>
-      </modifiers>
-      <constraints>
-        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="06ca-f497-de46-ecc4" type="max"/>
-      </constraints>
-      <selectionEntries>
-        <selectionEntry id="a6f4-ad48-a93f-5272" name="0 -- Daemon Flask" hidden="false" collective="false" import="true" type="upgrade">
-          <modifiers>
-            <modifier type="set" field="8193-72e1-8b6c-e011" value="1.0">
-              <conditionGroups>
-                <conditionGroup type="and">
-                  <conditions>
-                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="ba14-5553-456e-33ad" type="greaterThan"/>
-                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="0b00-d192-7482-cae5" type="greaterThan"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
-            </modifier>
-          </modifiers>
-          <constraints>
-            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="d337-719a-cb39-a909" type="max"/>
-            <constraint field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="8193-72e1-8b6c-e011" type="min"/>
-          </constraints>
-          <profiles>
-            <profile id="b010-d9cd-a4bf-d418" name="Daemon Flask" hidden="false" typeId="0c9d-7abe-a53c-6a37" typeName="Artefacts">
-              <characteristics>
-                <characteristic name="Artefact" typeId="44b6-de26-0b54-1318">The first Tamurkhan’s Horde Hero to receive an artefact of power must be given the Daemon Flask.
-
-Once per battle, at the start of your hero phase, the bearer can use this artefact. If they do so, roll a dice for each enemy unit within 12&quot; of the bearer. You can re-roll the dice for a unit that is a War Machine or is within 3&quot; of a terrain feature. On a 4+ that unit suffers 1 mortal wound. On a 6, that unit suffers D3 mortal wounds instead of 1.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <costs>
-            <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
-          </costs>
-        </selectionEntry>
-      </selectionEntries>
-    </selectionEntryGroup>
-    <selectionEntryGroup id="2639-dc11-38fc-8464" name="Tamurkhan&apos;s Horde Command Trait" hidden="false" collective="false" import="true">
-      <modifiers>
-        <modifier type="set" field="hidden" value="true">
-          <conditions>
-            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="0b00-d192-7482-cae5" type="equalTo"/>
-          </conditions>
-        </modifier>
-      </modifiers>
-      <constraints>
-        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="4c34-d4a3-0136-671c" type="max"/>
-      </constraints>
-      <selectionEntries>
-        <selectionEntry id="d05a-8eed-960f-afed" name="0. Unrelenting Conqueror" hidden="false" collective="false" import="true" type="upgrade">
-          <modifiers>
-            <modifier type="set" field="011c-5498-a9e1-1f9f" value="1.0">
-              <conditionGroups>
-                <conditionGroup type="and">
-                  <conditions>
-                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="0b00-d192-7482-cae5" type="greaterThan"/>
-                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="8b3d-7f03-e1f9-eaf5" type="equalTo"/>
-                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="c661-44d6-0f5b-11ff" type="greaterThan"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
-            </modifier>
-          </modifiers>
-          <constraints>
-            <constraint field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="011c-5498-a9e1-1f9f" type="min"/>
-          </constraints>
-          <profiles>
-            <profile id="3830-f229-8bd2-b634" name="Unrelenting Conqueror" hidden="false" typeId="1504-23bf-8850-4f65" typeName="Command Traits">
-              <characteristics>
-                <characteristic name="Command Trait" typeId="0145-9acf-f5dc-d543">A Tamurkhan’s Horde general must have this command trait instead of one from the Maggotkin of Nurgle allegiance abilities.
-
-Add 1 to run rolls for friendly Tamurkhan’s Horde units while they are wholly within 14&quot; of this general.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <costs>
-            <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
-          </costs>
-        </selectionEntry>
-      </selectionEntries>
-    </selectionEntryGroup>
-  </sharedSelectionEntryGroups>
 </catalogue>
