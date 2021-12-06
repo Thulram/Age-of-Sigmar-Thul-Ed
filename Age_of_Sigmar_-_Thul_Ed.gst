@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<gameSystem id="e832-3291-06be-cab1" name="Age of Sigmar - Thul Ed" revision="19" battleScribeVersion="2.03" authorName="Thulram" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
+<gameSystem id="e832-3291-06be-cab1" name="Age of Sigmar - Thul Ed" revision="21" battleScribeVersion="2.03" authorName="Thulram" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
   <publications>
     <publication id="bf0c-0cbf-1f5d-5885" name="Chaos Battletome - Blades of Khorne"/>
     <publication id="6ce4-e8a3-f18f-be55" name="Order Battletome - Daughters of Khaine"/>
@@ -139,22 +139,27 @@
         <characteristicType id="048b-e7e5-18ce-91bb" name="Triumph"/>
       </characteristicTypes>
     </profileType>
+    <profileType id="4bb2-448c-446c-f522" name="Battle Tactic">
+      <characteristicTypes>
+        <characteristicType id="8c0f-be41-a70e-c699" name="Battle Tactic"/>
+      </characteristicTypes>
+    </profileType>
   </profileTypes>
   <categoryEntries>
     <categoryEntry id="eb59-f0ad-9828-dad9" name="Allies" hidden="false"/>
     <categoryEntry id="9573-fac2-8fe9-5ed8" name="Artillery" hidden="false"/>
-    <categoryEntry id="6eff-9011-b44d-1334" name="War Machine" hidden="false"/>
+    <categoryEntry id="6eff-9011-b44d-1334" name="WAR MACHINE" hidden="false"/>
     <categoryEntry id="7f62-b7f5-32d5-e13b" name="Behemoth" hidden="false"/>
-    <categoryEntry id="e3bc-f9bd-b6f8-7afd" name="Monster" hidden="false"/>
+    <categoryEntry id="e3bc-f9bd-b6f8-7afd" name="MONSTER" hidden="false"/>
     <categoryEntry id="93cb-21d9-e1d5-6161" name="Leader" hidden="false"/>
-    <categoryEntry id="f0a9-dd66-8662-61ce" name="Priest" hidden="false"/>
-    <categoryEntry id="7ee2-0d81-544f-5d7e" name="Wizard" hidden="false"/>
-    <categoryEntry id="ca90-b9b0-010b-72d0" name="Mortal" hidden="false"/>
-    <categoryEntry id="128a-35fa-6f1f-a15d" name="Daemon" hidden="false"/>
-    <categoryEntry id="d8b4-9de1-926f-99b1" name="Chaos" hidden="false"/>
-    <categoryEntry id="4927-09f0-87d8-4a68" name="Death" hidden="false"/>
-    <categoryEntry id="5d33-469f-2bda-51f9" name="Destruction" hidden="false"/>
-    <categoryEntry id="90c6-6c11-9677-1fa8" name="Order" hidden="false"/>
+    <categoryEntry id="f0a9-dd66-8662-61ce" name="PRIEST" hidden="false"/>
+    <categoryEntry id="7ee2-0d81-544f-5d7e" name="WIZARD" hidden="false"/>
+    <categoryEntry id="ca90-b9b0-010b-72d0" name="MORTAL" hidden="false"/>
+    <categoryEntry id="128a-35fa-6f1f-a15d" name="DAEMON" hidden="false"/>
+    <categoryEntry id="d8b4-9de1-926f-99b1" name="CHAOS" hidden="false"/>
+    <categoryEntry id="4927-09f0-87d8-4a68" name="DEATH" hidden="false"/>
+    <categoryEntry id="5d33-469f-2bda-51f9" name="DESTRUCTION" hidden="false"/>
+    <categoryEntry id="90c6-6c11-9677-1fa8" name="ORDER" hidden="false"/>
     <categoryEntry id="fcd7-57cc-479b-7d67" name="Endless Spell" hidden="false">
       <modifiers>
         <modifier type="increment" field="a8e8-126f-27ad-c757" value="1.0">
@@ -178,7 +183,7 @@
         <constraint field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="a8e8-126f-27ad-c757" type="max"/>
       </constraints>
     </categoryEntry>
-    <categoryEntry id="411f-dd41-4ab6-8a05" name="Hero" hidden="false"/>
+    <categoryEntry id="411f-dd41-4ab6-8a05" name="HERO" hidden="false"/>
     <categoryEntry id="14aa-41c0-f6b8-bb8b" name="KHORNE" hidden="false"/>
     <categoryEntry id="47fb-62a4-9300-3d17" name="OSSIARCH BONEREAPERS" hidden="false"/>
     <categoryEntry id="df1c-7b56-4692-0e49" name="ORRUK" hidden="false"/>
@@ -191,12 +196,12 @@
     <categoryEntry id="58b2-6793-0b10-a246" name="SLAANESH" hidden="false"/>
     <categoryEntry id="eef2-2f52-b1cb-0639" name="TZEENTCH" hidden="false"/>
     <categoryEntry id="3d8e-f033-36fa-7d92" name="SERAPHON" hidden="false"/>
-    <categoryEntry id="f7e5-f667-4647-e141" name="STORMCAST ETERNAL" hidden="false"/>
+    <categoryEntry id="f7e5-f667-4647-e141" name="STORMCAST ETERNALS" hidden="false"/>
     <categoryEntry id="7cc4-0f77-6518-a47d" name="SLAVES TO DARKNESS" hidden="false"/>
-    <categoryEntry id="457a-27e1-4f2b-84d0" name="Greater Daemon" hidden="false"/>
+    <categoryEntry id="457a-27e1-4f2b-84d0" name="GREATER DAEMON" hidden="false"/>
     <categoryEntry id="6230-ed60-e374-add4" name="Other Units" hidden="false"/>
-    <categoryEntry id="a42d-220e-6a88-7bf6" name="BATTLELINE" hidden="false"/>
-    <categoryEntry id="29de-3558-f0b3-40ea" name="Totem" hidden="false"/>
+    <categoryEntry id="a42d-220e-6a88-7bf6" name="Battleline" hidden="false"/>
+    <categoryEntry id="29de-3558-f0b3-40ea" name="TOTEM" hidden="false"/>
     <categoryEntry id="ba14-5553-456e-33ad" name="Artefacts" hidden="false">
       <modifiers>
         <modifier type="increment" field="657e-7a1f-6e74-9082" value="1.0">
@@ -226,8 +231,8 @@
     <categoryEntry id="c661-44d6-0f5b-11ff" name="General" hidden="false"/>
     <categoryEntry id="543e-1cc9-6d38-f8b3" name="Unique" hidden="false"/>
     <categoryEntry id="af41-ae78-5063-3d36" name="Allegiance" hidden="false"/>
-    <categoryEntry id="8682-7852-3c08-0371" name="Daemon Prince" hidden="false"/>
-    <categoryEntry id="babf-cdeb-b0ab-05db" name="Aelf" hidden="false"/>
+    <categoryEntry id="8682-7852-3c08-0371" name="DAEMON PRINCE" hidden="false"/>
+    <categoryEntry id="babf-cdeb-b0ab-05db" name="AELF" hidden="false"/>
     <categoryEntry id="8b3d-7f03-e1f9-eaf5" name="Named General" hidden="true"/>
     <categoryEntry id="4fe1-4d42-25cc-d732" name="Sub-Allegiance" hidden="true"/>
     <categoryEntry id="29f4-e63d-fa5b-1611" name="List Options" hidden="false"/>
@@ -261,12 +266,12 @@
     <categoryEntry id="b347-5473-3854-2c40" name="Shyish (realm)" hidden="false"/>
     <categoryEntry id="77c4-0c41-aba2-b536" name="LEGION OF AZGORH" hidden="false"/>
     <categoryEntry id="9759-9d1a-05b7-a22d" name="SKAVEN" hidden="false"/>
-    <categoryEntry id="b4ba-caec-0644-d577" name="Human" hidden="false"/>
-    <categoryEntry id="3312-857f-e66d-e32e" name="Celestial" hidden="false"/>
+    <categoryEntry id="b4ba-caec-0644-d577" name="HUMAN" hidden="false"/>
+    <categoryEntry id="3312-857f-e66d-e32e" name="CELESTIAL" hidden="false"/>
     <categoryEntry id="b827-97c4-10f4-0d4e" name="SYLVANETH" hidden="false"/>
     <categoryEntry id="49c9-2257-e9f5-a409" name="KHARADRON OVERLORDS" hidden="false"/>
     <categoryEntry id="606f-9b75-948c-bf2c" name="ArtefactPlus" hidden="true"/>
-    <categoryEntry id="3434-9baa-1e9a-4ebd" name="Duardin" hidden="false"/>
+    <categoryEntry id="3434-9baa-1e9a-4ebd" name="DUARDIN" hidden="false"/>
     <categoryEntry id="8ae1-74a9-a02d-3cfa" name="Battleline Behemoth" hidden="true"/>
     <categoryEntry id="804e-5726-7202-6944" name="FYRESLAYERS" hidden="false"/>
     <categoryEntry id="c9f0-7b6d-1b55-8eb2" name="Allegiant Duardin" hidden="false"/>
@@ -274,13 +279,13 @@
     <categoryEntry id="83bd-c7a0-2ee2-4037" name="Cities Realms" hidden="true"/>
     <categoryEntry id="717f-e16c-d728-7341" name="Cities Realms - Aqshy" hidden="true"/>
     <categoryEntry id="975b-7166-c259-7c02" name="Cities Realms - Ghyran" hidden="true"/>
-    <categoryEntry id="c103-01b4-c8ad-ff30" name="Gotrek Gurnisson" hidden="false"/>
+    <categoryEntry id="c103-01b4-c8ad-ff30" name="GOTREK GURNISSON" hidden="false"/>
     <categoryEntry id="7cad-9643-56c1-6fd8" name="FLESH-EATER COURTS" hidden="false"/>
     <categoryEntry id="c6a3-55bb-de84-3ad0" name="IDONETH DEEPKIN" hidden="false"/>
     <categoryEntry id="afbc-a227-f9ea-5aeb" name="GLOOMSPITE GITZ" hidden="false"/>
     <categoryEntry id="d684-be47-1dbe-7ca4" name="OGOR MAWTRIBES" hidden="false"/>
     <categoryEntry id="8b47-5a0c-c31c-53e0" name="BEASTS OF CHAOS" hidden="false"/>
-    <categoryEntry id="26bc-c712-1a05-8031" name="Monsters of Chaos" hidden="false"/>
+    <categoryEntry id="26bc-c712-1a05-8031" name="MONSTERS OF CHAOS" hidden="false"/>
     <categoryEntry id="c8a6-0af5-623c-375d" name="MinusOneBehemoth" hidden="true"/>
     <categoryEntry id="9af1-04d7-aa3e-c8b0" name="NIGHTHAUNT" hidden="false"/>
     <categoryEntry id="fac1-23aa-9be2-ad8f" name="Lethisian Defender" hidden="false"/>
@@ -329,6 +334,13 @@
     <categoryEntry id="660a-ffea-1ea6-c5fc" name="BLADES OF KHORNE" hidden="false"/>
     <categoryEntry id="5598-0d67-0b62-8fa3" name="HEDONITES OF SLAANESH" hidden="false"/>
     <categoryEntry id="2f02-6491-a31b-5b52" name="DISCIPLES OF TZEENTCH" hidden="false"/>
+    <categoryEntry id="318c-fa55-0855-47ef" name="Grand Strategy" hidden="false">
+      <constraints>
+        <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="ddf0-9687-1686-937d" type="max"/>
+        <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="b0e3-321b-1ddd-e387" type="min"/>
+      </constraints>
+    </categoryEntry>
+    <categoryEntry id="d75e-a123-ace4-2aa9" name="UniquePlus" hidden="false"/>
   </categoryEntries>
   <forceEntries>
     <forceEntry id="582e-fd89-8731-30c8" name="-Pitched Battle - 2000pts" hidden="false">
@@ -1667,124 +1679,6 @@
         <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="e950-ef98-e2fc-2377" name="Grand Strategy" hidden="false" collective="false" import="true" type="upgrade">
-      <constraints>
-        <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="0d02-7aef-4bf7-aaee" type="max"/>
-        <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="ee2c-2e32-bfca-731e" type="min"/>
-      </constraints>
-      <categoryLinks>
-        <categoryLink id="4f34-f83f-1c30-288d" name="New CategoryLink" hidden="false" targetId="29f4-e63d-fa5b-1611" primary="true"/>
-      </categoryLinks>
-      <selectionEntryGroups>
-        <selectionEntryGroup id="6c17-c6a3-1a01-6a65" name="Grand Strategies" hidden="false" collective="false" import="true">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="fdf3-2a31-cac7-008e" type="max"/>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="b909-feda-833a-84cb" type="min"/>
-          </constraints>
-          <selectionEntries>
-            <selectionEntry id="a306-525d-f9f7-1a80" name="Predator&apos;s Domain" hidden="false" collective="false" import="true" type="upgrade">
-              <profiles>
-                <profile id="82b0-49cd-1eb8-1ac0" name="Predator&apos;s Domain" hidden="false" typeId="7dc6-98f0-f5ba-fc16" typeName="Grand Strategy">
-                  <characteristics>
-                    <characteristic name="Grand Strategy" typeId="22d6-b382-f824-6381">When the battle ends, you complete this grand strategy if you control more terrain features than your opponent.</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-              <costs>
-                <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
-              </costs>
-            </selectionEntry>
-            <selectionEntry id="ad4a-06be-2f2a-4112" name="Pillars of Belief" hidden="false" collective="false" import="true" type="upgrade">
-              <profiles>
-                <profile id="27d2-26d2-ee57-cf88" name="Pillars of Belief" hidden="false" typeId="7dc6-98f0-f5ba-fc16" typeName="Grand Strategy">
-                  <characteristics>
-                    <characteristic name="Grand Strategy" typeId="22d6-b382-f824-6381">When the battle ends, you complete this grand strategy if there are any PRIESTS from your starting army on the battlefield.</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-              <costs>
-                <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
-              </costs>
-            </selectionEntry>
-            <selectionEntry id="c366-2e1a-7681-ca27" name="Prized Sorcery" hidden="false" collective="false" import="true" type="upgrade">
-              <profiles>
-                <profile id="da25-9850-a10b-5f35" name="Prized Sorcery" hidden="false" typeId="7dc6-98f0-f5ba-fc16" typeName="Grand Strategy">
-                  <characteristics>
-                    <characteristic name="Grand Strategy" typeId="22d6-b382-f824-6381">When the battle ends, you complete this grand strategy if there are any WIZARDS from your starting army on the battlefield.</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-              <costs>
-                <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
-              </costs>
-            </selectionEntry>
-            <selectionEntry id="1f41-cca5-23dd-e8ea" name="Beast Master" hidden="false" collective="false" import="true" type="upgrade">
-              <profiles>
-                <profile id="a4df-888a-b950-a13f" name="Beast Master" hidden="false" typeId="7dc6-98f0-f5ba-fc16" typeName="Grand Strategy">
-                  <characteristics>
-                    <characteristic name="Grand Strategy" typeId="22d6-b382-f824-6381">When the battle ends, you complete this grand strategy if there are any MONSTERS from your starting army on the battlefield.</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-              <costs>
-                <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
-              </costs>
-            </selectionEntry>
-            <selectionEntry id="3f38-75e9-4d46-99a2" name="Dominating Presence" hidden="false" collective="false" import="true" type="upgrade">
-              <profiles>
-                <profile id="20f7-ce18-ecc0-54c9" name="Dominating Presence" hidden="false" typeId="7dc6-98f0-f5ba-fc16" typeName="Grand Strategy">
-                  <characteristics>
-                    <characteristic name="Grand Strategy" typeId="22d6-b382-f824-6381">When the battle ends, you complete this grand strategy if there are more units from your starting army on the battlefield than there are enemy units from your opponent&apos;s starting army on the battlefield.</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-              <costs>
-                <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
-              </costs>
-            </selectionEntry>
-            <selectionEntry id="1daa-4b64-2483-f62c" name="Vendetta" hidden="false" collective="false" import="true" type="upgrade">
-              <profiles>
-                <profile id="be8a-4ccb-1b14-c95b" name="Vendetta" hidden="false" typeId="7dc6-98f0-f5ba-fc16" typeName="Grand Strategy">
-                  <characteristics>
-                    <characteristic name="Grand Strategy" typeId="22d6-b382-f824-6381">When the battle ends, you complete this grand strategy if the model chosen to be your opponent&apos;s general has been slain and the model chosen to be your general has not been slain.</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-              <costs>
-                <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
-              </costs>
-            </selectionEntry>
-            <selectionEntry id="b4a5-2a67-e3c8-7f18" name="Hold the Line" hidden="false" collective="false" import="true" type="upgrade">
-              <profiles>
-                <profile id="7622-b35f-f67a-1d45" name="Hold the Line" hidden="false" typeId="7dc6-98f0-f5ba-fc16" typeName="Grand Strategy">
-                  <characteristics>
-                    <characteristic name="Grand Strategy" typeId="22d6-b382-f824-6381">When the battle ends, you complete this grand strategy if there are any Battleline units from your starting army on the battlefield.</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-              <costs>
-                <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
-              </costs>
-            </selectionEntry>
-            <selectionEntry id="0b81-7da0-cf1a-f574" name="Sever the Head" hidden="false" collective="false" import="true" type="upgrade">
-              <profiles>
-                <profile id="1aa9-3168-5ebd-2ecd" name="Sever the Head" hidden="false" typeId="7dc6-98f0-f5ba-fc16" typeName="Grand Strategy">
-                  <characteristics>
-                    <characteristic name="Grand Strategy" typeId="22d6-b382-f824-6381">When the battle ends, you complete this grand strategy if there are no HEROES from your opponent&apos;s starting army on the battlefield.</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-              <costs>
-                <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
-              </costs>
-            </selectionEntry>
-          </selectionEntries>
-        </selectionEntryGroup>
-      </selectionEntryGroups>
-      <costs>
-        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
-      </costs>
-    </selectionEntry>
     <selectionEntry id="da5e-e53e-c4a2-56a0" name="Triumph" hidden="false" collective="false" import="true" type="upgrade">
       <modifiers>
         <modifier type="increment" field="22b5-24ec-467d-4d3d" value="1.0">
@@ -1919,6 +1813,14 @@
             <selectionEntry id="2c37-80be-08e5-ce19" name="Extra Mount Trait" hidden="false" collective="false" import="true" type="upgrade">
               <categoryLinks>
                 <categoryLink id="c0b3-da78-a07d-16a8" name="MountTraitPlus" hidden="false" targetId="99e1-bf54-e3ec-ab80" primary="false"/>
+              </categoryLinks>
+              <costs>
+                <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="ca03-4b25-ebc5-ee4d" name="Extra Unique Enhancement" hidden="false" collective="false" import="true" type="upgrade">
+              <categoryLinks>
+                <categoryLink id="ef6a-97f2-bf2f-04d5" name="UniquePlus" hidden="false" targetId="d75e-a123-ace4-2aa9" primary="false"/>
               </categoryLinks>
               <costs>
                 <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
@@ -2757,6 +2659,9 @@ At the start of your hero phase, you receive 1 extra command point if any friend
             <infoLink id="404e-bea8-6890-af97" name="Arcane Bolt" hidden="false" targetId="2dfe-38cb-0d5e-e85e" type="profile"/>
             <infoLink id="5c45-5888-b2fb-267e" name="Mystic Shield" hidden="false" targetId="3b74-6720-61fa-1f0c" type="profile"/>
           </infoLinks>
+          <categoryLinks>
+            <categoryLink id="a6c7-ca38-58a9-cd46" name="WIZARD" hidden="false" targetId="7ee2-0d81-544f-5d7e" primary="false"/>
+          </categoryLinks>
           <costs>
             <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
           </costs>
@@ -2956,7 +2861,7 @@ At the start of your hero phase, you receive 1 extra command point if any friend
         </selectionEntry>
       </selectionEntries>
     </selectionEntryGroup>
-    <selectionEntryGroup id="8c04-393d-d72d-c2a8" name="Battalion Formation" hidden="false" collective="false" import="true">
+    <selectionEntryGroup id="8c04-393d-d72d-c2a8" name="Core Battalions" hidden="false" collective="false" import="true">
       <modifiers>
         <modifier type="set" field="hidden" value="true">
           <conditionGroups>
@@ -2967,11 +2872,18 @@ At the start of your hero phase, you receive 1 extra command point if any friend
               <conditionGroups>
                 <conditionGroup type="and">
                   <conditions>
-                    <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="7f62-b7f5-32d5-e13b" type="instanceOf"/>
                     <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2a17-fa7a-1f93-74b3" type="equalTo"/>
                     <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="d21b-1df3-c1c4-c98b" type="equalTo"/>
                     <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="be7b-0a82-b9ee-9e57" type="equalTo"/>
                   </conditions>
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="7f62-b7f5-32d5-e13b" type="instanceOf"/>
+                        <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="93cb-21d9-e1d5-6161" type="notInstanceOf"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
                 </conditionGroup>
                 <conditionGroup type="and">
                   <conditions>
@@ -2984,7 +2896,7 @@ At the start of your hero phase, you receive 1 extra command point if any friend
                   <conditions>
                     <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="93cb-21d9-e1d5-6161" type="instanceOf"/>
                     <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="fd89-46ab-c18f-c2ba" type="equalTo"/>
-                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="6186-9f34-d0f6-3e2f" type="equalTo"/>
+                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2a17-fa7a-1f93-74b3" type="equalTo"/>
                     <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="be7b-0a82-b9ee-9e57" type="equalTo"/>
                     <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="684f-5696-3505-68d9" type="equalTo"/>
                     <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="9c17-ca1a-88bd-02eb" type="equalTo"/>
@@ -3009,14 +2921,14 @@ At the start of your hero phase, you receive 1 extra command point if any friend
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="4c1a-ba9a-fc70-8142" type="max"/>
       </constraints>
       <selectionEntries>
-        <selectionEntry id="25e2-653d-31cb-b91f" name="Hunters of the Heartlands" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="aa82-d6f3-e515-5e12" name="Alpha-Beast Pack" hidden="false" collective="false" import="true" type="upgrade">
           <modifiers>
             <modifier type="set" field="hidden" value="true">
               <conditionGroups>
                 <conditionGroup type="or">
                   <conditions>
-                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="7a88-e004-080e-3e76" type="equalTo"/>
-                    <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="6230-ed60-e374-add4" type="notInstanceOf"/>
+                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="d21b-1df3-c1c4-c98b" type="equalTo"/>
+                    <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="7f62-b7f5-32d5-e13b" type="notInstanceOf"/>
                   </conditions>
                 </conditionGroup>
               </conditionGroups>
@@ -3026,7 +2938,36 @@ At the start of your hero phase, you receive 1 extra command point if any friend
             <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="b8e0-5e9c-50c4-0aae" name="Grand Battery" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="d497-6945-4567-3c7e" name="Battle Regiment" hidden="false" collective="false" import="true" type="upgrade">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2a17-fa7a-1f93-74b3" type="equalTo"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <costs>
+            <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="a573-39fd-68c5-35dd" name="Command Entourage" hidden="false" collective="false" import="true" type="upgrade">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="ac05-743e-3e68-5321" type="equalTo"/>
+                    <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="93cb-21d9-e1d5-6161" type="notInstanceOf"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
+          <costs>
+            <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="20f4-4436-b80c-6d38" name="Grand Battery" hidden="false" collective="false" import="true" type="upgrade">
           <modifiers>
             <modifier type="set" field="hidden" value="true">
               <conditionGroups>
@@ -3050,14 +2991,14 @@ At the start of your hero phase, you receive 1 extra command point if any friend
             <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="f0a4-6187-0d8e-ac68" name="Command Entourage" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="6aa7-086a-2da4-95a7" name="Hunters of the Heartlands" hidden="false" collective="false" import="true" type="upgrade">
           <modifiers>
             <modifier type="set" field="hidden" value="true">
               <conditionGroups>
                 <conditionGroup type="or">
                   <conditions>
-                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="ac05-743e-3e68-5321" type="equalTo"/>
-                    <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="93cb-21d9-e1d5-6161" type="notInstanceOf"/>
+                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="7a88-e004-080e-3e76" type="equalTo"/>
+                    <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="6230-ed60-e374-add4" type="notInstanceOf"/>
                   </conditions>
                 </conditionGroup>
               </conditionGroups>
@@ -3067,43 +3008,7 @@ At the start of your hero phase, you receive 1 extra command point if any friend
             <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="e1f5-bc2d-a102-d5b0" name="Linebreaker" hidden="false" collective="false" import="true" type="upgrade">
-          <modifiers>
-            <modifier type="set" field="hidden" value="true">
-              <conditionGroups>
-                <conditionGroup type="or">
-                  <conditions>
-                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="be7b-0a82-b9ee-9e57" type="equalTo"/>
-                  </conditions>
-                  <conditionGroups>
-                    <conditionGroup type="and">
-                      <conditions>
-                        <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="7f62-b7f5-32d5-e13b" type="notInstanceOf"/>
-                        <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="93cb-21d9-e1d5-6161" type="notInstanceOf"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
-                </conditionGroup>
-              </conditionGroups>
-            </modifier>
-          </modifiers>
-          <costs>
-            <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="6186-9f34-d0f6-3e2f" name="Battle Regiment" hidden="false" collective="false" import="true" type="upgrade">
-          <modifiers>
-            <modifier type="set" field="hidden" value="true">
-              <conditions>
-                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2a17-fa7a-1f93-74b3" type="equalTo"/>
-              </conditions>
-            </modifier>
-          </modifiers>
-          <costs>
-            <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="f5e9-514c-fe9a-d5d1" name="Vanguard" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="4177-b236-4688-8ccc" name="Vanguard" hidden="false" collective="false" import="true" type="upgrade">
           <modifiers>
             <modifier type="set" field="hidden" value="true">
               <conditionGroups>
@@ -3127,15 +3032,23 @@ At the start of your hero phase, you receive 1 extra command point if any friend
             <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="49b6-9111-681d-9f60" name="Alpha-Beast Pack" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="3aa9-038b-0f21-097f" name="Warlord" hidden="false" collective="false" import="true" type="upgrade">
           <modifiers>
             <modifier type="set" field="hidden" value="true">
               <conditionGroups>
                 <conditionGroup type="or">
                   <conditions>
-                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="d21b-1df3-c1c4-c98b" type="equalTo"/>
-                    <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="7f62-b7f5-32d5-e13b" type="notInstanceOf"/>
+                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="684f-5696-3505-68d9" type="equalTo"/>
+                    <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="9573-fac2-8fe9-5ed8" type="instanceOf"/>
                   </conditions>
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="7f62-b7f5-32d5-e13b" type="instanceOf"/>
+                        <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="93cb-21d9-e1d5-6161" type="notInstanceOf"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
                 </conditionGroup>
               </conditionGroups>
             </modifier>
@@ -3144,20 +3057,129 @@ At the start of your hero phase, you receive 1 extra command point if any friend
             <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="9702-ec19-a577-2665" name="Warlord" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="e58c-16eb-b888-2229" name="Linebreaker" hidden="false" collective="false" import="true" type="upgrade">
           <modifiers>
             <modifier type="set" field="hidden" value="true">
               <conditionGroups>
                 <conditionGroup type="or">
                   <conditions>
-                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="684f-5696-3505-68d9" type="equalTo"/>
-                    <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="9573-fac2-8fe9-5ed8" type="instanceOf"/>
-                    <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="7f62-b7f5-32d5-e13b" type="instanceOf"/>
+                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="be7b-0a82-b9ee-9e57" type="equalTo"/>
                   </conditions>
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="7f62-b7f5-32d5-e13b" type="notInstanceOf"/>
+                        <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="93cb-21d9-e1d5-6161" type="notInstanceOf"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
                 </conditionGroup>
               </conditionGroups>
             </modifier>
           </modifiers>
+          <costs>
+            <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
+          </costs>
+        </selectionEntry>
+      </selectionEntries>
+    </selectionEntryGroup>
+    <selectionEntryGroup id="bb2d-2110-60b8-c13e" name="GHB &apos;21" hidden="false" collective="false" import="true">
+      <constraints>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="a10b-f3ee-425c-7ba3" type="max"/>
+      </constraints>
+      <selectionEntries>
+        <selectionEntry id="50f9-ed34-b289-f5df" name="Predator&apos;s Domain" hidden="false" collective="false" import="true" type="upgrade">
+          <profiles>
+            <profile id="043d-f162-88b4-f75a" name="Predator&apos;s Domain" hidden="false" typeId="7dc6-98f0-f5ba-fc16" typeName="Grand Strategy">
+              <characteristics>
+                <characteristic name="Grand Strategy" typeId="22d6-b382-f824-6381">When the battle ends, you complete this grand strategy if you control more terrain features than your opponent.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <costs>
+            <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="afec-5f3c-2761-5d0c" name="Pillars of Belief" hidden="false" collective="false" import="true" type="upgrade">
+          <profiles>
+            <profile id="3c52-5c43-d787-92b7" name="Pillars of Belief" hidden="false" typeId="7dc6-98f0-f5ba-fc16" typeName="Grand Strategy">
+              <characteristics>
+                <characteristic name="Grand Strategy" typeId="22d6-b382-f824-6381">When the battle ends, you complete this grand strategy if there are any PRIESTS from your starting army on the battlefield.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <costs>
+            <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="916f-efe6-498b-eb6e" name="Prized Sorcery" hidden="false" collective="false" import="true" type="upgrade">
+          <profiles>
+            <profile id="5c26-1346-523c-bb02" name="Prized Sorcery" hidden="false" typeId="7dc6-98f0-f5ba-fc16" typeName="Grand Strategy">
+              <characteristics>
+                <characteristic name="Grand Strategy" typeId="22d6-b382-f824-6381">When the battle ends, you complete this grand strategy if there are any WIZARDS from your starting army on the battlefield.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <costs>
+            <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="b1ac-3bd8-d18d-67c5" name="Beast Master" hidden="false" collective="false" import="true" type="upgrade">
+          <profiles>
+            <profile id="82ca-ff3f-a716-61fa" name="Beast Master" hidden="false" typeId="7dc6-98f0-f5ba-fc16" typeName="Grand Strategy">
+              <characteristics>
+                <characteristic name="Grand Strategy" typeId="22d6-b382-f824-6381">When the battle ends, you complete this grand strategy if there are any MONSTERS from your starting army on the battlefield.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <costs>
+            <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="cf44-d2ab-b273-d5a2" name="Dominating Presence" hidden="false" collective="false" import="true" type="upgrade">
+          <profiles>
+            <profile id="a0c1-86b7-e12b-a166" name="Dominating Presence" hidden="false" typeId="7dc6-98f0-f5ba-fc16" typeName="Grand Strategy">
+              <characteristics>
+                <characteristic name="Grand Strategy" typeId="22d6-b382-f824-6381">When the battle ends, you complete this grand strategy if there are more units from your starting army on the battlefield than there are enemy units from your opponent&apos;s starting army on the battlefield.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <costs>
+            <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="a635-8ef6-4448-596a" name="Vendetta" hidden="false" collective="false" import="true" type="upgrade">
+          <profiles>
+            <profile id="5b7c-0c1c-a5df-ca19" name="Vendetta" hidden="false" typeId="7dc6-98f0-f5ba-fc16" typeName="Grand Strategy">
+              <characteristics>
+                <characteristic name="Grand Strategy" typeId="22d6-b382-f824-6381">When the battle ends, you complete this grand strategy if the model chosen to be your opponent&apos;s general has been slain and the model chosen to be your general has not been slain.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <costs>
+            <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="a677-ed29-6ed7-ec8a" name="Hold the Line" hidden="false" collective="false" import="true" type="upgrade">
+          <profiles>
+            <profile id="ca2e-e1b9-36f3-9fae" name="Hold the Line" hidden="false" typeId="7dc6-98f0-f5ba-fc16" typeName="Grand Strategy">
+              <characteristics>
+                <characteristic name="Grand Strategy" typeId="22d6-b382-f824-6381">When the battle ends, you complete this grand strategy if there are any Battleline units from your starting army on the battlefield.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <costs>
+            <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="332c-a979-b167-c5aa" name="Sever the Head" hidden="false" collective="false" import="true" type="upgrade">
+          <profiles>
+            <profile id="8502-0555-ef05-d758" name="Sever the Head" hidden="false" typeId="7dc6-98f0-f5ba-fc16" typeName="Grand Strategy">
+              <characteristics>
+                <characteristic name="Grand Strategy" typeId="22d6-b382-f824-6381">When the battle ends, you complete this grand strategy if there are no HEROES from your opponent&apos;s starting army on the battlefield.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
           <costs>
             <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
           </costs>

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="3a96-1aa6-c9ff-4747" name="Death - Soulblight Gravelords" revision="10" battleScribeVersion="2.03" authorName="Thulram" library="false" gameSystemId="e832-3291-06be-cab1" gameSystemRevision="9" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="3a96-1aa6-c9ff-4747" name="Death - Soulblight Gravelords" revision="12" battleScribeVersion="2.03" authorName="Thulram" library="false" gameSystemId="e832-3291-06be-cab1" gameSystemRevision="11" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <profileTypes>
     <profileType id="2c49-92df-379b-d9c4" name="Cursed Mutations">
       <characteristicTypes>
@@ -7,6 +7,9 @@
       </characteristicTypes>
     </profileType>
   </profileTypes>
+  <categoryEntries>
+    <categoryEntry id="6c61-69cd-cc7d-c23e" name="General - Wight King" hidden="false"/>
+  </categoryEntries>
   <selectionEntries>
     <selectionEntry id="009a-b93b-435f-f422" name="Prince Duvalle &amp; The Crimson Court (separate units)" hidden="false" collective="false" import="true" type="upgrade">
       <constraints>
@@ -156,8 +159,48 @@
         <entryLink id="cd1b-9ad2-a066-27e0" name="Soulblight Spell Lores" hidden="false" collective="false" import="true" targetId="4d43-88d2-0f19-3528" type="selectionEntryGroup"/>
       </entryLinks>
     </entryLink>
-    <entryLink id="4e9c-bb35-54e3-a7af" name="Black Knights" hidden="false" collective="false" import="true" targetId="8d25-e2ba-9940-fced" type="selectionEntry"/>
-    <entryLink id="5e96-a7a2-4cd8-06af" name="Blood Knights" hidden="false" collective="false" import="true" targetId="bac1-b8ab-b909-b0f0" type="selectionEntry"/>
+    <entryLink id="4e9c-bb35-54e3-a7af" name="Black Knights" hidden="false" collective="false" import="true" targetId="8d25-e2ba-9940-fced" type="selectionEntry">
+      <modifiers>
+        <modifier type="remove" field="category" value="a42d-220e-6a88-7bf6">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="e3a6-45ca-4974-b489" type="instanceOf"/>
+                <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4373-740f-1bf3-b0aa" type="instanceOf"/>
+                <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="6cd6-b22e-bfcb-9589" type="instanceOf"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="073c-eb87-5f4d-646f" type="equalTo"/>
+                <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="b543-cb16-0c79-fbc6" type="instanceOf"/>
+                <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="996a-613c-4006-25e3" type="instanceOf"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+      <categoryLinks>
+        <categoryLink id="77c5-cf60-428d-5157" name="Battleline" hidden="false" targetId="a42d-220e-6a88-7bf6" primary="false"/>
+      </categoryLinks>
+    </entryLink>
+    <entryLink id="5e96-a7a2-4cd8-06af" name="Blood Knights" hidden="false" collective="false" import="true" targetId="bac1-b8ab-b909-b0f0" type="selectionEntry">
+      <modifiers>
+        <modifier type="remove" field="category" value="a42d-220e-6a88-7bf6">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="e3a6-45ca-4974-b489" type="instanceOf"/>
+                <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4373-740f-1bf3-b0aa" type="instanceOf"/>
+                <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="6cd6-b22e-bfcb-9589" type="instanceOf"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="1ae2-849b-7005-79b0" type="equalTo"/>
+                <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="b543-cb16-0c79-fbc6" type="instanceOf"/>
+                <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="996a-613c-4006-25e3" type="instanceOf"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+      <categoryLinks>
+        <categoryLink id="9d3d-dc56-81e2-4fa2" name="Battleline" hidden="false" targetId="a42d-220e-6a88-7bf6" primary="false"/>
+      </categoryLinks>
+    </entryLink>
     <entryLink id="6c41-cd3f-5bb8-374a" name="Bloodseeker Palanquin" hidden="false" collective="false" import="true" targetId="9520-ca5f-d399-97a4" type="selectionEntry">
       <entryLinks>
         <entryLink id="0b44-dc8a-6d34-cbc9" name="General" hidden="false" collective="false" import="true" targetId="98a4-3d6d-a7b9-399f" type="selectionEntry"/>
@@ -188,7 +231,27 @@
         </entryLink>
       </entryLinks>
     </entryLink>
-    <entryLink id="dd50-ddc7-87d7-e80f" name="Grave Guard" hidden="false" collective="false" import="true" targetId="f997-8325-c4e8-d77d" type="selectionEntry"/>
+    <entryLink id="dd50-ddc7-87d7-e80f" name="Grave Guard" hidden="false" collective="false" import="true" targetId="f997-8325-c4e8-d77d" type="selectionEntry">
+      <modifiers>
+        <modifier type="remove" field="category" value="a42d-220e-6a88-7bf6">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="e3a6-45ca-4974-b489" type="instanceOf"/>
+                <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4373-740f-1bf3-b0aa" type="instanceOf"/>
+                <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="6cd6-b22e-bfcb-9589" type="instanceOf"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="6c61-69cd-cc7d-c23e" type="equalTo"/>
+                <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="b543-cb16-0c79-fbc6" type="instanceOf"/>
+                <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="996a-613c-4006-25e3" type="instanceOf"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+      <categoryLinks>
+        <categoryLink id="0e4a-6603-230c-3248" name="Battleline" hidden="false" targetId="a42d-220e-6a88-7bf6" primary="false"/>
+      </categoryLinks>
+    </entryLink>
     <entryLink id="8982-168c-8d57-972e" name="Kosargi Nightguard" hidden="false" collective="false" import="true" targetId="374f-b4b2-4eb2-dad5" type="selectionEntry"/>
     <entryLink id="5eff-fa83-b38a-a2eb" name="Kritza, the Rat Prince" hidden="false" collective="false" import="true" targetId="8562-f09f-745e-6e6c" type="selectionEntry">
       <entryLinks>
@@ -389,6 +452,25 @@
       </entryLinks>
     </entryLink>
     <entryLink id="5602-7cad-4074-517c" name="Terrorgheist" hidden="false" collective="false" import="true" targetId="25ec-bcf0-6bb3-230d" type="selectionEntry">
+      <modifiers>
+        <modifier type="remove" field="category" value="a42d-220e-6a88-7bf6">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="e3a6-45ca-4974-b489" type="instanceOf"/>
+                <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4373-740f-1bf3-b0aa" type="instanceOf"/>
+                <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="6cd6-b22e-bfcb-9589" type="instanceOf"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="1775-3608-22c6-32e6" type="equalTo"/>
+                <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="b543-cb16-0c79-fbc6" type="instanceOf"/>
+                <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="996a-613c-4006-25e3" type="instanceOf"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+      <categoryLinks>
+        <categoryLink id="be0f-dfcf-c184-e5a1" name="Battleline" hidden="false" targetId="a42d-220e-6a88-7bf6" primary="false"/>
+      </categoryLinks>
       <entryLinks>
         <entryLink id="7988-253e-bbdc-f6ba" name="Cursed Mutations" hidden="false" collective="false" import="true" targetId="f50e-8cff-5ddc-750f" type="selectionEntryGroup"/>
       </entryLinks>
@@ -421,7 +503,27 @@
         <entryLink id="148c-a48d-cf16-f9df" name="Cursed Mutations" hidden="false" collective="false" import="true" targetId="f50e-8cff-5ddc-750f" type="selectionEntryGroup"/>
       </entryLinks>
     </entryLink>
-    <entryLink id="3d20-2034-2a00-afa3" name="Vargheists" hidden="false" collective="false" import="true" targetId="0a86-1e78-f9ca-42a2" type="selectionEntry"/>
+    <entryLink id="3d20-2034-2a00-afa3" name="Vargheists" hidden="false" collective="false" import="true" targetId="0a86-1e78-f9ca-42a2" type="selectionEntry">
+      <modifiers>
+        <modifier type="remove" field="category" value="a42d-220e-6a88-7bf6">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="e3a6-45ca-4974-b489" type="instanceOf"/>
+                <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4373-740f-1bf3-b0aa" type="instanceOf"/>
+                <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="6cd6-b22e-bfcb-9589" type="instanceOf"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="ba3d-1050-0ecb-aeae" type="equalTo"/>
+                <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="b543-cb16-0c79-fbc6" type="instanceOf"/>
+                <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="996a-613c-4006-25e3" type="instanceOf"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+      <categoryLinks>
+        <categoryLink id="dd77-e2dc-a674-1efd" name="Battleline" hidden="false" targetId="a42d-220e-6a88-7bf6" primary="false"/>
+      </categoryLinks>
+    </entryLink>
     <entryLink id="9e53-e430-a99e-634f" name="Vargskyr" hidden="false" collective="false" import="true" targetId="2fa6-5775-31aa-89fa" type="selectionEntry"/>
     <entryLink id="ef02-e16e-e6c3-830a" name="Vengorian Lord" hidden="false" collective="false" import="true" targetId="348b-6a8f-2e15-2d75" type="selectionEntry">
       <entryLinks>
@@ -443,19 +545,48 @@
     </entryLink>
     <entryLink id="ebde-0f0e-0331-e867" name="Wight King" hidden="false" collective="false" import="true" targetId="174e-ef6d-2deb-5c0f" type="selectionEntry">
       <entryLinks>
-        <entryLink id="a637-e977-084d-a96b" name="General" hidden="false" collective="false" import="true" targetId="98a4-3d6d-a7b9-399f" type="selectionEntry"/>
         <entryLink id="f78f-d2fb-ca54-25c9" name="Artefacts of Power" hidden="false" collective="false" import="true" targetId="b3cb-5911-b87c-160d" type="selectionEntryGroup"/>
         <entryLink id="61a9-9f10-2ff1-8111" name="Command Traits" hidden="false" collective="false" import="true" targetId="22b7-a890-181c-f9ee" type="selectionEntryGroup"/>
+        <entryLink id="0a26-2922-50c5-1d66" name="Soulblight Spell Lores" hidden="false" collective="false" import="true" targetId="4d43-88d2-0f19-3528" type="selectionEntryGroup"/>
+        <entryLink id="2406-b257-987f-a257" name="General" hidden="false" collective="false" import="true" targetId="98a4-3d6d-a7b9-399f" type="selectionEntry">
+          <categoryLinks>
+            <categoryLink id="b58f-66a6-db69-7ca7" name="General - Wight King" hidden="false" targetId="6c61-69cd-cc7d-c23e" primary="false"/>
+          </categoryLinks>
+        </entryLink>
       </entryLinks>
     </entryLink>
     <entryLink id="4be8-04df-0cbf-47b5" name="Wight King on Skeletal Steed" hidden="false" collective="false" import="true" targetId="79ca-cc53-f20f-3348" type="selectionEntry">
       <entryLinks>
-        <entryLink id="58f1-3b9b-ec6f-f11b" name="General" hidden="false" collective="false" import="true" targetId="98a4-3d6d-a7b9-399f" type="selectionEntry"/>
+        <entryLink id="58f1-3b9b-ec6f-f11b" name="General" hidden="false" collective="false" import="true" targetId="98a4-3d6d-a7b9-399f" type="selectionEntry">
+          <categoryLinks>
+            <categoryLink id="2170-95c8-5770-02de" name="General - Wight King" hidden="false" targetId="6c61-69cd-cc7d-c23e" primary="false"/>
+          </categoryLinks>
+        </entryLink>
         <entryLink id="afdb-eb2e-2ab2-7ed8" name="Artefacts of Power" hidden="false" collective="false" import="true" targetId="b3cb-5911-b87c-160d" type="selectionEntryGroup"/>
         <entryLink id="7581-95df-311e-531a" name="Command Traits" hidden="false" collective="false" import="true" targetId="22b7-a890-181c-f9ee" type="selectionEntryGroup"/>
+        <entryLink id="d75e-900f-3289-ea00" name="Soulblight Spell Lores" hidden="false" collective="false" import="true" targetId="4d43-88d2-0f19-3528" type="selectionEntryGroup"/>
       </entryLinks>
     </entryLink>
     <entryLink id="7899-5e34-6db5-89f9" name="Zombie Dragon" hidden="false" collective="false" import="true" targetId="96e3-94cf-d381-ead1" type="selectionEntry">
+      <modifiers>
+        <modifier type="remove" field="category" value="a42d-220e-6a88-7bf6">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="e3a6-45ca-4974-b489" type="instanceOf"/>
+                <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4373-740f-1bf3-b0aa" type="instanceOf"/>
+                <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="6cd6-b22e-bfcb-9589" type="instanceOf"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="1775-3608-22c6-32e6" type="equalTo"/>
+                <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="b543-cb16-0c79-fbc6" type="instanceOf"/>
+                <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="996a-613c-4006-25e3" type="instanceOf"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+      <categoryLinks>
+        <categoryLink id="6c3b-eeec-d595-7d2c" name="Battleline" hidden="false" targetId="a42d-220e-6a88-7bf6" primary="false"/>
+      </categoryLinks>
       <entryLinks>
         <entryLink id="243d-6395-967f-b436" name="Cursed Mutations" hidden="false" collective="false" import="true" targetId="f50e-8cff-5ddc-750f" type="selectionEntryGroup"/>
       </entryLinks>
@@ -695,6 +826,14 @@ Cursed Abominations are unique enhancements.</characteristic>
                 <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="e3a6-45ca-4974-b489" type="instanceOf"/>
                 <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="b543-cb16-0c79-fbc6" type="instanceOf"/>
               </conditions>
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="7ee2-0d81-544f-5d7e" type="equalTo"/>
+                    <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="7ee2-0d81-544f-5d7e" type="notInstanceOf"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
             </conditionGroup>
           </conditionGroups>
         </modifier>

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="1968-130d-9d17-5021" name="Chaos - Beasts of Chaos" revision="7" battleScribeVersion="2.03" authorName="Thulram" library="false" gameSystemId="e832-3291-06be-cab1" gameSystemRevision="6" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="1968-130d-9d17-5021" name="Chaos - Beasts of Chaos" revision="8" battleScribeVersion="2.03" authorName="Thulram" library="false" gameSystemId="e832-3291-06be-cab1" gameSystemRevision="7" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <profileTypes>
     <profileType id="7b36-24ed-f1d3-1262" name="Primordial Summoning Table">
       <characteristicTypes>
@@ -36,6 +36,7 @@
         </entryLink>
         <entryLink id="6ffa-ed8c-969f-684c" name="Artefacts of Power" hidden="false" collective="false" import="true" targetId="768d-19e8-5f48-51a6" type="selectionEntryGroup"/>
         <entryLink id="e5aa-27f4-93eb-4a72" name="Command Traits" hidden="false" collective="false" import="true" targetId="49bb-6b7c-b135-5f07" type="selectionEntryGroup"/>
+        <entryLink id="5c41-affb-c3f6-2e90" name="Beasts of Chaos Spell Lores" hidden="false" collective="false" import="true" targetId="d3c8-df24-ddef-b62d" type="selectionEntryGroup"/>
       </entryLinks>
     </entryLink>
     <entryLink id="11c3-4721-cb47-e1ff" name="Bestigors" hidden="false" collective="false" import="true" targetId="8e23-a1ff-a2dd-7335" type="selectionEntry">
@@ -99,6 +100,7 @@
         </entryLink>
         <entryLink id="e81d-2a48-3cb3-22a5" name="Artefacts of Power" hidden="false" collective="false" import="true" targetId="768d-19e8-5f48-51a6" type="selectionEntryGroup"/>
         <entryLink id="b92a-81a4-36c1-ce2c" name="Command Traits" hidden="false" collective="false" import="true" targetId="49bb-6b7c-b135-5f07" type="selectionEntryGroup"/>
+        <entryLink id="ed18-a5ce-b37e-1394" name="Beasts of Chaos Spell Lores" hidden="false" collective="false" import="true" targetId="d3c8-df24-ddef-b62d" type="selectionEntryGroup"/>
       </entryLinks>
     </entryLink>
     <entryLink id="fe15-84b7-8a92-38fd" name="Dragon Ogor Shaggoth" hidden="false" collective="false" import="true" targetId="7dd5-c271-6d90-5705" type="selectionEntry">
@@ -1680,6 +1682,14 @@ After rolling a dice for each unit from this battalion, roll a dice for each ene
                 <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="6cd6-b22e-bfcb-9589" type="instanceOf"/>
                 <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="b543-cb16-0c79-fbc6" type="instanceOf"/>
               </conditions>
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="7ee2-0d81-544f-5d7e" type="equalTo"/>
+                    <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="7ee2-0d81-544f-5d7e" type="notInstanceOf"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
             </conditionGroup>
           </conditionGroups>
         </modifier>
