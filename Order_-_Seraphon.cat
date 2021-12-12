@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="b581-6f0c-51ed-b9f9" name="Order - Seraphon" revision="14" battleScribeVersion="2.03" authorName="Thulram" library="false" gameSystemId="e832-3291-06be-cab1" gameSystemRevision="13" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="b581-6f0c-51ed-b9f9" name="Order - Seraphon" revision="15" battleScribeVersion="2.03" authorName="Thulram" library="false" gameSystemId="e832-3291-06be-cab1" gameSystemRevision="15" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <profileTypes>
     <profileType id="71c0-db88-72dc-b20c" name="Celestial Conjuration Table">
       <characteristicTypes>
@@ -105,6 +105,7 @@
                 <categoryLink id="63bc-acf6-20b9-c2f2" name="Named General" hidden="false" targetId="8b3d-7f03-e1f9-eaf5" primary="false"/>
               </categoryLinks>
             </entryLink>
+            <entryLink id="dde2-014c-496f-478a" name="Battalion Formation" hidden="false" collective="false" import="true" targetId="077f-e488-d765-516e" type="selectionEntryGroup"/>
           </entryLinks>
         </entryLink>
         <entryLink id="3016-ce75-1401-ba54" name="Klaq-Trok" hidden="false" collective="false" import="true" targetId="88e9-51dc-1237-4631" type="selectionEntry">
@@ -118,6 +119,7 @@
                 <categoryLink id="d883-fc07-948c-2d1e" name="Named General" hidden="false" targetId="8b3d-7f03-e1f9-eaf5" primary="false"/>
               </categoryLinks>
             </entryLink>
+            <entryLink id="79f7-aad1-9a9f-5d55" name="Battalion Formation" hidden="false" collective="false" import="true" targetId="077f-e488-d765-516e" type="selectionEntryGroup"/>
           </entryLinks>
         </entryLink>
         <entryLink id="37d0-801a-76f0-66ca" name="The Starblood Stalkers" hidden="false" collective="false" import="true" targetId="a45e-ff19-7dd1-6bee" type="selectionEntry">
@@ -125,10 +127,227 @@
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d63f-c06d-3b4b-7641" type="max"/>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="950c-57fe-d369-0501" type="min"/>
           </constraints>
+          <entryLinks>
+            <entryLink id="df1c-01d5-d11f-93f0" name="Battalion Formation" hidden="false" collective="false" import="true" targetId="077f-e488-d765-516e" type="selectionEntryGroup"/>
+          </entryLinks>
         </entryLink>
       </entryLinks>
       <costs>
         <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="225.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="850d-8b9f-4ab6-ec27" name="Grand Strategy" hidden="false" collective="false" import="true" type="upgrade">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4373-740f-1bf3-b0aa" type="instanceOf"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="e3a6-45ca-4974-b489" type="instanceOf"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="996a-613c-4006-25e3" type="instanceOf"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="6cd6-b22e-bfcb-9589" type="instanceOf"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="b543-cb16-0c79-fbc6" type="instanceOf"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+        <modifier type="set" field="e020-e117-a887-b0ef" value="0">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4373-740f-1bf3-b0aa" type="instanceOf"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="e3a6-45ca-4974-b489" type="instanceOf"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="996a-613c-4006-25e3" type="instanceOf"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="6cd6-b22e-bfcb-9589" type="instanceOf"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="b543-cb16-0c79-fbc6" type="instanceOf"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+      <constraints>
+        <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="8a6f-f63e-8bd8-b972" type="max"/>
+        <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="e020-e117-a887-b0ef" type="min"/>
+      </constraints>
+      <categoryLinks>
+        <categoryLink id="b1f4-016f-b1f2-de4b" name="New CategoryLink" hidden="false" targetId="29f4-e63d-fa5b-1611" primary="true"/>
+      </categoryLinks>
+      <selectionEntries>
+        <selectionEntry id="480f-40da-8dc6-1c61" name="Continuous Expansion" hidden="false" collective="false" import="true" type="upgrade">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="f867-0ec9-a800-5350" type="equalTo"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="6c15-a9df-1bdb-226d" type="max"/>
+          </constraints>
+          <profiles>
+            <profile id="9ca0-57d0-55ba-8d8e" name="Continuous Expansion" hidden="false" typeId="7dc6-98f0-f5ba-fc16" typeName="Grand Strategy">
+              <characteristics>
+                <characteristic name="Grand Strategy" typeId="22d6-b382-f824-6381">Coalesced army only. When the battle ends, you complete this objective if you have a least 1 friendly unit wholly within each large quarter of the battlefield.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <costs>
+            <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="2cdb-04fa-6a4c-0a99" name="The Astromatrix" hidden="false" collective="false" import="true" type="upgrade">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="97d8-ea8f-8e74-1a7c" type="equalTo"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="6f50-19db-2179-9623" type="max"/>
+          </constraints>
+          <profiles>
+            <profile id="06e5-caa4-8147-1f9c" name="The Astromatrix" hidden="false" typeId="7dc6-98f0-f5ba-fc16" typeName="Grand Strategy">
+              <characteristics>
+                <characteristic name="Grand Strategy" typeId="22d6-b382-f824-6381">Starborne army only. An imaginary ley line 1mm wide runs from the each corner of the battlefield to the diagonally opposite corner of the battlefield. When the battle ends, you complete this objective if a ley line does not pass over any enemy models with the WIZARD keyword, and at least 1 ley line passes over a friendly model with the WIZARD keyword.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <costs>
+            <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
+          </costs>
+        </selectionEntry>
+      </selectionEntries>
+      <selectionEntryGroups>
+        <selectionEntryGroup id="21c6-2d0a-dbb2-240a" name="Grand Strategy" hidden="false" collective="false" import="true">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d796-515d-d3e9-d4b4" type="max"/>
+          </constraints>
+          <categoryLinks>
+            <categoryLink id="3ae2-b477-cab7-66ff" name="Grand Strategy" hidden="false" targetId="318c-fa55-0855-47ef" primary="false"/>
+          </categoryLinks>
+          <entryLinks>
+            <entryLink id="b5d8-2a9f-d109-f0ed" name="GHB &apos;21" hidden="false" collective="false" import="true" targetId="bb2d-2110-60b8-c13e" type="selectionEntryGroup"/>
+          </entryLinks>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
+      <costs>
+        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="07df-aec3-09d2-effb" name="Thunderquake" hidden="false" collective="false" import="true" type="upgrade">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4373-740f-1bf3-b0aa" type="instanceOf"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="e3a6-45ca-4974-b489" type="instanceOf"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="996a-613c-4006-25e3" type="instanceOf"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="6cd6-b22e-bfcb-9589" type="instanceOf"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="b543-cb16-0c79-fbc6" type="instanceOf"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+      <categoryLinks>
+        <categoryLink id="726f-dbd7-2c22-de1f" name="New CategoryLink" hidden="false" targetId="c03a-b1a8-66c6-3637" primary="true"/>
+      </categoryLinks>
+      <selectionEntries>
+        <selectionEntry id="d71c-ab44-bb39-ba26" name="Engine of the Gods or Stegadon with Skink Chief" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="4049-a1da-0c11-ce7f" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="2698-112e-1b36-5ce6" type="min"/>
+          </constraints>
+          <costs>
+            <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="8ae0-05b3-1531-7c53" name="BASTILADON or STEGADON" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="2.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="156e-b61c-2865-52dd" type="max"/>
+            <constraint field="selections" scope="parent" value="2.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="336b-41a7-5e34-bdd3" type="min"/>
+          </constraints>
+          <costs>
+            <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
+          </costs>
+        </selectionEntry>
+      </selectionEntries>
+      <selectionEntryGroups>
+        <selectionEntryGroup id="03de-64d7-25ee-8b24" name="Battalion ability choice" hidden="false" collective="false" import="true" defaultSelectionEntryId="b5e2-b0e8-b0ab-e467">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8ad7-704a-3220-dfc7" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="a1bd-079c-b451-cfd7" type="min"/>
+          </constraints>
+          <selectionEntries>
+            <selectionEntry id="f4a3-9aeb-f367-4eb7" name="Swift" hidden="false" collective="false" import="true" type="upgrade">
+              <profiles>
+                <profile id="db07-624c-e71d-10e7" name="Swift" hidden="false" typeId="66c5-932e-004a-574c" typeName="Battalion Abilities">
+                  <characteristics>
+                    <characteristic name="Battalion Ability" typeId="23f7-32c0-e059-29b2">Once per battle, 1 unit from this battalion can receive the At the Double or Forward to Victory command without the command being issued and without a command point being spent.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <costs>
+                <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="b5e2-b0e8-b0ab-e467" name="Slayers" hidden="false" collective="false" import="true" type="upgrade">
+              <profiles>
+                <profile id="8e86-70de-a8a7-637c" name="Slayers" hidden="false" typeId="66c5-932e-004a-574c" typeName="Battalion Abilities">
+                  <characteristics>
+                    <characteristic name="Battalion Ability" typeId="23f7-32c0-e059-29b2">Once per battle, 1 unit from this battalion can receive the All-out Attack or Unleash Hell command without the command being issued and without a command point being spent.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <costs>
+                <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
+              </costs>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
+        <selectionEntryGroup id="4665-44d8-eeb4-0646" name="1 Kroxigor or 1 Razordons/Salamanders" hidden="false" collective="false" import="true" defaultSelectionEntryId="220e-02ed-9d02-9442">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="bba5-e432-427b-6c8a" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8ddc-dc59-e218-a692" type="min"/>
+          </constraints>
+          <selectionEntries>
+            <selectionEntry id="d7d3-f6df-c6df-1b3f" name="Kroxigor" hidden="false" collective="false" import="true" type="upgrade">
+              <costs>
+                <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="220e-02ed-9d02-9442" name="Razordon/Salamander" hidden="false" collective="false" import="true" type="upgrade">
+              <costs>
+                <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
+              </costs>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
+      <costs>
+        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="4aca-16bf-0537-3e3f" name="Seraphon Battle Tactics" hidden="false" collective="false" import="true" type="upgrade">
+      <profiles>
+        <profile id="32cc-4246-b974-89c3" name="Might of the Starborne" hidden="false" typeId="4bb2-448c-446c-f522" typeName="Battle Tactic">
+          <characteristics>
+            <characteristic name="Battle Tactic" typeId="8c0f-be41-a70e-c699">Pick 1 objective on the battlefield. You complete this battle tactic if you summon a friendly unit that has a CCP cost of 20 or more during the turn, and that unit is wholly within 12&quot; of the objective you picked.</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="3e94-7cb0-566a-a177" name="Stampede of Scales" hidden="false" typeId="4bb2-448c-446c-f522" typeName="Battle Tactic">
+          <characteristics>
+            <characteristic name="Battle Tactic" typeId="8c0f-be41-a70e-c699">Pick 3 different friendly MONSTERS. You complete this battle tactic if all of the units you picked run in the following movement phase and finish that run within 6&quot; of each other and wholly within enemy territory.</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <categoryLinks>
+        <categoryLink id="cc4b-b7d1-4d2d-ff26" name="New CategoryLink" hidden="false" targetId="29f4-e63d-fa5b-1611" primary="true"/>
+      </categoryLinks>
+      <costs>
+        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
       </costs>
     </selectionEntry>
   </selectionEntries>
@@ -156,6 +375,7 @@
             <categoryLink id="9a41-7190-3601-8374" name="Named General" hidden="false" targetId="8b3d-7f03-e1f9-eaf5" primary="false"/>
           </categoryLinks>
         </entryLink>
+        <entryLink id="03b7-41e0-2643-f6ac" name="Battalion Formation" hidden="false" collective="false" import="true" targetId="077f-e488-d765-516e" type="selectionEntryGroup"/>
       </entryLinks>
     </entryLink>
     <entryLink id="3bd8-78ce-9ae2-d87d" name="Saurus Astrolith Bearer" hidden="false" collective="false" import="true" targetId="ffce-50cb-6bec-c254" type="selectionEntry">
@@ -168,6 +388,7 @@
         <entryLink id="be59-83db-be71-28da" name="Artefacts of Power" hidden="false" collective="false" import="true" targetId="3a05-2cb4-92ae-62e4" type="selectionEntryGroup"/>
         <entryLink id="a61d-b31d-4404-6aa8" name="Command Traits" hidden="false" collective="false" import="true" targetId="5d24-ebc4-7261-165d" type="selectionEntryGroup"/>
         <entryLink id="fd18-3c44-0e58-1db2" name="Seraphon Spell Lores" hidden="false" collective="false" import="true" targetId="f503-4e35-143c-0f54" type="selectionEntryGroup"/>
+        <entryLink id="4c11-5ebd-2d44-2c94" name="Battalion Formation" hidden="false" collective="false" import="true" targetId="077f-e488-d765-516e" type="selectionEntryGroup"/>
       </entryLinks>
     </entryLink>
     <entryLink id="0833-94f2-b3ae-c9e9" name="Saurus Eternity Warden" hidden="false" collective="false" import="true" targetId="a611-89cb-30a8-04b4" type="selectionEntry">
@@ -180,10 +401,19 @@
         <entryLink id="8b92-d224-2f31-121c" name="Artefacts of Power" hidden="false" collective="false" import="true" targetId="3a05-2cb4-92ae-62e4" type="selectionEntryGroup"/>
         <entryLink id="6938-7695-bfbd-6dd3" name="Command Traits" hidden="false" collective="false" import="true" targetId="5d24-ebc4-7261-165d" type="selectionEntryGroup"/>
         <entryLink id="1ad1-68e4-b9a5-7f59" name="Seraphon Spell Lores" hidden="false" collective="false" import="true" targetId="f503-4e35-143c-0f54" type="selectionEntryGroup"/>
+        <entryLink id="e75d-e943-272f-dccb" name="Battalion Formation" hidden="false" collective="false" import="true" targetId="077f-e488-d765-516e" type="selectionEntryGroup"/>
       </entryLinks>
     </entryLink>
-    <entryLink id="e7cd-b36d-e2d1-2ca3" name="Saurus Guard" hidden="false" collective="false" import="true" targetId="f10e-c006-c7e8-f5c1" type="selectionEntry"/>
-    <entryLink id="cb48-2abf-21d9-96d0" name="Saurus Knights" hidden="false" collective="false" import="true" targetId="e5f1-a103-0056-8bb2" type="selectionEntry"/>
+    <entryLink id="e7cd-b36d-e2d1-2ca3" name="Saurus Guard" hidden="false" collective="false" import="true" targetId="f10e-c006-c7e8-f5c1" type="selectionEntry">
+      <entryLinks>
+        <entryLink id="32d6-f9ea-4848-303d" name="Battalion Formation" hidden="false" collective="false" import="true" targetId="077f-e488-d765-516e" type="selectionEntryGroup"/>
+      </entryLinks>
+    </entryLink>
+    <entryLink id="cb48-2abf-21d9-96d0" name="Saurus Knights" hidden="false" collective="false" import="true" targetId="e5f1-a103-0056-8bb2" type="selectionEntry">
+      <entryLinks>
+        <entryLink id="4ba3-cf24-d62d-bdb9" name="Battalion Formation" hidden="false" collective="false" import="true" targetId="077f-e488-d765-516e" type="selectionEntryGroup"/>
+      </entryLinks>
+    </entryLink>
     <entryLink id="f8f9-aa72-b519-0972" name="Saurus Oldblood" hidden="false" collective="false" import="true" targetId="89a6-50de-390e-6d2e" type="selectionEntry">
       <entryLinks>
         <entryLink id="1074-8340-b29f-10f6" name="General" hidden="false" collective="false" import="true" targetId="98a4-3d6d-a7b9-399f" type="selectionEntry">
@@ -194,6 +424,7 @@
         <entryLink id="f881-bde9-77c9-24e8" name="Artefacts of Power" hidden="false" collective="false" import="true" targetId="3a05-2cb4-92ae-62e4" type="selectionEntryGroup"/>
         <entryLink id="8556-68ff-6b12-800b" name="Command Traits" hidden="false" collective="false" import="true" targetId="5d24-ebc4-7261-165d" type="selectionEntryGroup"/>
         <entryLink id="11da-054f-ac77-fd96" name="Seraphon Spell Lores" hidden="false" collective="false" import="true" targetId="f503-4e35-143c-0f54" type="selectionEntryGroup"/>
+        <entryLink id="c6df-730a-c7b9-ab40" name="Battalion Formation" hidden="false" collective="false" import="true" targetId="077f-e488-d765-516e" type="selectionEntryGroup"/>
       </entryLinks>
     </entryLink>
     <entryLink id="2039-0cae-f82c-94d8" name="Saurus Oldblood on Carnosaur" hidden="false" collective="false" import="true" targetId="225b-1082-b2e9-6ecf" type="selectionEntry">
@@ -207,6 +438,8 @@
         <entryLink id="1b8a-c12d-6fb7-fb49" name="Artefacts of Power" hidden="false" collective="false" import="true" targetId="3a05-2cb4-92ae-62e4" type="selectionEntryGroup"/>
         <entryLink id="b90c-2901-06ad-4cf7" name="Command Traits" hidden="false" collective="false" import="true" targetId="5d24-ebc4-7261-165d" type="selectionEntryGroup"/>
         <entryLink id="8c7b-77a2-8c1e-91d2" name="Seraphon Spell Lores" hidden="false" collective="false" import="true" targetId="f503-4e35-143c-0f54" type="selectionEntryGroup"/>
+        <entryLink id="59e2-ecca-f687-4d24" name="Battalion Formation" hidden="false" collective="false" import="true" targetId="077f-e488-d765-516e" type="selectionEntryGroup"/>
+        <entryLink id="ee1a-f1c9-b5a2-4005" name="Mount Traits" hidden="false" collective="false" import="true" targetId="dc6a-60fa-4ed8-5c46" type="selectionEntryGroup"/>
       </entryLinks>
     </entryLink>
     <entryLink id="b569-a80e-8706-6c6f" name="Saurus Scar-Veteran on Carnosaur" hidden="false" collective="false" import="true" targetId="c56e-c500-14f5-2e01" type="selectionEntry">
@@ -220,6 +453,8 @@
         <entryLink id="a3f5-a657-a7bf-9983" name="Artefacts of Power" hidden="false" collective="false" import="true" targetId="3a05-2cb4-92ae-62e4" type="selectionEntryGroup"/>
         <entryLink id="d736-d367-1739-2a3e" name="Command Traits" hidden="false" collective="false" import="true" targetId="5d24-ebc4-7261-165d" type="selectionEntryGroup"/>
         <entryLink id="99ce-c509-3b39-5448" name="Seraphon Spell Lores" hidden="false" collective="false" import="true" targetId="f503-4e35-143c-0f54" type="selectionEntryGroup"/>
+        <entryLink id="c619-96a7-fcf8-3e0c" name="Battalion Formation" hidden="false" collective="false" import="true" targetId="077f-e488-d765-516e" type="selectionEntryGroup"/>
+        <entryLink id="d781-7d10-99fa-9c66" name="Mount Traits" hidden="false" collective="false" import="true" targetId="dc6a-60fa-4ed8-5c46" type="selectionEntryGroup"/>
       </entryLinks>
     </entryLink>
     <entryLink id="e670-fd3e-98ac-45cc" name="Saurus Scar-Veteran on Cold One" hidden="false" collective="false" import="true" targetId="a0ac-be93-da5f-d740" type="selectionEntry">
@@ -232,6 +467,7 @@
         <entryLink id="7af1-726d-5458-aa96" name="Artefacts of Power" hidden="false" collective="false" import="true" targetId="3a05-2cb4-92ae-62e4" type="selectionEntryGroup"/>
         <entryLink id="bf89-e03b-85bc-7fd7" name="Command Traits" hidden="false" collective="false" import="true" targetId="5d24-ebc4-7261-165d" type="selectionEntryGroup"/>
         <entryLink id="f5e9-6773-1bea-9cca" name="Seraphon Spell Lores" hidden="false" collective="false" import="true" targetId="f503-4e35-143c-0f54" type="selectionEntryGroup"/>
+        <entryLink id="3305-1e88-5c86-0366" name="Battalion Formation" hidden="false" collective="false" import="true" targetId="077f-e488-d765-516e" type="selectionEntryGroup"/>
       </entryLinks>
     </entryLink>
     <entryLink id="8216-e8f1-7be5-cbc0" name="Saurus Sunblood" hidden="false" collective="false" import="true" targetId="cdd0-9475-67d3-9873" type="selectionEntry">
@@ -244,9 +480,14 @@
         <entryLink id="4678-a743-e404-6307" name="Artefacts of Power" hidden="false" collective="false" import="true" targetId="3a05-2cb4-92ae-62e4" type="selectionEntryGroup"/>
         <entryLink id="f78e-2ea3-154b-6df3" name="Command Traits" hidden="false" collective="false" import="true" targetId="5d24-ebc4-7261-165d" type="selectionEntryGroup"/>
         <entryLink id="fd07-3207-de4a-d2d7" name="Seraphon Spell Lores" hidden="false" collective="false" import="true" targetId="f503-4e35-143c-0f54" type="selectionEntryGroup"/>
+        <entryLink id="c349-51f2-7379-368f" name="Battalion Formation" hidden="false" collective="false" import="true" targetId="077f-e488-d765-516e" type="selectionEntryGroup"/>
       </entryLinks>
     </entryLink>
-    <entryLink id="cde7-7dab-2579-5638" name="Saurus Warriors" hidden="false" collective="false" import="true" targetId="24db-696e-aa0f-71fd" type="selectionEntry"/>
+    <entryLink id="cde7-7dab-2579-5638" name="Saurus Warriors" hidden="false" collective="false" import="true" targetId="24db-696e-aa0f-71fd" type="selectionEntry">
+      <entryLinks>
+        <entryLink id="d5de-4cd2-f71b-93e5" name="Battalion Formation" hidden="false" collective="false" import="true" targetId="077f-e488-d765-516e" type="selectionEntryGroup"/>
+      </entryLinks>
+    </entryLink>
     <entryLink id="e22a-8159-413c-dc8c" name="Slann Starmaster" hidden="false" collective="false" import="true" targetId="3f21-6503-039c-348a" type="selectionEntry">
       <entryLinks>
         <entryLink id="f1cb-696f-1bf7-b6f3" name="General" hidden="false" collective="false" import="true" targetId="98a4-3d6d-a7b9-399f" type="selectionEntry">
@@ -257,6 +498,7 @@
         <entryLink id="9c9f-ac83-5888-64d6" name="Artefacts of Power" hidden="false" collective="false" import="true" targetId="3a05-2cb4-92ae-62e4" type="selectionEntryGroup"/>
         <entryLink id="eeee-a2e7-a53f-8e6d" name="Command Traits" hidden="false" collective="false" import="true" targetId="5d24-ebc4-7261-165d" type="selectionEntryGroup"/>
         <entryLink id="dbd9-7ea4-5c6e-05eb" name="Seraphon Spell Lores" hidden="false" collective="false" import="true" targetId="f503-4e35-143c-0f54" type="selectionEntryGroup"/>
+        <entryLink id="0f0c-db10-ae37-5ddc" name="Battalion Formation" hidden="false" collective="false" import="true" targetId="077f-e488-d765-516e" type="selectionEntryGroup"/>
       </entryLinks>
     </entryLink>
     <entryLink id="12fc-7503-0af5-4f44" name="Skink Oracle on Troglodon" hidden="false" collective="false" import="true" targetId="375a-b880-701d-ae25" type="selectionEntry">
@@ -269,6 +511,8 @@
         <entryLink id="7922-c88f-8588-2e6a" name="Artefacts of Power" hidden="false" collective="false" import="true" targetId="3a05-2cb4-92ae-62e4" type="selectionEntryGroup"/>
         <entryLink id="e425-5adc-feb2-8fe5" name="Command Traits" hidden="false" collective="false" import="true" targetId="5d24-ebc4-7261-165d" type="selectionEntryGroup"/>
         <entryLink id="2cf8-2d6b-d24c-ab8b" name="Seraphon Spell Lores" hidden="false" collective="false" import="true" targetId="f503-4e35-143c-0f54" type="selectionEntryGroup"/>
+        <entryLink id="9f7e-93c7-6665-0fd2" name="Battalion Formation" hidden="false" collective="false" import="true" targetId="077f-e488-d765-516e" type="selectionEntryGroup"/>
+        <entryLink id="c3b1-7fc5-e4c7-2e89" name="Mount Traits" hidden="false" collective="false" import="true" targetId="dc6a-60fa-4ed8-5c46" type="selectionEntryGroup"/>
       </entryLinks>
     </entryLink>
     <entryLink id="41d0-34fa-7a34-33a7" name="Skink Starpriest" hidden="false" collective="false" import="true" targetId="0e95-3521-a34d-3ed0" type="selectionEntry">
@@ -277,6 +521,7 @@
         <entryLink id="074a-9a58-38de-e268" name="Artefacts of Power" hidden="false" collective="false" import="true" targetId="3a05-2cb4-92ae-62e4" type="selectionEntryGroup"/>
         <entryLink id="1e43-eaa7-60ed-75aa" name="Command Traits" hidden="false" collective="false" import="true" targetId="5d24-ebc4-7261-165d" type="selectionEntryGroup"/>
         <entryLink id="af3b-e11e-3ee2-e2b5" name="Seraphon Spell Lores" hidden="false" collective="false" import="true" targetId="f503-4e35-143c-0f54" type="selectionEntryGroup"/>
+        <entryLink id="1b51-6638-59b1-5031" name="Battalion Formation" hidden="false" collective="false" import="true" targetId="077f-e488-d765-516e" type="selectionEntryGroup"/>
       </entryLinks>
     </entryLink>
     <entryLink id="fe2a-09eb-43f2-47b4" name="Skink Starseer" hidden="false" collective="false" import="true" targetId="93e0-5922-bfc3-41e0" type="selectionEntry">
@@ -285,6 +530,7 @@
         <entryLink id="9714-a80d-811d-3633" name="Artefacts of Power" hidden="false" collective="false" import="true" targetId="3a05-2cb4-92ae-62e4" type="selectionEntryGroup"/>
         <entryLink id="e67e-422a-36c4-2592" name="Command Traits" hidden="false" collective="false" import="true" targetId="5d24-ebc4-7261-165d" type="selectionEntryGroup"/>
         <entryLink id="0fd1-dc5f-e166-f1dc" name="Seraphon Spell Lores" hidden="false" collective="false" import="true" targetId="f503-4e35-143c-0f54" type="selectionEntryGroup"/>
+        <entryLink id="b7a5-63f2-829f-f94d" name="Battalion Formation" hidden="false" collective="false" import="true" targetId="077f-e488-d765-516e" type="selectionEntryGroup"/>
       </entryLinks>
     </entryLink>
     <entryLink id="da93-566a-77e4-eb9f" name="Skink Priest" hidden="false" collective="false" import="true" targetId="fcd0-b143-b091-f604" type="selectionEntry">
@@ -294,22 +540,56 @@
         <entryLink id="bfb1-52f7-70eb-e4c8" name="Command Traits" hidden="false" collective="false" import="true" targetId="5d24-ebc4-7261-165d" type="selectionEntryGroup"/>
         <entryLink id="474c-945f-ba9c-eca1" name="Prayer Scriptures" hidden="false" collective="false" import="true" targetId="c921-9620-eabf-8b7c" type="selectionEntryGroup"/>
         <entryLink id="38a5-489c-8700-19b0" name="Seraphon Spell Lores" hidden="false" collective="false" import="true" targetId="f503-4e35-143c-0f54" type="selectionEntryGroup"/>
+        <entryLink id="69ec-39d7-22fd-6370" name="Battalion Formation" hidden="false" collective="false" import="true" targetId="077f-e488-d765-516e" type="selectionEntryGroup"/>
       </entryLinks>
     </entryLink>
-    <entryLink id="022f-5fba-dbf8-c140" name="Skinks" hidden="false" collective="false" import="true" targetId="2fc4-9e14-cd82-db1f" type="selectionEntry"/>
-    <entryLink id="b0da-66cf-6945-6105" name="Razordon Hunting Pack" hidden="false" collective="false" import="true" targetId="8e60-aff9-c785-9809" type="selectionEntry"/>
-    <entryLink id="6535-5179-a8f5-ac50" name="Salamander Hunting Pack" hidden="false" collective="false" import="true" targetId="376b-dcfb-aba2-8daf" type="selectionEntry"/>
-    <entryLink id="1a79-2acf-d82d-ce95" name="Kroxigor" hidden="false" collective="false" import="true" targetId="650a-a6e5-101d-fbac" type="selectionEntry"/>
-    <entryLink id="aca1-68f7-407f-2323" name="Chameleon Skinks" hidden="false" collective="false" import="true" targetId="70f1-54a0-5012-980a" type="selectionEntry"/>
-    <entryLink id="35ba-9f0f-08e8-6d40" name="Bastiladon" hidden="false" collective="false" import="true" targetId="ba6f-5b56-9e8b-48e2" type="selectionEntry"/>
-    <entryLink id="46da-fbab-ac08-0b94" name="Terradon Riders" hidden="false" collective="false" import="true" targetId="189a-1eda-7060-d48f" type="selectionEntry"/>
-    <entryLink id="56a2-bd8b-20a8-ac0d" name="Ripperdactyl Riders" hidden="false" collective="false" import="true" targetId="c4e3-c666-7c1c-c52b" type="selectionEntry"/>
+    <entryLink id="022f-5fba-dbf8-c140" name="Skinks" hidden="false" collective="false" import="true" targetId="2fc4-9e14-cd82-db1f" type="selectionEntry">
+      <entryLinks>
+        <entryLink id="5d91-2a0c-41d5-238c" name="Battalion Formation" hidden="false" collective="false" import="true" targetId="077f-e488-d765-516e" type="selectionEntryGroup"/>
+      </entryLinks>
+    </entryLink>
+    <entryLink id="b0da-66cf-6945-6105" name="Razordon Hunting Pack" hidden="false" collective="false" import="true" targetId="8e60-aff9-c785-9809" type="selectionEntry">
+      <entryLinks>
+        <entryLink id="dee7-9678-2dbc-c5ab" name="Battalion Formation" hidden="false" collective="false" import="true" targetId="077f-e488-d765-516e" type="selectionEntryGroup"/>
+      </entryLinks>
+    </entryLink>
+    <entryLink id="6535-5179-a8f5-ac50" name="Salamander Hunting Pack" hidden="false" collective="false" import="true" targetId="376b-dcfb-aba2-8daf" type="selectionEntry">
+      <entryLinks>
+        <entryLink id="647e-675a-4066-e38d" name="Battalion Formation" hidden="false" collective="false" import="true" targetId="077f-e488-d765-516e" type="selectionEntryGroup"/>
+      </entryLinks>
+    </entryLink>
+    <entryLink id="1a79-2acf-d82d-ce95" name="Kroxigor" hidden="false" collective="false" import="true" targetId="650a-a6e5-101d-fbac" type="selectionEntry">
+      <entryLinks>
+        <entryLink id="f955-e83e-cdd6-72b3" name="Battalion Formation" hidden="false" collective="false" import="true" targetId="077f-e488-d765-516e" type="selectionEntryGroup"/>
+      </entryLinks>
+    </entryLink>
+    <entryLink id="aca1-68f7-407f-2323" name="Chameleon Skinks" hidden="false" collective="false" import="true" targetId="70f1-54a0-5012-980a" type="selectionEntry">
+      <entryLinks>
+        <entryLink id="5526-98b1-30d4-1b11" name="Battalion Formation" hidden="false" collective="false" import="true" targetId="077f-e488-d765-516e" type="selectionEntryGroup"/>
+      </entryLinks>
+    </entryLink>
+    <entryLink id="35ba-9f0f-08e8-6d40" name="Bastiladon" hidden="false" collective="false" import="true" targetId="ba6f-5b56-9e8b-48e2" type="selectionEntry">
+      <entryLinks>
+        <entryLink id="dc85-deed-1897-5247" name="Battalion Formation" hidden="false" collective="false" import="true" targetId="077f-e488-d765-516e" type="selectionEntryGroup"/>
+      </entryLinks>
+    </entryLink>
+    <entryLink id="46da-fbab-ac08-0b94" name="Terradon Riders" hidden="false" collective="false" import="true" targetId="189a-1eda-7060-d48f" type="selectionEntry">
+      <entryLinks>
+        <entryLink id="fbbc-fa8b-af5e-8972" name="Battalion Formation" hidden="false" collective="false" import="true" targetId="077f-e488-d765-516e" type="selectionEntryGroup"/>
+      </entryLinks>
+    </entryLink>
+    <entryLink id="56a2-bd8b-20a8-ac0d" name="Ripperdactyl Riders" hidden="false" collective="false" import="true" targetId="c4e3-c666-7c1c-c52b" type="selectionEntry">
+      <entryLinks>
+        <entryLink id="0694-eaec-b826-282e" name="Battalion Formation" hidden="false" collective="false" import="true" targetId="077f-e488-d765-516e" type="selectionEntryGroup"/>
+      </entryLinks>
+    </entryLink>
     <entryLink id="0a0b-3624-ff5d-9a92" name="Ripperdactyl Chief" hidden="false" collective="false" import="true" targetId="cc5f-e4f4-5bee-b415" type="selectionEntry">
       <entryLinks>
         <entryLink id="12fa-4bc5-9d79-eab0" name="General" hidden="false" collective="false" import="true" targetId="98a4-3d6d-a7b9-399f" type="selectionEntry"/>
         <entryLink id="0a08-99bd-c322-387b" name="Artefacts of Power" hidden="false" collective="false" import="true" targetId="3a05-2cb4-92ae-62e4" type="selectionEntryGroup"/>
         <entryLink id="b7d1-95fb-9cda-d304" name="Command Traits" hidden="false" collective="false" import="true" targetId="5d24-ebc4-7261-165d" type="selectionEntryGroup"/>
         <entryLink id="95d1-288a-d5d7-3849" name="Seraphon Spell Lores" hidden="false" collective="false" import="true" targetId="f503-4e35-143c-0f54" type="selectionEntryGroup"/>
+        <entryLink id="ca2c-b4f5-3110-5f8f" name="Battalion Formation" hidden="false" collective="false" import="true" targetId="077f-e488-d765-516e" type="selectionEntryGroup"/>
       </entryLinks>
     </entryLink>
     <entryLink id="0a80-4349-bf9e-03d9" name="Terradon Chief" hidden="false" collective="false" import="true" targetId="7e1c-6ef1-c9ab-1190" type="selectionEntry">
@@ -318,6 +598,7 @@
         <entryLink id="40de-bd56-1470-e72c" name="Artefacts of Power" hidden="false" collective="false" import="true" targetId="3a05-2cb4-92ae-62e4" type="selectionEntryGroup"/>
         <entryLink id="ef36-f0a6-f24a-ab7d" name="Command Traits" hidden="false" collective="false" import="true" targetId="5d24-ebc4-7261-165d" type="selectionEntryGroup"/>
         <entryLink id="7020-07be-f25c-7eea" name="Seraphon Spell Lores" hidden="false" collective="false" import="true" targetId="f503-4e35-143c-0f54" type="selectionEntryGroup"/>
+        <entryLink id="c80c-8a71-9c65-ce06" name="Battalion Formation" hidden="false" collective="false" import="true" targetId="077f-e488-d765-516e" type="selectionEntryGroup"/>
       </entryLinks>
     </entryLink>
     <entryLink id="ee31-fc88-cbda-3190" name="Stegadon with Skink Chief" hidden="false" collective="false" import="true" targetId="2b38-8179-6a82-4e17" type="selectionEntry">
@@ -330,6 +611,8 @@
         <entryLink id="c9de-ba08-8153-e76c" name="Artefacts of Power" hidden="false" collective="false" import="true" targetId="3a05-2cb4-92ae-62e4" type="selectionEntryGroup"/>
         <entryLink id="0b53-cba2-a6cc-fec3" name="Command Traits" hidden="false" collective="false" import="true" targetId="5d24-ebc4-7261-165d" type="selectionEntryGroup"/>
         <entryLink id="49c6-9350-9349-6c4d" name="Seraphon Spell Lores" hidden="false" collective="false" import="true" targetId="f503-4e35-143c-0f54" type="selectionEntryGroup"/>
+        <entryLink id="ed79-5252-398c-d741" name="Battalion Formation" hidden="false" collective="false" import="true" targetId="077f-e488-d765-516e" type="selectionEntryGroup"/>
+        <entryLink id="2831-9151-50ea-7313" name="Mount Traits" hidden="false" collective="false" import="true" targetId="dc6a-60fa-4ed8-5c46" type="selectionEntryGroup"/>
       </entryLinks>
     </entryLink>
     <entryLink id="33d4-be77-336d-381c" name="Stegadon" hidden="false" collective="false" import="true" targetId="166c-bb29-f70a-13bd" type="selectionEntry">
@@ -345,6 +628,9 @@
           </modifiers>
         </modifierGroup>
       </modifierGroups>
+      <entryLinks>
+        <entryLink id="2120-bcf6-33b3-2026" name="Battalion Formation" hidden="false" collective="false" import="true" targetId="077f-e488-d765-516e" type="selectionEntryGroup"/>
+      </entryLinks>
     </entryLink>
     <entryLink id="9012-b8cb-c7dd-91e3" name="Engine of the Gods" hidden="false" collective="false" import="true" targetId="63dd-fada-ecfa-da5e" type="selectionEntry">
       <entryLinks>
@@ -357,20 +643,15 @@
         <entryLink id="672e-c7aa-5309-082d" name="Command Traits" hidden="false" collective="false" import="true" targetId="5d24-ebc4-7261-165d" type="selectionEntryGroup"/>
         <entryLink id="0200-461a-4e7a-d47c" name="Prayer Scriptures" hidden="false" collective="false" import="true" targetId="c921-9620-eabf-8b7c" type="selectionEntryGroup"/>
         <entryLink id="9784-2b94-d82a-629b" name="Seraphon Spell Lores" hidden="false" collective="false" import="true" targetId="f503-4e35-143c-0f54" type="selectionEntryGroup"/>
+        <entryLink id="6264-340f-4e25-5dfd" name="Battalion Formation" hidden="false" collective="false" import="true" targetId="077f-e488-d765-516e" type="selectionEntryGroup"/>
+        <entryLink id="a21c-1ad3-8681-6a7d" name="Mount Traits" hidden="false" collective="false" import="true" targetId="dc6a-60fa-4ed8-5c46" type="selectionEntryGroup"/>
       </entryLinks>
     </entryLink>
-    <entryLink id="1454-8658-41fd-9b14" name="Dread Saurian" hidden="false" collective="false" import="true" targetId="c523-0d16-b4b8-9cd8" type="selectionEntry"/>
-    <entryLink id="f185-7b2b-09b8-1379" name="Eternal Starhost" hidden="false" collective="false" import="true" targetId="e99e-d145-10b8-8db4" type="selectionEntry"/>
-    <entryLink id="5373-f5cf-0517-70e1" name="Eternal Temple-host" hidden="false" collective="false" import="true" targetId="0f33-87a9-29f5-e321" type="selectionEntry"/>
-    <entryLink id="631e-752c-12af-9011" name="Firelance Starhost" hidden="false" collective="false" import="true" targetId="ef3a-9d1a-8756-9db8" type="selectionEntry"/>
-    <entryLink id="5f28-015f-0b72-5ffa" name="Firelance Temple-host" hidden="false" collective="false" import="true" targetId="70a1-3ffd-e2e8-fbd7" type="selectionEntry"/>
-    <entryLink id="4372-d840-2513-a1cd" name="Shadowstrike Starhost" hidden="false" collective="false" import="true" targetId="eb18-c5b7-87bc-9403" type="selectionEntry"/>
-    <entryLink id="ad44-a62e-4a5f-3ddb" name="Shadowstrike Temple-host" hidden="false" collective="false" import="true" targetId="5dc7-123a-3fb0-76e3" type="selectionEntry"/>
-    <entryLink id="1503-69b5-962d-7839" name="Sunclaw Starhost" hidden="false" collective="false" import="true" targetId="7ba5-fc11-7b00-22f0" type="selectionEntry"/>
-    <entryLink id="c216-7967-aed8-4c8c" name="Sunclaw Temple-host" hidden="false" collective="false" import="true" targetId="65c2-0468-8b31-1420" type="selectionEntry"/>
-    <entryLink id="0aae-054f-3385-84fb" name="Thunderquake Starhost" hidden="false" collective="false" import="true" targetId="52d1-d672-c53b-bace" type="selectionEntry"/>
-    <entryLink id="3d08-d066-341f-cc7d" name="Thunderquake Temple-host" hidden="false" collective="false" import="true" targetId="84dc-4257-7b89-e0fa" type="selectionEntry"/>
-    <entryLink id="8abe-dcb2-7b63-c415" name="The Celestial Stampede" hidden="false" collective="false" import="true" targetId="4c18-6024-f153-39ae" type="selectionEntry"/>
+    <entryLink id="1454-8658-41fd-9b14" name="Dread Saurian" hidden="false" collective="false" import="true" targetId="c523-0d16-b4b8-9cd8" type="selectionEntry">
+      <entryLinks>
+        <entryLink id="cd4c-416c-6fe5-cdc0" name="Battalion Formation" hidden="false" collective="false" import="true" targetId="077f-e488-d765-516e" type="selectionEntryGroup"/>
+      </entryLinks>
+    </entryLink>
   </entryLinks>
   <sharedSelectionEntries>
     <selectionEntry id="baff-fa65-8924-8e2d" name="Allegiance" hidden="false" collective="false" import="true" type="upgrade">
@@ -455,9 +736,7 @@ The Sage’s Staff: At the start of the hero phase, pick 1 friendly SERAPHON WIZ
                     </profile>
                     <profile id="34b9-8af6-a13b-62e0" name="Primeval Domain" hidden="false" typeId="c0c2-177b-e761-ec41" typeName="Allegiance Abilities">
                       <characteristics>
-                        <characteristic name="Allegiance Ability" typeId="0506-f62d-68b3-5499">If a terrain feature is partially or wholly within the territory of a COALESCED army, then any Damned, Arcane, Inspiring and Mystical scenery rules for that terrain feature only apply to COALESCED units, while any Deadly and Sinister scenery rules for that terrain feature do not apply to COALESCED units.
-
-These scenery rules only apply if the Mysterious Terrain rules are being used.</characteristic>
+                        <characteristic name="Allegiance Ability" typeId="0506-f62d-68b3-5499">If a terrain feature is partially or wholly within the territory of a Coalesced army, then it has the Mystical and Deadly Mysterious Terrain scenery rules in addition to any other Mysterious Terrain scenery rules it may have. The Mystical scenery rule for these terrain features only applies to COALESCED units, while the Deadly scenery rule for these terrain features does not apply to COALESCED units.</characteristic>
                       </characteristics>
                     </profile>
                     <profile id="0049-5db2-cd26-b937" name="Scaly Skin" hidden="false" typeId="c0c2-177b-e761-ec41" typeName="Allegiance Abilities">
@@ -772,962 +1051,6 @@ At the end of your movement phase, you can set up one or more of the reserve uni
       </categoryLinks>
       <costs>
         <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
-      </costs>
-    </selectionEntry>
-    <selectionEntry id="84dc-4257-7b89-e0fa" name="Thunderquake Temple-host" publicationId="ba75-6000-0ab5-fd66" hidden="false" collective="false" import="true" type="upgrade">
-      <modifiers>
-        <modifier type="set" field="hidden" value="true">
-          <conditions>
-            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="f867-0ec9-a800-5350" type="equalTo"/>
-          </conditions>
-        </modifier>
-      </modifiers>
-      <profiles>
-        <profile id="81c5-1e4a-0a83-3eff" name="Beastmasters" hidden="false" typeId="66c5-932e-004a-574c" typeName="Battalion Abilities">
-          <characteristics>
-            <characteristic name="Battalion Ability" typeId="23f7-32c0-e059-29b2">In your hero phase, declare if this battalion will be swift or savage. If you choose for it to be swift, until your next hero phase, units from this battalion can run and still shoot and/or charge in the same turn. If you choose savage, until your next hero phase, add 1 to the Attacks characteristic of melee weapons used by units from this battalion.</characteristic>
-          </characteristics>
-        </profile>
-      </profiles>
-      <categoryLinks>
-        <categoryLink id="041c-6833-ded8-beec" name="New CategoryLink" hidden="false" targetId="3706-e0e8-674f-c41b" primary="true"/>
-      </categoryLinks>
-      <selectionEntryGroups>
-        <selectionEntryGroup id="bd8e-2cc3-4549-f845" name="1 featured unit" hidden="false" collective="false" import="true">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="0c9b-18d9-ed4f-607c" type="max"/>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="4885-a790-3558-1328" type="min"/>
-          </constraints>
-          <entryLinks>
-            <entryLink id="128f-c1f9-3130-36b0" name="Kroxigor" hidden="false" collective="false" import="true" targetId="650a-a6e5-101d-fbac" type="selectionEntry"/>
-            <entryLink id="a939-a2ec-fa95-f91e" name="Razordon Hunting Pack" hidden="false" collective="false" import="true" targetId="8e60-aff9-c785-9809" type="selectionEntry"/>
-            <entryLink id="cc27-295e-ee02-589c" name="Salamander Hunting Pack" hidden="false" collective="false" import="true" targetId="376b-dcfb-aba2-8daf" type="selectionEntry"/>
-          </entryLinks>
-        </selectionEntryGroup>
-        <selectionEntryGroup id="51c5-337f-afef-e6ca" name="2 featured MONSTERS" hidden="false" collective="false" import="true">
-          <constraints>
-            <constraint field="selections" scope="parent" value="2.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="26c1-0995-f912-5426" type="max"/>
-            <constraint field="selections" scope="parent" value="2.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="b3fc-4b6f-1da8-29b7" type="min"/>
-          </constraints>
-          <entryLinks>
-            <entryLink id="0383-97e6-7ac8-3b28" name="Bastiladon" hidden="false" collective="false" import="true" targetId="ba6f-5b56-9e8b-48e2" type="selectionEntry"/>
-            <entryLink id="eb06-6f3a-e126-b4f3" name="Stegadon" hidden="false" collective="false" import="true" targetId="166c-bb29-f70a-13bd" type="selectionEntry">
-              <modifierGroups>
-                <modifierGroup>
-                  <conditions>
-                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="b5bb-59b5-6c6b-3c09" type="greaterThan"/>
-                  </conditions>
-                  <modifiers>
-                    <modifier type="add" field="category" value="a42d-220e-6a88-7bf6"/>
-                    <modifier type="remove" field="category" value="7f62-b7f5-32d5-e13b"/>
-                    <modifier type="set-primary" field="category" value="6230-ed60-e374-add4"/>
-                  </modifiers>
-                </modifierGroup>
-              </modifierGroups>
-            </entryLink>
-          </entryLinks>
-        </selectionEntryGroup>
-        <selectionEntryGroup id="1eca-9202-ce75-a829" name="1 featured HERO" hidden="false" collective="false" import="true">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="490d-cc73-ed71-3229" type="max"/>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="12d8-e015-7984-ac0b" type="min"/>
-          </constraints>
-          <entryLinks>
-            <entryLink id="fdd9-d9c4-d563-d90f" name="Stegadon with Skink Chief" hidden="false" collective="false" import="true" targetId="2b38-8179-6a82-4e17" type="selectionEntry">
-              <entryLinks>
-                <entryLink id="18f5-7440-4807-d6e4" name="General" hidden="false" collective="false" import="true" targetId="98a4-3d6d-a7b9-399f" type="selectionEntry">
-                  <categoryLinks>
-                    <categoryLink id="2dd8-94db-683b-e65c" name="General - Monster" hidden="false" targetId="52cb-3ca6-5e69-150b" primary="false"/>
-                  </categoryLinks>
-                </entryLink>
-                <entryLink id="2212-e319-55b4-62cf" name="Artefacts of Power" hidden="false" collective="false" import="true" targetId="3a05-2cb4-92ae-62e4" type="selectionEntryGroup"/>
-                <entryLink id="315d-0051-5bdb-38c9" name="Command Traits" hidden="false" collective="false" import="true" targetId="5d24-ebc4-7261-165d" type="selectionEntryGroup"/>
-              </entryLinks>
-            </entryLink>
-            <entryLink id="a65d-9082-f2e3-ce50" name="Engine of the Gods" hidden="false" collective="false" import="true" targetId="63dd-fada-ecfa-da5e" type="selectionEntry">
-              <entryLinks>
-                <entryLink id="87df-ff0b-721e-e626" name="General" hidden="false" collective="false" import="true" targetId="98a4-3d6d-a7b9-399f" type="selectionEntry">
-                  <categoryLinks>
-                    <categoryLink id="63e0-59cf-a7ca-3874" name="General - Monster" hidden="false" targetId="52cb-3ca6-5e69-150b" primary="false"/>
-                  </categoryLinks>
-                </entryLink>
-                <entryLink id="8ac5-3307-3120-ba2a" name="Artefacts of Power" hidden="false" collective="false" import="true" targetId="3a05-2cb4-92ae-62e4" type="selectionEntryGroup"/>
-                <entryLink id="258f-0ec7-1c76-ffd5" name="Command Traits" hidden="false" collective="false" import="true" targetId="5d24-ebc4-7261-165d" type="selectionEntryGroup"/>
-              </entryLinks>
-            </entryLink>
-          </entryLinks>
-        </selectionEntryGroup>
-      </selectionEntryGroups>
-      <costs>
-        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="150.0"/>
-      </costs>
-    </selectionEntry>
-    <selectionEntry id="5dc7-123a-3fb0-76e3" name="Shadowstrike Temple-host" publicationId="ba75-6000-0ab5-fd66" hidden="false" collective="false" import="true" type="upgrade">
-      <modifiers>
-        <modifier type="set" field="hidden" value="true">
-          <conditions>
-            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="f867-0ec9-a800-5350" type="equalTo"/>
-          </conditions>
-        </modifier>
-      </modifiers>
-      <profiles>
-        <profile id="7dfc-a860-5667-2b7c" name="The Trap is Sprung" hidden="false" typeId="66c5-932e-004a-574c" typeName="Battalion Abilities">
-          <characteristics>
-            <characteristic name="Battalion Ability" typeId="23f7-32c0-e059-29b2">In your hero phase, pick 1 enemy unit that is visible to the STARPRIEST or PRIEST from this battalion. Until your next hero phase, add 1 to hit rolls for attacks made by units from this battalion that target that unit.</characteristic>
-          </characteristics>
-        </profile>
-      </profiles>
-      <categoryLinks>
-        <categoryLink id="49f8-23cd-a003-ae01" name="New CategoryLink" hidden="false" targetId="3706-e0e8-674f-c41b" primary="true"/>
-      </categoryLinks>
-      <selectionEntryGroups>
-        <selectionEntryGroup id="a486-d4bc-a576-9fde" name="1 featured unit" hidden="false" collective="false" import="true">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="4780-177b-dae0-3d92" type="max"/>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="bb50-00f8-e8e5-48d9" type="min"/>
-          </constraints>
-          <entryLinks>
-            <entryLink id="a389-e529-bc73-ba51" name="Ripperdactyl Riders" hidden="false" collective="false" import="true" targetId="c4e3-c666-7c1c-c52b" type="selectionEntry"/>
-            <entryLink id="2b99-4229-fee6-8784" name="Terradon Riders" hidden="false" collective="false" import="true" targetId="189a-1eda-7060-d48f" type="selectionEntry"/>
-          </entryLinks>
-        </selectionEntryGroup>
-        <selectionEntryGroup id="5346-1b0c-58ad-62d6" name="2 featured units" hidden="false" collective="false" import="true">
-          <constraints>
-            <constraint field="selections" scope="parent" value="2.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="181b-76c9-50da-5ed4" type="max"/>
-            <constraint field="selections" scope="parent" value="2.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="55d1-f44d-efe9-531a" type="min"/>
-          </constraints>
-          <entryLinks>
-            <entryLink id="b8c0-b55c-c3d7-36ae" name="Skinks" hidden="false" collective="false" import="true" targetId="2fc4-9e14-cd82-db1f" type="selectionEntry"/>
-            <entryLink id="0f92-6c64-70a0-f508" name="Chameleon Skinks" hidden="false" collective="false" import="true" targetId="70f1-54a0-5012-980a" type="selectionEntry"/>
-          </entryLinks>
-        </selectionEntryGroup>
-        <selectionEntryGroup id="64fb-d29c-c7e4-a96f" name="1 featured HERO" hidden="false" collective="false" import="true">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="cfe7-07fe-a565-557d" type="max"/>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="e0c0-b87a-d0f7-cc40" type="min"/>
-          </constraints>
-          <entryLinks>
-            <entryLink id="cab1-0e0f-16cf-2553" name="Skink Priest" hidden="false" collective="false" import="true" targetId="fcd0-b143-b091-f604" type="selectionEntry">
-              <entryLinks>
-                <entryLink id="2b27-ade7-f757-6cdc" name="General" hidden="false" collective="false" import="true" targetId="98a4-3d6d-a7b9-399f" type="selectionEntry"/>
-                <entryLink id="f386-e81e-2e79-4649" name="Artefacts of Power" hidden="false" collective="false" import="true" targetId="3a05-2cb4-92ae-62e4" type="selectionEntryGroup"/>
-                <entryLink id="6c15-197a-2608-1755" name="Command Traits" hidden="false" collective="false" import="true" targetId="5d24-ebc4-7261-165d" type="selectionEntryGroup"/>
-              </entryLinks>
-            </entryLink>
-            <entryLink id="abaf-9b22-601d-de9d" name="Skink Starpriest" hidden="false" collective="false" import="true" targetId="0e95-3521-a34d-3ed0" type="selectionEntry">
-              <entryLinks>
-                <entryLink id="cbf6-cd3c-cfd6-dc03" name="General" hidden="false" collective="false" import="true" targetId="98a4-3d6d-a7b9-399f" type="selectionEntry"/>
-                <entryLink id="d1a3-4c16-8f0a-d228" name="Artefacts of Power" hidden="false" collective="false" import="true" targetId="3a05-2cb4-92ae-62e4" type="selectionEntryGroup"/>
-                <entryLink id="94c7-a1bf-9881-4ccc" name="Command Traits" hidden="false" collective="false" import="true" targetId="5d24-ebc4-7261-165d" type="selectionEntryGroup"/>
-                <entryLink id="c69b-9e24-1bb8-bc1c" name="Seraphon Spell Lores" hidden="false" collective="false" import="true" targetId="f503-4e35-143c-0f54" type="selectionEntryGroup"/>
-              </entryLinks>
-            </entryLink>
-          </entryLinks>
-        </selectionEntryGroup>
-      </selectionEntryGroups>
-      <costs>
-        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="150.0"/>
-      </costs>
-    </selectionEntry>
-    <selectionEntry id="70a1-3ffd-e2e8-fbd7" name="Firelance Temple-host" publicationId="ba75-6000-0ab5-fd66" hidden="false" collective="false" import="true" type="upgrade">
-      <modifiers>
-        <modifier type="set" field="hidden" value="true">
-          <conditions>
-            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="f867-0ec9-a800-5350" type="equalTo"/>
-          </conditions>
-        </modifier>
-      </modifiers>
-      <profiles>
-        <profile id="7605-2ea5-f172-7062" name="Savage Hunters" hidden="false" typeId="66c5-932e-004a-574c" typeName="Battalion Abilities">
-          <characteristics>
-            <characteristic name="Battalion Ability" typeId="23f7-32c0-e059-29b2">Add 3 to run and charge rolls for units from this battalion that are wholly within 18&quot; of the SCAR-VETERAN from the same battalion.</characteristic>
-          </characteristics>
-        </profile>
-      </profiles>
-      <categoryLinks>
-        <categoryLink id="898c-dea9-8d77-1381" name="New CategoryLink" hidden="false" targetId="3706-e0e8-674f-c41b" primary="true"/>
-      </categoryLinks>
-      <selectionEntryGroups>
-        <selectionEntryGroup id="bf24-0e1e-4d5c-9537" name="3 Saurus Knights units" hidden="false" collective="false" import="true">
-          <constraints>
-            <constraint field="selections" scope="parent" value="3.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="9925-81c5-d6f2-1d7b" type="max"/>
-            <constraint field="selections" scope="parent" value="3.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="0952-dc62-c1c3-2d22" type="min"/>
-          </constraints>
-          <entryLinks>
-            <entryLink id="a0dd-0277-b4bb-639b" name="Saurus Knights" hidden="false" collective="false" import="true" targetId="e5f1-a103-0056-8bb2" type="selectionEntry"/>
-          </entryLinks>
-        </selectionEntryGroup>
-        <selectionEntryGroup id="d6dc-5022-f418-cbed" name="1 SCAR-VETERAN" hidden="false" collective="false" import="true">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8a61-df4a-00ad-be8d" type="max"/>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="9593-a8a3-a27b-cdff" type="min"/>
-          </constraints>
-          <entryLinks>
-            <entryLink id="af70-f6c5-36b9-aab5" name="Saurus Scar-Veteran on Cold One" hidden="false" collective="false" import="true" targetId="a0ac-be93-da5f-d740" type="selectionEntry">
-              <entryLinks>
-                <entryLink id="c83a-0279-0d32-5295" name="General" hidden="false" collective="false" import="true" targetId="98a4-3d6d-a7b9-399f" type="selectionEntry">
-                  <categoryLinks>
-                    <categoryLink id="d8cd-e8e7-1eae-e83d" name="General - Saurus" hidden="false" targetId="ed8c-9127-879b-4bc3" primary="false"/>
-                  </categoryLinks>
-                </entryLink>
-                <entryLink id="76f1-db5a-b973-6d9a" name="Artefacts of Power" hidden="false" collective="false" import="true" targetId="3a05-2cb4-92ae-62e4" type="selectionEntryGroup"/>
-                <entryLink id="8941-b339-ff74-c8f3" name="Command Traits" hidden="false" collective="false" import="true" targetId="5d24-ebc4-7261-165d" type="selectionEntryGroup"/>
-              </entryLinks>
-            </entryLink>
-            <entryLink id="c811-1585-60d9-4f20" name="Saurus Scar-Veteran on Carnosaur" hidden="false" collective="false" import="true" targetId="c56e-c500-14f5-2e01" type="selectionEntry">
-              <entryLinks>
-                <entryLink id="ee5b-1175-42c6-5186" name="General" hidden="false" collective="false" import="true" targetId="98a4-3d6d-a7b9-399f" type="selectionEntry">
-                  <categoryLinks>
-                    <categoryLink id="0137-ebcc-969e-f7c6" name="General - Saurus" hidden="false" targetId="ed8c-9127-879b-4bc3" primary="false"/>
-                    <categoryLink id="b83d-81a1-41db-683e" name="General - Monster" hidden="false" targetId="52cb-3ca6-5e69-150b" primary="false"/>
-                  </categoryLinks>
-                </entryLink>
-                <entryLink id="c1f1-6aa6-7bc8-f458" name="Artefacts of Power" hidden="false" collective="false" import="true" targetId="3a05-2cb4-92ae-62e4" type="selectionEntryGroup"/>
-                <entryLink id="bf4f-e788-da57-7a31" name="Command Traits" hidden="false" collective="false" import="true" targetId="5d24-ebc4-7261-165d" type="selectionEntryGroup"/>
-              </entryLinks>
-            </entryLink>
-          </entryLinks>
-        </selectionEntryGroup>
-      </selectionEntryGroups>
-      <costs>
-        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="160.0"/>
-      </costs>
-    </selectionEntry>
-    <selectionEntry id="65c2-0468-8b31-1420" name="Sunclaw Temple-host" publicationId="ba75-6000-0ab5-fd66" hidden="false" collective="false" import="true" type="upgrade">
-      <modifiers>
-        <modifier type="set" field="hidden" value="true">
-          <conditions>
-            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="f867-0ec9-a800-5350" type="equalTo"/>
-          </conditions>
-        </modifier>
-      </modifiers>
-      <profiles>
-        <profile id="0659-b3d5-9884-5293" name="Ferocity Unbound" hidden="false" typeId="66c5-932e-004a-574c" typeName="Battalion Abilities">
-          <characteristics>
-            <characteristic name="Battalion Ability" typeId="23f7-32c0-e059-29b2">Improve the Rend characteristic of Jaws weapons used by units from this battalion by 1.</characteristic>
-          </characteristics>
-        </profile>
-      </profiles>
-      <categoryLinks>
-        <categoryLink id="9ddb-fb98-7f45-4d71" name="New CategoryLink" hidden="false" targetId="3706-e0e8-674f-c41b" primary="true"/>
-      </categoryLinks>
-      <selectionEntryGroups>
-        <selectionEntryGroup id="200b-0a29-2c06-61e2" name="3 Saurus Warriors units" hidden="false" collective="false" import="true">
-          <constraints>
-            <constraint field="selections" scope="parent" value="3.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="424b-ceb1-31a3-2ac3" type="max"/>
-            <constraint field="selections" scope="parent" value="3.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="edaa-5a51-6025-c907" type="min"/>
-          </constraints>
-          <entryLinks>
-            <entryLink id="58cc-1b9a-25cf-1634" name="Saurus Warriors" hidden="false" collective="false" import="true" targetId="24db-696e-aa0f-71fd" type="selectionEntry"/>
-          </entryLinks>
-        </selectionEntryGroup>
-        <selectionEntryGroup id="3b13-9002-3306-02a0" name="1 featured HERO" hidden="false" collective="false" import="true">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="5ed5-8e48-66b2-b29a" type="max"/>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="5a7d-0525-36cf-a7d4" type="min"/>
-          </constraints>
-          <entryLinks>
-            <entryLink id="1b50-2d32-2b77-2a81" name="Saurus Sunblood" hidden="false" collective="false" import="true" targetId="cdd0-9475-67d3-9873" type="selectionEntry">
-              <entryLinks>
-                <entryLink id="1a85-d1ca-a5d0-6b4e" name="General" hidden="false" collective="false" import="true" targetId="98a4-3d6d-a7b9-399f" type="selectionEntry">
-                  <categoryLinks>
-                    <categoryLink id="ce4c-6d63-772e-99ed" name="General - Saurus" hidden="false" targetId="ed8c-9127-879b-4bc3" primary="false"/>
-                  </categoryLinks>
-                </entryLink>
-                <entryLink id="5528-c8ac-3336-948d" name="Artefacts of Power" hidden="false" collective="false" import="true" targetId="3a05-2cb4-92ae-62e4" type="selectionEntryGroup"/>
-                <entryLink id="875d-24a4-4c97-d502" name="Command Traits" hidden="false" collective="false" import="true" targetId="5d24-ebc4-7261-165d" type="selectionEntryGroup"/>
-              </entryLinks>
-            </entryLink>
-            <entryLink id="992e-9657-9fca-fa64" name="Saurus Oldblood" hidden="false" collective="false" import="true" targetId="89a6-50de-390e-6d2e" type="selectionEntry">
-              <entryLinks>
-                <entryLink id="3254-6a74-17f1-30c4" name="General" hidden="false" collective="false" import="true" targetId="98a4-3d6d-a7b9-399f" type="selectionEntry">
-                  <categoryLinks>
-                    <categoryLink id="2184-cde6-af7b-e402" name="General - Saurus" hidden="false" targetId="ed8c-9127-879b-4bc3" primary="false"/>
-                  </categoryLinks>
-                </entryLink>
-                <entryLink id="4466-a707-a063-04d6" name="Artefacts of Power" hidden="false" collective="false" import="true" targetId="3a05-2cb4-92ae-62e4" type="selectionEntryGroup"/>
-                <entryLink id="e89b-373d-386a-1acc" name="Command Traits" hidden="false" collective="false" import="true" targetId="5d24-ebc4-7261-165d" type="selectionEntryGroup"/>
-              </entryLinks>
-            </entryLink>
-            <entryLink id="fd8b-9014-6c49-7abb" name="Saurus Oldblood on Carnosaur" hidden="false" collective="false" import="true" targetId="225b-1082-b2e9-6ecf" type="selectionEntry">
-              <entryLinks>
-                <entryLink id="e9e3-ecf4-47f1-cc5e" name="General" hidden="false" collective="false" import="true" targetId="98a4-3d6d-a7b9-399f" type="selectionEntry">
-                  <categoryLinks>
-                    <categoryLink id="a434-0790-c358-cb69" name="General - Saurus" hidden="false" targetId="ed8c-9127-879b-4bc3" primary="false"/>
-                    <categoryLink id="8d59-ee56-9c59-7efd" name="General - Monster" hidden="false" targetId="52cb-3ca6-5e69-150b" primary="false"/>
-                  </categoryLinks>
-                </entryLink>
-                <entryLink id="72c0-7fb8-827e-b821" name="Artefacts of Power" hidden="false" collective="false" import="true" targetId="3a05-2cb4-92ae-62e4" type="selectionEntryGroup"/>
-                <entryLink id="a633-413e-173f-ce46" name="Command Traits" hidden="false" collective="false" import="true" targetId="5d24-ebc4-7261-165d" type="selectionEntryGroup"/>
-              </entryLinks>
-            </entryLink>
-          </entryLinks>
-        </selectionEntryGroup>
-      </selectionEntryGroups>
-      <costs>
-        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="140.0"/>
-      </costs>
-    </selectionEntry>
-    <selectionEntry id="0f33-87a9-29f5-e321" name="Eternal Temple-host" hidden="false" collective="false" import="true" type="upgrade">
-      <modifiers>
-        <modifier type="set" field="hidden" value="true">
-          <conditions>
-            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="f867-0ec9-a800-5350" type="equalTo"/>
-          </conditions>
-        </modifier>
-      </modifiers>
-      <profiles>
-        <profile id="cca6-81f3-ce13-6f84" name="Primal Vistas" hidden="false" typeId="66c5-932e-004a-574c" typeName="Battalion Abilities">
-          <characteristics>
-            <characteristic name="Battalion Ability" typeId="23f7-32c0-e059-29b2">If the SLANN, STARSEER or ORACLE from this battalion is on the battlefield, the Primeval Domain battle trait applies to all terrain features, not just those in your territory.</characteristic>
-          </characteristics>
-        </profile>
-      </profiles>
-      <categoryLinks>
-        <categoryLink id="38d8-cc2c-62d5-9b78" name="New CategoryLink" hidden="false" targetId="3706-e0e8-674f-c41b" primary="true"/>
-      </categoryLinks>
-      <selectionEntryGroups>
-        <selectionEntryGroup id="84bf-1b9d-17c0-5012" name="1+ Thunderquake Temple-hosts" hidden="false" collective="false" import="true">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="7bc3-99c7-7ce1-e8e4" type="min"/>
-          </constraints>
-          <entryLinks>
-            <entryLink id="6916-b0c0-0896-ad2c" name="Thunderquake Temple-host" hidden="false" collective="false" import="true" targetId="84dc-4257-7b89-e0fa" type="selectionEntry"/>
-          </entryLinks>
-        </selectionEntryGroup>
-        <selectionEntryGroup id="b983-4754-2e35-4245" name="2+ Shadowstrike Temple-hosts" hidden="false" collective="false" import="true">
-          <constraints>
-            <constraint field="selections" scope="parent" value="2.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="cd87-d135-bf72-b4a3" type="min"/>
-          </constraints>
-          <entryLinks>
-            <entryLink id="b260-297a-817b-c45d" name="Shadowstrike Temple-host" hidden="false" collective="false" import="true" targetId="5dc7-123a-3fb0-76e3" type="selectionEntry"/>
-          </entryLinks>
-        </selectionEntryGroup>
-        <selectionEntryGroup id="9684-abcb-7299-5b80" name="1+ Firelance Temple-hosts" hidden="false" collective="false" import="true">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="76e7-a60b-680f-6d75" type="min"/>
-          </constraints>
-          <entryLinks>
-            <entryLink id="91f5-9ed1-2624-6920" name="Firelance Temple-host" hidden="false" collective="false" import="true" targetId="70a1-3ffd-e2e8-fbd7" type="selectionEntry"/>
-          </entryLinks>
-        </selectionEntryGroup>
-        <selectionEntryGroup id="9d08-6220-5091-387a" name="2+ Sunclaw Temple-hosts" hidden="false" collective="false" import="true">
-          <constraints>
-            <constraint field="selections" scope="parent" value="2.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="00ef-b8e6-dc9a-abb8" type="min"/>
-          </constraints>
-          <entryLinks>
-            <entryLink id="4ce2-087c-1340-1e9d" name="Sunclaw Temple-host" hidden="false" collective="false" import="true" targetId="65c2-0468-8b31-1420" type="selectionEntry"/>
-          </entryLinks>
-        </selectionEntryGroup>
-        <selectionEntryGroup id="33ba-38db-e084-d786" name="3 Saurus Guard units" hidden="false" collective="false" import="true">
-          <constraints>
-            <constraint field="selections" scope="parent" value="3.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="e18e-2b67-90d9-560f" type="max"/>
-            <constraint field="selections" scope="parent" value="3.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="582c-efa4-c997-96e4" type="min"/>
-          </constraints>
-          <entryLinks>
-            <entryLink id="b705-f713-b9b3-cba3" name="Saurus Guard" hidden="false" collective="false" import="true" targetId="f10e-c006-c7e8-f5c1" type="selectionEntry"/>
-          </entryLinks>
-        </selectionEntryGroup>
-        <selectionEntryGroup id="ed98-e47c-2d1e-5bcc" name="1 Eternity Warden" hidden="false" collective="false" import="true">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="c868-9472-65f0-58f8" type="max"/>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="6d22-2292-831c-8cbb" type="min"/>
-          </constraints>
-          <entryLinks>
-            <entryLink id="24fd-4c5a-3531-e152" name="Saurus Eternity Warden" hidden="false" collective="false" import="true" targetId="a611-89cb-30a8-04b4" type="selectionEntry">
-              <entryLinks>
-                <entryLink id="1f4b-f98f-5195-2dac" name="General" hidden="false" collective="false" import="true" targetId="98a4-3d6d-a7b9-399f" type="selectionEntry">
-                  <categoryLinks>
-                    <categoryLink id="39bd-779b-8c57-3eb8" name="General - Saurus" hidden="false" targetId="ed8c-9127-879b-4bc3" primary="false"/>
-                  </categoryLinks>
-                </entryLink>
-                <entryLink id="2c42-28f6-ffb7-b317" name="Artefacts of Power" hidden="false" collective="false" import="true" targetId="3a05-2cb4-92ae-62e4" type="selectionEntryGroup"/>
-                <entryLink id="d97c-8e10-7c14-9878" name="Command Traits" hidden="false" collective="false" import="true" targetId="5d24-ebc4-7261-165d" type="selectionEntryGroup"/>
-              </entryLinks>
-            </entryLink>
-          </entryLinks>
-        </selectionEntryGroup>
-        <selectionEntryGroup id="76f6-4076-0682-90bd" name="1 featured HERO" hidden="false" collective="false" import="true">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="c97a-738c-51a3-d373" type="max"/>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="9dad-4a11-2af9-ee14" type="min"/>
-          </constraints>
-          <entryLinks>
-            <entryLink id="9cdc-4a12-90fd-adcf" name="Lord Kroak" hidden="false" collective="false" import="true" targetId="f2d0-fb23-0f10-de22" type="selectionEntry">
-              <entryLinks>
-                <entryLink id="e0e2-c622-5cfe-ec2e" name="General" hidden="false" collective="false" import="true" targetId="98a4-3d6d-a7b9-399f" type="selectionEntry">
-                  <categoryLinks>
-                    <categoryLink id="6c0c-b843-565f-90f3" name="Named General" hidden="false" targetId="8b3d-7f03-e1f9-eaf5" primary="false"/>
-                  </categoryLinks>
-                </entryLink>
-              </entryLinks>
-            </entryLink>
-            <entryLink id="95dd-5f8a-e541-191b" name="Skink Starseer" hidden="false" collective="false" import="true" targetId="93e0-5922-bfc3-41e0" type="selectionEntry">
-              <entryLinks>
-                <entryLink id="5ef7-668d-1557-5f5b" name="General" hidden="false" collective="false" import="true" targetId="98a4-3d6d-a7b9-399f" type="selectionEntry"/>
-                <entryLink id="6ec7-14fc-0485-6e87" name="Artefacts of Power" hidden="false" collective="false" import="true" targetId="3a05-2cb4-92ae-62e4" type="selectionEntryGroup"/>
-                <entryLink id="aa0b-f49f-80df-6af4" name="Command Traits" hidden="false" collective="false" import="true" targetId="5d24-ebc4-7261-165d" type="selectionEntryGroup"/>
-                <entryLink id="4e95-da91-9581-1121" name="Seraphon Spell Lores" hidden="false" collective="false" import="true" targetId="f503-4e35-143c-0f54" type="selectionEntryGroup"/>
-              </entryLinks>
-            </entryLink>
-            <entryLink id="d5a2-95bf-7764-c974" name="Skink Oracle on Troglodon" hidden="false" collective="false" import="true" targetId="375a-b880-701d-ae25" type="selectionEntry">
-              <entryLinks>
-                <entryLink id="d5ec-6df1-530b-d924" name="General" hidden="false" collective="false" import="true" targetId="98a4-3d6d-a7b9-399f" type="selectionEntry">
-                  <categoryLinks>
-                    <categoryLink id="74a7-5cdc-3725-2b55" name="General - Monster" hidden="false" targetId="52cb-3ca6-5e69-150b" primary="false"/>
-                  </categoryLinks>
-                </entryLink>
-                <entryLink id="d820-1b77-9fcb-f358" name="Artefacts of Power" hidden="false" collective="false" import="true" targetId="3a05-2cb4-92ae-62e4" type="selectionEntryGroup"/>
-                <entryLink id="62df-0310-afab-ae53" name="Command Traits" hidden="false" collective="false" import="true" targetId="5d24-ebc4-7261-165d" type="selectionEntryGroup"/>
-                <entryLink id="1a60-81e1-b8e2-ff42" name="Seraphon Spell Lores" hidden="false" collective="false" import="true" targetId="f503-4e35-143c-0f54" type="selectionEntryGroup"/>
-              </entryLinks>
-            </entryLink>
-            <entryLink id="8bc0-c842-7465-78cf" name="Slann Starmaster" hidden="false" collective="false" import="true" targetId="3f21-6503-039c-348a" type="selectionEntry">
-              <entryLinks>
-                <entryLink id="42a4-0c3b-dd24-9d0d" name="General" hidden="false" collective="false" import="true" targetId="98a4-3d6d-a7b9-399f" type="selectionEntry">
-                  <categoryLinks>
-                    <categoryLink id="ae04-9fc4-9998-67d9" name="General - Slann" hidden="false" targetId="d338-94d4-b4f2-8371" primary="false"/>
-                  </categoryLinks>
-                </entryLink>
-                <entryLink id="431f-5018-cbbb-5e10" name="Artefacts of Power" hidden="false" collective="false" import="true" targetId="3a05-2cb4-92ae-62e4" type="selectionEntryGroup"/>
-                <entryLink id="2b60-7513-f21f-ddcb" name="Command Traits" hidden="false" collective="false" import="true" targetId="5d24-ebc4-7261-165d" type="selectionEntryGroup"/>
-                <entryLink id="9e44-7c4e-be53-d2ea" name="Seraphon Spell Lores" hidden="false" collective="false" import="true" targetId="f503-4e35-143c-0f54" type="selectionEntryGroup"/>
-              </entryLinks>
-            </entryLink>
-          </entryLinks>
-        </selectionEntryGroup>
-      </selectionEntryGroups>
-      <costs>
-        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="180.0"/>
-      </costs>
-    </selectionEntry>
-    <selectionEntry id="52d1-d672-c53b-bace" name="Thunderquake Starhost" publicationId="ba75-6000-0ab5-fd66" hidden="false" collective="false" import="true" type="upgrade">
-      <modifiers>
-        <modifier type="set" field="hidden" value="true">
-          <conditions>
-            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="97d8-ea8f-8e74-1a7c" type="equalTo"/>
-          </conditions>
-        </modifier>
-      </modifiers>
-      <profiles>
-        <profile id="c471-7132-1539-509f" name="Celestial Surge" hidden="false" typeId="66c5-932e-004a-574c" typeName="Battalion Abilities">
-          <characteristics>
-            <characteristic name="Battalion Ability" typeId="23f7-32c0-e059-29b2">In your hero phase, you can heal 1 wound allocated to each unit from this battalion. If the unit is wholly within 18&quot; of a friendly SLANN, heal D3 wounds instead of 1.</characteristic>
-          </characteristics>
-        </profile>
-      </profiles>
-      <categoryLinks>
-        <categoryLink id="ae92-fcab-f1ce-3d3e" name="New CategoryLink" hidden="false" targetId="3706-e0e8-674f-c41b" primary="true"/>
-      </categoryLinks>
-      <selectionEntryGroups>
-        <selectionEntryGroup id="0ebe-86a4-74cf-ab35" name="1 featured unit" hidden="false" collective="false" import="true">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="59f5-7270-6aae-7da7" type="max"/>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="98ca-c7ef-b8b0-8c1c" type="min"/>
-          </constraints>
-          <entryLinks>
-            <entryLink id="be6d-9564-d43c-a001" name="Kroxigor" hidden="false" collective="false" import="true" targetId="650a-a6e5-101d-fbac" type="selectionEntry"/>
-            <entryLink id="a63a-c92b-f60f-54d2" name="Razordon Hunting Pack" hidden="false" collective="false" import="true" targetId="8e60-aff9-c785-9809" type="selectionEntry"/>
-            <entryLink id="47db-3ce0-0163-9f18" name="Salamander Hunting Pack" hidden="false" collective="false" import="true" targetId="376b-dcfb-aba2-8daf" type="selectionEntry"/>
-          </entryLinks>
-        </selectionEntryGroup>
-        <selectionEntryGroup id="16c1-7bdb-288d-5dee" name="2 featured MONSTERS" hidden="false" collective="false" import="true">
-          <constraints>
-            <constraint field="selections" scope="parent" value="2.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="f136-0c4b-776d-3be5" type="max"/>
-            <constraint field="selections" scope="parent" value="2.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="cc15-7265-a23e-6427" type="min"/>
-          </constraints>
-          <entryLinks>
-            <entryLink id="ffb3-0c2e-e13e-40e7" name="Bastiladon" hidden="false" collective="false" import="true" targetId="ba6f-5b56-9e8b-48e2" type="selectionEntry"/>
-            <entryLink id="46b1-50c1-716a-50c4" name="Stegadon" hidden="false" collective="false" import="true" targetId="166c-bb29-f70a-13bd" type="selectionEntry"/>
-          </entryLinks>
-        </selectionEntryGroup>
-        <selectionEntryGroup id="bfda-2f89-7d18-7209" name="1 featured HERO" hidden="false" collective="false" import="true">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="fc73-9244-b227-7852" type="max"/>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="f974-d0de-9244-3b5a" type="min"/>
-          </constraints>
-          <entryLinks>
-            <entryLink id="17f6-9822-e946-75aa" name="Stegadon with Skink Chief" hidden="false" collective="false" import="true" targetId="2b38-8179-6a82-4e17" type="selectionEntry">
-              <entryLinks>
-                <entryLink id="e46a-c24a-f1f7-d060" name="General" hidden="false" collective="false" import="true" targetId="98a4-3d6d-a7b9-399f" type="selectionEntry">
-                  <categoryLinks>
-                    <categoryLink id="41b1-f6b7-ab6a-b64d" name="General - Monster" hidden="false" targetId="52cb-3ca6-5e69-150b" primary="false"/>
-                  </categoryLinks>
-                </entryLink>
-                <entryLink id="22a0-2e51-4f04-9eaa" name="Artefacts of Power" hidden="false" collective="false" import="true" targetId="3a05-2cb4-92ae-62e4" type="selectionEntryGroup"/>
-                <entryLink id="c53b-4418-e7ac-cc00" name="Command Traits" hidden="false" collective="false" import="true" targetId="5d24-ebc4-7261-165d" type="selectionEntryGroup"/>
-              </entryLinks>
-            </entryLink>
-            <entryLink id="8f5d-3a4c-77f6-1ed4" name="Engine of the Gods" hidden="false" collective="false" import="true" targetId="63dd-fada-ecfa-da5e" type="selectionEntry">
-              <entryLinks>
-                <entryLink id="0597-0046-2802-7a13" name="General" hidden="false" collective="false" import="true" targetId="98a4-3d6d-a7b9-399f" type="selectionEntry">
-                  <categoryLinks>
-                    <categoryLink id="da83-ac7f-7c2d-6079" name="General - Monster" hidden="false" targetId="52cb-3ca6-5e69-150b" primary="false"/>
-                  </categoryLinks>
-                </entryLink>
-                <entryLink id="e084-83da-6706-879d" name="Artefacts of Power" hidden="false" collective="false" import="true" targetId="3a05-2cb4-92ae-62e4" type="selectionEntryGroup"/>
-                <entryLink id="208d-89bb-b4fe-a5c0" name="Command Traits" hidden="false" collective="false" import="true" targetId="5d24-ebc4-7261-165d" type="selectionEntryGroup"/>
-              </entryLinks>
-            </entryLink>
-          </entryLinks>
-        </selectionEntryGroup>
-      </selectionEntryGroups>
-      <costs>
-        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="130.0"/>
-      </costs>
-    </selectionEntry>
-    <selectionEntry id="eb18-c5b7-87bc-9403" name="Shadowstrike Starhost" publicationId="ba75-6000-0ab5-fd66" hidden="false" collective="false" import="true" type="upgrade">
-      <modifiers>
-        <modifier type="set" field="hidden" value="true">
-          <conditions>
-            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="97d8-ea8f-8e74-1a7c" type="equalTo"/>
-          </conditions>
-        </modifier>
-      </modifiers>
-      <profiles>
-        <profile id="6df6-1049-dcd5-2a3c" name="Strike from the Stars" hidden="false" typeId="66c5-932e-004a-574c" typeName="Battalion Abilities">
-          <characteristics>
-            <characteristic name="Battalion Ability" typeId="23f7-32c0-e059-29b2">Instead of setting up a unit from this battalion on the battlefield, you can place it to one side and say that it is waiting in the stars as a reserve unit. At the end of any of your movement phases, you can set up any of those units on the battlefield more than 9&quot; from any enemy units. Reserve units that are not set up on the battlefield before the start of the fourth battle round are slain.</characteristic>
-          </characteristics>
-        </profile>
-      </profiles>
-      <categoryLinks>
-        <categoryLink id="68ba-b209-75f4-371c" name="New CategoryLink" hidden="false" targetId="3706-e0e8-674f-c41b" primary="true"/>
-      </categoryLinks>
-      <selectionEntryGroups>
-        <selectionEntryGroup id="497f-237b-9728-f5c4" name="1 featured unit" hidden="false" collective="false" import="true">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="1ca5-2650-4c15-f98f" type="max"/>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="b9e4-65b8-bc85-14d7" type="min"/>
-          </constraints>
-          <entryLinks>
-            <entryLink id="a607-0304-b34e-fcee" name="Ripperdactyl Riders" hidden="false" collective="false" import="true" targetId="c4e3-c666-7c1c-c52b" type="selectionEntry"/>
-            <entryLink id="c672-eef5-f351-4750" name="Terradon Riders" hidden="false" collective="false" import="true" targetId="189a-1eda-7060-d48f" type="selectionEntry"/>
-          </entryLinks>
-        </selectionEntryGroup>
-        <selectionEntryGroup id="4392-c47a-9101-a21f" name="2 featured units" hidden="false" collective="false" import="true">
-          <constraints>
-            <constraint field="selections" scope="parent" value="2.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="6e8a-e20c-bf8c-ef3a" type="max"/>
-            <constraint field="selections" scope="parent" value="2.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d430-eac1-22f7-7d50" type="min"/>
-          </constraints>
-          <entryLinks>
-            <entryLink id="1b0a-4335-e198-d8fd" name="Skinks" hidden="false" collective="false" import="true" targetId="2fc4-9e14-cd82-db1f" type="selectionEntry"/>
-            <entryLink id="d647-60ee-3d7a-c2ad" name="Chameleon Skinks" hidden="false" collective="false" import="true" targetId="70f1-54a0-5012-980a" type="selectionEntry"/>
-          </entryLinks>
-        </selectionEntryGroup>
-        <selectionEntryGroup id="d04a-032a-67a2-28a8" name="1 featured HERO" hidden="false" collective="false" import="true">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="c451-132e-02f7-2e3a" type="max"/>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d6c3-03a2-af73-ecb1" type="min"/>
-          </constraints>
-          <entryLinks>
-            <entryLink id="cc8d-c5cc-8058-cdda" name="Skink Priest" hidden="false" collective="false" import="true" targetId="fcd0-b143-b091-f604" type="selectionEntry">
-              <entryLinks>
-                <entryLink id="b717-c5b8-730f-7cfa" name="General" hidden="false" collective="false" import="true" targetId="98a4-3d6d-a7b9-399f" type="selectionEntry"/>
-                <entryLink id="272b-ce12-45e0-fc6d" name="Artefacts of Power" hidden="false" collective="false" import="true" targetId="3a05-2cb4-92ae-62e4" type="selectionEntryGroup"/>
-                <entryLink id="e3b0-9523-9558-3fb0" name="Command Traits" hidden="false" collective="false" import="true" targetId="5d24-ebc4-7261-165d" type="selectionEntryGroup"/>
-              </entryLinks>
-            </entryLink>
-            <entryLink id="a313-fe33-0292-5911" name="Skink Starpriest" hidden="false" collective="false" import="true" targetId="0e95-3521-a34d-3ed0" type="selectionEntry">
-              <entryLinks>
-                <entryLink id="ed8a-6f7a-1770-d15e" name="General" hidden="false" collective="false" import="true" targetId="98a4-3d6d-a7b9-399f" type="selectionEntry"/>
-                <entryLink id="3ee2-9222-d5c2-2c5c" name="Artefacts of Power" hidden="false" collective="false" import="true" targetId="3a05-2cb4-92ae-62e4" type="selectionEntryGroup"/>
-                <entryLink id="17d4-5462-bb28-22cf" name="Command Traits" hidden="false" collective="false" import="true" targetId="5d24-ebc4-7261-165d" type="selectionEntryGroup"/>
-                <entryLink id="9008-8eaa-f975-edfa" name="Seraphon Spell Lores" hidden="false" collective="false" import="true" targetId="f503-4e35-143c-0f54" type="selectionEntryGroup"/>
-              </entryLinks>
-            </entryLink>
-          </entryLinks>
-        </selectionEntryGroup>
-      </selectionEntryGroups>
-      <costs>
-        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="170.0"/>
-      </costs>
-    </selectionEntry>
-    <selectionEntry id="7ba5-fc11-7b00-22f0" name="Sunclaw Starhost" publicationId="ba75-6000-0ab5-fd66" hidden="false" collective="false" import="true" type="upgrade">
-      <modifiers>
-        <modifier type="set" field="hidden" value="true">
-          <conditions>
-            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="97d8-ea8f-8e74-1a7c" type="equalTo"/>
-          </conditions>
-        </modifier>
-      </modifiers>
-      <profiles>
-        <profile id="5beb-a7c1-0c77-2dca" name="Star-charged Celestite" hidden="false" typeId="66c5-932e-004a-574c" typeName="Battalion Abilities">
-          <characteristics>
-            <characteristic name="Battalion Ability" typeId="23f7-32c0-e059-29b2">Improve the Rend characteristic of Celestite weapons used by units from this battalion by 1.</characteristic>
-          </characteristics>
-        </profile>
-      </profiles>
-      <categoryLinks>
-        <categoryLink id="f8d1-4f79-08c8-2203" name="New CategoryLink" hidden="false" targetId="3706-e0e8-674f-c41b" primary="true"/>
-      </categoryLinks>
-      <selectionEntryGroups>
-        <selectionEntryGroup id="551a-f230-240b-69bc" name="3 Saurus Warriors units" hidden="false" collective="false" import="true">
-          <constraints>
-            <constraint field="selections" scope="parent" value="3.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="bd0d-e7ec-059e-68b7" type="max"/>
-            <constraint field="selections" scope="parent" value="3.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="80d2-cf42-c5b5-994a" type="min"/>
-          </constraints>
-          <entryLinks>
-            <entryLink id="5549-3144-f531-8928" name="Saurus Warriors" hidden="false" collective="false" import="true" targetId="24db-696e-aa0f-71fd" type="selectionEntry"/>
-          </entryLinks>
-        </selectionEntryGroup>
-        <selectionEntryGroup id="7367-9cb2-95c5-2e5b" name="1 featured HERO" hidden="false" collective="false" import="true">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="a49d-9f0d-d637-b233" type="max"/>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="aaab-de34-490d-6f52" type="min"/>
-          </constraints>
-          <entryLinks>
-            <entryLink id="cf36-5d94-d78a-344b" name="Saurus Sunblood" hidden="false" collective="false" import="true" targetId="cdd0-9475-67d3-9873" type="selectionEntry">
-              <entryLinks>
-                <entryLink id="6b86-a3c4-c98b-3f84" name="General" hidden="false" collective="false" import="true" targetId="98a4-3d6d-a7b9-399f" type="selectionEntry">
-                  <categoryLinks>
-                    <categoryLink id="2d39-3e57-8682-d239" name="General - Saurus" hidden="false" targetId="ed8c-9127-879b-4bc3" primary="false"/>
-                  </categoryLinks>
-                </entryLink>
-                <entryLink id="9a8d-5691-53a2-8b57" name="Artefacts of Power" hidden="false" collective="false" import="true" targetId="3a05-2cb4-92ae-62e4" type="selectionEntryGroup"/>
-                <entryLink id="d0f8-5c5b-1603-8659" name="Command Traits" hidden="false" collective="false" import="true" targetId="5d24-ebc4-7261-165d" type="selectionEntryGroup"/>
-              </entryLinks>
-            </entryLink>
-            <entryLink id="5857-789c-a0b3-bfc8" name="Saurus Oldblood" hidden="false" collective="false" import="true" targetId="89a6-50de-390e-6d2e" type="selectionEntry">
-              <entryLinks>
-                <entryLink id="371e-b904-ecce-d7e4" name="General" hidden="false" collective="false" import="true" targetId="98a4-3d6d-a7b9-399f" type="selectionEntry">
-                  <categoryLinks>
-                    <categoryLink id="f296-4549-5534-2ed4" name="General - Saurus" hidden="false" targetId="ed8c-9127-879b-4bc3" primary="false"/>
-                  </categoryLinks>
-                </entryLink>
-                <entryLink id="2a66-3063-0399-a0fa" name="Artefacts of Power" hidden="false" collective="false" import="true" targetId="3a05-2cb4-92ae-62e4" type="selectionEntryGroup"/>
-                <entryLink id="3254-d786-8070-3d66" name="Command Traits" hidden="false" collective="false" import="true" targetId="5d24-ebc4-7261-165d" type="selectionEntryGroup"/>
-              </entryLinks>
-            </entryLink>
-            <entryLink id="e9fc-081c-cdd5-84c2" name="Saurus Oldblood on Carnosaur" hidden="false" collective="false" import="true" targetId="225b-1082-b2e9-6ecf" type="selectionEntry">
-              <entryLinks>
-                <entryLink id="6d3d-fa31-abce-ec63" name="General" hidden="false" collective="false" import="true" targetId="98a4-3d6d-a7b9-399f" type="selectionEntry">
-                  <categoryLinks>
-                    <categoryLink id="2d5e-fff3-e642-1159" name="General - Saurus" hidden="false" targetId="ed8c-9127-879b-4bc3" primary="false"/>
-                    <categoryLink id="38c7-e33c-7ab4-b48d" name="General - Monster" hidden="false" targetId="52cb-3ca6-5e69-150b" primary="false"/>
-                  </categoryLinks>
-                </entryLink>
-                <entryLink id="95e1-e43f-c18a-6173" name="Artefacts of Power" hidden="false" collective="false" import="true" targetId="3a05-2cb4-92ae-62e4" type="selectionEntryGroup"/>
-                <entryLink id="dd2c-a1ac-19f1-fdd2" name="Command Traits" hidden="false" collective="false" import="true" targetId="5d24-ebc4-7261-165d" type="selectionEntryGroup"/>
-              </entryLinks>
-            </entryLink>
-          </entryLinks>
-        </selectionEntryGroup>
-      </selectionEntryGroups>
-      <costs>
-        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="160.0"/>
-      </costs>
-    </selectionEntry>
-    <selectionEntry id="ef3a-9d1a-8756-9db8" name="Firelance Starhost" publicationId="ba75-6000-0ab5-fd66" hidden="false" collective="false" import="true" type="upgrade">
-      <modifiers>
-        <modifier type="set" field="hidden" value="true">
-          <conditions>
-            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="97d8-ea8f-8e74-1a7c" type="equalTo"/>
-          </conditions>
-        </modifier>
-      </modifiers>
-      <profiles>
-        <profile id="f75f-487b-a4be-3108" name="Blazing Cohorts" hidden="false" typeId="66c5-932e-004a-574c" typeName="Battalion Abilities">
-          <characteristics>
-            <characteristic name="Battalion Ability" typeId="23f7-32c0-e059-29b2">If the unmodified wound roll for an attack made with a Celestite weapon by a unit from this battalion is 6, that attacks inflicts 1 mortal wound on the target in addition to any normal damage.</characteristic>
-          </characteristics>
-        </profile>
-      </profiles>
-      <categoryLinks>
-        <categoryLink id="24c2-755d-0943-5c4e" name="New CategoryLink" hidden="false" targetId="3706-e0e8-674f-c41b" primary="true"/>
-      </categoryLinks>
-      <selectionEntryGroups>
-        <selectionEntryGroup id="0979-2183-731c-4d9a" name="3 Saurus Knights units" hidden="false" collective="false" import="true">
-          <constraints>
-            <constraint field="selections" scope="parent" value="3.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="ad32-0088-2f0b-6a17" type="max"/>
-            <constraint field="selections" scope="parent" value="3.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="422b-eb69-71d2-26ee" type="min"/>
-          </constraints>
-          <entryLinks>
-            <entryLink id="8eab-7624-33dc-7fa2" name="Saurus Knights" hidden="false" collective="false" import="true" targetId="e5f1-a103-0056-8bb2" type="selectionEntry"/>
-          </entryLinks>
-        </selectionEntryGroup>
-        <selectionEntryGroup id="52d6-11dc-ec8b-5be8" name="1 SCAR-VETERAN" hidden="false" collective="false" import="true">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="04c5-7cee-8657-c2f9" type="max"/>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="c368-3470-6ede-7308" type="min"/>
-          </constraints>
-          <entryLinks>
-            <entryLink id="2de8-5acf-85f0-706b" name="Saurus Scar-Veteran on Cold One" hidden="false" collective="false" import="true" targetId="a0ac-be93-da5f-d740" type="selectionEntry">
-              <entryLinks>
-                <entryLink id="c385-5475-640a-d954" name="General" hidden="false" collective="false" import="true" targetId="98a4-3d6d-a7b9-399f" type="selectionEntry">
-                  <categoryLinks>
-                    <categoryLink id="df5a-4bc8-e47c-54cf" name="General - Saurus" hidden="false" targetId="ed8c-9127-879b-4bc3" primary="false"/>
-                  </categoryLinks>
-                </entryLink>
-                <entryLink id="9415-b7cf-718d-4159" name="Artefacts of Power" hidden="false" collective="false" import="true" targetId="3a05-2cb4-92ae-62e4" type="selectionEntryGroup"/>
-                <entryLink id="a2d7-e829-3669-c94d" name="Command Traits" hidden="false" collective="false" import="true" targetId="5d24-ebc4-7261-165d" type="selectionEntryGroup"/>
-              </entryLinks>
-            </entryLink>
-            <entryLink id="8563-7d27-a39b-9544" name="Saurus Scar-Veteran on Carnosaur" hidden="false" collective="false" import="true" targetId="c56e-c500-14f5-2e01" type="selectionEntry">
-              <entryLinks>
-                <entryLink id="cc64-9f69-e674-10ae" name="General" hidden="false" collective="false" import="true" targetId="98a4-3d6d-a7b9-399f" type="selectionEntry">
-                  <categoryLinks>
-                    <categoryLink id="7a97-e928-60e0-c778" name="General - Saurus" hidden="false" targetId="ed8c-9127-879b-4bc3" primary="false"/>
-                    <categoryLink id="f08e-b7b4-8b8c-bde1" name="General - Monster" hidden="false" targetId="52cb-3ca6-5e69-150b" primary="false"/>
-                  </categoryLinks>
-                </entryLink>
-                <entryLink id="72df-d59b-4233-ca44" name="Artefacts of Power" hidden="false" collective="false" import="true" targetId="3a05-2cb4-92ae-62e4" type="selectionEntryGroup"/>
-                <entryLink id="06cf-1470-43d9-e903" name="Command Traits" hidden="false" collective="false" import="true" targetId="5d24-ebc4-7261-165d" type="selectionEntryGroup"/>
-              </entryLinks>
-            </entryLink>
-          </entryLinks>
-        </selectionEntryGroup>
-      </selectionEntryGroups>
-      <costs>
-        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="160.0"/>
-      </costs>
-    </selectionEntry>
-    <selectionEntry id="e99e-d145-10b8-8db4" name="Eternal Starhost" hidden="false" collective="false" import="true" type="upgrade">
-      <modifiers>
-        <modifier type="set" field="hidden" value="true">
-          <conditions>
-            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="97d8-ea8f-8e74-1a7c" type="equalTo"/>
-          </conditions>
-        </modifier>
-      </modifiers>
-      <profiles>
-        <profile id="8095-a605-8816-27b6" name="Celestial Reinforcement" hidden="false" typeId="66c5-932e-004a-574c" typeName="Battalion Abilities">
-          <characteristics>
-            <characteristic name="Battalion Ability" typeId="23f7-32c0-e059-29b2">At the start of your hero phase, you receive D3 celestial conjuration points if the SLANN, STARSEER or ORACLE from this battalion is on the battlefield.</characteristic>
-          </characteristics>
-        </profile>
-      </profiles>
-      <categoryLinks>
-        <categoryLink id="d098-869f-403c-f727" name="New CategoryLink" hidden="false" targetId="3706-e0e8-674f-c41b" primary="true"/>
-      </categoryLinks>
-      <selectionEntryGroups>
-        <selectionEntryGroup id="8fa1-befb-bd9f-ab4c" name="1+ Thunderquake Starhosts" hidden="false" collective="false" import="true">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="ee4b-8300-70bf-dfab" type="min"/>
-          </constraints>
-          <entryLinks>
-            <entryLink id="0185-8b9b-49ae-1c5f" name="Thunderquake Starhost" hidden="false" collective="false" import="true" targetId="52d1-d672-c53b-bace" type="selectionEntry"/>
-          </entryLinks>
-        </selectionEntryGroup>
-        <selectionEntryGroup id="fb68-4732-5519-96ee" name="2+ Shadowstrike Starhosts" hidden="false" collective="false" import="true">
-          <constraints>
-            <constraint field="selections" scope="parent" value="2.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="5ac0-966b-fa2a-d928" type="min"/>
-          </constraints>
-          <entryLinks>
-            <entryLink id="949e-df19-56c2-8730" name="Shadowstrike Starhost" hidden="false" collective="false" import="true" targetId="eb18-c5b7-87bc-9403" type="selectionEntry"/>
-          </entryLinks>
-        </selectionEntryGroup>
-        <selectionEntryGroup id="ffd0-edc8-f99b-78dc" name="1+ Firelance Starhosts" hidden="false" collective="false" import="true">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="24ad-5ba9-ad72-7f96" type="min"/>
-          </constraints>
-          <entryLinks>
-            <entryLink id="9e25-2ca0-01ac-f431" name="Firelance Starhost" hidden="false" collective="false" import="true" targetId="ef3a-9d1a-8756-9db8" type="selectionEntry"/>
-          </entryLinks>
-        </selectionEntryGroup>
-        <selectionEntryGroup id="c208-81ed-b697-cfe6" name="2+ Sunclaw Starhosts" hidden="false" collective="false" import="true">
-          <constraints>
-            <constraint field="selections" scope="parent" value="2.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="0570-178e-d5a1-30a6" type="min"/>
-          </constraints>
-          <entryLinks>
-            <entryLink id="7297-771c-06da-0fee" name="Sunclaw Starhost" hidden="false" collective="false" import="true" targetId="7ba5-fc11-7b00-22f0" type="selectionEntry"/>
-          </entryLinks>
-        </selectionEntryGroup>
-        <selectionEntryGroup id="e5f3-690d-355a-fc24" name="3 Saurus Guard units" hidden="false" collective="false" import="true">
-          <constraints>
-            <constraint field="selections" scope="parent" value="3.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="3ce3-e70f-316f-6bb0" type="max"/>
-            <constraint field="selections" scope="parent" value="3.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="2f8e-3dc9-32b1-e6c6" type="min"/>
-          </constraints>
-          <entryLinks>
-            <entryLink id="1c30-c196-2bf5-3145" name="Saurus Guard" hidden="false" collective="false" import="true" targetId="f10e-c006-c7e8-f5c1" type="selectionEntry"/>
-          </entryLinks>
-        </selectionEntryGroup>
-        <selectionEntryGroup id="bc8d-f054-745c-90e1" name="1 Eternity Warden" hidden="false" collective="false" import="true">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="57ba-c1f5-e0c1-a919" type="max"/>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8a90-19ba-7aa5-f390" type="min"/>
-          </constraints>
-          <entryLinks>
-            <entryLink id="45ea-1448-a685-6504" name="Saurus Eternity Warden" hidden="false" collective="false" import="true" targetId="a611-89cb-30a8-04b4" type="selectionEntry">
-              <entryLinks>
-                <entryLink id="e508-ab7d-ede9-dfe6" name="General" hidden="false" collective="false" import="true" targetId="98a4-3d6d-a7b9-399f" type="selectionEntry">
-                  <categoryLinks>
-                    <categoryLink id="1112-3440-bc64-17c9" name="General - Saurus" hidden="false" targetId="ed8c-9127-879b-4bc3" primary="false"/>
-                  </categoryLinks>
-                </entryLink>
-                <entryLink id="c1db-883a-64f2-26ea" name="Artefacts of Power" hidden="false" collective="false" import="true" targetId="3a05-2cb4-92ae-62e4" type="selectionEntryGroup"/>
-                <entryLink id="dc0e-f713-5d47-683f" name="Command Traits" hidden="false" collective="false" import="true" targetId="5d24-ebc4-7261-165d" type="selectionEntryGroup"/>
-              </entryLinks>
-            </entryLink>
-          </entryLinks>
-        </selectionEntryGroup>
-        <selectionEntryGroup id="0313-dac0-6b8d-e268" name="1 featured HERO" hidden="false" collective="false" import="true">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="2f77-2089-ef42-604b" type="max"/>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="bc4f-87bf-4548-8519" type="min"/>
-          </constraints>
-          <entryLinks>
-            <entryLink id="63be-9543-fb78-477e" name="Lord Kroak" hidden="false" collective="false" import="true" targetId="f2d0-fb23-0f10-de22" type="selectionEntry">
-              <entryLinks>
-                <entryLink id="8a3a-1267-290a-408b" name="General" hidden="false" collective="false" import="true" targetId="98a4-3d6d-a7b9-399f" type="selectionEntry">
-                  <categoryLinks>
-                    <categoryLink id="762c-ef6f-01f5-382b" name="Named General" hidden="false" targetId="8b3d-7f03-e1f9-eaf5" primary="false"/>
-                  </categoryLinks>
-                </entryLink>
-              </entryLinks>
-            </entryLink>
-            <entryLink id="8085-8278-d2ac-ae17" name="Slann Starmaster" hidden="false" collective="false" import="true" targetId="3f21-6503-039c-348a" type="selectionEntry">
-              <entryLinks>
-                <entryLink id="e1cb-36aa-8988-2a43" name="General" hidden="false" collective="false" import="true" targetId="98a4-3d6d-a7b9-399f" type="selectionEntry">
-                  <categoryLinks>
-                    <categoryLink id="d504-a2f3-aae1-dfb8" name="General - Slann" hidden="false" targetId="d338-94d4-b4f2-8371" primary="false"/>
-                  </categoryLinks>
-                </entryLink>
-                <entryLink id="5f19-1265-7556-7fae" name="Artefacts of Power" hidden="false" collective="false" import="true" targetId="3a05-2cb4-92ae-62e4" type="selectionEntryGroup"/>
-                <entryLink id="be81-b5cc-c20e-13ab" name="Command Traits" hidden="false" collective="false" import="true" targetId="5d24-ebc4-7261-165d" type="selectionEntryGroup"/>
-                <entryLink id="063b-1e2d-7ce0-e554" name="Seraphon Spell Lores" hidden="false" collective="false" import="true" targetId="f503-4e35-143c-0f54" type="selectionEntryGroup"/>
-              </entryLinks>
-            </entryLink>
-            <entryLink id="4423-a5fb-570b-bb06" name="Skink Starseer" hidden="false" collective="false" import="true" targetId="93e0-5922-bfc3-41e0" type="selectionEntry">
-              <entryLinks>
-                <entryLink id="74ba-c867-ae22-40ff" name="General" hidden="false" collective="false" import="true" targetId="98a4-3d6d-a7b9-399f" type="selectionEntry"/>
-                <entryLink id="4891-ee28-f506-5ca2" name="Artefacts of Power" hidden="false" collective="false" import="true" targetId="3a05-2cb4-92ae-62e4" type="selectionEntryGroup"/>
-                <entryLink id="b122-2b76-3f96-69b7" name="Command Traits" hidden="false" collective="false" import="true" targetId="5d24-ebc4-7261-165d" type="selectionEntryGroup"/>
-                <entryLink id="4f4e-adc6-b862-4daa" name="Seraphon Spell Lores" hidden="false" collective="false" import="true" targetId="f503-4e35-143c-0f54" type="selectionEntryGroup"/>
-              </entryLinks>
-            </entryLink>
-            <entryLink id="2be5-efcd-ab7b-b1f9" name="Skink Oracle on Troglodon" hidden="false" collective="false" import="true" targetId="375a-b880-701d-ae25" type="selectionEntry">
-              <entryLinks>
-                <entryLink id="c625-212e-af66-2a3c" name="General" hidden="false" collective="false" import="true" targetId="98a4-3d6d-a7b9-399f" type="selectionEntry">
-                  <categoryLinks>
-                    <categoryLink id="1c06-d3aa-1ef2-2357" name="General - Monster" hidden="false" targetId="52cb-3ca6-5e69-150b" primary="false"/>
-                  </categoryLinks>
-                </entryLink>
-                <entryLink id="2fd9-e39d-311f-14d5" name="Artefacts of Power" hidden="false" collective="false" import="true" targetId="3a05-2cb4-92ae-62e4" type="selectionEntryGroup"/>
-                <entryLink id="fd47-8b81-40ce-eb4a" name="Command Traits" hidden="false" collective="false" import="true" targetId="5d24-ebc4-7261-165d" type="selectionEntryGroup"/>
-                <entryLink id="4886-9c3b-51c9-2773" name="Seraphon Spell Lores" hidden="false" collective="false" import="true" targetId="f503-4e35-143c-0f54" type="selectionEntryGroup"/>
-              </entryLinks>
-            </entryLink>
-          </entryLinks>
-        </selectionEntryGroup>
-      </selectionEntryGroups>
-      <costs>
-        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="200.0"/>
-      </costs>
-    </selectionEntry>
-    <selectionEntry id="4c18-6024-f153-39ae" name="The Celestial Stampede" hidden="false" collective="false" import="true" type="upgrade">
-      <modifiers>
-        <modifier type="set" field="hidden" value="true">
-          <conditions>
-            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="b5bb-59b5-6c6b-3c09" type="equalTo"/>
-          </conditions>
-        </modifier>
-      </modifiers>
-      <constraints>
-        <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="f501-7cfe-6911-c19b" type="max"/>
-      </constraints>
-      <profiles>
-        <profile id="2dc3-24b2-86e0-7f7b" name="Ancient Talepotec" hidden="false" typeId="66c5-932e-004a-574c" typeName="Battalion Abilities">
-          <characteristics>
-            <characteristic name="Battalion Ability" typeId="23f7-32c0-e059-29b2">Starwarden Iq-To has the Prime Warbeast command trait from Battletome: Seraphon even if he is not your general.</characteristic>
-          </characteristics>
-        </profile>
-        <profile id="25bb-1653-c6cb-0093" name="Lance of Cosmic Power" hidden="false" typeId="66c5-932e-004a-574c" typeName="Battalion Abilities">
-          <characteristics>
-            <characteristic name="Battalion Ability" typeId="23f7-32c0-e059-29b2">Once per battle, at the start of your shooting phase, you can say that this battalion is going to shoot a Lance of Cosmic Power. If you do so, you cannot make cosmic engine rolls for units from this battalion in that phase, and you cannot use the Trove of Old One Technology command ability in that phase. Instead, pick 1 enemy unit within 24&quot; of Starwarden Iq-To and roll 1 dice for each ENGINE OF THE GODS from this battalion that is within 24&quot; of that enemy unit, and roll 2 dice for each BASTILADON armed with a Solar Engine from this battalion that is within 24&quot; of that enemy unit. For each 2+, that enemy unit suffers D3 mortal wounds.</characteristic>
-          </characteristics>
-        </profile>
-      </profiles>
-      <categoryLinks>
-        <categoryLink id="92d2-39c9-5cd0-bc12" name="New CategoryLink" hidden="false" targetId="3706-e0e8-674f-c41b" primary="true"/>
-      </categoryLinks>
-      <selectionEntryGroups>
-        <selectionEntryGroup id="177d-56bc-d067-b412" name="1 Bastiladon" hidden="false" collective="false" import="true">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="01eb-2ba4-4d88-6e61" type="max"/>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="41bf-0d2b-a9af-d456" type="min"/>
-          </constraints>
-          <entryLinks>
-            <entryLink id="753f-0a24-361a-43fc" name="Bastiladon" hidden="false" collective="false" import="true" targetId="ba6f-5b56-9e8b-48e2" type="selectionEntry"/>
-          </entryLinks>
-        </selectionEntryGroup>
-        <selectionEntryGroup id="1775-2796-b5d8-f7a6" name="1 featured unit" hidden="false" collective="false" import="true">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="b3d7-0906-92b4-a2a6" type="max"/>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="7d81-0d32-922f-aec9" type="min"/>
-          </constraints>
-          <entryLinks>
-            <entryLink id="4d19-6a3c-2016-f7e5" name="Engine of the Gods" hidden="false" collective="false" import="true" targetId="63dd-fada-ecfa-da5e" type="selectionEntry">
-              <entryLinks>
-                <entryLink id="c6c0-d76c-1c07-1ae1" name="General" hidden="false" collective="false" import="true" targetId="98a4-3d6d-a7b9-399f" type="selectionEntry">
-                  <categoryLinks>
-                    <categoryLink id="d707-eb8b-1f0c-ff62" name="General - Monster" hidden="false" targetId="52cb-3ca6-5e69-150b" primary="false"/>
-                  </categoryLinks>
-                </entryLink>
-                <entryLink id="01f8-7021-cc72-b31a" name="Artefacts of Power" hidden="false" collective="false" import="true" targetId="3a05-2cb4-92ae-62e4" type="selectionEntryGroup"/>
-                <entryLink id="9579-a705-44c6-501a" name="Command Traits" hidden="false" collective="false" import="true" targetId="5d24-ebc4-7261-165d" type="selectionEntryGroup"/>
-              </entryLinks>
-            </entryLink>
-            <entryLink id="f33f-8ea9-35b6-bd62" name="Stegadon" hidden="false" collective="false" import="true" targetId="166c-bb29-f70a-13bd" type="selectionEntry">
-              <modifierGroups>
-                <modifierGroup>
-                  <conditions>
-                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="b5bb-59b5-6c6b-3c09" type="greaterThan"/>
-                  </conditions>
-                  <modifiers>
-                    <modifier type="add" field="category" value="a42d-220e-6a88-7bf6"/>
-                    <modifier type="remove" field="category" value="7f62-b7f5-32d5-e13b"/>
-                    <modifier type="set-primary" field="category" value="6230-ed60-e374-add4"/>
-                  </modifiers>
-                </modifierGroup>
-              </modifierGroups>
-            </entryLink>
-          </entryLinks>
-        </selectionEntryGroup>
-        <selectionEntryGroup id="1c82-90fc-8b00-30c0" name="1 Stegadon with Skink Chief (Starwarden Iq-To)" hidden="false" collective="false" import="true">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="40ce-4fba-ce27-b1c1" type="max"/>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="e577-1bac-4ea6-b08c" type="min"/>
-          </constraints>
-          <entryLinks>
-            <entryLink id="20b1-adbb-f2a0-d1b8" name="Stegadon with Skink Chief" hidden="false" collective="false" import="true" targetId="2b38-8179-6a82-4e17" type="selectionEntry">
-              <selectionEntries>
-                <selectionEntry id="f19a-8842-0f34-8d34" name="0. Prime Warbeast" hidden="false" collective="false" import="true" type="upgrade">
-                  <constraints>
-                    <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="91c7-a696-fa05-d85a" type="max"/>
-                    <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="72f9-9525-3bc0-f950" type="min"/>
-                  </constraints>
-                  <profiles>
-                    <profile id="b8b5-cc1f-63f6-069c" name="Prime Warbeast" hidden="false" typeId="1504-23bf-8850-4f65" typeName="Command Traits">
-                      <characteristics>
-                        <characteristic name="Command Trait" typeId="0145-9acf-f5dc-d543">THUNDER LIZARD general with a MONSTER mount must have this command trait.
-
-Add 1 to the Attacks characteristic of the weapons used by this general’s mount.</characteristic>
-                      </characteristics>
-                    </profile>
-                  </profiles>
-                  <categoryLinks>
-                    <categoryLink id="0928-2ea4-122f-b757" name="Iq-To Prime Warbeast" hidden="false" targetId="e75a-1b6b-ff18-0f2d" primary="false"/>
-                  </categoryLinks>
-                  <costs>
-                    <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
-                  </costs>
-                </selectionEntry>
-              </selectionEntries>
-              <entryLinks>
-                <entryLink id="bf6f-9ce3-035f-d5ab" name="General" hidden="false" collective="false" import="true" targetId="98a4-3d6d-a7b9-399f" type="selectionEntry">
-                  <categoryLinks>
-                    <categoryLink id="0dc0-5d42-acf4-37df" name="General - Monster" hidden="false" targetId="52cb-3ca6-5e69-150b" primary="false"/>
-                  </categoryLinks>
-                </entryLink>
-                <entryLink id="4a6a-087e-ef87-66ad" name="Artefacts of Power" hidden="false" collective="false" import="true" targetId="3a05-2cb4-92ae-62e4" type="selectionEntryGroup"/>
-              </entryLinks>
-            </entryLink>
-          </entryLinks>
-        </selectionEntryGroup>
-      </selectionEntryGroups>
-      <costs>
-        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="140.0"/>
       </costs>
     </selectionEntry>
   </sharedSelectionEntries>
@@ -2769,6 +2092,120 @@ Add 1 to the Attacks characteristic of the weapons used by this general’s moun
       <entryLinks>
         <entryLink id="6e77-ea5c-a0c9-53c3" name="Universal Prayer Scripture" hidden="false" collective="false" import="true" targetId="7104-ab27-d136-1df0" type="selectionEntryGroup"/>
       </entryLinks>
+    </selectionEntryGroup>
+    <selectionEntryGroup id="077f-e488-d765-516e" name="Battalion Formation" hidden="false" collective="false" import="true">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="c03a-b1a8-66c6-3637" type="equalTo"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+      <constraints>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d637-1673-7ee8-ca14" type="max"/>
+      </constraints>
+      <selectionEntries>
+        <selectionEntry id="7e0e-cd6f-3c91-2c8e" name="Thunderquake" hidden="false" collective="false" import="true" type="upgrade">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="3d8e-f033-36fa-7d92" type="notInstanceOf"/>
+                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="b6a1-7bfc-189f-c767" type="equalTo"/>
+                  </conditions>
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="f1a1-36a7-6a0c-ed77" type="notInstanceOf"/>
+                        <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="1278-a4b7-adbb-c2ae" type="notInstanceOf"/>
+                        <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="972d-5559-dce3-2281" type="notInstanceOf"/>
+                        <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="e8e0-2fa9-2e53-e3f2" type="notInstanceOf"/>
+                        <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="2f89-8802-8c22-ba71" type="notInstanceOf"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="dc10-7c67-b95f-b766" type="max"/>
+          </constraints>
+          <costs>
+            <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
+          </costs>
+        </selectionEntry>
+      </selectionEntries>
+      <entryLinks>
+        <entryLink id="5221-787f-2bf3-b741" name="Core Battalions" hidden="false" collective="false" import="true" targetId="8c04-393d-d72d-c2a8" type="selectionEntryGroup"/>
+      </entryLinks>
+    </selectionEntryGroup>
+    <selectionEntryGroup id="dc6a-60fa-4ed8-5c46" name="Mount Traits" hidden="false" collective="false" import="true">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4373-740f-1bf3-b0aa" type="instanceOf"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="e3a6-45ca-4974-b489" type="instanceOf"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="996a-613c-4006-25e3" type="instanceOf"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="6cd6-b22e-bfcb-9589" type="instanceOf"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="b543-cb16-0c79-fbc6" type="instanceOf"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+      <constraints>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="5da7-7d74-0867-542c" type="max"/>
+      </constraints>
+      <selectionEntries>
+        <selectionEntry id="8ba1-8cc9-5db4-734f" name="1 ~ Beastmaster" hidden="false" collective="false" import="true" type="upgrade">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="f867-0ec9-a800-5350" type="equalTo"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8cb3-10f4-d0eb-dbe3" type="max"/>
+            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="66d5-4213-b733-72f5" type="max"/>
+          </constraints>
+          <profiles>
+            <profile id="d048-cffc-db7c-5e5f" name="Beastmaster" hidden="false" typeId="61e3-eba4-7222-dee7" typeName="Mount/Companion">
+              <characteristics>
+                <characteristic name="Mount/Companion" typeId="e368-06f5-5b4f-64a3">COALESCED only. Once per battle, in your hero phase, you can declare that this mount will either be swift or savage. If you choose for it to be swift, until your next hero phase, it can run and still shoot and/or charge in the same turn. If you choose savage, until your next hero phase, add 1 to the Attacks characteristic of melee weapons used by this mount.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+        </selectionEntry>
+        <selectionEntry id="94b5-76d7-96df-1327" name="1 ~ Celestial Destruction" hidden="false" collective="false" import="true" type="upgrade">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="97d8-ea8f-8e74-1a7c" type="equalTo"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="0d55-976c-d28f-3b54" type="max"/>
+            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="03a6-d505-1daf-4205" type="max"/>
+          </constraints>
+          <profiles>
+            <profile id="f4c5-d7fb-7d65-bf80" name="Celestial Destruction" hidden="false" typeId="61e3-eba4-7222-dee7" typeName="Mount/Companion">
+              <characteristics>
+                <characteristic name="Mount/Companion" typeId="e368-06f5-5b4f-64a3">STARBORNE only. You can carry out this monstrous rampage with this unit instead of any other monstrous rampage you can carry out with this unit. If you do so, roll a dice for each enemy unit within 6&quot; of this unit. Add 1 to the roll if the enemy unit has the CHAOS keyword. On a 5+, that unit suffers D3 mortal wounds.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+        </selectionEntry>
+      </selectionEntries>
     </selectionEntryGroup>
   </sharedSelectionEntryGroups>
   <catalogueLinks>
