@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="59a1-5368-2000-69dc" name="Order - Daughters of Khaine" revision="13" battleScribeVersion="2.03" authorName="Thulram" library="false" gameSystemId="e832-3291-06be-cab1" gameSystemRevision="12" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="59a1-5368-2000-69dc" name="Order - Daughters of Khaine" revision="14" battleScribeVersion="2.03" authorName="Thulram" library="false" gameSystemId="e832-3291-06be-cab1" gameSystemRevision="13" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <profileTypes>
     <profileType id="0d12-66d5-133a-d36d" name="Morathi Wounds">
       <characteristicTypes>
@@ -101,9 +101,74 @@
           <categoryLinks>
             <categoryLink id="f3b4-507c-1142-2aef" name="General" hidden="false" targetId="c661-44d6-0f5b-11ff" primary="false"/>
           </categoryLinks>
-          <entryLinks>
-            <entryLink id="bf25-6235-7c98-5b69" name="Spell Lores" hidden="false" collective="false" import="true" targetId="158d-ef8e-1a65-3b21" type="selectionEntryGroup"/>
-          </entryLinks>
+          <selectionEntries>
+            <selectionEntry id="7ee2-486d-4da8-7687" name="Lore of Shadows - All spells" hidden="false" collective="false" import="true" type="upgrade">
+              <modifiers>
+                <modifier type="set" field="hidden" value="true">
+                  <conditionGroups>
+                    <conditionGroup type="or">
+                      <conditions>
+                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4373-740f-1bf3-b0aa" type="instanceOf"/>
+                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="e3a6-45ca-4974-b489" type="instanceOf"/>
+                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="996a-613c-4006-25e3" type="instanceOf"/>
+                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="6cd6-b22e-bfcb-9589" type="instanceOf"/>
+                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="b543-cb16-0c79-fbc6" type="instanceOf"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+                <modifier type="set" field="a26b-c46c-aa16-88d2" value="0">
+                  <conditionGroups>
+                    <conditionGroup type="or">
+                      <conditions>
+                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4373-740f-1bf3-b0aa" type="instanceOf"/>
+                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="e3a6-45ca-4974-b489" type="instanceOf"/>
+                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="996a-613c-4006-25e3" type="instanceOf"/>
+                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="6cd6-b22e-bfcb-9589" type="instanceOf"/>
+                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="b543-cb16-0c79-fbc6" type="instanceOf"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+              </modifiers>
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="73ac-2023-4cb6-2de1" type="max"/>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="a26b-c46c-aa16-88d2" type="min"/>
+              </constraints>
+              <profiles>
+                <profile id="1297-b9bd-067f-0e42" name="Steed of Shadows" hidden="false" typeId="13da-11a8-b7d1-77a7" typeName="Spell">
+                  <characteristics>
+                    <characteristic name="Spell" typeId="1170-c916-1b73-ae34">Steed of Shadows has a casting value of 6. If successfully cast, until your next hero phase, the caster has a Move characteristic of 16&quot; and can fly.</characteristic>
+                  </characteristics>
+                </profile>
+                <profile id="c19a-233d-608f-21f5" name="Pit of Shades" hidden="false" typeId="13da-11a8-b7d1-77a7" typeName="Spell">
+                  <characteristics>
+                    <characteristic name="Spell" typeId="1170-c916-1b73-ae34">Pit of Shades has a casting value of 7. If successfully cast, pick 1 enemy unit within 18&quot; of the caster that is visible to them and roll 2d6. If the roll is higher than that unit&apos;s Move characteristic, that unit suffers a number of mortal wounds equal to the difference between its Move characteristic and the roll.</characteristic>
+                  </characteristics>
+                </profile>
+                <profile id="93e5-7979-5202-c321" name="Mirror Dance" hidden="false" typeId="13da-11a8-b7d1-77a7" typeName="Spell">
+                  <characteristics>
+                    <characteristic name="Spell" typeId="1170-c916-1b73-ae34">Mirror Dance has a casting value of 6. If successfully cast, pick 2 friendly DAUGHTERS OF KHAINE HEROES wholly within 18&quot; of the caster that are visible to them. Remove those HEROES from the battlefield and set them up again anywhere on the battlefield more than 9&quot; from any enemy units. Those HEROES cannot move in the following movement phase.</characteristic>
+                  </characteristics>
+                </profile>
+                <profile id="1aeb-eb67-da7d-b3e2" name="The Withering" hidden="false" typeId="13da-11a8-b7d1-77a7" typeName="Spell">
+                  <characteristics>
+                    <characteristic name="Spell" typeId="1170-c916-1b73-ae34">The Withering has a casting value of 7. If successfully cast, pick 1 enemy unit within 18&quot; of the caster that is visible to them. Add 1 to wound rolls for attacks that target that unit until your next hero phase.</characteristic>
+                  </characteristics>
+                </profile>
+                <profile id="a9f7-da0c-9b00-7efa" name="Mindrazor" hidden="false" typeId="13da-11a8-b7d1-77a7" typeName="Spell">
+                  <characteristics>
+                    <characteristic name="Spell" typeId="1170-c916-1b73-ae34">Mindrazor has a casting value of 8. If successfully cast, pick 1 friendly DAUGHTERS OF KHAINE unit wholly within 18&quot; of the caster. Improve the Rend characteristic of that unit’s melee weapons by 1 until your next hero phase. In addition, until your next hero phase, add 1 to the Damage characteristic of the unit’s melee weapons if it made a charge move in the same turn.</characteristic>
+                  </characteristics>
+                </profile>
+                <profile id="ce52-c7f7-3866-32cf" name="Shroud of Despair" hidden="false" typeId="13da-11a8-b7d1-77a7" typeName="Spell">
+                  <characteristics>
+                    <characteristic name="Spell" typeId="1170-c916-1b73-ae34">Shroud of Despair has a casting value of 4. If successfully cast, pick 1 enemy unit within 18&quot; of the caster that is visible to them. Subtract 1 from that unit&apos;s Bravery characteristic until your next hero phase. If the casting roll was 8+, subtract D3 from that unit&apos;s Bravery characteristic instead of 1 until your next hero phase.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+            </selectionEntry>
+          </selectionEntries>
         </entryLink>
         <entryLink id="ed86-eb37-2afa-45c2" name="The Shadow Queen" hidden="false" collective="false" import="true" targetId="7f43-2803-c15d-48c5" type="selectionEntry"/>
       </entryLinks>

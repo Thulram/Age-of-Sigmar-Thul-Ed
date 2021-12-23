@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<gameSystem id="e832-3291-06be-cab1" name="Age of Sigmar - Thul Ed" revision="22" battleScribeVersion="2.03" authorName="Thulram" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
+<gameSystem id="e832-3291-06be-cab1" name="Age of Sigmar - Thul Ed" revision="23" battleScribeVersion="2.03" authorName="Thulram" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
   <publications>
     <publication id="bf0c-0cbf-1f5d-5885" name="Chaos Battletome - Blades of Khorne"/>
     <publication id="6ce4-e8a3-f18f-be55" name="Order Battletome - Daughters of Khaine"/>
@@ -2688,7 +2688,7 @@ At the start of your hero phase, you receive 1 extra command point if any friend
           <profiles>
             <profile id="8900-a535-3015-b8de" name="Amulet of Destiny" hidden="false" typeId="0c9d-7abe-a53c-6a37" typeName="Artefacts">
               <characteristics>
-                <characteristic name="Artefact" typeId="44b6-de26-0b54-1318">The bearer has a ward of 5+.</characteristic>
+                <characteristic name="Artefact" typeId="44b6-de26-0b54-1318">The bearer has a ward of 6+.</characteristic>
               </characteristics>
             </profile>
           </profiles>
