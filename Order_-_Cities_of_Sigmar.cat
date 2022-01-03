@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="be67-bfd4-4381-fac6" name="Order - Cities of Sigmar" revision="19" battleScribeVersion="2.03" authorName="Thulram" library="false" gameSystemId="e832-3291-06be-cab1" gameSystemRevision="18" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="be67-bfd4-4381-fac6" name="Order - Cities of Sigmar" revision="20" battleScribeVersion="2.03" authorName="Thulram" library="false" gameSystemId="e832-3291-06be-cab1" gameSystemRevision="19" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <profileTypes>
     <profileType id="6ed8-2f25-715e-ccd5" name="Drakeblood Curse">
       <characteristicTypes>
@@ -548,6 +548,17 @@
           <categoryLinks>
             <categoryLink id="be67-52ea-b39a-593a" name="Grand Strategy" hidden="false" targetId="318c-fa55-0855-47ef" primary="false"/>
           </categoryLinks>
+          <selectionEntries>
+            <selectionEntry id="6b8b-7ea5-f685-628a" name="Mighty Beachhead" hidden="false" collective="false" import="true" type="upgrade">
+              <profiles>
+                <profile id="2b1e-487d-fe0a-e703" name="Mighty Beachhead" hidden="false" typeId="7dc6-98f0-f5ba-fc16" typeName="Grand Strategy">
+                  <characteristics>
+                    <characteristic name="Grand Strategy" typeId="22d6-b382-f824-6381">When the battle ends, you complete this grand strategy if you control more terrain features than your opponent. If your opponent has set up any faction terrain features, then they count as 3 terrain features instead of 1 when determining if you have completed this grand strategy.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+            </selectionEntry>
+          </selectionEntries>
           <entryLinks>
             <entryLink id="163b-984f-07fb-7ebe" name="GHB &apos;21" hidden="false" collective="false" import="true" targetId="bb2d-2110-60b8-c13e" type="selectionEntryGroup"/>
           </entryLinks>
@@ -556,6 +567,38 @@
       <costs>
         <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
       </costs>
+    </selectionEntry>
+    <selectionEntry id="1f78-db9c-365f-89e5" name="Cities of Sigmar Battle Tactics" hidden="false" collective="false" import="true" type="upgrade">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4373-740f-1bf3-b0aa" type="instanceOf"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="e3a6-45ca-4974-b489" type="instanceOf"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="996a-613c-4006-25e3" type="instanceOf"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="6cd6-b22e-bfcb-9589" type="instanceOf"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="b543-cb16-0c79-fbc6" type="instanceOf"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+      <constraints>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="6357-4c38-f5f1-125c" type="max"/>
+      </constraints>
+      <profiles>
+        <profile id="e873-a0df-2c32-c476" name="Banners Held High" hidden="false" typeId="4bb2-448c-446c-f522" typeName="Battle Tactic">
+          <characteristics>
+            <characteristic name="Battle Tactic" typeId="8c0f-be41-a70e-c699">Pick 2 objective markers on the battlefield that are not wholly within your territory and which are more than 12&quot; apart. You complete this battle tactic if a friendly Standard Bearer model is within 1&quot; of each objective marker at the end of this turn.</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="0db7-26a1-cccf-a029" name="Sanctify" hidden="false" typeId="4bb2-448c-446c-f522" typeName="Battle Tactic">
+          <characteristics>
+            <characteristic name="Battle Tactic" typeId="8c0f-be41-a70e-c699">Pick 1 friendly FLAGELLANTS unit that is not within 6&quot; of an objective wholly or partially within enemy territory. You complete this battle tactic if that unit is within 6&quot; of an objective wholly or partially within enemy territory at the end of this turn.</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
     </selectionEntry>
   </selectionEntries>
   <entryLinks>
@@ -655,6 +698,7 @@
         <entryLink id="fd03-0cf2-6582-300a" name="Misthåvn Narcotics" hidden="false" collective="false" import="true" targetId="de8c-eb81-ab3a-6616" type="selectionEntryGroup"/>
         <entryLink id="6a6e-b4ba-21b8-7207" name="Cities of Sigmar Spell Lores" hidden="false" collective="false" import="true" targetId="aa48-e2aa-1ecc-eb1a" type="selectionEntryGroup"/>
         <entryLink id="6d06-8a35-c8db-a16e" name="Core Battalions" hidden="false" collective="false" import="true" targetId="8c04-393d-d72d-c2a8" type="selectionEntryGroup"/>
+        <entryLink id="5270-4c4f-e3e3-c11d" name="Mount Traits" hidden="false" collective="false" import="true" targetId="055a-e107-7fa3-0cc5" type="selectionEntryGroup"/>
       </entryLinks>
     </entryLink>
     <entryLink id="9f12-31f4-4f4d-68df" name="Allegiance" hidden="false" collective="false" import="true" targetId="c5c4-2c0a-bf6a-e123" type="selectionEntry">
@@ -1026,6 +1070,7 @@
         <entryLink id="dbf6-4ebd-00f1-c5c8" name="Drakeblood Curses" hidden="false" collective="false" import="true" targetId="2156-cf62-a4c9-055f" type="selectionEntryGroup"/>
         <entryLink id="9dc7-7e09-a429-3f57" name="Misthåvn Narcotics" hidden="false" collective="false" import="true" targetId="de8c-eb81-ab3a-6616" type="selectionEntryGroup"/>
         <entryLink id="8729-978c-e8c5-2ad8" name="Core Battalions" hidden="false" collective="false" import="true" targetId="8c04-393d-d72d-c2a8" type="selectionEntryGroup"/>
+        <entryLink id="2f80-dc47-e661-5f86" name="Mount Traits" hidden="false" collective="false" import="true" targetId="055a-e107-7fa3-0cc5" type="selectionEntryGroup"/>
       </entryLinks>
     </entryLink>
     <entryLink id="867d-85a6-c7ae-c3f8" name="Black Guard" hidden="false" collective="false" import="true" targetId="621b-e6a2-018c-ec41" type="selectionEntry">
@@ -3641,13 +3686,6 @@
         <entryLink id="ef59-efa7-b381-db8f" name="Core Battalions" hidden="false" collective="false" import="true" targetId="8c04-393d-d72d-c2a8" type="selectionEntryGroup"/>
       </entryLinks>
     </entryLink>
-    <entryLink id="1a7b-100c-29d1-0fd7" name="Aetherguard Windrunners" hidden="false" collective="false" import="true" targetId="7339-10b2-de13-3c2a" type="selectionEntry"/>
-    <entryLink id="05cf-1527-34ce-8ce2" name="Charrwind Beasthunters" hidden="false" collective="false" import="true" targetId="2e8d-fae9-e325-314f" type="selectionEntry"/>
-    <entryLink id="c69c-0caa-ec53-52db" name="Whitefire Retinue" hidden="false" collective="false" import="true" targetId="8ba1-4b30-a148-3bc7" type="selectionEntry"/>
-    <entryLink id="247d-d32a-1c6d-c1a2" name="Viridian Pathfinders" hidden="false" collective="false" import="true" targetId="f908-ce11-b2fa-b258" type="selectionEntry"/>
-    <entryLink id="106c-4af0-b171-89fe" name="Greywater Artillery Company" hidden="false" collective="false" import="true" targetId="c706-7520-3e12-68fd" type="selectionEntry"/>
-    <entryLink id="c5fe-75f9-f740-a339" name="Hammerhalian Lancers" hidden="false" collective="false" import="true" targetId="59c1-d147-07bd-c88d" type="selectionEntry"/>
-    <entryLink id="40cf-aecb-1bfe-c2c6" name="Phoenix Flight" hidden="false" collective="false" import="true" targetId="e9e2-0c44-2ebc-a65f" type="selectionEntry"/>
     <entryLink id="b8ef-0cba-9bbb-466b" name="Nomad Prince" hidden="false" collective="false" import="true" targetId="6551-60d4-be7f-bb58" type="selectionEntry">
       <modifiers>
         <modifier type="set" field="hidden" value="true">
@@ -3930,8 +3968,6 @@
         </entryLink>
       </entryLinks>
     </entryLink>
-    <entryLink id="5064-35f8-5347-8739" name="Kraeth&apos;s Shadowhost" hidden="false" collective="false" import="true" targetId="896e-c76d-0a3f-fe68" type="selectionEntry"/>
-    <entryLink id="d9c6-2e74-edbf-4772" name="Xintil War-Magi" hidden="false" collective="false" import="true" targetId="ddcb-b0ea-a476-59d1" type="selectionEntry"/>
     <entryLink id="d5fd-8894-7558-8106" name="Alarith Spirit of the Mountain" hidden="false" collective="false" import="true" targetId="10fc-f436-5e8e-82ca" type="selectionEntry">
       <modifiers>
         <modifier type="set" field="hidden" value="true">
@@ -5417,1281 +5453,6 @@ Designer’s Note: Coalition units are not allied units, so the limitations that
         <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="59c1-d147-07bd-c88d" name="Hammerhalian Lancers" publicationId="88ce-c2fe-b89c-ed48" hidden="false" collective="false" import="true" type="upgrade">
-      <modifiers>
-        <modifier type="set" field="hidden" value="true">
-          <conditions>
-            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="493e-0c15-6617-03fd" type="equalTo"/>
-          </conditions>
-        </modifier>
-      </modifiers>
-      <profiles>
-        <profile id="1614-8ede-278a-b160" name="Glorious Cavalry Charge" hidden="false" typeId="66c5-932e-004a-574c" typeName="Battalion Abilities">
-          <characteristics>
-            <characteristic name="Battalion Ability" typeId="23f7-32c0-e059-29b2">Add 1 to hit and wound rolls for attacks made with melee weapons by units from this battalion that made a charge move in the same turn and are wholly within 18&quot; of the Freeguild General on Griffon from the same battalion.</characteristic>
-          </characteristics>
-        </profile>
-      </profiles>
-      <categoryLinks>
-        <categoryLink id="ddc8-2525-1403-05ac" name="New CategoryLink" hidden="false" targetId="3706-e0e8-674f-c41b" primary="true"/>
-      </categoryLinks>
-      <selectionEntryGroups>
-        <selectionEntryGroup id="afc4-3df1-a54f-835d" name="1 HAMMERHAL Freeguild General on Griffon" hidden="false" collective="false" import="true">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="1cfc-c070-b2d1-d0a1" type="min"/>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="13a2-a3f3-7ee3-54cd" type="max"/>
-          </constraints>
-          <entryLinks>
-            <entryLink id="69d1-8914-2a18-7627" name="Freeguild General on Griffon" hidden="false" collective="false" import="true" targetId="4224-182d-231c-99ac" type="selectionEntry">
-              <modifiers>
-                <modifier type="set" field="hidden" value="true">
-                  <conditions>
-                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="5a0f-bb3c-172a-694e" type="greaterThan"/>
-                  </conditions>
-                </modifier>
-              </modifiers>
-              <entryLinks>
-                <entryLink id="7002-a87b-313b-a7a2" name="General" hidden="false" collective="false" import="true" targetId="98a4-3d6d-a7b9-399f" type="selectionEntry">
-                  <modifiers>
-                    <modifier type="add" field="category" value="db5f-919f-cbd3-f9ff">
-                      <conditions>
-                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="c5db-4b50-eb91-7a4c" type="greaterThan"/>
-                      </conditions>
-                    </modifier>
-                  </modifiers>
-                  <categoryLinks>
-                    <categoryLink id="a032-9c9b-cd1a-f45f" name="General - Freeguild" hidden="false" targetId="9930-a25d-9db6-dc1b" primary="false"/>
-                    <categoryLink id="8632-fda9-9e86-95b5" name="General - Human" hidden="false" targetId="5f17-4ccd-b223-4427" primary="false"/>
-                  </categoryLinks>
-                </entryLink>
-                <entryLink id="e85d-b966-51f5-cc24" name="Artefacts of Power" hidden="false" collective="false" import="true" targetId="b788-a656-5a3a-9c4f" type="selectionEntryGroup"/>
-                <entryLink id="c0d6-7948-6faa-a8bd" name="Command Traits" hidden="false" collective="false" import="true" targetId="8c92-8f4c-91f5-9c79" type="selectionEntryGroup"/>
-                <entryLink id="0b21-a5da-11d2-59e7" name="Misthåvn Narcotics" hidden="false" collective="false" import="true" targetId="de8c-eb81-ab3a-6616" type="selectionEntryGroup"/>
-              </entryLinks>
-            </entryLink>
-          </entryLinks>
-        </selectionEntryGroup>
-        <selectionEntryGroup id="0c43-511a-24d2-0f57" name="3-6 units of HAMMERHAL Demigryph Knights" hidden="false" collective="false" import="true">
-          <constraints>
-            <constraint field="selections" scope="parent" value="3.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="68ac-d5d0-ef8b-64b6" type="min"/>
-            <constraint field="selections" scope="parent" value="6.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d1d1-6a20-2e98-419b" type="max"/>
-          </constraints>
-          <entryLinks>
-            <entryLink id="f426-c970-788c-08be" name="Demigryph Knights" hidden="false" collective="false" import="true" targetId="aa56-bb6e-b77c-f820" type="selectionEntry">
-              <modifiers>
-                <modifier type="remove" field="category" value="a42d-220e-6a88-7bf6">
-                  <conditionGroups>
-                    <conditionGroup type="or">
-                      <conditions>
-                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="9930-a25d-9db6-dc1b" type="equalTo"/>
-                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="1679-c790-1ce7-00d6" type="equalTo"/>
-                        <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="e3a6-45ca-4974-b489" type="instanceOf"/>
-                        <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4373-740f-1bf3-b0aa" type="instanceOf"/>
-                        <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="6cd6-b22e-bfcb-9589" type="instanceOf"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
-                </modifier>
-                <modifier type="set" field="hidden" value="true">
-                  <conditions>
-                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="5a0f-bb3c-172a-694e" type="greaterThan"/>
-                  </conditions>
-                </modifier>
-              </modifiers>
-              <categoryLinks>
-                <categoryLink id="8f69-8066-f154-c318" name="BATTLELINE" hidden="false" targetId="a42d-220e-6a88-7bf6" primary="false"/>
-              </categoryLinks>
-              <entryLinks>
-                <entryLink id="c43d-a904-94b2-fae7" name="Honoured Retinue" hidden="false" collective="false" import="true" targetId="5462-02e1-ed1a-d03f" type="selectionEntry">
-                  <modifiers>
-                    <modifier type="set" field="hidden" value="true">
-                      <conditions>
-                        <condition field="selections" scope="parent" value="2.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" type="lessThan"/>
-                      </conditions>
-                    </modifier>
-                  </modifiers>
-                </entryLink>
-              </entryLinks>
-            </entryLink>
-          </entryLinks>
-        </selectionEntryGroup>
-      </selectionEntryGroups>
-      <costs>
-        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="140.0"/>
-      </costs>
-    </selectionEntry>
-    <selectionEntry id="f908-ce11-b2fa-b258" name="Viridian Pathfinders" publicationId="88ce-c2fe-b89c-ed48" hidden="false" collective="false" import="true" type="upgrade">
-      <modifiers>
-        <modifier type="set" field="hidden" value="true">
-          <conditions>
-            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="ecc2-b906-e972-27ad" type="equalTo"/>
-          </conditions>
-        </modifier>
-      </modifiers>
-      <profiles>
-        <profile id="ebff-4c7c-1977-04b1" name="Masters of Ambush" hidden="false" typeId="66c5-932e-004a-574c" typeName="Battalion Abilities">
-          <characteristics>
-            <characteristic name="Battalion Ability" typeId="23f7-32c0-e059-29b2">Add 1 to charge rolls for friendly units from this battalion if they used the Hunters of the Hidden Paths battle trait to set up on the battlefield in the same turn.</characteristic>
-          </characteristics>
-        </profile>
-      </profiles>
-      <categoryLinks>
-        <categoryLink id="c955-015b-db77-4814" name="New CategoryLink" hidden="false" targetId="3706-e0e8-674f-c41b" primary="true"/>
-      </categoryLinks>
-      <selectionEntryGroups>
-        <selectionEntryGroup id="7c8f-5366-8721-3cbd" name="0-1 units of LIVING CITY Wild Riders" hidden="false" collective="false" import="true">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="e0b1-721c-7881-4a92" type="max"/>
-          </constraints>
-          <entryLinks>
-            <entryLink id="a9f3-2c02-42e3-815d" name="Wild Riders" hidden="false" collective="false" import="true" targetId="d7c5-c814-1ee1-49ee" type="selectionEntry">
-              <modifiers>
-                <modifier type="remove" field="category" value="a42d-220e-6a88-7bf6">
-                  <conditionGroups>
-                    <conditionGroup type="or">
-                      <conditions>
-                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="57e5-6bfe-c5d6-252b" type="equalTo"/>
-                        <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="e3a6-45ca-4974-b489" type="instanceOf"/>
-                        <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4373-740f-1bf3-b0aa" type="instanceOf"/>
-                        <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="6cd6-b22e-bfcb-9589" type="instanceOf"/>
-                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="1679-c790-1ce7-00d6" type="equalTo"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
-                </modifier>
-                <modifier type="set" field="hidden" value="true">
-                  <conditions>
-                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="5a0f-bb3c-172a-694e" type="greaterThan"/>
-                  </conditions>
-                </modifier>
-              </modifiers>
-              <categoryLinks>
-                <categoryLink id="be6a-3a09-50a5-6f01" name="BATTLELINE" hidden="false" targetId="a42d-220e-6a88-7bf6" primary="false"/>
-              </categoryLinks>
-              <entryLinks>
-                <entryLink id="d359-ed76-9005-27e2" name="Honoured Retinue" hidden="false" collective="false" import="true" targetId="5462-02e1-ed1a-d03f" type="selectionEntry">
-                  <modifiers>
-                    <modifier type="set" field="hidden" value="true">
-                      <conditions>
-                        <condition field="selections" scope="parent" value="4.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" type="greaterThan"/>
-                      </conditions>
-                    </modifier>
-                  </modifiers>
-                </entryLink>
-              </entryLinks>
-            </entryLink>
-          </entryLinks>
-        </selectionEntryGroup>
-        <selectionEntryGroup id="2485-f50e-5579-7393" name="3 units of LIVING CITY Wildwood Rangers" hidden="false" collective="false" import="true">
-          <constraints>
-            <constraint field="selections" scope="parent" value="3.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="f647-4a3a-2819-4ec5" type="min"/>
-            <constraint field="selections" scope="parent" value="3.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="3bdc-a0c1-53ed-0f22" type="max"/>
-          </constraints>
-          <entryLinks>
-            <entryLink id="ac0f-3261-93a4-2a67" name="Wildwood Rangers" hidden="false" collective="false" import="true" targetId="9794-1788-248d-24d2" type="selectionEntry">
-              <modifiers>
-                <modifier type="remove" field="category" value="a42d-220e-6a88-7bf6">
-                  <conditionGroups>
-                    <conditionGroup type="or">
-                      <conditions>
-                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="57e5-6bfe-c5d6-252b" type="equalTo"/>
-                        <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="e3a6-45ca-4974-b489" type="instanceOf"/>
-                        <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4373-740f-1bf3-b0aa" type="instanceOf"/>
-                        <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="6cd6-b22e-bfcb-9589" type="instanceOf"/>
-                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="1679-c790-1ce7-00d6" type="equalTo"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
-                </modifier>
-                <modifier type="set" field="hidden" value="true">
-                  <conditions>
-                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="5a0f-bb3c-172a-694e" type="greaterThan"/>
-                  </conditions>
-                </modifier>
-              </modifiers>
-              <categoryLinks>
-                <categoryLink id="f014-170b-7476-c80c" name="BATTLELINE" hidden="false" targetId="a42d-220e-6a88-7bf6" primary="false"/>
-              </categoryLinks>
-              <entryLinks>
-                <entryLink id="5c18-e521-8ef1-3dfe" name="Honoured Retinue" hidden="false" collective="false" import="true" targetId="5462-02e1-ed1a-d03f" type="selectionEntry">
-                  <modifiers>
-                    <modifier type="set" field="hidden" value="true">
-                      <conditions>
-                        <condition field="selections" scope="parent" value="2.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" type="greaterThan"/>
-                      </conditions>
-                    </modifier>
-                  </modifiers>
-                </entryLink>
-              </entryLinks>
-            </entryLink>
-          </entryLinks>
-        </selectionEntryGroup>
-        <selectionEntryGroup id="3c62-4c14-7e06-b7c1" name="1 LIVING CITY Nomad Prince" hidden="false" collective="false" import="true">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="f1cf-f4ee-28b9-b41a" type="min"/>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="12d7-ef39-95da-5304" type="max"/>
-          </constraints>
-          <entryLinks>
-            <entryLink id="ca0a-441e-94c4-0543" name="Nomad Prince" hidden="false" collective="false" import="true" targetId="6551-60d4-be7f-bb58" type="selectionEntry">
-              <modifiers>
-                <modifier type="set" field="hidden" value="true">
-                  <conditions>
-                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="5a0f-bb3c-172a-694e" type="greaterThan"/>
-                  </conditions>
-                </modifier>
-              </modifiers>
-              <entryLinks>
-                <entryLink id="bacb-746b-36d4-7297" name="General" hidden="false" collective="false" import="true" targetId="98a4-3d6d-a7b9-399f" type="selectionEntry">
-                  <modifiers>
-                    <modifier type="add" field="category" value="db5f-919f-cbd3-f9ff">
-                      <conditions>
-                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="c5db-4b50-eb91-7a4c" type="greaterThan"/>
-                      </conditions>
-                    </modifier>
-                  </modifiers>
-                  <categoryLinks>
-                    <categoryLink id="f7f1-8684-523c-b8bc" name="General - Wanderer" hidden="false" targetId="57e5-6bfe-c5d6-252b" primary="false"/>
-                    <categoryLink id="3e11-ea95-8e49-4a5e" name="Adjutant Unlock" hidden="false" targetId="8974-618e-c993-fdeb" primary="false"/>
-                    <categoryLink id="6d83-a383-e2d4-d040" name="Honoured Retinue Unlock" hidden="false" targetId="b5b4-1120-6ef3-afa0" primary="false"/>
-                  </categoryLinks>
-                </entryLink>
-                <entryLink id="1886-e9f6-c622-7634" name="General&apos;s Adjutant" hidden="false" collective="false" import="true" targetId="9217-d5c0-9f8d-de1a" type="selectionEntry"/>
-                <entryLink id="51b6-ed07-2342-7aaa" name="Artefacts of Power" hidden="false" collective="false" import="true" targetId="b788-a656-5a3a-9c4f" type="selectionEntryGroup"/>
-                <entryLink id="4ea6-b205-39a7-f39b" name="Command Traits" hidden="false" collective="false" import="true" targetId="8c92-8f4c-91f5-9c79" type="selectionEntryGroup"/>
-                <entryLink id="adbb-5634-6f5c-1003" name="Misthåvn Narcotics" hidden="false" collective="false" import="true" targetId="de8c-eb81-ab3a-6616" type="selectionEntryGroup"/>
-              </entryLinks>
-            </entryLink>
-          </entryLinks>
-        </selectionEntryGroup>
-      </selectionEntryGroups>
-      <costs>
-        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="140.0"/>
-      </costs>
-    </selectionEntry>
-    <selectionEntry id="c706-7520-3e12-68fd" name="Greywater Artillery Company" publicationId="88ce-c2fe-b89c-ed48" hidden="false" collective="false" import="true" type="upgrade">
-      <modifiers>
-        <modifier type="set" field="hidden" value="true">
-          <conditions>
-            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="23db-5117-2867-6ca8" type="equalTo"/>
-          </conditions>
-        </modifier>
-      </modifiers>
-      <profiles>
-        <profile id="eaae-c981-a876-57cb" name="A Greywater Welcome" hidden="false" typeId="66c5-932e-004a-574c" typeName="Battalion Abilities">
-          <characteristics>
-            <characteristic name="Battalion Ability" typeId="23f7-32c0-e059-29b2">In your shooting phase in the first battle round, friendly WAR MACHINES from this battalion can shoot twice if they are within 6&quot; of a friendly HERO from this battalion and are not within 3&quot; of any enemy units.</characteristic>
-          </characteristics>
-        </profile>
-      </profiles>
-      <categoryLinks>
-        <categoryLink id="9317-80da-46cb-b564" name="New CategoryLink" hidden="false" targetId="3706-e0e8-674f-c41b" primary="true"/>
-      </categoryLinks>
-      <selectionEntryGroups>
-        <selectionEntryGroup id="a3ec-6904-8990-791a" name="1 GREYWATER FASTNESS Cogsmith" hidden="false" collective="false" import="true">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="92c2-aac8-8c43-d907" type="min"/>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="2c45-20f3-1b19-6c24" type="max"/>
-          </constraints>
-          <entryLinks>
-            <entryLink id="f50f-dd45-7a35-55c4" name="Cogsmith" hidden="false" collective="false" import="true" targetId="5923-8c44-2c49-546f" type="selectionEntry">
-              <modifiers>
-                <modifier type="set" field="hidden" value="true">
-                  <conditions>
-                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="5a0f-bb3c-172a-694e" type="greaterThan"/>
-                  </conditions>
-                </modifier>
-              </modifiers>
-              <entryLinks>
-                <entryLink id="ee40-42c4-fc63-2d36" name="General" hidden="false" collective="false" import="true" targetId="98a4-3d6d-a7b9-399f" type="selectionEntry">
-                  <modifiers>
-                    <modifier type="add" field="category" value="db5f-919f-cbd3-f9ff">
-                      <conditions>
-                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="c5db-4b50-eb91-7a4c" type="greaterThan"/>
-                      </conditions>
-                    </modifier>
-                  </modifiers>
-                  <categoryLinks>
-                    <categoryLink id="f937-b4ea-8669-43de" name="General - Duardin" hidden="false" targetId="5db0-386b-465d-b344" primary="false"/>
-                    <categoryLink id="7ffa-3e79-48e2-fe7d" name="Adjutant Unlock" hidden="false" targetId="8974-618e-c993-fdeb" primary="false"/>
-                    <categoryLink id="151e-3adf-58f4-a28d" name="Honoured Retinue Unlock" hidden="false" targetId="b5b4-1120-6ef3-afa0" primary="false"/>
-                  </categoryLinks>
-                </entryLink>
-                <entryLink id="4924-e0e4-2c20-9b1d" name="Command Traits" hidden="false" collective="false" import="true" targetId="8c92-8f4c-91f5-9c79" type="selectionEntryGroup"/>
-                <entryLink id="3090-bd40-89b4-9fe8" name="Artefacts of Power" hidden="false" collective="false" import="true" targetId="b788-a656-5a3a-9c4f" type="selectionEntryGroup"/>
-                <entryLink id="3353-9e1d-d5f4-81ab" name="General&apos;s Adjutant" hidden="false" collective="false" import="true" targetId="9217-d5c0-9f8d-de1a" type="selectionEntry"/>
-                <entryLink id="662b-e602-74f6-8407" name="Misthåvn Narcotics" hidden="false" collective="false" import="true" targetId="de8c-eb81-ab3a-6616" type="selectionEntryGroup"/>
-              </entryLinks>
-            </entryLink>
-          </entryLinks>
-        </selectionEntryGroup>
-        <selectionEntryGroup id="706b-f340-181a-7c06" name="2-4 GREYWATER FASTNESS featured units" hidden="false" collective="false" import="true">
-          <constraints>
-            <constraint field="selections" scope="parent" value="2.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="c8d9-33ab-a41c-f8f4" type="min"/>
-            <constraint field="selections" scope="parent" value="4.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="3a73-356a-3b75-d98b" type="max"/>
-          </constraints>
-          <entryLinks>
-            <entryLink id="78f4-fa19-ecb0-519d" name="Helblaster Volley Gun" hidden="false" collective="false" import="true" targetId="0257-cdbe-00e5-42b0" type="selectionEntry">
-              <modifiers>
-                <modifier type="set" field="hidden" value="true">
-                  <conditions>
-                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="5a0f-bb3c-172a-694e" type="greaterThan"/>
-                  </conditions>
-                </modifier>
-              </modifiers>
-            </entryLink>
-            <entryLink id="a0a7-63ad-8788-6220" name="Helstorm Rocket Battery" hidden="false" collective="false" import="true" targetId="33de-3e93-581c-94b3" type="selectionEntry">
-              <modifiers>
-                <modifier type="set" field="hidden" value="true">
-                  <conditions>
-                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="5a0f-bb3c-172a-694e" type="greaterThan"/>
-                  </conditions>
-                </modifier>
-              </modifiers>
-            </entryLink>
-          </entryLinks>
-        </selectionEntryGroup>
-      </selectionEntryGroups>
-      <costs>
-        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="120.0"/>
-      </costs>
-    </selectionEntry>
-    <selectionEntry id="8ba1-4b30-a148-3bc7" name="Whitefire Retinue" publicationId="88ce-c2fe-b89c-ed48" hidden="false" collective="false" import="true" type="upgrade">
-      <modifiers>
-        <modifier type="set" field="hidden" value="true">
-          <conditions>
-            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="4a7b-15ba-7727-66ad" type="equalTo"/>
-          </conditions>
-        </modifier>
-      </modifiers>
-      <profiles>
-        <profile id="75f9-1ca7-2318-4023" name="Triarch Covenant" hidden="false" typeId="66c5-932e-004a-574c" typeName="Battalion Abilities">
-          <characteristics>
-            <characteristic name="Battalion Ability" typeId="23f7-32c0-e059-29b2">Add 1 to casting and unbinding rolls for friendly WIZARDS from this battalion while they are within 6&quot; of another friendly model from the same battalion.</characteristic>
-          </characteristics>
-        </profile>
-      </profiles>
-      <categoryLinks>
-        <categoryLink id="3ce0-c460-93cb-8408" name="New CategoryLink" hidden="false" targetId="3706-e0e8-674f-c41b" primary="true"/>
-      </categoryLinks>
-      <selectionEntryGroups>
-        <selectionEntryGroup id="72da-e0f2-4e48-86c3" name="3-6 HALLOWHEART HERO WIZARDS" hidden="false" collective="false" import="true">
-          <constraints>
-            <constraint field="selections" scope="parent" value="3.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="082b-d1c8-d61a-31e3" type="min"/>
-            <constraint field="selections" scope="parent" value="6.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="bebc-beb9-0f18-7281" type="max"/>
-          </constraints>
-          <selectionEntries>
-            <selectionEntry id="fc4a-ca0f-a1f8-cdbd" name="Averon Stormsire and Cursebreakers (separate units)" hidden="false" collective="false" import="true" type="upgrade">
-              <modifiers>
-                <modifier type="set" field="hidden" value="true">
-                  <conditions>
-                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e71f-99f5-b4d5-f713" type="equalTo"/>
-                  </conditions>
-                </modifier>
-                <modifier type="set" field="hidden" value="true">
-                  <conditions>
-                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="5a0f-bb3c-172a-694e" type="greaterThan"/>
-                  </conditions>
-                </modifier>
-              </modifiers>
-              <constraints>
-                <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="ad6c-d802-239f-643e" type="max"/>
-              </constraints>
-              <categoryLinks>
-                <categoryLink id="327b-1eea-eace-4625" name="New CategoryLink" hidden="false" targetId="93cb-21d9-e1d5-6161" primary="true"/>
-              </categoryLinks>
-              <entryLinks>
-                <entryLink id="aedb-f4ec-7a8a-1989" name="Averon Stormsire" hidden="false" collective="false" import="true" targetId="027e-aa0a-3883-363c" type="selectionEntry">
-                  <constraints>
-                    <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="a0c7-a82b-2db5-ea15" type="max"/>
-                    <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="53ac-aa31-317e-ec64" type="min"/>
-                  </constraints>
-                  <categoryLinks>
-                    <categoryLink id="7d7a-2765-0135-bfd9" name="Allegiant - Stormcast Eternal" hidden="false" targetId="174b-7978-7bb7-931b" primary="false"/>
-                  </categoryLinks>
-                  <entryLinks>
-                    <entryLink id="b228-c726-5e25-47ef" name="General" hidden="false" collective="false" import="true" targetId="98a4-3d6d-a7b9-399f" type="selectionEntry">
-                      <modifiers>
-                        <modifier type="add" field="category" value="db5f-919f-cbd3-f9ff">
-                          <conditions>
-                            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="c5db-4b50-eb91-7a4c" type="greaterThan"/>
-                          </conditions>
-                        </modifier>
-                      </modifiers>
-                      <categoryLinks>
-                        <categoryLink id="7f3c-a23a-da6b-0f97" name="Named General" hidden="false" targetId="8b3d-7f03-e1f9-eaf5" primary="false"/>
-                        <categoryLink id="d735-559d-4297-0d1a" name="Adjutant Unlock" hidden="false" targetId="8974-618e-c993-fdeb" primary="false"/>
-                        <categoryLink id="c1d6-ce34-b8f3-6b85" name="Honoured Retinue Unlock" hidden="false" targetId="b5b4-1120-6ef3-afa0" primary="false"/>
-                      </categoryLinks>
-                    </entryLink>
-                    <entryLink id="0595-786a-bbb6-5bb6" name="Cities of Sigmar Spell Lores" hidden="false" collective="false" import="true" targetId="aa48-e2aa-1ecc-eb1a" type="selectionEntryGroup"/>
-                    <entryLink id="1f39-c3b2-b646-837b" name="General&apos;s Adjutant" hidden="false" collective="false" import="true" targetId="9217-d5c0-9f8d-de1a" type="selectionEntry"/>
-                    <entryLink id="821d-e776-1a81-588d" name="Misthåvn Narcotics" hidden="false" collective="false" import="true" targetId="de8c-eb81-ab3a-6616" type="selectionEntryGroup"/>
-                  </entryLinks>
-                </entryLink>
-                <entryLink id="dd00-f36c-5add-0052" name="Stormsire&apos;s Cursebreakers" hidden="false" collective="false" import="true" targetId="00fa-ce27-0b8c-1eb2" type="selectionEntry">
-                  <constraints>
-                    <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="47cf-fafe-d64d-5ffd" type="min"/>
-                    <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8e08-8842-ccb3-1b81" type="max"/>
-                  </constraints>
-                  <categoryLinks>
-                    <categoryLink id="b1f7-09da-8b27-d0bc" name="Allegiant - Stormcast Eternal" hidden="false" targetId="174b-7978-7bb7-931b" primary="false"/>
-                  </categoryLinks>
-                </entryLink>
-              </entryLinks>
-              <costs>
-                <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="300.0"/>
-              </costs>
-            </selectionEntry>
-          </selectionEntries>
-          <entryLinks>
-            <entryLink id="f494-d01c-e854-f75a" name="Aventis Firestrike, Magister of Hammerhal" hidden="false" collective="false" import="true" targetId="2b4f-c3c0-c455-5d04" type="selectionEntry">
-              <modifiers>
-                <modifier type="set" field="hidden" value="true">
-                  <conditions>
-                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e71f-99f5-b4d5-f713" type="equalTo"/>
-                  </conditions>
-                </modifier>
-                <modifier type="set" field="hidden" value="true">
-                  <conditions>
-                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="5a0f-bb3c-172a-694e" type="greaterThan"/>
-                  </conditions>
-                </modifier>
-              </modifiers>
-              <categoryLinks>
-                <categoryLink id="91bc-c521-b705-65bd" name="Allegiant - Stormcast Eternal" hidden="false" targetId="174b-7978-7bb7-931b" primary="false"/>
-              </categoryLinks>
-              <entryLinks>
-                <entryLink id="1c5f-3e7d-fdd7-4f2b" name="General" hidden="false" collective="false" import="true" targetId="98a4-3d6d-a7b9-399f" type="selectionEntry">
-                  <modifiers>
-                    <modifier type="add" field="category" value="db5f-919f-cbd3-f9ff">
-                      <conditions>
-                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="c5db-4b50-eb91-7a4c" type="greaterThan"/>
-                      </conditions>
-                    </modifier>
-                  </modifiers>
-                  <categoryLinks>
-                    <categoryLink id="5aad-79f7-df10-d90b" name="Named General" hidden="false" targetId="8b3d-7f03-e1f9-eaf5" primary="false"/>
-                  </categoryLinks>
-                </entryLink>
-                <entryLink id="6667-6316-c812-d9f0" name="Cities of Sigmar Spell Lores" hidden="false" collective="false" import="true" targetId="aa48-e2aa-1ecc-eb1a" type="selectionEntryGroup"/>
-                <entryLink id="50e0-9930-729b-e188" name="Misthåvn Narcotics" hidden="false" collective="false" import="true" targetId="de8c-eb81-ab3a-6616" type="selectionEntryGroup"/>
-              </entryLinks>
-            </entryLink>
-            <entryLink id="a730-577d-7bc3-28f3" name="Astreia Solbright" hidden="false" collective="false" import="true" targetId="db6f-2932-06be-f0e2" type="selectionEntry">
-              <modifiers>
-                <modifier type="set" field="hidden" value="true">
-                  <conditions>
-                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e71f-99f5-b4d5-f713" type="equalTo"/>
-                  </conditions>
-                </modifier>
-                <modifier type="set" field="hidden" value="true">
-                  <conditions>
-                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="5a0f-bb3c-172a-694e" type="greaterThan"/>
-                  </conditions>
-                </modifier>
-              </modifiers>
-              <categoryLinks>
-                <categoryLink id="4470-ff7e-3d26-7f93" name="Allegiant - Stormcast Eternal" hidden="false" targetId="174b-7978-7bb7-931b" primary="false"/>
-              </categoryLinks>
-              <entryLinks>
-                <entryLink id="f00b-2b64-5da7-fd58" name="General" hidden="false" collective="false" import="true" targetId="98a4-3d6d-a7b9-399f" type="selectionEntry">
-                  <modifiers>
-                    <modifier type="add" field="category" value="db5f-919f-cbd3-f9ff">
-                      <conditions>
-                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="c5db-4b50-eb91-7a4c" type="greaterThan"/>
-                      </conditions>
-                    </modifier>
-                  </modifiers>
-                  <categoryLinks>
-                    <categoryLink id="c45b-c0e2-5f11-58db" name="Named General" hidden="false" targetId="8b3d-7f03-e1f9-eaf5" primary="false"/>
-                  </categoryLinks>
-                </entryLink>
-                <entryLink id="eca1-33c4-5dc0-7581" name="Cities of Sigmar Spell Lores" hidden="false" collective="false" import="true" targetId="aa48-e2aa-1ecc-eb1a" type="selectionEntryGroup"/>
-                <entryLink id="cc9d-dc69-b4c6-185c" name="Misthåvn Narcotics" hidden="false" collective="false" import="true" targetId="de8c-eb81-ab3a-6616" type="selectionEntryGroup"/>
-              </entryLinks>
-            </entryLink>
-            <entryLink id="66af-37a8-44b8-ba1d" name="Battlemage" hidden="false" collective="false" import="true" targetId="fd2d-8df5-bf31-0ad9" type="selectionEntry">
-              <modifiers>
-                <modifier type="set" field="hidden" value="true">
-                  <conditions>
-                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="5a0f-bb3c-172a-694e" type="greaterThan"/>
-                  </conditions>
-                </modifier>
-              </modifiers>
-              <entryLinks>
-                <entryLink id="dab7-f58c-8b12-6d4d" name="General" hidden="false" collective="false" import="true" targetId="98a4-3d6d-a7b9-399f" type="selectionEntry">
-                  <modifiers>
-                    <modifier type="add" field="category" value="db5f-919f-cbd3-f9ff">
-                      <conditions>
-                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="c5db-4b50-eb91-7a4c" type="greaterThan"/>
-                      </conditions>
-                    </modifier>
-                  </modifiers>
-                  <categoryLinks>
-                    <categoryLink id="1733-b12b-74c7-9a60" name="General - Human" hidden="false" targetId="5f17-4ccd-b223-4427" primary="false"/>
-                    <categoryLink id="7a92-efd9-1da0-7b59" name="Adjutant Unlock" hidden="false" targetId="8974-618e-c993-fdeb" primary="false"/>
-                    <categoryLink id="cbaa-e75c-50b7-5ed7" name="Honoured Retinue Unlock" hidden="false" targetId="b5b4-1120-6ef3-afa0" primary="false"/>
-                  </categoryLinks>
-                </entryLink>
-                <entryLink id="f0df-7bb6-41d1-aae3" name="General&apos;s Adjutant" hidden="false" collective="false" import="true" targetId="9217-d5c0-9f8d-de1a" type="selectionEntry"/>
-                <entryLink id="6d13-bc15-54d2-bab3" name="Artefacts of Power" hidden="false" collective="false" import="true" targetId="b788-a656-5a3a-9c4f" type="selectionEntryGroup"/>
-                <entryLink id="6366-dd76-ed74-2c4a" name="Command Traits" hidden="false" collective="false" import="true" targetId="8c92-8f4c-91f5-9c79" type="selectionEntryGroup"/>
-                <entryLink id="a5d2-a6ff-cee3-2bae" name="Cities of Sigmar Spell Lores" hidden="false" collective="false" import="true" targetId="aa48-e2aa-1ecc-eb1a" type="selectionEntryGroup"/>
-                <entryLink id="c2ec-7a17-fe03-2d4e" name="Misthåvn Narcotics" hidden="false" collective="false" import="true" targetId="de8c-eb81-ab3a-6616" type="selectionEntryGroup"/>
-              </entryLinks>
-            </entryLink>
-            <entryLink id="bab0-7d4f-eba3-48ba" name="Battlemage on Griffon" hidden="false" collective="false" import="true" targetId="9ac4-79ef-1250-f2ee" type="selectionEntry">
-              <modifiers>
-                <modifier type="set" field="hidden" value="true">
-                  <conditions>
-                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="5a0f-bb3c-172a-694e" type="greaterThan"/>
-                  </conditions>
-                </modifier>
-              </modifiers>
-              <entryLinks>
-                <entryLink id="c594-ff40-c27b-b41d" name="General" hidden="false" collective="false" import="true" targetId="98a4-3d6d-a7b9-399f" type="selectionEntry">
-                  <modifiers>
-                    <modifier type="add" field="category" value="db5f-919f-cbd3-f9ff">
-                      <conditions>
-                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="c5db-4b50-eb91-7a4c" type="greaterThan"/>
-                      </conditions>
-                    </modifier>
-                  </modifiers>
-                  <categoryLinks>
-                    <categoryLink id="aa8c-53ec-8118-7829" name="General - Human" hidden="false" targetId="5f17-4ccd-b223-4427" primary="false"/>
-                  </categoryLinks>
-                </entryLink>
-                <entryLink id="73f0-4e7e-4eed-4fab" name="Artefacts of Power" hidden="false" collective="false" import="true" targetId="b788-a656-5a3a-9c4f" type="selectionEntryGroup"/>
-                <entryLink id="cf83-0019-96e3-461c" name="Command Traits" hidden="false" collective="false" import="true" targetId="8c92-8f4c-91f5-9c79" type="selectionEntryGroup"/>
-                <entryLink id="261f-adc0-8e5a-514e" name="Cities of Sigmar Spell Lores" hidden="false" collective="false" import="true" targetId="aa48-e2aa-1ecc-eb1a" type="selectionEntryGroup"/>
-                <entryLink id="0b93-78cb-2e72-1c34" name="Misthåvn Narcotics" hidden="false" collective="false" import="true" targetId="de8c-eb81-ab3a-6616" type="selectionEntryGroup"/>
-              </entryLinks>
-            </entryLink>
-            <entryLink id="51ae-2194-5c83-0fcc" name="Celestial Hurricanum with Celestial Battlemage" hidden="false" collective="false" import="true" targetId="b8b2-7494-343e-6c9c" type="selectionEntry">
-              <modifiers>
-                <modifier type="set" field="hidden" value="true">
-                  <conditions>
-                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="5a0f-bb3c-172a-694e" type="greaterThan"/>
-                  </conditions>
-                </modifier>
-              </modifiers>
-              <entryLinks>
-                <entryLink id="0212-a145-368c-6bf9" name="General" hidden="false" collective="false" import="true" targetId="98a4-3d6d-a7b9-399f" type="selectionEntry">
-                  <modifiers>
-                    <modifier type="add" field="category" value="db5f-919f-cbd3-f9ff">
-                      <conditions>
-                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="c5db-4b50-eb91-7a4c" type="greaterThan"/>
-                      </conditions>
-                    </modifier>
-                  </modifiers>
-                  <categoryLinks>
-                    <categoryLink id="341f-3fa7-aeb0-c851" name="General - Human" hidden="false" targetId="5f17-4ccd-b223-4427" primary="false"/>
-                  </categoryLinks>
-                </entryLink>
-                <entryLink id="fe6f-d3aa-e6c5-7571" name="Artefacts of Power" hidden="false" collective="false" import="true" targetId="b788-a656-5a3a-9c4f" type="selectionEntryGroup"/>
-                <entryLink id="3943-3a8a-f7a3-0dfe" name="Command Traits" hidden="false" collective="false" import="true" targetId="8c92-8f4c-91f5-9c79" type="selectionEntryGroup"/>
-                <entryLink id="f01d-d88d-f8af-b3bb" name="Cities of Sigmar Spell Lores" hidden="false" collective="false" import="true" targetId="aa48-e2aa-1ecc-eb1a" type="selectionEntryGroup"/>
-                <entryLink id="f7cc-61c5-8037-5cfd" name="Misthåvn Narcotics" hidden="false" collective="false" import="true" targetId="de8c-eb81-ab3a-6616" type="selectionEntryGroup"/>
-              </entryLinks>
-            </entryLink>
-            <entryLink id="52a0-d6c4-55ef-a1d1" name="Knight-Incantor" hidden="false" collective="false" import="true" targetId="1819-4a1a-1aca-a3c4" type="selectionEntry">
-              <modifiers>
-                <modifier type="set" field="hidden" value="true">
-                  <conditions>
-                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e71f-99f5-b4d5-f713" type="equalTo"/>
-                  </conditions>
-                </modifier>
-                <modifier type="set" field="hidden" value="true">
-                  <conditions>
-                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="5a0f-bb3c-172a-694e" type="greaterThan"/>
-                  </conditions>
-                </modifier>
-              </modifiers>
-              <categoryLinks>
-                <categoryLink id="c1cc-d3a7-635c-5259" name="Allegiant - Stormcast Eternal" hidden="false" targetId="174b-7978-7bb7-931b" primary="false"/>
-              </categoryLinks>
-              <entryLinks>
-                <entryLink id="f00a-2cfc-db89-f9ab" name="Artefacts of Power" hidden="false" collective="false" import="true" targetId="b788-a656-5a3a-9c4f" type="selectionEntryGroup"/>
-                <entryLink id="11fa-a86f-3975-3dfc" name="Command Traits" hidden="false" collective="false" import="true" targetId="8c92-8f4c-91f5-9c79" type="selectionEntryGroup"/>
-                <entryLink id="2b80-14d7-c3f5-c86a" name="Cities of Sigmar Spell Lores" hidden="false" collective="false" import="true" targetId="aa48-e2aa-1ecc-eb1a" type="selectionEntryGroup"/>
-                <entryLink id="91fa-70b9-4449-4091" name="General&apos;s Adjutant" hidden="false" collective="false" import="true" targetId="9217-d5c0-9f8d-de1a" type="selectionEntry"/>
-                <entryLink id="e87a-6585-22ee-b24d" name="General" hidden="false" collective="false" import="true" targetId="98a4-3d6d-a7b9-399f" type="selectionEntry">
-                  <modifiers>
-                    <modifier type="add" field="category" value="db5f-919f-cbd3-f9ff">
-                      <conditions>
-                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="c5db-4b50-eb91-7a4c" type="greaterThan"/>
-                      </conditions>
-                    </modifier>
-                  </modifiers>
-                  <categoryLinks>
-                    <categoryLink id="1105-7b41-1a05-eb3b" name="Adjutant Unlock" hidden="false" targetId="8974-618e-c993-fdeb" primary="false"/>
-                    <categoryLink id="32d9-ca32-9ef6-8991" name="Honoured Retinue Unlock" hidden="false" targetId="b5b4-1120-6ef3-afa0" primary="false"/>
-                  </categoryLinks>
-                </entryLink>
-                <entryLink id="859c-f871-6309-634a" name="Misthåvn Narcotics" hidden="false" collective="false" import="true" targetId="de8c-eb81-ab3a-6616" type="selectionEntryGroup"/>
-              </entryLinks>
-            </entryLink>
-            <entryLink id="831a-46b9-3e09-eb7e" name="Lord-Arcanum" hidden="false" collective="false" import="true" targetId="7a6f-11cb-5205-7736" type="selectionEntry">
-              <modifiers>
-                <modifier type="set" field="hidden" value="true">
-                  <conditions>
-                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e71f-99f5-b4d5-f713" type="equalTo"/>
-                  </conditions>
-                </modifier>
-                <modifier type="set" field="hidden" value="true">
-                  <conditions>
-                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="5a0f-bb3c-172a-694e" type="greaterThan"/>
-                  </conditions>
-                </modifier>
-              </modifiers>
-              <categoryLinks>
-                <categoryLink id="2038-bc49-3b76-6068" name="Allegiant - Stormcast Eternal" hidden="false" targetId="174b-7978-7bb7-931b" primary="false"/>
-              </categoryLinks>
-              <entryLinks>
-                <entryLink id="d928-f360-abf9-ef40" name="Artefacts of Power" hidden="false" collective="false" import="true" targetId="b788-a656-5a3a-9c4f" type="selectionEntryGroup"/>
-                <entryLink id="8819-1199-2ec0-f7f4" name="Command Traits" hidden="false" collective="false" import="true" targetId="8c92-8f4c-91f5-9c79" type="selectionEntryGroup"/>
-                <entryLink id="efa4-6ea8-da6e-1257" name="Cities of Sigmar Spell Lores" hidden="false" collective="false" import="true" targetId="aa48-e2aa-1ecc-eb1a" type="selectionEntryGroup"/>
-                <entryLink id="96a1-cb93-90b4-0c6a" name="General&apos;s Adjutant" hidden="false" collective="false" import="true" targetId="9217-d5c0-9f8d-de1a" type="selectionEntry"/>
-                <entryLink id="789f-a26e-3b85-76b5" name="General" hidden="false" collective="false" import="true" targetId="98a4-3d6d-a7b9-399f" type="selectionEntry">
-                  <modifiers>
-                    <modifier type="add" field="category" value="db5f-919f-cbd3-f9ff">
-                      <conditions>
-                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="c5db-4b50-eb91-7a4c" type="greaterThan"/>
-                      </conditions>
-                    </modifier>
-                  </modifiers>
-                  <categoryLinks>
-                    <categoryLink id="48e5-8536-2cb2-6426" name="Adjutant Unlock" hidden="false" targetId="8974-618e-c993-fdeb" primary="false"/>
-                    <categoryLink id="ac19-1fda-2180-36d4" name="Honoured Retinue Unlock" hidden="false" targetId="b5b4-1120-6ef3-afa0" primary="false"/>
-                  </categoryLinks>
-                </entryLink>
-                <entryLink id="2a5f-c819-e112-dedd" name="Misthåvn Narcotics" hidden="false" collective="false" import="true" targetId="de8c-eb81-ab3a-6616" type="selectionEntryGroup"/>
-              </entryLinks>
-            </entryLink>
-            <entryLink id="6fd1-83e5-ff14-0c5f" name="Lord-Arcanum on Celestial Dracoline" hidden="false" collective="false" import="true" targetId="f089-eb70-e6ec-a175" type="selectionEntry">
-              <modifiers>
-                <modifier type="set" field="hidden" value="true">
-                  <conditions>
-                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e71f-99f5-b4d5-f713" type="equalTo"/>
-                  </conditions>
-                </modifier>
-                <modifier type="set" field="hidden" value="true">
-                  <conditions>
-                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="5a0f-bb3c-172a-694e" type="greaterThan"/>
-                  </conditions>
-                </modifier>
-              </modifiers>
-              <categoryLinks>
-                <categoryLink id="2ee6-a68b-c1f1-fd84" name="Allegiant - Stormcast Eternal" hidden="false" targetId="174b-7978-7bb7-931b" primary="false"/>
-              </categoryLinks>
-              <entryLinks>
-                <entryLink id="0726-0c78-5d2f-c63d" name="General" hidden="false" collective="false" import="true" targetId="98a4-3d6d-a7b9-399f" type="selectionEntry">
-                  <modifiers>
-                    <modifier type="add" field="category" value="db5f-919f-cbd3-f9ff">
-                      <conditions>
-                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="c5db-4b50-eb91-7a4c" type="greaterThan"/>
-                      </conditions>
-                    </modifier>
-                  </modifiers>
-                </entryLink>
-                <entryLink id="cd60-2f1c-cbdf-f49e" name="Artefacts of Power" hidden="false" collective="false" import="true" targetId="b788-a656-5a3a-9c4f" type="selectionEntryGroup"/>
-                <entryLink id="891a-c45e-5c59-1309" name="Command Traits" hidden="false" collective="false" import="true" targetId="8c92-8f4c-91f5-9c79" type="selectionEntryGroup"/>
-                <entryLink id="2fcc-01fe-0421-cd1d" name="Cities of Sigmar Spell Lores" hidden="false" collective="false" import="true" targetId="aa48-e2aa-1ecc-eb1a" type="selectionEntryGroup"/>
-                <entryLink id="51c4-7294-8102-f557" name="Misthåvn Narcotics" hidden="false" collective="false" import="true" targetId="de8c-eb81-ab3a-6616" type="selectionEntryGroup"/>
-              </entryLinks>
-            </entryLink>
-            <entryLink id="7895-3ad7-2192-ac4a" name="Lord-Arcanum on Gryph-Charger" hidden="false" collective="false" import="true" targetId="1b51-a280-a1c5-5d28" type="selectionEntry">
-              <modifiers>
-                <modifier type="set" field="hidden" value="true">
-                  <conditions>
-                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e71f-99f5-b4d5-f713" type="equalTo"/>
-                  </conditions>
-                </modifier>
-                <modifier type="set" field="hidden" value="true">
-                  <conditions>
-                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="5a0f-bb3c-172a-694e" type="greaterThan"/>
-                  </conditions>
-                </modifier>
-              </modifiers>
-              <categoryLinks>
-                <categoryLink id="43b4-c7b9-5b57-cf49" name="Allegiant - Stormcast Eternal" hidden="false" targetId="174b-7978-7bb7-931b" primary="false"/>
-              </categoryLinks>
-              <entryLinks>
-                <entryLink id="705c-d3e5-7e49-375e" name="General" hidden="false" collective="false" import="true" targetId="98a4-3d6d-a7b9-399f" type="selectionEntry">
-                  <modifiers>
-                    <modifier type="add" field="category" value="db5f-919f-cbd3-f9ff">
-                      <conditions>
-                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="c5db-4b50-eb91-7a4c" type="greaterThan"/>
-                      </conditions>
-                    </modifier>
-                  </modifiers>
-                </entryLink>
-                <entryLink id="f50f-1a93-547d-5353" name="Artefacts of Power" hidden="false" collective="false" import="true" targetId="b788-a656-5a3a-9c4f" type="selectionEntryGroup"/>
-                <entryLink id="6a97-a1a2-1f8b-2bd0" name="Command Traits" hidden="false" collective="false" import="true" targetId="8c92-8f4c-91f5-9c79" type="selectionEntryGroup"/>
-                <entryLink id="d385-62ff-8c4c-d035" name="Cities of Sigmar Spell Lores" hidden="false" collective="false" import="true" targetId="aa48-e2aa-1ecc-eb1a" type="selectionEntryGroup"/>
-                <entryLink id="d2b8-0836-16c1-b176" name="Misthåvn Narcotics" hidden="false" collective="false" import="true" targetId="de8c-eb81-ab3a-6616" type="selectionEntryGroup"/>
-              </entryLinks>
-            </entryLink>
-            <entryLink id="e145-08bc-3bd8-3e88" name="Lord-Arcanum on Tauralon" hidden="false" collective="false" import="true" targetId="a46b-de5f-14a1-aa13" type="selectionEntry">
-              <modifiers>
-                <modifier type="set" field="hidden" value="true">
-                  <conditions>
-                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e71f-99f5-b4d5-f713" type="equalTo"/>
-                  </conditions>
-                </modifier>
-                <modifier type="set" field="hidden" value="true">
-                  <conditions>
-                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="5a0f-bb3c-172a-694e" type="greaterThan"/>
-                  </conditions>
-                </modifier>
-              </modifiers>
-              <categoryLinks>
-                <categoryLink id="9ec7-966f-5b65-9ffc" name="Allegiant - Stormcast Eternal" hidden="false" targetId="174b-7978-7bb7-931b" primary="false"/>
-              </categoryLinks>
-              <entryLinks>
-                <entryLink id="eca0-89e1-8277-2e60" name="General" hidden="false" collective="false" import="true" targetId="98a4-3d6d-a7b9-399f" type="selectionEntry">
-                  <modifiers>
-                    <modifier type="add" field="category" value="db5f-919f-cbd3-f9ff">
-                      <conditions>
-                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="c5db-4b50-eb91-7a4c" type="greaterThan"/>
-                      </conditions>
-                    </modifier>
-                  </modifiers>
-                </entryLink>
-                <entryLink id="d78e-c415-832e-ed50" name="Artefacts of Power" hidden="false" collective="false" import="true" targetId="b788-a656-5a3a-9c4f" type="selectionEntryGroup"/>
-                <entryLink id="0b05-f2f1-dc08-33ed" name="Command Traits" hidden="false" collective="false" import="true" targetId="8c92-8f4c-91f5-9c79" type="selectionEntryGroup"/>
-                <entryLink id="81d7-2bb3-6ae0-bf0e" name="Cities of Sigmar Spell Lores" hidden="false" collective="false" import="true" targetId="aa48-e2aa-1ecc-eb1a" type="selectionEntryGroup"/>
-                <entryLink id="af77-a0e2-c0a8-ba10" name="Misthåvn Narcotics" hidden="false" collective="false" import="true" targetId="de8c-eb81-ab3a-6616" type="selectionEntryGroup"/>
-              </entryLinks>
-            </entryLink>
-            <entryLink id="7744-ba52-f794-2502" name="Lord-Exorcist" hidden="false" collective="false" import="true" targetId="910c-1cf2-c5f1-3d5e" type="selectionEntry">
-              <modifiers>
-                <modifier type="set" field="hidden" value="true">
-                  <conditions>
-                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e71f-99f5-b4d5-f713" type="equalTo"/>
-                  </conditions>
-                </modifier>
-                <modifier type="set" field="hidden" value="true">
-                  <conditions>
-                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="5a0f-bb3c-172a-694e" type="greaterThan"/>
-                  </conditions>
-                </modifier>
-              </modifiers>
-              <categoryLinks>
-                <categoryLink id="ebbb-cb82-171f-3254" name="Allegiant - Stormcast Eternal" hidden="false" targetId="174b-7978-7bb7-931b" primary="false"/>
-              </categoryLinks>
-              <entryLinks>
-                <entryLink id="28d3-79a9-955a-574f" name="Artefacts of Power" hidden="false" collective="false" import="true" targetId="b788-a656-5a3a-9c4f" type="selectionEntryGroup"/>
-                <entryLink id="4ac6-e51a-34ab-71c2" name="Command Traits" hidden="false" collective="false" import="true" targetId="8c92-8f4c-91f5-9c79" type="selectionEntryGroup"/>
-                <entryLink id="d815-cbbf-fd7d-6ecc" name="Cities of Sigmar Spell Lores" hidden="false" collective="false" import="true" targetId="aa48-e2aa-1ecc-eb1a" type="selectionEntryGroup"/>
-                <entryLink id="3a45-f22c-1dfe-aa73" name="General&apos;s Adjutant" hidden="false" collective="false" import="true" targetId="9217-d5c0-9f8d-de1a" type="selectionEntry"/>
-                <entryLink id="8f97-2906-1be2-f2ae" name="General" hidden="false" collective="false" import="true" targetId="98a4-3d6d-a7b9-399f" type="selectionEntry">
-                  <modifiers>
-                    <modifier type="add" field="category" value="db5f-919f-cbd3-f9ff">
-                      <conditions>
-                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="c5db-4b50-eb91-7a4c" type="greaterThan"/>
-                      </conditions>
-                    </modifier>
-                  </modifiers>
-                  <categoryLinks>
-                    <categoryLink id="282e-9aae-9e86-d9ef" name="Adjutant Unlock" hidden="false" targetId="8974-618e-c993-fdeb" primary="false"/>
-                    <categoryLink id="0621-b471-a031-428f" name="Honoured Retinue Unlock" hidden="false" targetId="b5b4-1120-6ef3-afa0" primary="false"/>
-                  </categoryLinks>
-                </entryLink>
-                <entryLink id="50c6-dc37-945f-b4a5" name="Misthåvn Narcotics" hidden="false" collective="false" import="true" targetId="de8c-eb81-ab3a-6616" type="selectionEntryGroup"/>
-              </entryLinks>
-            </entryLink>
-            <entryLink id="a3b6-4304-e4d8-d85f" name="Luminark of Hysh with White Battlemage" hidden="false" collective="false" import="true" targetId="f03e-2524-a084-77e5" type="selectionEntry">
-              <modifiers>
-                <modifier type="set" field="hidden" value="true">
-                  <conditions>
-                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="5a0f-bb3c-172a-694e" type="greaterThan"/>
-                  </conditions>
-                </modifier>
-              </modifiers>
-              <entryLinks>
-                <entryLink id="b885-f2da-8086-0f13" name="General" hidden="false" collective="false" import="true" targetId="98a4-3d6d-a7b9-399f" type="selectionEntry">
-                  <modifiers>
-                    <modifier type="add" field="category" value="db5f-919f-cbd3-f9ff">
-                      <conditions>
-                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="c5db-4b50-eb91-7a4c" type="greaterThan"/>
-                      </conditions>
-                    </modifier>
-                  </modifiers>
-                  <categoryLinks>
-                    <categoryLink id="1277-c6e2-5b05-99d7" name="General - Human" hidden="false" targetId="5f17-4ccd-b223-4427" primary="false"/>
-                  </categoryLinks>
-                </entryLink>
-                <entryLink id="f4b5-44bc-0429-8575" name="Artefacts of Power" hidden="false" collective="false" import="true" targetId="b788-a656-5a3a-9c4f" type="selectionEntryGroup"/>
-                <entryLink id="20e0-67dd-982a-f57f" name="Command Traits" hidden="false" collective="false" import="true" targetId="8c92-8f4c-91f5-9c79" type="selectionEntryGroup"/>
-                <entryLink id="34d9-daa8-7527-aafb" name="Cities of Sigmar Spell Lores" hidden="false" collective="false" import="true" targetId="aa48-e2aa-1ecc-eb1a" type="selectionEntryGroup"/>
-                <entryLink id="3e06-f5fc-76bb-5359" name="Misthåvn Narcotics" hidden="false" collective="false" import="true" targetId="de8c-eb81-ab3a-6616" type="selectionEntryGroup"/>
-              </entryLinks>
-            </entryLink>
-            <entryLink id="7614-360d-1d26-59f1" name="Sorceress" hidden="false" collective="false" import="true" targetId="ca0d-8bfa-981e-a44c" type="selectionEntry">
-              <entryLinks>
-                <entryLink id="83b1-cc9d-791a-75bb" name="General" hidden="false" collective="false" import="true" targetId="98a4-3d6d-a7b9-399f" type="selectionEntry">
-                  <modifiers>
-                    <modifier type="add" field="category" value="db5f-919f-cbd3-f9ff">
-                      <conditions>
-                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="c5db-4b50-eb91-7a4c" type="greaterThan"/>
-                      </conditions>
-                    </modifier>
-                  </modifiers>
-                  <categoryLinks>
-                    <categoryLink id="e92c-234e-07cd-d653" name="General - Darkling Coven" hidden="false" targetId="fa8d-33a2-b242-1f28" primary="false"/>
-                    <categoryLink id="1594-aefd-c2fa-c300" name="Adjutant Unlock" hidden="false" targetId="8974-618e-c993-fdeb" primary="false"/>
-                    <categoryLink id="5aea-7d3f-7e03-54b7" name="Honoured Retinue Unlock" hidden="false" targetId="b5b4-1120-6ef3-afa0" primary="false"/>
-                  </categoryLinks>
-                </entryLink>
-                <entryLink id="97f9-a166-8aa3-14fd" name="General&apos;s Adjutant" hidden="false" collective="false" import="true" targetId="9217-d5c0-9f8d-de1a" type="selectionEntry"/>
-                <entryLink id="dddf-b52a-6d4e-1f7f" name="Artefacts of Power" hidden="false" collective="false" import="true" targetId="b788-a656-5a3a-9c4f" type="selectionEntryGroup"/>
-                <entryLink id="a397-444c-d8d9-977b" name="Command Traits" hidden="false" collective="false" import="true" targetId="8c92-8f4c-91f5-9c79" type="selectionEntryGroup"/>
-                <entryLink id="0be5-58db-03a5-04d0" name="Cities of Sigmar Spell Lores" hidden="false" collective="false" import="true" targetId="aa48-e2aa-1ecc-eb1a" type="selectionEntryGroup"/>
-                <entryLink id="6777-c10d-cb68-7318" name="Misthåvn Narcotics" hidden="false" collective="false" import="true" targetId="de8c-eb81-ab3a-6616" type="selectionEntryGroup"/>
-              </entryLinks>
-            </entryLink>
-            <entryLink id="f4d0-be64-b955-efaf" name="Sorceress on Black Dragon" hidden="false" collective="false" import="true" targetId="9c4f-5945-0fe0-d28c" type="selectionEntry">
-              <entryLinks>
-                <entryLink id="1d0f-ea2a-5379-7e4d" name="General" hidden="false" collective="false" import="true" targetId="98a4-3d6d-a7b9-399f" type="selectionEntry">
-                  <modifiers>
-                    <modifier type="add" field="category" value="db5f-919f-cbd3-f9ff">
-                      <conditions>
-                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="c5db-4b50-eb91-7a4c" type="greaterThan"/>
-                      </conditions>
-                    </modifier>
-                  </modifiers>
-                  <categoryLinks>
-                    <categoryLink id="3734-73b4-dbd5-8f47" name="General - Darkling Coven" hidden="false" targetId="fa8d-33a2-b242-1f28" primary="false"/>
-                  </categoryLinks>
-                </entryLink>
-                <entryLink id="8e0a-cb20-9641-f281" name="Artefacts of Power" hidden="false" collective="false" import="true" targetId="b788-a656-5a3a-9c4f" type="selectionEntryGroup"/>
-                <entryLink id="cf2f-0e31-6d97-b73f" name="Command Traits" hidden="false" collective="false" import="true" targetId="8c92-8f4c-91f5-9c79" type="selectionEntryGroup"/>
-                <entryLink id="ae4f-8648-abb8-2f64" name="Cities of Sigmar Spell Lores" hidden="false" collective="false" import="true" targetId="aa48-e2aa-1ecc-eb1a" type="selectionEntryGroup"/>
-                <entryLink id="de98-7cdc-d842-b48c" name="Drakeblood Curses" hidden="false" collective="false" import="true" targetId="2156-cf62-a4c9-055f" type="selectionEntryGroup"/>
-                <entryLink id="3852-094f-7452-eb01" name="Misthåvn Narcotics" hidden="false" collective="false" import="true" targetId="de8c-eb81-ab3a-6616" type="selectionEntryGroup"/>
-              </entryLinks>
-            </entryLink>
-          </entryLinks>
-        </selectionEntryGroup>
-      </selectionEntryGroups>
-      <costs>
-        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="140.0"/>
-      </costs>
-    </selectionEntry>
-    <selectionEntry id="7339-10b2-de13-3c2a" name="Aetherguard Windrunners" publicationId="88ce-c2fe-b89c-ed48" hidden="false" collective="false" import="true" type="upgrade">
-      <modifiers>
-        <modifier type="set" field="hidden" value="true">
-          <conditions>
-            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="c5db-4b50-eb91-7a4c" type="equalTo"/>
-          </conditions>
-        </modifier>
-      </modifiers>
-      <profiles>
-        <profile id="b1ff-11ad-59da-74dd" name="Swift Like the Wind" hidden="false" typeId="66c5-932e-004a-574c" typeName="Battalion Abilities">
-          <characteristics>
-            <characteristic name="Battalion Ability" typeId="23f7-32c0-e059-29b2">Units from this battalion can retreat and still shoot and/or charge later in the same turn.</characteristic>
-          </characteristics>
-        </profile>
-      </profiles>
-      <categoryLinks>
-        <categoryLink id="dbc5-9b31-1e5f-f914" name="New CategoryLink" hidden="false" targetId="3706-e0e8-674f-c41b" primary="true"/>
-      </categoryLinks>
-      <selectionEntryGroups>
-        <selectionEntryGroup id="4132-eff9-f0ea-684c" name="0-2 TEMPEST&apos;S EYE Grundstok Gunhaulers" hidden="false" collective="false" import="true">
-          <constraints>
-            <constraint field="selections" scope="parent" value="2.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8159-0d64-671c-e317" type="max"/>
-          </constraints>
-          <entryLinks>
-            <entryLink id="65e4-8b50-f6ec-d6b9" name="Grundstok Gunhauler" hidden="false" collective="false" import="true" targetId="0f3a-d38b-993b-d360" type="selectionEntry">
-              <modifiers>
-                <modifier type="set" field="hidden" value="true">
-                  <conditions>
-                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="c5db-4b50-eb91-7a4c" type="equalTo"/>
-                  </conditions>
-                </modifier>
-              </modifiers>
-              <categoryLinks>
-                <categoryLink id="c56f-ddec-8395-5483" name="Allegiant - Kharadron Overlords" hidden="false" targetId="55a9-c51b-95ba-9091" primary="false"/>
-              </categoryLinks>
-            </entryLink>
-          </entryLinks>
-        </selectionEntryGroup>
-        <selectionEntryGroup id="4bc4-3f82-8aca-cf70" name="3-6 units of TEMPEST&apos;S EYE featured units" hidden="false" collective="false" import="true">
-          <constraints>
-            <constraint field="selections" scope="parent" value="3.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="c172-fec4-3beb-90c7" type="min"/>
-            <constraint field="selections" scope="parent" value="6.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="dc37-96ca-7fc3-0e88" type="max"/>
-          </constraints>
-          <entryLinks>
-            <entryLink id="fbd5-b687-8493-424b" name="Freeguild Outriders" hidden="false" collective="false" import="true" targetId="93c0-fcaf-8d4c-5430" type="selectionEntry">
-              <modifiers>
-                <modifier type="remove" field="category" value="a42d-220e-6a88-7bf6">
-                  <conditionGroups>
-                    <conditionGroup type="or">
-                      <conditions>
-                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="db5f-919f-cbd3-f9ff" type="equalTo"/>
-                        <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="e3a6-45ca-4974-b489" type="instanceOf"/>
-                        <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4373-740f-1bf3-b0aa" type="instanceOf"/>
-                        <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="6cd6-b22e-bfcb-9589" type="instanceOf"/>
-                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="1679-c790-1ce7-00d6" type="equalTo"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
-                </modifier>
-                <modifier type="set" field="hidden" value="true">
-                  <conditions>
-                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="5a0f-bb3c-172a-694e" type="greaterThan"/>
-                  </conditions>
-                </modifier>
-              </modifiers>
-              <categoryLinks>
-                <categoryLink id="b752-9b05-38f1-f410" name="BATTLELINE" hidden="false" targetId="a42d-220e-6a88-7bf6" primary="false"/>
-              </categoryLinks>
-              <entryLinks>
-                <entryLink id="1930-d85f-d922-2cd0" name="Honoured Retinue" hidden="false" collective="false" import="true" targetId="5462-02e1-ed1a-d03f" type="selectionEntry">
-                  <modifiers>
-                    <modifier type="set" field="hidden" value="true">
-                      <conditions>
-                        <condition field="selections" scope="parent" value="4.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" type="greaterThan"/>
-                      </conditions>
-                    </modifier>
-                  </modifiers>
-                </entryLink>
-              </entryLinks>
-            </entryLink>
-            <entryLink id="e466-070a-ec5b-4181" name="Freeguild Pistoliers" hidden="false" collective="false" import="true" targetId="7693-c724-f844-fb77" type="selectionEntry">
-              <modifiers>
-                <modifier type="remove" field="category" value="a42d-220e-6a88-7bf6">
-                  <conditionGroups>
-                    <conditionGroup type="or">
-                      <conditions>
-                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="db5f-919f-cbd3-f9ff" type="equalTo"/>
-                        <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="e3a6-45ca-4974-b489" type="instanceOf"/>
-                        <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4373-740f-1bf3-b0aa" type="instanceOf"/>
-                        <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="6cd6-b22e-bfcb-9589" type="instanceOf"/>
-                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="1679-c790-1ce7-00d6" type="equalTo"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
-                </modifier>
-                <modifier type="set" field="hidden" value="true">
-                  <conditions>
-                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="5a0f-bb3c-172a-694e" type="greaterThan"/>
-                  </conditions>
-                </modifier>
-              </modifiers>
-              <categoryLinks>
-                <categoryLink id="ba06-5e2b-e107-30a6" name="BATTLELINE" hidden="false" targetId="a42d-220e-6a88-7bf6" primary="false"/>
-              </categoryLinks>
-              <entryLinks>
-                <entryLink id="ae4f-4b32-f098-6ca6" name="Honoured Retinue" hidden="false" collective="false" import="true" targetId="5462-02e1-ed1a-d03f" type="selectionEntry">
-                  <modifiers>
-                    <modifier type="set" field="hidden" value="true">
-                      <conditions>
-                        <condition field="selections" scope="parent" value="4.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" type="greaterThan"/>
-                      </conditions>
-                    </modifier>
-                  </modifiers>
-                </entryLink>
-              </entryLinks>
-            </entryLink>
-          </entryLinks>
-        </selectionEntryGroup>
-        <selectionEntryGroup id="f5c7-887d-d4d0-93db" name="1 TEMPEST&apos;S EYE Freeguild General on Griffon" hidden="false" collective="false" import="true">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8ced-1e0d-7020-f1b8" type="min"/>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="13fc-6067-d034-70b5" type="max"/>
-          </constraints>
-          <entryLinks>
-            <entryLink id="5001-9968-cd9b-9b81" name="Freeguild General on Griffon" hidden="false" collective="false" import="true" targetId="4224-182d-231c-99ac" type="selectionEntry">
-              <modifiers>
-                <modifier type="set" field="hidden" value="true">
-                  <conditions>
-                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="5a0f-bb3c-172a-694e" type="greaterThan"/>
-                  </conditions>
-                </modifier>
-              </modifiers>
-              <entryLinks>
-                <entryLink id="7824-8aae-9e60-ba16" name="General" hidden="false" collective="false" import="true" targetId="98a4-3d6d-a7b9-399f" type="selectionEntry">
-                  <modifiers>
-                    <modifier type="add" field="category" value="db5f-919f-cbd3-f9ff">
-                      <conditions>
-                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="c5db-4b50-eb91-7a4c" type="greaterThan"/>
-                      </conditions>
-                    </modifier>
-                  </modifiers>
-                  <categoryLinks>
-                    <categoryLink id="4c19-a5a5-eed5-2f26" name="General - Freeguild" hidden="false" targetId="9930-a25d-9db6-dc1b" primary="false"/>
-                    <categoryLink id="0375-93b3-f53a-74ac" name="General - Human" hidden="false" targetId="5f17-4ccd-b223-4427" primary="false"/>
-                  </categoryLinks>
-                </entryLink>
-                <entryLink id="3e3c-22f8-6179-d356" name="Artefacts of Power" hidden="false" collective="false" import="true" targetId="b788-a656-5a3a-9c4f" type="selectionEntryGroup"/>
-                <entryLink id="9408-91a9-73ce-2144" name="Command Traits" hidden="false" collective="false" import="true" targetId="8c92-8f4c-91f5-9c79" type="selectionEntryGroup"/>
-                <entryLink id="e186-c5fb-c433-15b9" name="Misthåvn Narcotics" hidden="false" collective="false" import="true" targetId="de8c-eb81-ab3a-6616" type="selectionEntryGroup"/>
-              </entryLinks>
-            </entryLink>
-          </entryLinks>
-        </selectionEntryGroup>
-      </selectionEntryGroups>
-      <costs>
-        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="120.0"/>
-      </costs>
-    </selectionEntry>
-    <selectionEntry id="2e8d-fae9-e325-314f" name="Charrwind Beasthunters" publicationId="88ce-c2fe-b89c-ed48" hidden="false" collective="false" import="true" type="upgrade">
-      <modifiers>
-        <modifier type="set" field="hidden" value="true">
-          <conditions>
-            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="5ae6-b306-5b29-e420" type="equalTo"/>
-          </conditions>
-        </modifier>
-      </modifiers>
-      <profiles>
-        <profile id="579a-41fb-1bbd-815a" name="Beasthunters" hidden="false" typeId="66c5-932e-004a-574c" typeName="Battalion Abilities">
-          <characteristics>
-            <characteristic name="Battalion Ability" typeId="23f7-32c0-e059-29b2">Add 1 to wound rolls for attacks made by units from this battalion that target an enemy MONSTER.</characteristic>
-          </characteristics>
-        </profile>
-      </profiles>
-      <categoryLinks>
-        <categoryLink id="0339-82b2-cdfb-7e1c" name="New CategoryLink" hidden="false" targetId="3706-e0e8-674f-c41b" primary="true"/>
-      </categoryLinks>
-      <selectionEntryGroups>
-        <selectionEntryGroup id="81bc-8225-89dd-f250" name="3 units of ANVILGARD Black Ark Corsairs" hidden="false" collective="false" import="true">
-          <constraints>
-            <constraint field="selections" scope="parent" value="3.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="36d5-d899-09c5-664b" type="min"/>
-            <constraint field="selections" scope="parent" value="3.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8aff-a26d-6d51-03c5" type="max"/>
-          </constraints>
-          <entryLinks>
-            <entryLink id="b838-88a5-49fe-0ebf" name="Black Ark Corsairs" hidden="false" collective="false" import="true" targetId="21a0-7f0c-2840-f652" type="selectionEntry">
-              <modifiers>
-                <modifier type="remove" field="category" value="a42d-220e-6a88-7bf6">
-                  <conditionGroups>
-                    <conditionGroup type="or">
-                      <conditions>
-                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="4b2e-a677-31bf-dbf8" type="equalTo"/>
-                        <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="6cd6-b22e-bfcb-9589" type="instanceOf"/>
-                        <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="e3a6-45ca-4974-b489" type="instanceOf"/>
-                        <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4373-740f-1bf3-b0aa" type="instanceOf"/>
-                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="1679-c790-1ce7-00d6" type="equalTo"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
-                </modifier>
-              </modifiers>
-              <categoryLinks>
-                <categoryLink id="db03-65bc-a753-4e97" name="BATTLELINE" hidden="false" targetId="a42d-220e-6a88-7bf6" primary="false"/>
-              </categoryLinks>
-              <entryLinks>
-                <entryLink id="d821-37a3-0984-763f" name="Honoured Retinue" hidden="false" collective="false" import="true" targetId="5462-02e1-ed1a-d03f" type="selectionEntry">
-                  <modifiers>
-                    <modifier type="set" field="hidden" value="true">
-                      <conditions>
-                        <condition field="selections" scope="parent" value="2.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" type="greaterThan"/>
-                      </conditions>
-                    </modifier>
-                  </modifiers>
-                </entryLink>
-              </entryLinks>
-            </entryLink>
-          </entryLinks>
-        </selectionEntryGroup>
-        <selectionEntryGroup id="7a5f-d4cf-67b6-45e3" name="1-3 units of ANVILGARD Scourgerunner Chariots" hidden="false" collective="false" import="true">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="ac69-5b4c-6054-094e" type="min"/>
-            <constraint field="selections" scope="parent" value="3.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="e58a-4e80-b7c5-2b2d" type="max"/>
-          </constraints>
-          <entryLinks>
-            <entryLink id="9560-53c0-4109-5840" name="Scourgerunner Chariots" hidden="false" collective="false" import="true" targetId="76a2-5b04-6d05-5e93" type="selectionEntry">
-              <modifiers>
-                <modifier type="remove" field="category" value="a42d-220e-6a88-7bf6">
-                  <conditionGroups>
-                    <conditionGroup type="or">
-                      <conditions>
-                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="4b2e-a677-31bf-dbf8" type="equalTo"/>
-                        <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="6cd6-b22e-bfcb-9589" type="instanceOf"/>
-                        <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="e3a6-45ca-4974-b489" type="instanceOf"/>
-                        <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4373-740f-1bf3-b0aa" type="instanceOf"/>
-                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="1679-c790-1ce7-00d6" type="equalTo"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
-                </modifier>
-              </modifiers>
-              <categoryLinks>
-                <categoryLink id="9013-5618-2198-dee3" name="BATTLELINE" hidden="false" targetId="a42d-220e-6a88-7bf6" primary="false"/>
-              </categoryLinks>
-            </entryLink>
-          </entryLinks>
-        </selectionEntryGroup>
-        <selectionEntryGroup id="689b-069b-84ea-f427" name="1 ANVILGARD Black Ark Fleetmaster" hidden="false" collective="false" import="true">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="1a0a-d68b-976c-0b97" type="min"/>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="e78e-d7f9-cc37-0910" type="max"/>
-          </constraints>
-          <entryLinks>
-            <entryLink id="4a07-1eb0-1561-0599" name="Black Ark Fleetmaster" hidden="false" collective="false" import="true" targetId="230f-dd74-5a55-2227" type="selectionEntry">
-              <entryLinks>
-                <entryLink id="1283-48dc-9038-55d0" name="General" hidden="false" collective="false" import="true" targetId="98a4-3d6d-a7b9-399f" type="selectionEntry">
-                  <modifiers>
-                    <modifier type="add" field="category" value="db5f-919f-cbd3-f9ff">
-                      <conditions>
-                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="c5db-4b50-eb91-7a4c" type="greaterThan"/>
-                      </conditions>
-                    </modifier>
-                  </modifiers>
-                  <categoryLinks>
-                    <categoryLink id="f51f-762e-d10d-b0aa" name="General - Scourge Privateers" hidden="false" targetId="4b2e-a677-31bf-dbf8" primary="false"/>
-                    <categoryLink id="d142-3990-a065-e926" name="Adjutant Unlock" hidden="false" targetId="8974-618e-c993-fdeb" primary="false"/>
-                    <categoryLink id="b95d-4a0c-a0cd-c664" name="Honoured Retinue Unlock" hidden="false" targetId="b5b4-1120-6ef3-afa0" primary="false"/>
-                  </categoryLinks>
-                </entryLink>
-                <entryLink id="c5b3-bc46-488b-5150" name="General&apos;s Adjutant" hidden="false" collective="false" import="true" targetId="9217-d5c0-9f8d-de1a" type="selectionEntry"/>
-                <entryLink id="4685-d080-7db9-bc9a" name="Artefacts of Power" hidden="false" collective="false" import="true" targetId="b788-a656-5a3a-9c4f" type="selectionEntryGroup"/>
-                <entryLink id="d83a-858a-49b7-4017" name="Command Traits" hidden="false" collective="false" import="true" targetId="8c92-8f4c-91f5-9c79" type="selectionEntryGroup"/>
-                <entryLink id="86b9-0c5b-ffa3-b9c2" name="Misthåvn Narcotics" hidden="false" collective="false" import="true" targetId="de8c-eb81-ab3a-6616" type="selectionEntryGroup"/>
-              </entryLinks>
-            </entryLink>
-          </entryLinks>
-        </selectionEntryGroup>
-        <selectionEntryGroup id="d311-fb09-845f-f870" name="0-1 ANVILGARD Kharibdyss" hidden="false" collective="false" import="true">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="7c37-478a-fe9b-dec3" type="max"/>
-          </constraints>
-          <entryLinks>
-            <entryLink id="6610-0288-9ff3-244b" name="Kharibdyss" hidden="false" collective="false" import="true" targetId="d037-4415-f9f5-0214" type="selectionEntry">
-              <modifierGroups>
-                <modifierGroup>
-                  <conditions>
-                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="5ae6-b306-5b29-e420" type="greaterThan"/>
-                  </conditions>
-                  <modifiers>
-                    <modifier type="add" field="category" value="a42d-220e-6a88-7bf6"/>
-                    <modifier type="remove" field="category" value="7f62-b7f5-32d5-e13b"/>
-                    <modifier type="set-primary" field="category" value="6230-ed60-e374-add4"/>
-                  </modifiers>
-                </modifierGroup>
-              </modifierGroups>
-              <entryLinks>
-                <entryLink id="a64e-7d30-0fd3-4a6a" name="Drakeblood Curses" hidden="false" collective="false" import="true" targetId="2156-cf62-a4c9-055f" type="selectionEntryGroup"/>
-              </entryLinks>
-            </entryLink>
-          </entryLinks>
-        </selectionEntryGroup>
-      </selectionEntryGroups>
-      <costs>
-        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="120.0"/>
-      </costs>
-    </selectionEntry>
-    <selectionEntry id="e9e2-0c44-2ebc-a65f" name="Phoenix Flight" publicationId="88ce-c2fe-b89c-ed48" hidden="false" collective="false" import="true" type="upgrade">
-      <modifiers>
-        <modifier type="set" field="hidden" value="true">
-          <conditions>
-            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="6203-4af9-a82a-8033" type="equalTo"/>
-          </conditions>
-        </modifier>
-      </modifiers>
-      <profiles>
-        <profile id="41c8-285a-67e2-458b" name="Golden Aura of Protection" hidden="false" typeId="66c5-932e-004a-574c" typeName="Battalion Abilities">
-          <characteristics>
-            <characteristic name="Battalion Ability" typeId="23f7-32c0-e059-29b2">At the start of your hero phase, you can heal 1 wound allocated to each friendly PHOENICIUM unit wholly within 12&quot; of any units from this battalion.</characteristic>
-          </characteristics>
-        </profile>
-      </profiles>
-      <categoryLinks>
-        <categoryLink id="ca32-b3ee-9bfb-5d13" name="New CategoryLink" hidden="false" targetId="3706-e0e8-674f-c41b" primary="true"/>
-      </categoryLinks>
-      <selectionEntryGroups>
-        <selectionEntryGroup id="ebf4-a523-bebe-04d3" name="1-2 PHOENICIUM FROSTHEART PHOENIXES" hidden="false" collective="false" import="true">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="25b8-5fcf-6efd-ae33" type="min"/>
-            <constraint field="selections" scope="parent" value="2.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="fecc-d9fd-6c6d-dd8d" type="max"/>
-          </constraints>
-          <entryLinks>
-            <entryLink id="889f-d77a-56c9-1b5a" name="Anointed on Frostheart Phoenix" hidden="false" collective="false" import="true" targetId="e498-c624-195b-3df2" type="selectionEntry">
-              <modifiers>
-                <modifier type="set" field="hidden" value="true">
-                  <conditions>
-                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="5a0f-bb3c-172a-694e" type="greaterThan"/>
-                  </conditions>
-                </modifier>
-              </modifiers>
-              <entryLinks>
-                <entryLink id="dd24-2baa-95af-144a" name="General" hidden="false" collective="false" import="true" targetId="98a4-3d6d-a7b9-399f" type="selectionEntry">
-                  <modifiers>
-                    <modifier type="add" field="category" value="db5f-919f-cbd3-f9ff">
-                      <conditions>
-                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="c5db-4b50-eb91-7a4c" type="greaterThan"/>
-                      </conditions>
-                    </modifier>
-                  </modifiers>
-                  <categoryLinks>
-                    <categoryLink id="f812-134a-8561-3fd7" name="General - Phoenix Temple" hidden="false" targetId="1bf6-8bcf-8591-8aac" primary="false"/>
-                  </categoryLinks>
-                </entryLink>
-                <entryLink id="beb8-9f3a-80e3-1cbf" name="Artefacts of Power" hidden="false" collective="false" import="true" targetId="b788-a656-5a3a-9c4f" type="selectionEntryGroup"/>
-                <entryLink id="b216-7f5b-bf58-70ae" name="Command Traits" hidden="false" collective="false" import="true" targetId="8c92-8f4c-91f5-9c79" type="selectionEntryGroup"/>
-                <entryLink id="3874-94ea-2758-841b" name="Misthåvn Narcotics" hidden="false" collective="false" import="true" targetId="de8c-eb81-ab3a-6616" type="selectionEntryGroup"/>
-              </entryLinks>
-            </entryLink>
-            <entryLink id="2f0c-729b-669b-dc78" name="Frostheart Phoenix" hidden="false" collective="false" import="true" targetId="cc45-50cc-c8c4-933d" type="selectionEntry">
-              <modifiers>
-                <modifier type="set" field="hidden" value="true">
-                  <conditions>
-                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="5a0f-bb3c-172a-694e" type="greaterThan"/>
-                  </conditions>
-                </modifier>
-              </modifiers>
-            </entryLink>
-          </entryLinks>
-        </selectionEntryGroup>
-        <selectionEntryGroup id="fc86-03db-c0cd-a3ca" name="1-2 PHOENICIUM FLAMESPYRE PHOENIXES" hidden="false" collective="false" import="true">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="90fd-1539-9a93-b4b2" type="min"/>
-            <constraint field="selections" scope="parent" value="2.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="3ccd-57b1-4fff-5f3e" type="max"/>
-          </constraints>
-          <entryLinks>
-            <entryLink id="7330-65b2-f10e-2b9c" name="Anointed on Flamespyre Phoenix" hidden="false" collective="false" import="true" targetId="1bbb-3361-4c4f-f567" type="selectionEntry">
-              <modifiers>
-                <modifier type="set" field="hidden" value="true">
-                  <conditions>
-                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="5a0f-bb3c-172a-694e" type="greaterThan"/>
-                  </conditions>
-                </modifier>
-              </modifiers>
-              <entryLinks>
-                <entryLink id="5762-e406-ad4a-79dd" name="General" hidden="false" collective="false" import="true" targetId="98a4-3d6d-a7b9-399f" type="selectionEntry">
-                  <modifiers>
-                    <modifier type="add" field="category" value="db5f-919f-cbd3-f9ff">
-                      <conditions>
-                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="c5db-4b50-eb91-7a4c" type="greaterThan"/>
-                      </conditions>
-                    </modifier>
-                  </modifiers>
-                  <categoryLinks>
-                    <categoryLink id="0143-ca8e-54f1-e82a" name="General - Phoenix Temple" hidden="false" targetId="1bf6-8bcf-8591-8aac" primary="false"/>
-                  </categoryLinks>
-                </entryLink>
-                <entryLink id="c655-17da-df43-5b46" name="Artefacts of Power" hidden="false" collective="false" import="true" targetId="b788-a656-5a3a-9c4f" type="selectionEntryGroup"/>
-                <entryLink id="b774-0123-a2a9-c8be" name="Command Traits" hidden="false" collective="false" import="true" targetId="8c92-8f4c-91f5-9c79" type="selectionEntryGroup"/>
-                <entryLink id="7641-2f8a-e530-9b95" name="Misthåvn Narcotics" hidden="false" collective="false" import="true" targetId="de8c-eb81-ab3a-6616" type="selectionEntryGroup"/>
-              </entryLinks>
-            </entryLink>
-            <entryLink id="23bd-bbfb-2714-ff1e" name="Flamespyre Phoenix" hidden="false" collective="false" import="true" targetId="4d7c-6bc6-6f4a-f41b" type="selectionEntry">
-              <modifiers>
-                <modifier type="set" field="hidden" value="true">
-                  <conditions>
-                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="5a0f-bb3c-172a-694e" type="greaterThan"/>
-                  </conditions>
-                </modifier>
-              </modifiers>
-            </entryLink>
-          </entryLinks>
-        </selectionEntryGroup>
-      </selectionEntryGroups>
-      <costs>
-        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="130.0"/>
-      </costs>
-    </selectionEntry>
     <selectionEntry id="9217-d5c0-9f8d-de1a" name="General&apos;s Adjutant" hidden="false" collective="false" import="true" type="upgrade">
       <modifiers>
         <modifier type="set" field="hidden" value="true">
@@ -6751,216 +5512,6 @@ Designer’s Note: Coalition units are not allied units, so the limitations that
       </profiles>
       <costs>
         <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
-      </costs>
-    </selectionEntry>
-    <selectionEntry id="896e-c76d-0a3f-fe68" name="Kraeth&apos;s Shadowhost" hidden="false" collective="false" import="true" type="upgrade">
-      <modifiers>
-        <modifier type="set" field="hidden" value="true">
-          <conditionGroups>
-            <conditionGroup type="or">
-              <conditions>
-                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="5ae6-b306-5b29-e420" type="equalTo"/>
-                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="5a0f-bb3c-172a-694e" type="equalTo"/>
-              </conditions>
-            </conditionGroup>
-          </conditionGroups>
-        </modifier>
-      </modifiers>
-      <constraints>
-        <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="51e3-e9e1-174f-d616" type="max"/>
-      </constraints>
-      <profiles>
-        <profile id="de0b-45ce-3eff-da9f" name="Subjugated" hidden="false" typeId="66c5-932e-004a-574c" typeName="Battalion Abilities">
-          <characteristics>
-            <characteristic name="Battalion Ability" typeId="23f7-32c0-e059-29b2">In your hero phase, if the SORCERESS from this battalion is on the battlefield, you can declare she will compel her minions to attack savagely. If you do so, until your next hero phase, add 1 to the Attacks characteristic of weapons used by DREADSPEARS and DARKSHARDS units from this battalion, but subtract 1 from save rolls for attacks that target those units.</characteristic>
-          </characteristics>
-        </profile>
-      </profiles>
-      <categoryLinks>
-        <categoryLink id="570e-bdd3-319c-098d" name="New CategoryLink" hidden="false" targetId="3706-e0e8-674f-c41b" primary="true"/>
-      </categoryLinks>
-      <selectionEntryGroups>
-        <selectionEntryGroup id="df33-8de7-1daa-9e14" name="1 Sorceress on Black Dragon (Drusa Kraeth)" hidden="false" collective="false" import="true">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="7643-493f-fff9-5121" type="max"/>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="524e-50a4-b746-c7e4" type="min"/>
-          </constraints>
-          <entryLinks>
-            <entryLink id="21cd-30d8-be95-aaa9" name="Sorceress on Black Dragon" hidden="false" collective="false" import="true" targetId="9c4f-5945-0fe0-d28c" type="selectionEntry">
-              <entryLinks>
-                <entryLink id="491b-d4cb-b120-e441" name="General" hidden="false" collective="false" import="true" targetId="98a4-3d6d-a7b9-399f" type="selectionEntry">
-                  <categoryLinks>
-                    <categoryLink id="dfc5-7d04-96ea-25ad" name="General - Darkling Coven" hidden="false" targetId="fa8d-33a2-b242-1f28" primary="false"/>
-                  </categoryLinks>
-                </entryLink>
-                <entryLink id="df4f-f640-4e69-6d65" name="Artefacts of Power" hidden="false" collective="false" import="true" targetId="b788-a656-5a3a-9c4f" type="selectionEntryGroup"/>
-                <entryLink id="11a2-914c-224d-4b4f" name="Command Traits" hidden="false" collective="false" import="true" targetId="8c92-8f4c-91f5-9c79" type="selectionEntryGroup"/>
-                <entryLink id="6dc0-15be-ede8-b32d" name="Cities of Sigmar Spell Lores" hidden="false" collective="false" import="true" targetId="aa48-e2aa-1ecc-eb1a" type="selectionEntryGroup"/>
-                <entryLink id="aa9d-a42b-81e1-160e" name="Drakeblood Curses" hidden="false" collective="false" import="true" targetId="2156-cf62-a4c9-055f" type="selectionEntryGroup"/>
-                <entryLink id="aafd-3914-7178-025a" name="Misthåvn Narcotics" hidden="false" collective="false" import="true" targetId="de8c-eb81-ab3a-6616" type="selectionEntryGroup"/>
-              </entryLinks>
-            </entryLink>
-          </entryLinks>
-        </selectionEntryGroup>
-        <selectionEntryGroup id="c597-9596-e58b-b026" name="1 Dreadspears unit" hidden="false" collective="false" import="true">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="13f8-cdf8-bcdc-588b" type="max"/>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="66c7-a8c3-54c7-9a21" type="min"/>
-          </constraints>
-          <entryLinks>
-            <entryLink id="9ebd-3a2f-84ec-145f" name="Dreadspears" hidden="false" collective="false" import="true" targetId="848e-a467-b591-291b" type="selectionEntry">
-              <entryLinks>
-                <entryLink id="e566-89ed-036b-cd96" name="Honoured Retinue" hidden="false" collective="false" import="true" targetId="5462-02e1-ed1a-d03f" type="selectionEntry">
-                  <modifiers>
-                    <modifier type="set" field="hidden" value="true">
-                      <conditions>
-                        <condition field="selections" scope="parent" value="2.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" type="greaterThan"/>
-                      </conditions>
-                    </modifier>
-                  </modifiers>
-                </entryLink>
-              </entryLinks>
-            </entryLink>
-          </entryLinks>
-        </selectionEntryGroup>
-        <selectionEntryGroup id="50d4-1cf9-8f02-e1b9" name="1 Darkshards unit" hidden="false" collective="false" import="true">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="bd3d-da63-8bdc-364c" type="max"/>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="cee6-ec6b-3cb1-60d2" type="min"/>
-          </constraints>
-          <entryLinks>
-            <entryLink id="db5f-5fa8-7efd-f952" name="Darkshards" hidden="false" collective="false" import="true" targetId="332a-070f-d2ce-6ae8" type="selectionEntry">
-              <entryLinks>
-                <entryLink id="7733-9e59-d9aa-abbc" name="Honoured Retinue" hidden="false" collective="false" import="true" targetId="5462-02e1-ed1a-d03f" type="selectionEntry">
-                  <modifiers>
-                    <modifier type="set" field="hidden" value="true">
-                      <conditions>
-                        <condition field="selections" scope="parent" value="2.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" type="greaterThan"/>
-                      </conditions>
-                    </modifier>
-                  </modifiers>
-                </entryLink>
-              </entryLinks>
-            </entryLink>
-          </entryLinks>
-        </selectionEntryGroup>
-      </selectionEntryGroups>
-      <costs>
-        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="160.0"/>
-      </costs>
-    </selectionEntry>
-    <selectionEntry id="ddcb-b0ea-a476-59d1" name="Xintil War-Magi" hidden="false" collective="false" import="true" type="upgrade">
-      <modifiers>
-        <modifier type="set" field="hidden" value="true">
-          <conditions>
-            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="c754-18a7-9475-982b" type="equalTo"/>
-          </conditions>
-        </modifier>
-      </modifiers>
-      <profiles>
-        <profile id="ef80-c5c9-4c0a-55dc" name="Beacon of Intellect" hidden="false" typeId="66c5-932e-004a-574c" typeName="Battalion Abilities">
-          <characteristics>
-            <characteristic name="Battalion Ability" typeId="23f7-32c0-e059-29b2">When you use the Searing Beam of Light ability for the Luminark of Hysh from this battalion, you can re-roll the roll that determines if a unit suffers D3 mortal wounds. In addition, when you use the Aura of Protection ability for the Luminark of Hysh from this battalion, add 1 to the roll that determines if a wound or mortal wound is negated.</characteristic>
-          </characteristics>
-        </profile>
-      </profiles>
-      <categoryLinks>
-        <categoryLink id="24c6-aabb-f3fd-c8bc" name="New CategoryLink" hidden="false" targetId="3706-e0e8-674f-c41b" primary="true"/>
-      </categoryLinks>
-      <selectionEntryGroups>
-        <selectionEntryGroup id="e6cc-9301-82cf-f470" name="1 Celestial Hurricanum with Celestial Battlemage" hidden="false" collective="false" import="true">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="b9eb-d7ac-a56f-795e" type="max"/>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="fb09-62e2-5f9a-0160" type="min"/>
-          </constraints>
-          <entryLinks>
-            <entryLink id="491d-9000-1e20-226d" name="Celestial Hurricanum with Celestial Battlemage" hidden="false" collective="false" import="true" targetId="b8b2-7494-343e-6c9c" type="selectionEntry">
-              <modifiers>
-                <modifier type="set" field="hidden" value="true">
-                  <conditions>
-                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="5a0f-bb3c-172a-694e" type="greaterThan"/>
-                  </conditions>
-                </modifier>
-              </modifiers>
-              <entryLinks>
-                <entryLink id="0331-c9f7-5051-5680" name="General" hidden="false" collective="false" import="true" targetId="98a4-3d6d-a7b9-399f" type="selectionEntry">
-                  <modifiers>
-                    <modifier type="add" field="category" value="db5f-919f-cbd3-f9ff">
-                      <conditions>
-                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="c5db-4b50-eb91-7a4c" type="greaterThan"/>
-                      </conditions>
-                    </modifier>
-                  </modifiers>
-                  <categoryLinks>
-                    <categoryLink id="d4b0-19d5-2371-0fb0" name="General - Human" hidden="false" targetId="5f17-4ccd-b223-4427" primary="false"/>
-                  </categoryLinks>
-                </entryLink>
-                <entryLink id="07d7-1d79-60bf-9d8d" name="Artefacts of Power" hidden="false" collective="false" import="true" targetId="b788-a656-5a3a-9c4f" type="selectionEntryGroup"/>
-                <entryLink id="3cfc-38f7-193b-ddb1" name="Command Traits" hidden="false" collective="false" import="true" targetId="8c92-8f4c-91f5-9c79" type="selectionEntryGroup"/>
-                <entryLink id="877c-b362-4af9-0ffd" name="Cities of Sigmar Spell Lores" hidden="false" collective="false" import="true" targetId="aa48-e2aa-1ecc-eb1a" type="selectionEntryGroup"/>
-                <entryLink id="f518-93d4-ae80-9308" name="Misthåvn Narcotics" hidden="false" collective="false" import="true" targetId="de8c-eb81-ab3a-6616" type="selectionEntryGroup"/>
-              </entryLinks>
-            </entryLink>
-          </entryLinks>
-        </selectionEntryGroup>
-        <selectionEntryGroup id="049c-ea72-6df8-291b" name="1 Luminark of Hysh" hidden="false" collective="false" import="true">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="f858-6e88-41d4-dae5" type="max"/>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="e956-dd27-23bd-cbb5" type="min"/>
-          </constraints>
-          <entryLinks>
-            <entryLink id="0c29-a240-3392-b54c" name="Luminark of Hysh" hidden="false" collective="false" import="true" targetId="23fb-797b-8727-77a3" type="selectionEntry">
-              <modifiers>
-                <modifier type="set" field="hidden" value="true">
-                  <conditions>
-                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="5a0f-bb3c-172a-694e" type="greaterThan"/>
-                  </conditions>
-                </modifier>
-              </modifiers>
-            </entryLink>
-          </entryLinks>
-        </selectionEntryGroup>
-        <selectionEntryGroup id="0cd6-d8d5-ded7-f316" name="1 Battlemage" hidden="false" collective="false" import="true">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d6ce-1a41-d888-3b4e" type="max"/>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="2644-6f44-44fc-41f1" type="min"/>
-          </constraints>
-          <entryLinks>
-            <entryLink id="1109-0dc4-7fdc-2a53" name="Battlemage" hidden="false" collective="false" import="true" targetId="fd2d-8df5-bf31-0ad9" type="selectionEntry">
-              <modifiers>
-                <modifier type="set" field="hidden" value="true">
-                  <conditions>
-                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="5a0f-bb3c-172a-694e" type="greaterThan"/>
-                  </conditions>
-                </modifier>
-              </modifiers>
-              <entryLinks>
-                <entryLink id="4cb8-d344-a3fa-c931" name="General" hidden="false" collective="false" import="true" targetId="98a4-3d6d-a7b9-399f" type="selectionEntry">
-                  <modifiers>
-                    <modifier type="add" field="category" value="db5f-919f-cbd3-f9ff">
-                      <conditions>
-                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="c5db-4b50-eb91-7a4c" type="greaterThan"/>
-                      </conditions>
-                    </modifier>
-                  </modifiers>
-                  <categoryLinks>
-                    <categoryLink id="45a4-edc4-becf-2a92" name="General - Human" hidden="false" targetId="5f17-4ccd-b223-4427" primary="false"/>
-                    <categoryLink id="51cc-c13a-edbe-3974" name="Adjutant Unlock" hidden="false" targetId="8974-618e-c993-fdeb" primary="false"/>
-                    <categoryLink id="d783-07d6-33d7-26c3" name="Honoured Retinue Unlock" hidden="false" targetId="b5b4-1120-6ef3-afa0" primary="false"/>
-                  </categoryLinks>
-                </entryLink>
-                <entryLink id="b26c-9908-70fc-a647" name="General&apos;s Adjutant" hidden="false" collective="false" import="true" targetId="9217-d5c0-9f8d-de1a" type="selectionEntry"/>
-                <entryLink id="3536-cf77-943b-04b6" name="Artefacts of Power" hidden="false" collective="false" import="true" targetId="b788-a656-5a3a-9c4f" type="selectionEntryGroup"/>
-                <entryLink id="a755-d3a1-25e9-7588" name="Command Traits" hidden="false" collective="false" import="true" targetId="8c92-8f4c-91f5-9c79" type="selectionEntryGroup"/>
-                <entryLink id="76c8-afdb-65e0-1c3b" name="Cities of Sigmar Spell Lores" hidden="false" collective="false" import="true" targetId="aa48-e2aa-1ecc-eb1a" type="selectionEntryGroup"/>
-                <entryLink id="e8f4-fb0a-0ccc-157c" name="Misthåvn Narcotics" hidden="false" collective="false" import="true" targetId="de8c-eb81-ab3a-6616" type="selectionEntryGroup"/>
-              </entryLinks>
-            </entryLink>
-          </entryLinks>
-        </selectionEntryGroup>
-      </selectionEntryGroups>
-      <costs>
-        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="140.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="9e79-e904-c824-c897" name="Vanari Battleline" hidden="false" collective="false" import="true" type="upgrade">
@@ -9771,6 +8322,76 @@ If the bearer has a Wounds characteristic of 7 or more, while they are in cover,
       <entryLinks>
         <entryLink id="6713-aa29-ceea-e2e8" name="Universal Prayer Scripture" hidden="false" collective="false" import="true" targetId="7104-ab27-d136-1df0" type="selectionEntryGroup"/>
       </entryLinks>
+    </selectionEntryGroup>
+    <selectionEntryGroup id="055a-e107-7fa3-0cc5" name="Mount Traits" publicationId="9e65-0058-6ffe-24a5" hidden="false" collective="false" import="true">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4373-740f-1bf3-b0aa" type="instanceOf"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="e3a6-45ca-4974-b489" type="instanceOf"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="996a-613c-4006-25e3" type="instanceOf"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="6cd6-b22e-bfcb-9589" type="instanceOf"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="b543-cb16-0c79-fbc6" type="instanceOf"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="1679-c790-1ce7-00d6" type="equalTo"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+        <modifier type="increment" field="7a39-9e28-b3b7-ffd7" value="1.0">
+          <repeats>
+            <repeat field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="99e1-bf54-e3ec-ab80" repeats="1" roundUp="false"/>
+          </repeats>
+          <conditions>
+            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="99e1-bf54-e3ec-ab80" type="greaterThan"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <constraints>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="86a3-6511-0dc0-e117" type="max"/>
+        <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="7a39-9e28-b3b7-ffd7" type="max"/>
+      </constraints>
+      <selectionEntries>
+        <selectionEntry id="fbbc-3253-7e02-252c" name="2 ~ Foetid Breath" hidden="false" collective="false" import="true" type="upgrade">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="9c4f-5945-0fe0-d28c" type="notInstanceOf"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <profiles>
+            <profile id="7ee2-9290-e64c-e0c8" name="Foetid Breath" hidden="false" typeId="61e3-eba4-7222-dee7" typeName="Mount/Companion">
+              <characteristics>
+                <characteristic name="Mount/Companion" typeId="e368-06f5-5b4f-64a3">When this model attacks with is Noxious Breath, it inflicts 1 mortal wound for each roll of 5+ instead of for each 6.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <costs>
+            <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="e02a-3f5d-6b68-d542" name="1 ~ Soaring Guardian" hidden="false" collective="false" import="true" type="upgrade">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4224-182d-231c-99ac" type="notInstanceOf"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <profiles>
+            <profile id="e429-cc6b-a471-7e03" name="Soaring Guardian" hidden="false" typeId="61e3-eba4-7222-dee7" typeName="Mount/Companion">
+              <characteristics>
+                <characteristic name="Mount/Companion" typeId="e368-06f5-5b4f-64a3">The first time this model is slain, before removing it from the battlefield, roll a dice. On a 1, this model is slain. On a 2+, this model is not slain. If this model is not slain, remove it from the battlefield and set it up anywhere on the battlefield more than 9&quot; from all enemy units. After this model is set up, you can heal up to D3 wounds allocated to it, and any wound that remain to be allocated to them are negated.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <costs>
+            <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
+          </costs>
+        </selectionEntry>
+      </selectionEntries>
     </selectionEntryGroup>
   </sharedSelectionEntryGroups>
   <sharedProfiles>

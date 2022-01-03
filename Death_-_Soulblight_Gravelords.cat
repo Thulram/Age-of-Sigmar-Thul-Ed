@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="3a96-1aa6-c9ff-4747" name="Death - Soulblight Gravelords" revision="14" battleScribeVersion="2.03" authorName="Thulram" library="false" gameSystemId="e832-3291-06be-cab1" gameSystemRevision="13" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="3a96-1aa6-c9ff-4747" name="Death - Soulblight Gravelords" revision="15" battleScribeVersion="2.03" authorName="Thulram" library="false" gameSystemId="e832-3291-06be-cab1" gameSystemRevision="14" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <profileTypes>
     <profileType id="2c49-92df-379b-d9c4" name="Cursed Mutations">
       <characteristicTypes>
@@ -31,6 +31,7 @@
               </categoryLinks>
             </entryLink>
             <entryLink id="5f1a-f2d8-3db5-8b59" name="Soulblight Spell Lores" hidden="false" collective="false" import="true" targetId="4d43-88d2-0f19-3528" type="selectionEntryGroup"/>
+            <entryLink id="7a3c-c9d1-1d32-f826" name="Battalion Formation" hidden="false" collective="false" import="true" targetId="81be-9ffd-27f4-e966" type="selectionEntryGroup"/>
           </entryLinks>
         </entryLink>
         <entryLink id="c102-1da2-b797-e1d4" name="The Crimson Court" hidden="false" collective="false" import="true" targetId="72c4-7313-f065-c13b" type="selectionEntry">
@@ -38,6 +39,9 @@
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="042e-d2d1-324f-b318" type="max"/>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="356f-06f7-b8a9-359b" type="min"/>
           </constraints>
+          <entryLinks>
+            <entryLink id="6e32-5eb1-9087-abdf" name="Battalion Formation" hidden="false" collective="false" import="true" targetId="81be-9ffd-27f4-e966" type="selectionEntryGroup"/>
+          </entryLinks>
         </entryLink>
       </entryLinks>
       <costs>
@@ -88,11 +92,251 @@
           <categoryLinks>
             <categoryLink id="5583-868c-5d71-39c2" name="Grand Strategy" hidden="false" targetId="318c-fa55-0855-47ef" primary="false"/>
           </categoryLinks>
+          <selectionEntries>
+            <selectionEntry id="9aa0-8aae-28b3-7035" name="Lust for Domination" hidden="false" collective="false" import="true" type="upgrade">
+              <profiles>
+                <profile id="e654-4c9d-e33f-eb55" name="Lust for Domination" hidden="false" typeId="7dc6-98f0-f5ba-fc16" typeName="Grand Strategy">
+                  <characteristics>
+                    <characteristic name="Grand Strategy" typeId="22d6-b382-f824-6381">When the battle ends, you complete this grand strategy if you control more gravesites than your opponent. Control of gravesites is determined in the same way as control of objective markers.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+            </selectionEntry>
+          </selectionEntries>
           <entryLinks>
             <entryLink id="bbdb-1d4f-7f74-fa3d" name="GHB &apos;21" hidden="false" collective="false" import="true" targetId="bb2d-2110-60b8-c13e" type="selectionEntryGroup"/>
           </entryLinks>
         </selectionEntryGroup>
       </selectionEntryGroups>
+      <costs>
+        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="660b-62ef-a6e8-26b9" name="Soulblight Gravelords Battle Tactics" hidden="false" collective="false" import="true" type="upgrade">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4373-740f-1bf3-b0aa" type="instanceOf"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="e3a6-45ca-4974-b489" type="instanceOf"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="996a-613c-4006-25e3" type="instanceOf"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="6cd6-b22e-bfcb-9589" type="instanceOf"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="b543-cb16-0c79-fbc6" type="instanceOf"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+      <constraints>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="9aa9-d995-3d3a-6dd5" type="max"/>
+      </constraints>
+      <profiles>
+        <profile id="69f3-19a8-61c2-1edb" name="Callous Overlord" hidden="false" typeId="4bb2-448c-446c-f522" typeName="Battle Tactic">
+          <characteristics>
+            <characteristic name="Battle Tactic" typeId="8c0f-be41-a70e-c699">Pick 1 friendly SUMMONABLE unit that is more than 3&quot; from all enemy units. You complete this battle tactic if that friendly unit is destroyed during this turn.</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="b592-e69a-78d6-be1e" name="Lust for Blood" hidden="false" typeId="4bb2-448c-446c-f522" typeName="Battle Tactic">
+          <characteristics>
+            <characteristic name="Battle Tactic" typeId="8c0f-be41-a70e-c699">You complete this battle tactic if your general or two other friendly VAMPIRE models used The Hunger and/or Mortarch of Blood ability to heal any wounds during this turn.</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="aa40-154a-6077-7848" name="Unstoppable Armies" hidden="false" typeId="4bb2-448c-446c-f522" typeName="Battle Tactic">
+          <characteristics>
+            <characteristic name="Battle Tactic" typeId="8c0f-be41-a70e-c699">You complete this battle tactic if, during this turn, you roll a 5+ when determining if you can replace a destroyed unit from your army using the Endless Legions battle trait.</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <categoryLinks>
+        <categoryLink id="bcea-c6d2-fdc1-dfeb" name="New CategoryLink" hidden="false" targetId="29f4-e63d-fa5b-1611" primary="true"/>
+      </categoryLinks>
+    </selectionEntry>
+    <selectionEntry id="118c-7613-7304-bb44" name="Radukar&apos;s Court" hidden="false" collective="false" import="true" type="upgrade">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4373-740f-1bf3-b0aa" type="instanceOf"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="e3a6-45ca-4974-b489" type="instanceOf"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="996a-613c-4006-25e3" type="instanceOf"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="6cd6-b22e-bfcb-9589" type="instanceOf"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="b543-cb16-0c79-fbc6" type="instanceOf"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+      <profiles>
+        <profile id="362c-938f-63e1-2af5" name="Magnificent" hidden="false" typeId="66c5-932e-004a-574c" typeName="Battalion Abilities">
+          <characteristics>
+            <characteristic name="Battalion Ability" typeId="23f7-32c0-e059-29b2">When you pick enhancements for your army, you can pick 1 extra enhancement.</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <categoryLinks>
+        <categoryLink id="ec78-2d48-0e45-045c" name="New CategoryLink" hidden="false" targetId="c03a-b1a8-66c6-3637" primary="true"/>
+      </categoryLinks>
+      <selectionEntries>
+        <selectionEntry id="55fc-8d37-1a76-023a" name="Vyrkos Blood-born unit" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="4639-4cbe-20c2-1714" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="9431-5d0a-b301-b9f2" type="min"/>
+          </constraints>
+          <costs>
+            <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="f89c-ffb7-f463-c7e3" name="Vargskyr" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="79d5-1bbb-6667-b72c" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="17ea-512f-f382-cd80" type="min"/>
+          </constraints>
+          <costs>
+            <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="d5bc-a129-3b03-7a59" name="Watch Captain Halgrim" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="a255-13f6-e48a-5e3c" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="9a33-d3c9-0c24-7d22" type="min"/>
+          </constraints>
+          <costs>
+            <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="07ac-4138-bb8a-4a12" name="Kosargi Night Guard unit" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="c12f-e0c4-a3e1-02a4" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="50c0-b29a-3495-a7e6" type="min"/>
+          </constraints>
+          <costs>
+            <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="9284-aa6d-3f30-66cc" name="Torgillius the Chamberlain" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d196-5089-cf2c-c29f" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="3e1b-4586-568f-305d" type="min"/>
+          </constraints>
+          <costs>
+            <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="4ec0-536a-0e69-c09e" name="Gorslav the Gravekeeper" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="e5d6-bffd-9371-bf36" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="181a-c09f-a57f-f18e" type="min"/>
+          </constraints>
+          <costs>
+            <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="2cb4-be9b-322f-0864" name="Radukar the Wolf" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d38a-bf80-ca7f-73d0" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="dcbf-e689-8680-aae1" type="min"/>
+          </constraints>
+          <costs>
+            <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
+          </costs>
+        </selectionEntry>
+      </selectionEntries>
+      <costs>
+        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="f9e2-1697-56ba-6915" name="Fellwing Flock" hidden="false" collective="false" import="true" type="upgrade">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4373-740f-1bf3-b0aa" type="instanceOf"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="e3a6-45ca-4974-b489" type="instanceOf"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="996a-613c-4006-25e3" type="instanceOf"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="6cd6-b22e-bfcb-9589" type="instanceOf"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="b543-cb16-0c79-fbc6" type="instanceOf"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+      <profiles>
+        <profile id="95bf-1dcc-6440-be00" name="Swift" hidden="false" typeId="66c5-932e-004a-574c" typeName="Battalion Abilities">
+          <characteristics>
+            <characteristic name="Battalion Ability" typeId="23f7-32c0-e059-29b2">Once per battle, 1 unit from this battalion can receive the At the Double or Forward to Victory command without the command being issued and without a command point being spent.</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <categoryLinks>
+        <categoryLink id="a3b1-2ba8-4860-bc7f" name="New CategoryLink" hidden="false" targetId="c03a-b1a8-66c6-3637" primary="true"/>
+      </categoryLinks>
+      <selectionEntries>
+        <selectionEntry id="315b-154e-ddef-4576" name="Fell Bats unit" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="3.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="7cb6-6ac0-a6b2-ca0c" type="max"/>
+            <constraint field="selections" scope="parent" value="3.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="9ed0-7497-f237-ce5a" type="min"/>
+          </constraints>
+          <costs>
+            <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="296e-52e8-0d0a-ba22" name="Vargheists unit" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="3.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="2d8b-16c8-c0d3-2f50" type="max"/>
+            <constraint field="selections" scope="parent" value="2.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="674c-6dd2-10f8-dfff" type="min"/>
+          </constraints>
+          <costs>
+            <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
+          </costs>
+        </selectionEntry>
+      </selectionEntries>
+      <costs>
+        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="0768-2513-0161-2d06" name="Deathstench Drove" hidden="false" collective="false" import="true" type="upgrade">
+      <profiles>
+        <profile id="02ab-b2f7-4667-55d5" name="Slayers" hidden="false" typeId="66c5-932e-004a-574c" typeName="Battalion Abilities">
+          <characteristics>
+            <characteristic name="Battalion Ability" typeId="23f7-32c0-e059-29b2">Once per battle, 1 unit from this battalion can receive the All-out Attack or Unleash Hell command without the command being issued and without a command point being spent.</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <categoryLinks>
+        <categoryLink id="e694-012c-a9e9-e484" name="New CategoryLink" hidden="false" targetId="c03a-b1a8-66c6-3637" primary="true"/>
+      </categoryLinks>
+      <selectionEntries>
+        <selectionEntry id="056c-ca26-1ed2-e420" name="Deadwalker Zombies unit" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="2.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="bdf3-7ec3-7bff-29a4" type="max"/>
+            <constraint field="selections" scope="parent" value="2.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="521e-cf7d-f925-42a1" type="min"/>
+          </constraints>
+          <costs>
+            <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="4845-e8f1-5beb-6d2f" name="Dire Wolves unit" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="2.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="4460-b8f0-d5fd-d5c6" type="max"/>
+            <constraint field="selections" scope="parent" value="2.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="1ced-413c-f168-19c9" type="min"/>
+          </constraints>
+          <costs>
+            <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="22a8-0952-40c1-b274" name="Corpse Cart unit" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="2.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="ebdc-4f24-8cdf-ae84" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="995a-8cc3-793d-81ea" type="min"/>
+          </constraints>
+          <costs>
+            <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
+          </costs>
+        </selectionEntry>
+      </selectionEntries>
       <costs>
         <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
       </costs>
@@ -183,9 +427,14 @@
       </infoLinks>
       <entryLinks>
         <entryLink id="5d87-73ba-15a5-958a" name="Bonus General" hidden="false" collective="false" import="true" targetId="c608-7a89-b2b4-124d" type="selectionEntry"/>
+        <entryLink id="362b-6d5e-6fa8-a7ee" name="Battalion Formation" hidden="false" collective="false" import="true" targetId="81be-9ffd-27f4-e966" type="selectionEntryGroup"/>
       </entryLinks>
     </entryLink>
-    <entryLink id="98b5-98ea-2aeb-cd6d" name="Bat Swarms" hidden="false" collective="false" import="true" targetId="ecb4-f1ee-17bd-0d41" type="selectionEntry"/>
+    <entryLink id="98b5-98ea-2aeb-cd6d" name="Bat Swarms" hidden="false" collective="false" import="true" targetId="ecb4-f1ee-17bd-0d41" type="selectionEntry">
+      <entryLinks>
+        <entryLink id="7314-62ad-8a5b-1fcc" name="Battalion Formation" hidden="false" collective="false" import="true" targetId="81be-9ffd-27f4-e966" type="selectionEntryGroup"/>
+      </entryLinks>
+    </entryLink>
     <entryLink id="f609-be6c-faf3-b9ba" name="Belladamma Volga, First of the Vyrkos" hidden="false" collective="false" import="true" targetId="f175-fe47-2882-b4e1" type="selectionEntry">
       <entryLinks>
         <entryLink id="72db-3e90-5ef8-74dd" name="General" hidden="false" collective="false" import="true" targetId="98a4-3d6d-a7b9-399f" type="selectionEntry">
@@ -210,6 +459,7 @@
           </modifiers>
         </entryLink>
         <entryLink id="cd1b-9ad2-a066-27e0" name="Soulblight Spell Lores" hidden="false" collective="false" import="true" targetId="4d43-88d2-0f19-3528" type="selectionEntryGroup"/>
+        <entryLink id="850d-295e-bef4-3d90" name="Battalion Formation" hidden="false" collective="false" import="true" targetId="81be-9ffd-27f4-e966" type="selectionEntryGroup"/>
       </entryLinks>
     </entryLink>
     <entryLink id="4e9c-bb35-54e3-a7af" name="Black Knights" hidden="false" collective="false" import="true" targetId="8d25-e2ba-9940-fced" type="selectionEntry">
@@ -232,6 +482,9 @@
       <categoryLinks>
         <categoryLink id="77c5-cf60-428d-5157" name="Battleline" hidden="false" targetId="a42d-220e-6a88-7bf6" primary="false"/>
       </categoryLinks>
+      <entryLinks>
+        <entryLink id="bd1f-29fb-f960-66bb" name="Battalion Formation" hidden="false" collective="false" import="true" targetId="81be-9ffd-27f4-e966" type="selectionEntryGroup"/>
+      </entryLinks>
     </entryLink>
     <entryLink id="5e96-a7a2-4cd8-06af" name="Blood Knights" hidden="false" collective="false" import="true" targetId="bac1-b8ab-b909-b0f0" type="selectionEntry">
       <modifiers>
@@ -253,6 +506,9 @@
       <categoryLinks>
         <categoryLink id="9d3d-dc56-81e2-4fa2" name="Battleline" hidden="false" targetId="a42d-220e-6a88-7bf6" primary="false"/>
       </categoryLinks>
+      <entryLinks>
+        <entryLink id="d079-92d6-9198-210f" name="Battalion Formation" hidden="false" collective="false" import="true" targetId="81be-9ffd-27f4-e966" type="selectionEntryGroup"/>
+      </entryLinks>
     </entryLink>
     <entryLink id="6c41-cd3f-5bb8-374a" name="Bloodseeker Palanquin" hidden="false" collective="false" import="true" targetId="9520-ca5f-d399-97a4" type="selectionEntry">
       <entryLinks>
@@ -260,21 +516,43 @@
         <entryLink id="3baa-05b7-29c7-3a5e" name="Artefacts of Power" hidden="false" collective="false" import="true" targetId="b3cb-5911-b87c-160d" type="selectionEntryGroup"/>
         <entryLink id="a96f-7c86-1b6f-4e0f" name="Command Traits" hidden="false" collective="false" import="true" targetId="22b7-a890-181c-f9ee" type="selectionEntryGroup"/>
         <entryLink id="e5ac-5cf9-7fbf-b184" name="Soulblight Spell Lores" hidden="false" collective="false" import="true" targetId="4d43-88d2-0f19-3528" type="selectionEntryGroup"/>
+        <entryLink id="47d7-214a-1836-6663" name="Battalion Formation" hidden="false" collective="false" import="true" targetId="81be-9ffd-27f4-e966" type="selectionEntryGroup"/>
       </entryLinks>
     </entryLink>
-    <entryLink id="c52d-b08a-6c00-94b2" name="Corpse Cart" hidden="false" collective="false" import="true" targetId="1d01-72f6-9c80-bff9" type="selectionEntry"/>
+    <entryLink id="c52d-b08a-6c00-94b2" name="Corpse Cart" hidden="false" collective="false" import="true" targetId="1d01-72f6-9c80-bff9" type="selectionEntry">
+      <entryLinks>
+        <entryLink id="e461-5e59-2dbe-abbb" name="Battalion Formation" hidden="false" collective="false" import="true" targetId="81be-9ffd-27f4-e966" type="selectionEntryGroup"/>
+      </entryLinks>
+    </entryLink>
     <entryLink id="2213-90c9-f7bd-cef1" name="Coven Throne" hidden="false" collective="false" import="true" targetId="82aa-d411-3ad2-73b4" type="selectionEntry">
       <entryLinks>
         <entryLink id="99ea-a3c3-70fa-4203" name="General" hidden="false" collective="false" import="true" targetId="98a4-3d6d-a7b9-399f" type="selectionEntry"/>
         <entryLink id="2373-1215-4d6f-33fc" name="Artefacts of Power" hidden="false" collective="false" import="true" targetId="b3cb-5911-b87c-160d" type="selectionEntryGroup"/>
         <entryLink id="eab7-82cf-5fb6-4f4d" name="Command Traits" hidden="false" collective="false" import="true" targetId="22b7-a890-181c-f9ee" type="selectionEntryGroup"/>
         <entryLink id="b266-da68-6b9d-ba35" name="Soulblight Spell Lores" hidden="false" collective="false" import="true" targetId="4d43-88d2-0f19-3528" type="selectionEntryGroup"/>
+        <entryLink id="3ad2-6641-5d1d-f1cb" name="Battalion Formation" hidden="false" collective="false" import="true" targetId="81be-9ffd-27f4-e966" type="selectionEntryGroup"/>
       </entryLinks>
     </entryLink>
-    <entryLink id="9a73-4d16-3a46-6443" name="Deadwalker Zombies" hidden="false" collective="false" import="true" targetId="de72-99b6-8324-0811" type="selectionEntry"/>
-    <entryLink id="d606-2bb6-db44-67df" name="Deathrattle Skeletons" hidden="false" collective="false" import="true" targetId="f55e-ecda-25f5-0d08" type="selectionEntry"/>
-    <entryLink id="8f52-a3e3-ff43-445d" name="Dire Wolves" hidden="false" collective="false" import="true" targetId="2554-5fb7-41bd-7459" type="selectionEntry"/>
-    <entryLink id="808d-dd48-2ef6-3520" name="Fell Bats" hidden="false" collective="false" import="true" targetId="8c6d-f571-9842-b259" type="selectionEntry"/>
+    <entryLink id="9a73-4d16-3a46-6443" name="Deadwalker Zombies" hidden="false" collective="false" import="true" targetId="de72-99b6-8324-0811" type="selectionEntry">
+      <entryLinks>
+        <entryLink id="37f3-98bd-f804-9f73" name="Battalion Formation" hidden="false" collective="false" import="true" targetId="81be-9ffd-27f4-e966" type="selectionEntryGroup"/>
+      </entryLinks>
+    </entryLink>
+    <entryLink id="d606-2bb6-db44-67df" name="Deathrattle Skeletons" hidden="false" collective="false" import="true" targetId="f55e-ecda-25f5-0d08" type="selectionEntry">
+      <entryLinks>
+        <entryLink id="cb2d-bb89-029e-1aee" name="Battalion Formation" hidden="false" collective="false" import="true" targetId="81be-9ffd-27f4-e966" type="selectionEntryGroup"/>
+      </entryLinks>
+    </entryLink>
+    <entryLink id="8f52-a3e3-ff43-445d" name="Dire Wolves" hidden="false" collective="false" import="true" targetId="2554-5fb7-41bd-7459" type="selectionEntry">
+      <entryLinks>
+        <entryLink id="20d2-487b-305e-d0fa" name="Battalion Formation" hidden="false" collective="false" import="true" targetId="81be-9ffd-27f4-e966" type="selectionEntryGroup"/>
+      </entryLinks>
+    </entryLink>
+    <entryLink id="808d-dd48-2ef6-3520" name="Fell Bats" hidden="false" collective="false" import="true" targetId="8c6d-f571-9842-b259" type="selectionEntry">
+      <entryLinks>
+        <entryLink id="a6a7-6f47-6893-c7e7" name="Battalion Formation" hidden="false" collective="false" import="true" targetId="81be-9ffd-27f4-e966" type="selectionEntryGroup"/>
+      </entryLinks>
+    </entryLink>
     <entryLink id="7e98-6b0f-47c1-cdff" name="Gorslav the Gravekeeper" hidden="false" collective="false" import="true" targetId="70cb-15ea-1cc4-c304" type="selectionEntry">
       <entryLinks>
         <entryLink id="16a8-a2c9-e183-f008" name="General" hidden="false" collective="false" import="true" targetId="98a4-3d6d-a7b9-399f" type="selectionEntry">
@@ -282,6 +560,7 @@
             <categoryLink id="d553-3057-d99e-714b" name="Named General" hidden="false" targetId="8b3d-7f03-e1f9-eaf5" primary="false"/>
           </categoryLinks>
         </entryLink>
+        <entryLink id="05f6-2814-b42c-d828" name="Battalion Formation" hidden="false" collective="false" import="true" targetId="81be-9ffd-27f4-e966" type="selectionEntryGroup"/>
       </entryLinks>
     </entryLink>
     <entryLink id="dd50-ddc7-87d7-e80f" name="Grave Guard" hidden="false" collective="false" import="true" targetId="f997-8325-c4e8-d77d" type="selectionEntry">
@@ -304,8 +583,15 @@
       <categoryLinks>
         <categoryLink id="0e4a-6603-230c-3248" name="Battleline" hidden="false" targetId="a42d-220e-6a88-7bf6" primary="false"/>
       </categoryLinks>
+      <entryLinks>
+        <entryLink id="875f-0292-69de-f246" name="Battalion Formation" hidden="false" collective="false" import="true" targetId="81be-9ffd-27f4-e966" type="selectionEntryGroup"/>
+      </entryLinks>
     </entryLink>
-    <entryLink id="8982-168c-8d57-972e" name="Kosargi Nightguard" hidden="false" collective="false" import="true" targetId="374f-b4b2-4eb2-dad5" type="selectionEntry"/>
+    <entryLink id="8982-168c-8d57-972e" name="Kosargi Nightguard" hidden="false" collective="false" import="true" targetId="374f-b4b2-4eb2-dad5" type="selectionEntry">
+      <entryLinks>
+        <entryLink id="2a37-e4d6-d830-6bda" name="Battalion Formation" hidden="false" collective="false" import="true" targetId="81be-9ffd-27f4-e966" type="selectionEntryGroup"/>
+      </entryLinks>
+    </entryLink>
     <entryLink id="5eff-fa83-b38a-a2eb" name="Kritza, the Rat Prince" hidden="false" collective="false" import="true" targetId="8562-f09f-745e-6e6c" type="selectionEntry">
       <entryLinks>
         <entryLink id="59e9-9645-35d3-bf3f" name="General" hidden="false" collective="false" import="true" targetId="98a4-3d6d-a7b9-399f" type="selectionEntry">
@@ -329,6 +615,7 @@
             </modifier>
           </modifiers>
         </entryLink>
+        <entryLink id="8b62-f86e-18b1-8006" name="Battalion Formation" hidden="false" collective="false" import="true" targetId="81be-9ffd-27f4-e966" type="selectionEntryGroup"/>
       </entryLinks>
     </entryLink>
     <entryLink id="b995-de7c-eaef-301a" name="Lady Annika, the Thirsting Blade" hidden="false" collective="false" import="true" targetId="c34a-322a-188b-3033" type="selectionEntry">
@@ -354,6 +641,7 @@
             <categoryLink id="1d14-3fc2-40bc-c090" name="Named General" hidden="false" targetId="8b3d-7f03-e1f9-eaf5" primary="false"/>
           </categoryLinks>
         </entryLink>
+        <entryLink id="72d8-ab2c-8a4d-0cc9" name="Battalion Formation" hidden="false" collective="false" import="true" targetId="81be-9ffd-27f4-e966" type="selectionEntryGroup"/>
       </entryLinks>
     </entryLink>
     <entryLink id="adc6-1359-e9b9-7bd6" name="Lauka Vai, Mother of Nightmares" hidden="false" collective="false" import="true" targetId="41a5-c5f7-6ecc-72c4" type="selectionEntry">
@@ -380,6 +668,7 @@
           </modifiers>
         </entryLink>
         <entryLink id="cdc8-bdd0-1bc1-c716" name="Soulblight Spell Lores" hidden="false" collective="false" import="true" targetId="4d43-88d2-0f19-3528" type="selectionEntryGroup"/>
+        <entryLink id="2b74-0e2c-2d80-12f6" name="Battalion Formation" hidden="false" collective="false" import="true" targetId="81be-9ffd-27f4-e966" type="selectionEntryGroup"/>
       </entryLinks>
     </entryLink>
     <entryLink id="9685-ab54-3937-762c" name="Mannfred von Carstein, Mortach of Night" hidden="false" collective="false" import="true" targetId="31ab-92c0-f229-43ff" type="selectionEntry">
@@ -406,15 +695,21 @@
           </modifiers>
         </entryLink>
         <entryLink id="e732-a2c5-f07c-1234" name="Soulblight Spell Lores" hidden="false" collective="false" import="true" targetId="4d43-88d2-0f19-3528" type="selectionEntryGroup"/>
+        <entryLink id="4a98-70eb-a15f-bb9a" name="Battalion Formation" hidden="false" collective="false" import="true" targetId="81be-9ffd-27f4-e966" type="selectionEntryGroup"/>
       </entryLinks>
     </entryLink>
-    <entryLink id="1840-5a1a-2bc9-bfa4" name="Mortis Engine" hidden="false" collective="false" import="true" targetId="41c3-f954-ea82-f094" type="selectionEntry"/>
+    <entryLink id="1840-5a1a-2bc9-bfa4" name="Mortis Engine" hidden="false" collective="false" import="true" targetId="41c3-f954-ea82-f094" type="selectionEntry">
+      <entryLinks>
+        <entryLink id="24c9-d238-46fe-3088" name="Battalion Formation" hidden="false" collective="false" import="true" targetId="81be-9ffd-27f4-e966" type="selectionEntryGroup"/>
+      </entryLinks>
+    </entryLink>
     <entryLink id="8315-24de-8c4e-aa29" name="Necromancer" hidden="false" collective="false" import="true" targetId="a6bd-98bf-79f6-6b3a" type="selectionEntry">
       <entryLinks>
         <entryLink id="2f7a-0eae-7c17-2ee5" name="General" hidden="false" collective="false" import="true" targetId="98a4-3d6d-a7b9-399f" type="selectionEntry"/>
         <entryLink id="ce37-798d-51be-e8a4" name="Artefacts of Power" hidden="false" collective="false" import="true" targetId="b3cb-5911-b87c-160d" type="selectionEntryGroup"/>
         <entryLink id="b413-2701-f881-6773" name="Command Traits" hidden="false" collective="false" import="true" targetId="22b7-a890-181c-f9ee" type="selectionEntryGroup"/>
         <entryLink id="9bff-16be-c8ea-596a" name="Soulblight Spell Lores" hidden="false" collective="false" import="true" targetId="4d43-88d2-0f19-3528" type="selectionEntryGroup"/>
+        <entryLink id="598d-19be-e3be-c169" name="Battalion Formation" hidden="false" collective="false" import="true" targetId="81be-9ffd-27f4-e966" type="selectionEntryGroup"/>
       </entryLinks>
     </entryLink>
     <entryLink id="c6f0-1796-de33-d941" name="Neferata, Mortarch of Blood" hidden="false" collective="false" import="true" targetId="81d2-722f-acd6-8b86" type="selectionEntry">
@@ -441,6 +736,7 @@
           </modifiers>
         </entryLink>
         <entryLink id="c425-b42d-bcff-2df8" name="Soulblight Spell Lores" hidden="false" collective="false" import="true" targetId="4d43-88d2-0f19-3528" type="selectionEntryGroup"/>
+        <entryLink id="db09-85ff-527f-0f33" name="Battalion Formation" hidden="false" collective="false" import="true" targetId="81be-9ffd-27f4-e966" type="selectionEntryGroup"/>
       </entryLinks>
     </entryLink>
     <entryLink id="601f-f85b-3215-7fb7" name="Prince Vhordrai" hidden="false" collective="false" import="true" targetId="b239-b39e-dbef-fe11" type="selectionEntry">
@@ -467,6 +763,7 @@
           </modifiers>
         </entryLink>
         <entryLink id="6325-4cd6-6ff8-f15b" name="Soulblight Spell Lores" hidden="false" collective="false" import="true" targetId="4d43-88d2-0f19-3528" type="selectionEntryGroup"/>
+        <entryLink id="947e-38a4-c05b-1d46" name="Battalion Formation" hidden="false" collective="false" import="true" targetId="81be-9ffd-27f4-e966" type="selectionEntryGroup"/>
       </entryLinks>
     </entryLink>
     <entryLink id="b298-c51d-f12b-dfa2" name="Radukar the Beast" hidden="false" collective="false" import="true" targetId="49ca-2cc6-4a3e-2307" type="selectionEntry">
@@ -492,6 +789,7 @@
             <categoryLink id="27c3-f564-e728-bc7a" name="Named General" hidden="false" targetId="8b3d-7f03-e1f9-eaf5" primary="false"/>
           </categoryLinks>
         </entryLink>
+        <entryLink id="1e03-2615-1856-e37c" name="Battalion Formation" hidden="false" collective="false" import="true" targetId="81be-9ffd-27f4-e966" type="selectionEntryGroup"/>
       </entryLinks>
     </entryLink>
     <entryLink id="e941-e954-ff04-0de9" name="Radukar the Wolf" hidden="false" collective="false" import="true" targetId="47da-4a42-dcac-b0ae" type="selectionEntry">
@@ -502,6 +800,7 @@
           </categoryLinks>
         </entryLink>
         <entryLink id="df3a-d7a0-e87e-f1c7" name="Soulblight Spell Lores" hidden="false" collective="false" import="true" targetId="4d43-88d2-0f19-3528" type="selectionEntryGroup"/>
+        <entryLink id="3bf8-1ac6-ff4a-a4a3" name="Battalion Formation" hidden="false" collective="false" import="true" targetId="81be-9ffd-27f4-e966" type="selectionEntryGroup"/>
       </entryLinks>
     </entryLink>
     <entryLink id="5602-7cad-4074-517c" name="Terrorgheist" hidden="false" collective="false" import="true" targetId="25ec-bcf0-6bb3-230d" type="selectionEntry">
@@ -526,9 +825,14 @@
       </categoryLinks>
       <entryLinks>
         <entryLink id="7988-253e-bbdc-f6ba" name="Cursed Mutations" hidden="false" collective="false" import="true" targetId="f50e-8cff-5ddc-750f" type="selectionEntryGroup"/>
+        <entryLink id="9b0f-fea9-ac4a-4bb0" name="Battalion Formation" hidden="false" collective="false" import="true" targetId="81be-9ffd-27f4-e966" type="selectionEntryGroup"/>
       </entryLinks>
     </entryLink>
-    <entryLink id="7ad1-67de-ed65-21a1" name="The Sepulchral Guard" hidden="false" collective="false" import="true" targetId="2b75-05aa-4f5c-09fc" type="selectionEntry"/>
+    <entryLink id="7ad1-67de-ed65-21a1" name="The Sepulchral Guard" hidden="false" collective="false" import="true" targetId="2b75-05aa-4f5c-09fc" type="selectionEntry">
+      <entryLinks>
+        <entryLink id="591c-707c-319f-4fb7" name="Battalion Formation" hidden="false" collective="false" import="true" targetId="81be-9ffd-27f4-e966" type="selectionEntryGroup"/>
+      </entryLinks>
+    </entryLink>
     <entryLink id="d407-1d35-2c84-733b" name="Torgillius the Chamberlain" hidden="false" collective="false" import="true" targetId="0a5b-cee3-575e-a4da" type="selectionEntry">
       <entryLinks>
         <entryLink id="5f89-2aa3-5f9b-ffc3" name="General" hidden="false" collective="false" import="true" targetId="98a4-3d6d-a7b9-399f" type="selectionEntry">
@@ -537,6 +841,7 @@
           </categoryLinks>
         </entryLink>
         <entryLink id="a159-d3f6-3b40-d6f0" name="Soulblight Spell Lores" hidden="false" collective="false" import="true" targetId="4d43-88d2-0f19-3528" type="selectionEntryGroup"/>
+        <entryLink id="0c32-8b93-84b3-9fc3" name="Battalion Formation" hidden="false" collective="false" import="true" targetId="81be-9ffd-27f4-e966" type="selectionEntryGroup"/>
       </entryLinks>
     </entryLink>
     <entryLink id="7520-3663-d156-f3eb" name="Vampire Lord" hidden="false" collective="false" import="true" targetId="8c74-ae18-a6ea-9f54" type="selectionEntry">
@@ -545,6 +850,8 @@
         <entryLink id="e275-08b4-c00d-3e65" name="Artefacts of Power" hidden="false" collective="false" import="true" targetId="b3cb-5911-b87c-160d" type="selectionEntryGroup"/>
         <entryLink id="31bb-1067-2200-e1f5" name="Command Traits" hidden="false" collective="false" import="true" targetId="22b7-a890-181c-f9ee" type="selectionEntryGroup"/>
         <entryLink id="f492-7632-6811-e501" name="Soulblight Spell Lores" hidden="false" collective="false" import="true" targetId="4d43-88d2-0f19-3528" type="selectionEntryGroup"/>
+        <entryLink id="817a-9e2f-9aa4-39fd" name="Unparalleled Expertise" hidden="false" collective="false" import="true" targetId="a56b-2eb9-6ee8-49bc" type="selectionEntryGroup"/>
+        <entryLink id="e816-0bc1-0285-9693" name="Battalion Formation" hidden="false" collective="false" import="true" targetId="81be-9ffd-27f4-e966" type="selectionEntryGroup"/>
       </entryLinks>
     </entryLink>
     <entryLink id="d2e8-038f-d158-18f5" name="Vampire Lord on Zombie Dragon" hidden="false" collective="false" import="true" targetId="d271-86db-9fa8-fbdb" type="selectionEntry">
@@ -554,6 +861,9 @@
         <entryLink id="e19d-2edd-0514-1707" name="Command Traits" hidden="false" collective="false" import="true" targetId="22b7-a890-181c-f9ee" type="selectionEntryGroup"/>
         <entryLink id="384d-5830-f8a2-56ac" name="Soulblight Spell Lores" hidden="false" collective="false" import="true" targetId="4d43-88d2-0f19-3528" type="selectionEntryGroup"/>
         <entryLink id="148c-a48d-cf16-f9df" name="Cursed Mutations" hidden="false" collective="false" import="true" targetId="f50e-8cff-5ddc-750f" type="selectionEntryGroup"/>
+        <entryLink id="83d2-83ac-20d1-eb45" name="Unparalleled Expertise" hidden="false" collective="false" import="true" targetId="a56b-2eb9-6ee8-49bc" type="selectionEntryGroup"/>
+        <entryLink id="fb9a-601b-e512-3aa6" name="Mount Traits" hidden="false" collective="false" import="true" targetId="ffed-b9b4-b8a8-4dfe" type="selectionEntryGroup"/>
+        <entryLink id="4183-f188-d888-2cda" name="Battalion Formation" hidden="false" collective="false" import="true" targetId="81be-9ffd-27f4-e966" type="selectionEntryGroup"/>
       </entryLinks>
     </entryLink>
     <entryLink id="3d20-2034-2a00-afa3" name="Vargheists" hidden="false" collective="false" import="true" targetId="0a86-1e78-f9ca-42a2" type="selectionEntry">
@@ -576,17 +886,29 @@
       <categoryLinks>
         <categoryLink id="dd77-e2dc-a674-1efd" name="Battleline" hidden="false" targetId="a42d-220e-6a88-7bf6" primary="false"/>
       </categoryLinks>
+      <entryLinks>
+        <entryLink id="2e93-4e99-e91f-ac2d" name="Battalion Formation" hidden="false" collective="false" import="true" targetId="81be-9ffd-27f4-e966" type="selectionEntryGroup"/>
+      </entryLinks>
     </entryLink>
-    <entryLink id="9e53-e430-a99e-634f" name="Vargskyr" hidden="false" collective="false" import="true" targetId="2fa6-5775-31aa-89fa" type="selectionEntry"/>
+    <entryLink id="9e53-e430-a99e-634f" name="Vargskyr" hidden="false" collective="false" import="true" targetId="2fa6-5775-31aa-89fa" type="selectionEntry">
+      <entryLinks>
+        <entryLink id="109a-d869-9d79-ce7b" name="Battalion Formation" hidden="false" collective="false" import="true" targetId="81be-9ffd-27f4-e966" type="selectionEntryGroup"/>
+      </entryLinks>
+    </entryLink>
     <entryLink id="ef02-e16e-e6c3-830a" name="Vengorian Lord" hidden="false" collective="false" import="true" targetId="348b-6a8f-2e15-2d75" type="selectionEntry">
       <entryLinks>
         <entryLink id="0cf7-9e0a-7b18-b817" name="General" hidden="false" collective="false" import="true" targetId="98a4-3d6d-a7b9-399f" type="selectionEntry"/>
         <entryLink id="9043-407a-0281-e072" name="Artefacts of Power" hidden="false" collective="false" import="true" targetId="b3cb-5911-b87c-160d" type="selectionEntryGroup"/>
         <entryLink id="e636-4d15-8d72-d045" name="Command Traits" hidden="false" collective="false" import="true" targetId="22b7-a890-181c-f9ee" type="selectionEntryGroup"/>
         <entryLink id="e7de-9229-8437-e675" name="Soulblight Spell Lores" hidden="false" collective="false" import="true" targetId="4d43-88d2-0f19-3528" type="selectionEntryGroup"/>
+        <entryLink id="d5f4-2685-df15-32f6" name="Battalion Formation" hidden="false" collective="false" import="true" targetId="81be-9ffd-27f4-e966" type="selectionEntryGroup"/>
       </entryLinks>
     </entryLink>
-    <entryLink id="3995-2498-df10-1b92" name="Vyrkos Blood-born" hidden="false" collective="false" import="true" targetId="2cc6-6fea-2a3a-8502" type="selectionEntry"/>
+    <entryLink id="3995-2498-df10-1b92" name="Vyrkos Blood-born" hidden="false" collective="false" import="true" targetId="2cc6-6fea-2a3a-8502" type="selectionEntry">
+      <entryLinks>
+        <entryLink id="1e01-4c3e-c717-433c" name="Battalion Formation" hidden="false" collective="false" import="true" targetId="81be-9ffd-27f4-e966" type="selectionEntryGroup"/>
+      </entryLinks>
+    </entryLink>
     <entryLink id="335c-2801-4d73-3319" name="Watch Captain Halgrim" hidden="false" collective="false" import="true" targetId="dddc-7af2-f709-8bc0" type="selectionEntry">
       <entryLinks>
         <entryLink id="91bf-c4e2-0414-a4b2" name="General" hidden="false" collective="false" import="true" targetId="98a4-3d6d-a7b9-399f" type="selectionEntry">
@@ -594,6 +916,7 @@
             <categoryLink id="176b-bcf5-90f5-f7e4" name="Named General" hidden="false" targetId="8b3d-7f03-e1f9-eaf5" primary="false"/>
           </categoryLinks>
         </entryLink>
+        <entryLink id="becd-8419-ac14-5722" name="Battalion Formation" hidden="false" collective="false" import="true" targetId="81be-9ffd-27f4-e966" type="selectionEntryGroup"/>
       </entryLinks>
     </entryLink>
     <entryLink id="ebde-0f0e-0331-e867" name="Wight King" hidden="false" collective="false" import="true" targetId="174e-ef6d-2deb-5c0f" type="selectionEntry">
@@ -606,6 +929,7 @@
             <categoryLink id="b58f-66a6-db69-7ca7" name="General - Wight King" hidden="false" targetId="6c61-69cd-cc7d-c23e" primary="false"/>
           </categoryLinks>
         </entryLink>
+        <entryLink id="976f-6ea3-2d77-148a" name="Battalion Formation" hidden="false" collective="false" import="true" targetId="81be-9ffd-27f4-e966" type="selectionEntryGroup"/>
       </entryLinks>
     </entryLink>
     <entryLink id="4be8-04df-0cbf-47b5" name="Wight King on Skeletal Steed" hidden="false" collective="false" import="true" targetId="79ca-cc53-f20f-3348" type="selectionEntry">
@@ -618,6 +942,7 @@
         <entryLink id="afdb-eb2e-2ab2-7ed8" name="Artefacts of Power" hidden="false" collective="false" import="true" targetId="b3cb-5911-b87c-160d" type="selectionEntryGroup"/>
         <entryLink id="7581-95df-311e-531a" name="Command Traits" hidden="false" collective="false" import="true" targetId="22b7-a890-181c-f9ee" type="selectionEntryGroup"/>
         <entryLink id="d75e-900f-3289-ea00" name="Soulblight Spell Lores" hidden="false" collective="false" import="true" targetId="4d43-88d2-0f19-3528" type="selectionEntryGroup"/>
+        <entryLink id="f3b7-8914-e0e2-97ce" name="Battalion Formation" hidden="false" collective="false" import="true" targetId="81be-9ffd-27f4-e966" type="selectionEntryGroup"/>
       </entryLinks>
     </entryLink>
     <entryLink id="7899-5e34-6db5-89f9" name="Zombie Dragon" hidden="false" collective="false" import="true" targetId="96e3-94cf-d381-ead1" type="selectionEntry">
@@ -642,6 +967,7 @@
       </categoryLinks>
       <entryLinks>
         <entryLink id="243d-6395-967f-b436" name="Cursed Mutations" hidden="false" collective="false" import="true" targetId="f50e-8cff-5ddc-750f" type="selectionEntryGroup"/>
+        <entryLink id="e1d4-d98e-e813-f275" name="Battalion Formation" hidden="false" collective="false" import="true" targetId="81be-9ffd-27f4-e966" type="selectionEntryGroup"/>
       </entryLinks>
     </entryLink>
   </entryLinks>
@@ -735,6 +1061,11 @@ For each of the units you picked, you can heal up to D3 wounds allocated to that
 Designer’s Note: Some Soulblight Gravelords abilities and spells allow you to return slain models to a unit. When you do so, set up the models one at a time within 1&quot; of a model from their unit that was not returned to the unit earlier in the phase. Slain models can only be set up within 3&quot; of an enemy unit if a model in the unit they are returning to that was not already returned in the same phase is already within 3&quot; of that enemy unit.</characteristic>
               </characteristics>
             </profile>
+            <profile id="3440-0ee1-95ac-d891" name="Deadly Coordination" hidden="false" typeId="c0c2-177b-e761-ec41" typeName="Allegiance Abilities">
+              <characteristics>
+                <characteristic name="Allegiance Ability" typeId="0506-f62d-68b3-5499">In the combat phase, after a friendly SOULBLIGHT GRAVELORDS HERO that is not a MONSTER has fought in that phase for the first time, you can pick 1 friendly SUMMONABLE unit that has not yet fought in that phase, that is within 3&quot; of an enemy unit and that is wholly within 12&quot; of that friendly SOULBLIGHT GRAVELORDS HERO. That SUMMONABLE unit fights immediately.</characteristic>
+              </characteristics>
+            </profile>
           </profiles>
           <selectionEntryGroups>
             <selectionEntryGroup id="324c-97b3-077c-665c" name="Cursed Bloodline" hidden="false" collective="false" import="true">
@@ -753,6 +1084,11 @@ Designer’s Note: Some Soulblight Gravelords abilities and spells allow you to 
                     <profile id="35b1-2881-7a2b-59af" name="Favoured Retainers" hidden="false" typeId="c0c2-177b-e761-ec41" typeName="Allegiance Abilities">
                       <characteristics>
                         <characteristic name="Allegiance Ability" typeId="0506-f62d-68b3-5499">Ignore negative modifiers to hit and wound rolls for attacks made with melee weapons by friendly LEGION OF BLOOD DEATHRATTLE units while they are wholly within 12&quot; of a friendly LEGION OF BLOOD VAMPIRE unit or wholly within 18&quot; of a friendly LEGION OF BLOOD VAMPIRE HERO that is a general.</characteristic>
+                      </characteristics>
+                    </profile>
+                    <profile id="afa2-639d-07a5-db70" name="Unparalleled Expertise" hidden="false" typeId="c0c2-177b-e761-ec41" typeName="Allegiance Abilities">
+                      <characteristics>
+                        <characteristic name="Allegiance Ability" typeId="0506-f62d-68b3-5499">When you add a LEGION OF BLOOD VAMPIRE LORD to your army, you must decide if they have martial expertise or arcane expertise.</characteristic>
                       </characteristics>
                     </profile>
                   </profiles>
@@ -2110,6 +2446,241 @@ Cursed Abominations are unique enhancements.</characteristic>
           </selectionEntries>
         </selectionEntryGroup>
       </selectionEntryGroups>
+    </selectionEntryGroup>
+    <selectionEntryGroup id="a56b-2eb9-6ee8-49bc" name="Unparalleled Expertise" hidden="false" collective="false" import="true">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="6cd6-b22e-bfcb-9589" type="instanceOf"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4373-740f-1bf3-b0aa" type="instanceOf"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="996a-613c-4006-25e3" type="instanceOf"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="e3a6-45ca-4974-b489" type="instanceOf"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="b543-cb16-0c79-fbc6" type="instanceOf"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="073c-eb87-5f4d-646f" type="equalTo"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+        <modifier type="set" field="cbe3-5d85-a17f-4efc" value="0">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4373-740f-1bf3-b0aa" type="instanceOf"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="e3a6-45ca-4974-b489" type="instanceOf"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="996a-613c-4006-25e3" type="instanceOf"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="6cd6-b22e-bfcb-9589" type="instanceOf"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="b543-cb16-0c79-fbc6" type="instanceOf"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="073c-eb87-5f4d-646f" type="equalTo"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+      <constraints>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="2926-f7dd-34fb-57f5" type="max"/>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="cbe3-5d85-a17f-4efc" type="min"/>
+      </constraints>
+      <selectionEntries>
+        <selectionEntry id="efae-f63d-c551-5600" name="Martial" hidden="false" collective="false" import="true" type="upgrade">
+          <profiles>
+            <profile id="e4b0-b246-8ff0-972f" name="Martial" hidden="false" typeId="c0c2-177b-e761-ec41" typeName="Allegiance Abilities">
+              <characteristics>
+                <characteristic name="Allegiance Ability" typeId="0506-f62d-68b3-5499">Add 1 to the Attacks characteristic of a Deathlance or Vampiric Sword used by a LEGION OF BLOOD VAMPIRE LORD that has martial expertise. Add 2 to the Attacks characteristic of Soulbound Blades used by a LEGION OF BLOOD VAMPIRE LORD that has martial expertise.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+        </selectionEntry>
+        <selectionEntry id="506b-a702-55cf-83a4" name="Arcane" hidden="false" collective="false" import="true" type="upgrade">
+          <profiles>
+            <profile id="58f4-7c4c-0ed5-c460" name="Arcane" hidden="false" typeId="c0c2-177b-e761-ec41" typeName="Allegiance Abilities">
+              <characteristics>
+                <characteristic name="Allegiance Ability" typeId="0506-f62d-68b3-5499">Add 1 to the first casting, dispelling or unbinding roll in each hero phase for a LEGION OF BLOOD VAMPIRE LORD that has arcane expertise and that is mounted on a Zombie Dragon. Add 2 to the first casting, dispelling or unbinding roll in each hero phase for a LEGION OF BLOOD VAMPIRE LORD that has arcane expertise and that is not mounted on a Zombie Dragon.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+        </selectionEntry>
+      </selectionEntries>
+    </selectionEntryGroup>
+    <selectionEntryGroup id="ffed-b9b4-b8a8-4dfe" name="Mount Traits" publicationId="9e65-0058-6ffe-24a5" hidden="false" collective="false" import="true">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4373-740f-1bf3-b0aa" type="instanceOf"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="e3a6-45ca-4974-b489" type="instanceOf"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="996a-613c-4006-25e3" type="instanceOf"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="6cd6-b22e-bfcb-9589" type="instanceOf"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="b543-cb16-0c79-fbc6" type="instanceOf"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+        <modifier type="increment" field="1916-6188-d6d6-4308" value="1.0">
+          <repeats>
+            <repeat field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="99e1-bf54-e3ec-ab80" repeats="1" roundUp="false"/>
+          </repeats>
+          <conditions>
+            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="99e1-bf54-e3ec-ab80" type="greaterThan"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <constraints>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="f966-91c1-d983-2423" type="max"/>
+        <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="1916-6188-d6d6-4308" type="max"/>
+      </constraints>
+      <selectionEntries>
+        <selectionEntry id="dfe2-703e-cff0-b388" name="2 ~ Foetid Miasma" hidden="false" collective="false" import="true" type="upgrade">
+          <profiles>
+            <profile id="e197-b316-1c22-9bbd" name="Foetid Miasma" hidden="false" typeId="61e3-eba4-7222-dee7" typeName="Mount/Companion">
+              <characteristics>
+                <characteristic name="Mount/Companion" typeId="e368-06f5-5b4f-64a3">When this unit attacks with its Pestilential Breath, you can re-roll the dice to determine the Damage characterisitc for that attack.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <costs>
+            <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="f64b-9299-3f81-86d9" name="1 ~ Locus of Death" hidden="false" collective="false" import="true" type="upgrade">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="e3bc-f9bd-b6f8-7afd" type="notInstanceOf"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <profiles>
+            <profile id="d2c5-7dc2-fbd2-1d7c" name="Locus of Death" hidden="false" typeId="61e3-eba4-7222-dee7" typeName="Mount/Companion">
+              <characteristics>
+                <characteristic name="Mount/Companion" typeId="e368-06f5-5b4f-64a3">When you use the Deathly Invocation ability, if you pick this unit as the HERO that determines the number of units affected by the ability, then you can add 1 to the number of units that are affected.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <costs>
+            <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
+          </costs>
+        </selectionEntry>
+      </selectionEntries>
+    </selectionEntryGroup>
+    <selectionEntryGroup id="81be-9ffd-27f4-e966" name="Battalion Formation" hidden="false" collective="false" import="true">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="c03a-b1a8-66c6-3637" type="equalTo"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <constraints>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d67f-fc96-ea4a-d481" type="max"/>
+      </constraints>
+      <selectionEntryGroups>
+        <selectionEntryGroup id="65ae-db3e-b00b-5bac" name="Soulblight Gravelords Battalions" hidden="false" collective="false" import="true">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4373-740f-1bf3-b0aa" type="instanceOf"/>
+                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="e3a6-45ca-4974-b489" type="instanceOf"/>
+                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="996a-613c-4006-25e3" type="instanceOf"/>
+                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="6cd6-b22e-bfcb-9589" type="instanceOf"/>
+                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="b543-cb16-0c79-fbc6" type="instanceOf"/>
+                  </conditions>
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="f9e2-1697-56ba-6915" type="equalTo"/>
+                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="118c-7613-7304-bb44" type="equalTo"/>
+                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="0768-2513-0161-2d06" type="equalTo"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8f40-b40c-a40b-19a8" type="max"/>
+          </constraints>
+          <selectionEntries>
+            <selectionEntry id="1bc0-ffe2-c370-0a72" name="Radukar&apos;s Court" hidden="false" collective="false" import="true" type="upgrade">
+              <modifiers>
+                <modifier type="set" field="hidden" value="true">
+                  <conditionGroups>
+                    <conditionGroup type="or">
+                      <conditions>
+                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="118c-7613-7304-bb44" type="equalTo"/>
+                      </conditions>
+                      <conditionGroups>
+                        <conditionGroup type="and">
+                          <conditions>
+                            <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4141-a6d6-8364-429b" type="notInstanceOf"/>
+                            <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="269b-8e2e-0db1-a2d6" type="notInstanceOf"/>
+                            <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="b454-60ff-3d8b-d13e" type="notInstanceOf"/>
+                            <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="e638-3c54-6e7d-c173" type="notInstanceOf"/>
+                            <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="b306-281f-d273-ca5c" type="notInstanceOf"/>
+                            <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="a6d8-d302-4c5d-d9fb" type="notInstanceOf"/>
+                            <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4458-531d-00cb-d246" type="notInstanceOf"/>
+                          </conditions>
+                        </conditionGroup>
+                      </conditionGroups>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+              </modifiers>
+            </selectionEntry>
+            <selectionEntry id="e292-03a8-c7ee-85a7" name="Fellwing Flock" hidden="false" collective="false" import="true" type="upgrade">
+              <modifiers>
+                <modifier type="set" field="hidden" value="true">
+                  <conditionGroups>
+                    <conditionGroup type="or">
+                      <conditions>
+                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="f9e2-1697-56ba-6915" type="equalTo"/>
+                      </conditions>
+                      <conditionGroups>
+                        <conditionGroup type="and">
+                          <conditions>
+                            <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="b133-a35e-8540-9956" type="notInstanceOf"/>
+                            <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="7b75-0889-f6bc-bcc4" type="notInstanceOf"/>
+                          </conditions>
+                        </conditionGroup>
+                      </conditionGroups>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+              </modifiers>
+            </selectionEntry>
+            <selectionEntry id="c995-ca87-1eee-7d9a" name="Deathstench Drove" hidden="false" collective="false" import="true" type="upgrade">
+              <modifiers>
+                <modifier type="set" field="hidden" value="true">
+                  <conditionGroups>
+                    <conditionGroup type="or">
+                      <conditions>
+                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="0768-2513-0161-2d06" type="equalTo"/>
+                      </conditions>
+                      <conditionGroups>
+                        <conditionGroup type="and">
+                          <conditions>
+                            <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="39e8-0995-7f8f-4088" type="notInstanceOf"/>
+                            <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="6f0e-4f8f-231e-1c44" type="notInstanceOf"/>
+                            <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="61b5-8be4-3cec-25bd" type="notInstanceOf"/>
+                          </conditions>
+                        </conditionGroup>
+                      </conditionGroups>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+              </modifiers>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
+      <entryLinks>
+        <entryLink id="e768-bdb9-f229-f2e6" name="Core Battalions" hidden="false" collective="false" import="true" targetId="8c04-393d-d72d-c2a8" type="selectionEntryGroup"/>
+      </entryLinks>
     </selectionEntryGroup>
   </sharedSelectionEntryGroups>
   <sharedProfiles>
