@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="2fc2-5782-755c-0fb0" name="Chaos Data" revision="10" battleScribeVersion="2.03" library="true" gameSystemId="e832-3291-06be-cab1" gameSystemRevision="9" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="2fc2-5782-755c-0fb0" name="Chaos Data" revision="11" battleScribeVersion="2.03" library="true" gameSystemId="e832-3291-06be-cab1" gameSystemRevision="11" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <profileTypes>
     <profileType id="8c83-705b-eae0-877a" name="Blood Tithe Rewards Table">
       <characteristicTypes>
@@ -961,105 +961,86 @@ Designer’s Note: Coalition units are not allied units, so the limitations that
         <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="d36a-3425-ff49-548e" name="Nurgle" hidden="false" collective="false" import="true" type="upgrade">
+    <selectionEntry id="d36a-3425-ff49-548e" name="Maggotkin of Nurgle" hidden="false" collective="false" import="true" type="upgrade">
       <profiles>
         <profile id="ed4c-40d7-baf2-fda8" name="Cycle of Corruption" hidden="false" typeId="c0c2-177b-e761-ec41" typeName="Allegiance Abilities">
           <characteristics>
-            <characteristic name="Allegiance Ability" typeId="0506-f62d-68b3-5499">Roll a dice at the start of the first battle round of any battle that includes NURGLE armies, before rolling to see who has the first turn. Refer to the table below to see which stage of the Cycle of Corruption is currently taking place - this applies to all NURGLE armies. The Cycle of Corruption moves clockwise one step at the start of each new battle round. For example, if the roll on the Cycle of Corruption table was a 5, then Nauseous Revulsion would apply in the first battle round, Rampant Disease in the second, Corrupted Regrowth in the third, and so on. The rule for the current stage applies for the duration of the battle round.
+            <characteristic name="Allegiance Ability" typeId="0506-f62d-68b3-5499">At the start of the first battle round, before determining who has the first turn, 1 player who can use this battle trait rolls a dice. The effect for the stage on the Cycle of Corruption chart below that corresponds to the roll applies in that battle round. At the start of each subsequent battle round, the Cycle of Corruption advances to the next stage and the effect for that stage applies in that battle round. If more than 1 player can use this battle trait, the current stage of the Cycle of Corruption applies to each of those players.
 
 D6 -- Stage of Corruption
 
 1 -- Unnatural Vitality
-Add 2&quot; to the Move characteristic of NURGLE units.
+All MAGGOTKIN OF NURGLE HEROES have a ward of 4+.
 
 2 -- Fecund Vigour
-Add 1 to the wound rolls of all attacks made by NURGLE units in the combat phase.
+AAll units are treated as being within 14&quot; of a Locus of Fecundity.
 
 3 -- The Burgeoning
-Roll a dice for each unit within 1&quot; of a terrain feature at the start of your hero phase. On a roll of 5 or more the unit suffers 1 mortal wound. NURGLE units heal 1 wound instead.
+At the start of your hero phase, roll a number of dice equal to the number of the current battle round. For each 4+, you receive 1 extra CP.
 
 4 -- Plague of Misery
-Re-roll battleshock test rolls of 1 for enemy units (excluding NURGLE units).
+HEROES that do not have the NURGLE keyword cannot carry out heroic actions or issue the Rally or Inspiring Presence commands.
 
 5 -- Nauseous Revulsion
-Re-roll wound rolls of 6 or more for attacks made by enemy units (excluding NURGLE units) in the combat phase.
+Subtract 1 from charge rolls for enemy units that do not have the NURGLE keyword. Enemy units that do not have the NURGLE keyword cannot finish a pile-in move closer to a friendly NURGLE unit than they were at the start of the move.
 
 6 -- Rampant Disease
-At the start of your hero phase, pick D3 different enemy units (excluding NURGLE units) within 12&quot; of each other. Each unit suffers D3 mortal wounds.</characteristic>
+Add 1 to disease rolls that you make.
+
+Corrupted Regrowth
+At the start of your hero phase, you receive 1 extra CP for each Feculent Gnarlmaw in your army that is on the battlefield.</characteristic>
           </characteristics>
         </profile>
         <profile id="137a-ddd1-3ed4-66d1" name="Summon Daemons of Nurgle" hidden="false" typeId="c0c2-177b-e761-ec41" typeName="Allegiance Abilities">
           <characteristics>
-            <characteristic name="Allegiance Ability" typeId="0506-f62d-68b3-5499">You can summon units of NURGLE DAEMONS to the battlefield if you collect enough contagion points. At the start of each of your hero phases, you receive 3 contagion points if there are any friendly NURGLE models in your own territory, and 3 additional contagion points if there are any friendly NURGLE models in your opponent&apos;s territory. If there are no enemy models in the same territory as friendly NURGLE models, you receive 1 extra contaion point for that territory. In addition, you receive D3 contagion points for each Feculent Gnarlmaw that has no enemy models within 3&quot; of it.
+            <characteristic name="Allegiance Ability" typeId="0506-f62d-68b3-5499">You can summon NURGLE DAEMON units and Feculent Gnarlmaws to the battlefield if you have enough contagion points (referred to as ‘CPs’ in the following rules). At the start of your hero phase, you receive 3 CPs if there are any friendly MAGGOTKIN OF NURGLE units wholly within your territory, and 3 CPs if there are any friendly MAGGOTKIN OF NURGLE units wholly within your opponent’s territory. If you receive CPs for a territory and there are no enemy models in that territory, you receive 1 extra CP.
 
-If you have 7 or more contagion points at the end of your movement phase, you can summon one or more units from the following list to the battlefield, and add them to your army. Each unit you summon costs a number of contagion points, as shown on the list, and you can only summon a unit if you have enough contagion points remaining to pay its cost.
-
-Summoned units must be set up wholly within 12&quot; of a Feculent Gnarmaw or a friendly NURGLE HERO, and more than 9&quot; from any enemy models. If the summoned unit is a Feculent Gnarlmaw, it must also be set up more than 1&quot; from any terrain features. Subtract the cost of the summoned unit from the number of contagion points you have available immediately after it has been set up.</characteristic>
+If you have any CPs at the end of your movement phase, you can summon 1 unit or terrain feature from the list below to the battlefield and add it to your army. Each unit or terrain feature you summon costs the number of CPs shown on the list, and you can only summon it if you have enough CPs to do so. Units must be set up more than 9&quot; from all enemy units and wholly within 7 of a friendly MAGGOTKIN OF NURGLE HERO or wholly within 7&quot; of a Feculent Gnarlmaw in your army. Feculent Gnarlmaws must be set up more than 7&quot; from all other Feculent Gnarlmaws and more than 3&quot; from all models, objectives, other terrain features, endless spells and invocations.</characteristic>
           </characteristics>
         </profile>
-        <profile id="34cf-3fca-ec98-56fd" name="(13) 1 Feculent Gnarlmaw" hidden="false" typeId="a802-7b4b-c415-b5a2" typeName="Contagion Summoning Table">
+        <profile id="34cf-3fca-ec98-56fd" name="(06) 1 Feculent Gnarlmaw" hidden="false" typeId="a802-7b4b-c415-b5a2" typeName="Contagion Summoning Table">
           <characteristics>
-            <characteristic name="Cost" typeId="824b-6b08-47ff-80c3">7</characteristic>
+            <characteristic name="Cost" typeId="824b-6b08-47ff-80c3">9</characteristic>
           </characteristics>
         </profile>
         <profile id="c440-40cb-4a05-8a3f" name="(01) 1 Great Unclean One" hidden="false" typeId="a802-7b4b-c415-b5a2" typeName="Contagion Summoning Table">
           <characteristics>
-            <characteristic name="Cost" typeId="824b-6b08-47ff-80c3">28</characteristic>
+            <characteristic name="Cost" typeId="824b-6b08-47ff-80c3">30</characteristic>
           </characteristics>
         </profile>
-        <profile id="df71-1424-fa62-1273" name="(07) 1 Spoilpox Scrivener, Herald of Nurgle" hidden="false" typeId="a802-7b4b-c415-b5a2" typeName="Contagion Summoning Table">
+        <profile id="df71-1424-fa62-1273" name="(09) 1 Spoilpox Scrivener, Herald of Nurgle" hidden="false" typeId="a802-7b4b-c415-b5a2" typeName="Contagion Summoning Table">
           <characteristics>
             <characteristic name="Cost" typeId="824b-6b08-47ff-80c3">14</characteristic>
           </characteristics>
         </profile>
-        <profile id="c1de-e522-fc9c-9244" name="(10) 3 Nurgling bases" hidden="false" typeId="a802-7b4b-c415-b5a2" typeName="Contagion Summoning Table">
+        <profile id="c1de-e522-fc9c-9244" name="(07) NURGLING SWARM with 3 models" hidden="false" typeId="a802-7b4b-c415-b5a2" typeName="Contagion Summoning Table">
+          <characteristics>
+            <characteristic name="Cost" typeId="824b-6b08-47ff-80c3">08</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="fb32-abc9-b032-6e2d" name="(08) Sloppity Bilepiper, Herald of Nurgle" hidden="false" typeId="a802-7b4b-c415-b5a2" typeName="Contagion Summoning Table">
           <characteristics>
             <characteristic name="Cost" typeId="824b-6b08-47ff-80c3">14</characteristic>
           </characteristics>
         </profile>
-        <profile id="fb32-abc9-b032-6e2d" name="(06) 1 Sloppity Bilepiper, Herald of Nurgle" hidden="false" typeId="a802-7b4b-c415-b5a2" typeName="Contagion Summoning Table">
+        <profile id="439f-021a-12be-2e3c" name="(04) Poxbringer, Herald of Nurgle" hidden="false" typeId="a802-7b4b-c415-b5a2" typeName="Contagion Summoning Table">
+          <characteristics>
+            <characteristic name="Cost" typeId="824b-6b08-47ff-80c3">12</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="3bac-36ca-4361-c963" name="(05) Beasts of Nurgle unit with 1 model" hidden="false" typeId="a802-7b4b-c415-b5a2" typeName="Contagion Summoning Table">
+          <characteristics>
+            <characteristic name="Cost" typeId="824b-6b08-47ff-80c3">10</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="6b54-1bbf-88e4-c0bd" name="(03) PLAGUEBEARER HOST with 10 models" hidden="false" typeId="a802-7b4b-c415-b5a2" typeName="Contagion Summoning Table">
           <characteristics>
             <characteristic name="Cost" typeId="824b-6b08-47ff-80c3">14</characteristic>
           </characteristics>
         </profile>
-        <profile id="5a84-9e5a-2c31-0d03" name="(11) 5 Plaguebearers" hidden="false" typeId="a802-7b4b-c415-b5a2" typeName="Contagion Summoning Table">
+        <profile id="09d5-ae22-1ae2-6a7e" name="(02) Plague Drones unit with 3 models" hidden="false" typeId="a802-7b4b-c415-b5a2" typeName="Contagion Summoning Table">
           <characteristics>
-            <characteristic name="Cost" typeId="824b-6b08-47ff-80c3">7</characteristic>
-          </characteristics>
-        </profile>
-        <profile id="ee32-a58e-fd3d-0f6a" name="(08) 10 Plaguebearers" hidden="false" typeId="a802-7b4b-c415-b5a2" typeName="Contagion Summoning Table">
-          <characteristics>
-            <characteristic name="Cost" typeId="824b-6b08-47ff-80c3">14</characteristic>
-          </characteristics>
-        </profile>
-        <profile id="439f-021a-12be-2e3c" name="(05) 1 Poxbringer, Herald of Nurgle" hidden="false" typeId="a802-7b4b-c415-b5a2" typeName="Contagion Summoning Table">
-          <characteristics>
-            <characteristic name="Cost" typeId="824b-6b08-47ff-80c3">14</characteristic>
-          </characteristics>
-        </profile>
-        <profile id="3bac-36ca-4361-c963" name="(09) 1 Beast of Nurgle" hidden="false" typeId="a802-7b4b-c415-b5a2" typeName="Contagion Summoning Table">
-          <characteristics>
-            <characteristic name="Cost" typeId="824b-6b08-47ff-80c3">14</characteristic>
-          </characteristics>
-        </profile>
-        <profile id="6b54-1bbf-88e4-c0bd" name="(04) 20 Plaguebearers" hidden="false" typeId="a802-7b4b-c415-b5a2" typeName="Contagion Summoning Table">
-          <characteristics>
-            <characteristic name="Cost" typeId="824b-6b08-47ff-80c3">21</characteristic>
-          </characteristics>
-        </profile>
-        <profile id="09d5-ae22-1ae2-6a7e" name="(03) 3 Plague Drones" hidden="false" typeId="a802-7b4b-c415-b5a2" typeName="Contagion Summoning Table">
-          <characteristics>
-            <characteristic name="Cost" typeId="824b-6b08-47ff-80c3">21</characteristic>
-          </characteristics>
-        </profile>
-        <profile id="7170-8121-6465-c502" name="(12) 1 Nurgling base" hidden="false" typeId="a802-7b4b-c415-b5a2" typeName="Contagion Summoning Table">
-          <characteristics>
-            <characteristic name="Cost" typeId="824b-6b08-47ff-80c3">7</characteristic>
-          </characteristics>
-        </profile>
-        <profile id="ab51-82c8-7090-f939" name="(02) 1 Horticulous Slimux" hidden="false" typeId="a802-7b4b-c415-b5a2" typeName="Contagion Summoning Table">
-          <characteristics>
-            <characteristic name="Cost" typeId="824b-6b08-47ff-80c3">21</characteristic>
+            <characteristic name="Cost" typeId="824b-6b08-47ff-80c3">18</characteristic>
           </characteristics>
         </profile>
         <profile id="0f6b-2a84-5f75-8b17" name="Legions of Chaos" hidden="false" typeId="c0c2-177b-e761-ec41" typeName="Allegiance Abilities">
@@ -1078,6 +1059,41 @@ Coalition units do not count towards the number of Battleline units in your army
 Designer’s Note: Coalition units are not allied units, so the limitations that apply to allied units do not apply to them. This means that coalition units can be given one of your army’s enhancements, as long as they have the correct keywords or are of the correct unit type needed to receive it.</characteristic>
           </characteristics>
         </profile>
+        <profile id="7986-0171-3eeb-c088" name="Disgustingly Resilient" hidden="false" typeId="c0c2-177b-e761-ec41" typeName="Allegiance Abilities">
+          <characteristics>
+            <characteristic name="Allegiance Ability" typeId="0506-f62d-68b3-5499">Friendly MAGGOTKIN OF NURGLE models have a ward of 5+. In addition, at the start of your hero phase, you can heal 1 wound allocated to each friendly MAGGOTKIN OF NURGLE model.
+
+LOCUS OF FECUNDITY
+The following friendly units are each a Locus of Fecundity: GREAT UNCLEAN ONE, HORTICULOUS SLIMUX, THE GLOTTKIN, FESTUS THE LEECHLORD. The Disgustingly Resilient battle trait heals D3 wounds allocated to a model instead of 1 if that model’s unit is within 14&quot; of any Loci of Fecundity.</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="1a72-7c87-ffb2-fab6" name="Plague Legions and Contagiums" hidden="false" typeId="c0c2-177b-e761-ec41" typeName="Allegiance Abilities">
+          <characteristics>
+            <characteristic name="Allegiance Ability" typeId="0506-f62d-68b3-5499">You can pick 1 of the following subfactions for your army. All MAGGOTKIN OF NURGLE units in your army gain the keyword of the subfaction you picked, and you can use the allegiance abilities for that subfaction. If a unit already has a different subfaction keyword on its warscroll, it cannot gain another one. This does not preclude you from including the unit in your army, but you cannot use the allegiance abilities for its subfaction.
+
+MUNIFICENT WANDERERS
+BEFOULING HOST
+DRONING GUARD
+BLESSED SONS
+DROWNED MEN
+FILTHBRINGERS</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="bc02-2637-74da-1b3d" name="Diseased" hidden="false" typeId="c0c2-177b-e761-ec41" typeName="Allegiance Abilities">
+          <characteristics>
+            <characteristic name="Allegiance Ability" typeId="0506-f62d-68b3-5499">At the end of the movement phase and at the end of the combat phase, give 1 disease point to each enemy unit that is within 3&quot; of any friendly MAGGOTKIN OF NURGLE units. A unit can have a maximum of 7 disease points at any one time (it cannot be given any more until the number of disease points it has is reduced to less than 7).
+
+At the start of the battleshock phase, for each disease point that an enemy unit has, you must make 1 dice roll (called a disease roll). For each 4+, that enemy unit suffers 1 mortal wound. At the end of the battleshock phase, reduce the number of disease points each enemy unit has to 1.
+
+Designer’s Note: Once a unit is ‘infected’, it will carry over 1 disease point into the next turn unless all disease points it has are healed, as described next.
+
+DISEASED WEAPONS
+If the unmodified hit roll for an attack made with a missile weapon or melee weapon by a friendly MAGGOTKIN OF NURGLE model is 6, that attack inflicts 1 disease point on the target unit in addition to any damage it inflicts.
+
+HEALING DISEASE POINTS
+When a player uses an ability that allows them to heal any wounds that have been allocated to a unit, for each wound that they are allowed to heal, they can instead remove 1 disease point from the unit.</characteristic>
+          </characteristics>
+        </profile>
       </profiles>
       <selectionEntryGroups>
         <selectionEntryGroup id="2496-a7a1-1ebd-36fd" name="Sub-Allegiance Choice" hidden="false" collective="false" import="true">
@@ -1088,21 +1104,16 @@ Designer’s Note: Coalition units are not allied units, so the limitations that
             <categoryLink id="0430-2cb8-cc94-b8c8" name="Sub-Allegiance" hidden="false" targetId="4fe1-4d42-25cc-d732" primary="false"/>
           </categoryLinks>
           <selectionEntryGroups>
-            <selectionEntryGroup id="20d8-2da8-c3e4-a3f8" name="Host of Chaos" hidden="false" collective="false" import="true">
+            <selectionEntryGroup id="20d8-2da8-c3e4-a3f8" name="Plague Legions and Contagiums" hidden="false" collective="false" import="true">
               <constraints>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d1e4-b492-6117-0e09" type="max"/>
               </constraints>
               <selectionEntries>
-                <selectionEntry id="7ebf-578a-10f7-33d7" name="The Munificent Wanderers" hidden="false" collective="false" import="true" type="upgrade">
+                <selectionEntry id="7ebf-578a-10f7-33d7" name="Munificent Wanderers" hidden="false" collective="false" import="true" type="upgrade">
                   <profiles>
-                    <profile id="5c6d-e9b7-a928-6678" name="Locus of Corrosion" hidden="false" typeId="c0c2-177b-e761-ec41" typeName="Allegiance Abilities">
+                    <profile id="e3af-0a84-d098-6dae" name="Infested with Wonders" hidden="false" typeId="c0c2-177b-e761-ec41" typeName="Allegiance Abilities">
                       <characteristics>
-                        <characteristic name="Allegiance Ability" typeId="0506-f62d-68b3-5499">While an enemy unit is within 3&quot; of any friendly MUNIFICENT WANDERERS DAEMON units, worsen the Rend characteristic of that unit’s melee weapons by 1 (to a minimum of ‘-’). NURGLE units are unaffected by this ability.</characteristic>
-                      </characteristics>
-                    </profile>
-                    <profile id="e3af-0a84-d098-6dae" name="Infested with Wonders" hidden="false" typeId="6364-f76d-fc0c-80bc" typeName="Command Abilities">
-                      <characteristics>
-                        <characteristic name="Command Ability" typeId="36cb-f8a4-d94b-8aa8">You can use this command ability in your hero phase. If you do so, pick 1 friendly MUNIFICENT WANDERERS DAEMON unit wholly within 14&quot; of a friendly MUNIFICENT WANDERERS DAEMON HERO with this command ability. Until the start of your next hero phase, if an enemy unit ends a charge move within 3&quot; of that unit, that enemy unit suffers D3 mortal wounds. A unit cannot benefit from this command ability more than once per turn.</characteristic>
+                        <characteristic name="Allegiance Ability" typeId="0506-f62d-68b3-5499">If an enemy unit is within 3&quot; of a friendly MUNIFICENT WANDERERS PLAGUEBEARER HOST that has 10 or more models at the end of the movement phase or combat phase, it receives 2 disease points instead of 1 for being within 3&quot; of any friendly MAGGOTKIN OF NURGLE units.</characteristic>
                       </characteristics>
                     </profile>
                   </profiles>
@@ -1110,16 +1121,11 @@ Designer’s Note: Coalition units are not allied units, so the limitations that
                     <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
                   </costs>
                 </selectionEntry>
-                <selectionEntry id="ecc4-5ebe-19b5-ddd0" name="The Droning Guard" hidden="false" collective="false" import="true" type="upgrade">
+                <selectionEntry id="ecc4-5ebe-19b5-ddd0" name="Droning Guard" hidden="false" collective="false" import="true" type="upgrade">
                   <profiles>
-                    <profile id="aca3-4d8e-31dc-1a35" name="Locus of Corrosion" hidden="false" typeId="c0c2-177b-e761-ec41" typeName="Allegiance Abilities">
+                    <profile id="aca3-4d8e-31dc-1a35" name="Cloying Stench" hidden="false" typeId="c0c2-177b-e761-ec41" typeName="Allegiance Abilities">
                       <characteristics>
-                        <characteristic name="Allegiance Ability" typeId="0506-f62d-68b3-5499">While an enemy unit is within 3&quot; of any friendly DRONING GUARD DAEMON units, worsen the Rend characteristic of that unit’s melee weapons by 1 (to a minimum of ‘-’). NURGLE units are unaffected by this ability.</characteristic>
-                      </characteristics>
-                    </profile>
-                    <profile id="7b13-2a41-bb5e-b55a" name="Twice-blessed Rotspawn" hidden="false" typeId="6364-f76d-fc0c-80bc" typeName="Command Abilities">
-                      <characteristics>
-                        <characteristic name="Command Ability" typeId="36cb-f8a4-d94b-8aa8">You can use this command ability in the combat phase. If you do so, pick 1 friendly DRONING GUARD PLAGUE DRONES unit wholly within 12&quot; of a friendly DRONING GUARD DAEMON HERO with this command ability. Until the end of that phase, add 1 to Disgustingly Resilient rolls made for that unit.</characteristic>
+                        <characteristic name="Allegiance Ability" typeId="0506-f62d-68b3-5499">Subtract 1 from hit rolls for attacks that target friendly PLAGUE DRONES units in the first battle round and in the battle round in which they were set up.</characteristic>
                       </characteristics>
                     </profile>
                   </profiles>
@@ -1127,16 +1133,11 @@ Designer’s Note: Coalition units are not allied units, so the limitations that
                     <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
                   </costs>
                 </selectionEntry>
-                <selectionEntry id="6fd3-6ed2-6078-7e7d" name="The Blessed Sons" hidden="false" collective="false" import="true" type="upgrade">
+                <selectionEntry id="6fd3-6ed2-6078-7e7d" name="Blessed Sons" hidden="false" collective="false" import="true" type="upgrade">
                   <profiles>
                     <profile id="d335-d26b-1129-a0f3" name="Nurgle&apos;s Embrace" hidden="false" typeId="c0c2-177b-e761-ec41" typeName="Allegiance Abilities">
                       <characteristics>
-                        <characteristic name="Allegiance Ability" typeId="0506-f62d-68b3-5499">Roll a dice each time a friendly BLESSED SONS ROTBRINGER model is slain in the combat phase. On a 2+, the attacking unit suffers 1 mortal wound. If the attacking unit has the NURGLE keyword, heal 1 wound allocated to that unit instead.</characteristic>
-                      </characteristics>
-                    </profile>
-                    <profile id="7cc4-08e8-578b-483f" name="Degraded and Defiled" hidden="false" typeId="6364-f76d-fc0c-80bc" typeName="Command Abilities">
-                      <characteristics>
-                        <characteristic name="Command Ability" typeId="36cb-f8a4-d94b-8aa8">You can use this command ability at the start of the combat phase. If you do so, pick 1 friendly BLESSED SONS ROTBRINGER unit wholly within 14&quot; of a friendly BLESSED SONS ROTBRINGER HERO with this command ability. Then, at the end of that phase, pick 1 enemy unit that suffered any wounds or mortal wounds inflicted by that unit in that phase. If the combined number of those wounds and mortal wounds is greater than the Bravery characteristic of that enemy unit, that enemy unit suffers 3 additional mortal wounds.</characteristic>
+                        <characteristic name="Allegiance Ability" typeId="0506-f62d-68b3-5499">If a friendly BLESSED SONS MORTAL model is slain within 1&quot; of an enemy unit, before removing that model from play, pick 1 enemy unit within 1&quot; of that model and roll a number of dice equal to the Wounds characteristic of that model. For each 6, give that enemy unit 1 disease point.</characteristic>
                       </characteristics>
                     </profile>
                   </profiles>
@@ -1144,16 +1145,35 @@ Designer’s Note: Coalition units are not allied units, so the limitations that
                     <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
                   </costs>
                 </selectionEntry>
-                <selectionEntry id="bc60-23f9-53b8-2070" name="The Drowned Men" hidden="false" collective="false" import="true" type="upgrade">
+                <selectionEntry id="bc60-23f9-53b8-2070" name="Drowned Men" hidden="false" collective="false" import="true" type="upgrade">
                   <profiles>
-                    <profile id="a18e-68c6-7e1a-ebcf" name="Nurgle&apos;s Embrace" hidden="false" typeId="c0c2-177b-e761-ec41" typeName="Allegiance Abilities">
+                    <profile id="a18e-68c6-7e1a-ebcf" name="Lords of Sea and Sky" hidden="false" typeId="c0c2-177b-e761-ec41" typeName="Allegiance Abilities">
                       <characteristics>
-                        <characteristic name="Allegiance Ability" typeId="0506-f62d-68b3-5499">Roll a dice each time a friendly DROWNED MEN ROTBRINGER model is slain in the combat phase. On a 2+, the attacking unit suffers 1 mortal wound. If the attacking unit has the NURGLE keyword, heal 1 wound allocated to that unit instead.</characteristic>
+                        <characteristic name="Allegiance Ability" typeId="0506-f62d-68b3-5499">After deployment but before the first battle round begins, you can move each friendly DROWNED MEN LORD OF AFFLICTIONS and PUSGOYLE BLIGHTLORDS unit up to 8&quot;. If both players can move units before the first battle round begins, they must roll off and the winner chooses who moves their units first.</characteristic>
                       </characteristics>
                     </profile>
-                    <profile id="981b-8f78-8560-a081" name="Kneel Before the Plague!" hidden="false" typeId="6364-f76d-fc0c-80bc" typeName="Command Abilities">
+                  </profiles>
+                  <costs>
+                    <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
+                  </costs>
+                </selectionEntry>
+                <selectionEntry id="c3bb-1396-c3eb-6b91" name="Befouling Host" hidden="false" collective="false" import="true" type="upgrade">
+                  <profiles>
+                    <profile id="0b5c-2087-1b0e-1933" name="Festerbark Pox" hidden="false" typeId="c0c2-177b-e761-ec41" typeName="Allegiance Abilities">
                       <characteristics>
-                        <characteristic name="Command Ability" typeId="36cb-f8a4-d94b-8aa8">You can use this command ability at the start of the combat phase. If you do so, pick 1 friendly DROWNED MEN PUSGOYLE BLIGHTLORDS unit wholly within 12&quot; of a friendly DROWNED MEN ROTBRINGER HERO. Until your next hero phase, if the unmodified wound roll for an attack made with that unit’s Blighted Weapons is 6, improve the Rend characteristic for that attack by 1.</characteristic>
+                        <characteristic name="Allegiance Ability" typeId="0506-f62d-68b3-5499">A Befouling Host army that has a DAEMON general can include 2 Feculent Gnarlmaws instead of 1. Set up the second Feculent Gnarlmaw wholly within your territory, more than 7&quot; from all other Feculent Gnarlmaws and more than 3&quot; from all objectives and other terrain features.</characteristic>
+                      </characteristics>
+                    </profile>
+                  </profiles>
+                  <costs>
+                    <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
+                  </costs>
+                </selectionEntry>
+                <selectionEntry id="4bd1-7a24-8e82-d58b" name="Filthbringers" hidden="false" collective="false" import="true" type="upgrade">
+                  <profiles>
+                    <profile id="98e7-b75f-1263-d91c" name="Rot Covens" hidden="false" typeId="c0c2-177b-e761-ec41" typeName="Allegiance Abilities">
+                      <characteristics>
+                        <characteristic name="Allegiance Ability" typeId="0506-f62d-68b3-5499">You can include Rot Covens in your army. At the start of the hero phase, you can pick 1 WIZARD from each Rot Coven in your army. Add 1 to casting, unbinding and dispelling rolls for that WIZARD in that phase. Add 2 instead of 1 if that WIZARD is within 3&quot; of 1 other WIZARD from the same Rot Coven. Add 3 instead of 1 if that WIZARD is within 3&quot; of 2 other WIZARDS from the same Rot Coven.</characteristic>
                       </characteristics>
                     </profile>
                   </profiles>
