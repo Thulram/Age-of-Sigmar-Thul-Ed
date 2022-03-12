@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="1968-130d-9d17-5021" name="Chaos - Beasts of Chaos" revision="9" battleScribeVersion="2.03" authorName="Thulram" library="false" gameSystemId="e832-3291-06be-cab1" gameSystemRevision="8" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="1968-130d-9d17-5021" name="Chaos - Beasts of Chaos" revision="10" battleScribeVersion="2.03" authorName="Thulram" library="false" gameSystemId="e832-3291-06be-cab1" gameSystemRevision="10" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <profileTypes>
     <profileType id="7b36-24ed-f1d3-1262" name="Primordial Summoning Table">
       <characteristicTypes>
@@ -55,6 +55,17 @@
           <categoryLinks>
             <categoryLink id="67a0-2a06-5c23-97ac" name="Grand Strategy" hidden="false" targetId="318c-fa55-0855-47ef" primary="false"/>
           </categoryLinks>
+          <selectionEntries>
+            <selectionEntry id="bad8-e942-6ec8-6f3f" name="Protect the Herdstone" hidden="false" collective="false" import="true" type="upgrade">
+              <profiles>
+                <profile id="9748-822c-ed0c-fd1e" name="Protect the Herdstone" hidden="false" typeId="7dc6-98f0-f5ba-fc16" typeName="Grand Strategy">
+                  <characteristics>
+                    <characteristic name="Grand Strategy" typeId="22d6-b382-f824-6381">When the battle ends, you complete this grand strategy if there are no enemy units within 9&quot; of your Herdstone and it has not been picked by a successful Smash to Rubble monstrous rampage.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+            </selectionEntry>
+          </selectionEntries>
           <entryLinks>
             <entryLink id="6add-5809-a995-5fae" name="GHB &apos;21" hidden="false" collective="false" import="true" targetId="bb2d-2110-60b8-c13e" type="selectionEntryGroup"/>
           </entryLinks>
@@ -63,6 +74,66 @@
       <costs>
         <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
       </costs>
+    </selectionEntry>
+    <selectionEntry id="2c55-79de-8de9-0c31" name="Beasts of Chaos Monstrous Rampages" hidden="false" collective="false" import="true" type="upgrade">
+      <constraints>
+        <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="50f3-3405-4aee-0165" type="max"/>
+      </constraints>
+      <profiles>
+        <profile id="5788-4f13-6c35-47fa" name="Primal Roar" hidden="false" typeId="1193-4081-af87-68cd" typeName="Heroic Action/Monstrous Rampage">
+          <characteristics>
+            <characteristic name="Effect" typeId="faec-beac-0874-3c6e">Roll a dice. On a 1, nothing happens. On a 2-5, you receive 1 primordial call point. On a 6 you receive 3 primordial call points.</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="793a-06ae-786c-1289" name="Feast on Flesh" hidden="false" typeId="1193-4081-af87-68cd" typeName="Heroic Action/Monstrous Rampage">
+          <characteristics>
+            <characteristic name="Effect" typeId="faec-beac-0874-3c6e">Only a GHORGON can be picked to carry out this monstrous rampage, and the same unit can only carry out this monstrous rampage once per battle. Improve the Rend characteristic of this model&apos;s melee weapons by 1 until the end of the following combat phase. In addition, unitl the end of the following combat phase, each time an enemy model is slain by an attacks made by this model, this model heals a number of wounds equal to the Wounds characteristic of that slain model.</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="5f77-06e2-b2a4-7cbd" name="Devour Spell" hidden="false" typeId="1193-4081-af87-68cd" typeName="Heroic Action/Monstrous Rampage">
+          <characteristics>
+            <characteristic name="Effect" typeId="faec-beac-0874-3c6e">Only a CYGOR can be picked to carry out this monstrous rampage. Pick 1 endless spell within 6&quot; of this model and roll 2D6. If the roll exceeds the casting value of the spell that summoned that endless spell, that endless spell is dispelled and this model heals a number of wounds equal to the 2D6 roll.</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="5f56-78e0-a8ef-e3c7" name="Entropic Miasma" hidden="false" typeId="1193-4081-af87-68cd" typeName="Heroic Action/Monstrous Rampage">
+          <characteristics>
+            <characteristic name="Effect" typeId="faec-beac-0874-3c6e">Only a JABBERSLYTHE can be picked to carry out this monstrous rampage. Pick 1 enemy HERO within 3&quot; of this model and roll a dice. On a 1, nothing happens. On a 2-5, worsen the Save characterstic of that HERO by 1 (to a minimum of 6+) until the end of the following combat phase. On a 6, worsen the Save characterstic of that HERO by 2 (to a minimum of 6+) until the end of the following combat phase.</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="82b2-7872-b507-0eac" name="Thricefold Savagery" hidden="false" typeId="1193-4081-af87-68cd" typeName="Heroic Action/Monstrous Rampage">
+          <characteristics>
+            <characteristic name="Effect" typeId="faec-beac-0874-3c6e">Only a CHIMERA can be picked to carry out this monstrous rampage. Until the end of the following combat phase, add 1 to the Attacks characteristic of this model&apos;s melee weapons, but all attacks made with this model&apos;s melee weapons must target the same enemy unit.</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <categoryLinks>
+        <categoryLink id="90a1-90fd-7345-ae26" name="New CategoryLink" hidden="false" targetId="29f4-e63d-fa5b-1611" primary="true"/>
+      </categoryLinks>
+    </selectionEntry>
+    <selectionEntry id="d486-949b-030d-e849" name="Beasts of Chaos Battle Tactics" hidden="false" collective="false" import="true" type="upgrade">
+      <constraints>
+        <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="4967-c7e6-eb82-ca48" type="max"/>
+      </constraints>
+      <profiles>
+        <profile id="e35e-8272-497f-8974" name="In the Shadow of the Herdstone" hidden="false" typeId="4bb2-448c-446c-f522" typeName="Battle Tactic">
+          <characteristics>
+            <characteristic name="Battle Tactic" typeId="8c0f-be41-a70e-c699">Pick 1 enemy unit within 9&quot; of your Herdstone. You complete this battle tactic if that unit is destroyed during this turn.</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="7e56-8afb-598b-1315" name="Fury of the Wild" hidden="false" typeId="4bb2-448c-446c-f522" typeName="Battle Tactic">
+          <characteristics>
+            <characteristic name="Battle Tactic" typeId="8c0f-be41-a70e-c699">You can pick this tactic only in your first turn. You complete this battle tactic if the model picked to be your general and two or more friendly BEASTS OF CHAOS units are within 3&quot; of an enemy unit at the end of this turn.</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="d522-d368-c4f2-77c9" name="Wrath of the Warped Wilds" hidden="false" typeId="4bb2-448c-446c-f522" typeName="Battle Tactic">
+          <characteristics>
+            <characteristic name="Battle Tactic" typeId="8c0f-be41-a70e-c699">Pick 1 objective controlled by your opponent. You complete this battle tactic at the end of the turn if you control that objective and it is contested by any models in your army that were summoned with the Primordial Call battle trait.</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <categoryLinks>
+        <categoryLink id="859f-30f6-017f-7db9" name="New CategoryLink" hidden="false" targetId="29f4-e63d-fa5b-1611" primary="true"/>
+      </categoryLinks>
     </selectionEntry>
   </selectionEntries>
   <entryLinks>
@@ -250,11 +321,6 @@
     <entryLink id="7cae-2dc9-020d-8a1c" name="Depraved Drove" hidden="false" collective="false" import="true" targetId="648f-a447-d75c-a5a3" type="selectionEntry"/>
     <entryLink id="dbda-3837-eeb8-d803" name="Pestilent Throng" hidden="false" collective="false" import="true" targetId="e2ce-9457-443e-09ff" type="selectionEntry"/>
     <entryLink id="1dd5-ee46-225e-69aa" name="Phantasmagoria of Fate" hidden="false" collective="false" import="true" targetId="413c-15f8-11d1-29e9" type="selectionEntry"/>
-    <entryLink id="c53b-f495-61c5-dd3d" name="Slaangor Fiendbloods" hidden="false" collective="false" import="true" targetId="9f2d-104b-4d9c-875e" type="selectionEntry">
-      <categoryLinks>
-        <categoryLink id="d19d-c0b7-3a3a-888e" name="Hedonite" hidden="false" targetId="27fa-08a5-8122-ff4d" primary="false"/>
-      </categoryLinks>
-    </entryLink>
     <entryLink id="6fbf-40e8-a8dc-c43d" name="The Butcher-herd" hidden="false" collective="false" import="true" targetId="79dd-0de7-30cb-ab01" type="selectionEntry"/>
     <entryLink id="7c0a-f24f-6fb2-01fd" name="Grashrak Fellhoof &amp; Despoilers (separate units)" hidden="false" collective="false" import="true" targetId="7199-e486-c5de-74fb" type="selectionEntry"/>
   </entryLinks>
@@ -527,14 +593,14 @@ Designer’s Note: If you take a Thunderscorn Stormherd warscroll battalion in y
       <profiles>
         <profile id="9530-3bd3-2e30-5739" name="Entropic Lodestone" hidden="false" typeId="1c58-2b3d-482e-2a35" typeName="Scenery Rules">
           <characteristics>
-            <characteristic name="Scenery Rule" typeId="a333-0c4a-7f67-677c">After this terrain feature is set up, its range is 6&quot;. At the start of each battle round after the first, its range is increased by 6&quot;.
-
-Subtract 1 from save rolls for attacks that target units within range of this terrain feature. This scenery rule has no effect on save rolls for attacks that target BEASTS OF CHAOS units.</characteristic>
+            <characteristic name="Scenery Rule" typeId="a333-0c4a-7f67-677c">Improve the Rend characteristic of melee weapons used by all friendly BEASTS OF CHAOS units on the battlefield by 1. From the start of the third battle round, improve the Rend characteristic of melee weapons used by all friendly BEASTS OF CHAOS units on the battlefield by 2 instead of 1.</characteristic>
           </characteristics>
         </profile>
         <profile id="d278-1f39-46a2-ac3b" name="Locus of Savagery" hidden="false" typeId="1c58-2b3d-482e-2a35" typeName="Scenery Rules">
           <characteristics>
-            <characteristic name="Scenery Rule" typeId="a333-0c4a-7f67-677c">Do not take battleshock tests for BEASTS OF CHAOS units wholly within range of this terrain feature (see the ‘Entropic Lodestone’ scenery rule).</characteristic>
+            <characteristic name="Scenery Rule" typeId="a333-0c4a-7f67-677c">After this terrain feature is set up, its range 12&quot;. At the start of each battle round after the first, its range is increased by 6&quot;.
+
+If a friendly BEASTS OF CHAOS unit wholly within range of this terrain feature fails a battleshock test, halve the number of models that flee from that unit (rounding down). In addition, if a friendly BEASTS OF CHAOS unit wholly within range of this terrain feature receives the Rally command, you can return 1 slain model to that unit for each 4+ instead of each 6.</characteristic>
           </characteristics>
         </profile>
         <profile id="f6aa-dca6-0560-3f77" name="Herdstone Set-Up" hidden="false" typeId="d508-c1d5-a06f-0103" typeName="Scenery Set-Up">

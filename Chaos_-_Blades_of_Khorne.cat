@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="ec7a-9885-ba24-384d" name="Chaos - Blades of Khorne" revision="13" battleScribeVersion="2.03" authorName="Thulram" library="false" gameSystemId="e832-3291-06be-cab1" gameSystemRevision="12" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="ec7a-9885-ba24-384d" name="Chaos - Blades of Khorne" revision="14" battleScribeVersion="2.03" authorName="Thulram" library="false" gameSystemId="e832-3291-06be-cab1" gameSystemRevision="13" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <profileTypes>
     <profileType id="2d45-64c0-bdf3-61f9" name="Skarbrand Wounds">
       <characteristicTypes>
@@ -200,6 +200,17 @@
           <categoryLinks>
             <categoryLink id="eb6b-deeb-de1a-cf94" name="Grand Strategy" hidden="false" targetId="318c-fa55-0855-47ef" primary="false"/>
           </categoryLinks>
+          <selectionEntries>
+            <selectionEntry id="7e4d-5c89-e1b4-3612" name="The Blood Legions March" hidden="false" collective="false" import="true" type="upgrade">
+              <profiles>
+                <profile id="c736-e96b-cfb9-f6f1" name="The Blood Legions March" hidden="false" typeId="7dc6-98f0-f5ba-fc16" typeName="Grand Strategy">
+                  <characteristics>
+                    <characteristic name="Grand Strategy" typeId="22d6-b382-f824-6381">When the battle ends, you complete this grand strategy if in every battle round after the first, you summoned KHORNE DAEMON units to the battlefield by expending blood tithe points.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+            </selectionEntry>
+          </selectionEntries>
           <entryLinks>
             <entryLink id="deb3-038d-46fe-7edc" name="GHB &apos;21" hidden="false" collective="false" import="true" targetId="bb2d-2110-60b8-c13e" type="selectionEntryGroup"/>
           </entryLinks>
@@ -208,6 +219,31 @@
       <costs>
         <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
       </costs>
+    </selectionEntry>
+    <selectionEntry id="88eb-7eef-2d7e-5151" name="Blades of Khorne Battle Tactics" hidden="false" collective="false" import="true" type="upgrade">
+      <constraints>
+        <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="0161-dc6d-22ef-5cac" type="max"/>
+      </constraints>
+      <profiles>
+        <profile id="85e3-f265-72a6-aa02" name="Blood for the Altar" hidden="false" typeId="4bb2-448c-446c-f522" typeName="Battle Tactic">
+          <characteristics>
+            <characteristic name="Battle Tactic" typeId="8c0f-be41-a70e-c699">Pick 1 enemy unit within 9&quot; of your Skull Altar. You complete this battle tactic if that unit is destroyed during this turn.</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="32ee-46d1-52e9-c303" name="Slay the Sorcerer" hidden="false" typeId="4bb2-448c-446c-f522" typeName="Battle Tactic">
+          <characteristics>
+            <characteristic name="Battle Tactic" typeId="8c0f-be41-a70e-c699">Pick 1 enemy HERO on the battlefield that is a WIZARD. You complete this battle tactic if that HERO is slain during this turn.</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="27c6-6642-c07f-0201" name="The Trial of Skulls" hidden="false" typeId="4bb2-448c-446c-f522" typeName="Battle Tactic">
+          <characteristics>
+            <characteristic name="Battle Tactic" typeId="8c0f-be41-a70e-c699">Pick 1 friendly unit. You complete this battle tactic if 8 or more enemy models are slain by attacks made by that unit during this turn.</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <categoryLinks>
+        <categoryLink id="f6c2-d578-f69e-6a87" name="New CategoryLink" hidden="false" targetId="29f4-e63d-fa5b-1611" primary="true"/>
+      </categoryLinks>
     </selectionEntry>
   </selectionEntries>
   <entryLinks>
@@ -2296,12 +2332,17 @@
         </profile>
         <profile id="aaa9-efb3-5a2b-a7d3" name="Witchbane" hidden="false" typeId="1c58-2b3d-482e-2a35" typeName="Scenery Rules">
           <characteristics>
-            <characteristic name="Scenery Rule" typeId="a333-0c4a-7f67-677c">Subtract 1 from casting rolls for WIZARDS within 16&quot; of this terrain feature.</characteristic>
+            <characteristic name="Scenery Rule" typeId="a333-0c4a-7f67-677c">While any terrain feature with this scenery rule is on the battlefield, if a spell is miscast, the caster suffers D6 mortal wounds instead of D3.</characteristic>
           </characteristics>
         </profile>
         <profile id="4f30-e77c-9594-a9b3" name="Defensible" hidden="false" typeId="1c58-2b3d-482e-2a35" typeName="Scenery Rules">
           <characteristics>
             <characteristic name="Scenery Rule" typeId="a333-0c4a-7f67-677c">This terrain feature is a defensible terrain feature that can be garrisoned by 1 HERO with a Wounds characteristic of 8 or less.</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="94e9-51d5-96e2-318b" name="Invoke Judgement" hidden="false" typeId="1c58-2b3d-482e-2a35" typeName="Scenery Rules">
+          <characteristics>
+            <characteristic name="Scenery Rule" typeId="a333-0c4a-7f67-677c">While a KHORNE HERO garrisons this terrain feature, it can attempt to summon invocations in the same manner as a KHORNE PRIEST and benefits from the &apos;Words of Hate&apos; ability when it does so.</characteristic>
           </characteristics>
         </profile>
       </profiles>
