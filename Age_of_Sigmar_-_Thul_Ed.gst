@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<gameSystem id="e832-3291-06be-cab1" name="Age of Sigmar - Thul Ed" revision="23" battleScribeVersion="2.03" authorName="Thulram" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
+<gameSystem id="e832-3291-06be-cab1" name="Age of Sigmar - Thul Ed" revision="25" battleScribeVersion="2.03" authorName="Thulram" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
   <publications>
     <publication id="bf0c-0cbf-1f5d-5885" name="Chaos Battletome - Blades of Khorne"/>
     <publication id="6ce4-e8a3-f18f-be55" name="Order Battletome - Daughters of Khaine"/>
@@ -142,6 +142,11 @@
     <profileType id="4bb2-448c-446c-f522" name="Battle Tactic">
       <characteristicTypes>
         <characteristicType id="8c0f-be41-a70e-c699" name="Battle Tactic"/>
+      </characteristicTypes>
+    </profileType>
+    <profileType id="1193-4081-af87-68cd" name="Heroic Action/Monstrous Rampage">
+      <characteristicTypes>
+        <characteristicType id="faec-beac-0874-3c6e" name="Effect"/>
       </characteristicTypes>
     </profileType>
   </profileTypes>

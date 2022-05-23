@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="e054-128c-e141-2db1" name="Order - Idoneth Deepkin" revision="10" battleScribeVersion="2.03" authorName="Thulram" library="false" gameSystemId="e832-3291-06be-cab1" gameSystemRevision="9" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="e054-128c-e141-2db1" name="Order - Idoneth Deepkin" revision="11" battleScribeVersion="2.03" authorName="Thulram" library="false" gameSystemId="e832-3291-06be-cab1" gameSystemRevision="11" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <profileTypes>
     <profileType id="3081-447d-82e2-cdb3" name="Leviadon Wounds">
       <characteristicTypes>
@@ -10,7 +10,6 @@
     </profileType>
   </profileTypes>
   <categoryEntries>
-    <categoryEntry id="627d-f58d-263d-4255" name="Gloomtide Shipwreck" hidden="false"/>
     <categoryEntry id="6d91-66aa-3fd3-9ac6" name="Eidolon" hidden="false"/>
     <categoryEntry id="9829-7a56-114d-9479" name="Aspect of the Storm" hidden="false"/>
     <categoryEntry id="d889-5ba2-ca0b-a24a" name="Aspect of the Sea" hidden="false"/>
@@ -31,9 +30,37 @@
     <categoryEntry id="a67c-d3c2-d793-ea2c" name="Thralls" hidden="false"/>
     <categoryEntry id="a8d5-3110-7761-ff6a" name="Namarti" hidden="false"/>
     <categoryEntry id="b524-d787-bf53-1a7b" name="Reavers" hidden="false"/>
-    <categoryEntry id="0105-60b2-8105-dcbd" name="General - Akhelian" hidden="true"/>
-    <categoryEntry id="8d8d-c85a-9ff6-5d9c" name="General - Isharann" hidden="true"/>
-    <categoryEntry id="e713-d46e-4a8d-dea2" name="General - Nemmetar" hidden="false"/>
+    <categoryEntry id="0105-60b2-8105-dcbd" name="General - Akhelian King" hidden="true"/>
+    <categoryEntry id="bb3d-23c1-639c-0942" name="DeepmareTrait" hidden="false">
+      <modifiers>
+        <modifier type="increment" field="bc5d-7fe7-ab53-b1c9" value="1.0">
+          <repeats>
+            <repeat field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="7412-3415-67eb-7d08" repeats="1" roundUp="false"/>
+          </repeats>
+          <conditions>
+            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="7412-3415-67eb-7d08" type="greaterThan"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <constraints>
+        <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="bc5d-7fe7-ab53-b1c9" type="max"/>
+      </constraints>
+    </categoryEntry>
+    <categoryEntry id="f975-d1b3-72fd-6d7d" name="LeviadonTrait" hidden="false">
+      <modifiers>
+        <modifier type="increment" field="5386-c6ee-b8f7-63b9" value="1.0">
+          <repeats>
+            <repeat field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2a7a-b812-eac3-4108" repeats="1" roundUp="false"/>
+          </repeats>
+          <conditions>
+            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2a7a-b812-eac3-4108" type="greaterThan"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <constraints>
+        <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="5386-c6ee-b8f7-63b9" type="max"/>
+      </constraints>
+    </categoryEntry>
   </categoryEntries>
   <selectionEntries>
     <selectionEntry id="d016-ae44-7566-36e8" name="Elathain Ill-fated and Soulraid (separate units)" hidden="false" collective="false" import="true" type="unit">
@@ -65,7 +92,7 @@
         </entryLink>
       </entryLinks>
       <costs>
-        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="145.0"/>
+        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="210.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="989b-8ac1-4c15-b297" name="Grand Strategy" hidden="false" collective="false" import="true" type="upgrade">
@@ -112,6 +139,63 @@
           <categoryLinks>
             <categoryLink id="7d4d-9344-f5ed-6098" name="Grand Strategy" hidden="false" targetId="318c-fa55-0855-47ef" primary="false"/>
           </categoryLinks>
+          <selectionEntryGroups>
+            <selectionEntryGroup id="6e81-79da-3c4e-374b" name="Idoneth Deepkin" hidden="false" collective="false" import="true">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="b1ab-f1b9-e36c-1a89" type="max"/>
+              </constraints>
+              <selectionEntries>
+                <selectionEntry id="5801-8dbc-0b2f-b020" name="Akhelian Pursuit" hidden="false" collective="false" import="true" type="upgrade">
+                  <profiles>
+                    <profile id="bfbb-5a91-f2b0-f0a2" name="Akhelian Pursuit" hidden="false" typeId="7dc6-98f0-f5ba-fc16" typeName="Grand Strategy">
+                      <characteristics>
+                        <characteristic name="Grand Strategy" typeId="22d6-b382-f824-6381">When the battle ends, you complete this grand strategy if there are 3 or more friendly AKHELIAN units wholly within enemy territory.</characteristic>
+                      </characteristics>
+                    </profile>
+                  </profiles>
+                  <costs>
+                    <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
+                  </costs>
+                </selectionEntry>
+                <selectionEntry id="f72f-aa9c-ddef-5282" name="The Creeping Gloomtide" hidden="false" collective="false" import="true" type="upgrade">
+                  <profiles>
+                    <profile id="47ab-e177-4fd8-d62b" name="The Creeping Gloomtide" hidden="false" typeId="7dc6-98f0-f5ba-fc16" typeName="Grand Strategy">
+                      <characteristics>
+                        <characteristic name="Grand Strategy" typeId="22d6-b382-f824-6381">When the battle ends, you complete this grand strategy if there are any Gloomtide Shipwrecks in your army on the battlefield and all of them are more than 3&quot; from all enemy units.</characteristic>
+                      </characteristics>
+                    </profile>
+                  </profiles>
+                  <costs>
+                    <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
+                  </costs>
+                </selectionEntry>
+                <selectionEntry id="f4ea-807c-fdd3-022a" name="Dominion of the Deep Ones" hidden="false" collective="false" import="true" type="upgrade">
+                  <profiles>
+                    <profile id="09e0-7d30-dacd-63fd" name="Dominion of the Deep Ones" hidden="false" typeId="7dc6-98f0-f5ba-fc16" typeName="Grand Strategy">
+                      <characteristics>
+                        <characteristic name="Grand Strategy" typeId="22d6-b382-f824-6381">When the battle ends, you complete this grand strategy if the only MONSTERS on the battlefield are friendly LEVIADONS.</characteristic>
+                      </characteristics>
+                    </profile>
+                  </profiles>
+                  <costs>
+                    <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
+                  </costs>
+                </selectionEntry>
+                <selectionEntry id="0888-f50d-e442-dd52" name="Namarti Assault" hidden="false" collective="false" import="true" type="upgrade">
+                  <profiles>
+                    <profile id="8fe0-3caa-d49b-74e7" name="Namarti Assault" hidden="false" typeId="7dc6-98f0-f5ba-fc16" typeName="Grand Strategy">
+                      <characteristics>
+                        <characteristic name="Grand Strategy" typeId="22d6-b382-f824-6381">When the battle ends, you complete this grand strategy if 2 or more friendly NAMARTI units are within 3&quot; of any enemy units, or if the only Battleline units on the battlefield are friendly NAMARTI units.</characteristic>
+                      </characteristics>
+                    </profile>
+                  </profiles>
+                  <costs>
+                    <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
+                  </costs>
+                </selectionEntry>
+              </selectionEntries>
+            </selectionEntryGroup>
+          </selectionEntryGroups>
           <entryLinks>
             <entryLink id="236a-cc0e-0ce0-8b70" name="GHB &apos;21" hidden="false" collective="false" import="true" targetId="bb2d-2110-60b8-c13e" type="selectionEntryGroup"/>
           </entryLinks>
@@ -121,17 +205,117 @@
         <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
       </costs>
     </selectionEntry>
-  </selectionEntries>
-  <entryLinks>
-    <entryLink id="9c7c-b9a3-6a5f-2be5" name="Allegiance" hidden="false" collective="false" import="true" targetId="a326-6869-5806-2c0d" type="selectionEntry">
+    <selectionEntry id="1040-5af4-170d-5709" name="Bonus Mount Trait Selector" hidden="false" collective="false" import="true" type="upgrade">
+      <constraints>
+        <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="121e-0aee-1c14-f6dd" type="max"/>
+      </constraints>
+      <categoryLinks>
+        <categoryLink id="d6da-3f67-1f2c-d2df" name="New CategoryLink" hidden="false" targetId="29f4-e63d-fa5b-1611" primary="true"/>
+      </categoryLinks>
+      <selectionEntryGroups>
+        <selectionEntryGroup id="acc1-a669-bb54-737f" name="Selection" hidden="false" collective="false" import="true">
+          <modifiers>
+            <modifier type="increment" field="a38a-8158-ecbd-b520" value="1.0">
+              <repeats>
+                <repeat field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="99e1-bf54-e3ec-ab80" repeats="1" roundUp="false"/>
+              </repeats>
+              <conditions>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="99e1-bf54-e3ec-ab80" type="greaterThan"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="a38a-8158-ecbd-b520" type="max"/>
+          </constraints>
+          <selectionEntries>
+            <selectionEntry id="7412-3415-67eb-7d08" name="Deepmare Mount Trait" hidden="false" collective="false" import="true" type="upgrade">
+              <costs>
+                <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="2a7a-b812-eac3-4108" name="Leviadon Mount Trait" hidden="false" collective="false" import="true" type="upgrade">
+              <costs>
+                <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
+              </costs>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
+      <costs>
+        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="0915-7788-9971-d4af" name="Idoneth Deepkin Battle Tactics" hidden="false" collective="false" import="true" type="upgrade">
       <modifiers>
         <modifier type="set" field="hidden" value="true">
           <conditionGroups>
             <conditionGroup type="or">
               <conditions>
-                <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="6cd6-b22e-bfcb-9589" type="instanceOf"/>
-                <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="e3a6-45ca-4974-b489" type="instanceOf"/>
-                <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4373-740f-1bf3-b0aa" type="instanceOf"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4373-740f-1bf3-b0aa" type="instanceOf"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="e3a6-45ca-4974-b489" type="instanceOf"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="996a-613c-4006-25e3" type="instanceOf"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="6cd6-b22e-bfcb-9589" type="instanceOf"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="b543-cb16-0c79-fbc6" type="instanceOf"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+      <constraints>
+        <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="2c79-95c3-49b9-08aa" type="max"/>
+      </constraints>
+      <profiles>
+        <profile id="fd45-b94e-fe35-b5a2" name="Assassins of the High Tide" hidden="false" typeId="4bb2-448c-446c-f522" typeName="Battle Tactic">
+          <characteristics>
+            <characteristic name="Battle Tactic" typeId="8c0f-be41-a70e-c699">You complete this battle tactic if 2 or more enemy units are destroyed during this turn by attacks made by friendly IDONETH DEEPKIN units that are affected by the High Tide ability.</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="a8db-0fa7-d49f-f316" name="Predators of the Deep" hidden="false" typeId="4bb2-448c-446c-f522" typeName="Battle Tactic">
+          <characteristics>
+            <characteristic name="Battle Tactic" typeId="8c0f-be41-a70e-c699">Pick 1 unit in your opponent’s starting army that is on the battlefield, that has a Wounds characteristic of 8 or more and that has 0 wounds allocated to it. You complete this tactic if that unit is destroyed during this turn by a friendly AKHELIAN ALLOPEXES unit.</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="ce83-1cc7-f9c2-09ae" name="Revenge of the Namarti" hidden="false" typeId="4bb2-448c-446c-f522" typeName="Battle Tactic">
+          <characteristics>
+            <characteristic name="Battle Tactic" typeId="8c0f-be41-a70e-c699">You complete this battle tactic if an enemy HERO or MONSTER is destroyed during this turn by an attack made by a friendly NAMARTI unit.</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="e162-6157-bc7e-d118" name="Deny Trespassers" hidden="false" typeId="4bb2-448c-446c-f522" typeName="Battle Tactic">
+          <characteristics>
+            <characteristic name="Battle Tactic" typeId="8c0f-be41-a70e-c699">Pick 1 Gloomtide Shipwreck in your army that is within 12&quot; of any enemy units. You complete this battle tactic if that Gloomtide Shipwreck is more than 12&quot; from all enemy units at the end of this turn.</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="380b-7b98-3379-d080" name="Trapped in the Undercurrents" hidden="false" typeId="4bb2-448c-446c-f522" typeName="Battle Tactic">
+          <characteristics>
+            <characteristic name="Battle Tactic" typeId="8c0f-be41-a70e-c699">You complete this battle tactic if 3 or more friendly IDONETH DEEPKIN units retreated and made a charge move during this turn.</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="63ca-0bdc-5d70-e0c4" name="Isharann Defiance" hidden="false" typeId="4bb2-448c-446c-f522" typeName="Battle Tactic">
+          <characteristics>
+            <characteristic name="Battle Tactic" typeId="8c0f-be41-a70e-c699">When you reveal this battle tactic, pick 1 objective wholly within enemy territory. At the end of this turn, you complete this battle tactic if you control that objective and there is a friendly ISHARANN unit within 6&quot; of that objective.</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <categoryLinks>
+        <categoryLink id="5af5-392b-a440-e257" name="New CategoryLink" hidden="false" targetId="29f4-e63d-fa5b-1611" primary="true"/>
+      </categoryLinks>
+      <costs>
+        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
+      </costs>
+    </selectionEntry>
+  </selectionEntries>
+  <entryLinks>
+    <entryLink id="9c7c-b9a3-6a5f-2be5" name="Allegiance" hidden="false" collective="false" import="true" targetId="1e0e-383b-1c26-3c40" type="selectionEntry">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4373-740f-1bf3-b0aa" type="instanceOf"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="e3a6-45ca-4974-b489" type="instanceOf"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="996a-613c-4006-25e3" type="instanceOf"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="6cd6-b22e-bfcb-9589" type="instanceOf"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="b543-cb16-0c79-fbc6" type="instanceOf"/>
               </conditions>
             </conditionGroup>
           </conditionGroups>
@@ -172,11 +356,7 @@
       <entryLinks>
         <entryLink id="702d-9cdf-0210-da45" name="Artefacts of Power" hidden="false" collective="false" import="true" targetId="c67d-f797-383a-8040" type="selectionEntryGroup"/>
         <entryLink id="c406-36d3-a1e1-7d84" name="Command Traits" hidden="false" collective="false" import="true" targetId="487c-7b72-70fc-3c23" type="selectionEntryGroup"/>
-        <entryLink id="8a82-926b-4916-9b58" name="General" hidden="false" collective="false" import="true" targetId="98a4-3d6d-a7b9-399f" type="selectionEntry">
-          <categoryLinks>
-            <categoryLink id="0f17-b609-5bca-6727" name="General - Isharann" hidden="false" targetId="8d8d-c85a-9ff6-5d9c" primary="false"/>
-          </categoryLinks>
-        </entryLink>
+        <entryLink id="8a82-926b-4916-9b58" name="General" hidden="false" collective="false" import="true" targetId="98a4-3d6d-a7b9-399f" type="selectionEntry"/>
         <entryLink id="afcb-4126-09ff-cf20" name="Idoneth Deepkin Spell Lores" hidden="false" collective="false" import="true" targetId="2efb-03e6-5e45-d982" type="selectionEntryGroup"/>
       </entryLinks>
     </entryLink>
@@ -184,12 +364,7 @@
       <entryLinks>
         <entryLink id="bf1f-7ce2-d6cb-c2a6" name="Artefacts of Power" hidden="false" collective="false" import="true" targetId="c67d-f797-383a-8040" type="selectionEntryGroup"/>
         <entryLink id="1735-1290-7d15-291a" name="Command Traits" hidden="false" collective="false" import="true" targetId="487c-7b72-70fc-3c23" type="selectionEntryGroup"/>
-        <entryLink id="d083-5e12-b494-b8ce" name="General" hidden="false" collective="false" import="true" targetId="98a4-3d6d-a7b9-399f" type="selectionEntry">
-          <categoryLinks>
-            <categoryLink id="e8d0-c9fd-1b4b-0a8c" name="General - Isharann" hidden="false" targetId="8d8d-c85a-9ff6-5d9c" primary="false"/>
-          </categoryLinks>
-        </entryLink>
-        <entryLink id="c58e-cc2f-5406-f566" name="Isharann Rituals" hidden="false" collective="false" import="true" targetId="42d8-c8bd-9068-6856" type="selectionEntry"/>
+        <entryLink id="d083-5e12-b494-b8ce" name="General" hidden="false" collective="false" import="true" targetId="98a4-3d6d-a7b9-399f" type="selectionEntry"/>
         <entryLink id="8473-1e76-04a1-a4e1" name="Prayer Scriptures" hidden="false" collective="false" import="true" targetId="7937-58cd-0ca2-38cf" type="selectionEntryGroup"/>
         <entryLink id="ff59-baa2-3da3-4164" name="Idoneth Deepkin Spell Lores" hidden="false" collective="false" import="true" targetId="2efb-03e6-5e45-d982" type="selectionEntryGroup"/>
       </entryLinks>
@@ -198,11 +373,7 @@
       <entryLinks>
         <entryLink id="f257-bb41-f652-4b28" name="Artefacts of Power" hidden="false" collective="false" import="true" targetId="c67d-f797-383a-8040" type="selectionEntryGroup"/>
         <entryLink id="db4a-46b3-3271-352a" name="Command Traits" hidden="false" collective="false" import="true" targetId="487c-7b72-70fc-3c23" type="selectionEntryGroup"/>
-        <entryLink id="e935-3e7f-ee64-1e40" name="General" hidden="false" collective="false" import="true" targetId="98a4-3d6d-a7b9-399f" type="selectionEntry">
-          <categoryLinks>
-            <categoryLink id="1ea4-f946-5684-2223" name="General - Isharann" hidden="false" targetId="8d8d-c85a-9ff6-5d9c" primary="false"/>
-          </categoryLinks>
-        </entryLink>
+        <entryLink id="e935-3e7f-ee64-1e40" name="General" hidden="false" collective="false" import="true" targetId="98a4-3d6d-a7b9-399f" type="selectionEntry"/>
         <entryLink id="980f-8ad1-d49a-7dcb" name="Idoneth Deepkin Spell Lores" hidden="false" collective="false" import="true" targetId="2efb-03e6-5e45-d982" type="selectionEntryGroup"/>
       </entryLinks>
     </entryLink>
@@ -226,8 +397,38 @@
         </entryLink>
       </entryLinks>
     </entryLink>
-    <entryLink id="faec-bd6d-4631-fb00" name="Akhelian Allopexes" hidden="false" collective="false" import="true" targetId="8229-98fb-0346-d7eb" type="selectionEntry"/>
+    <entryLink id="faec-bd6d-4631-fb00" name="Akhelian Allopexes" hidden="false" collective="false" import="true" targetId="8229-98fb-0346-d7eb" type="selectionEntry">
+      <modifiers>
+        <modifier type="remove" field="category" value="a42d-220e-6a88-7bf6">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4373-740f-1bf3-b0aa" type="instanceOf"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="e3a6-45ca-4974-b489" type="instanceOf"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="6cd6-b22e-bfcb-9589" type="instanceOf"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2e68-4ec5-ed55-c62d" type="equalTo"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+      <categoryLinks>
+        <categoryLink id="9496-1e8e-7126-5794" name="Battleline" hidden="false" targetId="a42d-220e-6a88-7bf6" primary="false"/>
+      </categoryLinks>
+    </entryLink>
     <entryLink id="03bd-4c40-77f3-c19c" name="Akhelian Leviadon" hidden="false" collective="false" import="true" targetId="9b90-77ab-d5ae-7934" type="selectionEntry">
+      <modifierGroups>
+        <modifierGroup>
+          <conditions>
+            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e323-b2b0-43b2-680e" type="greaterThan"/>
+          </conditions>
+          <modifiers>
+            <modifier type="add" field="category" value="a42d-220e-6a88-7bf6"/>
+            <modifier type="remove" field="category" value="7f62-b7f5-32d5-e13b"/>
+            <modifier type="set-primary" field="category" value="6230-ed60-e374-add4"/>
+          </modifiers>
+        </modifierGroup>
+      </modifierGroups>
       <entryLinks>
         <entryLink id="a08a-d43a-dad2-a3b0" name="Mount Traits" hidden="false" collective="false" import="true" targetId="2bdf-1dd0-8b40-0dcd" type="selectionEntryGroup"/>
       </entryLinks>
@@ -241,7 +442,6 @@
                 <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4373-740f-1bf3-b0aa" type="instanceOf"/>
                 <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="e3a6-45ca-4974-b489" type="instanceOf"/>
                 <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="6cd6-b22e-bfcb-9589" type="instanceOf"/>
-                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e46b-caf7-8b4b-2202" type="equalTo"/>
                 <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="0105-60b2-8105-dcbd" type="equalTo"/>
               </conditions>
             </conditionGroup>
@@ -261,7 +461,6 @@
                 <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4373-740f-1bf3-b0aa" type="instanceOf"/>
                 <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="e3a6-45ca-4974-b489" type="instanceOf"/>
                 <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="6cd6-b22e-bfcb-9589" type="instanceOf"/>
-                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e46b-caf7-8b4b-2202" type="equalTo"/>
                 <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="0105-60b2-8105-dcbd" type="equalTo"/>
               </conditions>
             </conditionGroup>
@@ -273,32 +472,27 @@
       </categoryLinks>
     </entryLink>
     <entryLink id="28ea-5a90-acdb-0a4c" name="Namarti Reavers" hidden="false" collective="false" import="true" targetId="52d3-6c54-1d17-0285" type="selectionEntry">
-      <modifiers>
-        <modifier type="remove" field="category" value="a42d-220e-6a88-7bf6">
-          <conditionGroups>
-            <conditionGroup type="or">
-              <conditions>
-                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4373-740f-1bf3-b0aa" type="instanceOf"/>
-                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="e3a6-45ca-4974-b489" type="instanceOf"/>
-                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="6cd6-b22e-bfcb-9589" type="instanceOf"/>
-                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e46b-caf7-8b4b-2202" type="equalTo"/>
-                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="8d8d-c85a-9ff6-5d9c" type="equalTo"/>
-              </conditions>
-            </conditionGroup>
-          </conditionGroups>
-        </modifier>
-      </modifiers>
       <categoryLinks>
         <categoryLink id="7cdb-934c-088d-c991" name="BATTLELINE" hidden="false" targetId="a42d-220e-6a88-7bf6" primary="false"/>
       </categoryLinks>
     </entryLink>
     <entryLink id="c1b3-3c21-dda1-a9e2" name="Namarti Thralls" hidden="false" collective="false" import="true" targetId="9d96-79c5-f89b-592a" type="selectionEntry"/>
-    <entryLink id="3455-50b4-7676-d9a9" name="Akhelian Corps" hidden="false" collective="false" import="true" targetId="d1d2-b386-9f8d-1d7f" type="selectionEntry"/>
-    <entryLink id="4c4c-1f08-d12d-b036" name="Alliance of Wood and Sea" hidden="false" collective="false" import="true" targetId="385c-6ac8-73d0-beed" type="selectionEntry"/>
-    <entryLink id="0901-5b7f-0f61-e8e2" name="Namarti Corps" hidden="false" collective="false" import="true" targetId="4c9e-0e67-c82b-37d3" type="selectionEntry"/>
-    <entryLink id="3f15-30fc-f946-0c66" name="Phalanx" hidden="false" collective="false" import="true" targetId="52a7-28bc-4d2c-0c57" type="selectionEntry"/>
-    <entryLink id="4a4a-ac87-f1d2-04eb" name="Royal Council" hidden="false" collective="false" import="true" targetId="f6aa-9738-a925-0576" type="selectionEntry"/>
-    <entryLink id="a27b-e532-ca55-40b2" name="The Bloodsurf Hunt" hidden="false" collective="false" import="true" targetId="79f2-db6a-a9d0-eaca" type="selectionEntry"/>
+    <entryLink id="67cf-9410-e879-aaf4" name="Akhelian Thrallmaster" hidden="false" collective="false" import="true" targetId="2c38-3dbf-3abf-ab8b" type="selectionEntry">
+      <entryLinks>
+        <entryLink id="ad8b-37c6-efff-386c" name="General" hidden="false" collective="false" import="true" targetId="98a4-3d6d-a7b9-399f" type="selectionEntry"/>
+        <entryLink id="1b80-df4c-4612-afe3" name="Command Traits" hidden="false" collective="false" import="true" targetId="487c-7b72-70fc-3c23" type="selectionEntryGroup"/>
+        <entryLink id="fa6c-d65d-8e89-6c93" name="Artefacts of Power" hidden="false" collective="false" import="true" targetId="c67d-f797-383a-8040" type="selectionEntryGroup"/>
+      </entryLinks>
+    </entryLink>
+    <entryLink id="3f63-2430-fc13-1bef" name="Akhelian Allopexes (Bloodthirsty Shivers)" hidden="false" collective="false" import="true" targetId="6685-8487-6b45-38d1" type="selectionEntry">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2e68-4ec5-ed55-c62d" type="equalTo"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+    </entryLink>
   </entryLinks>
   <sharedSelectionEntries>
     <selectionEntry id="5bab-16d8-8406-d122" name="Terrain Feature - Gloomtide Shipwreck" publicationId="dea8-e4a3-2500-1a33" hidden="false" collective="false" import="true" type="upgrade">
@@ -313,660 +507,211 @@
 This faction terrain feature consists of 2 scenery pieces. When you set it up, you can set up the 2 scenery pieces touching, or you can set them up more than 3&quot; from each other. If you set them up touching, they form 1 large Gloomtide Shipwreck. If you set them up more than 3&quot; from each other, they form 2 small Gloomtide Shipwrecks that are separate faction terrain features.</characteristic>
           </characteristics>
         </profile>
-        <profile id="bb88-e4a5-19c2-8767" name="Predators of the Ethersea" hidden="false" typeId="1c58-2b3d-482e-2a35" typeName="Scenery Rules">
+        <profile id="bb88-e4a5-19c2-8767" name="Guardians of the Deep" hidden="false" typeId="1c58-2b3d-482e-2a35" typeName="Scenery Rules">
           <characteristics>
-            <characteristic name="Scenery Rule" typeId="a333-0c4a-7f67-677c">At the start of your hero phase, roll a dice for each enemy unit within 3&quot; of this faction terrain feature. On a 4+, that enemy unit suffers 1 mortal wound. On a 6+, that enemy unit suffers D3 mortal wounds instead. This ability has no effect on IDONETH DEEPKIN units.</characteristic>
+            <characteristic name="Scenery Rule" typeId="a333-0c4a-7f67-677c">IDONETH DEEPKIN units that do not have a mount have a ward of 5+ while they are wholly within 6&quot; of this terrain feature. If a unit that does not have the IDONETH DEEPKIN keyword is within 3&quot; of this terrain feature, this ability has no effect.</characteristic>
           </characteristics>
         </profile>
         <profile id="2744-4162-66e2-6d7a" name="Defensible" hidden="false" typeId="1c58-2b3d-482e-2a35" typeName="Scenery Rules">
           <characteristics>
-            <characteristic name="Scenery Rule" typeId="a333-0c4a-7f67-677c">If this terrain feature was set up as a small Gloomtide Shipwreck, it is a defensible terrain feature that can be garrisoned by up to 5 Idoneth Deepkin models with a Wounds characteristic of 5 or less that do not have mounts.
+            <characteristic name="Scenery Rule" typeId="a333-0c4a-7f67-677c">If this terrain feature was set up as a small Gloomtide Shipwreck, it is a defensible terrain feature that can be garrisoned by up to 5 IDONETH DEEPKIN models with a Wounds characteristic of 5 or less that do not have mounts.
 
-If this terrain feature was set up as a large Gloomtide Shipwreck, it is a defensible terrain feature that can be garrisoned by up to 10 Idoneth Deepkin models with a Wounds characteristic of 5 or less that do not have mounts.</characteristic>
+If this terrain feature was set up as a large Gloomtide Shipwreck, it is a defensible terrain feature that can be garrisoned by up to 10 IDONETH DEEPKIN models with a Wounds characteristic of 5 or less that do not have mounts.</characteristic>
           </characteristics>
         </profile>
       </profiles>
       <categoryLinks>
-        <categoryLink id="e70a-f4c7-7c2b-10f4" name="Gloomtide Shipwreck" hidden="false" targetId="627d-f58d-263d-4255" primary="false"/>
-        <categoryLink id="bdcc-7eb7-963e-45c7" name="Scenery" hidden="false" targetId="bab2-426b-5501-5fe8" primary="false"/>
         <categoryLink id="54f6-1c37-70a9-78d3" name="New CategoryLink" hidden="false" targetId="29f4-e63d-fa5b-1611" primary="true"/>
       </categoryLinks>
       <costs>
         <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="385c-6ac8-73d0-beed" name="Alliance of Wood and Sea" publicationId="dea8-e4a3-2500-1a33" hidden="false" collective="false" import="true" type="upgrade">
-      <profiles>
-        <profile id="bf16-79af-cc62-2a19" name="Strength of the Ethersea" hidden="false" typeId="66c5-932e-004a-574c" typeName="Battalion Abilities">
-          <characteristics>
-            <characteristic name="Battalion Ability" typeId="23f7-32c0-e059-29b2">SYLVANETH units from this battalion are allies. They have the Tides of Death battle trait, and gain abilities from the Tides of Death table in the same manner as IDONETH DEEPKIN units.</characteristic>
-          </characteristics>
-        </profile>
-      </profiles>
-      <categoryLinks>
-        <categoryLink id="9391-8d48-e152-d07a" name="New CategoryLink" hidden="false" targetId="3706-e0e8-674f-c41b" primary="true"/>
-      </categoryLinks>
-      <selectionEntryGroups>
-        <selectionEntryGroup id="8b57-cfa2-f65b-e0d1" name="1 Treelord Ancient" hidden="false" collective="false" import="true">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="ecdb-7e0d-a4e6-2ae8" type="min"/>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="f6fd-e44c-2a05-882d" type="max"/>
-          </constraints>
-          <entryLinks>
-            <entryLink id="f0e4-a8de-f285-3695" name="Treelord Ancient" hidden="false" collective="false" import="true" targetId="c9a3-a47a-cbaa-1314" type="selectionEntry"/>
-          </entryLinks>
-        </selectionEntryGroup>
-        <selectionEntryGroup id="78c8-d801-e2e7-4573" name="2 units of Dryads" hidden="false" collective="false" import="true">
-          <constraints>
-            <constraint field="selections" scope="parent" value="2.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="6fcd-9c01-2e33-b6c8" type="min"/>
-            <constraint field="selections" scope="parent" value="2.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="5915-5b06-df2a-7ecf" type="max"/>
-          </constraints>
-          <entryLinks>
-            <entryLink id="8add-3784-1d20-8e1a" name="Dryads" hidden="false" collective="false" import="true" targetId="3692-5cec-4019-d6db" type="selectionEntry">
-              <modifiers>
-                <modifier type="remove" field="category" value="a42d-220e-6a88-7bf6"/>
-              </modifiers>
-            </entryLink>
-          </entryLinks>
-        </selectionEntryGroup>
-        <selectionEntryGroup id="4e30-c69d-ca74-49d2" name="1 Branchwych" hidden="false" collective="false" import="true">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="4c66-ecfb-3bf1-d14d" type="min"/>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="443b-67df-133c-0f0f" type="max"/>
-          </constraints>
-          <entryLinks>
-            <entryLink id="2fed-914f-fc21-097b" name="Branchwych" hidden="false" collective="false" import="true" targetId="fcbf-911a-5836-bf94" type="selectionEntry"/>
-          </entryLinks>
-        </selectionEntryGroup>
-        <selectionEntryGroup id="58f7-247b-94ec-a10c" name="1 unit of Akhelian Allopexes" hidden="false" collective="false" import="true">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="9cf4-ef1c-bc00-fd51" type="min"/>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="23cd-987c-119a-d8d1" type="max"/>
-          </constraints>
-          <entryLinks>
-            <entryLink id="30b4-0c8e-77c2-249e" name="Akhelian Allopexes" hidden="false" collective="false" import="true" targetId="8229-98fb-0346-d7eb" type="selectionEntry"/>
-          </entryLinks>
-        </selectionEntryGroup>
-        <selectionEntryGroup id="5d86-e698-7af3-d1ac" name="1 unit of Namarti Reavers" hidden="false" collective="false" import="true">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="91d8-4950-bf2c-769b" type="min"/>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="f65f-9c39-5891-95c1" type="max"/>
-          </constraints>
-          <entryLinks>
-            <entryLink id="3b0a-5e49-1264-d50c" name="Namarti Reavers" hidden="false" collective="false" import="true" targetId="52d3-6c54-1d17-0285" type="selectionEntry">
-              <modifiers>
-                <modifier type="remove" field="category" value="a42d-220e-6a88-7bf6">
-                  <conditionGroups>
-                    <conditionGroup type="or">
-                      <conditions>
-                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4373-740f-1bf3-b0aa" type="instanceOf"/>
-                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="e3a6-45ca-4974-b489" type="instanceOf"/>
-                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="6cd6-b22e-bfcb-9589" type="instanceOf"/>
-                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e46b-caf7-8b4b-2202" type="equalTo"/>
-                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="8d8d-c85a-9ff6-5d9c" type="equalTo"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
-                </modifier>
-              </modifiers>
-              <categoryLinks>
-                <categoryLink id="c5d7-3f30-6ced-f8d1" name="BATTLELINE" hidden="false" targetId="a42d-220e-6a88-7bf6" primary="false"/>
-              </categoryLinks>
-            </entryLink>
-          </entryLinks>
-        </selectionEntryGroup>
-        <selectionEntryGroup id="067f-3ebc-5953-fb1e" name="1 Isharann Tidecaster" hidden="false" collective="false" import="true">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="dec4-a164-eee1-e499" type="min"/>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="ca00-9387-8479-e74e" type="max"/>
-          </constraints>
-          <entryLinks>
-            <entryLink id="7833-f4ee-0480-b3ce" name="Isharann Tidecaster" hidden="false" collective="false" import="true" targetId="c6ab-2880-5799-1a85" type="selectionEntry">
-              <entryLinks>
-                <entryLink id="b434-7e36-2e09-4211" name="Artefacts of Power" hidden="false" collective="false" import="true" targetId="c67d-f797-383a-8040" type="selectionEntryGroup"/>
-                <entryLink id="2a9a-f9f3-667a-ceaa" name="Command Traits" hidden="false" collective="false" import="true" targetId="487c-7b72-70fc-3c23" type="selectionEntryGroup"/>
-                <entryLink id="9aae-d22b-1769-0db8" name="General" hidden="false" collective="false" import="true" targetId="98a4-3d6d-a7b9-399f" type="selectionEntry">
-                  <categoryLinks>
-                    <categoryLink id="4e83-5433-218f-1e1a" name="General - Isharann" hidden="false" targetId="8d8d-c85a-9ff6-5d9c" primary="false"/>
-                  </categoryLinks>
-                </entryLink>
-                <entryLink id="3d76-dfa8-d9cd-b726" name="Idoneth Deepkin Spell Lores" hidden="false" collective="false" import="true" targetId="2efb-03e6-5e45-d982" type="selectionEntryGroup"/>
-              </entryLinks>
-            </entryLink>
-          </entryLinks>
-        </selectionEntryGroup>
-        <selectionEntryGroup id="0708-78f4-8e91-2dbc" name="1 unit of Namarti Thralls" hidden="false" collective="false" import="true">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="67b5-f321-0db4-32b2" type="min"/>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d1ad-3245-8d80-c361" type="max"/>
-          </constraints>
-          <entryLinks>
-            <entryLink id="b16c-365b-0376-ebe0" name="Namarti Thralls" hidden="false" collective="false" import="true" targetId="9d96-79c5-f89b-592a" type="selectionEntry"/>
-          </entryLinks>
-        </selectionEntryGroup>
-        <selectionEntryGroup id="9ea0-5d05-a632-1076" name="2 units of AKHELIAN GUARD" hidden="false" collective="false" import="true">
-          <constraints>
-            <constraint field="selections" scope="parent" value="2.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="54b8-27af-ecde-6c86" type="min"/>
-            <constraint field="selections" scope="parent" value="2.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="fad3-6299-55b0-bf3d" type="max"/>
-          </constraints>
-          <entryLinks>
-            <entryLink id="768b-69ab-34e9-cafd" name="Akhelian Morsarr Guard" hidden="false" collective="false" import="true" targetId="f5a7-7053-5818-7599" type="selectionEntry">
-              <modifiers>
-                <modifier type="remove" field="category" value="a42d-220e-6a88-7bf6">
-                  <conditionGroups>
-                    <conditionGroup type="or">
-                      <conditions>
-                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4373-740f-1bf3-b0aa" type="instanceOf"/>
-                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="e3a6-45ca-4974-b489" type="instanceOf"/>
-                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="6cd6-b22e-bfcb-9589" type="instanceOf"/>
-                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e46b-caf7-8b4b-2202" type="equalTo"/>
-                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="0105-60b2-8105-dcbd" type="equalTo"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
-                </modifier>
-              </modifiers>
-              <categoryLinks>
-                <categoryLink id="90f5-97f0-d61c-9741" name="BATTLELINE" hidden="false" targetId="a42d-220e-6a88-7bf6" primary="false"/>
-              </categoryLinks>
-            </entryLink>
-            <entryLink id="91bc-863f-e173-e909" name="Akhelian Ishlaen Guard" hidden="false" collective="false" import="true" targetId="f377-d0cc-5ff0-c9ba" type="selectionEntry">
-              <modifiers>
-                <modifier type="remove" field="category" value="a42d-220e-6a88-7bf6">
-                  <conditionGroups>
-                    <conditionGroup type="or">
-                      <conditions>
-                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4373-740f-1bf3-b0aa" type="instanceOf"/>
-                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="e3a6-45ca-4974-b489" type="instanceOf"/>
-                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="6cd6-b22e-bfcb-9589" type="instanceOf"/>
-                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e46b-caf7-8b4b-2202" type="equalTo"/>
-                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="0105-60b2-8105-dcbd" type="equalTo"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
-                </modifier>
-              </modifiers>
-              <categoryLinks>
-                <categoryLink id="c5d6-c8e8-a606-239d" name="BATTLELINE" hidden="false" targetId="a42d-220e-6a88-7bf6" primary="false"/>
-              </categoryLinks>
-            </entryLink>
-          </entryLinks>
-        </selectionEntryGroup>
-      </selectionEntryGroups>
-      <costs>
-        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="100.0"/>
-      </costs>
-    </selectionEntry>
-    <selectionEntry id="d1d2-b386-9f8d-1d7f" name="Akhelian Corps" publicationId="dea8-e4a3-2500-1a33" hidden="false" collective="false" import="true" type="upgrade">
-      <profiles>
-        <profile id="cf32-891c-c884-549b" name="Pulsing Rhythm of the Drums" hidden="false" typeId="66c5-932e-004a-574c" typeName="Battalion Abilities">
-          <characteristics>
-            <characteristic name="Battalion Ability" typeId="23f7-32c0-e059-29b2">Once per phase, you can re-roll one hit, wound, save, run, or charge roll for one unit from this battalion that is wholly within 12&quot; of the Akhelian Leviadon from this battalion when the re-roll is made.</characteristic>
-          </characteristics>
-        </profile>
-      </profiles>
-      <categoryLinks>
-        <categoryLink id="fa79-aead-4045-dbf8" name="New CategoryLink" hidden="false" targetId="3706-e0e8-674f-c41b" primary="true"/>
-      </categoryLinks>
-      <selectionEntryGroups>
-        <selectionEntryGroup id="5ca3-2407-ae13-2a96" name="1-2 units of Akhelian Allopexes" hidden="false" collective="false" import="true">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="c775-b444-32d4-fce5" type="min"/>
-            <constraint field="selections" scope="parent" value="2.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="a8cf-d421-01b8-5f42" type="max"/>
-          </constraints>
-          <entryLinks>
-            <entryLink id="c571-b12b-c5bd-72f8" name="Akhelian Allopexes" hidden="false" collective="false" import="true" targetId="8229-98fb-0346-d7eb" type="selectionEntry"/>
-          </entryLinks>
-        </selectionEntryGroup>
-        <selectionEntryGroup id="e3b4-d536-0d39-e228" name="2-4 units of AKHELIAN GUARD" hidden="false" collective="false" import="true">
-          <modifiers>
-            <modifier type="set" field="name" value="2-6 units of AKHELIAN GUARD">
-              <conditions>
-                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="ed12-b68a-0cd2-4e35" type="greaterThan"/>
-              </conditions>
-            </modifier>
-            <modifier type="set" field="8b74-38ce-1bcc-57a4" value="6.0">
-              <conditions>
-                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="ed12-b68a-0cd2-4e35" type="greaterThan"/>
-              </conditions>
-            </modifier>
-          </modifiers>
-          <constraints>
-            <constraint field="selections" scope="parent" value="2.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d2e9-8a57-ac10-909e" type="min"/>
-            <constraint field="selections" scope="parent" value="4.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8b74-38ce-1bcc-57a4" type="max"/>
-          </constraints>
-          <entryLinks>
-            <entryLink id="aa1d-42f3-73bf-c0b9" name="Akhelian Morsarr Guard" hidden="false" collective="false" import="true" targetId="f5a7-7053-5818-7599" type="selectionEntry">
-              <modifiers>
-                <modifier type="remove" field="category" value="a42d-220e-6a88-7bf6">
-                  <conditionGroups>
-                    <conditionGroup type="or">
-                      <conditions>
-                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4373-740f-1bf3-b0aa" type="instanceOf"/>
-                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="e3a6-45ca-4974-b489" type="instanceOf"/>
-                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="6cd6-b22e-bfcb-9589" type="instanceOf"/>
-                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e46b-caf7-8b4b-2202" type="equalTo"/>
-                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="0105-60b2-8105-dcbd" type="equalTo"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
-                </modifier>
-              </modifiers>
-              <categoryLinks>
-                <categoryLink id="8591-69f1-1d1a-c796" name="BATTLELINE" hidden="false" targetId="a42d-220e-6a88-7bf6" primary="false"/>
-              </categoryLinks>
-            </entryLink>
-            <entryLink id="0123-a39e-63f1-bd7f" name="Akhelian Ishlaen Guard" hidden="false" collective="false" import="true" targetId="f377-d0cc-5ff0-c9ba" type="selectionEntry">
-              <modifiers>
-                <modifier type="remove" field="category" value="a42d-220e-6a88-7bf6">
-                  <conditionGroups>
-                    <conditionGroup type="or">
-                      <conditions>
-                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4373-740f-1bf3-b0aa" type="instanceOf"/>
-                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="e3a6-45ca-4974-b489" type="instanceOf"/>
-                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="6cd6-b22e-bfcb-9589" type="instanceOf"/>
-                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e46b-caf7-8b4b-2202" type="equalTo"/>
-                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="0105-60b2-8105-dcbd" type="equalTo"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
-                </modifier>
-              </modifiers>
-              <categoryLinks>
-                <categoryLink id="c033-3e58-508c-7431" name="BATTLELINE" hidden="false" targetId="a42d-220e-6a88-7bf6" primary="false"/>
-              </categoryLinks>
-            </entryLink>
-          </entryLinks>
-        </selectionEntryGroup>
-        <selectionEntryGroup id="b25b-596e-5576-cf75" name="1 Akhelian Leviadon" hidden="false" collective="false" import="true">
-          <modifiers>
-            <modifier type="set" field="174f-f1fe-0e4b-63da" value="2.0">
-              <conditions>
-                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="3c47-d09e-d0c8-8682" type="greaterThan"/>
-              </conditions>
-            </modifier>
-            <modifier type="set" field="name" value="1-2 Akhelian Leviadons">
-              <conditions>
-                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="3c47-d09e-d0c8-8682" type="greaterThan"/>
-              </conditions>
-            </modifier>
-          </modifiers>
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="e516-66e6-cfdc-3ff6" type="min"/>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="174f-f1fe-0e4b-63da" type="max"/>
-          </constraints>
-          <entryLinks>
-            <entryLink id="f479-f6ff-c287-634d" name="Akhelian Leviadon" hidden="false" collective="false" import="true" targetId="9b90-77ab-d5ae-7934" type="selectionEntry">
-              <entryLinks>
-                <entryLink id="0128-820e-7784-990a" name="Mount Traits" hidden="false" collective="false" import="true" targetId="2bdf-1dd0-8b40-0dcd" type="selectionEntryGroup"/>
-              </entryLinks>
-            </entryLink>
-          </entryLinks>
-        </selectionEntryGroup>
-      </selectionEntryGroups>
-      <costs>
-        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="100.0"/>
-      </costs>
-    </selectionEntry>
-    <selectionEntry id="4c9e-0e67-c82b-37d3" name="Namarti Corps" publicationId="dea8-e4a3-2500-1a33" hidden="false" collective="false" import="true" type="upgrade">
-      <profiles>
-        <profile id="8859-2639-c363-ff9c" name="Soul Bond" hidden="false" typeId="66c5-932e-004a-574c" typeName="Battalion Abilities">
-          <characteristics>
-            <characteristic name="Battalion Ability" typeId="23f7-32c0-e059-29b2">If the Isharann Soulrender from this battalion uses their Lurelight ability on a NAMARTI unit from this battalion, the D3 roll to determine how many models are returned to the Namarti unit is treated as being a roll of 3 (there is no need to roll the dice).</characteristic>
-          </characteristics>
-        </profile>
-      </profiles>
-      <categoryLinks>
-        <categoryLink id="877b-7081-f5cc-a3c0" name="New CategoryLink" hidden="false" targetId="3706-e0e8-674f-c41b" primary="true"/>
-      </categoryLinks>
-      <selectionEntryGroups>
-        <selectionEntryGroup id="fab3-da95-4f9e-965d" name="2-6 units of Namarti Thralls" hidden="false" collective="false" import="true">
-          <constraints>
-            <constraint field="selections" scope="parent" value="2.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="cdff-2dd1-a678-de26" type="min"/>
-            <constraint field="selections" scope="parent" value="6.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="c353-5a79-6db6-5f61" type="max"/>
-          </constraints>
-          <entryLinks>
-            <entryLink id="e196-17ae-f761-5003" name="Namarti Thralls" hidden="false" collective="false" import="true" targetId="9d96-79c5-f89b-592a" type="selectionEntry"/>
-          </entryLinks>
-        </selectionEntryGroup>
-        <selectionEntryGroup id="fdcf-54ae-a588-4913" name="2-4 units of Namarti Reavers" hidden="false" collective="false" import="true">
-          <modifiers>
-            <modifier type="set" field="name" value="2-6 units of Namarti Reavers">
-              <conditionGroups>
-                <conditionGroup type="or">
-                  <conditions>
-                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="7dc8-4a42-c9b4-ae5b" type="greaterThan"/>
-                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="d8e3-6b13-4d03-10c3" type="greaterThan"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
-            </modifier>
-            <modifier type="set" field="dd3c-57c1-6efd-cc85" value="6.0">
-              <conditionGroups>
-                <conditionGroup type="or">
-                  <conditions>
-                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="d8e3-6b13-4d03-10c3" type="greaterThan"/>
-                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="7dc8-4a42-c9b4-ae5b" type="greaterThan"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
-            </modifier>
-          </modifiers>
-          <constraints>
-            <constraint field="selections" scope="parent" value="2.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="403e-c46f-bed4-4a12" type="min"/>
-            <constraint field="selections" scope="parent" value="4.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="dd3c-57c1-6efd-cc85" type="max"/>
-          </constraints>
-          <entryLinks>
-            <entryLink id="16bd-87ad-f5c6-b8d2" name="Namarti Reavers" hidden="false" collective="false" import="true" targetId="52d3-6c54-1d17-0285" type="selectionEntry">
-              <modifiers>
-                <modifier type="remove" field="category" value="a42d-220e-6a88-7bf6">
-                  <conditionGroups>
-                    <conditionGroup type="or">
-                      <conditions>
-                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4373-740f-1bf3-b0aa" type="instanceOf"/>
-                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="e3a6-45ca-4974-b489" type="instanceOf"/>
-                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="6cd6-b22e-bfcb-9589" type="instanceOf"/>
-                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e46b-caf7-8b4b-2202" type="equalTo"/>
-                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="8d8d-c85a-9ff6-5d9c" type="equalTo"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
-                </modifier>
-              </modifiers>
-              <categoryLinks>
-                <categoryLink id="9892-f19a-b2ca-512c" name="BATTLELINE" hidden="false" targetId="a42d-220e-6a88-7bf6" primary="false"/>
-              </categoryLinks>
-            </entryLink>
-          </entryLinks>
-        </selectionEntryGroup>
-        <selectionEntryGroup id="5326-5911-c0d6-ca5c" name="1 Isharann Soulrender" hidden="false" collective="false" import="true">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="ab80-283d-d866-4049" type="min"/>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="2441-9200-6cbe-0dc3" type="max"/>
-          </constraints>
-          <entryLinks>
-            <entryLink id="ce43-74e5-50a7-1325" name="Isharann Soulrender" hidden="false" collective="false" import="true" targetId="0258-122c-611c-c775" type="selectionEntry">
-              <entryLinks>
-                <entryLink id="c6be-8e10-69ea-1137" name="Artefacts of Power" hidden="false" collective="false" import="true" targetId="c67d-f797-383a-8040" type="selectionEntryGroup"/>
-                <entryLink id="99ec-d933-c774-d0a7" name="Command Traits" hidden="false" collective="false" import="true" targetId="487c-7b72-70fc-3c23" type="selectionEntryGroup"/>
-                <entryLink id="5a6a-a1f6-2708-1a42" name="General" hidden="false" collective="false" import="true" targetId="98a4-3d6d-a7b9-399f" type="selectionEntry">
-                  <categoryLinks>
-                    <categoryLink id="f0c7-a33c-0c94-ebb6" name="General - Isharann" hidden="false" targetId="8d8d-c85a-9ff6-5d9c" primary="false"/>
-                  </categoryLinks>
-                </entryLink>
-              </entryLinks>
-            </entryLink>
-          </entryLinks>
-        </selectionEntryGroup>
-      </selectionEntryGroups>
-      <costs>
-        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="100.0"/>
-      </costs>
-    </selectionEntry>
-    <selectionEntry id="f6aa-9738-a925-0576" name="Royal Council" publicationId="dea8-e4a3-2500-1a33" hidden="false" collective="false" import="true" type="upgrade">
-      <profiles>
-        <profile id="8418-1a4e-a577-c23f" name="Give Them No Respite" hidden="false" typeId="66c5-932e-004a-574c" typeName="Battalion Abilities">
-          <characteristics>
-            <characteristic name="Battalion Ability" typeId="23f7-32c0-e059-29b2">You can use this command ability in your hero phase if the Akhelian King from this battalion is your general, and the Isharann Tidecaster and Isharann Soulscryer from this battalion are within 3&quot; of the general. If you do so, pick up to three friendly IDONETH DEEPKIN units that are wholly within 12&quot; of your general. Add 3&quot; to the Move characteristic of the units you pick until your next hero phase.</characteristic>
-          </characteristics>
-        </profile>
-      </profiles>
-      <categoryLinks>
-        <categoryLink id="23c3-4403-942d-f3f5" name="New CategoryLink" hidden="false" targetId="3706-e0e8-674f-c41b" primary="true"/>
-      </categoryLinks>
-      <selectionEntryGroups>
-        <selectionEntryGroup id="254b-6664-db3e-743e" name="1 Isharann Tidecaster" hidden="false" collective="false" import="true">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="762a-e0d9-9b5f-a336" type="min"/>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="cac2-1e2b-061d-ce1d" type="max"/>
-          </constraints>
-          <entryLinks>
-            <entryLink id="1e7b-f830-43eb-4a71" name="Isharann Tidecaster" hidden="false" collective="false" import="true" targetId="c6ab-2880-5799-1a85" type="selectionEntry">
-              <entryLinks>
-                <entryLink id="120e-1111-1718-0110" name="Artefacts of Power" hidden="false" collective="false" import="true" targetId="c67d-f797-383a-8040" type="selectionEntryGroup"/>
-                <entryLink id="ff4a-bd42-be41-b76b" name="Command Traits" hidden="false" collective="false" import="true" targetId="487c-7b72-70fc-3c23" type="selectionEntryGroup"/>
-                <entryLink id="2b72-94e2-3884-05ed" name="General" hidden="false" collective="false" import="true" targetId="98a4-3d6d-a7b9-399f" type="selectionEntry">
-                  <categoryLinks>
-                    <categoryLink id="f88a-8c9d-7b06-72ad" name="General - Isharann" hidden="false" targetId="8d8d-c85a-9ff6-5d9c" primary="false"/>
-                  </categoryLinks>
-                </entryLink>
-                <entryLink id="633a-5fac-792c-21f5" name="Idoneth Deepkin Spell Lores" hidden="false" collective="false" import="true" targetId="2efb-03e6-5e45-d982" type="selectionEntryGroup"/>
-              </entryLinks>
-            </entryLink>
-          </entryLinks>
-        </selectionEntryGroup>
-        <selectionEntryGroup id="ac5a-6b2d-c1e1-7184" name="1 Isharann Soulscryer" hidden="false" collective="false" import="true">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="a67e-cbaa-240c-fc5d" type="min"/>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="b640-13ec-5ae6-6531" type="max"/>
-          </constraints>
-          <entryLinks>
-            <entryLink id="84c6-df14-8c99-98c5" name="Isharann Soulscryer" hidden="false" collective="false" import="true" targetId="d784-f042-83d2-8405" type="selectionEntry">
-              <entryLinks>
-                <entryLink id="fcf0-b9f8-fcbc-1366" name="Artefacts of Power" hidden="false" collective="false" import="true" targetId="c67d-f797-383a-8040" type="selectionEntryGroup"/>
-                <entryLink id="7274-a3ae-7793-1b77" name="Command Traits" hidden="false" collective="false" import="true" targetId="487c-7b72-70fc-3c23" type="selectionEntryGroup"/>
-                <entryLink id="1f2b-092f-b6e7-0e46" name="General" hidden="false" collective="false" import="true" targetId="98a4-3d6d-a7b9-399f" type="selectionEntry">
-                  <categoryLinks>
-                    <categoryLink id="609c-e1a2-082e-198a" name="General - Isharann" hidden="false" targetId="8d8d-c85a-9ff6-5d9c" primary="false"/>
-                  </categoryLinks>
-                </entryLink>
-                <entryLink id="05af-af03-8ddb-01ed" name="Isharann Rituals" hidden="false" collective="false" import="true" targetId="42d8-c8bd-9068-6856" type="selectionEntry"/>
-                <entryLink id="8845-d32a-fb51-b889" name="Prayer Scriptures" hidden="false" collective="false" import="true" targetId="7937-58cd-0ca2-38cf" type="selectionEntryGroup"/>
-              </entryLinks>
-            </entryLink>
-          </entryLinks>
-        </selectionEntryGroup>
-        <selectionEntryGroup id="f064-72d9-05ef-fa46" name="1 AKHELIAN KING" hidden="false" collective="false" import="true">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="958c-395b-771e-78f3" type="min"/>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="21f7-aee7-f752-9bd5" type="max"/>
-          </constraints>
-          <entryLinks>
-            <entryLink id="bede-e50f-8768-3c30" name="Volturnos, High King of the Deep" hidden="false" collective="false" import="true" targetId="c845-b087-db61-0de9" type="selectionEntry">
-              <entryLinks>
-                <entryLink id="f92b-10ef-e256-a930" name="General" hidden="false" collective="false" import="true" targetId="98a4-3d6d-a7b9-399f" type="selectionEntry">
-                  <categoryLinks>
-                    <categoryLink id="3502-dce0-e49e-5919" name="Named General" hidden="false" targetId="8b3d-7f03-e1f9-eaf5" primary="false"/>
-                    <categoryLink id="29d1-c6a3-d399-f056" name="General - Akhelian" hidden="false" targetId="0105-60b2-8105-dcbd" primary="false"/>
-                  </categoryLinks>
-                </entryLink>
-                <entryLink id="ed28-9600-07d2-3497" name="Mount Traits" hidden="false" collective="false" import="true" targetId="2bdf-1dd0-8b40-0dcd" type="selectionEntryGroup"/>
-              </entryLinks>
-            </entryLink>
-            <entryLink id="b6dc-3259-565c-3015" name="Akhelian King" hidden="false" collective="false" import="true" targetId="c32d-2a55-5429-1400" type="selectionEntry">
-              <entryLinks>
-                <entryLink id="f796-18fd-febf-0f3d" name="General" hidden="false" collective="false" import="true" targetId="98a4-3d6d-a7b9-399f" type="selectionEntry">
-                  <categoryLinks>
-                    <categoryLink id="5ae8-3a3e-7512-d152" name="General - Akhelian" hidden="false" targetId="0105-60b2-8105-dcbd" primary="false"/>
-                  </categoryLinks>
-                </entryLink>
-                <entryLink id="2e5d-1bc8-d438-1951" name="Artefacts of Power" hidden="false" collective="false" import="true" targetId="c67d-f797-383a-8040" type="selectionEntryGroup"/>
-                <entryLink id="c0cf-e20c-a5bc-6d82" name="Command Traits" hidden="false" collective="false" import="true" targetId="487c-7b72-70fc-3c23" type="selectionEntryGroup"/>
-                <entryLink id="c350-0b1e-3f3b-abbe" name="Mount Traits" hidden="false" collective="false" import="true" targetId="2bdf-1dd0-8b40-0dcd" type="selectionEntryGroup"/>
-              </entryLinks>
-            </entryLink>
-          </entryLinks>
-        </selectionEntryGroup>
-        <selectionEntryGroup id="501a-18ac-c441-38c2" name="Up to 2 of each featured unit" hidden="false" collective="false" import="true">
-          <modifiers>
-            <modifier type="set" field="hidden" value="true">
-              <conditions>
-                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="6266-258e-3cd9-1e1f" type="equalTo"/>
-              </conditions>
-            </modifier>
-          </modifiers>
-          <entryLinks>
-            <entryLink id="16a4-c8d4-09dd-6f5a" name="Isharann Tidecaster" hidden="false" collective="false" import="true" targetId="c6ab-2880-5799-1a85" type="selectionEntry">
-              <constraints>
-                <constraint field="selections" scope="parent" value="2.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="2ba9-1d38-b6e8-e521" type="max"/>
-              </constraints>
-              <entryLinks>
-                <entryLink id="2c9c-a8ac-4525-2af8" name="Artefacts of Power" hidden="false" collective="false" import="true" targetId="c67d-f797-383a-8040" type="selectionEntryGroup"/>
-                <entryLink id="6e0e-6bdb-3281-557b" name="Command Traits" hidden="false" collective="false" import="true" targetId="487c-7b72-70fc-3c23" type="selectionEntryGroup"/>
-                <entryLink id="d7df-2bbd-9f5b-d821" name="General" hidden="false" collective="false" import="true" targetId="98a4-3d6d-a7b9-399f" type="selectionEntry">
-                  <categoryLinks>
-                    <categoryLink id="7e79-60b5-3604-3940" name="General - Isharann" hidden="false" targetId="8d8d-c85a-9ff6-5d9c" primary="false"/>
-                  </categoryLinks>
-                </entryLink>
-              </entryLinks>
-            </entryLink>
-            <entryLink id="461a-6457-2806-d7bb" name="Isharann Soulscryer" hidden="false" collective="false" import="true" targetId="d784-f042-83d2-8405" type="selectionEntry">
-              <constraints>
-                <constraint field="selections" scope="parent" value="2.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="542a-1e7b-822c-f5d7" type="max"/>
-              </constraints>
-              <entryLinks>
-                <entryLink id="4141-59f9-96e3-307e" name="Artefacts of Power" hidden="false" collective="false" import="true" targetId="c67d-f797-383a-8040" type="selectionEntryGroup"/>
-                <entryLink id="8730-2efa-3fdf-0966" name="Command Traits" hidden="false" collective="false" import="true" targetId="487c-7b72-70fc-3c23" type="selectionEntryGroup"/>
-                <entryLink id="39c9-b8fd-d8d6-683d" name="General" hidden="false" collective="false" import="true" targetId="98a4-3d6d-a7b9-399f" type="selectionEntry">
-                  <categoryLinks>
-                    <categoryLink id="a844-ff09-728a-cc95" name="General - Isharann" hidden="false" targetId="8d8d-c85a-9ff6-5d9c" primary="false"/>
-                  </categoryLinks>
-                </entryLink>
-                <entryLink id="998a-2399-7672-4b40" name="Isharann Rituals" hidden="false" collective="false" import="true" targetId="42d8-c8bd-9068-6856" type="selectionEntry"/>
-              </entryLinks>
-            </entryLink>
-          </entryLinks>
-        </selectionEntryGroup>
-      </selectionEntryGroups>
-      <costs>
-        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="140.0"/>
-      </costs>
-    </selectionEntry>
-    <selectionEntry id="52a7-28bc-4d2c-0c57" name="Phalanx" publicationId="dea8-e4a3-2500-1a33" hidden="false" collective="false" import="true" type="upgrade">
-      <profiles>
-        <profile id="730d-3cc7-0bbf-51e4" name="Full Fury of the Storm" hidden="false" typeId="66c5-932e-004a-574c" typeName="Battalion Abilities">
-          <characteristics>
-            <characteristic name="Battalion Ability" typeId="23f7-32c0-e059-29b2">If your army has the IDONETH DEEPKIN allegiance and includes this battalion, then once per battle at the start of a battle round, you can choose to use the High Tide ability from the Tides of Death table for that battle round instead of the ability that would normally be used.</characteristic>
-          </characteristics>
-        </profile>
-      </profiles>
-      <categoryLinks>
-        <categoryLink id="413b-76b1-ae6f-b001" name="New CategoryLink" hidden="false" targetId="3706-e0e8-674f-c41b" primary="true"/>
-      </categoryLinks>
-      <selectionEntryGroups>
-        <selectionEntryGroup id="52af-511a-e31d-d02e" name="2-4 Namarti Corps" hidden="false" collective="false" import="true">
-          <constraints>
-            <constraint field="selections" scope="parent" value="2.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="9872-832c-1bc5-7f42" type="min"/>
-            <constraint field="selections" scope="parent" value="4.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="cf62-afb2-ed54-3b0e" type="max"/>
-          </constraints>
-          <entryLinks>
-            <entryLink id="54e8-2e42-932d-7031" name="Namarti Corps" hidden="false" collective="false" import="true" targetId="4c9e-0e67-c82b-37d3" type="selectionEntry"/>
-          </entryLinks>
-        </selectionEntryGroup>
-        <selectionEntryGroup id="4808-abe0-de3f-a25c" name="2-4 Akhelian Corps" hidden="false" collective="false" import="true">
-          <modifiers>
-            <modifier type="set" field="17b3-5a5b-4618-9554" value="6.0">
-              <conditions>
-                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="1534-47a4-f7ec-e42a" type="greaterThan"/>
-              </conditions>
-            </modifier>
-            <modifier type="set" field="name" value="2-6 Akhelian Corps">
-              <conditions>
-                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="1534-47a4-f7ec-e42a" type="greaterThan"/>
-              </conditions>
-            </modifier>
-          </modifiers>
-          <constraints>
-            <constraint field="selections" scope="parent" value="2.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="1bcc-bb51-c67e-1f23" type="min"/>
-            <constraint field="selections" scope="parent" value="4.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="17b3-5a5b-4618-9554" type="max"/>
-          </constraints>
-          <entryLinks>
-            <entryLink id="54f4-9ae5-c6a0-7e87" name="Akhelian Corps" hidden="false" collective="false" import="true" targetId="d1d2-b386-9f8d-1d7f" type="selectionEntry"/>
-          </entryLinks>
-        </selectionEntryGroup>
-        <selectionEntryGroup id="5404-df02-2f18-d3c6" name="1 Royal Council" hidden="false" collective="false" import="true">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="97e9-0835-937c-c83d" type="min"/>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="20d7-fbdd-b177-ce19" type="max"/>
-          </constraints>
-          <entryLinks>
-            <entryLink id="7d62-0422-7cd7-6006" name="Royal Council" hidden="false" collective="false" import="true" targetId="f6aa-9738-a925-0576" type="selectionEntry"/>
-          </entryLinks>
-        </selectionEntryGroup>
-      </selectionEntryGroups>
-      <costs>
-        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="120.0"/>
-      </costs>
-    </selectionEntry>
-    <selectionEntry id="42d8-c8bd-9068-6856" name="Isharann Rituals" hidden="false" collective="false" import="true" type="upgrade">
-      <constraints>
-        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="5558-90cd-8b5a-f496" type="max"/>
-        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="a36b-1576-7bce-2a2a" type="min"/>
-      </constraints>
-      <profiles>
-        <profile id="c2f2-9ace-ad32-e524" name="Isharann Rituals" hidden="false" typeId="7861-da01-01c0-88d9" typeName="Ability">
-          <characteristics>
-            <characteristic name="Ability" typeId="9bce-4deb-8b79-eaec">ISHARANN HEROES from an Idoneth Deepkin army can perform the following Isharann rituals in your hero phase. A maximum of one Isharann ritual can be performed in each hero phase.
-
-In order to perform a ritual, at the start of your hero phase, say which ritual is being performed and then pick one ISHARANN HERO from your army that is more than 9&quot; from any enemy models. Then roll 2D6. Add 1 to the roll if the HERO performing the ritual is within 1&quot; of a Gloomtide Shipwreck, and add a further 1 to the roll if they are a PRIEST. In addition, add 1 to the roll for each other friendly ISHARANN HERO that is within 3&quot; of the model performing the ritual (add 2 instead for each HERO within 3&quot; that is a PRIEST). On a 10+ the ritual is successfully performed and has the effect listed below. On any other result, the ritual fails and nothing happens.
-
-Ritual of Erosion: Until your next hero phase, enemy units do not receive any benefit for being in cover.
-
-Ritual of Rousing: Heal 1 wound allocated to each friendly EIDOLON on the battlefield. In addition, you can re-roll failed hit rolls and casting rolls for friendly EIDOLONs until your next hero phase.
-
-Ritual of the Tempest: Until your next hero phase, enemy models cannot fly.</characteristic>
-          </characteristics>
-        </profile>
-      </profiles>
-      <costs>
-        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
-      </costs>
-    </selectionEntry>
-    <selectionEntry id="79f2-db6a-a9d0-eaca" name="The Bloodsurf Hunt" hidden="false" collective="false" import="true" type="upgrade">
+    <selectionEntry id="1e0e-383b-1c26-3c40" name="Allegiance" hidden="false" collective="false" import="true" type="upgrade">
       <modifiers>
-        <modifier type="set" field="hidden" value="true">
-          <conditions>
-            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="6266-258e-3cd9-1e1f" type="equalTo"/>
-          </conditions>
+        <modifier type="set" field="8d3b-82ed-ae43-8515" value="0.0">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4373-740f-1bf3-b0aa" type="instanceOf"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="e3a6-45ca-4974-b489" type="instanceOf"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="996a-613c-4006-25e3" type="instanceOf"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="6cd6-b22e-bfcb-9589" type="instanceOf"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="b543-cb16-0c79-fbc6" type="instanceOf"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
         </modifier>
       </modifiers>
       <constraints>
-        <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="33b7-29eb-5933-b2e8" type="max"/>
+        <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="8d3b-82ed-ae43-8515" type="min"/>
+        <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="20d9-db72-daf4-1833" type="max"/>
       </constraints>
-      <profiles>
-        <profile id="5a9d-ac07-41b3-57f9" name="Deadly Guardians" hidden="false" typeId="66c5-932e-004a-574c" typeName="Battalion Abilities">
-          <characteristics>
-            <characteristic name="Battalion Ability" typeId="23f7-32c0-e059-29b2">Add 1 to hit rolls for attacks made with Barbed Hooks and Blades by ALLOPEX units from this battalion that are wholly within 12&quot; of the AKHELIAN KING from the same battalion. In addition, roll a dice before you allocate a wound or mortal wound to the AKHELIAN KING from this battalion if it is within 3&quot; of any ALLOPEX units from the same battalion. On a 2+, you must instead allocate that wound or mortal wound to one of those units.</characteristic>
-          </characteristics>
-        </profile>
-      </profiles>
       <categoryLinks>
-        <categoryLink id="cf3a-090f-4af5-fb1f" name="New CategoryLink" hidden="false" targetId="3706-e0e8-674f-c41b" primary="true"/>
+        <categoryLink id="d368-ac95-37b2-0a25" name="Allegiance" hidden="false" targetId="af41-ae78-5063-3d36" primary="false"/>
+        <categoryLink id="4aaf-db4f-995d-5bbd" name="New CategoryLink" hidden="false" targetId="29f4-e63d-fa5b-1611" primary="true"/>
       </categoryLinks>
-      <selectionEntryGroups>
-        <selectionEntryGroup id="0a1a-2f1b-83ad-6bb3" name="1 Akhelian King (Nemmetar)" hidden="false" collective="false" import="true">
+      <selectionEntries>
+        <selectionEntry id="526b-31f3-68ec-9638" name="Idoneth Deepkin" publicationId="dea8-e4a3-2500-1a33" hidden="false" collective="false" import="true" type="upgrade">
           <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="609e-a7e1-6c0e-547d" type="max"/>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="2eb1-8525-75e4-de9f" type="min"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="e5fb-dd24-5b86-0fe4" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="3f5c-099f-fe64-f810" type="min"/>
           </constraints>
-          <entryLinks>
-            <entryLink id="0b7a-fd85-9c07-bc62" name="Akhelian King" hidden="false" collective="false" import="true" targetId="c32d-2a55-5429-1400" type="selectionEntry">
-              <entryLinks>
-                <entryLink id="afde-febd-11c2-df0d" name="General" hidden="false" collective="false" import="true" targetId="98a4-3d6d-a7b9-399f" type="selectionEntry">
+          <profiles>
+            <profile id="87a4-9896-b35a-f3b2" name="Forgotten Nightmares" hidden="false" typeId="c0c2-177b-e761-ec41" typeName="Allegiance Abilities">
+              <characteristics>
+                <characteristic name="Allegiance Ability" typeId="0506-f62d-68b3-5499">Friendly IDONETH DEEPKIN units can only be picked as the target of a shooting attack if they are the closest eligible target to the attacking model.</characteristic>
+              </characteristics>
+            </profile>
+            <profile id="63b7-1612-23a4-4f0d" name="Tides of Death" hidden="false" typeId="c0c2-177b-e761-ec41" typeName="Allegiance Abilities">
+              <characteristics>
+                <characteristic name="Allegiance Ability" typeId="0506-f62d-68b3-5499">A different Tides of Death ability applies to your army in each battle round, as shown on the Tides of Death table below.
+
+Battle Round -- Ability
+
+1 -- Low Tide: In this battle round, friendly IDONETH DEEPKIN units are treated as being in cover.
+
+2 -- Flood Tide: In this battle round, friendly IDONETH DEEPKIN units can run and still shoot or charge in the same turn.
+
+3 -- High Tide: In this battle round, the strike-first effect applies to friendly IDONETH DEEPKIN units.
+
+4 -- Ebb Tide: In this battle round, friendly IDONETH DEEPKIN units can retreat and still shoot or charge in the same turn.
+
+5+ --: Repeat the four Tides of Death steps, starting with Low Tide.</characteristic>
+              </characteristics>
+            </profile>
+            <profile id="23ff-0dd7-6b92-7ac1" name="Enclaves" hidden="false" typeId="c0c2-177b-e761-ec41" typeName="Allegiance Abilities">
+              <characteristics>
+                <characteristic name="Allegiance Ability" typeId="0506-f62d-68b3-5499">You can pick 1 of the following subfactions for your army. All IDONETH DEEPKIN units in your army gain the keyword of the subfaction you picked, and you can use the allegiance abilities for that subfaction. If a unit already has a different subfaction keyword on its warscroll, it cannot gain another one. This does not preclude you from including the unit in your army, but you cannot use the allegiance abilities for its subfaction.
+
+• IONRACH
+• NAUTILAR
+• MOR’PHANN
+• FUETHÁN
+• DHOM-HAIN
+• BRIOMDAR</characteristic>
+              </characteristics>
+            </profile>
+            <profile id="e699-6fef-1e16-2284" name="Isharann Rituals" hidden="false" typeId="7861-da01-01c0-88d9" typeName="Ability">
+              <characteristics>
+                <characteristic name="Ability" typeId="9bce-4deb-8b79-eaec">In the first battle round, after the players have received their starting command points but before the start of the first turn, if your army includes any ISHARANN units, you can pick 1 of the following Isharann rituals to influence the ethersea during the battle.
+
+Ritual of the Creeping Mist: Friendly IDONETH DEEPKIN units that are affected by the Low Tide ability cannot be picked as the target of a shooting attack unless the attacking model is within 12&quot; of that unit.
+
+Ritual of the Surging Storm: Add 1 to run rolls and charge rolls for friendly IDONETH DEEPKIN units that are affected by the Flood Tide ability.
+
+Ritual of Deep-sight: Friendly NAMARTI units that are affected by the High Tide ability have a ward of 5+.
+
+Ritual of the Spiteful Riptide: Before a friendly IDONETH DEEPKIN unit that is affected by the Ebb Tide ability retreats, roll a dice for each enemy unit within 3&quot; of that unit. On a 4+, that enemy unit suffers D3 mortal wounds.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <selectionEntryGroups>
+            <selectionEntryGroup id="6191-77bf-1dd7-bdac" name="Enclave" hidden="false" collective="false" import="true">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="2a91-f0b5-f7a6-278b" type="max"/>
+              </constraints>
+              <selectionEntries>
+                <selectionEntry id="fd16-89ec-ab38-f47a" name="Ionrach" hidden="false" collective="false" import="true" type="upgrade">
+                  <profiles>
+                    <profile id="f7db-2040-6b72-ad5f" name="Legacy of Glory" hidden="false" typeId="1193-4081-af87-68cd" typeName="Heroic Action/Monstrous Rampage">
+                      <characteristics>
+                        <characteristic name="Effect" typeId="faec-beac-0874-3c6e">You can carry out this heroic action with a friendly IONRACH AKHELIAN HERO instead of any other heroic action you can carry out with that HERO. If you do so, pick 1 friendly IONRACH AKHELIAN unit wholly within 12&quot; of that HERO. Until the end of that turn, you can choose for that unit to be affected by either the Flood Tide or Ebb Tide ability from the Tides of Death table in addition to any other abilities from the Tides of Death table they are affected by.</characteristic>
+                      </characteristics>
+                    </profile>
+                  </profiles>
                   <categoryLinks>
-                    <categoryLink id="9172-b967-5bc8-ca06" name="General - Akhelian" hidden="false" targetId="0105-60b2-8105-dcbd" primary="false"/>
-                    <categoryLink id="0b0a-e1e4-5c07-82cf" name="General - Nemmetar" hidden="false" targetId="e713-d46e-4a8d-dea2" primary="false"/>
+                    <categoryLink id="341c-eaff-fcd1-7f8a" name="Sub-Allegiance" hidden="false" targetId="4fe1-4d42-25cc-d732" primary="false"/>
                   </categoryLinks>
-                </entryLink>
-                <entryLink id="c818-a5f5-dc1b-d124" name="Artefacts of Power" hidden="false" collective="false" import="true" targetId="c67d-f797-383a-8040" type="selectionEntryGroup"/>
-                <entryLink id="1335-0a0d-41b1-e82d" name="Command Traits" hidden="false" collective="false" import="true" targetId="487c-7b72-70fc-3c23" type="selectionEntryGroup"/>
-                <entryLink id="dfb2-893b-6959-72a0" name="Mount Traits" hidden="false" collective="false" import="true" targetId="2bdf-1dd0-8b40-0dcd" type="selectionEntryGroup"/>
-              </entryLinks>
-            </entryLink>
-          </entryLinks>
-        </selectionEntryGroup>
-        <selectionEntryGroup id="bcb7-d314-8f9e-acc8" name="1-2 Akhelian Allopexes units" hidden="false" collective="false" import="true">
-          <constraints>
-            <constraint field="selections" scope="parent" value="2.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="6d1e-8ec6-fd6f-a980" type="max"/>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d41d-ebf0-6100-53ed" type="min"/>
-          </constraints>
-          <entryLinks>
-            <entryLink id="31e5-5391-2083-a737" name="Akhelian Allopexes" hidden="false" collective="false" import="true" targetId="8229-98fb-0346-d7eb" type="selectionEntry"/>
-          </entryLinks>
-        </selectionEntryGroup>
-      </selectionEntryGroups>
+                  <costs>
+                    <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
+                  </costs>
+                </selectionEntry>
+                <selectionEntry id="d9a4-86ee-8ca5-045a" name="Dhom-hain" hidden="false" collective="false" import="true" type="upgrade">
+                  <profiles>
+                    <profile id="6df2-7967-b342-22ea" name="Namarti Savages" hidden="false" typeId="c0c2-177b-e761-ec41" typeName="Allegiance Abilities">
+                      <characteristics>
+                        <characteristic name="Allegiance Ability" typeId="0506-f62d-68b3-5499">If you take the first turn in the current battle round, in your combat phase, after a friendly DHOM-HAIN NAMARTI unit has fought for the first time in that phase, if there are no enemy units within 3&quot; of that DHOM-HAIN NAMARTI unit, you can attempt a charge with that unit if it is within 12&quot; of any enemy units. If that DHOM-HAIN NAMARTI unit finishes that charge move within 1/2&quot; of an enemy unit, you can pick that unit to fight for a second time in that phase when it is your turn to do so. If you take the second turn in the current battle round, friendly DHOM-HAIN HEROES can issue the Redeploy command up to 3 times in the same phase. If a friendly DHOM-HAIN HERO does so, each command must be received by a friendly DHOM-HAIN NAMARTI unit. No command point is spent the second and third times this unit issues that command in that phase.</characteristic>
+                      </characteristics>
+                    </profile>
+                  </profiles>
+                  <categoryLinks>
+                    <categoryLink id="76b6-7e61-f265-fca3" name="Sub-Allegiance" hidden="false" targetId="4fe1-4d42-25cc-d732" primary="false"/>
+                  </categoryLinks>
+                  <costs>
+                    <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
+                  </costs>
+                </selectionEntry>
+                <selectionEntry id="2e68-4ec5-ed55-c62d" name="Fuethán" hidden="false" collective="false" import="true" type="upgrade">
+                  <profiles>
+                    <profile id="4add-583d-7310-9532" name="Revel in Slaughter" hidden="false" typeId="c0c2-177b-e761-ec41" typeName="Allegiance Abilities">
+                      <characteristics>
+                        <characteristic name="Allegiance Ability" typeId="0506-f62d-68b3-5499">You can include Bloodthirsty Shivers in your army. At the start of the combat phase, you can pick 1 unit from each Bloodthirsty Shiver in your army. If you do so, until the end of that phase, if the unmodified hit roll for an attack made with that unit’s Ferocious Bites is 6, that attack scores 2 hits on the target instead of 1. Make a wound roll and save roll for each hit. If the attacking unit is within 3&quot; of 1 or more other units from the same Bloodthirsty Shiver, its Ferocious Bite scores 3 hits on an unmodified hit roll of 6 instead.</characteristic>
+                      </characteristics>
+                    </profile>
+                  </profiles>
+                  <categoryLinks>
+                    <categoryLink id="f0bb-d5e9-7542-8198" name="Sub-Allegiance" hidden="false" targetId="4fe1-4d42-25cc-d732" primary="false"/>
+                  </categoryLinks>
+                  <costs>
+                    <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
+                  </costs>
+                </selectionEntry>
+                <selectionEntry id="e323-b2b0-43b2-680e" name="Nautilar" hidden="false" collective="false" import="true" type="upgrade">
+                  <profiles>
+                    <profile id="bf23-1dd3-9889-bc62" name="Crushing Assault" hidden="false" typeId="1193-4081-af87-68cd" typeName="Heroic Action/Monstrous Rampage">
+                      <characteristics>
+                        <characteristic name="Effect" typeId="faec-beac-0874-3c6e">You can carry out this monstrous rampage with a friendly NAUTILAR LEVIADON instead of any other monstrous rampage you can carry out with that Leviadon. If you do so, change the Rend characteristic of that Leviadon’s Massive Scythed Fins and Crushing Jaws to -3 until the end of the next combat phase.</characteristic>
+                      </characteristics>
+                    </profile>
+                  </profiles>
+                  <categoryLinks>
+                    <categoryLink id="7989-6a7d-eb68-6551" name="Sub-Allegiance" hidden="false" targetId="4fe1-4d42-25cc-d732" primary="false"/>
+                  </categoryLinks>
+                  <costs>
+                    <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
+                  </costs>
+                </selectionEntry>
+                <selectionEntry id="57c8-fcc4-76dd-6fa5" name="Mor&apos;phann" hidden="false" collective="false" import="true" type="upgrade">
+                  <profiles>
+                    <profile id="9b29-1f4f-f600-297a" name="Soul-magic Adepts" hidden="false" typeId="c0c2-177b-e761-ec41" typeName="Allegiance Abilities">
+                      <characteristics>
+                        <characteristic name="Allegiance Ability" typeId="0506-f62d-68b3-5499">If the Lurelight ability of a friendly MOR’PHANN SOULRENDER affects a friendly MOR’PHANN NAMARTI unit, add 3 to the number of slain models that are returned to that unit.</characteristic>
+                      </characteristics>
+                    </profile>
+                  </profiles>
+                  <categoryLinks>
+                    <categoryLink id="0424-b877-1f5a-3006" name="Sub-Allegiance" hidden="false" targetId="4fe1-4d42-25cc-d732" primary="false"/>
+                  </categoryLinks>
+                  <costs>
+                    <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
+                  </costs>
+                </selectionEntry>
+                <selectionEntry id="7b83-8a69-41ed-257f" name="Briomdar" hidden="false" collective="false" import="true" type="upgrade">
+                  <profiles>
+                    <profile id="fc9e-e0f4-8ffe-09fc" name="Supreme Soulscryer" hidden="false" typeId="c0c2-177b-e761-ec41" typeName="Allegiance Abilities">
+                      <characteristics>
+                        <characteristic name="Allegiance Ability" typeId="0506-f62d-68b3-5499">During deployment, if you set up a friendly BRIOMDAR SOULSCRYER using the Finder of Ways ability, up to 3 friendly BRIOMDAR IDONETH DEEPKIN units can join that SOULSCRYER instead of up to 2. In addition, when you set up any units that join that SOULSCRYER, you can set up those units wholly within 12&quot; of that SOULSCRYER and more than 9&quot; from all enemy units.</characteristic>
+                      </characteristics>
+                    </profile>
+                  </profiles>
+                  <categoryLinks>
+                    <categoryLink id="2b38-8a09-9fc2-cda2" name="Sub-Allegiance" hidden="false" targetId="4fe1-4d42-25cc-d732" primary="false"/>
+                  </categoryLinks>
+                  <costs>
+                    <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
+                  </costs>
+                </selectionEntry>
+              </selectionEntries>
+            </selectionEntryGroup>
+          </selectionEntryGroups>
+          <costs>
+            <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
+          </costs>
+        </selectionEntry>
+      </selectionEntries>
       <costs>
-        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="120.0"/>
+        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
       </costs>
     </selectionEntry>
   </sharedSelectionEntries>
@@ -982,140 +727,187 @@ Ritual of the Tempest: Until your next hero phase, enemy models cannot fly.</cha
       <constraints>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="6458-396b-4256-d4f2" type="max"/>
       </constraints>
-      <selectionEntries>
-        <selectionEntry id="3f30-8f95-1b4b-0652" name="6. Lord of Storm and Sea" hidden="false" collective="false" import="true" type="upgrade">
+      <selectionEntryGroups>
+        <selectionEntryGroup id="64c3-b9e5-60f7-d3dc" name="Traits of the Akhelians" hidden="false" collective="false" import="true">
           <modifiers>
-            <modifier type="set" field="4336-1d68-3d4c-b04d" value="1.0">
-              <conditions>
-                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e713-d46e-4a8d-dea2" type="greaterThan"/>
-              </conditions>
-            </modifier>
-          </modifiers>
-          <constraints>
-            <constraint field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="4336-1d68-3d4c-b04d" type="min"/>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="222b-c6d4-223e-6b87" type="max"/>
-          </constraints>
-          <profiles>
-            <profile id="1bd5-6fca-6584-be80" name="Lord of Storm and Sea" hidden="false" typeId="1504-23bf-8850-4f65" typeName="Command Traits">
-              <characteristics>
-                <characteristic name="Command Trait" typeId="0145-9acf-f5dc-d543">Add 2 to the Bravery characteristic of friendly IDONETH DEEPKINunits while they are wholly within 12&quot;of this general.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <costs>
-            <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="c3c2-f367-01a7-3079" name="2. Hunter of Souls" hidden="false" collective="false" import="true" type="upgrade">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="c9b7-4ee0-9c04-5c3b" type="max"/>
-          </constraints>
-          <profiles>
-            <profile id="6ff7-b7d1-4cee-b941" name="Hunter of Souls" hidden="false" typeId="1504-23bf-8850-4f65" typeName="Command Traits">
-              <characteristics>
-                <characteristic name="Command Trait" typeId="0145-9acf-f5dc-d543">Re-roll wound rolls of 1 for this general.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <costs>
-            <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="1d69-521d-f331-0a95" name="5. Nightmare Legacy" hidden="false" collective="false" import="true" type="upgrade">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="505a-d843-f782-3cb4" type="max"/>
-          </constraints>
-          <profiles>
-            <profile id="8630-57c6-fd4e-d50c" name="Nightmare Legacy" hidden="false" typeId="1504-23bf-8850-4f65" typeName="Command Traits">
-              <characteristics>
-                <characteristic name="Command Trait" typeId="0145-9acf-f5dc-d543">Subtract 1 from the Bravery characteristic of enemy units while they are within 12&quot;of this general.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <costs>
-            <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="fe06-a0d2-7ce4-dc91" name="3. Unstoppable Fury" hidden="false" collective="false" import="true" type="upgrade">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="b639-c669-0f8a-a190" type="max"/>
-          </constraints>
-          <profiles>
-            <profile id="ba4c-39d8-535d-0cbf" name="Unstoppable Fury" hidden="false" typeId="1504-23bf-8850-4f65" typeName="Command Traits">
-              <characteristics>
-                <characteristic name="Command Trait" typeId="0145-9acf-f5dc-d543">Add 2 to the Attacks characteristic of any weapons used by this general in any battle round in which the High Tide ability is in effect.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <costs>
-            <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="a1bc-e7cf-c1ce-659a" name="1. Merciless Raider" hidden="false" collective="false" import="true" type="upgrade">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="565b-0025-7f39-be1a" type="max"/>
-          </constraints>
-          <profiles>
-            <profile id="84c9-2a07-49e7-c407" name="Merciless Raider" hidden="false" typeId="1504-23bf-8850-4f65" typeName="Command Traits">
-              <characteristics>
-                <characteristic name="Command Trait" typeId="0145-9acf-f5dc-d543">You can re-roll run rolls and charge rolls for this general.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <costs>
-            <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="6cfb-94d7-cafd-c789" name="4. Born From Agony" hidden="false" collective="false" import="true" type="upgrade">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="318d-82e5-1317-8ffa" type="max"/>
-          </constraints>
-          <profiles>
-            <profile id="7f33-effe-d7f6-8cdf" name="Born From Agony" hidden="false" typeId="1504-23bf-8850-4f65" typeName="Command Traits">
-              <characteristics>
-                <characteristic name="Command Trait" typeId="0145-9acf-f5dc-d543">Increase this general’sWounds characteristic by 2.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <costs>
-            <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="d1d9-b163-e632-19e5" name="0. Emissary of the Deep Palace" hidden="false" collective="false" import="true" type="upgrade">
-          <modifiers>
-            <modifier type="set" field="3791-6b3a-8253-f02d" value="1.0">
-              <conditionGroups>
-                <conditionGroup type="and">
-                  <conditions>
-                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="6266-258e-3cd9-1e1f" type="greaterThan"/>
-                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="c661-44d6-0f5b-11ff" type="greaterThan"/>
-                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="8b3d-7f03-e1f9-eaf5" type="equalTo"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
-            </modifier>
             <modifier type="set" field="hidden" value="true">
               <conditions>
-                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="6266-258e-3cd9-1e1f" type="equalTo"/>
+                <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="6d59-e498-b4af-c2ba" type="notInstanceOf"/>
               </conditions>
             </modifier>
           </modifiers>
           <constraints>
-            <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="3791-6b3a-8253-f02d" type="min"/>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="727b-556f-56cc-f80d" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="5b42-4aee-e3b4-5e5f" type="max"/>
           </constraints>
-          <profiles>
-            <profile id="2e46-90e4-a9dd-b012" name="Emissary of the Deep Palace" hidden="false" typeId="1504-23bf-8850-4f65" typeName="Command Traits">
-              <characteristics>
-                <characteristic name="Command Trait" typeId="0145-9acf-f5dc-d543">Allied units in an Ionrach army are treated as having the Tides of Death battle trait and can therefore use abilities from the Tides of Death table each battle round.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <costs>
-            <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
-          </costs>
-        </selectionEntry>
-      </selectionEntries>
+          <selectionEntries>
+            <selectionEntry id="1831-31e6-7ad6-d737" name="1. Born From Agony" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="aa7b-1f6e-caf7-99d9" type="max"/>
+              </constraints>
+              <profiles>
+                <profile id="5329-46fa-71a2-0b04" name="Born From Agony" hidden="false" typeId="1504-23bf-8850-4f65" typeName="Command Traits">
+                  <characteristics>
+                    <characteristic name="Command Trait" typeId="0145-9acf-f5dc-d543">At the end of the battleshock phase, you can roll a dice for this general. On a 6, heal all wounds allocated to this general.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <costs>
+                <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="6ab9-4b01-d9e4-9cc3" name="2. Lord of Storm and Sea" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="0eef-0863-f36d-dff5" type="max"/>
+              </constraints>
+              <profiles>
+                <profile id="5b71-02b6-a0b7-5f65" name="Lord of Storm and Sea" hidden="false" typeId="1504-23bf-8850-4f65" typeName="Command Traits">
+                  <characteristics>
+                    <characteristic name="Command Trait" typeId="0145-9acf-f5dc-d543">Do not take battleshock tests for friendly IDONETH DEEPKIN units wholly within 12&quot; of this general.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <costs>
+                <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="5462-ec69-4bc7-8715" name="3. Unstoppable Fury" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="c0ee-7c27-315e-0223" type="max"/>
+              </constraints>
+              <profiles>
+                <profile id="a7c6-de57-54fa-d74e" name="Unstoppable Fury" hidden="false" typeId="1504-23bf-8850-4f65" typeName="Command Traits">
+                  <characteristics>
+                    <characteristic name="Command Trait" typeId="0145-9acf-f5dc-d543">While this general is affected by the High Tide ability from the Tides of Death table, for each enemy unit within 3&quot; of them during the combat phase, add 2 to the Attacks characteristic of their melee weapons until the end of that phase.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <costs>
+                <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
+              </costs>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
+        <selectionEntryGroup id="0fdb-6462-0623-37d9" name="Traits of the Isharann" hidden="false" collective="false" import="true">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="c48e-3291-4b37-ebdf" type="notInstanceOf"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="e7ee-0e02-8e80-ca6c" type="max"/>
+          </constraints>
+          <selectionEntries>
+            <selectionEntry id="4e85-8133-412f-1c0c" name="2. Merciless Raider" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="dd30-75f4-4438-7068" type="max"/>
+              </constraints>
+              <profiles>
+                <profile id="84cd-61ee-2df8-1107" name="Merciless Raider" hidden="false" typeId="1504-23bf-8850-4f65" typeName="Command Traits">
+                  <characteristics>
+                    <characteristic name="Command Trait" typeId="0145-9acf-f5dc-d543">If the unmodified hit roll for an attack made by this general is 6, that attack automatically wounds the target (do not make a wound roll).</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <costs>
+                <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="17d0-cfa2-e704-6448" name="1. Hunter of Souls" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="eb27-ab54-36fc-f238" type="max"/>
+              </constraints>
+              <profiles>
+                <profile id="48cb-774e-54e1-41fc" name="Hunter of Souls" hidden="false" typeId="1504-23bf-8850-4f65" typeName="Command Traits">
+                  <characteristics>
+                    <characteristic name="Command Trait" typeId="0145-9acf-f5dc-d543">At the start of the combat phase, if this general is within 3&quot; of an enemy HERO or enemy unit champion, you can roll a dice. On a 3+, that enemy HERO or unit champion suffers D3 mortal wounds.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <costs>
+                <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="a4a1-9cdd-1c6f-4cdb" name="3. Teachings of the Túrscoll" hidden="false" collective="false" import="true" type="upgrade">
+              <profiles>
+                <profile id="cb35-15c4-570f-cfe6" name="Teachings of the Túrscoll" hidden="false" typeId="1504-23bf-8850-4f65" typeName="Command Traits">
+                  <characteristics>
+                    <characteristic name="Command Trait" typeId="0145-9acf-f5dc-d543">If this general is on the battlefield at the start of the first battle round, before priority is determined, you can declare that the Tides of Death table will be reversed for your army. If you do so, the Ebb Tide ability applies in the first battle round, the High Tide ability applies in the second battle round, the Flood Tide ability applies in the third battle round, and the Low Tide ability applies in the fourth battle round. From the fifth battle round, the four Tides of Death steps are repeated in this order, starting with Ebb Tide.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <costs>
+                <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
+              </costs>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
+        <selectionEntryGroup id="b6cd-5179-eada-f6cd" name="Traits of the Eidolons" hidden="false" collective="false" import="true">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="6d91-66aa-3fd3-9ac6" type="notInstanceOf"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <selectionEntries>
+            <selectionEntry id="3344-b8ab-d739-d6ef" name="2. Nightmare Legacy" hidden="false" collective="false" import="true" type="upgrade">
+              <modifiers>
+                <modifier type="set" field="hidden" value="true">
+                  <conditions>
+                    <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="9829-7a56-114d-9479" type="notInstanceOf"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="4ffe-15aa-5cea-0f72" type="max"/>
+              </constraints>
+              <profiles>
+                <profile id="5a37-5899-6f8d-c77a" name="Nightmare Legacy" hidden="false" typeId="1504-23bf-8850-4f65" typeName="Command Traits">
+                  <characteristics>
+                    <characteristic name="Command Trait" typeId="0145-9acf-f5dc-d543">ASPECT OF THE STORM only. At the end of the charge phase, you can pick this general to carry out a monstrous rampage even though it is not a MONSTER.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <costs>
+                <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="3f0f-ab4c-9cee-76e1" name="1. Ancient Pride" hidden="false" collective="false" import="true" type="upgrade">
+              <profiles>
+                <profile id="9533-8cc0-6b7d-b24b" name="Ancient Pride" hidden="false" typeId="1504-23bf-8850-4f65" typeName="Command Traits">
+                  <characteristics>
+                    <characteristic name="Command Trait" typeId="0145-9acf-f5dc-d543">If the unmodified hit roll for an attack made with a melee weapon that targets this general is 1 or 2, that attack fails and the attack sequence ends.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <costs>
+                <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="b2cc-8ad3-c2a3-aab3" name="3. Endless Sea Storm" hidden="false" collective="false" import="true" type="upgrade">
+              <modifiers>
+                <modifier type="set" field="hidden" value="true">
+                  <conditions>
+                    <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="d889-5ba2-ca0b-a24a" type="notInstanceOf"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+              <profiles>
+                <profile id="b414-9cb9-f0fd-d39f" name="Endless Sea Storm" hidden="false" typeId="1504-23bf-8850-4f65" typeName="Command Traits">
+                  <characteristics>
+                    <characteristic name="Command Trait" typeId="0145-9acf-f5dc-d543">ASPECT OF THE SEA only. If this general successfully casts a spell that is not unbound with an unmodified casting roll of 7+, this general can attempt to cast 1 extra spell in that phase.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <costs>
+                <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
+              </costs>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
       <entryLinks>
         <entryLink id="d3d3-8381-8107-0615" name="Universal Command Traits" hidden="false" collective="false" import="true" targetId="20f0-6df9-b464-3789" type="selectionEntryGroup"/>
       </entryLinks>
@@ -1155,51 +947,6 @@ Ritual of the Tempest: Until your next hero phase, enemy models cannot fly.</cha
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="4d8c-70f9-0987-ea36" type="max"/>
           </constraints>
           <selectionEntries>
-            <selectionEntry id="89fd-6a8a-27c1-b75f" name="6 -- Abyssal Blade" hidden="false" collective="false" import="true" type="upgrade">
-              <constraints>
-                <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="e0f6-a454-3ecf-0b26" type="max"/>
-              </constraints>
-              <profiles>
-                <profile id="b74e-8720-50cf-92fd" name="Abyssal Blade" hidden="false" typeId="0c9d-7abe-a53c-6a37" typeName="Artefacts">
-                  <characteristics>
-                    <characteristic name="Artefact" typeId="44b6-de26-0b54-1318">Pick a weapon carried by the bearer to be the Abyssal Blade. Improve the Rend characteristic of that weapon by 1. In addition, add 1 to the Damage characteristic of that weapon if the target has the SLAANESH keyword.</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-              <costs>
-                <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
-              </costs>
-            </selectionEntry>
-            <selectionEntry id="c518-e8bc-2d42-5925" name="5 -- Bio-shock Shell" hidden="false" collective="false" import="true" type="upgrade">
-              <constraints>
-                <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="8aeb-efb2-069f-255e" type="max"/>
-              </constraints>
-              <profiles>
-                <profile id="0d7a-a47e-ce2c-434a" name="Bio-shock Shell" hidden="false" typeId="0c9d-7abe-a53c-6a37" typeName="Artefacts">
-                  <characteristics>
-                    <characteristic name="Artefact" typeId="44b6-de26-0b54-1318">Once per battle, at the start of the combat phase, you can say that the bearer will use the Bio-shock Shell. If you do so, each enemy unit within 3&quot; of the bearer suffers D3 mortal wounds.</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-              <costs>
-                <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
-              </costs>
-            </selectionEntry>
-            <selectionEntry id="b700-0310-3f5a-d63e" name="3 -- Ankusha Spur" hidden="false" collective="false" import="true" type="upgrade">
-              <constraints>
-                <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="8899-80cd-5f08-d13b" type="max"/>
-              </constraints>
-              <profiles>
-                <profile id="edb0-4ac6-631c-21ef" name="Ankusha Spur" hidden="false" typeId="0c9d-7abe-a53c-6a37" typeName="Artefacts">
-                  <characteristics>
-                    <characteristic name="Artefact" typeId="44b6-de26-0b54-1318">Add 3&quot; to the bearer’s Move characteristic. In addition, re-roll wound rolls of 1 for attacks made by the bearer’s mount.</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-              <costs>
-                <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
-              </costs>
-            </selectionEntry>
             <selectionEntry id="906d-6ed8-356e-89e3" name="2 -- Potion of Hateful Frenzy" hidden="false" collective="false" import="true" type="upgrade">
               <constraints>
                 <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="b7c9-0c09-3204-31b0" type="max"/>
@@ -1207,7 +954,7 @@ Ritual of the Tempest: Until your next hero phase, enemy models cannot fly.</cha
               <profiles>
                 <profile id="5799-cead-e6b0-f16b" name="Potion of Hateful Frenzy" hidden="false" typeId="0c9d-7abe-a53c-6a37" typeName="Artefacts">
                   <characteristics>
-                    <characteristic name="Artefact" typeId="44b6-de26-0b54-1318">Once per battle, in your hero phase, the bearer can drink this potion. If they do so, add 1 to hit and wound rolls for the bearer until your next hero phase. However, at the start of your next hero phase the bearer suffers 1 mortal wound.</characteristic>
+                    <characteristic name="Artefact" typeId="44b6-de26-0b54-1318">Once per battle, at the start your hero phase, you can say the bearer will drink this potion. If you do so, until the end of that turn, add 1 to hit rolls and wound rolls for attacks made by the bearer, add 1 to the Attacks characteristic of the bearer’s melee weapons and add 1 to run rolls and charge rolls for the bearer. However, at the start of the next hero phase, the bearer suffers D3 mortal wounds and cannot pile-in until the end of that turn.</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
@@ -1215,14 +962,14 @@ Ritual of the Tempest: Until your next hero phase, enemy models cannot fly.</cha
                 <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
               </costs>
             </selectionEntry>
-            <selectionEntry id="3a90-95a4-1dd0-b21c" name="4 -- Armour of the Cythai" hidden="false" collective="false" import="true" type="upgrade">
+            <selectionEntry id="3a90-95a4-1dd0-b21c" name="3 -- Armour of the Cythai" hidden="false" collective="false" import="true" type="upgrade">
               <constraints>
                 <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="7aec-e23d-e8a3-8af8" type="max"/>
               </constraints>
               <profiles>
                 <profile id="ffb5-e906-536f-ac1b" name="Armour of the Cythai" hidden="false" typeId="0c9d-7abe-a53c-6a37" typeName="Artefacts">
                   <characteristics>
-                    <characteristic name="Artefact" typeId="44b6-de26-0b54-1318">Subtract 1 from hit rolls for melee weapons that target the bearer.</characteristic>
+                    <characteristic name="Artefact" typeId="44b6-de26-0b54-1318">If the unmodified hit roll for an attack that targets the bearer is 6, all effects that would be triggered by that roll are ignored.</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
@@ -1230,131 +977,20 @@ Ritual of the Tempest: Until your next hero phase, enemy models cannot fly.</cha
                 <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
               </costs>
             </selectionEntry>
-            <selectionEntry id="82f6-cad2-064a-0f74" name="1 -- Sanguine Pearl" hidden="false" collective="false" import="true" type="upgrade">
+            <selectionEntry id="82f6-cad2-064a-0f74" name="1 -- Disharmony Stones" hidden="false" collective="false" import="true" type="upgrade">
               <constraints>
                 <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="8b06-591f-8515-f5c6" type="max"/>
               </constraints>
               <profiles>
-                <profile id="9e4a-3847-2e0d-3e3e" name="Sanguine Pearl" hidden="false" typeId="0c9d-7abe-a53c-6a37" typeName="Artefacts">
+                <profile id="9e4a-3847-2e0d-3e3e" name="Disharmony Stones" hidden="false" typeId="0c9d-7abe-a53c-6a37" typeName="Artefacts">
                   <characteristics>
-                    <characteristic name="Artefact" typeId="44b6-de26-0b54-1318">Roll a dice each time you allocate a wound or mortal wound to the bearer that was caused by a melee weapon. On a 5+ the wound is negated.</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-              <costs>
-                <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
-              </costs>
-            </selectionEntry>
-          </selectionEntries>
-        </selectionEntryGroup>
-        <selectionEntryGroup id="83b9-4137-3e8e-3d15" name="Arcane Artefacts" hidden="false" collective="false" import="true">
-          <modifiers>
-            <modifier type="set" field="hidden" value="true">
-              <conditionGroups>
-                <conditionGroup type="or">
-                  <conditions>
-                    <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="7ee2-0d81-544f-5d7e" type="notInstanceOf"/>
-                    <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="c6a3-55bb-de84-3ad0" type="notInstanceOf"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
-            </modifier>
-          </modifiers>
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="9c85-bcc3-533c-ca07" type="max"/>
-          </constraints>
-          <selectionEntries>
-            <selectionEntry id="c464-ac55-5498-a4c6" name="6 -- Augury Shell" hidden="false" collective="false" import="true" type="upgrade">
-              <constraints>
-                <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="f2c5-ddfd-49be-b47a" type="max"/>
-              </constraints>
-              <profiles>
-                <profile id="65bc-c263-4d95-420e" name="Augury Shell" hidden="false" typeId="0c9d-7abe-a53c-6a37" typeName="Artefacts">
-                  <characteristics>
-                    <characteristic name="Artefact" typeId="44b6-de26-0b54-1318">Once per battle, at the start of your hero phase, roll 2D6. During that hero phase, you can use that roll as the result of a casting roll for the bearer, or as the result of an unbinding roll for an enemy WIZARD that is attempting to unbind a spell cast by the bearer. You must say that you will use that roll before the actual casting or unbinding roll is made.</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-              <costs>
-                <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
-              </costs>
-            </selectionEntry>
-            <selectionEntry id="9ac8-cb17-0240-1e3b" name="5 -- Kraken Tooth" hidden="false" collective="false" import="true" type="upgrade">
-              <constraints>
-                <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="de07-8f17-9628-e226" type="max"/>
-              </constraints>
-              <profiles>
-                <profile id="f994-d1f4-7979-7d2c" name="Kraken Tooth" hidden="false" typeId="0c9d-7abe-a53c-6a37" typeName="Artefacts">
-                  <characteristics>
-                    <characteristic name="Artefact" typeId="44b6-de26-0b54-1318">Once per battle, in your shooting phase, pick an enemy unit within 12&quot; of the bearer that is visible to them. Then, roll a dice and look up the result below.
+                    <characteristic name="Artefact" typeId="44b6-de26-0b54-1318">Once per battle, at the start of your hero phase, pick up to 2 enemy HEROES within 12&quot; of the bearer. Your opponent must then choose 1 of the following options:
 
-D6 -- Result
+a) Roll a dice for each HERO you picked. On a 3+, that HERO suffers 1 mortal wound.
 
-1 -- None Binds the Kraken: The bearer suffers D3 mortal wounds.
+b) Roll a dice for each HERO you picked. On a 5+, that HERO suffers D3 mortal wounds.
 
-2-5 -- The Kraken is Released: The enemy unit suffers D3 mortal wounds.
-
-6 -- A Tasty Morsel: Pick one model in the enemy unit. The model you pick is slain if it has a Wounds characteristic of less than 10, and suffers 2D6 mortal wounds if it has a Wounds characteristic of 10+.</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-              <costs>
-                <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
-              </costs>
-            </selectionEntry>
-            <selectionEntry id="0600-7547-31df-6cda" name="3 -- Coral King" hidden="false" collective="false" import="true" type="upgrade">
-              <constraints>
-                <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="8299-6f05-149a-261f" type="max"/>
-              </constraints>
-              <profiles>
-                <profile id="4a65-a955-538f-f265" name="Coral King" hidden="false" typeId="0c9d-7abe-a53c-6a37" typeName="Artefacts">
-                  <characteristics>
-                    <characteristic name="Artefact" typeId="44b6-de26-0b54-1318">Once per battle, you can re-roll a failed casting roll for the bearer. In addition, once per battle, you can re-roll a failed unbinding roll for the bearer.</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-              <costs>
-                <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
-              </costs>
-            </selectionEntry>
-            <selectionEntry id="241a-a26d-b092-d445" name="4 -- Bauble of Buoyancy" hidden="false" collective="false" import="true" type="upgrade">
-              <constraints>
-                <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="dd38-cabb-d2f7-7824" type="max"/>
-              </constraints>
-              <profiles>
-                <profile id="e6cf-ad90-bad0-b12b" name="Bauble of Buoyancy" hidden="false" typeId="0c9d-7abe-a53c-6a37" typeName="Artefacts">
-                  <characteristics>
-                    <characteristic name="Artefact" typeId="44b6-de26-0b54-1318">The bearer can fly. In addition, double the result of run rolls for the bearer.</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-              <costs>
-                <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
-              </costs>
-            </selectionEntry>
-            <selectionEntry id="82a0-6c03-b6b0-06ad" name="2 -- Sands of Infinity" hidden="false" collective="false" import="true" type="upgrade">
-              <constraints>
-                <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="4a9b-11ea-cfe5-acd8" type="max"/>
-              </constraints>
-              <profiles>
-                <profile id="ea4f-90ee-6971-b083" name="Sands of Infinity" hidden="false" typeId="0c9d-7abe-a53c-6a37" typeName="Artefacts">
-                  <characteristics>
-                    <characteristic name="Artefact" typeId="44b6-de26-0b54-1318">You can use the Sands of Infinity once per battle, before making a casting roll for the bearer for a spell whose effects would normally last until your next hero phase. If you do so, and the spell is successfully cast and not unbound, then the effects of the spell last until your hero phase after your next hero phase instead.</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-              <costs>
-                <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
-              </costs>
-            </selectionEntry>
-            <selectionEntry id="fc9f-9bef-ad23-3286" name="1 -- Arcane Pearl" hidden="false" collective="false" import="true" type="upgrade">
-              <constraints>
-                <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="0e7b-d50f-57bb-0661" type="max"/>
-              </constraints>
-              <profiles>
-                <profile id="ee4c-7d53-2a8e-5879" name="Arcane Pearl" hidden="false" typeId="0c9d-7abe-a53c-6a37" typeName="Artefacts">
-                  <characteristics>
-                    <characteristic name="Artefact" typeId="44b6-de26-0b54-1318">Roll a dice each time you allocate a mortal wound to the bearer. On a 5+ the wound is negated.</characteristic>
+c) Each HERO you picked suffers D3 mortal wounds. Then, roll a dice. On a 4+, the bearer suffers D3 mortal wounds.</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
@@ -1376,14 +1012,14 @@ D6 -- Result
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="5fb8-ead6-f5a7-5c8c" type="max"/>
           </constraints>
           <selectionEntries>
-            <selectionEntry id="e05a-37e6-5d15-d031" name="6 -- Brain Barnacles" hidden="false" collective="false" import="true" type="upgrade">
+            <selectionEntry id="e05a-37e6-5d15-d031" name="3 -- Brain Barnacles" hidden="false" collective="false" import="true" type="upgrade">
               <constraints>
                 <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="93c8-53ed-c1b4-c225" type="max"/>
               </constraints>
               <profiles>
                 <profile id="0e9f-fc86-5598-6549" name="Brain Barnacles" hidden="false" typeId="0c9d-7abe-a53c-6a37" typeName="Artefacts">
                   <characteristics>
-                    <characteristic name="Artefact" typeId="44b6-de26-0b54-1318">Once per battle, at the start of your hero phase, pick an enemy HERO within 12&quot; of the bearer and roll 2D6. If the roll is equal to or greater than the distance between the bearer and that hero, the enemy hero is infected. Subtract 1 from hit rolls and casting rolls for the infected hero for the rest of the battle.</characteristic>
+                    <characteristic name="Artefact" typeId="44b6-de26-0b54-1318">Once per battle, at the start of your hero phase, you can pick 1 enemy HERO within 12&quot; of the bearer and roll 2D6. If the roll in inches is equal to or greater than the distance between the bearer and that enemy HERO, subtract 1 from hit rolls and wound rolls for that enemy HERO for the rest of the battle.</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
@@ -1391,14 +1027,14 @@ D6 -- Result
                 <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
               </costs>
             </selectionEntry>
-            <selectionEntry id="ad68-aa3e-69a5-42ed" name="4 -- Auric Lantern" hidden="false" collective="false" import="true" type="upgrade">
+            <selectionEntry id="ad68-aa3e-69a5-42ed" name="2 -- Rune of the Surging Gloomtide" hidden="false" collective="false" import="true" type="upgrade">
               <constraints>
                 <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="dfb6-c9c3-3d13-26c1" type="max"/>
               </constraints>
               <profiles>
-                <profile id="d98a-e2b6-a1d8-e875" name="Auric Lantern" hidden="false" typeId="0c9d-7abe-a53c-6a37" typeName="Artefacts">
+                <profile id="d98a-e2b6-a1d8-e875" name="Rune of the Surging Gloomtide" hidden="false" typeId="0c9d-7abe-a53c-6a37" typeName="Artefacts">
                   <characteristics>
-                    <characteristic name="Artefact" typeId="44b6-de26-0b54-1318">At the start of your shooting phase, pick an enemy unit within 18&quot; of the bearer that is in cover. Until your next shooting phase, that enemy unit does not receive the benefit to its saving throw for being in cover.</characteristic>
+                    <characteristic name="Artefact" typeId="44b6-de26-0b54-1318">Once per battle, at the end of your first movement phase, you can say that the bearer will summon a Gloomtide Shipwreck from the ethersea. If you do so, you can set up 1 Gloomtide Shipwreck wholly within 12&quot; of the bearer and more than 3&quot; from all models, objectives, other terrain features, endless spells and invocations, and add it to your army.</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
@@ -1406,65 +1042,14 @@ D6 -- Result
                 <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
               </costs>
             </selectionEntry>
-            <selectionEntry id="9708-4c4b-f62e-d2ba" name="3 -- Dritchleech" hidden="false" collective="false" import="true" type="upgrade">
+            <selectionEntry id="9708-4c4b-f62e-d2ba" name="1 -- Dritchleech" hidden="false" collective="false" import="true" type="upgrade">
               <constraints>
                 <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="ec8a-1198-1168-bd47" type="max"/>
               </constraints>
               <profiles>
                 <profile id="1d79-2020-24cf-95f4" name="Dritchleech" hidden="false" typeId="0c9d-7abe-a53c-6a37" typeName="Artefacts">
                   <characteristics>
-                    <characteristic name="Artefact" typeId="44b6-de26-0b54-1318">Subtract 1 from the casting rolls of WIZARDS while they are within 18&quot; of the bearer. IDONETH DEEPKIN WIZARDS are not affected by this artefact.</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-              <costs>
-                <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
-              </costs>
-            </selectionEntry>
-            <selectionEntry id="d5cb-1ee2-32c3-575f" name="2 -- Mind Flare" hidden="false" collective="false" import="true" type="upgrade">
-              <constraints>
-                <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="a744-ca7e-11a2-7584" type="max"/>
-              </constraints>
-              <profiles>
-                <profile id="9282-3a60-4335-5c64" name="Mind Flare" hidden="false" typeId="0c9d-7abe-a53c-6a37" typeName="Artefacts">
-                  <characteristics>
-                    <characteristic name="Artefact" typeId="44b6-de26-0b54-1318">Once per battle, at the start of a combat phase, pick an enemy unit within 3&quot; of the bearer. Subtract 1 from hit rolls for that unit until the end of that combat phase.</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-              <costs>
-                <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
-              </costs>
-            </selectionEntry>
-            <selectionEntry id="9102-0352-8ab8-32f9" name="5 -- Disharmony Stone" hidden="false" collective="false" import="true" type="upgrade">
-              <constraints>
-                <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="b89f-6f9e-aca6-13ce" type="max"/>
-              </constraints>
-              <profiles>
-                <profile id="2d0c-f4b1-d0b6-3434" name="Disharmony Stone" hidden="false" typeId="0c9d-7abe-a53c-6a37" typeName="Artefacts">
-                  <characteristics>
-                    <characteristic name="Artefact" typeId="44b6-de26-0b54-1318">Once per battle, at the start of your hero phase, pick up to two enemy HEROES that are within 12&quot; of the bearer. The opposing player must then choose one of the following options:
-
-a) Roll a dice for each HERO picked. On a 3+ that hero suffers 1 mortal wound.
-
-b) Roll a dice for each HERO picked. On a 5+ that hero suffers D3 mortal wounds.
-
-c) Each HERO picked suffers D3 mortal wounds. Then roll a dice. On a 4+ the bearer suffers D3 mortal wounds.</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-              <costs>
-                <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
-              </costs>
-            </selectionEntry>
-            <selectionEntry id="eb22-99b3-79d2-b93d" name="1 -- Steelshell Pearl" hidden="false" collective="false" import="true" type="upgrade">
-              <constraints>
-                <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="48c0-aadd-1fb0-3fdd" type="max"/>
-              </constraints>
-              <profiles>
-                <profile id="3ff0-a1ba-3133-4ad8" name="Steelshell Pearl" hidden="false" typeId="0c9d-7abe-a53c-6a37" typeName="Artefacts">
-                  <characteristics>
-                    <characteristic name="Artefact" typeId="44b6-de26-0b54-1318">Roll a dice each time you allocate a wound or mortal wound to the bearer that was caused by a missile weapon. On a 5+ the wound is negated.</characteristic>
+                    <characteristic name="Artefact" typeId="44b6-de26-0b54-1318">Subtract 1 from casting rolls, unbinding rolls and dispelling rolls for enemy WIZARDS within 18&quot; of the bearer. This ability has no effect on IDONETH DEEPKIN units.</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
@@ -1474,11 +1059,11 @@ c) Each HERO picked suffers D3 mortal wounds. Then roll a dice. On a 4+ the bear
             </selectionEntry>
           </selectionEntries>
         </selectionEntryGroup>
-        <selectionEntryGroup id="7b99-3fe6-9aae-9e7e" name="Idoneth Artefacts" hidden="false" collective="false" import="true">
+        <selectionEntryGroup id="7b99-3fe6-9aae-9e7e" name="Eidolon Artefacts" hidden="false" collective="false" import="true">
           <modifiers>
             <modifier type="set" field="hidden" value="true">
               <conditions>
-                <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="c6a3-55bb-de84-3ad0" type="notInstanceOf"/>
+                <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="6d91-66aa-3fd3-9ac6" type="notInstanceOf"/>
               </conditions>
             </modifier>
           </modifiers>
@@ -1486,61 +1071,14 @@ c) Each HERO picked suffers D3 mortal wounds. Then roll a dice. On a 4+ the bear
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d5a0-89dc-dd74-191d" type="max"/>
           </constraints>
           <selectionEntries>
-            <selectionEntry id="fe46-96ee-1d1d-6f7d" name="4 -- Terrornight Venom" hidden="false" collective="false" import="true" type="upgrade">
-              <constraints>
-                <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="2eed-cea6-3073-22f4" type="max"/>
-              </constraints>
-              <profiles>
-                <profile id="f2c7-f50b-3498-c25a" name="Terrornight Venom" hidden="false" typeId="0c9d-7abe-a53c-6a37" typeName="Artefacts">
-                  <characteristics>
-                    <characteristic name="Artefact" typeId="44b6-de26-0b54-1318">Pick a weapon carried by the bearer to be coated with Terrornight Venom. Re-roll wound rolls of 1 for that weapon. In addition, subtract 1 from the Bravery characteristic of enemy units that suffer any wounds from this weapon for the rest of the battle.</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-              <costs>
-                <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
-              </costs>
-            </selectionEntry>
-            <selectionEntry id="ac93-baed-ea01-ef3b" name="5 -- Cloud of Midnight" hidden="false" collective="false" import="true" type="upgrade">
-              <constraints>
-                <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="0e1d-3558-d03b-0401" type="max"/>
-              </constraints>
-              <profiles>
-                <profile id="5581-6b08-51a1-a47c" name="Cloud of Midnight" hidden="false" typeId="0c9d-7abe-a53c-6a37" typeName="Artefacts">
-                  <characteristics>
-                    <characteristic name="Artefact" typeId="44b6-de26-0b54-1318">Once per battle, at the start of any phase, the bearer can release the Cloud of Midnight. If they do so, they cannot be chosen as the target for attacks, spells or abilities for the rest of the phase, but cannot themselves attack or use spells and abilities for the rest of the phase.
-
-In the phase in which the bearer releases the Cloud of Midnight, they are ignored when determining which is the closest IDONETH DEEPKIN model for the purposes of the Forgotten Nightmares battle trait.</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-              <costs>
-                <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
-              </costs>
-            </selectionEntry>
-            <selectionEntry id="f18b-00bc-3ae9-b45d" name="3 -- Lliandra&apos;s Last Lament" hidden="false" collective="false" import="true" type="upgrade">
-              <constraints>
-                <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="beba-c080-38c4-fa63" type="max"/>
-              </constraints>
-              <profiles>
-                <profile id="c0da-968e-eb7b-68c9" name="Lliandra&apos;s Last Lament" hidden="false" typeId="0c9d-7abe-a53c-6a37" typeName="Artefacts">
-                  <characteristics>
-                    <characteristic name="Artefact" typeId="44b6-de26-0b54-1318">Once per battle, at the start of the battleshock phase, you can say that the bearer will release Lliandra’s Last Lament. If you do so, friendly IDONETH DEEPKIN units wholly within 18&quot; of the bearer do not have to take battleshock tests that phase.</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-              <costs>
-                <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
-              </costs>
-            </selectionEntry>
-            <selectionEntry id="1738-06bf-e69c-f4c2" name="6 -- Whorlshell" hidden="false" collective="false" import="true" type="upgrade">
+            <selectionEntry id="1738-06bf-e69c-f4c2" name="2 -- Whorlshell" hidden="false" collective="false" import="true" type="upgrade">
               <constraints>
                 <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="a52b-aa0e-d969-b19b" type="max"/>
               </constraints>
               <profiles>
                 <profile id="3d1d-0f6f-af02-4719" name="Whorlshell" hidden="false" typeId="0c9d-7abe-a53c-6a37" typeName="Artefacts">
                   <characteristics>
-                    <characteristic name="Artefact" typeId="44b6-de26-0b54-1318">Once per battle, at the start of your hero phase, you can say that the bearer will use the Whorlshell. If you do so, pick an enemy HERO within 9&quot; of the bearer that is visible to them and roll 2D6. If the roll is greater than the enemy hero’s Bravery characteristic, subtract 1 from hit rolls for the enemy hero for the rest of the battle.</characteristic>
+                    <characteristic name="Artefact" typeId="44b6-de26-0b54-1318">Once per battle, at the start of the combat phase, you can say the bearer will unleash the power of the Whorlshell. If you do so, until the end of that phase, if the unmodified hit roll for an attack made with a melee weapon that targets the bearer is 1 or 2, that attack fails and the attack sequence ends.</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
@@ -1548,14 +1086,19 @@ In the phase in which the bearer releases the Cloud of Midnight, they are ignore
                 <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
               </costs>
             </selectionEntry>
-            <selectionEntry id="ea0c-f4ae-dbe2-ba89" name="2 -- Black Pearl" hidden="false" collective="false" import="true" type="upgrade">
+            <selectionEntry id="9137-ed47-2722-574f" name="3 -- Kraken Tooth" hidden="false" collective="false" import="true" type="upgrade">
               <constraints>
-                <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="72fc-8dde-035d-b1f9" type="max"/>
+                <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="14bf-cdaa-4df4-366a" type="max"/>
               </constraints>
               <profiles>
-                <profile id="6c8b-e8ef-2d33-6f0b" name="Black Pearl" hidden="false" typeId="0c9d-7abe-a53c-6a37" typeName="Artefacts">
+                <profile id="88d4-1174-0748-f5e0" name="Kraken Tooth" hidden="false" typeId="0c9d-7abe-a53c-6a37" typeName="Artefacts">
                   <characteristics>
-                    <characteristic name="Artefact" typeId="44b6-de26-0b54-1318">Roll a dice each time you allocate a wound or mortal wound to the bearer. On a 6+ the wound is negated.</characteristic>
+                    <characteristic name="Artefact" typeId="44b6-de26-0b54-1318">
+Once per battle, in your shooting phase, you can pick 1 enemy unit within 12&quot; of the bearer that is visible to them and roll a dice. Then, look up the result below:
+
+1 -- None Binds the Kraken: The bearer suffers D3 mortal wounds.
+2-5 -- The Kraken is Released: The target suffers D3 mortal wounds.
+6 -- A Tasty Morsel: Pick 1 model from the target unit. If that model has a Wounds characteristic of less than 10, it is slain. If that model has a Wounds characteristic of 10 or more, that model suffers 2D6 mortal wounds.</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
@@ -1563,14 +1106,11 @@ In the phase in which the bearer releases the Cloud of Midnight, they are ignore
                 <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
               </costs>
             </selectionEntry>
-            <selectionEntry id="d8a2-6a96-a583-ca93" name="1 -- Rune of the Surging Tide" hidden="false" collective="false" import="true" type="upgrade">
-              <constraints>
-                <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="9349-8025-42b2-ac0b" type="max"/>
-              </constraints>
+            <selectionEntry id="13b2-a6be-ec9b-1732" name="1 -- Bio-shock Shell" hidden="false" collective="false" import="true" type="upgrade">
               <profiles>
-                <profile id="1c9f-4449-3732-1b2c" name="Rune of the Surging Tide" hidden="false" typeId="0c9d-7abe-a53c-6a37" typeName="Artefacts">
+                <profile id="f2e4-4d65-ca72-abd4" name="Bio-shock Shell" hidden="false" typeId="0c9d-7abe-a53c-6a37" typeName="Artefacts">
                   <characteristics>
-                    <characteristic name="Artefact" typeId="44b6-de26-0b54-1318">Once per battle, at the start of your hero phase, you can say that the bearer will use the Rune of the Surging Tide. If you do so, say whether the rune will be used to create a stream or a riptide. If a stream is created, add 1&quot; to the Move characteristic of friendly IDONETH DEEPKIN units until your next hero phase. If a riptide is created, subtract 1&quot; from the Move characteristic of enemy units until your next hero phase.</characteristic>
+                    <characteristic name="Artefact" typeId="44b6-de26-0b54-1318">Once per battle, at the start of the combat phase, you can say the bearer will use the Bio-shock Shell. If you do so, pick 1 enemy HERO within 9&quot; of the bearer that is visible to them and roll 3D6. If the roll is greater than that enemy HERO’s Bravery characteristic, the strike-last effect applies to that enemy HERO until the end of that phase.</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
@@ -1587,7 +1127,7 @@ In the phase in which the bearer releases the Cloud of Midnight, they are ignore
     </selectionEntryGroup>
     <selectionEntryGroup id="2bdf-1dd0-8b40-0dcd" name="Mount Traits" hidden="false" collective="false" import="true">
       <modifiers>
-        <modifier type="increment" field="9aa5-80d7-b86f-5123" value="1.0">
+        <modifier type="increment" field="29b6-fcea-cab3-36a1" value="1.0">
           <repeats>
             <repeat field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="99e1-bf54-e3ec-ab80" repeats="1" roundUp="false"/>
           </repeats>
@@ -1611,125 +1151,175 @@ In the phase in which the bearer releases the Cloud of Midnight, they are ignore
       </modifiers>
       <constraints>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="9aa5-80d7-b86f-5123" type="max"/>
+        <constraint field="selections" scope="roster" value="2.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="29b6-fcea-cab3-36a1" type="max"/>
       </constraints>
       <selectionEntryGroups>
-        <selectionEntryGroup id="e789-3b92-a7fa-1ea7" name="Deepmare Mount Traits" hidden="false" collective="false" import="true">
-          <modifiers>
-            <modifier type="set" field="hidden" value="true">
-              <conditionGroups>
-                <conditionGroup type="and">
-                  <conditions>
-                    <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="b092-8e10-e42d-9da0" type="notInstanceOf"/>
-                    <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="c52a-9e73-24a8-1866" type="notInstanceOf"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
-            </modifier>
-          </modifiers>
+        <selectionEntryGroup id="e789-3b92-a7fa-1ea7" name="Bond-beast Traits" hidden="false" collective="false" import="true">
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="6216-4045-acf1-a954" type="max"/>
           </constraints>
           <selectionEntries>
             <selectionEntry id="01eb-0d39-4d8d-48e2" name="3 ~ Voidchill Darkness" hidden="false" collective="false" import="true" type="upgrade">
+              <modifiers>
+                <modifier type="set" field="hidden" value="true">
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="b092-8e10-e42d-9da0" type="notInstanceOf"/>
+                        <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="c52a-9e73-24a8-1866" type="notInstanceOf"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+              </modifiers>
               <constraints>
                 <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="a303-244b-cccc-b0c6" type="max"/>
               </constraints>
               <profiles>
                 <profile id="2fab-fee0-005a-763b" name="Voidchill Darkness" hidden="false" typeId="61e3-eba4-7222-dee7" typeName="Mount/Companion">
                   <characteristics>
-                    <characteristic name="Mount/Companion" typeId="e368-06f5-5b4f-64a3">Subtract 1 from hit rolls for attacks made by enemy models that are within 3&quot; of this model.</characteristic>
+                    <characteristic name="Mount/Companion" typeId="e368-06f5-5b4f-64a3">DEEPMARE only. Subtract 1 from hit rolls for attacks made by enemy units that are within 3&quot; of this unit.</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
+              <categoryLinks>
+                <categoryLink id="d2bb-12a7-add8-316b" name="DeepmareTrait" hidden="false" targetId="bb3d-23c1-639c-0942" primary="false"/>
+              </categoryLinks>
               <costs>
                 <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
               </costs>
             </selectionEntry>
             <selectionEntry id="3d80-08a8-1251-fee9" name="2 ~ Savage Ferocity" hidden="false" collective="false" import="true" type="upgrade">
+              <modifiers>
+                <modifier type="set" field="hidden" value="true">
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="b092-8e10-e42d-9da0" type="notInstanceOf"/>
+                        <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="c52a-9e73-24a8-1866" type="notInstanceOf"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+              </modifiers>
               <constraints>
                 <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="9a6e-c4d5-c673-cb8b" type="max"/>
               </constraints>
               <profiles>
                 <profile id="353c-6672-8883-8715" name="Savage Ferocity" hidden="false" typeId="61e3-eba4-7222-dee7" typeName="Mount/Companion">
                   <characteristics>
-                    <characteristic name="Mount/Companion" typeId="e368-06f5-5b4f-64a3">Add 1 to the Attacks characteristic of this model’s Deepmare’s Fanged Jaws and Talons and its Deepmare’s Lashing Tails.</characteristic>
+                    <characteristic name="Mount/Companion" typeId="e368-06f5-5b4f-64a3">DEEPMARE only. Add 1 to the Attacks characteristic of this unit’s Fangs and Talons and its Lashing Tails.</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
+              <categoryLinks>
+                <categoryLink id="2cde-6683-7b27-c398" name="DeepmareTrait" hidden="false" targetId="bb3d-23c1-639c-0942" primary="false"/>
+              </categoryLinks>
               <costs>
                 <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
               </costs>
             </selectionEntry>
             <selectionEntry id="1275-dd10-209b-b59b" name="1 ~ Swift-finned Impaler" hidden="false" collective="false" import="true" type="upgrade">
+              <modifiers>
+                <modifier type="set" field="hidden" value="true">
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="b092-8e10-e42d-9da0" type="notInstanceOf"/>
+                        <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="c52a-9e73-24a8-1866" type="notInstanceOf"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+              </modifiers>
               <constraints>
                 <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="62b0-8807-cbef-b28b" type="max"/>
               </constraints>
               <profiles>
                 <profile id="0e55-d361-85eb-4d1a" name="Swift-finned Impaler" hidden="false" typeId="61e3-eba4-7222-dee7" typeName="Mount/Companion">
                   <characteristics>
-                    <characteristic name="Mount/Companion" typeId="e368-06f5-5b4f-64a3">If the roll for this model’s Deepmare Horn ability is 6, the nearest enemy unit suffers D6 mortal wounds instead of D3 mortal wounds.</characteristic>
+                    <characteristic name="Mount/Companion" typeId="e368-06f5-5b4f-64a3">DEEPMARE only. If the roll for this unit’s Deepmare Horn ability is 6, the target suffers D6 mortal wounds instead of D3 mortal wounds.</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
+              <categoryLinks>
+                <categoryLink id="76e5-a836-40be-570e" name="DeepmareTrait" hidden="false" targetId="bb3d-23c1-639c-0942" primary="false"/>
+              </categoryLinks>
               <costs>
                 <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
               </costs>
             </selectionEntry>
-          </selectionEntries>
-        </selectionEntryGroup>
-        <selectionEntryGroup id="31b4-d55d-9282-5d66" name="Leviadon Mount Traits" hidden="false" collective="false" import="true">
-          <modifiers>
-            <modifier type="set" field="hidden" value="true">
-              <conditions>
-                <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="311c-9fc2-318e-1761" type="notInstanceOf"/>
-              </conditions>
-            </modifier>
-          </modifiers>
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="c9f5-a83b-a503-753b" type="max"/>
-          </constraints>
-          <selectionEntries>
-            <selectionEntry id="9f59-1c52-3cb4-5577" name="Reverberating Carapace" hidden="false" collective="false" import="true" type="upgrade">
+            <selectionEntry id="314e-47ea-8783-aa26" name="4 ~ Ancient" hidden="false" collective="false" import="true" type="upgrade">
+              <modifiers>
+                <modifier type="set" field="hidden" value="true">
+                  <conditions>
+                    <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="311c-9fc2-318e-1761" type="notInstanceOf"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
               <constraints>
-                <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="b962-22fb-fb51-e953" type="max"/>
+                <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="4afd-6e29-8a93-9e38" type="max"/>
               </constraints>
               <profiles>
-                <profile id="65c7-2c44-5bfe-c3d8" name="Reverberating Carapace" hidden="false" typeId="61e3-eba4-7222-dee7" typeName="Mount/Companion">
+                <profile id="4ff0-9c03-8396-e77f" name="Ancient" hidden="false" typeId="61e3-eba4-7222-dee7" typeName="Mount/Companion">
                   <characteristics>
-                    <characteristic name="Mount/Companion" typeId="e368-06f5-5b4f-64a3">Increase the range of this model’s Void Drum ability from 12&quot; to 15&quot;.</characteristic>
+                    <characteristic name="Mount/Companion" typeId="e368-06f5-5b4f-64a3">LEVIADON only. If the Rend characteristic of a weapon used for an attack that targets this unit is -1, change it to ‘-’ for that attack.</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
+              <categoryLinks>
+                <categoryLink id="1c0a-d98c-d6d8-8264" name="LeviadonTrait" hidden="false" targetId="f975-d1b3-72fd-6d7d" primary="false"/>
+              </categoryLinks>
               <costs>
                 <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
               </costs>
             </selectionEntry>
-            <selectionEntry id="362e-96f3-8efb-53c2" name="Denizen of the Darkest Depths" hidden="false" collective="false" import="true" type="upgrade">
+            <selectionEntry id="6e26-c623-3558-9bac" name="5 ~ Denizen of the Darkest Depths" hidden="false" collective="false" import="true" type="upgrade">
+              <modifiers>
+                <modifier type="set" field="hidden" value="true">
+                  <conditions>
+                    <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="311c-9fc2-318e-1761" type="notInstanceOf"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
               <constraints>
-                <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="9c87-7936-abeb-7f5c" type="max"/>
+                <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="ebff-d707-1aee-b5a8" type="max"/>
               </constraints>
               <profiles>
-                <profile id="8ec5-02bd-73a7-139b" name="Denizen of the Darkest Depths" hidden="false" typeId="61e3-eba4-7222-dee7" typeName="Mount/Companion">
+                <profile id="5695-20b0-42a2-3008" name="Denizen of the Darkest Depths" hidden="false" typeId="61e3-eba4-7222-dee7" typeName="Mount/Companion">
                   <characteristics>
-                    <characteristic name="Mount/Companion" typeId="e368-06f5-5b4f-64a3">Add 1 to the number of mortal wounds inflicted on each enemy unit by this model’s Crushing Charge ability. This means it will inflict 1 mortal wound on an enemy unit on a roll of 1.</characteristic>
+                    <characteristic name="Mount/Companion" typeId="e368-06f5-5b4f-64a3">LEVIADON only. Subtract 1 from wound rolls for attacks made with melee weapons that target this unit that have a Damage characteristic of 1.</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
+              <categoryLinks>
+                <categoryLink id="7e41-16e0-99cd-3359" name="LeviadonTrait" hidden="false" targetId="f975-d1b3-72fd-6d7d" primary="false"/>
+              </categoryLinks>
               <costs>
                 <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
               </costs>
             </selectionEntry>
-            <selectionEntry id="8c6d-0806-65e5-ee70" name="Ancient" hidden="false" collective="false" import="true" type="upgrade">
+            <selectionEntry id="db60-7cb6-6d25-b15f" name="6 ~ Reverberating Carapace" hidden="false" collective="false" import="true" type="upgrade">
+              <modifiers>
+                <modifier type="set" field="hidden" value="true">
+                  <conditions>
+                    <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="311c-9fc2-318e-1761" type="notInstanceOf"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
               <constraints>
-                <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="6038-e50b-bbca-1ebb" type="max"/>
+                <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="d1b7-8b13-da54-2359" type="max"/>
               </constraints>
               <profiles>
-                <profile id="c4d8-ebf7-13ed-8b94" name="Ancient" hidden="false" typeId="61e3-eba4-7222-dee7" typeName="Mount/Companion">
+                <profile id="ebc0-6371-a96b-7d96" name="Reverberating Carapace" hidden="false" typeId="61e3-eba4-7222-dee7" typeName="Mount/Companion">
                   <characteristics>
-                    <characteristic name="Mount/Companion" typeId="e368-06f5-5b4f-64a3">If the weapon used for an attack that targets this model has a Rend characteristic of -1, change the Rend characteristic for that attack to ‘-’.</characteristic>
+                    <characteristic name="Mount/Companion" typeId="e368-06f5-5b4f-64a3">LEVIADON only. Increase the range of this unit’s Void Drum ability from 12&quot; to 15&quot;.</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
+              <categoryLinks>
+                <categoryLink id="895a-a0e8-67cb-ab57" name="LeviadonTrait" hidden="false" targetId="f975-d1b3-72fd-6d7d" primary="false"/>
+              </categoryLinks>
               <costs>
                 <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
               </costs>
@@ -1776,16 +1366,6 @@ In the phase in which the bearer releases the Cloud of Midnight, they are ignore
       <selectionEntryGroups>
         <selectionEntryGroup id="fa81-9488-eedc-be0c" name="Lore of the Deeps" hidden="false" collective="false" import="true">
           <modifiers>
-            <modifier type="set" field="hidden" value="true">
-              <conditionGroups>
-                <conditionGroup type="or">
-                  <conditions>
-                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="d8e3-6b13-4d03-10c3" type="greaterThan"/>
-                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="3c47-d09e-d0c8-8682" type="greaterThan"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
-            </modifier>
             <modifier type="increment" field="3e12-ba9d-ff46-c1d4" value="1.0">
               <repeats>
                 <repeat field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="9e49-bd7f-45ee-1a96" repeats="1" roundUp="false"/>
@@ -1799,29 +1379,14 @@ In the phase in which the bearer releases the Cloud of Midnight, they are ignore
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="3e12-ba9d-ff46-c1d4" type="max"/>
           </constraints>
           <selectionEntries>
-            <selectionEntry id="05c4-7bc1-5df3-dcce" name="Vorpal Maelstrom" hidden="false" collective="false" import="true" type="upgrade">
-              <constraints>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="7a23-1513-e563-8b95" type="max"/>
-              </constraints>
-              <profiles>
-                <profile id="46b1-ab58-0be8-9038" name="Vorpal Maelstrom" hidden="false" typeId="13da-11a8-b7d1-77a7" typeName="Spell">
-                  <characteristics>
-                    <characteristic name="Spell" typeId="1170-c916-1b73-ae34">Vorpal Maelstrom has a casting value of 6. If successfullycast, pick a point on the battlefield within 18&quot; of the caster that is visible to them. Roll a dice for each unit within 3&quot; of that point. If the dice roll for a unit is less than or equal to the number of models in the unit, that unit suffers D3 mortal wounds.</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-              <costs>
-                <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
-              </costs>
-            </selectionEntry>
-            <selectionEntry id="487c-5e49-80f7-bf35" name="Tide of Fear" hidden="false" collective="false" import="true" type="upgrade">
+            <selectionEntry id="487c-5e49-80f7-bf35" name="2 - Counter-current" hidden="false" collective="false" import="true" type="upgrade">
               <constraints>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="e12f-79bb-2328-4431" type="max"/>
               </constraints>
               <profiles>
-                <profile id="de7a-fd6e-2dfa-7581" name="Tide of Fear" hidden="false" typeId="13da-11a8-b7d1-77a7" typeName="Spell">
+                <profile id="de7a-fd6e-2dfa-7581" name="Counter-current" hidden="false" typeId="13da-11a8-b7d1-77a7" typeName="Spell">
                   <characteristics>
-                    <characteristic name="Spell" typeId="1170-c916-1b73-ae34">Tide of Fear has a casting value of 6. If successfully cast, pick an enemy unit within 12&quot; of the caster that is visible to them. Until your next hero phase, subtract 1 from hit rolls for that unit and subtract 1 from that unit’s Bravery characteristic.</characteristic>
+                    <characteristic name="Spell" typeId="1170-c916-1b73-ae34">Counter-current is a spell that has a casting value of 6 and a range of 18&quot;. If cast, pick 1 enemy unit within range and visible to the caster. Until your next hero phase, halve run rolls and charge rolls for that unit.</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
@@ -1829,29 +1394,14 @@ In the phase in which the bearer releases the Cloud of Midnight, they are ignore
                 <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
               </costs>
             </selectionEntry>
-            <selectionEntry id="2b94-ebfd-03aa-1989" name="Abyssal Darkness" hidden="false" collective="false" import="true" type="upgrade">
-              <constraints>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="4053-93e4-4cd8-fe10" type="max"/>
-              </constraints>
-              <profiles>
-                <profile id="5b36-fab7-7ba4-c5f4" name="Abyssal Darkness" hidden="false" typeId="13da-11a8-b7d1-77a7" typeName="Spell">
-                  <characteristics>
-                    <characteristic name="Spell" typeId="1170-c916-1b73-ae34">Abyssal Darkness has a casting value of 5. If successfullycast, until your next hero phase, friendly IDONETH DEEPKIN units are treated as being in cover while they are wholly within 9&quot; of the caster.</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-              <costs>
-                <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
-              </costs>
-            </selectionEntry>
-            <selectionEntry id="bef6-8b8b-4327-059c" name="Pressure of the Deep" hidden="false" collective="false" import="true" type="upgrade">
+            <selectionEntry id="bef6-8b8b-4327-059c" name="3 - Pressure of the Deep" hidden="false" collective="false" import="true" type="upgrade">
               <constraints>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="90df-7487-3a4d-8b6f" type="max"/>
               </constraints>
               <profiles>
                 <profile id="0dbb-cb33-d218-6a8f" name="Pressure of the Deep" hidden="false" typeId="13da-11a8-b7d1-77a7" typeName="Spell">
                   <characteristics>
-                    <characteristic name="Spell" typeId="1170-c916-1b73-ae34">Pressure of the Deep has a casting value of 7. If successfullycast, pick an enemy model within 12&quot; of the caster that is visible to them, and roll a dice. If the dice roll is greater than that model’s Wounds characteristic, it is slain.</characteristic>
+                    <characteristic name="Spell" typeId="1170-c916-1b73-ae34">Pressure of the Deep is a spell that has a casting value of 7 and a range of 12&quot;. If cast, pick 1 enemy model within range that is visible to the caster and roll a dice. If the result is greater than that model’s Wounds characteristic, that model is slain.</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
@@ -1859,14 +1409,14 @@ In the phase in which the bearer releases the Cloud of Midnight, they are ignore
                 <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
               </costs>
             </selectionEntry>
-            <selectionEntry id="b656-e6da-9111-7693" name="Arcane Corrasion" hidden="false" collective="false" import="true" type="upgrade">
+            <selectionEntry id="b656-e6da-9111-7693" name="4 - Arcane Corrasion" hidden="false" collective="false" import="true" type="upgrade">
               <constraints>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="39d3-5b85-235b-588b" type="max"/>
               </constraints>
               <profiles>
                 <profile id="cb01-1007-4ce4-f0c9" name="Arcane Corrasion" hidden="false" typeId="13da-11a8-b7d1-77a7" typeName="Spell">
                   <characteristics>
-                    <characteristic name="Spell" typeId="1170-c916-1b73-ae34">Arcane Corrasion has a casting value of 6. If successfullycast, pick the closest enemy unit within 48&quot; of the caster and measure the distance between the caster and the unit. If the distance is up to 12&quot;, the target suffers 1 mortal wound; if the distance is more than 12&quot; and up to 24&quot; it suffers 2 mortal wounds instead; if the distance is more than 24&quot; and up to 36&quot; it suffers 3 mortal wounds instead; and if the distance is more than 36&quot; and up to 48&quot; it suffers 4 mortal wounds instead.</characteristic>
+                    <characteristic name="Spell" typeId="1170-c916-1b73-ae34">Arcane Corrasion is a spell that has a casting value of 6 and a range of 12&quot;. If cast, pick 1 enemy unit within range and visible to the caster. Worsen the Rend characteristic of that unit’s melee weapons by 1 until your next hero phase.</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
@@ -1874,14 +1424,14 @@ In the phase in which the bearer releases the Cloud of Midnight, they are ignore
                 <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
               </costs>
             </selectionEntry>
-            <selectionEntry id="856e-6858-614b-19fe" name="Steed of Tides" hidden="false" collective="false" import="true" type="upgrade">
+            <selectionEntry id="856e-6858-614b-19fe" name="1 - Steed of Tides" hidden="false" collective="false" import="true" type="upgrade">
               <constraints>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="086a-9fd9-7866-f5bb" type="max"/>
               </constraints>
               <profiles>
                 <profile id="a1c2-4614-7df3-a6d7" name="Steed of Tides" hidden="false" typeId="13da-11a8-b7d1-77a7" typeName="Spell">
                   <characteristics>
-                    <characteristic name="Spell" typeId="1170-c916-1b73-ae34">Steed of Tides has a casting value of 5. If successfully cast, pick a friendly HERO that is not a MONSTER and that is within 6&quot; of the caster and visible to them. Remove that model from the battlefield, and then set it up again within 24&quot; of its previous location and more than 9&quot; from any enemy models. This counts as the model’s move in your following movement phase.</characteristic>
+                    <characteristic name="Spell" typeId="1170-c916-1b73-ae34">Steed of Tides is a spell that has a casting value of 5 and a range of 6&quot;. If cast, pick 1 friendly HERO that is not a MONSTER and that is within range and visible to the caster. Remove that HERO from the battlefield and set it up again on the battlefield more than 9&quot; from all enemy units. A unit set up with this ability cannot move in the following movement phase.</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
