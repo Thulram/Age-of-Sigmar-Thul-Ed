@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="66d5-d50d-1930-a53d" name="Order - Kharadron Overlords" revision="14" battleScribeVersion="2.03" authorName="Thulram" library="false" gameSystemId="e832-3291-06be-cab1" gameSystemRevision="13" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="66d5-d50d-1930-a53d" name="Order - Kharadron Overlords" revision="15" battleScribeVersion="2.03" authorName="Thulram" library="false" gameSystemId="e832-3291-06be-cab1" gameSystemRevision="15" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <profileTypes>
     <profileType id="6870-98be-4a6c-24e1" name="Great Endrinwork">
       <characteristicTypes>
@@ -484,6 +484,7 @@ Designer’s Note: Coalition units are not allied units, so the limitations that
                 <categoryLink id="9e63-18a6-4a18-1dcd" name="Named General" hidden="false" targetId="8b3d-7f03-e1f9-eaf5" primary="false"/>
               </categoryLinks>
             </entryLink>
+            <entryLink id="51fe-9f61-2b4e-706f" name="Battalion Formation" hidden="false" collective="false" import="true" targetId="2f0a-3e07-0d1c-e8e3" type="selectionEntryGroup"/>
           </entryLinks>
         </entryLink>
         <entryLink id="df5a-045b-d8a7-819a" name="Thundrik&apos;s Profiteers" hidden="false" collective="false" import="true" targetId="7d7c-a5a9-db93-52b9" type="selectionEntry">
@@ -491,6 +492,9 @@ Designer’s Note: Coalition units are not allied units, so the limitations that
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="afb8-e6d8-880e-c945" type="max"/>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="1522-4b53-a8bf-363f" type="min"/>
           </constraints>
+          <entryLinks>
+            <entryLink id="accc-1231-a668-f828" name="Battalion Formation" hidden="false" collective="false" import="true" targetId="2f0a-3e07-0d1c-e8e3" type="selectionEntryGroup"/>
+          </entryLinks>
         </entryLink>
       </entryLinks>
       <costs>
@@ -523,6 +527,7 @@ Designer’s Note: Coalition units are not allied units, so the limitations that
                 <categoryLink id="c7c9-4e4c-2709-e1ec" name="Named General" hidden="false" targetId="8b3d-7f03-e1f9-eaf5" primary="false"/>
               </categoryLinks>
             </entryLink>
+            <entryLink id="1828-48cf-73d6-9522" name="Core Battalions" hidden="false" collective="false" import="true" targetId="8c04-393d-d72d-c2a8" type="selectionEntryGroup"/>
           </entryLinks>
         </entryLink>
         <entryLink id="de30-3c5b-3d09-d9de" name="The Chosen Axes" hidden="false" collective="false" import="true" targetId="dc32-b987-7275-de29" type="selectionEntry">
@@ -530,10 +535,13 @@ Designer’s Note: Coalition units are not allied units, so the limitations that
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="e493-7543-5019-eabf" type="max"/>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="1547-11ff-fede-c63f" type="min"/>
           </constraints>
+          <entryLinks>
+            <entryLink id="7c44-b847-1010-8193" name="Core Battalions" hidden="false" collective="false" import="true" targetId="8c04-393d-d72d-c2a8" type="selectionEntryGroup"/>
+          </entryLinks>
         </entryLink>
       </entryLinks>
       <costs>
-        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="150.0"/>
+        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="180.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="899a-f1a2-88a0-174b" name="Grand Strategy" hidden="false" collective="false" import="true" type="upgrade">
@@ -580,11 +588,170 @@ Designer’s Note: Coalition units are not allied units, so the limitations that
           <categoryLinks>
             <categoryLink id="f0b8-d64c-41c8-74e5" name="Grand Strategy" hidden="false" targetId="318c-fa55-0855-47ef" primary="false"/>
           </categoryLinks>
+          <selectionEntries>
+            <selectionEntry id="5712-e721-3363-8634" name="Spend Shares to Make Shares" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="7ca8-8c24-8342-08d4" type="max"/>
+              </constraints>
+              <profiles>
+                <profile id="e585-7986-e4cb-5fee" name="Spend Shares to Make Shares" hidden="false" typeId="7dc6-98f0-f5ba-fc16" typeName="Grand Strategy">
+                  <characteristics>
+                    <characteristic name="Grand Strategy" typeId="22d6-b382-f824-6381">When the battle ends, you complete this grand strategy if no unit in your army has a share of aethergold that has not been spent, and at least 1 share of aethergold was spent by friendly units in every battle round.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <costs>
+                <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
+              </costs>
+            </selectionEntry>
+          </selectionEntries>
           <entryLinks>
             <entryLink id="5877-0cf7-779c-5f28" name="GHB &apos;21" hidden="false" collective="false" import="true" targetId="bb2d-2110-60b8-c13e" type="selectionEntryGroup"/>
           </entryLinks>
         </selectionEntryGroup>
       </selectionEntryGroups>
+      <costs>
+        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="ccc2-a4cd-3f48-3277" name="Kharadron Overlords Battle Tactics" hidden="false" collective="false" import="true" type="upgrade">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4373-740f-1bf3-b0aa" type="instanceOf"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="e3a6-45ca-4974-b489" type="instanceOf"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="996a-613c-4006-25e3" type="instanceOf"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="6cd6-b22e-bfcb-9589" type="instanceOf"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="b543-cb16-0c79-fbc6" type="instanceOf"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+      <constraints>
+        <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="7f6b-1eb2-6bbd-0016" type="max"/>
+      </constraints>
+      <profiles>
+        <profile id="c791-e4a2-49ca-7a52" name="Bombing Run" hidden="false" typeId="4bb2-448c-446c-f522" typeName="Battle Tactic">
+          <characteristics>
+            <characteristic name="Battle Tactic" typeId="8c0f-be41-a70e-c699">Pick 1 enemy unit. You complete this battle tactic if that unit is destroyed during this turn by a friendly model using the Bomb Racks ability.</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="8cc8-e342-e692-3653" name="Mobilise the Fleet" hidden="false" typeId="4bb2-448c-446c-f522" typeName="Battle Tactic">
+          <characteristics>
+            <characteristic name="Battle Tactic" typeId="8c0f-be41-a70e-c699">You cannot pick this battle tactic in the first battle round. Pick 3 friendly units on the battlefield. You complete this battle tactic at the end of the turn if those units are all garrisoned within SKYVESSELS.</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="f0b7-79e0-91e3-24a9" name="Boots on the Ground" hidden="false" typeId="4bb2-448c-446c-f522" typeName="Battle Tactic">
+          <characteristics>
+            <characteristic name="Battle Tactic" typeId="8c0f-be41-a70e-c699">Pick 3 friendly units garrisoned in SKYVESSELS. You complete this battle tactic at the end of the turn if those units arc all on the battlefield and wholly within enemy territory.</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <categoryLinks>
+        <categoryLink id="8d59-51e0-2764-e0ce" name="New CategoryLink" hidden="false" targetId="29f4-e63d-fa5b-1611" primary="true"/>
+      </categoryLinks>
+      <costs>
+        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="06bb-ad17-5866-ee1d" name="Iron Sky Attack Squadron" hidden="false" collective="false" import="true" type="upgrade">
+      <profiles>
+        <profile id="02ea-c52e-1ed0-b989" name="Expert" hidden="false" typeId="66c5-932e-004a-574c" typeName="Battalion Abilities">
+          <characteristics>
+            <characteristic name="Battalion Ability" typeId="23f7-32c0-e059-29b2">Once per battle, 1 unit from this battalion can receive the All-out Attack or All-out Defence command without the command being issued and without a command point being spent.</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="b572-369b-d00e-c0f3" name="Swift" hidden="false" typeId="66c5-932e-004a-574c" typeName="Battalion Abilities">
+          <characteristics>
+            <characteristic name="Battalion Ability" typeId="23f7-32c0-e059-29b2">Once per battle, 1 unit from this battalion can receive the At the Double or Forward to Victory command without the command being issued and without a command point being spent.</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <categoryLinks>
+        <categoryLink id="7f1d-32ff-8a41-197e" name="New CategoryLink" hidden="false" targetId="c03a-b1a8-66c6-3637" primary="true"/>
+      </categoryLinks>
+      <selectionEntries>
+        <selectionEntry id="1d6c-e52c-9d48-0fd3" name="Arkanaut Frigate" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="3.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="7192-02bb-09d8-0ce3" type="max"/>
+            <constraint field="selections" scope="parent" value="2.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="f34d-0c8b-068c-12b3" type="min"/>
+          </constraints>
+          <costs>
+            <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="0b55-8859-9e19-e662" name="Arkanaut Company" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="3.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="e78a-8174-3aa3-27f0" type="max"/>
+            <constraint field="selections" scope="parent" value="2.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="b01f-3297-3cb3-48db" type="min"/>
+          </constraints>
+          <costs>
+            <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
+          </costs>
+        </selectionEntry>
+      </selectionEntries>
+      <costs>
+        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="858e-32c7-e268-78fe" name="Grundstok Escort Wing" hidden="false" collective="false" import="true" type="upgrade">
+      <profiles>
+        <profile id="ed17-6920-8fd3-040d" name="Slayers" hidden="false" typeId="66c5-932e-004a-574c" typeName="Battalion Abilities">
+          <characteristics>
+            <characteristic name="Battalion Ability" typeId="23f7-32c0-e059-29b2">Once per battle, 1 unit from this battalion can receive the All-out Attack or Unleash Hell command without the command being issued and without a command point being spent.</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <categoryLinks>
+        <categoryLink id="9d30-3bae-eafc-a825" name="New CategoryLink" hidden="false" targetId="c03a-b1a8-66c6-3637" primary="true"/>
+      </categoryLinks>
+      <selectionEntries>
+        <selectionEntry id="bd74-ae38-cd2b-8a82" name="Arkanaut Frigate" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="b8bf-cd25-c5ab-0fb6" type="max"/>
+          </constraints>
+          <costs>
+            <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="42eb-df16-2951-a005" name="Grundstok Thunderers" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="08bd-ee9f-31a6-0f85" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="4825-e069-03fb-3b65" type="min"/>
+          </constraints>
+          <costs>
+            <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="a735-0081-6558-102c" name="Arkanaut Ironclad" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="0ef6-49c8-adce-22ef" type="max"/>
+          </constraints>
+          <costs>
+            <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="7d0f-be84-6eda-b7af" name="Grundstok Gunhauler" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="3.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="2875-f7dd-cf0f-8c8a" type="max"/>
+            <constraint field="selections" scope="parent" value="2.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8b06-f4b3-7d05-38b9" type="min"/>
+          </constraints>
+          <costs>
+            <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="6118-c9ea-7e1b-cbb4" name="Skywardens" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="3.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d024-caf3-a626-ff8e" type="max"/>
+          </constraints>
+          <costs>
+            <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
+          </costs>
+        </selectionEntry>
+      </selectionEntries>
       <costs>
         <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
       </costs>
@@ -618,6 +785,7 @@ Designer’s Note: Coalition units are not allied units, so the limitations that
             </modifier>
           </modifiers>
         </entryLink>
+        <entryLink id="06f8-0bce-fc56-e9e8" name="Battalion Formation" hidden="false" collective="false" import="true" targetId="2f0a-3e07-0d1c-e8e3" type="selectionEntryGroup"/>
       </entryLinks>
     </entryLink>
     <entryLink id="ddb0-9231-7f37-abd4" name="Aetheric Navigator" hidden="false" collective="false" import="true" targetId="c135-f025-6b12-754c" type="selectionEntry">
@@ -644,6 +812,7 @@ Designer’s Note: Coalition units are not allied units, so the limitations that
             </modifier>
           </modifiers>
         </entryLink>
+        <entryLink id="4445-c44f-ddd2-1d73" name="Battalion Formation" hidden="false" collective="false" import="true" targetId="2f0a-3e07-0d1c-e8e3" type="selectionEntryGroup"/>
       </entryLinks>
     </entryLink>
     <entryLink id="8d53-1ec7-74cb-268e" name="Arkanaut Admiral" hidden="false" collective="false" import="true" targetId="3e40-4246-7da8-5d15" type="selectionEntry">
@@ -673,9 +842,14 @@ Designer’s Note: Coalition units are not allied units, so the limitations that
             </modifier>
           </modifiers>
         </entryLink>
+        <entryLink id="a613-8c8f-e24d-7053" name="Battalion Formation" hidden="false" collective="false" import="true" targetId="2f0a-3e07-0d1c-e8e3" type="selectionEntryGroup"/>
       </entryLinks>
     </entryLink>
-    <entryLink id="fef8-abb9-aa25-4605" name="Arkanaut Company" hidden="false" collective="false" import="true" targetId="4716-8815-4d3c-a9e2" type="selectionEntry"/>
+    <entryLink id="fef8-abb9-aa25-4605" name="Arkanaut Company" hidden="false" collective="false" import="true" targetId="4716-8815-4d3c-a9e2" type="selectionEntry">
+      <entryLinks>
+        <entryLink id="5eeb-156c-748a-55a2" name="Battalion Formation" hidden="false" collective="false" import="true" targetId="2f0a-3e07-0d1c-e8e3" type="selectionEntryGroup"/>
+      </entryLinks>
+    </entryLink>
     <entryLink id="bd07-88ab-1099-c7e8" name="Arkanaut Frigate" hidden="false" collective="false" import="true" targetId="da52-fd0a-a8bc-a122" type="selectionEntry">
       <modifierGroups>
         <modifierGroup>
@@ -691,11 +865,13 @@ Designer’s Note: Coalition units are not allied units, so the limitations that
       </modifierGroups>
       <entryLinks>
         <entryLink id="6b58-f573-b2b8-fc2a" name="Great Endrinworks" hidden="false" collective="false" import="true" targetId="b16e-9583-bc66-37d9" type="selectionEntryGroup"/>
+        <entryLink id="e16d-588d-3370-2d1e" name="Battalion Formation" hidden="false" collective="false" import="true" targetId="2f0a-3e07-0d1c-e8e3" type="selectionEntryGroup"/>
       </entryLinks>
     </entryLink>
     <entryLink id="8642-03cd-4e66-6500" name="Arkanaut Ironclad" hidden="false" collective="false" import="true" targetId="55c1-6c08-9b45-cee1" type="selectionEntry">
       <entryLinks>
         <entryLink id="67c9-0c93-801b-9086" name="Great Endrinworks" hidden="false" collective="false" import="true" targetId="b16e-9583-bc66-37d9" type="selectionEntryGroup"/>
+        <entryLink id="fa69-2cd1-ac32-9b49" name="Battalion Formation" hidden="false" collective="false" import="true" targetId="2f0a-3e07-0d1c-e8e3" type="selectionEntryGroup"/>
       </entryLinks>
     </entryLink>
     <entryLink id="554f-7c20-4a2c-74af" name="Brokk Grungsson, Lord Magnate of Barak-Nar" hidden="false" collective="false" import="true" targetId="88d2-f354-a49c-2030" type="selectionEntry">
@@ -705,6 +881,7 @@ Designer’s Note: Coalition units are not allied units, so the limitations that
             <categoryLink id="fec2-d173-a01d-727b" name="Named General" hidden="false" targetId="8b3d-7f03-e1f9-eaf5" primary="false"/>
           </categoryLinks>
         </entryLink>
+        <entryLink id="2fc4-366c-0780-49fd" name="Battalion Formation" hidden="false" collective="false" import="true" targetId="2f0a-3e07-0d1c-e8e3" type="selectionEntryGroup"/>
       </entryLinks>
     </entryLink>
     <entryLink id="0001-73b7-e1c8-ced8" name="Endrinmaster with Dirigible Suit" hidden="false" collective="false" import="true" targetId="b91a-87a5-6733-c063" type="selectionEntry">
@@ -737,6 +914,7 @@ Designer’s Note: Coalition units are not allied units, so the limitations that
             </modifier>
           </modifiers>
         </entryLink>
+        <entryLink id="5f91-2928-e6fc-03e4" name="Battalion Formation" hidden="false" collective="false" import="true" targetId="2f0a-3e07-0d1c-e8e3" type="selectionEntryGroup"/>
       </entryLinks>
     </entryLink>
     <entryLink id="63d5-6a9e-ac90-5e08" name="Endrinmaster with Endrinharness" hidden="false" collective="false" import="true" targetId="8dcd-19d0-b355-f1d7" type="selectionEntry">
@@ -765,6 +943,7 @@ Designer’s Note: Coalition units are not allied units, so the limitations that
             </modifier>
           </modifiers>
         </entryLink>
+        <entryLink id="884d-2c2c-e85b-e275" name="Battalion Formation" hidden="false" collective="false" import="true" targetId="2f0a-3e07-0d1c-e8e3" type="selectionEntryGroup"/>
       </entryLinks>
     </entryLink>
     <entryLink id="52d6-9d21-0078-9be9" name="Endrinriggers" hidden="false" collective="false" import="true" targetId="efa1-470f-83ba-9d41" type="selectionEntry">
@@ -785,6 +964,9 @@ Designer’s Note: Coalition units are not allied units, so the limitations that
       <categoryLinks>
         <categoryLink id="9c37-7667-51dc-8e26" name="BATTLELINE" hidden="false" targetId="a42d-220e-6a88-7bf6" primary="false"/>
       </categoryLinks>
+      <entryLinks>
+        <entryLink id="9b84-e89b-e133-dd72" name="Battalion Formation" hidden="false" collective="false" import="true" targetId="2f0a-3e07-0d1c-e8e3" type="selectionEntryGroup"/>
+      </entryLinks>
     </entryLink>
     <entryLink id="a33b-afe3-725c-bd1e" name="Grundstock Gunhauler" hidden="false" collective="false" import="true" targetId="0f3a-d38b-993b-d360" type="selectionEntry">
       <modifiers>
@@ -804,6 +986,7 @@ Designer’s Note: Coalition units are not allied units, so the limitations that
       </categoryLinks>
       <entryLinks>
         <entryLink id="0294-2623-dfc7-ea21" name="Great Endrinworks" hidden="false" collective="false" import="true" targetId="b16e-9583-bc66-37d9" type="selectionEntryGroup"/>
+        <entryLink id="6a55-5126-272d-08bc" name="Battalion Formation" hidden="false" collective="false" import="true" targetId="2f0a-3e07-0d1c-e8e3" type="selectionEntryGroup"/>
       </entryLinks>
     </entryLink>
     <entryLink id="6130-b593-92d5-2e6a" name="Grundstok Thunderers" hidden="false" collective="false" import="true" targetId="506e-d55c-cc7f-162a" type="selectionEntry">
@@ -822,6 +1005,9 @@ Designer’s Note: Coalition units are not allied units, so the limitations that
       <categoryLinks>
         <categoryLink id="53f5-2df4-83ca-8830" name="BATTLELINE" hidden="false" targetId="a42d-220e-6a88-7bf6" primary="false"/>
       </categoryLinks>
+      <entryLinks>
+        <entryLink id="171a-4723-0527-01ff" name="Battalion Formation" hidden="false" collective="false" import="true" targetId="2f0a-3e07-0d1c-e8e3" type="selectionEntryGroup"/>
+      </entryLinks>
     </entryLink>
     <entryLink id="3f4f-a568-4df9-6537" name="Skywardens" hidden="false" collective="false" import="true" targetId="c9fd-6b4b-eb3a-150d" type="selectionEntry">
       <modifiers>
@@ -841,11 +1027,10 @@ Designer’s Note: Coalition units are not allied units, so the limitations that
       <categoryLinks>
         <categoryLink id="7103-e9b9-9e91-2407" name="BATTLELINE" hidden="false" targetId="a42d-220e-6a88-7bf6" primary="false"/>
       </categoryLinks>
+      <entryLinks>
+        <entryLink id="0373-cb93-ac04-c724" name="Battalion Formation" hidden="false" collective="false" import="true" targetId="2f0a-3e07-0d1c-e8e3" type="selectionEntryGroup"/>
+      </entryLinks>
     </entryLink>
-    <entryLink id="604d-f684-985b-4c09" name="Grand Armada" hidden="false" collective="false" import="true" targetId="c1b0-6c6a-b950-754c" type="selectionEntry"/>
-    <entryLink id="63ab-c17e-940b-668c" name="Grundstok Escort Wing" hidden="false" collective="false" import="true" targetId="b0c9-f1c7-ddf3-9792" type="selectionEntry"/>
-    <entryLink id="7888-1584-0b8f-b74a" name="Iron Sky Attack Squadron" hidden="false" collective="false" import="true" targetId="9832-2540-6441-f2ed" type="selectionEntry"/>
-    <entryLink id="9e45-e557-1de4-e39e" name="Iron Sky Command" hidden="false" collective="false" import="true" targetId="3633-aa59-244e-5849" type="selectionEntry"/>
     <entryLink id="12c0-cb88-8fa1-c663" name="Auric Runeson on Magmadroth" hidden="false" collective="false" import="true" targetId="0eeb-18ce-3241-0856" type="selectionEntry">
       <modifiers>
         <modifier type="set" field="hidden" value="true">
@@ -873,6 +1058,7 @@ Designer’s Note: Coalition units are not allied units, so the limitations that
             </modifier>
           </modifiers>
         </entryLink>
+        <entryLink id="3e68-1def-b17f-64bb" name="Core Battalions" hidden="false" collective="false" import="true" targetId="8c04-393d-d72d-c2a8" type="selectionEntryGroup"/>
       </entryLinks>
     </entryLink>
     <entryLink id="15a7-7c09-376a-cb48" name="Auric Runefather" hidden="false" collective="false" import="true" targetId="468c-e387-1283-fa8b" type="selectionEntry">
@@ -902,6 +1088,7 @@ Designer’s Note: Coalition units are not allied units, so the limitations that
             </modifier>
           </modifiers>
         </entryLink>
+        <entryLink id="feea-f73a-7b66-a9cd" name="Core Battalions" hidden="false" collective="false" import="true" targetId="8c04-393d-d72d-c2a8" type="selectionEntryGroup"/>
       </entryLinks>
     </entryLink>
     <entryLink id="530c-f509-7e6c-955e" name="Auric Runefather on Magmadroth" hidden="false" collective="false" import="true" targetId="7088-7765-b3a3-8c20" type="selectionEntry">
@@ -931,6 +1118,7 @@ Designer’s Note: Coalition units are not allied units, so the limitations that
             </modifier>
           </modifiers>
         </entryLink>
+        <entryLink id="39a3-70d4-9054-90e5" name="Core Battalions" hidden="false" collective="false" import="true" targetId="8c04-393d-d72d-c2a8" type="selectionEntryGroup"/>
       </entryLinks>
     </entryLink>
     <entryLink id="2322-ae58-8b78-9fdf" name="Auric Runemaster" hidden="false" collective="false" import="true" targetId="fa40-ec77-33c4-0a4f" type="selectionEntry">
@@ -961,6 +1149,7 @@ Designer’s Note: Coalition units are not allied units, so the limitations that
             </modifier>
           </modifiers>
         </entryLink>
+        <entryLink id="7f74-f016-af71-5197" name="Core Battalions" hidden="false" collective="false" import="true" targetId="8c04-393d-d72d-c2a8" type="selectionEntryGroup"/>
       </entryLinks>
     </entryLink>
     <entryLink id="7468-b55e-644f-28c7" name="Auric Hearthguard" hidden="false" collective="false" import="true" targetId="a0d8-825a-0690-c40a" type="selectionEntry">
@@ -974,6 +1163,9 @@ Designer’s Note: Coalition units are not allied units, so the limitations that
       <categoryLinks>
         <categoryLink id="cd8a-a79e-b6e8-57c2" name="Allegiant Duardin" hidden="false" targetId="c9f0-7b6d-1b55-8eb2" primary="false"/>
       </categoryLinks>
+      <entryLinks>
+        <entryLink id="4916-7352-b5ec-9f3a" name="Core Battalions" hidden="false" collective="false" import="true" targetId="8c04-393d-d72d-c2a8" type="selectionEntryGroup"/>
+      </entryLinks>
     </entryLink>
     <entryLink id="bf68-8801-5780-7c80" name="Auric Runeson" hidden="false" collective="false" import="true" targetId="8ba8-453c-ba13-2eb8" type="selectionEntry">
       <modifiers>
@@ -1002,6 +1194,7 @@ Designer’s Note: Coalition units are not allied units, so the limitations that
             </modifier>
           </modifiers>
         </entryLink>
+        <entryLink id="c3fd-11d5-ebd6-be86" name="Core Battalions" hidden="false" collective="false" import="true" targetId="8c04-393d-d72d-c2a8" type="selectionEntryGroup"/>
       </entryLinks>
     </entryLink>
     <entryLink id="1df6-af40-1f66-f9f2" name="Doomseeker" hidden="false" collective="false" import="true" targetId="36e0-fccd-6e89-19b2" type="selectionEntry">
@@ -1031,6 +1224,7 @@ Designer’s Note: Coalition units are not allied units, so the limitations that
             </modifier>
           </modifiers>
         </entryLink>
+        <entryLink id="7b6d-3216-f7ae-80ef" name="Core Battalions" hidden="false" collective="false" import="true" targetId="8c04-393d-d72d-c2a8" type="selectionEntryGroup"/>
       </entryLinks>
     </entryLink>
     <entryLink id="aa71-3fa6-2d3e-b01e" name="Battlesmith" hidden="false" collective="false" import="true" targetId="d33a-9fdc-973a-014a" type="selectionEntry">
@@ -1060,6 +1254,7 @@ Designer’s Note: Coalition units are not allied units, so the limitations that
             </modifier>
           </modifiers>
         </entryLink>
+        <entryLink id="b83a-ec74-b29b-a896" name="Core Battalions" hidden="false" collective="false" import="true" targetId="8c04-393d-d72d-c2a8" type="selectionEntryGroup"/>
       </entryLinks>
     </entryLink>
     <entryLink id="2be9-b4d6-35ee-fd5e" name="Auric Runesmiter" hidden="false" collective="false" import="true" targetId="b07d-e7f1-80eb-f1fe" type="selectionEntry">
@@ -1090,6 +1285,7 @@ Designer’s Note: Coalition units are not allied units, so the limitations that
             </modifier>
           </modifiers>
         </entryLink>
+        <entryLink id="b677-b433-0489-ef23" name="Core Battalions" hidden="false" collective="false" import="true" targetId="8c04-393d-d72d-c2a8" type="selectionEntryGroup"/>
       </entryLinks>
     </entryLink>
     <entryLink id="94ef-43af-69a6-f7f5" name="Auric Runesmiter on Magmadroth" hidden="false" collective="false" import="true" targetId="d252-c422-c736-5fa6" type="selectionEntry">
@@ -1120,6 +1316,7 @@ Designer’s Note: Coalition units are not allied units, so the limitations that
             </modifier>
           </modifiers>
         </entryLink>
+        <entryLink id="3dbd-68c0-e62d-dc4c" name="Core Battalions" hidden="false" collective="false" import="true" targetId="8c04-393d-d72d-c2a8" type="selectionEntryGroup"/>
       </entryLinks>
     </entryLink>
     <entryLink id="f1a6-a80f-cac4-060f" name="Hearthguard Berzerkers" hidden="false" collective="false" import="true" targetId="b690-3453-6e18-fa8e" type="selectionEntry">
@@ -1133,6 +1330,9 @@ Designer’s Note: Coalition units are not allied units, so the limitations that
       <categoryLinks>
         <categoryLink id="42d1-9dff-7355-cce1" name="Allegiant Duardin" hidden="false" targetId="c9f0-7b6d-1b55-8eb2" primary="false"/>
       </categoryLinks>
+      <entryLinks>
+        <entryLink id="38b5-2bc6-f9d5-5876" name="Core Battalions" hidden="false" collective="false" import="true" targetId="8c04-393d-d72d-c2a8" type="selectionEntryGroup"/>
+      </entryLinks>
     </entryLink>
     <entryLink id="1784-1020-2b34-72e7" name="Vulkite Berzerkers" hidden="false" collective="false" import="true" targetId="b6d2-484d-67e4-98e1" type="selectionEntry">
       <modifiers>
@@ -1146,6 +1346,9 @@ Designer’s Note: Coalition units are not allied units, so the limitations that
       <categoryLinks>
         <categoryLink id="5011-8c56-90d1-7a3b" name="Allegiant Duardin" hidden="false" targetId="c9f0-7b6d-1b55-8eb2" primary="false"/>
       </categoryLinks>
+      <entryLinks>
+        <entryLink id="6548-d7d8-4cae-fbdf" name="Core Battalions" hidden="false" collective="false" import="true" targetId="8c04-393d-d72d-c2a8" type="selectionEntryGroup"/>
+      </entryLinks>
     </entryLink>
     <entryLink id="b355-37ce-b5b8-20a4" name="Cogsmith" hidden="false" collective="false" import="true" targetId="5923-8c44-2c49-546f" type="selectionEntry">
       <modifiers>
@@ -1330,533 +1533,98 @@ Designer’s Note: Coalition units are not allied units, so the limitations that
         <entryLink id="8fa6-e34a-dd15-de94" name="Core Battalions" hidden="false" collective="false" import="true" targetId="8c04-393d-d72d-c2a8" type="selectionEntryGroup"/>
       </entryLinks>
     </entryLink>
-  </entryLinks>
-  <sharedSelectionEntries>
-    <selectionEntry id="b0c9-f1c7-ddf3-9792" name="Grundstok Escort Wing" publicationId="e97a-4837-a772-7406" hidden="false" collective="false" import="true" type="upgrade">
-      <profiles>
-        <profile id="0a8c-392f-fae4-e6b2" name="Focused Fire" hidden="false" typeId="66c5-932e-004a-574c" typeName="Battalion Abilities">
-          <characteristics>
-            <characteristic name="Battalion Ability" typeId="23f7-32c0-e059-29b2">At the start of your shooting phase, you can pick 1 enemy unit for this battalion to focus fire on. If you do so, you can re-roll hit rolls of 1 for attacks made by units from this battalion that target that unit in that phase.</characteristic>
-          </characteristics>
-        </profile>
-      </profiles>
-      <categoryLinks>
-        <categoryLink id="7975-da73-fc7e-1a04" name="New CategoryLink" hidden="false" targetId="3706-e0e8-674f-c41b" primary="true"/>
-      </categoryLinks>
-      <selectionEntryGroups>
-        <selectionEntryGroup id="2c08-402c-a5ff-b595" name="2-3 Grundstok Gunhaulers" hidden="false" collective="false" import="true">
-          <constraints>
-            <constraint field="selections" scope="parent" value="2.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="6d2c-fec2-67ae-7f98" type="min"/>
-            <constraint field="selections" scope="parent" value="3.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="a939-8f7e-991c-d1ad" type="max"/>
-          </constraints>
-          <entryLinks>
-            <entryLink id="2d17-040b-1247-12dc" name="Grundstock Gunhauler" hidden="false" collective="false" import="true" targetId="0f3a-d38b-993b-d360" type="selectionEntry">
-              <modifiers>
-                <modifier type="remove" field="category" value="a42d-220e-6a88-7bf6">
-                  <conditionGroups>
-                    <conditionGroup type="or">
-                      <conditions>
-                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="eb59-f0ad-9828-dad9" type="instanceOf"/>
-                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="f8dd-22b1-99c9-306b" type="equalTo"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
-                </modifier>
-              </modifiers>
-              <categoryLinks>
-                <categoryLink id="e926-54a7-3487-c2d3" name="BATTLELINE" hidden="false" targetId="a42d-220e-6a88-7bf6" primary="false"/>
-              </categoryLinks>
-              <entryLinks>
-                <entryLink id="8936-bb56-096d-44d2" name="Great Endrinworks" hidden="false" collective="false" import="true" targetId="b16e-9583-bc66-37d9" type="selectionEntryGroup"/>
-              </entryLinks>
-            </entryLink>
-          </entryLinks>
-        </selectionEntryGroup>
-        <selectionEntryGroup id="a688-2421-c181-a9ec" name="1 Grundstok Thunderers unit" hidden="false" collective="false" import="true">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="135a-eb5f-68c6-8fd1" type="min"/>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="f765-4d20-0720-cc27" type="max"/>
-          </constraints>
-          <entryLinks>
-            <entryLink id="ca48-6d21-2a85-4ca1" name="Grundstok Thunderers" hidden="false" collective="false" import="true" targetId="506e-d55c-cc7f-162a" type="selectionEntry">
-              <modifiers>
-                <modifier type="remove" field="category" value="a42d-220e-6a88-7bf6">
-                  <conditionGroups>
-                    <conditionGroup type="or">
-                      <conditions>
-                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="eb59-f0ad-9828-dad9" type="instanceOf"/>
-                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="144b-7a40-ce14-b15c" type="equalTo"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
-                </modifier>
-              </modifiers>
-              <categoryLinks>
-                <categoryLink id="3a2b-9165-f535-102a" name="BATTLELINE" hidden="false" targetId="a42d-220e-6a88-7bf6" primary="false"/>
-              </categoryLinks>
-            </entryLink>
-          </entryLinks>
-        </selectionEntryGroup>
-        <selectionEntryGroup id="d07e-59b6-96f4-1147" name="1 Arkanaut; Ironclad or Frigate" hidden="false" collective="false" import="true">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="65c8-f1e5-8994-06b4" type="min"/>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="22c9-09e0-b23a-3063" type="max"/>
-          </constraints>
-          <entryLinks>
-            <entryLink id="a292-efa2-1c00-f680" name="Arkanaut Ironclad" hidden="false" collective="false" import="true" targetId="55c1-6c08-9b45-cee1" type="selectionEntry">
-              <entryLinks>
-                <entryLink id="f77d-46ff-b8c9-3540" name="Great Endrinworks" hidden="false" collective="false" import="true" targetId="b16e-9583-bc66-37d9" type="selectionEntryGroup"/>
-              </entryLinks>
-            </entryLink>
-            <entryLink id="c230-a34f-29ce-3e08" name="Arkanaut Frigate" hidden="false" collective="false" import="true" targetId="da52-fd0a-a8bc-a122" type="selectionEntry">
-              <modifierGroups>
-                <modifierGroup>
-                  <conditions>
-                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="1e9f-b64d-f107-6fea" type="greaterThan"/>
-                  </conditions>
-                  <modifiers>
-                    <modifier type="set-primary" field="category" value="6230-ed60-e374-add4"/>
-                    <modifier type="add" field="category" value="a42d-220e-6a88-7bf6"/>
-                    <modifier type="remove" field="category" value="7f62-b7f5-32d5-e13b"/>
-                  </modifiers>
-                </modifierGroup>
-              </modifierGroups>
-              <entryLinks>
-                <entryLink id="83cd-e96c-94ed-ec26" name="Great Endrinworks" hidden="false" collective="false" import="true" targetId="b16e-9583-bc66-37d9" type="selectionEntryGroup"/>
-              </entryLinks>
-            </entryLink>
-          </entryLinks>
-        </selectionEntryGroup>
-        <selectionEntryGroup id="f2f5-8d72-29f2-ebca" name="0-3 Skywardens units" hidden="false" collective="false" import="true">
-          <constraints>
-            <constraint field="selections" scope="parent" value="3.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="b103-5e26-0fd2-3c34" type="max"/>
-          </constraints>
-          <entryLinks>
-            <entryLink id="2f1b-41be-3041-324d" name="Skywardens" hidden="false" collective="false" import="true" targetId="c9fd-6b4b-eb3a-150d" type="selectionEntry">
-              <modifiers>
-                <modifier type="remove" field="category" value="a42d-220e-6a88-7bf6">
-                  <conditionGroups>
-                    <conditionGroup type="or">
-                      <conditions>
-                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="5b1e-3aba-b4f7-adf1" type="equalTo"/>
-                        <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4373-740f-1bf3-b0aa" type="instanceOf"/>
-                        <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="6cd6-b22e-bfcb-9589" type="instanceOf"/>
-                        <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="e3a6-45ca-4974-b489" type="instanceOf"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
-                </modifier>
-              </modifiers>
-              <categoryLinks>
-                <categoryLink id="7d8a-4bfc-2d59-d20b" name="BATTLELINE" hidden="false" targetId="a42d-220e-6a88-7bf6" primary="false"/>
-              </categoryLinks>
-            </entryLink>
-          </entryLinks>
-        </selectionEntryGroup>
-      </selectionEntryGroups>
-      <costs>
-        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="120.0"/>
-      </costs>
-    </selectionEntry>
-    <selectionEntry id="9832-2540-6441-f2ed" name="Iron Sky Attack Squadron" publicationId="e97a-4837-a772-7406" hidden="false" collective="false" import="true" type="upgrade">
-      <profiles>
-        <profile id="4d7b-55e4-39af-87f6" name="Bold Privateers" hidden="false" typeId="66c5-932e-004a-574c" typeName="Battalion Abilities">
-          <characteristics>
-            <characteristic name="Battalion Ability" typeId="23f7-32c0-e059-29b2">ARKANAUT COMPANY units from this battalion can leave an ARKANAUT FRIGATE from the same battalion either before or after it has moved. In addition, roll 3D6 instead of 2D6 when making charge rolls for ARKANAUT COMPANY units from this battalion that left an ARKANAUT FRIGATE from the same battalion in the movement phase of the same turn.</characteristic>
-          </characteristics>
-        </profile>
-      </profiles>
-      <categoryLinks>
-        <categoryLink id="6092-cdee-8c17-c18a" name="New CategoryLink" hidden="false" targetId="3706-e0e8-674f-c41b" primary="true"/>
-      </categoryLinks>
-      <selectionEntryGroups>
-        <selectionEntryGroup id="9e62-2dae-76c1-7326" name="2+ Arkanaut Frigates" hidden="false" collective="false" import="true">
-          <constraints>
-            <constraint field="selections" scope="parent" value="2.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="a5cf-ae62-a57c-b6a3" type="min"/>
-          </constraints>
-          <entryLinks>
-            <entryLink id="75ce-eaaf-647c-aa35" name="Arkanaut Frigate" hidden="false" collective="false" import="true" targetId="da52-fd0a-a8bc-a122" type="selectionEntry">
-              <modifierGroups>
-                <modifierGroup>
-                  <conditions>
-                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="1e9f-b64d-f107-6fea" type="greaterThan"/>
-                  </conditions>
-                  <modifiers>
-                    <modifier type="set-primary" field="category" value="6230-ed60-e374-add4"/>
-                    <modifier type="add" field="category" value="a42d-220e-6a88-7bf6"/>
-                    <modifier type="remove" field="category" value="7f62-b7f5-32d5-e13b"/>
-                  </modifiers>
-                </modifierGroup>
-              </modifierGroups>
-              <entryLinks>
-                <entryLink id="3986-6e8f-e0f2-001d" name="Great Endrinworks" hidden="false" collective="false" import="true" targetId="b16e-9583-bc66-37d9" type="selectionEntryGroup"/>
-              </entryLinks>
-            </entryLink>
-          </entryLinks>
-        </selectionEntryGroup>
-        <selectionEntryGroup id="b482-238f-2604-2ee3" name="1 Arkanaut Company unit for each Arkanaut Frigate in the same battalion" hidden="false" collective="false" import="true">
-          <modifiers>
-            <modifier type="increment" field="0291-3f87-5eef-fda1" value="1.0">
-              <repeats>
-                <repeat field="selections" scope="9832-2540-6441-f2ed" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="9e62-2dae-76c1-7326" repeats="1" roundUp="false"/>
-              </repeats>
-              <conditions>
-                <condition field="selections" scope="9832-2540-6441-f2ed" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="9e62-2dae-76c1-7326" type="greaterThan"/>
-              </conditions>
-            </modifier>
-          </modifiers>
-          <constraints>
-            <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="0291-3f87-5eef-fda1" type="min"/>
-          </constraints>
-          <entryLinks>
-            <entryLink id="b223-6407-a888-8832" name="Arkanaut Company" hidden="false" collective="false" import="true" targetId="4716-8815-4d3c-a9e2" type="selectionEntry"/>
-          </entryLinks>
-        </selectionEntryGroup>
-      </selectionEntryGroups>
-      <costs>
-        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="100.0"/>
-      </costs>
-    </selectionEntry>
-    <selectionEntry id="3633-aa59-244e-5849" name="Iron Sky Command" publicationId="e97a-4837-a772-7406" hidden="false" collective="false" import="true" type="upgrade">
-      <profiles>
-        <profile id="3848-beeb-79d8-d7ab" name="Lords of the Skies" hidden="false" typeId="66c5-932e-004a-574c" typeName="Battalion Abilities">
-          <characteristics>
-            <characteristic name="Battalion Ability" typeId="23f7-32c0-e059-29b2">Do not take battleshock tests for friendly KHARADRON OVERLORDS units while they are wholly within 18&quot; of the ARKANAUT IRONCLAD from this battalion.</characteristic>
-          </characteristics>
-        </profile>
-      </profiles>
-      <categoryLinks>
-        <categoryLink id="0c4b-45ac-3adc-7bc5" name="New CategoryLink" hidden="false" targetId="3706-e0e8-674f-c41b" primary="true"/>
-      </categoryLinks>
-      <selectionEntryGroups>
-        <selectionEntryGroup id="71b8-f99e-5048-4394" name="0-1 Arkanaut Admiral or Brokk Grungsson" hidden="false" collective="false" import="true">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="3c5b-f168-54a3-52f7" type="max"/>
-          </constraints>
-          <entryLinks>
-            <entryLink id="12d8-4824-8954-7e85" name="Arkanaut Admiral" hidden="false" collective="false" import="true" targetId="3e40-4246-7da8-5d15" type="selectionEntry">
-              <entryLinks>
-                <entryLink id="347a-9992-d7aa-c957" name="General" hidden="false" collective="false" import="true" targetId="98a4-3d6d-a7b9-399f" type="selectionEntry">
-                  <categoryLinks>
-                    <categoryLink id="85d7-a503-2b93-06ec" name="Arkanaut Admiral General" hidden="false" targetId="95c6-74b7-cd37-738a" primary="false"/>
-                  </categoryLinks>
-                </entryLink>
-                <entryLink id="0315-93ed-edbf-98d2" name="Artefacts of Power" hidden="false" collective="false" import="true" targetId="378b-ae2b-2325-f51d" type="selectionEntryGroup">
-                  <categoryLinks>
-                    <categoryLink id="925b-ded9-9711-b2ea" name="Skyfarer Artefact" hidden="false" targetId="dd59-cf48-f172-fab3" primary="false"/>
-                  </categoryLinks>
-                </entryLink>
-                <entryLink id="4a10-91c5-39a7-a150" name="Command Traits" hidden="false" collective="false" import="true" targetId="cf3c-23c5-7ba7-9fdf" type="selectionEntryGroup"/>
-              </entryLinks>
-            </entryLink>
-            <entryLink id="9a28-ecd5-c509-626c" name="Brokk Grungsson, Lord Magnate of Barak-Nar" hidden="false" collective="false" import="true" targetId="88d2-f354-a49c-2030" type="selectionEntry">
-              <entryLinks>
-                <entryLink id="740f-b6a1-47fa-069a" name="General" hidden="false" collective="false" import="true" targetId="98a4-3d6d-a7b9-399f" type="selectionEntry">
-                  <categoryLinks>
-                    <categoryLink id="30ad-bea5-20bb-9c99" name="Named General" hidden="false" targetId="8b3d-7f03-e1f9-eaf5" primary="false"/>
-                  </categoryLinks>
-                </entryLink>
-              </entryLinks>
-            </entryLink>
-          </entryLinks>
-        </selectionEntryGroup>
-        <selectionEntryGroup id="be68-0355-8d56-4ae5" name="1 Arkanaut Ironclad" publicationId="e97a-4837-a772-7406" hidden="false" collective="false" import="true">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="deb9-9cef-2ef4-e286" type="min"/>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="9049-3754-dc7a-c79a" type="max"/>
-          </constraints>
-          <entryLinks>
-            <entryLink id="9cdb-1514-403f-1c3a" name="Arkanaut Ironclad" hidden="false" collective="false" import="true" targetId="55c1-6c08-9b45-cee1" type="selectionEntry">
-              <entryLinks>
-                <entryLink id="3777-4633-8d28-db11" name="Great Endrinworks" hidden="false" collective="false" import="true" targetId="b16e-9583-bc66-37d9" type="selectionEntryGroup"/>
-              </entryLinks>
-            </entryLink>
-          </entryLinks>
-        </selectionEntryGroup>
-        <selectionEntryGroup id="93cd-a907-7fcc-a1f5" name="3 featured units in any combination" publicationId="e97a-4837-a772-7406" hidden="false" collective="false" import="true">
-          <constraints>
-            <constraint field="selections" scope="parent" value="3.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8314-8823-dc51-bfeb" type="min"/>
-            <constraint field="selections" scope="parent" value="3.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="9a58-4497-743b-dc9e" type="max"/>
-          </constraints>
-          <entryLinks>
-            <entryLink id="a35a-2ff9-6bc7-533e" name="Aether-Khemist" hidden="false" collective="false" import="true" targetId="fb83-9918-d18a-f19d" type="selectionEntry">
-              <entryLinks>
-                <entryLink id="2de4-95f8-47e7-908b" name="General" hidden="false" collective="false" import="true" targetId="98a4-3d6d-a7b9-399f" type="selectionEntry">
-                  <categoryLinks>
-                    <categoryLink id="ad76-1ef2-5b6f-650f" name="Aether-Khemist General" hidden="false" targetId="c63c-a4ef-5bde-7c3d" primary="false"/>
-                  </categoryLinks>
-                </entryLink>
-                <entryLink id="6366-6228-7d10-a6df" name="Artefacts of Power" hidden="false" collective="false" import="true" targetId="378b-ae2b-2325-f51d" type="selectionEntryGroup">
-                  <categoryLinks>
-                    <categoryLink id="ddfa-a1a2-addf-77f7" name="Skyfarer Artefact" hidden="false" targetId="dd59-cf48-f172-fab3" primary="false"/>
-                  </categoryLinks>
-                </entryLink>
-                <entryLink id="bbb4-4a6b-aa9e-a5ee" name="Command Traits" hidden="false" collective="false" import="true" targetId="cf3c-23c5-7ba7-9fdf" type="selectionEntryGroup"/>
-              </entryLinks>
-            </entryLink>
-            <entryLink id="1f2d-4204-355c-975c" name="Aetheric Navigator" hidden="false" collective="false" import="true" targetId="c135-f025-6b12-754c" type="selectionEntry">
-              <entryLinks>
-                <entryLink id="dcaf-6a00-c423-5370" name="Command Traits" hidden="false" collective="false" import="true" targetId="cf3c-23c5-7ba7-9fdf" type="selectionEntryGroup"/>
-                <entryLink id="17f2-715c-8704-31c8" name="Artefacts of Power" hidden="false" collective="false" import="true" targetId="378b-ae2b-2325-f51d" type="selectionEntryGroup">
-                  <categoryLinks>
-                    <categoryLink id="982d-3c13-455b-0086" name="Skyfarer Artefact" hidden="false" targetId="dd59-cf48-f172-fab3" primary="false"/>
-                    <categoryLink id="9e69-874b-6287-d9cd" name="Navigator Artefact" hidden="false" targetId="da73-0687-df28-bcac" primary="false"/>
-                  </categoryLinks>
-                </entryLink>
-                <entryLink id="9327-6fb7-3e1c-5d36" name="General" hidden="false" collective="false" import="true" targetId="98a4-3d6d-a7b9-399f" type="selectionEntry"/>
-              </entryLinks>
-            </entryLink>
-            <entryLink id="789e-4f58-324e-6f2e" name="Endrinmaster with Dirigible Suit" hidden="false" collective="false" import="true" targetId="b91a-87a5-6733-c063" type="selectionEntry">
-              <categoryLinks>
-                <categoryLink id="4b45-8f63-0ab6-9d05" name="Endrinmaster - Suit" hidden="false" targetId="ab9b-169e-084e-894f" primary="false"/>
-              </categoryLinks>
-              <entryLinks>
-                <entryLink id="8550-10cc-a933-4c01" name="Artefacts of Power" hidden="false" collective="false" import="true" targetId="378b-ae2b-2325-f51d" type="selectionEntryGroup">
-                  <categoryLinks>
-                    <categoryLink id="4cb3-9647-91ef-fc60" name="Skyfarer Artefact" hidden="false" targetId="dd59-cf48-f172-fab3" primary="false"/>
-                  </categoryLinks>
-                </entryLink>
-                <entryLink id="3460-6244-1f4d-7d46" name="Command Traits" hidden="false" collective="false" import="true" targetId="cf3c-23c5-7ba7-9fdf" type="selectionEntryGroup"/>
-                <entryLink id="4fd1-1ea3-babd-ee3a" name="General" hidden="false" collective="false" import="true" targetId="98a4-3d6d-a7b9-399f" type="selectionEntry">
-                  <categoryLinks>
-                    <categoryLink id="4fb0-db9f-bed1-815f" name="Endrinmaster General" hidden="false" targetId="5b1e-3aba-b4f7-adf1" primary="false"/>
-                  </categoryLinks>
-                </entryLink>
-              </entryLinks>
-            </entryLink>
-            <entryLink id="5ad2-0553-cf0b-6b5b" name="Endrinmaster with Endrinharness" hidden="false" collective="false" import="true" targetId="8dcd-19d0-b355-f1d7" type="selectionEntry">
-              <categoryLinks>
-                <categoryLink id="5e71-3534-1391-48ff" name="Endrinmaster - Harness" hidden="false" targetId="83da-a670-64ba-3425" primary="false"/>
-              </categoryLinks>
-              <entryLinks>
-                <entryLink id="b0bd-5409-4c6b-6a65" name="General" hidden="false" collective="false" import="true" targetId="98a4-3d6d-a7b9-399f" type="selectionEntry"/>
-                <entryLink id="37dc-d73f-d9a1-794f" name="Artefacts of Power" hidden="false" collective="false" import="true" targetId="378b-ae2b-2325-f51d" type="selectionEntryGroup">
-                  <categoryLinks>
-                    <categoryLink id="8b2c-d6e8-0598-63f7" name="Skyfarer Artefact" hidden="false" targetId="dd59-cf48-f172-fab3" primary="false"/>
-                  </categoryLinks>
-                </entryLink>
-                <entryLink id="c372-9424-caed-850a" name="Command Traits" hidden="false" collective="false" import="true" targetId="cf3c-23c5-7ba7-9fdf" type="selectionEntryGroup"/>
-              </entryLinks>
-            </entryLink>
-          </entryLinks>
-        </selectionEntryGroup>
-        <selectionEntryGroup id="5f70-b4cc-2442-c555" name="1 Arkanaut Company unit" publicationId="e97a-4837-a772-7406" hidden="false" collective="false" import="true">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="3a86-c0ca-e89c-e8f5" type="min"/>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="eb77-180f-e25e-815c" type="max"/>
-          </constraints>
-          <entryLinks>
-            <entryLink id="0ab2-30f7-ec3a-ad2f" name="Arkanaut Company" hidden="false" collective="false" import="true" targetId="4716-8815-4d3c-a9e2" type="selectionEntry"/>
-          </entryLinks>
-        </selectionEntryGroup>
-        <selectionEntryGroup id="b845-192d-9109-400d" name="1-3 Endrinriggers units" publicationId="e97a-4837-a772-7406" hidden="false" collective="false" import="true">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="b67d-c351-b2ea-c067" type="min"/>
-            <constraint field="selections" scope="parent" value="3.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8865-e657-9b5e-9cd1" type="max"/>
-          </constraints>
-          <entryLinks>
-            <entryLink id="ebb4-359e-ee05-d2fa" name="Endrinriggers" hidden="false" collective="false" import="true" targetId="efa1-470f-83ba-9d41" type="selectionEntry">
-              <modifiers>
-                <modifier type="remove" field="category" value="a42d-220e-6a88-7bf6">
-                  <conditionGroups>
-                    <conditionGroup type="or">
-                      <conditions>
-                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="5b1e-3aba-b4f7-adf1" type="equalTo"/>
-                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="6cd6-b22e-bfcb-9589" type="instanceOf"/>
-                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="e3a6-45ca-4974-b489" type="instanceOf"/>
-                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4373-740f-1bf3-b0aa" type="instanceOf"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
-                </modifier>
-              </modifiers>
-              <categoryLinks>
-                <categoryLink id="01f5-07e7-2324-7836" name="BATTLELINE" hidden="false" targetId="a42d-220e-6a88-7bf6" primary="false"/>
-              </categoryLinks>
-            </entryLink>
-          </entryLinks>
-        </selectionEntryGroup>
-      </selectionEntryGroups>
-      <costs>
-        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="110.0"/>
-      </costs>
-    </selectionEntry>
-    <selectionEntry id="c1b0-6c6a-b950-754c" name="Grand Armada" publicationId="e97a-4837-a772-7406" hidden="false" collective="false" import="true" type="upgrade">
-      <profiles>
-        <profile id="153f-87a0-a58e-ef83" name="Constitutional Experts" hidden="false" typeId="66c5-932e-004a-574c" typeName="Battalion Abilities">
-          <characteristics>
-            <characteristic name="Battalion Ability" typeId="23f7-32c0-e059-29b2">Once per battle, if the ARKANAUT ADMIRAL or BROKK GRUNGSSON from this battalion is on the battlefield, you can use a footnote even if it has been used before in the same battle.</characteristic>
-          </characteristics>
-        </profile>
-      </profiles>
-      <categoryLinks>
-        <categoryLink id="da4f-0938-b304-8d4b" name="New CategoryLink" hidden="false" targetId="3706-e0e8-674f-c41b" primary="true"/>
-      </categoryLinks>
-      <selectionEntryGroups>
-        <selectionEntryGroup id="15de-c336-4d3f-0c25" name="1-3 Grundstok Escort Wings" hidden="false" collective="false" import="true">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="f24a-1aa9-7932-bd8e" type="min"/>
-            <constraint field="selections" scope="parent" value="3.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="1685-a9bf-5c20-c15e" type="max"/>
-          </constraints>
-          <entryLinks>
-            <entryLink id="ad96-fb23-57f4-83df" name="Grundstok Escort Wing" hidden="false" collective="false" import="true" targetId="b0c9-f1c7-ddf3-9792" type="selectionEntry"/>
-          </entryLinks>
-        </selectionEntryGroup>
-        <selectionEntryGroup id="c385-59b5-558c-dcd0" name="1 Iron Sky Attack Squadron" hidden="false" collective="false" import="true">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="82b5-a8f4-9ef5-8807" type="min"/>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="501e-044b-91d1-09ee" type="max"/>
-          </constraints>
-          <entryLinks>
-            <entryLink id="246d-30e1-2185-a711" name="Iron Sky Attack Squadron" hidden="false" collective="false" import="true" targetId="9832-2540-6441-f2ed" type="selectionEntry"/>
-          </entryLinks>
-        </selectionEntryGroup>
-        <selectionEntryGroup id="7d2d-ce5d-f781-6789" name="1 Iron Sky Command" hidden="false" collective="false" import="true">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="1bf0-38e1-a186-f458" type="min"/>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="bd42-439f-9ae5-eb70" type="max"/>
-          </constraints>
-          <entryLinks>
-            <entryLink id="4128-eaa6-b704-c65e" name="Iron Sky Command" hidden="false" collective="false" import="true" targetId="3633-aa59-244e-5849" type="selectionEntry"/>
-          </entryLinks>
-        </selectionEntryGroup>
-        <selectionEntryGroup id="b159-2341-3a73-903c" name="1 Arkanaut Admiral or Brokk Grungsson" hidden="false" collective="false" import="true">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="9afe-963d-8c83-dd00" type="min"/>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="a6ef-247b-37ec-91e4" type="max"/>
-          </constraints>
-          <entryLinks>
-            <entryLink id="d4ab-4f56-aa49-8495" name="Arkanaut Admiral" hidden="false" collective="false" import="true" targetId="3e40-4246-7da8-5d15" type="selectionEntry">
-              <entryLinks>
-                <entryLink id="8094-774f-e869-bbca" name="General" hidden="false" collective="false" import="true" targetId="98a4-3d6d-a7b9-399f" type="selectionEntry">
-                  <categoryLinks>
-                    <categoryLink id="6af4-db6a-7e0d-2e26" name="Arkanaut Admiral General" hidden="false" targetId="95c6-74b7-cd37-738a" primary="false"/>
-                  </categoryLinks>
-                </entryLink>
-                <entryLink id="408f-0048-49c2-cedc" name="Artefacts of Power" hidden="false" collective="false" import="true" targetId="378b-ae2b-2325-f51d" type="selectionEntryGroup">
-                  <categoryLinks>
-                    <categoryLink id="b9e1-f27e-12f1-f699" name="Skyfarer Artefact" hidden="false" targetId="dd59-cf48-f172-fab3" primary="false"/>
-                  </categoryLinks>
-                </entryLink>
-                <entryLink id="9abf-ecec-37a3-9ab4" name="Command Traits" hidden="false" collective="false" import="true" targetId="cf3c-23c5-7ba7-9fdf" type="selectionEntryGroup"/>
-              </entryLinks>
-            </entryLink>
-            <entryLink id="a665-a92f-40ea-39c5" name="Brokk Grungsson, Lord Magnate of Barak-Nar" hidden="false" collective="false" import="true" targetId="88d2-f354-a49c-2030" type="selectionEntry">
-              <entryLinks>
-                <entryLink id="410b-01c4-b6e4-e1cc" name="General" hidden="false" collective="false" import="true" targetId="98a4-3d6d-a7b9-399f" type="selectionEntry">
-                  <categoryLinks>
-                    <categoryLink id="5136-1388-3bdf-5340" name="Named General" hidden="false" targetId="8b3d-7f03-e1f9-eaf5" primary="false"/>
-                  </categoryLinks>
-                </entryLink>
-              </entryLinks>
-            </entryLink>
-          </entryLinks>
-        </selectionEntryGroup>
-      </selectionEntryGroups>
-      <costs>
-        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="90.0"/>
-      </costs>
-    </selectionEntry>
-    <selectionEntry id="12f5-b6d4-8ba6-035a" name="Drongon&apos;s Aether-Runners" hidden="false" collective="false" import="true" type="upgrade">
+    <entryLink id="626b-de6f-961a-22e9" name="Auric Flamekeeper" hidden="false" collective="false" import="true" targetId="38ca-f607-49b0-0d25" type="selectionEntry">
       <modifiers>
         <modifier type="set" field="hidden" value="true">
           <conditions>
-            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="1e9f-b64d-f107-6fea" type="equalTo"/>
+            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="a546-7397-e84c-e525" type="equalTo"/>
           </conditions>
         </modifier>
       </modifiers>
-      <constraints>
-        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="1d3e-a1a3-eab6-eb0d" type="max"/>
-      </constraints>
-      <profiles>
-        <profile id="de38-81c4-f308-39ac" name="Fastest Vessels in the Fleet" hidden="false" typeId="66c5-932e-004a-574c" typeName="Battalion Abilities">
-          <characteristics>
-            <characteristic name="Battalion Ability" typeId="23f7-32c0-e059-29b2">Add 3&quot; to the Move characteristic of units in this battalion. In addition, at the start of your movement phase, for each unit in this battalion, you can pick 1 friendly SKYVESSEL that is within 3&quot; of that unit. You cannot pick the same SKYVESSEL more than once in the same phase. Add 3&quot; to the Move characteristic of that SKYVESSEL until the end of the phase.</characteristic>
-          </characteristics>
-        </profile>
-      </profiles>
       <categoryLinks>
-        <categoryLink id="287e-af21-3b58-2776" name="New CategoryLink" hidden="false" targetId="3706-e0e8-674f-c41b" primary="true"/>
+        <categoryLink id="04f7-e8ff-64a7-4fb1" name="Allegiant Duardin" hidden="false" targetId="c9f0-7b6d-1b55-8eb2" primary="false"/>
       </categoryLinks>
-      <selectionEntryGroups>
-        <selectionEntryGroup id="4949-ae87-4a37-51d9" name="2 featured units" hidden="false" collective="false" import="true">
-          <constraints>
-            <constraint field="selections" scope="parent" value="2.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="6a89-b293-cfb1-9ce9" type="max"/>
-            <constraint field="selections" scope="parent" value="2.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="0600-15d0-c7e2-027a" type="min"/>
-          </constraints>
-          <entryLinks>
-            <entryLink id="928e-3288-8126-1bac" name="Skywardens" hidden="false" collective="false" import="true" targetId="c9fd-6b4b-eb3a-150d" type="selectionEntry">
-              <modifiers>
-                <modifier type="remove" field="category" value="a42d-220e-6a88-7bf6">
-                  <conditionGroups>
-                    <conditionGroup type="or">
-                      <conditions>
-                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="5b1e-3aba-b4f7-adf1" type="equalTo"/>
-                        <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4373-740f-1bf3-b0aa" type="instanceOf"/>
-                        <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="6cd6-b22e-bfcb-9589" type="instanceOf"/>
-                        <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="e3a6-45ca-4974-b489" type="instanceOf"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
-                </modifier>
-              </modifiers>
-              <categoryLinks>
-                <categoryLink id="0a2f-7102-7fda-fe0f" name="BATTLELINE" hidden="false" targetId="a42d-220e-6a88-7bf6" primary="false"/>
-              </categoryLinks>
-            </entryLink>
-            <entryLink id="7ba1-73c8-7820-9c09" name="Endrinriggers" hidden="false" collective="false" import="true" targetId="efa1-470f-83ba-9d41" type="selectionEntry">
-              <modifiers>
-                <modifier type="remove" field="category" value="a42d-220e-6a88-7bf6">
-                  <conditionGroups>
-                    <conditionGroup type="or">
-                      <conditions>
-                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="5b1e-3aba-b4f7-adf1" type="equalTo"/>
-                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="6cd6-b22e-bfcb-9589" type="instanceOf"/>
-                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="e3a6-45ca-4974-b489" type="instanceOf"/>
-                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4373-740f-1bf3-b0aa" type="instanceOf"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
-                </modifier>
-              </modifiers>
-              <categoryLinks>
-                <categoryLink id="7182-974b-621d-29d5" name="BATTLELINE" hidden="false" targetId="a42d-220e-6a88-7bf6" primary="false"/>
-              </categoryLinks>
-            </entryLink>
-          </entryLinks>
-        </selectionEntryGroup>
-        <selectionEntryGroup id="55ea-fcb9-db54-0a78" name="1 Endrinmaster with Dirigible Suit (Drongon Humboldsson)" hidden="false" collective="false" import="true">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="6b81-ea7b-82fd-4036" type="max"/>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="dead-b6a6-1ff5-c750" type="min"/>
-          </constraints>
-          <entryLinks>
-            <entryLink id="7bc3-c5f2-95fb-f16b" name="Endrinmaster with Dirigible Suit" hidden="false" collective="false" import="true" targetId="b91a-87a5-6733-c063" type="selectionEntry">
-              <categoryLinks>
-                <categoryLink id="c5ec-ed52-eed3-4539" name="Endrinmaster - Suit" hidden="false" targetId="ab9b-169e-084e-894f" primary="false"/>
-              </categoryLinks>
-              <entryLinks>
-                <entryLink id="883c-7ce3-5a61-3c55" name="General" hidden="false" collective="false" import="true" targetId="98a4-3d6d-a7b9-399f" type="selectionEntry">
-                  <categoryLinks>
-                    <categoryLink id="9a04-500c-29ab-3a1d" name="Endrinmaster General" hidden="false" targetId="5b1e-3aba-b4f7-adf1" primary="false"/>
-                  </categoryLinks>
-                </entryLink>
-                <entryLink id="2c1e-56e3-1a8c-1aae" name="Command Traits" hidden="false" collective="false" import="true" targetId="cf3c-23c5-7ba7-9fdf" type="selectionEntryGroup"/>
-                <entryLink id="df98-6dda-3499-b203" name="Artefacts of Power" hidden="false" collective="false" import="true" targetId="378b-ae2b-2325-f51d" type="selectionEntryGroup">
-                  <categoryLinks>
-                    <categoryLink id="f1e1-f8ef-6e3a-a8e6" name="Skyfarer Artefact" hidden="false" targetId="dd59-cf48-f172-fab3" primary="false"/>
-                  </categoryLinks>
-                </entryLink>
-              </entryLinks>
-            </entryLink>
-          </entryLinks>
-        </selectionEntryGroup>
-      </selectionEntryGroups>
-      <costs>
-        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="120.0"/>
-      </costs>
-    </selectionEntry>
-  </sharedSelectionEntries>
+      <entryLinks>
+        <entryLink id="9daf-c4dd-6125-badd" name="Artefacts of Power" hidden="false" collective="false" import="true" targetId="378b-ae2b-2325-f51d" type="selectionEntryGroup"/>
+        <entryLink id="50e8-dba0-00f5-6372" name="Universal Spell Lore" hidden="false" collective="false" import="true" targetId="93f7-7e2a-3308-d150" type="selectionEntryGroup">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="7ee2-0d81-544f-5d7e" type="equalTo"/>
+                    <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="7ee2-0d81-544f-5d7e" type="notInstanceOf"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
+        </entryLink>
+        <entryLink id="6ee9-f24c-775a-6a55" name="Core Battalions" hidden="false" collective="false" import="true" targetId="8c04-393d-d72d-c2a8" type="selectionEntryGroup"/>
+      </entryLinks>
+    </entryLink>
+    <entryLink id="9910-d2c3-a484-0e93" name="Vulkite Berzerkers with Bladed Slingshields" hidden="false" collective="false" import="true" targetId="c539-2124-b84b-7db8" type="selectionEntry">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="a546-7397-e84c-e525" type="equalTo"/>
+          </conditions>
+        </modifier>
+        <modifier type="remove" field="category" value="a42d-220e-6a88-7bf6"/>
+      </modifiers>
+      <categoryLinks>
+        <categoryLink id="55f0-c817-18cf-dcfc" name="Allegiant Duardin" hidden="false" targetId="c9f0-7b6d-1b55-8eb2" primary="false"/>
+      </categoryLinks>
+      <entryLinks>
+        <entryLink id="fdc6-69e6-1d83-eec6" name="Core Battalions" hidden="false" collective="false" import="true" targetId="8c04-393d-d72d-c2a8" type="selectionEntryGroup"/>
+      </entryLinks>
+    </entryLink>
+    <entryLink id="ae08-8801-cd76-3db0" name="Grimwrath Berzerker" hidden="false" collective="false" import="true" targetId="4f60-7967-3eb6-0055" type="selectionEntry">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="a546-7397-e84c-e525" type="equalTo"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <categoryLinks>
+        <categoryLink id="acff-5867-0a92-2818" name="Allegiant Duardin" hidden="false" targetId="c9f0-7b6d-1b55-8eb2" primary="false"/>
+      </categoryLinks>
+      <entryLinks>
+        <entryLink id="c048-4f57-576b-d69a" name="Core Battalions" hidden="false" collective="false" import="true" targetId="8c04-393d-d72d-c2a8" type="selectionEntryGroup"/>
+      </entryLinks>
+    </entryLink>
+    <entryLink id="aa5b-256d-22c2-e0f1" name="Auric Flamekeeper" hidden="false" collective="false" import="true" targetId="38ca-f607-49b0-0d25" type="selectionEntry">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="a546-7397-e84c-e525" type="equalTo"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <categoryLinks>
+        <categoryLink id="b128-3d95-c527-221b" name="Allegiant Duardin" hidden="false" targetId="c9f0-7b6d-1b55-8eb2" primary="false"/>
+      </categoryLinks>
+      <entryLinks>
+        <entryLink id="ab9f-21ff-5c82-71c5" name="Artefacts of Power" hidden="false" collective="false" import="true" targetId="378b-ae2b-2325-f51d" type="selectionEntryGroup"/>
+        <entryLink id="676b-9e26-aa40-bb70" name="Core Battalions" hidden="false" collective="false" import="true" targetId="8c04-393d-d72d-c2a8" type="selectionEntryGroup"/>
+        <entryLink id="7e2b-3d5b-6ab8-5004" name="Universal Spell Lore" hidden="false" collective="false" import="true" targetId="93f7-7e2a-3308-d150" type="selectionEntryGroup">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="7ee2-0d81-544f-5d7e" type="equalTo"/>
+                    <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="7ee2-0d81-544f-5d7e" type="notInstanceOf"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
+        </entryLink>
+      </entryLinks>
+    </entryLink>
+  </entryLinks>
   <sharedSelectionEntryGroups>
     <selectionEntryGroup id="b16e-9583-bc66-37d9" name="Great Endrinworks" publicationId="e97a-4837-a772-7406" hidden="false" collective="false" import="true">
       <modifiers>
@@ -3331,6 +3099,104 @@ Designer’s Note: Coalition units are not allied units, so the limitations that
       </constraints>
       <entryLinks>
         <entryLink id="542e-86d1-81d9-edb3" name="Universal Prayer Scripture" hidden="false" collective="false" import="true" targetId="7104-ab27-d136-1df0" type="selectionEntryGroup"/>
+      </entryLinks>
+    </selectionEntryGroup>
+    <selectionEntryGroup id="2f0a-3e07-0d1c-e8e3" name="Battalion Formation" hidden="false" collective="false" import="true">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="c03a-b1a8-66c6-3637" type="equalTo"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <constraints>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="028e-2e5a-9d77-0e10" type="max"/>
+      </constraints>
+      <selectionEntryGroups>
+        <selectionEntryGroup id="1037-2127-2448-9ef0" name="Kharadron Overlords Battalions" hidden="false" collective="false" import="true">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4373-740f-1bf3-b0aa" type="instanceOf"/>
+                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="e3a6-45ca-4974-b489" type="instanceOf"/>
+                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="996a-613c-4006-25e3" type="instanceOf"/>
+                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="6cd6-b22e-bfcb-9589" type="instanceOf"/>
+                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="b543-cb16-0c79-fbc6" type="instanceOf"/>
+                  </conditions>
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="858e-32c7-e268-78fe" type="equalTo"/>
+                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="06bb-ad17-5866-ee1d" type="equalTo"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8f23-2c59-9ec8-bb38" type="max"/>
+          </constraints>
+          <selectionEntries>
+            <selectionEntry id="4afd-0b06-0820-14d2" name="Grundstok Escort Wing" hidden="false" collective="false" import="true" type="upgrade">
+              <modifiers>
+                <modifier type="set" field="hidden" value="true">
+                  <conditionGroups>
+                    <conditionGroup type="or">
+                      <conditions>
+                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="858e-32c7-e268-78fe" type="equalTo"/>
+                      </conditions>
+                      <conditionGroups>
+                        <conditionGroup type="and">
+                          <conditions>
+                            <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="937f-5e01-71aa-8078" type="notInstanceOf"/>
+                            <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="c49e-be66-dfc6-829f" type="notInstanceOf"/>
+                            <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="5030-036e-370d-042d" type="notInstanceOf"/>
+                            <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="9b63-0b9d-bf0e-459c" type="notInstanceOf"/>
+                            <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="aff4-6edd-4fbf-08f5" type="notInstanceOf"/>
+                          </conditions>
+                        </conditionGroup>
+                      </conditionGroups>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+              </modifiers>
+              <costs>
+                <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="8b4e-8bb0-4c4a-97f8" name="Iron Sky Attack Squadron" hidden="false" collective="false" import="true" type="upgrade">
+              <modifiers>
+                <modifier type="set" field="hidden" value="true">
+                  <conditionGroups>
+                    <conditionGroup type="or">
+                      <conditions>
+                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="06bb-ad17-5866-ee1d" type="equalTo"/>
+                      </conditions>
+                      <conditionGroups>
+                        <conditionGroup type="and">
+                          <conditions>
+                            <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="937f-5e01-71aa-8078" type="notInstanceOf"/>
+                            <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="f161-8bfe-869f-6373" type="notInstanceOf"/>
+                          </conditions>
+                        </conditionGroup>
+                      </conditionGroups>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+              </modifiers>
+              <costs>
+                <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
+              </costs>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
+      <entryLinks>
+        <entryLink id="597e-0637-c17a-faff" name="Core Battalions" hidden="false" collective="false" import="true" targetId="8c04-393d-d72d-c2a8" type="selectionEntryGroup"/>
       </entryLinks>
     </selectionEntryGroup>
   </sharedSelectionEntryGroups>

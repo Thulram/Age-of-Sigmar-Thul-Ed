@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="8b6f-df16-b345-222b" name="Order - Kharadron Overlords - Data" revision="10" battleScribeVersion="2.03" authorName="Thulram" library="true" gameSystemId="e832-3291-06be-cab1" gameSystemRevision="9" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="8b6f-df16-b345-222b" name="Order - Kharadron Overlords - Data" revision="11" battleScribeVersion="2.03" authorName="Thulram" library="true" gameSystemId="e832-3291-06be-cab1" gameSystemRevision="10" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <profileTypes>
     <profileType id="5bd0-50e9-b771-b170" name="Skyvessel Wounds">
       <characteristicTypes>
@@ -174,9 +174,6 @@ No more than 7 models can hitch a lift on the same SKYVESSEL in the same turn.</
           </costs>
         </selectionEntry>
       </selectionEntries>
-      <entryLinks>
-        <entryLink id="fd30-51cc-844c-0220" name="Battalion Formation" hidden="false" collective="false" import="true" targetId="8c04-393d-d72d-c2a8" type="selectionEntryGroup"/>
-      </entryLinks>
       <costs>
         <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="200.0"/>
       </costs>
@@ -320,9 +317,6 @@ No more than 7 models can hitch a lift on the same SKYVESSEL in the same turn.</
           </costs>
         </selectionEntry>
       </selectionEntries>
-      <entryLinks>
-        <entryLink id="df98-d243-4b1b-9a81" name="Battalion Formation" hidden="false" collective="false" import="true" targetId="8c04-393d-d72d-c2a8" type="selectionEntryGroup"/>
-      </entryLinks>
       <costs>
         <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="180.0"/>
       </costs>
@@ -339,29 +333,23 @@ No more than 7 models can hitch a lift on the same SKYVESSEL in the same turn.</
         </profile>
         <profile id="c0d1-8067-35fb-b49f" name="Protect the Admiral!" hidden="false" typeId="7861-da01-01c0-88d9" typeName="Ability">
           <characteristics>
-            <characteristic name="Ability" typeId="9bce-4deb-8b79-eaec">Do not take battleshock tests for friendly KHARADRON OVERLORDS units while they are wholly within 12&quot; of this model.
-
-In addition, roll a dice before you allocate a wound or mortal wound to a friendly ARKANAUT ADMIRAL while it is within 3&quot; of any friendly SKYFARERS units with 5 or more models. On a 5+, you must allocate that wound or mortal wound to a friendly SKYFARERS unit with 5 or more models that is within 3&quot; of that ARKANAUT ADMIRAL, instead of to that ARKANAUT ADMIRAL.</characteristic>
+            <characteristic name="Ability" typeId="9bce-4deb-8b79-eaec">Before you allocate a wound or mortal wound to this unit, or instead of making a ward roll for a wound or mortal wound that would be allocated to this unit, if this unit is within 3&quot; of any other friendly SKYFARERS units, you can roll a dice. On a 1-2, that wound or mortal wound is allocated to this unit as normal. On a 3+, that wound or mortal wound is allocated to another friendly SKYFARERS unit within 3&quot; of this unit instead and cannot be negated</characteristic>
           </characteristics>
         </profile>
         <profile id="9795-a244-c73f-9cf4" name="Master of the Skies" hidden="false" typeId="6364-f76d-fc0c-80bc" typeName="Command Abilities">
           <characteristics>
-            <characteristic name="Command Ability" typeId="36cb-f8a4-d94b-8aa8">You can use this command ability at the start of your shooting phase. If you do so, pick 1 friendly SKYVESSEL that has a model with this command ability in its garrison. That SKYVESSEL can shoot in that phase even if it ran earlier in the same turn.</characteristic>
+            <characteristic name="Command Ability" typeId="36cb-f8a4-d94b-8aa8">You can use this command ability at the start of your shooting phase. The command must be issued by this unit and must be received by a friendly SKYVESSEL. That Skyvessel can shoot in that phase even if it ran earlier in the turn.</characteristic>
           </characteristics>
         </profile>
-        <profile id="bdf6-9423-65dd-e91a" name="Up And At Them!" hidden="false" typeId="6364-f76d-fc0c-80bc" typeName="Command Abilities">
+        <profile id="da6e-34f2-fad3-23ac" name="Aether-powered Munitions" hidden="false" typeId="7861-da01-01c0-88d9" typeName="Ability">
           <characteristics>
-            <characteristic name="Command Ability" typeId="36cb-f8a4-d94b-8aa8">You can use this command ability at the start of your charge phase. If you do so, pick 1 friendly SKYFARERS unit that is wholly within 12&quot; of a friendly model with this command ability. You can re-roll charge rolls for that unit in that phase.</characteristic>
-          </characteristics>
-        </profile>
-        <profile id="e5b5-8672-698c-93a8" name="Repel Boarders!" hidden="false" typeId="6364-f76d-fc0c-80bc" typeName="Command Abilities">
-          <characteristics>
-            <characteristic name="Command Ability" typeId="36cb-f8a4-d94b-8aa8">You can use this command ability at the start of your combat phase. If you do so, pick 1 friendly SKYVESSEL that has a model with this command ability in its garrison. Add 1 to hit rolls for attacks made by that SKYVESSEL and any models in its garrison in that phase.</characteristic>
-          </characteristics>
-        </profile>
-        <profile id="8bac-1043-11dc-479d" name="On My Mark, Fire!" hidden="false" typeId="6364-f76d-fc0c-80bc" typeName="Command Abilities">
-          <characteristics>
-            <characteristic name="Command Ability" typeId="36cb-f8a4-d94b-8aa8">You can use this command ability at the start of your shooting phase. If you do so, pick 1 friendly SKYVESSEL that has a model with this command ability in its garrison. You can re-roll hit rolls of 1 for attacks made by that SKYVESSEL in that phase.</characteristic>
+            <characteristic name="Ability" typeId="9bce-4deb-8b79-eaec">After the players have received their starting command points but before the start of the first turn, you can pick 1 of the following Aether-powered Munitions for this unit to use during the battle:
+
+Blazebeard and Sons ‘Drakk-hobbler’ Mag-bolas: Once per battle, at the start of your shooting phase, pick 1 enemy MONSTER within 12&quot; of this unit and roll a dice. On a 2+, that unit is grappled until the end of your opponent’s next turn. While an enemy unit is grappled, charge rolls made for that unit are made by rolling 1D6 instead of 2D6.
+
+Celestium Burst-grenade: Once per battle, at the start of your shooting phase, pick 1 enemy unit within 12&quot; of this unit and roll a dice. On a 2+, ward rolls cannot be made for wounds and mortal wounds caused by attacks that target that unit until the end of the phase.
+
+Grudgebreaker Rounds: Once per battle, at the start of your shooting phase, pick 1 friendly KHARADRON OVERLORDS unit wholly within 12&quot; of this unit that is not a SKYVESSEL. Until the end of that phase, improve the Rend characteristic of that unit’s missile weapons by 1. The same unit cannot be picked to benefit from this ability more than once in the same phase.</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -390,12 +378,12 @@ In addition, roll a dice before you allocate a wound or mortal wound to a friend
                 <characteristic name="To-Hit" typeId="7a4f-9704-2095-96c8">3+</characteristic>
                 <characteristic name="To-Wound" typeId="172f-fc84-895b-04b7">2+</characteristic>
                 <characteristic name="Rend" typeId="0c05-bd2e-b7e7-3925">-2</characteristic>
-                <characteristic name="Damage" typeId="01c2-d16a-8788-e52b">2</characteristic>
+                <characteristic name="Damage" typeId="01c2-d16a-8788-e52b">3</characteristic>
               </characteristics>
             </profile>
             <profile id="ba7e-58ab-b059-ffcc" name="If You Want A Job Done..." hidden="false" typeId="7861-da01-01c0-88d9" typeName="Ability">
               <characteristics>
-                <characteristic name="Ability" typeId="9bce-4deb-8b79-eaec">You can re-roll hit and wound rolls of 1 for attacks made with a melee weapon by this model that target a HERO or MONSTER.</characteristic>
+                <characteristic name="Ability" typeId="9bce-4deb-8b79-eaec">Add 1 to hit rolls for attacks made by this unit that target a HERO or MONSTER.</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -417,7 +405,7 @@ In addition, roll a dice before you allocate a wound or mortal wound to a friend
                 <characteristic name="To-Hit" typeId="7a4f-9704-2095-96c8">3+</characteristic>
                 <characteristic name="To-Wound" typeId="172f-fc84-895b-04b7">4+</characteristic>
                 <characteristic name="Rend" typeId="0c05-bd2e-b7e7-3925">-1</characteristic>
-                <characteristic name="Damage" typeId="01c2-d16a-8788-e52b">1</characteristic>
+                <characteristic name="Damage" typeId="01c2-d16a-8788-e52b">2</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -426,9 +414,6 @@ In addition, roll a dice before you allocate a wound or mortal wound to a friend
           </costs>
         </selectionEntry>
       </selectionEntries>
-      <entryLinks>
-        <entryLink id="2782-40cb-cc89-518d" name="Battalion Formation" hidden="false" collective="false" import="true" targetId="8c04-393d-d72d-c2a8" type="selectionEntryGroup"/>
-      </entryLinks>
       <costs>
         <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="125.0"/>
       </costs>
@@ -515,9 +500,6 @@ In addition, roll a dice before you allocate a wound or mortal wound to a friend
           </costs>
         </selectionEntry>
       </selectionEntries>
-      <entryLinks>
-        <entryLink id="4ed0-2e17-6137-e2ca" name="Battalion Formation" hidden="false" collective="false" import="true" targetId="8c04-393d-d72d-c2a8" type="selectionEntryGroup"/>
-      </entryLinks>
       <costs>
         <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="95.0"/>
       </costs>
@@ -606,9 +588,6 @@ If you do so, you can re-roll any of the dice that determine how many wounds are
           </costs>
         </selectionEntry>
       </selectionEntries>
-      <entryLinks>
-        <entryLink id="e47f-9195-b2cf-07b6" name="Battalion Formation" hidden="false" collective="false" import="true" targetId="8c04-393d-d72d-c2a8" type="selectionEntryGroup"/>
-      </entryLinks>
       <costs>
         <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="95.0"/>
       </costs>
@@ -690,9 +669,6 @@ If you do so, you can re-roll any of the dice that determine how many wounds are
           </costs>
         </selectionEntry>
       </selectionEntries>
-      <entryLinks>
-        <entryLink id="14fb-82ff-365a-83c0" name="Battalion Formation" hidden="false" collective="false" import="true" targetId="8c04-393d-d72d-c2a8" type="selectionEntryGroup"/>
-      </entryLinks>
       <costs>
         <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="90.0"/>
       </costs>
@@ -973,7 +949,6 @@ If you do so, you can re-roll any of the dice that determine how many wounds are
       <entryLinks>
         <entryLink id="2ad4-29af-0c4b-62ae" name="Unit Reinforcement" hidden="false" collective="false" import="true" targetId="b493-d9e6-82ca-5488" type="selectionEntry"/>
         <entryLink id="486f-cc11-19d4-dceb" name="BATTLELINE" hidden="false" collective="false" import="true" targetId="be1f-d384-9fe4-789d" type="selectionEntry"/>
-        <entryLink id="8762-b220-4a76-72b1" name="Battalion Formation" hidden="false" collective="false" import="true" targetId="8c04-393d-d72d-c2a8" type="selectionEntryGroup"/>
       </entryLinks>
       <costs>
         <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="100.0"/>
@@ -1058,9 +1033,6 @@ If you do so, you can re-roll any of the dice that determine how many wounds are
           </costs>
         </selectionEntry>
       </selectionEntries>
-      <entryLinks>
-        <entryLink id="2bde-5749-e238-7edc" name="Battalion Formation" hidden="false" collective="false" import="true" targetId="8c04-393d-d72d-c2a8" type="selectionEntryGroup"/>
-      </entryLinks>
       <costs>
         <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
       </costs>
@@ -1275,9 +1247,6 @@ If you do so, you can re-roll any of the dice that determine how many wounds are
           </costs>
         </selectionEntry>
       </selectionEntries>
-      <entryLinks>
-        <entryLink id="bfad-153c-c3bd-bd97" name="Battalion Formation" hidden="false" collective="false" import="true" targetId="8c04-393d-d72d-c2a8" type="selectionEntryGroup"/>
-      </entryLinks>
       <costs>
         <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
       </costs>
@@ -1522,9 +1491,6 @@ An attack made by a weapon that is in range of this model can target either this
           </selectionEntries>
         </selectionEntryGroup>
       </selectionEntryGroups>
-      <entryLinks>
-        <entryLink id="52a6-edfc-89d5-b259" name="Battalion Formation" hidden="false" collective="false" import="true" targetId="8c04-393d-d72d-c2a8" type="selectionEntryGroup"/>
-      </entryLinks>
       <costs>
         <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="490.0"/>
       </costs>
@@ -1739,7 +1705,6 @@ An attack made by a weapon that is in range of this model can target either this
             </profile>
           </profiles>
         </entryLink>
-        <entryLink id="f6b3-349f-b3c5-1a8b" name="Battalion Formation" hidden="false" collective="false" import="true" targetId="8c04-393d-d72d-c2a8" type="selectionEntryGroup"/>
       </entryLinks>
       <costs>
         <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="250.0"/>
@@ -1916,7 +1881,6 @@ An attack made by a weapon that is in range of this model can target either this
             </profile>
           </profiles>
         </entryLink>
-        <entryLink id="520f-a988-f637-cfdc" name="Battalion Formation" hidden="false" collective="false" import="true" targetId="8c04-393d-d72d-c2a8" type="selectionEntryGroup"/>
       </entryLinks>
       <costs>
         <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="155.0"/>
@@ -2287,7 +2251,6 @@ An attack made by a weapon that is in range of this model can target either this
             </profile>
           </profiles>
         </entryLink>
-        <entryLink id="7ee4-1e51-513e-d928" name="Battalion Formation" hidden="false" collective="false" import="true" targetId="8c04-393d-d72d-c2a8" type="selectionEntryGroup"/>
       </entryLinks>
       <costs>
         <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="135.0"/>
@@ -2579,7 +2542,6 @@ No more than 7 models can hitch a lift on the same SKYVESSEL in the same turn.</
             </profile>
           </profiles>
         </entryLink>
-        <entryLink id="745b-ebbf-2956-14a1" name="Battalion Formation" hidden="false" collective="false" import="true" targetId="8c04-393d-d72d-c2a8" type="selectionEntryGroup"/>
       </entryLinks>
       <costs>
         <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="120.0"/>
@@ -2876,7 +2838,6 @@ No more than 7 models can hitch a lift on the same SKYVESSEL in the same turn.</
             </profile>
           </profiles>
         </entryLink>
-        <entryLink id="7074-4ec1-1739-b868" name="Battalion Formation" hidden="false" collective="false" import="true" targetId="8c04-393d-d72d-c2a8" type="selectionEntryGroup"/>
       </entryLinks>
       <costs>
         <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="105.0"/>
@@ -2964,9 +2925,6 @@ No more than 7 models can hitch a lift on the same SKYVESSEL in the same turn.</
           </costs>
         </selectionEntry>
       </selectionEntries>
-      <entryLinks>
-        <entryLink id="bfe5-70ed-a889-4e99" name="Battalion Formation" hidden="false" collective="false" import="true" targetId="8c04-393d-d72d-c2a8" type="selectionEntryGroup"/>
-      </entryLinks>
       <costs>
         <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="100.0"/>
       </costs>

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="fabc-7c1b-cdd3-78a5" name="Order - Fyreslayers" revision="7" battleScribeVersion="2.03" authorName="Thulram" library="false" gameSystemId="e832-3291-06be-cab1" gameSystemRevision="6" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="fabc-7c1b-cdd3-78a5" name="Order - Fyreslayers" revision="8" battleScribeVersion="2.03" authorName="Thulram" library="false" gameSystemId="e832-3291-06be-cab1" gameSystemRevision="7" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <profileTypes>
     <profileType id="0144-faed-1cbe-bd82" name="Mount Trait">
       <characteristicTypes>
@@ -8,12 +8,8 @@
     </profileType>
   </profileTypes>
   <categoryEntries>
-    <categoryEntry id="c8e0-67a6-6fbf-c588" name="Greyfyrd" hidden="false"/>
-    <categoryEntry id="29d6-bf3d-ad2c-2f62" name="Hermdar" hidden="false"/>
-    <categoryEntry id="3802-94d9-ab62-a4f2" name="Lofnir" hidden="false"/>
-    <categoryEntry id="233c-bb44-3ee2-fac6" name="Magmic Battleforge" hidden="false"/>
-    <categoryEntry id="f2a6-c091-02e3-280e" name="Runemaster General" hidden="false"/>
-    <categoryEntry id="d97a-a5e3-16e6-5603" name="Runefather General" hidden="false"/>
+    <categoryEntry id="f2a6-c091-02e3-280e" name="General - Fyreslayers Priest" hidden="false"/>
+    <categoryEntry id="d97a-a5e3-16e6-5603" name="General - Auric Runefather" hidden="false"/>
     <categoryEntry id="3e25-ab6e-1dc1-c2e1" name="PrayerPlusAsh" hidden="false"/>
   </categoryEntries>
   <selectionEntries>
@@ -23,9 +19,11 @@
           <conditionGroups>
             <conditionGroup type="or">
               <conditions>
-                <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="6cd6-b22e-bfcb-9589" type="instanceOf"/>
-                <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="e3a6-45ca-4974-b489" type="instanceOf"/>
-                <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4373-740f-1bf3-b0aa" type="instanceOf"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4373-740f-1bf3-b0aa" type="instanceOf"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="e3a6-45ca-4974-b489" type="instanceOf"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="996a-613c-4006-25e3" type="instanceOf"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="6cd6-b22e-bfcb-9589" type="instanceOf"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="b543-cb16-0c79-fbc6" type="instanceOf"/>
               </conditions>
             </conditionGroup>
           </conditionGroups>
@@ -59,36 +57,78 @@
           <profiles>
             <profile id="9680-67d9-2220-db01" name="Ur-gold Runes" hidden="false" typeId="c0c2-177b-e761-ec41" typeName="Allegiance Abilities">
               <characteristics>
-                <characteristic name="Allegiance Ability" typeId="0506-f62d-68b3-5499">At the start of your hero phase, you can activate one of the following six ur-gold runes. To do so, state which rune will be activated and roll a dice. On a 1-5, the rune has the standard effect. On a 6 it also has the enhanced effect. The effect(s) of the rune lasts until the start of your next hero phase.
+                <characteristic name="Allegiance Ability" typeId="0506-f62d-68b3-5499">At the start of your hero phase, you can activate 1 of the following 6 types of ur-gold rune. To do so, state which rune will be activated and make an activation roll by rolling a dice. On a 1-5, the standard effect applies. On a 6, the enhanced effect also applies. The effects last until the start of your next hero phase.
 
-Each ur-gold rune can only be activated once in each battle, and no more than one can be activated at the same time. Once you have used a rune, you can choose a new one to use in your next hero phase, but you cannot use the same one again.
+Each ur-gold rune can only be activated once per battle, and no more than 1 rune can be activated at the same time. Once you have used a rune, you can choose a new one to activate in your next hero phase, but you cannot activate the same one again.
 
-Rune of Fury: You can re-roll hit rolls of 1 for attacks made by friendly FYRESLAYERS units. Enhanced Effect: Add 1 to the Attacks characteristic of melee weapons used by friendly FYRESLAYERS units.
+RUNE OF FURY
+Standard effect: Add 1 to hit rolls for attacks made with melee weapons by friendly FYRESLAYERS units.
 
-Rune of Searing Heat: If the unmodified wound roll for an attack made by a friendly FYRESLAYERS unit is 6, add 1 to the Damage characteristic of the weapon for that attack.
-Enhanced Effect: Roll a dice for each enemy unit within 3&quot; of any friendly FYRESLAYERS units when this rune is activated; on a 2+ that enemy unit suffers 1 mortal wound.
+Enhanced effect: Add 1 to the Attacks characteristic of melee weapons used by friendly FYRESLAYERS units.
 
-Rune of Awakened Steel: Improve the Rend characteristic of melee weapons used by friendly FYRESLAYERS units by 1.
-Enhanced Effect: Improve the Rend characteristic by a further 1.
+RUNE OF FARSIGHT
+Standard effect: Add 1 to hit rolls for attacks made with Fyresteel Throwing Axes by friendly FYRESLAYERS units.
 
-Rune of Fiery Determination: Add 1 to the Bravery characteristic of friendly FYRESLAYERS units.
-Enhanced Effect: Friendly FYRESLAYERS units do not have to take battleshock tests.
+Enhanced effect: Add 1 to wound rolls for attacks made with Fyresteel Throwing Axes by friendly FYRESLAYERS units.
 
-Rune of Relentless Zeal: Add 2&quot; to the Move characteristic of friendly FYRESLAYERS units.
-Enhanced Effect: Add 2 to charge rolls for friendly FYRESLAYERS units.
+RUNE OF SEARING HEAT
+Standard effect: If the unmodified wound roll for an attack made by a friendly FYRESLAYERS unit is 6, that attack causes 1 mortal wound to the target in addition to any damage it inflicts.
 
-Rune of Farsight: Add 1 to hit rolls for attacks made with Fyresteel Throwing Axes by friendly FYRESLAYERS units.
-Enhanced Effect: Add 1 to wound rolls for attacks made with Fyresteel Throwing Axes by friendly FYRESLAYERS units.</characteristic>
+Enhanced effect: When this rune is activated, roll a dice for each enemy unit within 3&quot; of any friendly FYRESLAYERS units. On a 2+, that enemy unit suffers 1 mortal wound.
+
+RUNE OF AWAKENED STEEL
+Standard effect: Improve the Rend characteristic of melee weapons used by friendly FYRESLAYERS units by 1.
+
+Enhanced effect: Improve the Rend characteristic of melee weapons used by friendly FYRESLAYERS units by a further 1.
+
+RUNE OF FIERY DETERMINATION
+Standard effect: Friendly FYRESLAYERS units have a ward of 6+.
+
+Enhanced effect: Friendly FYRESLAYERS HEROES have a ward of 5+.
+
+RUNE OF RELENTLESS ZEAL
+Standard effect: Add 2&quot; to the Move characteristic of friendly FYRESLAYERS units.
+
+Enhanced effect: Add 2 to charge rolls for friendly FYRESLAYERS units.</characteristic>
               </characteristics>
             </profile>
             <profile id="f20a-7011-5edc-856f" name="Lodges" hidden="false" typeId="c0c2-177b-e761-ec41" typeName="Allegiance Abilities">
               <characteristics>
-                <characteristic name="Allegiance Ability" typeId="0506-f62d-68b3-5499">If your army is a Fyreslayers army, you can give it a lodge keyword. All FYRESLAYERS units in your army gain that keyword. If a model already has a lodge keyword, it cannot gain another one, but this does not prevent other units in your army from having a different lodge keyword. You can either choose one of the lodges listed below, or choose another lodge you&apos;ve read about or created yourself. If you choose one from the list below, all units with that keyword benefit from the extra abilities listed for that lodge. If you choose a different lodge, simply pick the lodge that most closely matches the nature of your own lodge.
+                <characteristic name="Allegiance Ability" typeId="0506-f62d-68b3-5499">You can pick 1 of the following subfactions for your army. All FYRESLAYERS units in your army gain the keyword of the subfaction you picked, and you can use the allegiance abilities for that subfaction. If a unit already has a different subfaction keyword on its warscroll, it cannot gain another one. This does not preclude you from including the unit in your army, but you cannot use the allegiance abilities for its subfaction.
 
 • VOSTARG
 • GREYFYRD
 • HERMDAR
 • LOFNIR</characteristic>
+              </characteristics>
+            </profile>
+            <profile id="fffe-5d53-e439-62a0" name="Grimwrath Oaths" hidden="false" typeId="c0c2-177b-e761-ec41" typeName="Allegiance Abilities">
+              <characteristics>
+                <characteristic name="Allegiance Ability" typeId="0506-f62d-68b3-5499">At the start of the first battle round, you can pick 1 of the following oaths for each friendly GRIMWRATH BERZERKER to swear. The rule for that oath applies until the end of the battle. If your army includes more than 1 GRIMWRATH BERZERKER, you cannot pick the same oath more than once.
+
+‘I will cut down the priests of Grimnir’s enemies!’: If the target is a PRIEST that does not have the FYRESLAYERS keyword, add 1 to hit rolls and wound rolls for attacks made by this unit, and add 1 to the damage inflicted by each of those attacks that is successful.
+
+‘I will guard them with my life!’: Instead of picking 1 friendly AURIC HEARTHGUARD or HEARTHGUARD BERZERKERS unit on the battlefield to be the retinue of an Auric Runefather or Auric Runeson, you can pick this unit to be that units retinue.
+
+‘I will let nothing stand in my way!’: This unit can run and still charge later in the turn. In addition, you can re-roll run rolls and charge rolls for this unit.
+
+‘I will prove Grimnir’s might to our allies!’: Add 1 to hit rolls and wound rolls for attacks made by this unit if it is within 12&quot; of any friendly allied units.
+
+‘I will not be stopped!’: This unit has a ward of 6+. If this unit is within 3&quot; of any enemy units, it has a ward of 5+ instead.
+
+‘I will strike hard and true in Grimnir’s name!’: If the unmodified hit roll for an attack made by this unit is 6, that attack causes 1 mortal wound to the target in addition to any damage it inflicts.</characteristic>
+              </characteristics>
+            </profile>
+            <profile id="7594-2e7d-809b-cc56" name="Fierce Counter-attack" hidden="false" typeId="6364-f76d-fc0c-80bc" typeName="Command Abilities">
+              <characteristics>
+                <characteristic name="Command Ability" typeId="36cb-f8a4-d94b-8aa8">You can use this command ability at the start of the enemy combat phase. The unit that receives the command must be an AURIC HEARTHGUARD, HEARTHGUARD BERZERKERS or VULKITE BERZERKERS unit that is within 3&quot; of an enemy unit that made a charge move in the same turn and not within 3&quot; of any enemy units that have not made a charge move in the same turn. The strike-first effect applies to that unit until the end of that phase. A unit cannot receive this command more than once per battle.</characteristic>
+              </characteristics>
+            </profile>
+            <profile id="3861-3deb-3745-6940" name="Blaze of Fury" hidden="false" typeId="1193-4081-af87-68cd" typeName="Heroic Action/Monstrous Rampage">
+              <characteristics>
+                <characteristic name="Effect" typeId="faec-beac-0874-3c6e">At the start of your hero phase, you can carry out this heroic action with a friendly FYRESLAYERS HERO instead of any other heroic action you can carry out with that HERO;
+
+Blaze of Fury: Pick 1 friendly FYRESLAYERS HERO. Until the end of your turn, the enhanced effect of the ur-gold rune that is activated in this hero phase applies to that HERO regardless of the activation roll. You cannot carry out this heroic action with the same HERO more than once in the same battle.</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -105,41 +145,36 @@ Enhanced Effect: Add 1 to wound rolls for attacks made with Fyresteel Throwing A
                   <profiles>
                     <profile id="3511-b932-6e30-412b" name="Fearsome Surge" hidden="false" typeId="c0c2-177b-e761-ec41" typeName="Allegiance Abilities">
                       <characteristics>
-                        <characteristic name="Allegiance Ability" typeId="0506-f62d-68b3-5499">Add 1 to charge rolls for VOSTARG units. In addition, in your movement phase in the first battle round, if you declare a friendly VOSTARG unit will run, do not make a run roll. Instead, add 6&quot; to the Move characteristic of all models in that unit for that phase.</characteristic>
-                      </characteristics>
-                    </profile>
-                    <profile id="af27-51a8-2436-6b21" name="Honour Our Ancestors" hidden="false" typeId="6364-f76d-fc0c-80bc" typeName="Command Abilities">
-                      <characteristics>
-                        <characteristic name="Command Ability" typeId="36cb-f8a4-d94b-8aa8">You can use this command ability at the start of the combat phase. If you do so, pick a friendly VOSTARG HERO. Until the end of that phase, add 1 to hit rolls for attacks made by that HERO and friendly units of VULKITE BERZERKERS and HEARTHGUARD BERZERKERS wholly within 12&quot; of that HERO. You cannot use this command ability more than once per phase.</characteristic>
+                        <characteristic name="Allegiance Ability" typeId="0506-f62d-68b3-5499">Add 1 to hit rolls and wound rolls for attacks made with melee weapons by friendly VOSTARG VULKITE BERZERKERS units that made a charge move in the same turn.</characteristic>
                       </characteristics>
                     </profile>
                   </profiles>
-                  <categoryLinks>
-                    <categoryLink id="2cb4-65f3-da1e-111d" name="Vostarg" hidden="false" targetId="1ab2-3281-c16f-cd69" primary="false"/>
-                  </categoryLinks>
                   <costs>
                     <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
                   </costs>
                 </selectionEntry>
                 <selectionEntry id="0913-8bf2-cfe6-24bd" name="Lofnir" hidden="false" collective="false" import="true" type="upgrade">
-                  <profiles>
-                    <profile id="8e0c-ab35-aa95-1fc7" name="Venerators of Vulcatrix" hidden="false" typeId="c0c2-177b-e761-ec41" typeName="Allegiance Abilities">
-                      <characteristics>
-                        <characteristic name="Allegiance Ability" typeId="0506-f62d-68b3-5499">Each MAGMADROTH in a LOFNIR army, instead of only 1, can be given a Magmadroth trait.
-
-In addition, if you are using the Contest of Generals battlepack or a Pitched Battles battlepack, you can include 1 additional Behemoth in your army, as long as every Behemoth in your army is a Magmadroth.</characteristic>
-                      </characteristics>
-                    </profile>
-                    <profile id="8ac6-bd7d-18c7-3a31" name="Torrent of Magma" hidden="false" typeId="6364-f76d-fc0c-80bc" typeName="Command Abilities">
-                      <characteristics>
-                        <characteristic name="Command Ability" typeId="36cb-f8a4-d94b-8aa8">You can use this command ability in your shooting phase. If you do so, pick an enemy unit within 12&quot; of a friendly LOFNIR PRIEST. Until the end of that phase, add 1 to hit and wound rolls for attacks made with Magmapikes by friendly units that target that enemy unit. The same unit cannot be picked to be affected by this command ability more than once per phase.</characteristic>
-                      </characteristics>
-                    </profile>
-                  </profiles>
                   <categoryLinks>
-                    <categoryLink id="1321-99f7-0faa-f98f" name="Lofnir" hidden="false" targetId="3802-94d9-ab62-a4f2" primary="false"/>
-                    <categoryLink id="992a-8b60-0b34-a34a" name="PlusOneBehemoth" hidden="false" targetId="3712-8606-a6b7-b2f8" primary="false"/>
+                    <categoryLink id="2cc6-d09d-1c8d-8d6f" name="MountTraitPlus" hidden="false" targetId="99e1-bf54-e3ec-ab80" primary="false"/>
                   </categoryLinks>
+                  <selectionEntries>
+                    <selectionEntry id="d26a-5506-34f1-0dd2" name="Venetrators of Vulcatrix" hidden="false" collective="false" import="true" type="upgrade">
+                      <constraints>
+                        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="38a8-9ab5-f595-a3cb" type="min"/>
+                        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="5070-7937-e977-1a33" type="max"/>
+                      </constraints>
+                      <profiles>
+                        <profile id="1c72-83de-456c-9784" name="Venerators of Vulcatrix" hidden="false" typeId="c0c2-177b-e761-ec41" typeName="Allegiance Abilities">
+                          <characteristics>
+                            <characteristic name="Allegiance Ability" typeId="0506-f62d-68b3-5499">Add 2 to the Wounds characteristic of friendly LOFNIR MAGMADROTH units. In addition, up to 3 LOFNIR MAGMADROTH units in your army can be given a different mount trait instead of only 1.</characteristic>
+                          </characteristics>
+                        </profile>
+                      </profiles>
+                      <categoryLinks>
+                        <categoryLink id="63ac-8776-e322-bb7f" name="MountTraitPlus" hidden="false" targetId="99e1-bf54-e3ec-ab80" primary="false"/>
+                      </categoryLinks>
+                    </selectionEntry>
+                  </selectionEntries>
                   <costs>
                     <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
                   </costs>
@@ -148,32 +183,16 @@ In addition, if you are using the Contest of Generals battlepack or a Pitched Ba
                   <profiles>
                     <profile id="2796-1967-84a4-ecb6" name="Seize by Force" hidden="false" typeId="c0c2-177b-e761-ec41" typeName="Allegiance Abilities">
                       <characteristics>
-                        <characteristic name="Allegiance Ability" typeId="0506-f62d-68b3-5499">HERMDAR units wholly within enemy territory or wholly within 12&quot; of an objective do not take battleshock tests.</characteristic>
-                      </characteristics>
-                    </profile>
-                    <profile id="50ac-824b-74cc-fc95" name="Skull-breakers and Oath-takers" hidden="false" typeId="6364-f76d-fc0c-80bc" typeName="Command Abilities">
-                      <characteristics>
-                        <characteristic name="Command Ability" typeId="36cb-f8a4-d94b-8aa8">You can use this command ability at the start of the combat phase. Pick 1 friendly HERMDAR VULKITE BERZERKERS unit or 1 friendly HERMDAR HEARTHGUARD BERZERKERS unit wholly within 12&quot; of a friendly HERMDAR HERO. The strike-first effect applies to that unit in that phase.</characteristic>
+                        <characteristic name="Allegiance Ability" typeId="0506-f62d-68b3-5499">If a friendly HERMDAR unit wholly within enemy territory or wholly within 12&quot; of an objective fails a battleshock test, halve the number of models that flee (rounding up).</characteristic>
                       </characteristics>
                     </profile>
                   </profiles>
-                  <categoryLinks>
-                    <categoryLink id="6ff5-24c3-ed71-379c" name="Hermdar" hidden="false" targetId="29d6-bf3d-ad2c-2f62" primary="false"/>
-                  </categoryLinks>
                   <costs>
                     <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
                   </costs>
                 </selectionEntry>
                 <selectionEntry id="b60d-6725-60aa-acc1" name="Greyfyrd" hidden="false" collective="false" import="true" type="upgrade">
-                  <profiles>
-                    <profile id="e28c-efc3-7e3c-40f8" name="Expert Cohesion" hidden="false" typeId="6364-f76d-fc0c-80bc" typeName="Command Abilities">
-                      <characteristics>
-                        <characteristic name="Command Ability" typeId="36cb-f8a4-d94b-8aa8">You can use this command ability in the combat phase when a friendly GREYFYRD HERO is picked to fight. Other friendly GREYFYRD HEROES that are not mounted on a MAGMADROTH and are within 3&quot; of that HERO can fight immediately afterwards, before your opponent gets the option to pick a unit to fight. Any model that does so cannot fight again in that combat phase unless an ability or spell allows them to fight more than once.</characteristic>
-                      </characteristics>
-                    </profile>
-                  </profiles>
                   <categoryLinks>
-                    <categoryLink id="b2e3-6436-1515-853f" name="Greyfyrd" hidden="false" targetId="c8e0-67a6-6fbf-c588" primary="false"/>
                     <categoryLink id="0920-a1f5-ad9f-47d5" name="ArtefactPlus" hidden="false" targetId="606f-9b75-948c-bf2c" primary="false"/>
                   </categoryLinks>
                   <selectionEntries>
@@ -183,9 +202,9 @@ In addition, if you are using the Contest of Generals battlepack or a Pitched Ba
                         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="86ae-2492-5850-8ead" type="min"/>
                       </constraints>
                       <profiles>
-                        <profile id="7d85-0355-f9e3-ea68" name="Spoils of Victory" hidden="false" typeId="c0c2-177b-e761-ec41" typeName="Allegiance Abilities">
+                        <profile id="0f4c-9548-4c10-fd7a" name="Spoils of Victory" hidden="false" typeId="c0c2-177b-e761-ec41" typeName="Allegiance Abilities">
                           <characteristics>
-                            <characteristic name="Allegiance Ability" typeId="0506-f62d-68b3-5499">You can choose 2 additional GREYFYRD HEROES from your army to have artefacts of power.</characteristic>
+                            <characteristic name="Allegiance Ability" typeId="0506-f62d-68b3-5499">Add 1 to the Wounds characteristic of friendly GREYFYRD HEROES that do not have a mount. In addition, you can pick 2 additional artefacts of power and give them to 2 GREYFYRD HEROES in your army that do not have a mount.</characteristic>
                           </characteristics>
                         </profile>
                       </profiles>
@@ -230,7 +249,7 @@ In addition, if you are using the Contest of Generals battlepack or a Pitched Ba
         </profile>
         <profile id="83a3-3de5-ded1-db49" name="Spending the Forge" hidden="false" typeId="1c58-2b3d-482e-2a35" typeName="Scenery Rules">
           <characteristics>
-            <characteristic name="Scenery Rule" typeId="a333-0c4a-7f67-677c">Once per battle, at the start of your hero phase, instead of using this terrain feature’s Molten Blessing ability, you can pick 1 friendly FYRESLAYERS PRIESTwithin 6&quot; of this terrain feature to spend all of its energy. If you do so, until the start of your next hero phase, friendly FYRESLAYERS units on the battlefield have a ward of 6+. However, for the rest of the battle, FYRESLAYERS PRIESTS can no longer use this terrain feature’s Molten Blessing ability.</characteristic>
+            <characteristic name="Scenery Rule" typeId="a333-0c4a-7f67-677c">Once per battle, at the start of your hero phase, instead of using this terrain feature’s Molten Blessing ability, you can pick 1 friendly FYRESLAYERS PRIEST within 6&quot; of this terrain feature to spend all of its energy. If you do so, until the start of your next hero phase, friendly FYRESLAYERS units on the battlefield have a ward of 6+. However, for the rest of the battle, FYRESLAYERS PRIESTS can no longer use this terrain feature’s Molten Blessing ability.</characteristic>
           </characteristics>
         </profile>
         <profile id="5a92-39a1-8090-3b32" name="Impassable" hidden="false" typeId="ce32-0c40-1990-4c8a" typeName="Restriction">
@@ -240,9 +259,6 @@ In addition, if you are using the Contest of Generals battlepack or a Pitched Ba
         </profile>
       </profiles>
       <categoryLinks>
-        <categoryLink id="8a8a-1265-3b6b-c677" name="FYRESLAYERS" hidden="false" targetId="804e-5726-7202-6944" primary="false"/>
-        <categoryLink id="8098-24f4-bc06-680c" name="Magmic Battleforge" hidden="false" targetId="233c-bb44-3ee2-fac6" primary="false"/>
-        <categoryLink id="896b-9e69-ac36-e47f" name="Scenery" hidden="false" targetId="bab2-426b-5501-5fe8" primary="false"/>
         <categoryLink id="7cd7-a4e3-3c61-4086" name="New CategoryLink" hidden="false" targetId="29f4-e63d-fa5b-1611" primary="true"/>
       </categoryLinks>
       <costs>
@@ -268,6 +284,7 @@ In addition, if you are using the Contest of Generals battlepack or a Pitched Ba
                 <categoryLink id="62a0-f438-95bb-97e3" name="Named General" hidden="false" targetId="8b3d-7f03-e1f9-eaf5" primary="false"/>
               </categoryLinks>
             </entryLink>
+            <entryLink id="aa04-9821-959f-58e5" name="Core Battalions" hidden="false" collective="false" import="true" targetId="8c04-393d-d72d-c2a8" type="selectionEntryGroup"/>
           </entryLinks>
         </entryLink>
         <entryLink id="b8f6-aa99-f328-97bc" name="The Chosen Axes" hidden="false" collective="false" import="true" targetId="dc32-b987-7275-de29" type="selectionEntry">
@@ -275,10 +292,13 @@ In addition, if you are using the Contest of Generals battlepack or a Pitched Ba
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d6bf-297f-93dc-a99b" type="max"/>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="82ef-8e3a-04ca-1919" type="min"/>
           </constraints>
+          <entryLinks>
+            <entryLink id="9ab0-8fbb-a12b-eb1a" name="Core Battalions" hidden="false" collective="false" import="true" targetId="8c04-393d-d72d-c2a8" type="selectionEntryGroup"/>
+          </entryLinks>
         </entryLink>
       </entryLinks>
       <costs>
-        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="150.0"/>
+        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="180.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="1c5e-001b-8fd3-2924" name="Grand Strategy" hidden="false" collective="false" import="true" type="upgrade">
@@ -325,6 +345,51 @@ In addition, if you are using the Contest of Generals battlepack or a Pitched Ba
           <categoryLinks>
             <categoryLink id="30ca-70bc-694b-bbf5" name="Grand Strategy" hidden="false" targetId="318c-fa55-0855-47ef" primary="false"/>
           </categoryLinks>
+          <selectionEntryGroups>
+            <selectionEntryGroup id="bea4-2c4c-813a-7e0d" name="The Path of Grimnir" hidden="false" collective="false" import="true">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="28cd-f289-1998-97dd" type="max"/>
+              </constraints>
+              <selectionEntries>
+                <selectionEntry id="3a43-f000-3ea0-8b00" name="Masters of the Forge" hidden="false" collective="false" import="true" type="upgrade">
+                  <profiles>
+                    <profile id="7fe7-4d93-ff25-c1d5" name="Masters of the Forge" hidden="false" typeId="7dc6-98f0-f5ba-fc16" typeName="Grand Strategy">
+                      <characteristics>
+                        <characteristic name="Grand Strategy" typeId="22d6-b382-f824-6381">When the battle ends, you complete this grand strategy if there are any invocations under your command on the battlefield.</characteristic>
+                      </characteristics>
+                    </profile>
+                  </profiles>
+                </selectionEntry>
+                <selectionEntry id="400a-df04-27ba-697a" name="Defend the Lodge" hidden="false" collective="false" import="true" type="upgrade">
+                  <profiles>
+                    <profile id="da2c-ff34-6dbc-113d" name="Defend the Lodge" hidden="false" typeId="7dc6-98f0-f5ba-fc16" typeName="Grand Strategy">
+                      <characteristics>
+                        <characteristic name="Grand Strategy" typeId="22d6-b382-f824-6381">When the battle ends, you complete this grand strategy if there are no enemy units wholly within your territory.</characteristic>
+                      </characteristics>
+                    </profile>
+                  </profiles>
+                </selectionEntry>
+                <selectionEntry id="1e06-5820-a274-b743" name="Oath-takers and Skull-breakers" hidden="false" collective="false" import="true" type="upgrade">
+                  <profiles>
+                    <profile id="4254-0e04-3007-e4a0" name="Oath-takers and Skull-breakers" hidden="false" typeId="7dc6-98f0-f5ba-fc16" typeName="Grand Strategy">
+                      <characteristics>
+                        <characteristic name="Grand Strategy" typeId="22d6-b382-f824-6381">When the battle ends, you complete this grand strategy if you completed at least 4 battle tactics and every battle tactic you completed this battle was from the ‘Oaths of Battle’ list.</characteristic>
+                      </characteristics>
+                    </profile>
+                  </profiles>
+                </selectionEntry>
+                <selectionEntry id="e872-25de-ae63-8df4" name="Guarded Lineage" hidden="false" collective="false" import="true" type="upgrade">
+                  <profiles>
+                    <profile id="f7ae-a8da-ccd3-8852" name="Guarded Lineage" hidden="false" typeId="7dc6-98f0-f5ba-fc16" typeName="Grand Strategy">
+                      <characteristics>
+                        <characteristic name="Grand Strategy" typeId="22d6-b382-f824-6381">When the battle ends, you complete this grand strategy if there is 1 friendly AURIC RUNEFATHER and 1 or more friendly AURIC RUNESONS on the battlefield.</characteristic>
+                      </characteristics>
+                    </profile>
+                  </profiles>
+                </selectionEntry>
+              </selectionEntries>
+            </selectionEntryGroup>
+          </selectionEntryGroups>
           <entryLinks>
             <entryLink id="a957-00e7-5b6b-640e" name="GHB &apos;21" hidden="false" collective="false" import="true" targetId="bb2d-2110-60b8-c13e" type="selectionEntryGroup"/>
           </entryLinks>
@@ -334,15 +399,55 @@ In addition, if you are using the Contest of Generals battlepack or a Pitched Ba
         <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
       </costs>
     </selectionEntry>
+    <selectionEntry id="763a-c4d4-05af-427f" name="Fyreslayers Battle Tactics" hidden="false" collective="false" import="true" type="upgrade">
+      <constraints>
+        <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="617f-41ca-72d9-4e6e" type="max"/>
+      </constraints>
+      <profiles>
+        <profile id="39bb-5da8-fda9-0abb" name="Settle a Grudge" hidden="false" typeId="4bb2-448c-446c-f522" typeName="Battle Tactic">
+          <characteristics>
+            <characteristic name="Battle Tactic" typeId="8c0f-be41-a70e-c699">Each time a friendly unit is destroyed by wounds caused by an attack, make a note of the enemy unit that made that attack (in a ‘Book of Grudges’, if you wish). When you pick this battle tactic, pick 1 of those enemy units that is still on the battlefield. You complete this tactic if that unit is destroyed during this turn.</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="feca-1778-d36e-5675" name="Beastslayer" hidden="false" typeId="4bb2-448c-446c-f522" typeName="Battle Tactic">
+          <characteristics>
+            <characteristic name="Battle Tactic" typeId="8c0f-be41-a70e-c699">Pick 1 enemy MONSTER and 1 friendly HERO. You complete this tactic if that MONSTER is slain by wounds caused by attacks made by that HERO during this turn.</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="f609-b86d-ca1a-b86c" name="Grimnir Knows" hidden="false" typeId="4bb2-448c-446c-f522" typeName="Battle Tactic">
+          <characteristics>
+            <characteristic name="Battle Tactic" typeId="8c0f-be41-a70e-c699">You complete this tactic at the end of this turn if there are any friendly VULKITE BERZERKERS units on the battlefield and all of them are within 3&quot; of any enemy units.</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="cf36-8e13-8f8a-05a0" name="An Honourable Death" hidden="false" typeId="4bb2-448c-446c-f522" typeName="Battle Tactic">
+          <characteristics>
+            <characteristic name="Battle Tactic" typeId="8c0f-be41-a70e-c699">Pick 1 friendly HERO. You complete this tactic if that friendly HERO is slain during this turn and any enemy models were also slain by wounds caused by attacks made by that HERO during this turn</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="56e5-0da6-671a-b38e" name="Seize by Force" hidden="false" typeId="4bb2-448c-446c-f522" typeName="Battle Tactic">
+          <characteristics>
+            <characteristic name="Battle Tactic" typeId="8c0f-be41-a70e-c699">You can pick this tactic only if you control fewer objectives than your opponent. You complete this tactic if you control more objectives than your opponent at the end of this turn.</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="5515-2ef5-cfb4-9fc5" name="An Ignominious Death" hidden="false" typeId="4bb2-448c-446c-f522" typeName="Battle Tactic">
+          <characteristics>
+            <characteristic name="Battle Tactic" typeId="8c0f-be41-a70e-c699">Pick 1 enemy HERO. You complete this tactic if that enemy HERO is slain by wounds caused by an attack made with a Fyresteel Throwing Axe during this turn.</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <categoryLinks>
+        <categoryLink id="ceb4-5d56-6a26-5873" name="New CategoryLink" hidden="false" targetId="29f4-e63d-fa5b-1611" primary="true"/>
+      </categoryLinks>
+    </selectionEntry>
   </selectionEntries>
   <entryLinks>
-    <entryLink id="fdb0-ffdb-b4d4-87a7" name="Forge Brethren" hidden="false" collective="false" import="true" targetId="585b-22f8-0ed8-8455" type="selectionEntry"/>
-    <entryLink id="74e2-923a-1663-078b" name="Lords of the Lodge" hidden="false" collective="false" import="true" targetId="5767-7608-54ec-4eb7" type="selectionEntry"/>
-    <entryLink id="058a-501b-e338-35ab" name="Warrior Kinband" hidden="false" collective="false" import="true" targetId="2b35-ca48-8a04-dc6a" type="selectionEntry"/>
-    <entryLink id="0c3a-257e-2828-aea3" name="Grand Fyrd" hidden="false" collective="false" import="true" targetId="d6d9-a1e8-2414-59c8" type="selectionEntry"/>
     <entryLink id="e1e3-2cad-770d-df52" name="Auric Runesmiter" hidden="false" collective="false" import="true" targetId="b07d-e7f1-80eb-f1fe" type="selectionEntry">
       <entryLinks>
-        <entryLink id="4543-9a45-2240-473c" name="General" hidden="false" collective="false" import="true" targetId="98a4-3d6d-a7b9-399f" type="selectionEntry"/>
+        <entryLink id="4543-9a45-2240-473c" name="General" hidden="false" collective="false" import="true" targetId="98a4-3d6d-a7b9-399f" type="selectionEntry">
+          <categoryLinks>
+            <categoryLink id="e754-de0b-85de-dd8f" name="General - Fyreslayers Priest" hidden="false" targetId="f2a6-c091-02e3-280e" primary="false"/>
+          </categoryLinks>
+        </entryLink>
         <entryLink id="f1c7-291b-1304-7e64" name="Artefacts of Power" hidden="false" collective="false" import="true" targetId="a1f0-850a-8b0c-e0f0" type="selectionEntryGroup"/>
         <entryLink id="be04-05f4-9066-b027" name="Command Traits" hidden="false" collective="false" import="true" targetId="837e-972d-ec57-dd91" type="selectionEntryGroup"/>
         <entryLink id="54cb-4803-2fb3-9ef3" name="Prayer Scriptures" hidden="false" collective="false" import="true" targetId="ed70-2b17-7173-22bf" type="selectionEntryGroup"/>
@@ -360,11 +465,16 @@ In addition, if you are using the Contest of Generals battlepack or a Pitched Ba
             </modifier>
           </modifiers>
         </entryLink>
+        <entryLink id="87c6-5175-58b5-036b" name="Core Battalions" hidden="false" collective="false" import="true" targetId="8c04-393d-d72d-c2a8" type="selectionEntryGroup"/>
       </entryLinks>
     </entryLink>
     <entryLink id="9b73-70c6-760a-925f" name="Auric Runesmiter on Magmadroth" hidden="false" collective="false" import="true" targetId="d252-c422-c736-5fa6" type="selectionEntry">
       <entryLinks>
-        <entryLink id="b7bd-bb9d-3915-e866" name="General" hidden="false" collective="false" import="true" targetId="98a4-3d6d-a7b9-399f" type="selectionEntry"/>
+        <entryLink id="b7bd-bb9d-3915-e866" name="General" hidden="false" collective="false" import="true" targetId="98a4-3d6d-a7b9-399f" type="selectionEntry">
+          <categoryLinks>
+            <categoryLink id="ad5e-0279-5f06-fb0e" name="General - Fyreslayers Priest" hidden="false" targetId="f2a6-c091-02e3-280e" primary="false"/>
+          </categoryLinks>
+        </entryLink>
         <entryLink id="bb0c-fe02-2c13-859e" name="Prayer Scriptures" hidden="false" collective="false" import="true" targetId="ed70-2b17-7173-22bf" type="selectionEntryGroup"/>
         <entryLink id="8186-b4b0-1a9e-a057" name="Command Traits" hidden="false" collective="false" import="true" targetId="837e-972d-ec57-dd91" type="selectionEntryGroup"/>
         <entryLink id="6760-ae5d-05d7-ed36" name="Artefacts of Power" hidden="false" collective="false" import="true" targetId="a1f0-850a-8b0c-e0f0" type="selectionEntryGroup"/>
@@ -383,6 +493,7 @@ In addition, if you are using the Contest of Generals battlepack or a Pitched Ba
             </modifier>
           </modifiers>
         </entryLink>
+        <entryLink id="88ec-3a9a-49fa-3850" name="Core Battalions" hidden="false" collective="false" import="true" targetId="8c04-393d-d72d-c2a8" type="selectionEntryGroup"/>
       </entryLinks>
     </entryLink>
     <entryLink id="469a-4fc6-f907-064e" name="Auric Hearthguard" hidden="false" collective="false" import="true" targetId="a0d8-825a-0690-c40a" type="selectionEntry">
@@ -391,11 +502,12 @@ In addition, if you are using the Contest of Generals battlepack or a Pitched Ba
           <conditionGroups>
             <conditionGroup type="or">
               <conditions>
-                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="5249-a3ae-66a7-66ea" type="equalTo"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4373-740f-1bf3-b0aa" type="instanceOf"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="e3a6-45ca-4974-b489" type="instanceOf"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="996a-613c-4006-25e3" type="instanceOf"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="6cd6-b22e-bfcb-9589" type="instanceOf"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="b543-cb16-0c79-fbc6" type="instanceOf"/>
                 <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="f2a6-c091-02e3-280e" type="equalTo"/>
-                <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="6cd6-b22e-bfcb-9589" type="instanceOf"/>
-                <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="e3a6-45ca-4974-b489" type="instanceOf"/>
-                <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4373-740f-1bf3-b0aa" type="instanceOf"/>
               </conditions>
             </conditionGroup>
           </conditionGroups>
@@ -404,8 +516,15 @@ In addition, if you are using the Contest of Generals battlepack or a Pitched Ba
       <categoryLinks>
         <categoryLink id="ec7b-8dbc-ee8c-ae9e" name="BATTLELINE" hidden="false" targetId="a42d-220e-6a88-7bf6" primary="false"/>
       </categoryLinks>
+      <entryLinks>
+        <entryLink id="55ab-cd86-9f09-ebc5" name="Core Battalions" hidden="false" collective="false" import="true" targetId="8c04-393d-d72d-c2a8" type="selectionEntryGroup"/>
+      </entryLinks>
     </entryLink>
-    <entryLink id="b015-6a0b-e597-10f4" name="Vulkite Berzerkers" hidden="false" collective="false" import="true" targetId="b6d2-484d-67e4-98e1" type="selectionEntry"/>
+    <entryLink id="b015-6a0b-e597-10f4" name="Vulkite Berzerkers" hidden="false" collective="false" import="true" targetId="b6d2-484d-67e4-98e1" type="selectionEntry">
+      <entryLinks>
+        <entryLink id="6dd7-e1e1-0cb4-ea0e" name="Core Battalions" hidden="false" collective="false" import="true" targetId="8c04-393d-d72d-c2a8" type="selectionEntryGroup"/>
+      </entryLinks>
+    </entryLink>
     <entryLink id="2618-55c2-b77d-7ab1" name="Doomseeker" hidden="false" collective="false" import="true" targetId="36e0-fccd-6e89-19b2" type="selectionEntry">
       <entryLinks>
         <entryLink id="1e4b-f58c-515f-e5cc" name="General" hidden="false" collective="false" import="true" targetId="98a4-3d6d-a7b9-399f" type="selectionEntry"/>
@@ -425,6 +544,7 @@ In addition, if you are using the Contest of Generals battlepack or a Pitched Ba
             </modifier>
           </modifiers>
         </entryLink>
+        <entryLink id="5b4c-0ff0-c84d-107a" name="Core Battalions" hidden="false" collective="false" import="true" targetId="8c04-393d-d72d-c2a8" type="selectionEntryGroup"/>
       </entryLinks>
     </entryLink>
     <entryLink id="9c01-68d0-5b92-ecd8" name="Grimwrath Berzerker" hidden="false" collective="false" import="true" targetId="4f60-7967-3eb6-0055" type="selectionEntry">
@@ -446,6 +566,7 @@ In addition, if you are using the Contest of Generals battlepack or a Pitched Ba
             </modifier>
           </modifiers>
         </entryLink>
+        <entryLink id="8b79-d4d2-c021-e064" name="Core Battalions" hidden="false" collective="false" import="true" targetId="8c04-393d-d72d-c2a8" type="selectionEntryGroup"/>
       </entryLinks>
     </entryLink>
     <entryLink id="71cf-ad5d-5e1c-4481" name="Auric Runefather" hidden="false" collective="false" import="true" targetId="468c-e387-1283-fa8b" type="selectionEntry">
@@ -471,6 +592,7 @@ In addition, if you are using the Contest of Generals battlepack or a Pitched Ba
             </modifier>
           </modifiers>
         </entryLink>
+        <entryLink id="9f6d-daba-6cb1-139c" name="Core Battalions" hidden="false" collective="false" import="true" targetId="8c04-393d-d72d-c2a8" type="selectionEntryGroup"/>
       </entryLinks>
     </entryLink>
     <entryLink id="316b-e5e6-c5de-61f5" name="Auric Runefather on Magmadroth" hidden="false" collective="false" import="true" targetId="7088-7765-b3a3-8c20" type="selectionEntry">
@@ -497,9 +619,52 @@ In addition, if you are using the Contest of Generals battlepack or a Pitched Ba
             </modifier>
           </modifiers>
         </entryLink>
+        <entryLink id="bbc6-6867-39fc-4013" name="Core Battalions" hidden="false" collective="false" import="true" targetId="8c04-393d-d72d-c2a8" type="selectionEntryGroup"/>
       </entryLinks>
     </entryLink>
     <entryLink id="2f19-042a-41b3-8524" name="Auric Runemaster" hidden="false" collective="false" import="true" targetId="fa40-ec77-33c4-0a4f" type="selectionEntry">
+      <selectionEntries>
+        <selectionEntry id="a2a0-88f0-52dc-fbd0" name="Zharrgrim Blessings" hidden="false" collective="false" import="true" type="upgrade">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="5249-a3ae-66a7-66ea" type="equalTo"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="271b-596b-c4e0-c099" value="0.0">
+              <conditions>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="5249-a3ae-66a7-66ea" type="equalTo"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="f3fe-28e1-cc62-3e79" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="271b-596b-c4e0-c099" type="min"/>
+          </constraints>
+          <profiles>
+            <profile id="e454-c2d3-46e7-64ae" name="Prayer of Ash" hidden="false" typeId="161a-85bd-f19e-a5a7" typeName="Prayer">
+              <characteristics>
+                <characteristic name="Prayer" typeId="19bc-965a-768d-defa">Prayer of Ash is a prayer that has an answer value of 4 and a range of 18&quot;. If answered, pick 1 friendly FYRESLAYERS unit wholly within range and visible to the chanter. Subtract 1 from wound rolls for attacks that target that unit until the start of your next hero phase.</characteristic>
+              </characteristics>
+            </profile>
+            <profile id="c2cc-128d-919d-5a6d" name="Ember Storm" hidden="false" typeId="161a-85bd-f19e-a5a7" typeName="Prayer">
+              <characteristics>
+                <characteristic name="Prayer" typeId="19bc-965a-768d-defa">Ember Storm is a prayer that has an answer value of 3 and a range of 18&quot;. If answered, pick 1 friendly HEARTHGUARD BERZERKERS or VULKITE BERZERKERS unit wholly within range and visible to the chanter. That unit can run and still charge later in this turn.</characteristic>
+              </characteristics>
+            </profile>
+            <profile id="16f8-c193-3ff5-3be8" name="Prayer of Grimnir&apos;s Fury" hidden="false" typeId="161a-85bd-f19e-a5a7" typeName="Prayer">
+              <characteristics>
+                <characteristic name="Prayer" typeId="19bc-965a-768d-defa">Prayer of Grimnir’s Fury is a prayer that has an answer value of 3 and a range of 12&quot;. If answered, pick 1 friendly FYRESLAYERS HERO that does not have a mount that is within range, within 3&quot; of an enemy unit and visible to the chanter. That HERO can fight.</characteristic>
+              </characteristics>
+            </profile>
+            <profile id="f93a-9efa-b63f-cd13" name="Wrath of Vulcatrix" hidden="false" typeId="161a-85bd-f19e-a5a7" typeName="Prayer">
+              <characteristics>
+                <characteristic name="Prayer" typeId="19bc-965a-768d-defa">Wrath of Vulcatrix is a prayer that has an answer value of 3 and a range of 12&quot;. If answered, pick 1 friendly MAGMADROTH unit within range and visible to the chanter. Until the start of your next hero phase, use the top row on that unit’s damage table, regardless of how many wounds it has suffered.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+        </selectionEntry>
+      </selectionEntries>
       <entryLinks>
         <entryLink id="6d9c-c318-77b1-0fe9" name="General" hidden="false" collective="false" import="true" targetId="98a4-3d6d-a7b9-399f" type="selectionEntry">
           <categoryLinks>
@@ -523,6 +688,7 @@ In addition, if you are using the Contest of Generals battlepack or a Pitched Ba
             </modifier>
           </modifiers>
         </entryLink>
+        <entryLink id="054c-c4c7-bc08-1c10" name="Core Battalions" hidden="false" collective="false" import="true" targetId="8c04-393d-d72d-c2a8" type="selectionEntryGroup"/>
       </entryLinks>
     </entryLink>
     <entryLink id="e7ea-02a3-fb22-cb28" name="Battlesmith" hidden="false" collective="false" import="true" targetId="d33a-9fdc-973a-014a" type="selectionEntry">
@@ -544,6 +710,7 @@ In addition, if you are using the Contest of Generals battlepack or a Pitched Ba
             </modifier>
           </modifiers>
         </entryLink>
+        <entryLink id="3636-5d3e-0058-ad1b" name="Core Battalions" hidden="false" collective="false" import="true" targetId="8c04-393d-d72d-c2a8" type="selectionEntryGroup"/>
       </entryLinks>
     </entryLink>
     <entryLink id="dfa6-ae3d-e83f-f6f2" name="Hearthguard Berzerkers" hidden="false" collective="false" import="true" targetId="b690-3453-6e18-fa8e" type="selectionEntry">
@@ -552,11 +719,12 @@ In addition, if you are using the Contest of Generals battlepack or a Pitched Ba
           <conditionGroups>
             <conditionGroup type="or">
               <conditions>
-                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="5249-a3ae-66a7-66ea" type="equalTo"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4373-740f-1bf3-b0aa" type="instanceOf"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="e3a6-45ca-4974-b489" type="instanceOf"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="996a-613c-4006-25e3" type="instanceOf"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="6cd6-b22e-bfcb-9589" type="instanceOf"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="b543-cb16-0c79-fbc6" type="instanceOf"/>
                 <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="d97a-a5e3-16e6-5603" type="equalTo"/>
-                <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="e3a6-45ca-4974-b489" type="instanceOf"/>
-                <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4373-740f-1bf3-b0aa" type="instanceOf"/>
-                <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="6cd6-b22e-bfcb-9589" type="instanceOf"/>
               </conditions>
             </conditionGroup>
           </conditionGroups>
@@ -565,6 +733,9 @@ In addition, if you are using the Contest of Generals battlepack or a Pitched Ba
       <categoryLinks>
         <categoryLink id="b272-8d3a-61bb-c1aa" name="BATTLELINE" hidden="false" targetId="a42d-220e-6a88-7bf6" primary="false"/>
       </categoryLinks>
+      <entryLinks>
+        <entryLink id="de46-0a28-e88b-a649" name="Core Battalions" hidden="false" collective="false" import="true" targetId="8c04-393d-d72d-c2a8" type="selectionEntryGroup"/>
+      </entryLinks>
     </entryLink>
     <entryLink id="e7d1-73ab-fa4c-5bb4" name="Auric Runeson" hidden="false" collective="false" import="true" targetId="8ba8-453c-ba13-2eb8" type="selectionEntry">
       <entryLinks>
@@ -585,9 +756,22 @@ In addition, if you are using the Contest of Generals battlepack or a Pitched Ba
             </modifier>
           </modifiers>
         </entryLink>
+        <entryLink id="d361-1e0c-3c6c-2696" name="Core Battalions" hidden="false" collective="false" import="true" targetId="8c04-393d-d72d-c2a8" type="selectionEntryGroup"/>
       </entryLinks>
     </entryLink>
     <entryLink id="b9cf-772a-1de7-d17b" name="Auric Runeson on Magmadroth" hidden="false" collective="false" import="true" targetId="0eeb-18ce-3241-0856" type="selectionEntry">
+      <modifierGroups>
+        <modifierGroup>
+          <conditions>
+            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="0913-8bf2-cfe6-24bd" type="greaterThan"/>
+          </conditions>
+          <modifiers>
+            <modifier type="add" field="category" value="a42d-220e-6a88-7bf6"/>
+            <modifier type="add" field="category" value="8ae1-74a9-a02d-3cfa"/>
+            <modifier type="remove" field="category" value="7f62-b7f5-32d5-e13b"/>
+          </modifiers>
+        </modifierGroup>
+      </modifierGroups>
       <entryLinks>
         <entryLink id="023e-cb5d-50c1-ff16" name="General" hidden="false" collective="false" import="true" targetId="98a4-3d6d-a7b9-399f" type="selectionEntry"/>
         <entryLink id="0463-663f-845e-ce40" name="Command Traits" hidden="false" collective="false" import="true" targetId="837e-972d-ec57-dd91" type="selectionEntryGroup"/>
@@ -607,309 +791,39 @@ In addition, if you are using the Contest of Generals battlepack or a Pitched Ba
             </modifier>
           </modifiers>
         </entryLink>
+        <entryLink id="31a3-6ff1-9e0f-4904" name="Core Battalions" hidden="false" collective="false" import="true" targetId="8c04-393d-d72d-c2a8" type="selectionEntryGroup"/>
+      </entryLinks>
+    </entryLink>
+    <entryLink id="7a6e-3fa2-e20c-d5ce" name="Auric Flamekeeper" hidden="false" collective="false" import="true" targetId="38ca-f607-49b0-0d25" type="selectionEntry">
+      <entryLinks>
+        <entryLink id="e9c5-b81a-7c1b-e1ad" name="General" hidden="false" collective="false" import="true" targetId="98a4-3d6d-a7b9-399f" type="selectionEntry"/>
+        <entryLink id="13b1-224a-a5d5-17a4" name="Artefacts of Power" hidden="false" collective="false" import="true" targetId="a1f0-850a-8b0c-e0f0" type="selectionEntryGroup"/>
+        <entryLink id="1e2d-05df-b741-2590" name="Command Traits" hidden="false" collective="false" import="true" targetId="837e-972d-ec57-dd91" type="selectionEntryGroup"/>
+        <entryLink id="2128-50c0-3720-40c0" name="Universal Spell Lore" hidden="false" collective="false" import="true" targetId="93f7-7e2a-3308-d150" type="selectionEntryGroup">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="7ee2-0d81-544f-5d7e" type="equalTo"/>
+                    <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="7ee2-0d81-544f-5d7e" type="notInstanceOf"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
+        </entryLink>
+        <entryLink id="d2c0-adbe-6d96-f2ed" name="Core Battalions" hidden="false" collective="false" import="true" targetId="8c04-393d-d72d-c2a8" type="selectionEntryGroup"/>
+      </entryLinks>
+    </entryLink>
+    <entryLink id="09d3-dff5-2f60-7451" name="Vulkite Berzerkers with Bladed Slingshields" hidden="false" collective="false" import="true" targetId="c539-2124-b84b-7db8" type="selectionEntry">
+      <entryLinks>
+        <entryLink id="5367-90d5-73f8-7398" name="Core Battalions" hidden="false" collective="false" import="true" targetId="8c04-393d-d72d-c2a8" type="selectionEntryGroup"/>
       </entryLinks>
     </entryLink>
   </entryLinks>
-  <sharedSelectionEntries>
-    <selectionEntry id="585b-22f8-0ed8-8455" name="Forge Brethren" publicationId="486b-93d3-3587-5477" hidden="false" collective="false" import="true" type="upgrade">
-      <profiles>
-        <profile id="1094-9885-ab41-69c2" name="Bulwark of Molten Stone" hidden="false" typeId="66c5-932e-004a-574c" typeName="Battalion Abilities">
-          <characteristics>
-            <characteristic name="Battalion Ability" typeId="23f7-32c0-e059-29b2">At the start of the enemy hero phase, you can pick 1 friendly unit wholly within 18&quot; of any units of AURIC HEARTHGUARD from this battalion. If you do so, add 1 to save rolls for attacks that target that unit until the start of your next hero phase.</characteristic>
-          </characteristics>
-        </profile>
-      </profiles>
-      <categoryLinks>
-        <categoryLink id="991c-3ef7-735d-86c4" name="New CategoryLink" hidden="false" targetId="3706-e0e8-674f-c41b" primary="true"/>
-      </categoryLinks>
-      <selectionEntryGroups>
-        <selectionEntryGroup id="25f3-5aa1-6ae5-2bd0" name="1 AURIC RUNESMITER" hidden="false" collective="false" import="true">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="3ecc-8cf5-7dbf-fee8" type="min"/>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="a519-184a-b903-0e9b" type="max"/>
-          </constraints>
-          <entryLinks>
-            <entryLink id="f6fb-1f21-cbbd-acb6" name="Auric Runesmiter" hidden="false" collective="false" import="true" targetId="b07d-e7f1-80eb-f1fe" type="selectionEntry">
-              <entryLinks>
-                <entryLink id="d0cf-ac54-a1a1-07b6" name="General" hidden="false" collective="false" import="true" targetId="98a4-3d6d-a7b9-399f" type="selectionEntry"/>
-                <entryLink id="9488-b51a-1959-b0e5" name="Artefacts of Power" hidden="false" collective="false" import="true" targetId="a1f0-850a-8b0c-e0f0" type="selectionEntryGroup"/>
-                <entryLink id="d0ef-b1e4-3fa8-713b" name="Command Traits" hidden="false" collective="false" import="true" targetId="837e-972d-ec57-dd91" type="selectionEntryGroup"/>
-                <entryLink id="455c-1062-c84f-73be" name="Prayer Scriptures" hidden="false" collective="false" import="true" targetId="ed70-2b17-7173-22bf" type="selectionEntryGroup"/>
-              </entryLinks>
-            </entryLink>
-            <entryLink id="39c4-37a7-875b-3a13" name="Auric Runesmiter on Magmadroth" hidden="false" collective="false" import="true" targetId="d252-c422-c736-5fa6" type="selectionEntry">
-              <entryLinks>
-                <entryLink id="b5cb-02e0-b0b4-b199" name="General" hidden="false" collective="false" import="true" targetId="98a4-3d6d-a7b9-399f" type="selectionEntry"/>
-                <entryLink id="a0f4-701b-2edb-1920" name="Prayer Scriptures" hidden="false" collective="false" import="true" targetId="ed70-2b17-7173-22bf" type="selectionEntryGroup"/>
-                <entryLink id="405e-f84d-04de-5dad" name="Command Traits" hidden="false" collective="false" import="true" targetId="837e-972d-ec57-dd91" type="selectionEntryGroup"/>
-                <entryLink id="21a2-a3b4-cc17-b7ae" name="Artefacts of Power" hidden="false" collective="false" import="true" targetId="a1f0-850a-8b0c-e0f0" type="selectionEntryGroup"/>
-                <entryLink id="6f23-19bc-3186-772e" name="Magmadroth Traits" hidden="false" collective="false" import="true" targetId="6b56-6b4e-009c-903f" type="selectionEntryGroup"/>
-              </entryLinks>
-            </entryLink>
-          </entryLinks>
-        </selectionEntryGroup>
-        <selectionEntryGroup id="5347-2917-8281-b97f" name="3 units of Auric Hearthguard" hidden="false" collective="false" import="true">
-          <constraints>
-            <constraint field="selections" scope="parent" value="3.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="1029-78a6-25d4-7f20" type="min"/>
-            <constraint field="selections" scope="parent" value="3.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="493a-b19f-cb48-c841" type="max"/>
-          </constraints>
-          <entryLinks>
-            <entryLink id="8a10-64ed-540b-3701" name="Auric Hearthguard" hidden="false" collective="false" import="true" targetId="a0d8-825a-0690-c40a" type="selectionEntry">
-              <modifiers>
-                <modifier type="remove" field="category" value="a42d-220e-6a88-7bf6">
-                  <conditionGroups>
-                    <conditionGroup type="or">
-                      <conditions>
-                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="5249-a3ae-66a7-66ea" type="equalTo"/>
-                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="f2a6-c091-02e3-280e" type="equalTo"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
-                </modifier>
-              </modifiers>
-              <categoryLinks>
-                <categoryLink id="cfb3-d435-9822-fa54" name="BATTLELINE" hidden="false" targetId="a42d-220e-6a88-7bf6" primary="false"/>
-              </categoryLinks>
-            </entryLink>
-          </entryLinks>
-        </selectionEntryGroup>
-      </selectionEntryGroups>
-      <costs>
-        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="160.0"/>
-      </costs>
-    </selectionEntry>
-    <selectionEntry id="2b35-ca48-8a04-dc6a" name="Warrior Kinband" publicationId="486b-93d3-3587-5477" hidden="false" collective="false" import="true" type="upgrade">
-      <profiles>
-        <profile id="5e97-bcf5-d85a-73d3" name="Berserk Kindred" hidden="false" typeId="66c5-932e-004a-574c" typeName="Battalion Abilities">
-          <characteristics>
-            <characteristic name="Battalion Ability" typeId="23f7-32c0-e059-29b2">You can use the Berserk Fury ability for 1 VULKITE BERZERKERS unit from this battalion twice in the same battle if that unit is wholly within 12&quot; of an AURIC RUNESON from the same battalion the second time the Berserk Fury ability is used.</characteristic>
-          </characteristics>
-        </profile>
-      </profiles>
-      <categoryLinks>
-        <categoryLink id="7a2b-092e-23b8-1a09" name="New CategoryLink" hidden="false" targetId="3706-e0e8-674f-c41b" primary="true"/>
-      </categoryLinks>
-      <selectionEntryGroups>
-        <selectionEntryGroup id="7482-f0c7-6e95-c141" name="1 AURIC RUNESON" hidden="false" collective="false" import="true">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="1bce-84e3-1090-b4d1" type="min"/>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="0df4-e676-d6ed-0fe7" type="max"/>
-          </constraints>
-          <entryLinks>
-            <entryLink id="e939-8125-6c7d-8919" name="Auric Runeson" hidden="false" collective="false" import="true" targetId="8ba8-453c-ba13-2eb8" type="selectionEntry">
-              <entryLinks>
-                <entryLink id="efec-2e60-913d-17d2" name="General" hidden="false" collective="false" import="true" targetId="98a4-3d6d-a7b9-399f" type="selectionEntry"/>
-                <entryLink id="f725-d1b6-4c38-2a65" name="Artefacts of Power" hidden="false" collective="false" import="true" targetId="a1f0-850a-8b0c-e0f0" type="selectionEntryGroup"/>
-                <entryLink id="d1a4-4205-9989-0f6b" name="Command Traits" hidden="false" collective="false" import="true" targetId="837e-972d-ec57-dd91" type="selectionEntryGroup"/>
-              </entryLinks>
-            </entryLink>
-            <entryLink id="9ab3-379f-c5cf-06da" name="Auric Runeson on Magmadroth" hidden="false" collective="false" import="true" targetId="0eeb-18ce-3241-0856" type="selectionEntry">
-              <entryLinks>
-                <entryLink id="c395-727a-9872-5231" name="General" hidden="false" collective="false" import="true" targetId="98a4-3d6d-a7b9-399f" type="selectionEntry"/>
-                <entryLink id="24e4-61a4-8234-1435" name="Command Traits" hidden="false" collective="false" import="true" targetId="837e-972d-ec57-dd91" type="selectionEntryGroup"/>
-                <entryLink id="2d5a-4fba-7cd0-d949" name="Artefacts of Power" hidden="false" collective="false" import="true" targetId="a1f0-850a-8b0c-e0f0" type="selectionEntryGroup"/>
-                <entryLink id="5ac1-af13-b8fd-7bdf" name="Magmadroth Traits" hidden="false" collective="false" import="true" targetId="6b56-6b4e-009c-903f" type="selectionEntryGroup"/>
-              </entryLinks>
-            </entryLink>
-          </entryLinks>
-        </selectionEntryGroup>
-        <selectionEntryGroup id="1cd8-6a08-1c28-1109" name="3 units of Vulkite Berzerkers" hidden="false" collective="false" import="true">
-          <constraints>
-            <constraint field="selections" scope="parent" value="3.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="1686-fc24-7585-087b" type="min"/>
-            <constraint field="selections" scope="parent" value="3.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="524b-89c3-c9ac-874e" type="max"/>
-          </constraints>
-          <entryLinks>
-            <entryLink id="eacb-3f30-07e9-696c" name="Vulkite Berzerkers" hidden="false" collective="false" import="true" targetId="b6d2-484d-67e4-98e1" type="selectionEntry"/>
-          </entryLinks>
-        </selectionEntryGroup>
-      </selectionEntryGroups>
-      <costs>
-        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="140.0"/>
-      </costs>
-    </selectionEntry>
-    <selectionEntry id="5767-7608-54ec-4eb7" name="Lords of the Lodge" publicationId="486b-93d3-3587-5477" hidden="false" collective="false" import="true" type="upgrade">
-      <profiles>
-        <profile id="d4d3-b3c2-8800-f302" name="Oathbound Guardians" hidden="false" typeId="66c5-932e-004a-574c" typeName="Battalion Abilities">
-          <characteristics>
-            <characteristic name="Battalion Ability" typeId="23f7-32c0-e059-29b2">If a unit of HEARTHGUARD BERZERKERS from this battalion is wholly within 12&quot; of a HERO from the same battalion at the start of the combat phase, then after that unit has fought in that phase for the first time, when it is your turn to pick a unit to fight with later in the same phase, it can be selected to fight for a second time.</characteristic>
-          </characteristics>
-        </profile>
-      </profiles>
-      <categoryLinks>
-        <categoryLink id="6f00-5712-aa02-bc60" name="New CategoryLink" hidden="false" targetId="3706-e0e8-674f-c41b" primary="true"/>
-      </categoryLinks>
-      <selectionEntryGroups>
-        <selectionEntryGroup id="751e-23f6-6d46-2083" name="1 AURIC RUNEFATHER" hidden="false" collective="false" import="true">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="e4fc-8c0d-441e-7cee" type="min"/>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="eb75-a3b3-7e24-3879" type="max"/>
-          </constraints>
-          <entryLinks>
-            <entryLink id="fb98-9f98-5bc7-eaa1" name="Auric Runefather" hidden="false" collective="false" import="true" targetId="468c-e387-1283-fa8b" type="selectionEntry">
-              <entryLinks>
-                <entryLink id="d7d3-7aa9-f59c-067c" name="General" hidden="false" collective="false" import="true" targetId="98a4-3d6d-a7b9-399f" type="selectionEntry">
-                  <categoryLinks>
-                    <categoryLink id="aa04-b589-f455-a722" name="Runefather General" hidden="false" targetId="d97a-a5e3-16e6-5603" primary="false"/>
-                  </categoryLinks>
-                </entryLink>
-                <entryLink id="2810-3c76-02ea-9718" name="Artefacts of Power" hidden="false" collective="false" import="true" targetId="a1f0-850a-8b0c-e0f0" type="selectionEntryGroup"/>
-                <entryLink id="f6fa-e653-d5b1-0403" name="Command Traits" hidden="false" collective="false" import="true" targetId="837e-972d-ec57-dd91" type="selectionEntryGroup"/>
-              </entryLinks>
-            </entryLink>
-            <entryLink id="b40a-6546-533b-eb29" name="Auric Runefather on Magmadroth" hidden="false" collective="false" import="true" targetId="7088-7765-b3a3-8c20" type="selectionEntry">
-              <entryLinks>
-                <entryLink id="4f25-a992-2755-003b" name="Command Traits" hidden="false" collective="false" import="true" targetId="837e-972d-ec57-dd91" type="selectionEntryGroup"/>
-                <entryLink id="a26e-1a35-f579-8b14" name="Artefacts of Power" hidden="false" collective="false" import="true" targetId="a1f0-850a-8b0c-e0f0" type="selectionEntryGroup"/>
-                <entryLink id="b2f5-7310-81e0-9965" name="Magmadroth Traits" hidden="false" collective="false" import="true" targetId="6b56-6b4e-009c-903f" type="selectionEntryGroup"/>
-                <entryLink id="c84d-774b-3c75-97d1" name="General" hidden="false" collective="false" import="true" targetId="98a4-3d6d-a7b9-399f" type="selectionEntry">
-                  <categoryLinks>
-                    <categoryLink id="80ad-907b-6e12-57b5" name="Runefather General" hidden="false" targetId="d97a-a5e3-16e6-5603" primary="false"/>
-                  </categoryLinks>
-                </entryLink>
-              </entryLinks>
-            </entryLink>
-          </entryLinks>
-        </selectionEntryGroup>
-        <selectionEntryGroup id="985e-c6a7-1cf8-4d37" name="1 unit of Hearthguard Berzerkers" hidden="false" collective="false" import="true">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="98fb-c503-ce0d-4b94" type="min"/>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8810-8ebe-4875-2e61" type="max"/>
-          </constraints>
-          <entryLinks>
-            <entryLink id="2009-c91b-873e-7d51" name="Hearthguard Berzerkers" hidden="false" collective="false" import="true" targetId="b690-3453-6e18-fa8e" type="selectionEntry">
-              <modifiers>
-                <modifier type="remove" field="category" value="a42d-220e-6a88-7bf6">
-                  <conditionGroups>
-                    <conditionGroup type="or">
-                      <conditions>
-                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="5249-a3ae-66a7-66ea" type="equalTo"/>
-                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="d97a-a5e3-16e6-5603" type="equalTo"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
-                </modifier>
-              </modifiers>
-              <categoryLinks>
-                <categoryLink id="6b2c-aff3-6a70-c15e" name="BATTLELINE" hidden="false" targetId="a42d-220e-6a88-7bf6" primary="false"/>
-              </categoryLinks>
-            </entryLink>
-          </entryLinks>
-        </selectionEntryGroup>
-        <selectionEntryGroup id="ae2e-fd5a-e6ec-fbe9" name="1 Battlesmith" hidden="false" collective="false" import="true">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="4f96-dd54-e921-990f" type="min"/>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="e214-0136-7905-0902" type="max"/>
-          </constraints>
-          <entryLinks>
-            <entryLink id="e0e4-f6b3-8487-871e" name="Battlesmith" hidden="false" collective="false" import="true" targetId="d33a-9fdc-973a-014a" type="selectionEntry">
-              <entryLinks>
-                <entryLink id="391f-ad3c-7d77-47d4" name="General" hidden="false" collective="false" import="true" targetId="98a4-3d6d-a7b9-399f" type="selectionEntry"/>
-                <entryLink id="d71e-14e9-f8b8-46a9" name="Artefacts of Power" hidden="false" collective="false" import="true" targetId="a1f0-850a-8b0c-e0f0" type="selectionEntryGroup"/>
-                <entryLink id="3882-136e-4165-bead" name="Command Traits" hidden="false" collective="false" import="true" targetId="837e-972d-ec57-dd91" type="selectionEntryGroup"/>
-              </entryLinks>
-            </entryLink>
-          </entryLinks>
-        </selectionEntryGroup>
-        <selectionEntryGroup id="6288-77fa-e6ea-1e6c" name="1 Auric Runemaster" hidden="false" collective="false" import="true">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="783d-c0bf-5e3c-32e7" type="min"/>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="2676-7745-b109-4ca0" type="max"/>
-          </constraints>
-          <entryLinks>
-            <entryLink id="8bdd-bc81-7ead-c669" name="Auric Runemaster" hidden="false" collective="false" import="true" targetId="fa40-ec77-33c4-0a4f" type="selectionEntry">
-              <entryLinks>
-                <entryLink id="1620-0c03-51d7-4cd2" name="General" hidden="false" collective="false" import="true" targetId="98a4-3d6d-a7b9-399f" type="selectionEntry">
-                  <categoryLinks>
-                    <categoryLink id="db9e-0dad-277f-c75a" name="Runemaster General" hidden="false" targetId="f2a6-c091-02e3-280e" primary="false"/>
-                  </categoryLinks>
-                </entryLink>
-                <entryLink id="7c2f-40a6-686f-18a0" name="Artefacts of Power" hidden="false" collective="false" import="true" targetId="a1f0-850a-8b0c-e0f0" type="selectionEntryGroup"/>
-                <entryLink id="8ae1-c7e1-7d19-dfb3" name="Command Traits" hidden="false" collective="false" import="true" targetId="837e-972d-ec57-dd91" type="selectionEntryGroup"/>
-                <entryLink id="4dcc-9647-1b12-8a2f" name="Prayer Scriptures" hidden="false" collective="false" import="true" targetId="ed70-2b17-7173-22bf" type="selectionEntryGroup"/>
-              </entryLinks>
-            </entryLink>
-          </entryLinks>
-        </selectionEntryGroup>
-      </selectionEntryGroups>
-      <costs>
-        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="150.0"/>
-      </costs>
-    </selectionEntry>
-    <selectionEntry id="d6d9-a1e8-2414-59c8" name="Grand Fyrd" publicationId="486b-93d3-3587-5477" hidden="false" collective="false" import="true" type="upgrade">
-      <profiles>
-        <profile id="c871-3dbe-248d-7b9e" name="Grand Fyrd" hidden="false" typeId="66c5-932e-004a-574c" typeName="Battalion Abilities">
-          <characteristics>
-            <characteristic name="Battalion Ability" typeId="23f7-32c0-e059-29b2">If your army includes this warscroll battalion, when you roll to activate an ur-gold rune, it has the enhanced effect on the roll of a 5+ instead of on a 6.</characteristic>
-          </characteristics>
-        </profile>
-      </profiles>
-      <categoryLinks>
-        <categoryLink id="1586-85dd-3ffa-bd3e" name="New CategoryLink" hidden="false" targetId="3706-e0e8-674f-c41b" primary="true"/>
-      </categoryLinks>
-      <selectionEntryGroups>
-        <selectionEntryGroup id="3b4e-e6fd-3def-3cba" name="0-1 Grimwrath Berzerkers" hidden="false" collective="false" import="true">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="3785-f70c-3365-324a" type="max"/>
-          </constraints>
-          <entryLinks>
-            <entryLink id="5f96-e645-7cac-f914" name="Grimwrath Berzerker" hidden="false" collective="false" import="true" targetId="4f60-7967-3eb6-0055" type="selectionEntry">
-              <entryLinks>
-                <entryLink id="284c-df02-4819-b2b1" name="General" hidden="false" collective="false" import="true" targetId="98a4-3d6d-a7b9-399f" type="selectionEntry"/>
-                <entryLink id="6fff-8cba-4ebb-2032" name="Artefacts of Power" hidden="false" collective="false" import="true" targetId="a1f0-850a-8b0c-e0f0" type="selectionEntryGroup"/>
-                <entryLink id="8591-6ac7-0db3-dd3a" name="Command Traits" hidden="false" collective="false" import="true" targetId="837e-972d-ec57-dd91" type="selectionEntryGroup"/>
-              </entryLinks>
-            </entryLink>
-          </entryLinks>
-        </selectionEntryGroup>
-        <selectionEntryGroup id="ae8c-0ca0-1a7c-24e0" name="0-1 Doomseekers" hidden="false" collective="false" import="true">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="c9e3-71c9-f3a8-1215" type="max"/>
-          </constraints>
-          <entryLinks>
-            <entryLink id="ce83-71c6-9ed5-c705" name="Doomseeker" hidden="false" collective="false" import="true" targetId="36e0-fccd-6e89-19b2" type="selectionEntry">
-              <entryLinks>
-                <entryLink id="57bb-6c2f-89fc-6080" name="General" hidden="false" collective="false" import="true" targetId="98a4-3d6d-a7b9-399f" type="selectionEntry"/>
-                <entryLink id="2834-1018-456e-9ada" name="Artefacts of Power" hidden="false" collective="false" import="true" targetId="a1f0-850a-8b0c-e0f0" type="selectionEntryGroup"/>
-                <entryLink id="ff1d-17f7-22eb-fdaa" name="Command Traits" hidden="false" collective="false" import="true" targetId="837e-972d-ec57-dd91" type="selectionEntryGroup"/>
-              </entryLinks>
-            </entryLink>
-          </entryLinks>
-        </selectionEntryGroup>
-        <selectionEntryGroup id="39fd-feba-bc19-3aa7" name="1 Forge Brethren" hidden="false" collective="false" import="true">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="3e59-1c95-08fe-f702" type="min"/>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="f304-ba00-c588-3f7c" type="max"/>
-          </constraints>
-          <entryLinks>
-            <entryLink id="4d84-2a70-8ef8-a868" name="Forge Brethren" hidden="false" collective="false" import="true" targetId="585b-22f8-0ed8-8455" type="selectionEntry"/>
-          </entryLinks>
-        </selectionEntryGroup>
-        <selectionEntryGroup id="27e4-9185-6cb6-f8c1" name="2 Warrior Kinbands" hidden="false" collective="false" import="true">
-          <constraints>
-            <constraint field="selections" scope="parent" value="2.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="fc60-cbe1-9009-c34a" type="min"/>
-            <constraint field="selections" scope="parent" value="2.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="3f52-e1bd-1304-e0b3" type="max"/>
-          </constraints>
-          <entryLinks>
-            <entryLink id="ce8e-f553-54ea-4df3" name="Warrior Kinband" hidden="false" collective="false" import="true" targetId="2b35-ca48-8a04-dc6a" type="selectionEntry"/>
-          </entryLinks>
-        </selectionEntryGroup>
-        <selectionEntryGroup id="6a1c-2241-d260-c4f7" name="1 Lords of the Lodge" hidden="false" collective="false" import="true">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="f298-b0dc-445f-c4bf" type="min"/>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="f58c-876f-0f78-202c" type="max"/>
-          </constraints>
-          <entryLinks>
-            <entryLink id="c5bf-0ed5-f2c6-c18e" name="Lords of the Lodge" hidden="false" collective="false" import="true" targetId="5767-7608-54ec-4eb7" type="selectionEntry"/>
-          </entryLinks>
-        </selectionEntryGroup>
-      </selectionEntryGroups>
-      <costs>
-        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="60.0"/>
-      </costs>
-    </selectionEntry>
-  </sharedSelectionEntries>
   <sharedSelectionEntryGroups>
-    <selectionEntryGroup id="6b56-6b4e-009c-903f" name="Magmadroth Traits" hidden="false" collective="false" import="true">
+    <selectionEntryGroup id="6b56-6b4e-009c-903f" name="Mount Traits" hidden="false" collective="false" import="true">
       <modifiers>
         <modifier type="increment" field="b83a-282d-11e0-c317" value="1.0">
           <repeats>
@@ -923,11 +837,6 @@ In addition, if you are using the Contest of Generals battlepack or a Pitched Ba
               </conditions>
             </conditionGroup>
           </conditionGroups>
-        </modifier>
-        <modifier type="set" field="b83a-282d-11e0-c317" value="-1.0">
-          <conditions>
-            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="0913-8bf2-cfe6-24bd" type="greaterThan"/>
-          </conditions>
         </modifier>
         <modifier type="set" field="hidden" value="true">
           <conditionGroups>
@@ -948,23 +857,11 @@ In addition, if you are using the Contest of Generals battlepack or a Pitched Ba
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="49a3-bfb4-66c3-aa50" type="max"/>
       </constraints>
       <selectionEntries>
-        <selectionEntry id="a660-e3f4-d727-8265" name="6 ~ Ash-born Ancient" hidden="false" collective="false" import="true" type="upgrade">
-          <profiles>
-            <profile id="58e4-7589-97c3-74b5" name="Ash-born Ancient" hidden="false" typeId="0144-faed-1cbe-bd82" typeName="Mount Trait">
-              <characteristics>
-                <characteristic name="Mount Trait" typeId="77e5-029b-d450-db5f">You can re-roll save rolls of 1 for attacks that target this model and friendly MAGMADROTHS within 6&quot; of this model.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <costs>
-            <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="70ba-220a-f43a-dd80" name="5 ~ Coal-heart Ancient" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="70ba-220a-f43a-dd80" name="3 ~ Coal-heart Ancient" hidden="false" collective="false" import="true" type="upgrade">
           <profiles>
             <profile id="7d4e-5684-23f5-bc6a" name="Coal-heart Ancient" hidden="false" typeId="0144-faed-1cbe-bd82" typeName="Mount Trait">
               <characteristics>
-                <characteristic name="Mount Trait" typeId="77e5-029b-d450-db5f">Worsen the Rend characteristic of melee weapons that target this model by 1, to a minimum of 0.</characteristic>
+                <characteristic name="Mount Trait" typeId="77e5-029b-d450-db5f">If this unit is the target of an attack made with a melee weapon, subtract 1 from the Damage characteristic of that weapon for that attack (to a minimum of 1).</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -972,23 +869,11 @@ In addition, if you are using the Contest of Generals battlepack or a Pitched Ba
             <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="46f2-8db9-61b1-4370" name="3 ~ Fire-claw Adult" hidden="false" collective="false" import="true" type="upgrade">
-          <profiles>
-            <profile id="da62-ab87-564e-ecdf" name="Fire-claw Adult" hidden="false" typeId="0144-faed-1cbe-bd82" typeName="Mount Trait">
-              <characteristics>
-                <characteristic name="Mount Trait" typeId="77e5-029b-d450-db5f">If the unmodified wound roll for an attack made with this mount’s melee weapons is 6, that attack has a Rend characteristic of -3.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <costs>
-            <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="cc87-cb0c-bad4-5c7f" name="4 ~ Lava-tongue Adult" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="cc87-cb0c-bad4-5c7f" name="2 ~ Lava-tongue Adult" hidden="false" collective="false" import="true" type="upgrade">
           <profiles>
             <profile id="05dc-4dfd-0f2d-0993" name="Lava-tongue Adult" hidden="false" typeId="0144-faed-1cbe-bd82" typeName="Mount Trait">
               <characteristics>
-                <characteristic name="Mount Trait" typeId="77e5-029b-d450-db5f">When you use this model’s Roaring Fyrestream ability, subtract 1 from the dice roll that determines if the target unit suffers mortal wounds. If this model is wholly within your territory or within 6&quot; of an objective, subtract 2 from the dice roll instead.</characteristic>
+                <characteristic name="Mount Trait" typeId="77e5-029b-d450-db5f">When determining the Attacks characteristic of this unit’s Roaring Fyrestream, an Attacks characteristic of less than 5 is treated as being 5.</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -996,23 +881,11 @@ In addition, if you are using the Contest of Generals battlepack or a Pitched Ba
             <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="bbc1-8b4f-fb28-cf83" name="2 ~ Flamescale Youndblood" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="bbc1-8b4f-fb28-cf83" name="1 ~ Flamescale Youndblood" hidden="false" collective="false" import="true" type="upgrade">
           <profiles>
             <profile id="f1c0-ece7-e0fd-5d51" name="Flame-scale Youngblood" hidden="false" typeId="0144-faed-1cbe-bd82" typeName="Mount Trait">
               <characteristics>
-                <characteristic name="Mount Trait" typeId="77e5-029b-d450-db5f">After this model has made a charge move, pick 1 enemy unit within 1&quot; of this model and roll a number of dice equal to the charge roll for that charge move. For each 6, that enemy unit suffers 1 mortal wound.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <costs>
-            <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="08ce-f3ec-cfaf-c725" name="1 ~ Cinder-crest Youngblood" hidden="false" collective="false" import="true" type="upgrade">
-          <profiles>
-            <profile id="3623-aca5-3fc3-de03" name="Cinder-crest Youngblood" hidden="false" typeId="0144-faed-1cbe-bd82" typeName="Mount Trait">
-              <characteristics>
-                <characteristic name="Mount Trait" typeId="77e5-029b-d450-db5f">When you use this model’s Lashing Tail ability, subtract 1 from the dice roll that determines if the target unit suffers D3 mortal wounds. If this model made a charge move in the same turn, subtract 2 from the dice roll instead.</characteristic>
+                <characteristic name="Mount Trait" typeId="77e5-029b-d450-db5f">If you carry out a Stomp monstrous rampage with this unit and the enemy unit you picked suffers any mortal wounds, that enemy unit suffers 3 additional mortal wounds.</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -1038,128 +911,6 @@ In addition, if you are using the Contest of Generals battlepack or a Pitched Ba
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="680c-f1fd-b72d-499e" type="max"/>
         <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="d217-419c-29ab-463a" type="max"/>
       </constraints>
-      <selectionEntries>
-        <selectionEntry id="8243-7f11-fa69-3545" name="0. Battle-scarred Veteran" hidden="false" collective="false" import="true" type="upgrade">
-          <modifiers>
-            <modifier type="set" field="3b3a-a226-e5fb-fcf7" value="1.0">
-              <conditions>
-                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="b60d-6725-60aa-acc1" type="greaterThan"/>
-                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="8b3d-7f03-e1f9-eaf5" type="equalTo"/>
-                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="c661-44d6-0f5b-11ff" type="greaterThan"/>
-              </conditions>
-            </modifier>
-            <modifier type="set" field="hidden" value="true">
-              <conditions>
-                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="b60d-6725-60aa-acc1" type="equalTo"/>
-              </conditions>
-            </modifier>
-          </modifiers>
-          <constraints>
-            <constraint field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="3b3a-a226-e5fb-fcf7" type="min"/>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="b768-1c6e-a9f4-67a2" type="max"/>
-          </constraints>
-          <profiles>
-            <profile id="2793-667a-9d60-9d41" name="Battle-scarred Veteran" hidden="false" typeId="1504-23bf-8850-4f65" typeName="Command Traits">
-              <characteristics>
-                <characteristic name="Command Trait" typeId="0145-9acf-f5dc-d543">Add 1 to the Attacks characteristic of this general’s melee weapons while there are 5 or more enemy models within 3&quot; of this general.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <costs>
-            <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="5394-3156-6e54-d1ec" name="0. Explosive Charge" hidden="false" collective="false" import="true" type="upgrade">
-          <modifiers>
-            <modifier type="set" field="b976-5d68-3f7a-7d2b" value="1.0">
-              <conditions>
-                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="0913-8bf2-cfe6-24bd" type="greaterThan"/>
-                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="8b3d-7f03-e1f9-eaf5" type="equalTo"/>
-                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="c661-44d6-0f5b-11ff" type="greaterThan"/>
-              </conditions>
-            </modifier>
-            <modifier type="set" field="hidden" value="true">
-              <conditions>
-                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="0913-8bf2-cfe6-24bd" type="equalTo"/>
-              </conditions>
-            </modifier>
-          </modifiers>
-          <constraints>
-            <constraint field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="b976-5d68-3f7a-7d2b" type="min"/>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="3c96-48b2-0766-5c17" type="max"/>
-          </constraints>
-          <profiles>
-            <profile id="7614-f6a4-c428-4727" name="Explosive Charge" hidden="false" typeId="1504-23bf-8850-4f65" typeName="Command Traits">
-              <characteristics>
-                <characteristic name="Command Trait" typeId="0145-9acf-f5dc-d543">Add 1 to charge rolls for friendly LOFNIR MAGMADROTHS within 12&quot; of this general.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <costs>
-            <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="f512-4149-f9fe-d691" name="0. Fiery Endurance" hidden="false" collective="false" import="true" type="upgrade">
-          <modifiers>
-            <modifier type="set" field="0ceb-bf7c-f425-246a" value="1.0">
-              <conditions>
-                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="4dac-3d78-c4d2-879f" type="greaterThan"/>
-                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="8b3d-7f03-e1f9-eaf5" type="equalTo"/>
-                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="c661-44d6-0f5b-11ff" type="greaterThan"/>
-              </conditions>
-            </modifier>
-            <modifier type="set" field="hidden" value="true">
-              <conditions>
-                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="4dac-3d78-c4d2-879f" type="equalTo"/>
-              </conditions>
-            </modifier>
-          </modifiers>
-          <constraints>
-            <constraint field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="0ceb-bf7c-f425-246a" type="min"/>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="f407-a893-3ef4-a5c3" type="max"/>
-          </constraints>
-          <profiles>
-            <profile id="404d-b48f-2523-1c95" name="Fiery Endurance" hidden="false" typeId="1504-23bf-8850-4f65" typeName="Command Traits">
-              <characteristics>
-                <characteristic name="Command Trait" typeId="0145-9acf-f5dc-d543">Friendly VOSTARG units wholly within 12&quot; of this model at the start of your movement phase can run in that movement phase and still charge later in the same turn.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <costs>
-            <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="b281-5929-4fc3-a500" name="0. Warrior Indominate" hidden="false" collective="false" import="true" type="upgrade">
-          <modifiers>
-            <modifier type="set" field="93b7-b21d-9ed9-5303" value="1.0">
-              <conditions>
-                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="d892-60ff-5831-d866" type="greaterThan"/>
-                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="8b3d-7f03-e1f9-eaf5" type="equalTo"/>
-                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="c661-44d6-0f5b-11ff" type="greaterThan"/>
-              </conditions>
-            </modifier>
-            <modifier type="set" field="hidden" value="true">
-              <conditions>
-                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="d892-60ff-5831-d866" type="equalTo"/>
-              </conditions>
-            </modifier>
-          </modifiers>
-          <constraints>
-            <constraint field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="93b7-b21d-9ed9-5303" type="min"/>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8575-18f7-544e-7035" type="max"/>
-          </constraints>
-          <profiles>
-            <profile id="9707-cb71-c454-196e" name="Warrior Indominate" hidden="false" typeId="1504-23bf-8850-4f65" typeName="Command Traits">
-              <characteristics>
-                <characteristic name="Command Trait" typeId="0145-9acf-f5dc-d543">Subtract 1 from wound rolls for attacks that target this general and friendly HERMDAR units wholly within 12&quot;.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <costs>
-            <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
-          </costs>
-        </selectionEntry>
-      </selectionEntries>
       <selectionEntryGroups>
         <selectionEntryGroup id="9519-3599-3436-6ddb" name="Inheritance of Grimnir" hidden="false" collective="false" import="true">
           <modifiers>
@@ -1178,23 +929,11 @@ In addition, if you are using the Contest of Generals battlepack or a Pitched Ba
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="e5d5-a1d9-ffb6-7390" type="max"/>
           </constraints>
           <selectionEntries>
-            <selectionEntry id="1c3d-367c-d04c-0a2b" name="5. Iron Will of the Guardian" hidden="false" collective="false" import="true" type="upgrade">
-              <profiles>
-                <profile id="7287-fa43-4045-8813" name="Iron Will of the Guardian" hidden="false" typeId="1504-23bf-8850-4f65" typeName="Command Traits">
-                  <characteristics>
-                    <characteristic name="Command Trait" typeId="0145-9acf-f5dc-d543">Add 1 to save rolls for attacks that target this general.</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-              <costs>
-                <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
-              </costs>
-            </selectionEntry>
             <selectionEntry id="14df-365c-0190-b6f3" name="3. Spirit of Grimnir" hidden="false" collective="false" import="true" type="upgrade">
               <profiles>
                 <profile id="a07f-3909-d2d8-badd" name="Spirit of Grimnir" hidden="false" typeId="1504-23bf-8850-4f65" typeName="Command Traits">
                   <characteristics>
-                    <characteristic name="Command Trait" typeId="0145-9acf-f5dc-d543">If this general is on the battlefield, when you roll to activate an ur-gold rune, it has the enhanced effect on the roll of a 5+ instead of on a 6.</characteristic>
+                    <characteristic name="Command Trait" typeId="0145-9acf-f5dc-d543">If this general is on the battlefield, when you make an activation roll for the purposes of the Ur-gold Runes battle trait, the enhanced effect applies on a 5+ instead of a 6.</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
@@ -1202,11 +941,11 @@ In addition, if you are using the Contest of Generals battlepack or a Pitched Ba
                 <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
               </costs>
             </selectionEntry>
-            <selectionEntry id="8f2d-c09f-18c3-8aa4" name="4. Blood of the Berzerker" hidden="false" collective="false" import="true" type="upgrade">
+            <selectionEntry id="8f2d-c09f-18c3-8aa4" name="2. Blood of the Berzerker" hidden="false" collective="false" import="true" type="upgrade">
               <profiles>
                 <profile id="b80b-bffc-c4bc-76c0" name="Blood of the Berzerker" hidden="false" typeId="1504-23bf-8850-4f65" typeName="Command Traits">
                   <characteristics>
-                    <characteristic name="Command Trait" typeId="0145-9acf-f5dc-d543">Once per battle in the combat phase, after this general has fought in that phase for the first time, if they are within 3&quot; of an enemy unit, they and their mount (if they have one) can immediately fight for a second time.</characteristic>
+                    <characteristic name="Command Trait" typeId="0145-9acf-f5dc-d543">Once per battle, in the combat phase, after this general has fought for the first time in that phase, you can say that they will go berserk. If you do so, this general can fight for a second time in that phase. The strike-last effect applies to this general when they fight for that second time.</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
@@ -1214,23 +953,11 @@ In addition, if you are using the Contest of Generals battlepack or a Pitched Ba
                 <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
               </costs>
             </selectionEntry>
-            <selectionEntry id="e740-4974-ab29-b4ad" name="6. Destroyer of Foes" hidden="false" collective="false" import="true" type="upgrade">
+            <selectionEntry id="e740-4974-ab29-b4ad" name="4. Leader of the Duardrazhal" hidden="false" collective="false" import="true" type="upgrade">
               <profiles>
-                <profile id="e27c-b7c8-32ec-9f97" name="Destroyer of Foes" hidden="false" typeId="1504-23bf-8850-4f65" typeName="Command Traits">
+                <profile id="e27c-b7c8-32ec-9f97" name="Leader of the Duardrazhal" hidden="false" typeId="1504-23bf-8850-4f65" typeName="Command Traits">
                   <characteristics>
-                    <characteristic name="Command Trait" typeId="0145-9acf-f5dc-d543">Add 1 to the Damage characteristic of this general’s melee weapons.</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-              <costs>
-                <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
-              </costs>
-            </selectionEntry>
-            <selectionEntry id="8681-d572-0ebc-999a" name="2. Honour of the Ancestors" hidden="false" collective="false" import="true" type="upgrade">
-              <profiles>
-                <profile id="6be5-d18e-9b58-987e" name="Honour of the Ancestors" hidden="false" typeId="1504-23bf-8850-4f65" typeName="Command Traits">
-                  <characteristics>
-                    <characteristic name="Command Trait" typeId="0145-9acf-f5dc-d543">Do not take battleshock tests for friendly FYRESLAYERS units wholly within 12&quot; of this general.</characteristic>
+                    <characteristic name="Command Trait" typeId="0145-9acf-f5dc-d543">If this general is on the battlefield, DUARDIN allied units are treated as if they have the FYRESLAYERS keyword for the purposes of the Ur-gold Runes battle trait.</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
@@ -1258,8 +985,8 @@ In addition, if you are using the Contest of Generals battlepack or a Pitched Ba
               <conditionGroups>
                 <conditionGroup type="and">
                   <conditions>
-                    <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="c28d-c953-1b34-3baa" type="notInstanceOf"/>
-                    <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="abc4-8f17-c585-de40" type="notInstanceOf"/>
+                    <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="f0a9-dd66-8662-61ce" type="notInstanceOf"/>
+                    <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="804e-5726-7202-6944" type="notInstanceOf"/>
                   </conditions>
                 </conditionGroup>
               </conditionGroups>
@@ -1269,11 +996,11 @@ In addition, if you are using the Contest of Generals battlepack or a Pitched Ba
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="35d0-debc-d12c-c0e7" type="max"/>
           </constraints>
           <selectionEntries>
-            <selectionEntry id="454a-38f0-c6f1-c14f" name="6. Master Priest" hidden="false" collective="false" import="true" type="upgrade">
+            <selectionEntry id="454a-38f0-c6f1-c14f" name="2. Master Priest" hidden="false" collective="false" import="true" type="upgrade">
               <profiles>
                 <profile id="a3dd-e5f9-b06c-df46" name="Master Priest" hidden="false" typeId="1504-23bf-8850-4f65" typeName="Command Traits">
                   <characteristics>
-                    <characteristic name="Command Trait" typeId="0145-9acf-f5dc-d543">Once per battle, at the start of your hero phase, if this general is on the battlefield, you can activate one ur-gold rune that has already been activated, instead of one that has not yet been activated.</characteristic>
+                    <characteristic name="Command Trait" typeId="0145-9acf-f5dc-d543">Once per battle, at the start of your hero phase, if this general is on the battlefield, you can activate 1 ur-gold rune that has already been activated using the Ur-gold Runes battle trait instead of 1 that has not yet been activated.</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
@@ -1281,11 +1008,13 @@ In addition, if you are using the Contest of Generals battlepack or a Pitched Ba
                 <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
               </costs>
             </selectionEntry>
-            <selectionEntry id="5992-f8bf-b0c7-d513" name="5. Fyresteel Weaponsmith" hidden="false" collective="false" import="true" type="upgrade">
+            <selectionEntry id="5992-f8bf-b0c7-d513" name="3. Avatar of Vulcatrix" hidden="false" collective="false" import="true" type="upgrade">
               <profiles>
-                <profile id="109a-f4d8-d592-7b94" name="Fyresteel Weaponsmith" hidden="false" typeId="1504-23bf-8850-4f65" typeName="Command Traits">
+                <profile id="109a-f4d8-d592-7b94" name="Avatar of Vulcatrix" hidden="false" typeId="1504-23bf-8850-4f65" typeName="Command Traits">
                   <characteristics>
-                    <characteristic name="Command Trait" typeId="0145-9acf-f5dc-d543">Improve the Rend characteristic of this general’s weapons by 1.</characteristic>
+                    <characteristic name="Command Trait" typeId="0145-9acf-f5dc-d543">If this general is slain and there is not a Molten Infernoth invocation under your command on the battlefield, before removing this general from play, you can set up 1 Molten Infernoth within 6&quot; of this general. If you do not have a Molten Infernoth in your army, this new Molten Infernoth is added to your army. After the invocation has been set up, remove this general from play and then apply the effects of the Molten Infernoth’s Burning Tide ability.
+
+If this general is slain and there is a Molten Infernoth invocation under your command on the battlefield, remove this general from play and then apply the effects of the Molten Infernoth’s Burning Tide ability as if the invocation has just been set up.</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
@@ -1293,53 +1022,17 @@ In addition, if you are using the Contest of Generals battlepack or a Pitched Ba
                 <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
               </costs>
             </selectionEntry>
-            <selectionEntry id="3cd0-afe0-6282-1bc1" name="3. Oathslayer" hidden="false" collective="false" import="true" type="upgrade">
-              <profiles>
-                <profile id="8734-3b2e-b92f-7b6b" name="Oathslayer" hidden="false" typeId="1504-23bf-8850-4f65" typeName="Command Traits">
-                  <characteristics>
-                    <characteristic name="Command Trait" typeId="0145-9acf-f5dc-d543">Add 1 to the Bravery characteristic of friendly DUARDIN units while they are wholly within 18&quot; of this general.</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-              <costs>
-                <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
-              </costs>
-            </selectionEntry>
-            <selectionEntry id="f28b-12ac-b8d9-5095" name="4. Ash-beard" hidden="false" collective="false" import="true" type="upgrade">
+            <selectionEntry id="f28b-12ac-b8d9-5095" name="1. Ash-beard" hidden="false" collective="false" import="true" type="upgrade">
               <profiles>
                 <profile id="1389-07b7-9f22-8ffa" name="Ash-beard" hidden="false" typeId="1504-23bf-8850-4f65" typeName="Command Traits">
                   <characteristics>
-                    <characteristic name="Command Trait" typeId="0145-9acf-f5dc-d543">This general knows 2 prayers from the Zharrgrim Blessings table instead of 1.</characteristic>
+                    <characteristic name="Command Trait" typeId="0145-9acf-f5dc-d543">This general knows 2 prayers from the Zharrgrim Blessings prayer scripture instead of 1.</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
               <categoryLinks>
                 <categoryLink id="a78c-05ab-582e-a1cb" name="PrayerPlusAsh" hidden="false" targetId="3e25-ab6e-1dc1-c2e1" primary="false"/>
               </categoryLinks>
-              <costs>
-                <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
-              </costs>
-            </selectionEntry>
-            <selectionEntry id="00d2-6aee-c037-d0c3" name="2. Wisdom and Authority" hidden="false" collective="false" import="true" type="upgrade">
-              <profiles>
-                <profile id="c931-3b25-7e76-4629" name="Wisdom and Authority" hidden="false" typeId="1504-23bf-8850-4f65" typeName="Command Traits">
-                  <characteristics>
-                    <characteristic name="Command Trait" typeId="0145-9acf-f5dc-d543">At the start of the first battle round, you receive D3 additional command points.</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-              <costs>
-                <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
-              </costs>
-            </selectionEntry>
-            <selectionEntry id="5091-eda0-51a0-6da2" name="1. Fyremantle" hidden="false" collective="false" import="true" type="upgrade">
-              <profiles>
-                <profile id="cb20-b816-26cd-533f" name="Fyremantle" hidden="false" typeId="1504-23bf-8850-4f65" typeName="Command Traits">
-                  <characteristics>
-                    <characteristic name="Command Trait" typeId="0145-9acf-f5dc-d543">Subtract 1 from hit rolls for attacks made by enemy units while they are within 3&quot; of this general.</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
               <costs>
                 <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
               </costs>
@@ -1373,152 +1066,6 @@ In addition, if you are using the Contest of Generals battlepack or a Pitched Ba
       <categoryLinks>
         <categoryLink id="f291-0636-d579-9dfa" name="Artefacts" hidden="false" targetId="ba14-5553-456e-33ad" primary="false"/>
       </categoryLinks>
-      <selectionEntries>
-        <selectionEntry id="c4fb-3986-5851-b48e" name="0 -- Helm of Obsidia" hidden="false" collective="false" import="true" type="upgrade">
-          <modifiers>
-            <modifier type="set" field="4f86-08a8-75e0-c7da" value="1.0">
-              <conditionGroups>
-                <conditionGroup type="and">
-                  <conditions>
-                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="b60d-6725-60aa-acc1" type="greaterThan"/>
-                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="ba14-5553-456e-33ad" type="greaterThan"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
-            </modifier>
-            <modifier type="set" field="hidden" value="true">
-              <conditions>
-                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="b60d-6725-60aa-acc1" type="equalTo"/>
-              </conditions>
-            </modifier>
-          </modifiers>
-          <constraints>
-            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="3f4a-2898-1959-ee79" type="max"/>
-            <constraint field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="4f86-08a8-75e0-c7da" type="min"/>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d113-3ea0-899a-d3cf" type="max"/>
-          </constraints>
-          <profiles>
-            <profile id="6dcf-1db0-9fe5-952c" name="Helm of Obsidia" hidden="false" typeId="0c9d-7abe-a53c-6a37" typeName="Artefacts">
-              <characteristics>
-                <characteristic name="Artefact" typeId="44b6-de26-0b54-1318">Add 2 to the Wounds characteristic of the bearer.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <costs>
-            <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="920b-fa33-7c88-0b2e" name="0 -- Igneous Battle-throne" hidden="false" collective="false" import="true" type="upgrade">
-          <modifiers>
-            <modifier type="set" field="1a0d-32c7-2de4-62e9" value="1.0">
-              <conditionGroups>
-                <conditionGroup type="and">
-                  <conditions>
-                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="0913-8bf2-cfe6-24bd" type="greaterThan"/>
-                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="ba14-5553-456e-33ad" type="greaterThan"/>
-                    <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="bf95-9777-c96c-ff70" type="instanceOf"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
-            </modifier>
-            <modifier type="set" field="hidden" value="true">
-              <conditionGroups>
-                <conditionGroup type="or">
-                  <conditions>
-                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="0913-8bf2-cfe6-24bd" type="equalTo"/>
-                    <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="bf95-9777-c96c-ff70" type="notInstanceOf"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
-            </modifier>
-          </modifiers>
-          <constraints>
-            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="f663-d42c-7ce3-daab" type="max"/>
-            <constraint field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="1a0d-32c7-2de4-62e9" type="min"/>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="0f97-bdb1-1abc-e9e0" type="max"/>
-          </constraints>
-          <profiles>
-            <profile id="b7cd-46d4-65e2-d5df" name="Igneous Battle-throne" hidden="false" typeId="0c9d-7abe-a53c-6a37" typeName="Artefacts">
-              <characteristics>
-                <characteristic name="Artefact" typeId="44b6-de26-0b54-1318">The first LOFNIR MAGMADROTH HERO to receive an artefact of power must be given the Igneous Battle-throne.
-
-Roll a dice each time you allocate a wound or mortal wound to the bearer. On a 6+ that wound or mortal wound is negated.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <costs>
-            <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="e330-7742-044d-0a48" name="0 -- Tyrant Slayer" hidden="false" collective="false" import="true" type="upgrade">
-          <modifiers>
-            <modifier type="set" field="8ed9-1a61-f333-614e" value="1.0">
-              <conditionGroups>
-                <conditionGroup type="and">
-                  <conditions>
-                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="d892-60ff-5831-d866" type="greaterThan"/>
-                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="ba14-5553-456e-33ad" type="greaterThan"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
-            </modifier>
-            <modifier type="set" field="hidden" value="true">
-              <conditions>
-                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="d892-60ff-5831-d866" type="equalTo"/>
-              </conditions>
-            </modifier>
-          </modifiers>
-          <constraints>
-            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="86b3-c6c7-5c4e-adde" type="max"/>
-            <constraint field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="8ed9-1a61-f333-614e" type="min"/>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="bce6-e11a-c2f2-9677" type="max"/>
-          </constraints>
-          <profiles>
-            <profile id="a1ec-577a-a0d9-d06b" name="Tyrant Slayer" hidden="false" typeId="0c9d-7abe-a53c-6a37" typeName="Artefacts">
-              <characteristics>
-                <characteristic name="Artefact" typeId="44b6-de26-0b54-1318">Pick one of the bearer’s melee weapons. You can re-roll wound rolls for attacks made with that weapon that target an enemy HERO. In addition, if the unmodified hit roll for an attack made with that weapon that targets an enemy HERO is 6, that attack inflicts 1 mortal wound on the target in addition to any normal damage.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <costs>
-            <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="053a-373f-17ad-27aa" name="0 -- Vosaxe" hidden="false" collective="false" import="true" type="upgrade">
-          <modifiers>
-            <modifier type="set" field="290b-fb9e-5f8d-e73e" value="1.0">
-              <conditionGroups>
-                <conditionGroup type="and">
-                  <conditions>
-                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="4dac-3d78-c4d2-879f" type="greaterThan"/>
-                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="ba14-5553-456e-33ad" type="greaterThan"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
-            </modifier>
-            <modifier type="set" field="hidden" value="true">
-              <conditions>
-                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="4dac-3d78-c4d2-879f" type="equalTo"/>
-              </conditions>
-            </modifier>
-          </modifiers>
-          <constraints>
-            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="5df6-584f-b52a-74ca" type="max"/>
-            <constraint field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="290b-fb9e-5f8d-e73e" type="min"/>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="39e1-1df1-2d45-4da2" type="max"/>
-          </constraints>
-          <profiles>
-            <profile id="d964-4ab7-5b92-669c" name="Vosaxe" hidden="false" typeId="0c9d-7abe-a53c-6a37" typeName="Artefacts">
-              <characteristics>
-                <characteristic name="Artefact" typeId="44b6-de26-0b54-1318">At the start of the battle, pick one of the bearer’s melee weapons. Improve that weapon’s Rend characteristic by 1. In addition, if the unmodified hit roll for an attack made with that weapon is 6, add 1 to the Damage characteristic of that weapon for that attack.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <costs>
-            <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
-          </costs>
-        </selectionEntry>
-      </selectionEntries>
       <selectionEntryGroups>
         <selectionEntryGroup id="cca1-35e4-c028-1780" name="Heirlooms of the Lodge" hidden="false" collective="false" import="true">
           <modifiers>
@@ -1537,14 +1084,14 @@ Roll a dice each time you allocate a wound or mortal wound to the bearer. On a 6
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8f0d-078b-1af7-b24e" type="max"/>
           </constraints>
           <selectionEntries>
-            <selectionEntry id="1482-5993-b399-5688" name="6 -- Axe of Grimnir" hidden="false" collective="false" import="true" type="upgrade">
+            <selectionEntry id="1482-5993-b399-5688" name="4 -- Axe of Grimnir" hidden="false" collective="false" import="true" type="upgrade">
               <constraints>
                 <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="f47f-c0e3-9409-9db7" type="max"/>
               </constraints>
               <profiles>
                 <profile id="c17d-3633-df26-9661" name="Axe of Grimnir" hidden="false" typeId="0c9d-7abe-a53c-6a37" typeName="Artefacts">
                   <characteristics>
-                    <characteristic name="Artefact" typeId="44b6-de26-0b54-1318">You can re-roll hit rolls for attacks made by the bearer.</characteristic>
+                    <characteristic name="Artefact" typeId="44b6-de26-0b54-1318">Pick 1 of the bearer’s melee weapons. Improve the Rend characteristic of that weapon by 1 and add 1 to the Damage characteristic of that weapon.</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
@@ -1552,29 +1099,14 @@ Roll a dice each time you allocate a wound or mortal wound to the bearer. On a 6
                 <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
               </costs>
             </selectionEntry>
-            <selectionEntry id="2c3f-3cdd-5763-b9a4" name="4 -- Obsidian Glowhelm" hidden="false" collective="false" import="true" type="upgrade">
-              <constraints>
-                <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="7600-65ff-a0c5-cdef" type="max"/>
-              </constraints>
-              <profiles>
-                <profile id="db90-2f8a-256f-545a" name="Obsidian Glowhelm" hidden="false" typeId="0c9d-7abe-a53c-6a37" typeName="Artefacts">
-                  <characteristics>
-                    <characteristic name="Artefact" typeId="44b6-de26-0b54-1318">At the start of your hero phase, roll a dice if the bearer is on the battlefield. On a 4+ you receive 1 additional command point.</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-              <costs>
-                <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
-              </costs>
-            </selectionEntry>
-            <selectionEntry id="3aeb-e067-5201-567e" name="3 -- Drakeslayer" hidden="false" collective="false" import="true" type="upgrade">
+            <selectionEntry id="3aeb-e067-5201-567e" name="2 -- The Fiery Ring" hidden="false" collective="false" import="true" type="upgrade">
               <constraints>
                 <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="bf89-27f0-ed54-ed0c" type="max"/>
               </constraints>
               <profiles>
-                <profile id="336e-07b1-951a-cd24" name="Drakeslayer" hidden="false" typeId="0c9d-7abe-a53c-6a37" typeName="Artefacts">
+                <profile id="336e-07b1-951a-cd24" name="The Fiery Ring" hidden="false" typeId="0c9d-7abe-a53c-6a37" typeName="Artefacts">
                   <characteristics>
-                    <characteristic name="Artefact" typeId="44b6-de26-0b54-1318">Once per battle, in your shooting phase, instead of making an attack with the bearer’s Fyresteel Throwing Axe, you can say they are throwing Drakeslayer. If you do so, pick an enemy MONSTER within 8&quot; of the bearer and roll a dice. On a 6, that MONSTER suffers 3D6 mortal wounds.</characteristic>
+                    <characteristic name="Artefact" typeId="44b6-de26-0b54-1318">Once per battle, in your shooting phase, you can pick 1 enemy unit within 6&quot; of the bearer and roll a dice. On a 2+, that unit suffers D6 mortal wounds.</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
@@ -1582,14 +1114,14 @@ Roll a dice each time you allocate a wound or mortal wound to the bearer. On a 6
                 <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
               </costs>
             </selectionEntry>
-            <selectionEntry id="73d8-323e-4205-f32a" name="2 -- Draught of Magmalt Ale" hidden="false" collective="false" import="true" type="upgrade">
+            <selectionEntry id="73d8-323e-4205-f32a" name="1 -- Master Rune of Unbreakable Resolve" hidden="false" collective="false" import="true" type="upgrade">
               <constraints>
                 <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="84ff-5e57-7471-1df3" type="max"/>
               </constraints>
               <profiles>
-                <profile id="188b-803e-d7c9-37fa" name="Draught of Magmalt Ale" hidden="false" typeId="0c9d-7abe-a53c-6a37" typeName="Artefacts">
+                <profile id="188b-803e-d7c9-37fa" name="Master Rune of Unbreakable Resolve" hidden="false" typeId="0c9d-7abe-a53c-6a37" typeName="Artefacts">
                   <characteristics>
-                    <characteristic name="Artefact" typeId="44b6-de26-0b54-1318">Once per battle, at the start of the combat phase, the bearer can drink this potion. If they do so, double the Attacks characteristic of all of the melee weapons they are armed with until the end of that phase.</characteristic>
+                    <characteristic name="Artefact" typeId="44b6-de26-0b54-1318">Once per battle, at the start of a phase, you can say that the bearer will use their master rune. If you do so, the bearer has a ward of 3+ until the end of that phase.</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
@@ -1597,22 +1129,7 @@ Roll a dice each time you allocate a wound or mortal wound to the bearer. On a 6
                 <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
               </costs>
             </selectionEntry>
-            <selectionEntry id="dbdc-2938-d038-b325" name="5 -- Shimmering Blade" hidden="false" collective="false" import="true" type="upgrade">
-              <constraints>
-                <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="c658-5075-9267-4ff5" type="max"/>
-              </constraints>
-              <profiles>
-                <profile id="a7d9-fda8-2d0e-eabf" name="Shimmering Blade" hidden="false" typeId="0c9d-7abe-a53c-6a37" typeName="Artefacts">
-                  <characteristics>
-                    <characteristic name="Artefact" typeId="44b6-de26-0b54-1318">At the start of the battle, pick one of the bearer’s melee weapons. Improve that weapon’s Rend characteristic by 1. In addition, if the unmodified hit roll for an attack made with that weapon is 6, add 1 to the Damage characteristic of that weapon for that attack.</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-              <costs>
-                <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
-              </costs>
-            </selectionEntry>
-            <selectionEntry id="115d-4434-2375-8c31" name="1 -- Magnetised Runes" hidden="false" collective="false" import="true" type="upgrade">
+            <selectionEntry id="115d-4434-2375-8c31" name="3 -- Magnetised Runes" hidden="false" collective="false" import="true" type="upgrade">
               <constraints>
                 <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="4dc6-bcfc-207e-d64a" type="max"/>
               </constraints>
@@ -1629,75 +1146,11 @@ Roll a dice each time you allocate a wound or mortal wound to the bearer. On a 6
             </selectionEntry>
           </selectionEntries>
         </selectionEntryGroup>
-        <selectionEntryGroup id="326c-5661-864d-7d6e" name="Artefacts of Wrath and Doom" hidden="false" collective="false" import="true">
-          <modifiers>
-            <modifier type="set" field="hidden" value="true">
-              <conditionGroups>
-                <conditionGroup type="and">
-                  <conditions>
-                    <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="db62-e2a0-6a21-65e7" type="notInstanceOf"/>
-                    <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="6f15-59b4-297b-9ac6" type="notInstanceOf"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
-            </modifier>
-          </modifiers>
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="f983-2466-df6d-9b39" type="max"/>
-          </constraints>
-          <selectionEntries>
-            <selectionEntry id="6b05-4bfd-cd14-a639" name="3 -- Rune of Blazing Fury" hidden="false" collective="false" import="true" type="upgrade">
-              <constraints>
-                <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="d3c6-08a5-d8c6-d3f4" type="max"/>
-              </constraints>
-              <profiles>
-                <profile id="591d-0ade-386e-14c3" name="Rune of Blazing Fury" hidden="false" typeId="0c9d-7abe-a53c-6a37" typeName="Artefacts">
-                  <characteristics>
-                    <characteristic name="Artefact" typeId="44b6-de26-0b54-1318">Once per battle, at the start of the combat phase, you can awaken the Rune of Blazing Fury. If you do so, you can re-roll hit and wound rolls for attacks made by the bearer until the end of that phase.</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-              <costs>
-                <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
-              </costs>
-            </selectionEntry>
-            <selectionEntry id="b00a-0593-3f0c-fb5f" name="2 -- Bracers of Ember-iron" hidden="false" collective="false" import="true" type="upgrade">
-              <constraints>
-                <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="aff9-4877-c33d-7282" type="max"/>
-              </constraints>
-              <profiles>
-                <profile id="e122-cf06-142f-fa17" name="Bracers of Ember-iron" hidden="false" typeId="0c9d-7abe-a53c-6a37" typeName="Artefacts">
-                  <characteristics>
-                    <characteristic name="Artefact" typeId="44b6-de26-0b54-1318">Add 1 to save rolls for attacks that target the bearer.</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-              <costs>
-                <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
-              </costs>
-            </selectionEntry>
-            <selectionEntry id="b60b-7605-cff7-53ca" name="1 -- Beastslayer" hidden="false" collective="false" import="true" type="upgrade">
-              <constraints>
-                <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="050e-0de9-c324-4bf7" type="max"/>
-              </constraints>
-              <profiles>
-                <profile id="4f11-3f68-db7c-edbe" name="Beastslayer" hidden="false" typeId="0c9d-7abe-a53c-6a37" typeName="Artefacts">
-                  <characteristics>
-                    <characteristic name="Artefact" typeId="44b6-de26-0b54-1318">Pick one of the bearer’s melee weapons. If the hit roll for an attack made with that weapon that targets an enemy MONSTER scores a hit, that attack inflicts 2 hits on the target instead of 1. Make a wound and save roll for each hit.</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-              <costs>
-                <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
-              </costs>
-            </selectionEntry>
-          </selectionEntries>
-        </selectionEntryGroup>
-        <selectionEntryGroup id="127f-4470-457c-588d" name="Icons of Grimnir" hidden="false" collective="false" import="true">
+        <selectionEntryGroup id="127f-4470-457c-588d" name="Relics of the Fyrd" hidden="false" collective="false" import="true">
           <modifiers>
             <modifier type="set" field="hidden" value="true">
               <conditions>
-                <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="b22b-48c8-1753-5624" type="notInstanceOf"/>
+                <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="804e-5726-7202-6944" type="notInstanceOf"/>
               </conditions>
             </modifier>
           </modifiers>
@@ -1705,14 +1158,21 @@ Roll a dice each time you allocate a wound or mortal wound to the bearer. On a 6
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="4490-aad3-db1e-bc69" type="max"/>
           </constraints>
           <selectionEntries>
-            <selectionEntry id="bf7e-4ac3-d6cd-0107" name="3 -- The Nulsidian Icon" hidden="false" collective="false" import="true" type="upgrade">
+            <selectionEntry id="bf7e-4ac3-d6cd-0107" name="2 -- The Nulsidian Icon" hidden="false" collective="false" import="true" type="upgrade">
+              <modifiers>
+                <modifier type="set" field="hidden" value="true">
+                  <conditions>
+                    <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="b22b-48c8-1753-5624" type="notInstanceOf"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
               <constraints>
                 <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="3967-6850-b9cb-d9a9" type="max"/>
               </constraints>
               <profiles>
                 <profile id="b4e0-3baa-ceff-086b" name="The Nulsidian Icon" hidden="false" typeId="0c9d-7abe-a53c-6a37" typeName="Artefacts">
                   <characteristics>
-                    <characteristic name="Artefact" typeId="44b6-de26-0b54-1318">Each time a friendly FYRESLAYERS unit wholly within 12&quot; of the bearer is affected by a spell or endless spell, you can roll a dice. If you do so, on a 4+ ignore the effects of that spell or endless spell on that unit.</characteristic>
+                    <characteristic name="Artefact" typeId="44b6-de26-0b54-1318">This artefact of power can only be given to a BATTLESMITH. Each time a friendly FYRESLAYERS unit wholly within 12&quot; of the bearer is affected by a spell or the abilities of an endless spell, you can roll a dice. On a 4+, ignore the effect of that spell or the effects of that endless spell’s abilities on that unit.</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
@@ -1720,14 +1180,14 @@ Roll a dice each time you allocate a wound or mortal wound to the bearer. On a 6
                 <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
               </costs>
             </selectionEntry>
-            <selectionEntry id="087f-cd66-309e-415c" name="2 -- Icon of Grimnir&apos;s Condemnation" hidden="false" collective="false" import="true" type="upgrade">
+            <selectionEntry id="12c9-fe4b-e859-faf5" name="3 -- The Daemon Slayer" hidden="false" collective="false" import="true" type="upgrade">
               <constraints>
-                <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="0c55-ee29-1bc2-0e75" type="max"/>
+                <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="d51c-74af-2c08-b218" type="max"/>
               </constraints>
               <profiles>
-                <profile id="7b15-7339-7e19-e942" name="Icon of Grimnir&apos;s Condemnation" hidden="false" typeId="0c9d-7abe-a53c-6a37" typeName="Artefacts">
+                <profile id="bbdb-7a9c-eeda-0492" name="The Daemon Slayer" hidden="false" typeId="0c9d-7abe-a53c-6a37" typeName="Artefacts">
                   <characteristics>
-                    <characteristic name="Artefact" typeId="44b6-de26-0b54-1318">The bearer can attempt to unbind one spell in the enemy hero phase in the same manner as a WIZARD. In addition, if the bearer unbinds a spell, roll a dice. On a 2+ the caster suffers 1 mortal wound.</characteristic>
+                    <characteristic name="Artefact" typeId="44b6-de26-0b54-1318">Pick 1 of the bearer’s melee weapons. Ward rolls cannot be made for wounds and mortal wounds caused by attacks made with that weapon.</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
@@ -1735,14 +1195,14 @@ Roll a dice each time you allocate a wound or mortal wound to the bearer. On a 6
                 <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
               </costs>
             </selectionEntry>
-            <selectionEntry id="7913-fdb9-e71c-19f2" name="1 -- Icon of the Ancestors" hidden="false" collective="false" import="true" type="upgrade">
+            <selectionEntry id="9b58-c253-e4ab-f2fb" name="1 -- Draught of Magmalt Ale" hidden="false" collective="false" import="true" type="upgrade">
               <constraints>
-                <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="519e-5f27-8088-775f" type="max"/>
+                <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="c616-46db-0001-d90d" type="max"/>
               </constraints>
               <profiles>
-                <profile id="0155-fdf0-e2ab-afef" name="Icon of the Ancestors" hidden="false" typeId="0c9d-7abe-a53c-6a37" typeName="Artefacts">
+                <profile id="2d62-d3e0-38b3-ebb7" name="Draught of Magmalt Ale" hidden="false" typeId="0c9d-7abe-a53c-6a37" typeName="Artefacts">
                   <characteristics>
-                    <characteristic name="Artefact" typeId="44b6-de26-0b54-1318">The range of this Battlesmith’s Icon of Grimnir and None Shall Defile the Icon abilities is 18&quot; instead of 12&quot;.</characteristic>
+                    <characteristic name="Artefact" typeId="44b6-de26-0b54-1318">Once per battle, at the start of the combat phase, you can say that the bearer will drink their magmalt ale. If you do so, double the Attacks characteristic of the bearer’s melee weapons until the end of that phase.</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
@@ -1758,8 +1218,8 @@ Roll a dice each time you allocate a wound or mortal wound to the bearer. On a 6
               <conditionGroups>
                 <conditionGroup type="and">
                   <conditions>
-                    <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="abc4-8f17-c585-de40" type="notInstanceOf"/>
-                    <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="c28d-c953-1b34-3baa" type="notInstanceOf"/>
+                    <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="f0a9-dd66-8662-61ce" type="notInstanceOf"/>
+                    <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="804e-5726-7202-6944" type="notInstanceOf"/>
                   </conditions>
                 </conditionGroup>
               </conditionGroups>
@@ -1769,14 +1229,14 @@ Roll a dice each time you allocate a wound or mortal wound to the bearer. On a 6
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="c248-0d8f-e1e3-ad09" type="max"/>
           </constraints>
           <selectionEntries>
-            <selectionEntry id="41bf-a8f6-6281-fafd" name="6 -- Droth-helm" hidden="false" collective="false" import="true" type="upgrade">
+            <selectionEntry id="41bf-a8f6-6281-fafd" name="3 -- Droth-helm" hidden="false" collective="false" import="true" type="upgrade">
               <constraints>
                 <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="8891-2932-fd8f-3651" type="max"/>
               </constraints>
               <profiles>
                 <profile id="0d18-6897-133c-edf5" name="Droth-helm" hidden="false" typeId="0c9d-7abe-a53c-6a37" typeName="Artefacts">
                   <characteristics>
-                    <characteristic name="Artefact" typeId="44b6-de26-0b54-1318">You can re-roll hit rolls for attacks made with Claws and Horns by friendly MAGMADROTHS within 6&quot; of the bearer.</characteristic>
+                    <characteristic name="Artefact" typeId="44b6-de26-0b54-1318">Add 1 to wound rolls for attacks made with Claws and Horns by friendly MAGMADROTHS wholly within 12&quot; of the bearer.</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
@@ -1784,14 +1244,14 @@ Roll a dice each time you allocate a wound or mortal wound to the bearer. On a 6
                 <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
               </costs>
             </selectionEntry>
-            <selectionEntry id="ff14-7127-0b5c-bcab" name="3 -- Volatile Brazier" hidden="false" collective="false" import="true" type="upgrade">
+            <selectionEntry id="ff14-7127-0b5c-bcab" name="2 -- Volatile Brazier" hidden="false" collective="false" import="true" type="upgrade">
               <constraints>
                 <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="657d-1706-ccc3-4d82" type="max"/>
               </constraints>
               <profiles>
                 <profile id="9b55-7e46-3780-423c" name="Volatile Brazier" hidden="false" typeId="0c9d-7abe-a53c-6a37" typeName="Artefacts">
                   <characteristics>
-                    <characteristic name="Artefact" typeId="44b6-de26-0b54-1318">The bearer can attempt to summon 2 magmic invocations in the same turn.</characteristic>
+                    <characteristic name="Artefact" typeId="44b6-de26-0b54-1318">When the bearer attempts to summon an invocation, you can re-roll chanting rolls for the bearer and the range of the prayer is doubled.</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
@@ -1799,59 +1259,14 @@ Roll a dice each time you allocate a wound or mortal wound to the bearer. On a 6
                 <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
               </costs>
             </selectionEntry>
-            <selectionEntry id="2fd5-b982-4902-5c96" name="2 -- Ash-cloud Rune" hidden="false" collective="false" import="true" type="upgrade">
+            <selectionEntry id="2fd5-b982-4902-5c96" name="1 -- Ash-cloud Rune" hidden="false" collective="false" import="true" type="upgrade">
               <constraints>
                 <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="6ee4-ea42-c146-7f2d" type="max"/>
               </constraints>
               <profiles>
                 <profile id="1137-ff30-52fd-18ef" name="Ash-cloud Rune" hidden="false" typeId="0c9d-7abe-a53c-6a37" typeName="Artefacts">
                   <characteristics>
-                    <characteristic name="Artefact" typeId="44b6-de26-0b54-1318">The bearer can attempt to unbind two spells in the enemy hero phase in the same manner as a WIZARD.</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-              <costs>
-                <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
-              </costs>
-            </selectionEntry>
-            <selectionEntry id="b468-e0b5-b8f7-c702" name="5 -- Emberstone Rune" hidden="false" collective="false" import="true" type="upgrade">
-              <constraints>
-                <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="3b1b-fcc0-90ac-5bdc" type="max"/>
-              </constraints>
-              <profiles>
-                <profile id="c18e-287d-1b6d-134b" name="Emberstone Rune" hidden="false" typeId="0c9d-7abe-a53c-6a37" typeName="Artefacts">
-                  <characteristics>
-                    <characteristic name="Artefact" typeId="44b6-de26-0b54-1318">Add 1 to chanting rolls for prayers chanted by the bearer that summon an invocation.</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-              <costs>
-                <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
-              </costs>
-            </selectionEntry>
-            <selectionEntry id="f936-4712-1ce9-eec1" name="4 -- Ancestor Helm" hidden="false" collective="false" import="true" type="upgrade">
-              <constraints>
-                <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="6641-b83d-4126-dde9" type="max"/>
-              </constraints>
-              <profiles>
-                <profile id="4c27-de8b-c7dc-13a7" name="Ancestor Helm" hidden="false" typeId="0c9d-7abe-a53c-6a37" typeName="Artefacts">
-                  <characteristics>
-                    <characteristic name="Artefact" typeId="44b6-de26-0b54-1318">If an enemy unit fails a battleshock test within 12&quot; of the bearer, add D3 to the number of models that flee.</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-              <costs>
-                <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
-              </costs>
-            </selectionEntry>
-            <selectionEntry id="507e-6350-fa8c-8d28" name="1 -- Salamander Cloak" hidden="false" collective="false" import="true" type="upgrade">
-              <constraints>
-                <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="6453-f59e-af70-b5a8" type="max"/>
-              </constraints>
-              <profiles>
-                <profile id="7ea1-b3d6-7e1a-0623" name="Salamander Cloak" hidden="false" typeId="0c9d-7abe-a53c-6a37" typeName="Artefacts">
-                  <characteristics>
-                    <characteristic name="Artefact" typeId="44b6-de26-0b54-1318">Roll a dice each time you allocate a wound or mortal wound to the bearer. On a 5+ that wound or mortal wound is negated.</characteristic>
+                    <characteristic name="Artefact" typeId="44b6-de26-0b54-1318">Once per battle, at the start of the enemy hero phase, you can say that the bearer will call down a column of soot. If you do so, until the end of that phase, units wholly within 12&quot; of the bearer are not visible to enemy units attempting to cast a spell.</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
@@ -1904,19 +1319,29 @@ Roll a dice each time you allocate a wound or mortal wound to the bearer. On a 6
                 <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="c7bd-c872-ef57-2468" type="greaterThan"/>
               </conditions>
             </modifier>
+            <modifier type="set" field="hidden" value="true">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="5249-a3ae-66a7-66ea" type="greaterThan"/>
+                    <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="abc4-8f17-c585-de40" type="instanceOf"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
           </modifiers>
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="c46f-c55a-cc0c-e68f" type="max"/>
           </constraints>
           <selectionEntries>
-            <selectionEntry id="52be-1267-46c0-7eb2" name="5 - Gilded Claws" hidden="false" collective="false" import="true" type="upgrade">
+            <selectionEntry id="52be-1267-46c0-7eb2" name="4 - Wrath of Vulcatrix" hidden="false" collective="false" import="true" type="upgrade">
               <constraints>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="b80b-2bf4-dbf9-8ecb" type="max"/>
               </constraints>
               <profiles>
-                <profile id="f11d-3efe-1d8c-fdc7" name="Gilded Claws" hidden="false" typeId="161a-85bd-f19e-a5a7" typeName="Prayer">
+                <profile id="f11d-3efe-1d8c-fdc7" name="Wrath of Vulcatrix" hidden="false" typeId="161a-85bd-f19e-a5a7" typeName="Prayer">
                   <characteristics>
-                    <characteristic name="Prayer" typeId="19bc-965a-768d-defa">Gilded Claws is a prayer that has an answer value of 3 and a range of 12&quot;. If answered, pick 1 friendly MAGMADROTH unit within range and visible to the chanter. Add 1 to wound rolls for attacks made by that unit with its Claws and Horns until the start of your next hero phase.</characteristic>
+                    <characteristic name="Prayer" typeId="19bc-965a-768d-defa">Wrath of Vulcatrix is a prayer that has an answer value of 3 and a range of 12&quot;. If answered, pick 1 friendly MAGMADROTH unit within range and visible to the chanter. Until the start of your next hero phase, use the top row on that unit’s damage table, regardless of how many wounds it has suffered.</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
@@ -1924,14 +1349,14 @@ Roll a dice each time you allocate a wound or mortal wound to the bearer. On a 6
                 <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
               </costs>
             </selectionEntry>
-            <selectionEntry id="4a4b-7fac-77fa-518b" name="2 - Prayer of Ash" hidden="false" collective="false" import="true" type="upgrade">
+            <selectionEntry id="4a4b-7fac-77fa-518b" name="1 - Prayer of Ash" hidden="false" collective="false" import="true" type="upgrade">
               <constraints>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="7fbe-aec3-50c9-51ee" type="max"/>
               </constraints>
               <profiles>
                 <profile id="a861-f27c-6387-9381" name="Prayer of Ash" hidden="false" typeId="161a-85bd-f19e-a5a7" typeName="Prayer">
                   <characteristics>
-                    <characteristic name="Prayer" typeId="19bc-965a-768d-defa">Prayer of Ash is a prayer that has an answer value of 4 and a range of 18&quot;. If answered, pick 1 friendly FYRESLAYERS unit wholly within range and visible to the chanter. Add 1 to save rolls for attacks that target that unit until the start of your next hero phase.</characteristic>
+                    <characteristic name="Prayer" typeId="19bc-965a-768d-defa">Prayer of Ash is a prayer that has an answer value of 4 and a range of 18&quot;. If answered, pick 1 friendly FYRESLAYERS unit wholly within range and visible to the chanter. Subtract 1 from wound rolls for attacks that target that unit until the start of your next hero phase.</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
@@ -1939,14 +1364,14 @@ Roll a dice each time you allocate a wound or mortal wound to the bearer. On a 6
                 <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
               </costs>
             </selectionEntry>
-            <selectionEntry id="04c3-522a-a181-f458" name="3 - Ember Storm" hidden="false" collective="false" import="true" type="upgrade">
+            <selectionEntry id="04c3-522a-a181-f458" name="2 - Ember Storm" hidden="false" collective="false" import="true" type="upgrade">
               <constraints>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="9079-a74b-bd34-bee9" type="max"/>
               </constraints>
               <profiles>
                 <profile id="5569-c5fe-e75a-7c2d" name="Ember Storm" hidden="false" typeId="161a-85bd-f19e-a5a7" typeName="Prayer">
                   <characteristics>
-                    <characteristic name="Prayer" typeId="19bc-965a-768d-defa">Ember Storm is a prayer that has an answer value of 3 and a range of 18&quot;. If answered, pick 1 friendly VULKITE BERZERKERS or HEARTHGUARD BERZERKERS unit wholly within range and visible to the chanter. That unit can run and still charge later in that turn.</characteristic>
+                    <characteristic name="Prayer" typeId="19bc-965a-768d-defa">Ember Storm is a prayer that has an answer value of 3 and a range of 18&quot;. If answered, pick 1 friendly HEARTHGUARD BERZERKERS or VULKITE BERZERKERS unit wholly within range and visible to the chanter. That unit can run and still charge later in this turn.</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
@@ -1954,29 +1379,14 @@ Roll a dice each time you allocate a wound or mortal wound to the bearer. On a 6
                 <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
               </costs>
             </selectionEntry>
-            <selectionEntry id="e2a8-d426-0c02-c84e" name="4 - Prayer of Grimnir&apos;s Fury" hidden="false" collective="false" import="true" type="upgrade">
+            <selectionEntry id="e2a8-d426-0c02-c84e" name="3 - Prayer of Grimnir&apos;s Fury" hidden="false" collective="false" import="true" type="upgrade">
               <constraints>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="0974-5334-653f-dae8" type="max"/>
               </constraints>
               <profiles>
                 <profile id="61a3-3881-e2a5-0d90" name="Prayer of Grimnir&apos;s Fury" hidden="false" typeId="161a-85bd-f19e-a5a7" typeName="Prayer">
                   <characteristics>
-                    <characteristic name="Prayer" typeId="19bc-965a-768d-defa">Prayer of Grimnir’s Fury is a prayer that has an answer value of 3 and a range of 12&quot;. If answered, pick 1 friendly FYRESLAYERS HERO that does not have a mount, is within range and visible to the chanter, and is within 3&quot; of an enemy unit. That HERO can fight.</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-              <costs>
-                <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
-              </costs>
-            </selectionEntry>
-            <selectionEntry id="2cb8-f592-bf2d-ec79" name="1 - Searing Heat" hidden="false" collective="false" import="true" type="upgrade">
-              <constraints>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="209e-e7f5-0b00-937d" type="max"/>
-              </constraints>
-              <profiles>
-                <profile id="2dd8-990b-4694-a3f4" name="Searing Heat" hidden="false" typeId="161a-85bd-f19e-a5a7" typeName="Prayer">
-                  <characteristics>
-                    <characteristic name="Prayer" typeId="19bc-965a-768d-defa">Searing Heat is a prayer that has an answer value of 3 and a range of 18&quot;. If answered, pick 1 enemy unit within range and visible to the chanter. Subtract 1 from hit rolls for attacks made by that unit until the start of your next hero phase.</characteristic>
+                    <characteristic name="Prayer" typeId="19bc-965a-768d-defa">Prayer of Grimnir’s Fury is a prayer that has an answer value of 3 and a range of 12&quot;. If answered, pick 1 friendly FYRESLAYERS HERO that does not have a mount that is within range, within 3&quot; of an enemy unit and visible to the chanter. That HERO can fight.</characteristic>
                   </characteristics>
                 </profile>
               </profiles>

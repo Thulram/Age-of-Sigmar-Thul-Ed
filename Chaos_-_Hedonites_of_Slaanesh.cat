@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="97f7-d3e9-f2f4-f0c6" name="Chaos - Hedonites of Slaanesh" revision="15" battleScribeVersion="2.03" authorName="Thulram" library="false" gameSystemId="e832-3291-06be-cab1" gameSystemRevision="14" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="97f7-d3e9-f2f4-f0c6" name="Chaos - Hedonites of Slaanesh" revision="16" battleScribeVersion="2.03" authorName="Thulram" library="false" gameSystemId="e832-3291-06be-cab1" gameSystemRevision="16" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <profileTypes>
     <profileType id="3f2f-edd9-f66c-bb96" name="Keeper of Secrets Wounds">
       <characteristicTypes>
@@ -113,9 +113,203 @@
           <categoryLinks>
             <categoryLink id="01b1-430a-89c6-a83f" name="Grand Strategy" hidden="false" targetId="318c-fa55-0855-47ef" primary="false"/>
           </categoryLinks>
+          <selectionEntries>
+            <selectionEntry id="479c-55c7-ad65-9caa" name="Coveted Riches" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="1dbb-59cf-88c2-f1e9" type="max"/>
+              </constraints>
+              <profiles>
+                <profile id="fc22-101e-0875-4275" name="Coveted Riches" hidden="false" typeId="7dc6-98f0-f5ba-fc16" typeName="Grand Strategy">
+                  <characteristics>
+                    <characteristic name="Grand Strategy" typeId="22d6-b382-f824-6381">When the battle ends, you complete this grand strategy if there are no enemy units with artefacts of power on the battlefield and there are 1 or more friendly units with artefacts of power on the battlefield.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <costs>
+                <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
+              </costs>
+            </selectionEntry>
+          </selectionEntries>
           <entryLinks>
             <entryLink id="70d9-ea70-5459-ef08" name="GHB &apos;21" hidden="false" collective="false" import="true" targetId="bb2d-2110-60b8-c13e" type="selectionEntryGroup"/>
           </entryLinks>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
+      <costs>
+        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="732f-6f70-4f54-d490" name="Hedonites of Slaanesh Battle Tactics" hidden="false" collective="false" import="true" type="upgrade">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4373-740f-1bf3-b0aa" type="instanceOf"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="e3a6-45ca-4974-b489" type="instanceOf"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="996a-613c-4006-25e3" type="instanceOf"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="6cd6-b22e-bfcb-9589" type="instanceOf"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="b543-cb16-0c79-fbc6" type="instanceOf"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+      <constraints>
+        <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="017d-72ef-f971-042a" type="max"/>
+      </constraints>
+      <profiles>
+        <profile id="3fbe-b0d9-83ec-3eb2" name="Death by a Thousand Cuts" hidden="false" typeId="4bb2-448c-446c-f522" typeName="Battle Tactic">
+          <characteristics>
+            <characteristic name="Battle Tactic" typeId="8c0f-be41-a70e-c699">Pick 1 enemy unit. You complete this tactic if wounds caused by attacks made by 3 or more different friendly units are allocated to that unit in this turn.</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="4191-97de-6a12-cda1" name="An Enrapturing Blur" hidden="false" typeId="4bb2-448c-446c-f522" typeName="Battle Tactic">
+          <characteristics>
+            <characteristic name="Battle Tactic" typeId="8c0f-be41-a70e-c699">Pick 1 enemy HERO that has no wounds allocated to them. You complete this tactic if that unit is destroyed in the combat phase of this turn before it is picked to fight.</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="9e32-5bed-c4cc-a15a" name="The Grand Feast" hidden="false" typeId="4bb2-448c-446c-f522" typeName="Battle Tactic">
+          <characteristics>
+            <characteristic name="Battle Tactic" typeId="8c0f-be41-a70e-c699">You complete this tactic if you receive 12 or more depravity points this turn.</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <categoryLinks>
+        <categoryLink id="1696-7618-b918-e29d" name="New CategoryLink" hidden="false" targetId="29f4-e63d-fa5b-1611" primary="true"/>
+      </categoryLinks>
+      <costs>
+        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="3b2a-7a13-d929-283f" name="Epicurean Revellers" hidden="false" collective="false" import="true" type="upgrade">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4373-740f-1bf3-b0aa" type="instanceOf"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="e3a6-45ca-4974-b489" type="instanceOf"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="996a-613c-4006-25e3" type="instanceOf"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="6cd6-b22e-bfcb-9589" type="instanceOf"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="b543-cb16-0c79-fbc6" type="instanceOf"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+      <profiles>
+        <profile id="5cbb-abbc-3888-65a4" name="Unified" hidden="false" typeId="66c5-932e-004a-574c" typeName="Battalion Abilities">
+          <characteristics>
+            <characteristic name="Battalion Ability" typeId="23f7-32c0-e059-29b2">One-drop Deployment.</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="0180-421c-f1fb-9135" name="Slayers" hidden="false" typeId="66c5-932e-004a-574c" typeName="Battalion Abilities">
+          <characteristics>
+            <characteristic name="Battalion Ability" typeId="23f7-32c0-e059-29b2">Once per battle, 1 unit from this battalion can receive the All-out Attack or Unleash Hell command without the command being issued and without a command point being spent.</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <categoryLinks>
+        <categoryLink id="fd9f-793e-2b98-f8f0" name="New CategoryLink" hidden="false" targetId="c03a-b1a8-66c6-3637" primary="true"/>
+      </categoryLinks>
+      <selectionEntries>
+        <selectionEntry id="3d53-b895-faee-a3d6" name="Fiends unit" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="b4ed-79f3-ccf5-2d17" type="max"/>
+          </constraints>
+          <costs>
+            <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="e74a-6e25-e0a6-c4b6" name="Exalted Chariot unit" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="6fd6-2f15-ea64-7ce6" type="max"/>
+          </constraints>
+          <costs>
+            <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="dc31-848a-0924-5418" name="Hellflyaer unit" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="eaae-5182-0166-907c" type="max"/>
+          </constraints>
+          <costs>
+            <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
+          </costs>
+        </selectionEntry>
+      </selectionEntries>
+      <selectionEntryGroups>
+        <selectionEntryGroup id="cfc5-ce7d-f405-1edc" name="Daemonettes" hidden="false" collective="false" import="true">
+          <constraints>
+            <constraint field="selections" scope="parent" value="6.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="5318-dfd7-7b44-9e6d" type="max"/>
+            <constraint field="selections" scope="parent" value="2.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="66d2-665a-a030-4bcc" type="min"/>
+          </constraints>
+          <selectionEntries>
+            <selectionEntry id="80be-5f9a-ea42-9140" name="Daemonettes unit" hidden="false" collective="false" import="true" type="upgrade">
+              <costs>
+                <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
+              </costs>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
+      <costs>
+        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="df48-9f95-bf56-4b8d" name="Nobles of Excess" hidden="false" collective="false" import="true" type="upgrade">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4373-740f-1bf3-b0aa" type="instanceOf"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="e3a6-45ca-4974-b489" type="instanceOf"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="996a-613c-4006-25e3" type="instanceOf"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="6cd6-b22e-bfcb-9589" type="instanceOf"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="b543-cb16-0c79-fbc6" type="instanceOf"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+      <profiles>
+        <profile id="7cd4-ef33-37a2-0bdc" name="Expert" hidden="false" typeId="66c5-932e-004a-574c" typeName="Battalion Abilities">
+          <characteristics>
+            <characteristic name="Battalion Ability" typeId="23f7-32c0-e059-29b2">Once per battle, 1 unit from this battalion can receive the All-out Attack or All-out Defence command without the command being issued and without a command point being spent.</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <categoryLinks>
+        <categoryLink id="e93f-adfc-65ab-1199" name="New CategoryLink" hidden="false" targetId="c03a-b1a8-66c6-3637" primary="true"/>
+      </categoryLinks>
+      <selectionEntryGroups>
+        <selectionEntryGroup id="5173-10ee-be1d-ee1a" name="Myrmidesh Painbringers" hidden="false" collective="false" import="true">
+          <constraints>
+            <constraint field="selections" scope="parent" value="3.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="9868-c823-795e-f156" type="max"/>
+            <constraint field="selections" scope="parent" value="2.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="51d9-f313-0553-c21f" type="min"/>
+          </constraints>
+          <selectionEntries>
+            <selectionEntry id="99e7-6637-bb66-7bb9" name="Myrmidesh Painbringers unit" hidden="false" collective="false" import="true" type="upgrade">
+              <costs>
+                <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
+              </costs>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
+        <selectionEntryGroup id="52d2-bb6f-602d-d289" name="Symbaresh Twinsouls" hidden="false" collective="false" import="true">
+          <constraints>
+            <constraint field="selections" scope="parent" value="3.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="14a5-ded6-a8b8-26c1" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="919b-2272-b71c-d673" type="min"/>
+          </constraints>
+          <selectionEntries>
+            <selectionEntry id="8a1c-7802-1718-6a8a" name="Symbaresh Twinsouls unit" hidden="false" collective="false" import="true" type="upgrade">
+              <costs>
+                <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
+              </costs>
+            </selectionEntry>
+          </selectionEntries>
         </selectionEntryGroup>
       </selectionEntryGroups>
       <costs>
@@ -147,6 +341,7 @@
         <entryLink id="e4f8-b771-872f-642c" name="Command Traits" hidden="false" collective="false" import="true" targetId="548e-e11c-aeda-8d1b" type="selectionEntryGroup"/>
         <entryLink id="667d-9368-d1ed-d8bf" name="Hedonites Spell Lores" hidden="false" collective="false" import="true" targetId="87c2-3bb8-b59b-6d11" type="selectionEntryGroup"/>
         <entryLink id="f91a-6560-7372-2f6d" name="Invaders Host Extra General" hidden="false" collective="false" import="true" targetId="511a-c718-0d06-1bc5" type="selectionEntry"/>
+        <entryLink id="88f2-e6ec-a355-d30d" name="Battalion Formation" hidden="false" collective="false" import="true" targetId="d07d-93de-3bf7-d401" type="selectionEntryGroup"/>
       </entryLinks>
     </entryLink>
     <entryLink id="4a01-6abc-bd0d-9abb" name="Shalaxi Helbane" hidden="false" collective="false" import="true" targetId="61bb-d7b3-5a07-1593" type="selectionEntry">
@@ -158,6 +353,7 @@
         </entryLink>
         <entryLink id="90b7-ebe2-e78e-4104" name="Hedonites Spell Lores" hidden="false" collective="false" import="true" targetId="87c2-3bb8-b59b-6d11" type="selectionEntryGroup"/>
         <entryLink id="fd0d-21f7-3330-86bc" name="Invaders Host Extra General" hidden="false" collective="false" import="true" targetId="511a-c718-0d06-1bc5" type="selectionEntry"/>
+        <entryLink id="ba33-dafe-0487-f11f" name="Battalion Formation" hidden="false" collective="false" import="true" targetId="d07d-93de-3bf7-d401" type="selectionEntryGroup"/>
       </entryLinks>
     </entryLink>
     <entryLink id="596f-af1d-86cb-878e" name="Syll&apos;esske, The Vengeful Allegiance" hidden="false" collective="false" import="true" targetId="2c44-67c6-cb68-5df8" type="selectionEntry">
@@ -169,6 +365,7 @@
         </entryLink>
         <entryLink id="5860-2556-15e8-dcdb" name="Hedonites Spell Lores" hidden="false" collective="false" import="true" targetId="87c2-3bb8-b59b-6d11" type="selectionEntryGroup"/>
         <entryLink id="8517-7cc4-0043-8ab3" name="Invaders Host Extra General" hidden="false" collective="false" import="true" targetId="511a-c718-0d06-1bc5" type="selectionEntry"/>
+        <entryLink id="f131-69f0-74bd-ba2f" name="Battalion Formation" hidden="false" collective="false" import="true" targetId="d07d-93de-3bf7-d401" type="selectionEntryGroup"/>
       </entryLinks>
     </entryLink>
     <entryLink id="b136-5587-eac2-24ce" name="The Contorted Epitome" hidden="false" collective="false" import="true" targetId="98d7-c82a-5c0a-0d98" type="selectionEntry">
@@ -178,6 +375,7 @@
         <entryLink id="156f-370a-cbdb-85af" name="Command Traits" hidden="false" collective="false" import="true" targetId="548e-e11c-aeda-8d1b" type="selectionEntryGroup"/>
         <entryLink id="2e4d-419c-272d-59c6" name="Hedonites Spell Lores" hidden="false" collective="false" import="true" targetId="87c2-3bb8-b59b-6d11" type="selectionEntryGroup"/>
         <entryLink id="3021-9b90-345c-dfcf" name="Invaders Host Extra General" hidden="false" collective="false" import="true" targetId="511a-c718-0d06-1bc5" type="selectionEntry"/>
+        <entryLink id="77f4-0b6f-a46c-1121" name="Battalion Formation" hidden="false" collective="false" import="true" targetId="d07d-93de-3bf7-d401" type="selectionEntryGroup"/>
       </entryLinks>
     </entryLink>
     <entryLink id="be9a-d87f-e900-1e34" name="The Masque" hidden="false" collective="false" import="true" targetId="5681-22c5-9f75-7dc9" type="selectionEntry">
@@ -188,6 +386,7 @@
           </categoryLinks>
         </entryLink>
         <entryLink id="7a96-49c5-e9f0-883c" name="Invaders Host Extra General" hidden="false" collective="false" import="true" targetId="511a-c718-0d06-1bc5" type="selectionEntry"/>
+        <entryLink id="efdf-58c4-f07e-72ad" name="Battalion Formation" hidden="false" collective="false" import="true" targetId="d07d-93de-3bf7-d401" type="selectionEntryGroup"/>
       </entryLinks>
     </entryLink>
     <entryLink id="7f8c-fe88-0d7c-d65d" name="Infernal Enrapturess, Herald of Slaanesh" hidden="false" collective="false" import="true" targetId="3941-490e-33fe-80bf" type="selectionEntry">
@@ -197,6 +396,7 @@
         <entryLink id="19a3-7f2f-0343-1ad5" name="Command Traits" hidden="false" collective="false" import="true" targetId="548e-e11c-aeda-8d1b" type="selectionEntryGroup"/>
         <entryLink id="9ca4-fcc7-1d2f-7b66" name="Invaders Host Extra General" hidden="false" collective="false" import="true" targetId="511a-c718-0d06-1bc5" type="selectionEntry"/>
         <entryLink id="ea8e-642b-b79b-b088" name="Hedonites Spell Lores" hidden="false" collective="false" import="true" targetId="87c2-3bb8-b59b-6d11" type="selectionEntryGroup"/>
+        <entryLink id="3762-3b07-602d-abec" name="Battalion Formation" hidden="false" collective="false" import="true" targetId="d07d-93de-3bf7-d401" type="selectionEntryGroup"/>
       </entryLinks>
     </entryLink>
     <entryLink id="a646-0d71-4e30-c0db" name="Viceleader, Herald of Slaanesh" hidden="false" collective="false" import="true" targetId="5dff-3db2-6670-832b" type="selectionEntry">
@@ -206,6 +406,7 @@
         <entryLink id="8b61-1f20-997c-f44b" name="Command Traits" hidden="false" collective="false" import="true" targetId="548e-e11c-aeda-8d1b" type="selectionEntryGroup"/>
         <entryLink id="706a-3d19-1639-8819" name="Hedonites Spell Lores" hidden="false" collective="false" import="true" targetId="87c2-3bb8-b59b-6d11" type="selectionEntryGroup"/>
         <entryLink id="c872-7676-1417-50db" name="Invaders Host Extra General" hidden="false" collective="false" import="true" targetId="511a-c718-0d06-1bc5" type="selectionEntry"/>
+        <entryLink id="562d-c7b4-6523-4dc1" name="Battalion Formation" hidden="false" collective="false" import="true" targetId="d07d-93de-3bf7-d401" type="selectionEntryGroup"/>
       </entryLinks>
     </entryLink>
     <entryLink id="7585-c0f5-9f77-ad33" name="Bladebringer, Herald on Hellflayer" hidden="false" collective="false" import="true" targetId="63f9-8750-1d37-c96e" type="selectionEntry">
@@ -215,9 +416,14 @@
         <entryLink id="548b-6118-afd7-520b" name="Command Traits" hidden="false" collective="false" import="true" targetId="548e-e11c-aeda-8d1b" type="selectionEntryGroup"/>
         <entryLink id="5938-cba1-56b2-0f7f" name="Hedonites Spell Lores" hidden="false" collective="false" import="true" targetId="87c2-3bb8-b59b-6d11" type="selectionEntryGroup"/>
         <entryLink id="c302-d69c-629b-e4f7" name="Invaders Host Extra General" hidden="false" collective="false" import="true" targetId="511a-c718-0d06-1bc5" type="selectionEntry"/>
+        <entryLink id="d19a-2c39-a105-baa0" name="Battalion Formation" hidden="false" collective="false" import="true" targetId="d07d-93de-3bf7-d401" type="selectionEntryGroup"/>
       </entryLinks>
     </entryLink>
-    <entryLink id="d088-46fb-3c14-3933" name="Hellflayer" hidden="false" collective="false" import="true" targetId="4e37-e703-ab95-0533" type="selectionEntry"/>
+    <entryLink id="d088-46fb-3c14-3933" name="Hellflayer" hidden="false" collective="false" import="true" targetId="4e37-e703-ab95-0533" type="selectionEntry">
+      <entryLinks>
+        <entryLink id="25be-b8b1-036f-1d2a" name="Battalion Formation" hidden="false" collective="false" import="true" targetId="d07d-93de-3bf7-d401" type="selectionEntryGroup"/>
+      </entryLinks>
+    </entryLink>
     <entryLink id="398e-4c14-6c95-40bf" name="Bladebringer, Herald on Seeker Chariot" hidden="false" collective="false" import="true" targetId="4f96-1e8c-44dc-cc9b" type="selectionEntry">
       <entryLinks>
         <entryLink id="fc7b-8d59-8468-4f45" name="General" hidden="false" collective="false" import="true" targetId="98a4-3d6d-a7b9-399f" type="selectionEntry"/>
@@ -225,6 +431,7 @@
         <entryLink id="3e71-8f29-acfd-770e" name="Command Traits" hidden="false" collective="false" import="true" targetId="548e-e11c-aeda-8d1b" type="selectionEntryGroup"/>
         <entryLink id="3ce7-46ad-9188-7bc9" name="Hedonites Spell Lores" hidden="false" collective="false" import="true" targetId="87c2-3bb8-b59b-6d11" type="selectionEntryGroup"/>
         <entryLink id="1a94-8fb8-4ad5-f55d" name="Invaders Host Extra General" hidden="false" collective="false" import="true" targetId="511a-c718-0d06-1bc5" type="selectionEntry"/>
+        <entryLink id="cf25-0000-3230-db6f" name="Battalion Formation" hidden="false" collective="false" import="true" targetId="d07d-93de-3bf7-d401" type="selectionEntryGroup"/>
       </entryLinks>
     </entryLink>
     <entryLink id="e648-31ad-f93c-3b77" name="Seeker Chariots" hidden="false" collective="false" import="true" targetId="6e66-d774-74f1-5ea4" type="selectionEntry">
@@ -242,6 +449,9 @@
           </conditionGroups>
         </modifier>
       </modifiers>
+      <entryLinks>
+        <entryLink id="a521-b134-ca4e-b87a" name="Battalion Formation" hidden="false" collective="false" import="true" targetId="d07d-93de-3bf7-d401" type="selectionEntryGroup"/>
+      </entryLinks>
     </entryLink>
     <entryLink id="3f26-c330-b97e-7255" name="Bladebringer, Herald on Exalted Chariot" hidden="false" collective="false" import="true" targetId="8471-c5e8-69d9-a046" type="selectionEntry">
       <entryLinks>
@@ -250,11 +460,24 @@
         <entryLink id="d053-73c7-94da-00fd" name="Command Traits" hidden="false" collective="false" import="true" targetId="548e-e11c-aeda-8d1b" type="selectionEntryGroup"/>
         <entryLink id="ebae-71f1-f91b-acd5" name="Hedonites Spell Lores" hidden="false" collective="false" import="true" targetId="87c2-3bb8-b59b-6d11" type="selectionEntryGroup"/>
         <entryLink id="5278-bbc5-6019-4d71" name="Invaders Host Extra General" hidden="false" collective="false" import="true" targetId="511a-c718-0d06-1bc5" type="selectionEntry"/>
+        <entryLink id="057c-f23c-3bd8-f9bf" name="Battalion Formation" hidden="false" collective="false" import="true" targetId="d07d-93de-3bf7-d401" type="selectionEntryGroup"/>
       </entryLinks>
     </entryLink>
-    <entryLink id="0fb9-409f-8aa1-9619" name="Exalted Chariot" hidden="false" collective="false" import="true" targetId="b424-d9c3-3fe2-9257" type="selectionEntry"/>
-    <entryLink id="7618-2ff6-1bcf-4a74" name="Daemonettes" hidden="false" collective="false" import="true" targetId="9aab-dbef-7f28-de38" type="selectionEntry"/>
-    <entryLink id="99fb-50e0-4bd3-25ce" name="Seekers" hidden="false" collective="false" import="true" targetId="557e-4177-4be2-2d54" type="selectionEntry"/>
+    <entryLink id="0fb9-409f-8aa1-9619" name="Exalted Chariot" hidden="false" collective="false" import="true" targetId="b424-d9c3-3fe2-9257" type="selectionEntry">
+      <entryLinks>
+        <entryLink id="aafc-c711-b24d-4942" name="Battalion Formation" hidden="false" collective="false" import="true" targetId="d07d-93de-3bf7-d401" type="selectionEntryGroup"/>
+      </entryLinks>
+    </entryLink>
+    <entryLink id="7618-2ff6-1bcf-4a74" name="Daemonettes" hidden="false" collective="false" import="true" targetId="9aab-dbef-7f28-de38" type="selectionEntry">
+      <entryLinks>
+        <entryLink id="3ebe-28fc-c7c0-8248" name="Battalion Formation" hidden="false" collective="false" import="true" targetId="d07d-93de-3bf7-d401" type="selectionEntryGroup"/>
+      </entryLinks>
+    </entryLink>
+    <entryLink id="99fb-50e0-4bd3-25ce" name="Seekers" hidden="false" collective="false" import="true" targetId="557e-4177-4be2-2d54" type="selectionEntry">
+      <entryLinks>
+        <entryLink id="7c8b-ca25-3541-8e9b" name="Battalion Formation" hidden="false" collective="false" import="true" targetId="d07d-93de-3bf7-d401" type="selectionEntryGroup"/>
+      </entryLinks>
+    </entryLink>
     <entryLink id="e38f-623a-e4ce-63dc" name="Hellstriders" hidden="false" collective="false" import="true" targetId="6b4e-c19c-2989-76d9" type="selectionEntry">
       <modifiers>
         <modifier type="remove" field="category" value="a42d-220e-6a88-7bf6">
@@ -272,6 +495,9 @@
       <categoryLinks>
         <categoryLink id="bfb2-06e3-6a61-230d" name="BATTLELINE" hidden="false" targetId="a42d-220e-6a88-7bf6" primary="false"/>
       </categoryLinks>
+      <entryLinks>
+        <entryLink id="2b7a-0b56-1d64-9c9c" name="Battalion Formation" hidden="false" collective="false" import="true" targetId="d07d-93de-3bf7-d401" type="selectionEntryGroup"/>
+      </entryLinks>
     </entryLink>
     <entryLink id="bd16-ebec-1480-c5a7" name="Archaon the Everchosen" hidden="false" collective="false" import="true" targetId="b236-3f69-c15f-a954" type="selectionEntry">
       <entryLinks>
@@ -361,16 +587,6 @@
     </entryLink>
     <entryLink id="5b83-487c-7b0c-f2f7" name="Soul Grinder" hidden="false" collective="false" import="true" targetId="d97a-886d-a857-5e6e" type="selectionEntry"/>
     <entryLink id="b38d-a021-9fd4-cfe2" name="Varanguard" hidden="false" collective="false" import="true" targetId="6b24-be40-5821-6573" type="selectionEntry"/>
-    <entryLink id="c6fe-a187-2f96-6da0" name="Daemonsteel Contingent" hidden="false" collective="false" import="true" targetId="f9fe-a859-29cc-8013" type="selectionEntry"/>
-    <entryLink id="a7c2-6f91-cef2-47dc" name="Epicurean Revellers" hidden="false" collective="false" import="true" targetId="0d49-fcf0-39c2-bb25" type="selectionEntry"/>
-    <entryLink id="e173-4eb4-c4a3-c592" name="Vengeful Throng" hidden="false" collective="false" import="true" targetId="2c73-2321-e8f6-14ee" type="selectionEntry"/>
-    <entryLink id="7c5f-65d5-4db1-68cc" name="The Vengeful Alliance" hidden="false" collective="false" import="true" targetId="d834-6c28-b8b0-cfd0" type="selectionEntry"/>
-    <entryLink id="dcb9-440d-5540-84df" name="Devout Supplicants" hidden="false" collective="false" import="true" targetId="c1ed-bbff-8e8f-eecd" type="selectionEntry"/>
-    <entryLink id="bb85-1ab9-f8b5-242f" name="Hedonite Host" hidden="false" collective="false" import="true" targetId="63c1-f629-9479-b0db" type="selectionEntry"/>
-    <entryLink id="444b-7ed2-2aa8-ee60" name="Supreme Sybarites" hidden="false" collective="false" import="true" targetId="1c9f-5f4c-6802-fd42" type="selectionEntry"/>
-    <entryLink id="313c-f82b-db7c-3d84" name="Seeker Cavalcade" hidden="false" collective="false" import="true" targetId="575d-2e74-1b3c-87c2" type="selectionEntry"/>
-    <entryLink id="ad72-37c9-3bb6-e5d7" name="Pleasurebound Warband" hidden="false" collective="false" import="true" targetId="a738-1cc3-1950-c861" type="selectionEntry"/>
-    <entryLink id="ca06-6748-e67c-1a1b" name="Depraved Drove" hidden="false" collective="false" import="true" targetId="fd52-7e90-39ba-555a" type="selectionEntry"/>
     <entryLink id="f20e-3fa5-2300-f5dc" name="Soulfeaster Keeper of Secrets" hidden="false" collective="false" import="true" targetId="978c-59bb-a63f-91c5" type="selectionEntry">
       <entryLinks>
         <entryLink id="a5d3-dcc3-bc62-1153" name="General" hidden="false" collective="false" import="true" targetId="98a4-3d6d-a7b9-399f" type="selectionEntry"/>
@@ -378,9 +594,14 @@
         <entryLink id="3f4c-dcb0-2633-2823" name="Command Traits" hidden="false" collective="false" import="true" targetId="548e-e11c-aeda-8d1b" type="selectionEntryGroup"/>
         <entryLink id="cf39-d7b1-082e-9313" name="Hedonites Spell Lores" hidden="false" collective="false" import="true" targetId="87c2-3bb8-b59b-6d11" type="selectionEntryGroup"/>
         <entryLink id="11ba-bda1-4a4a-9021" name="Invaders Host Extra General" hidden="false" collective="false" import="true" targetId="511a-c718-0d06-1bc5" type="selectionEntry"/>
+        <entryLink id="f99b-474e-1811-6f83" name="Battalion Formation" hidden="false" collective="false" import="true" targetId="d07d-93de-3bf7-d401" type="selectionEntryGroup"/>
       </entryLinks>
     </entryLink>
-    <entryLink id="27cd-44d0-87c3-67ec" name="Fiends" hidden="false" collective="false" import="true" targetId="b07f-0154-0c3b-91a7" type="selectionEntry"/>
+    <entryLink id="27cd-44d0-87c3-67ec" name="Fiends" hidden="false" collective="false" import="true" targetId="b07f-0154-0c3b-91a7" type="selectionEntry">
+      <entryLinks>
+        <entryLink id="e871-f0bb-c36c-2b68" name="Battalion Formation" hidden="false" collective="false" import="true" targetId="d07d-93de-3bf7-d401" type="selectionEntryGroup"/>
+      </entryLinks>
+    </entryLink>
     <entryLink id="2c3a-9556-8e72-4c9d" name="Lord of Pain" hidden="false" collective="false" import="true" targetId="9b8f-acbd-252f-6b7d" type="selectionEntry">
       <entryLinks>
         <entryLink id="8ec0-6e61-6e72-f82b" name="General" hidden="false" collective="false" import="true" targetId="98a4-3d6d-a7b9-399f" type="selectionEntry">
@@ -396,9 +617,14 @@
         <entryLink id="ebea-98f6-1dae-58a8" name="Artefacts of Power" hidden="false" collective="false" import="true" targetId="a520-01ab-3cef-a486" type="selectionEntryGroup"/>
         <entryLink id="a2bb-cbaf-069f-4c5e" name="Command Traits" hidden="false" collective="false" import="true" targetId="548e-e11c-aeda-8d1b" type="selectionEntryGroup"/>
         <entryLink id="0e19-b7f4-107b-8bd8" name="Hedonites Spell Lores" hidden="false" collective="false" import="true" targetId="87c2-3bb8-b59b-6d11" type="selectionEntryGroup"/>
+        <entryLink id="a820-3e60-c28a-0f73" name="Battalion Formation" hidden="false" collective="false" import="true" targetId="d07d-93de-3bf7-d401" type="selectionEntryGroup"/>
       </entryLinks>
     </entryLink>
-    <entryLink id="c80e-5d7a-fcea-4519" name="The Dread Pageant" hidden="false" collective="false" import="true" targetId="2f15-a248-7dae-bbf7" type="selectionEntry"/>
+    <entryLink id="c80e-5d7a-fcea-4519" name="The Dread Pageant" hidden="false" collective="false" import="true" targetId="2f15-a248-7dae-bbf7" type="selectionEntry">
+      <entryLinks>
+        <entryLink id="fcc9-c2c6-b141-7a5c" name="Battalion Formation" hidden="false" collective="false" import="true" targetId="d07d-93de-3bf7-d401" type="selectionEntryGroup"/>
+      </entryLinks>
+    </entryLink>
     <entryLink id="8b48-11e7-ecd5-3e6b" name="Symbaresh Twinsouls" hidden="false" collective="false" import="true" targetId="27c7-4eb8-6783-73e6" type="selectionEntry">
       <modifiers>
         <modifier type="remove" field="category" value="a42d-220e-6a88-7bf6">
@@ -410,12 +636,22 @@
       <categoryLinks>
         <categoryLink id="9311-331b-e5ee-0990" name="BATTLELINE" hidden="false" targetId="a42d-220e-6a88-7bf6" primary="false"/>
       </categoryLinks>
+      <entryLinks>
+        <entryLink id="f3d8-81dc-e714-581b" name="Battalion Formation" hidden="false" collective="false" import="true" targetId="d07d-93de-3bf7-d401" type="selectionEntryGroup"/>
+      </entryLinks>
     </entryLink>
-    <entryLink id="6a70-f5bb-b179-6c39" name="Slickblade Seekers" hidden="false" collective="false" import="true" targetId="681e-a2c6-4833-1d5a" type="selectionEntry"/>
+    <entryLink id="6a70-f5bb-b179-6c39" name="Slickblade Seekers" hidden="false" collective="false" import="true" targetId="681e-a2c6-4833-1d5a" type="selectionEntry">
+      <entryLinks>
+        <entryLink id="cf01-8756-1cc8-1317" name="Battalion Formation" hidden="false" collective="false" import="true" targetId="d07d-93de-3bf7-d401" type="selectionEntryGroup"/>
+      </entryLinks>
+    </entryLink>
     <entryLink id="b8f4-ed5f-1b98-f82b" name="Slaangor Fiendbloods" hidden="false" collective="false" import="true" targetId="decd-6c04-2d0b-1da1" type="selectionEntry">
       <categoryLinks>
         <categoryLink id="8aad-d82b-1407-be01" name="Hedonite" hidden="false" targetId="9af3-d9d6-e682-7929" primary="false"/>
       </categoryLinks>
+      <entryLinks>
+        <entryLink id="4118-5b61-5b7d-3ac7" name="Battalion Formation" hidden="false" collective="false" import="true" targetId="d07d-93de-3bf7-d401" type="selectionEntryGroup"/>
+      </entryLinks>
     </entryLink>
     <entryLink id="a518-b57c-cfb2-0b9d" name="Sigvald, Prince of Slaanesh" hidden="false" collective="false" import="true" targetId="1567-e643-31ac-f08a" type="selectionEntry">
       <entryLinks>
@@ -425,6 +661,7 @@
           </categoryLinks>
         </entryLink>
         <entryLink id="4604-37dd-7784-481f" name="Invaders Host Extra General" hidden="false" collective="false" import="true" targetId="511a-c718-0d06-1bc5" type="selectionEntry"/>
+        <entryLink id="b2a0-74c0-a556-f346" name="Battalion Formation" hidden="false" collective="false" import="true" targetId="d07d-93de-3bf7-d401" type="selectionEntryGroup"/>
       </entryLinks>
     </entryLink>
     <entryLink id="0bc6-4070-3781-8429" name="Shardspeaker of Slaanesh" hidden="false" collective="false" import="true" targetId="9802-e51c-f34a-1953" type="selectionEntry">
@@ -434,6 +671,7 @@
         <entryLink id="86a9-b1c9-c051-e347" name="Artefacts of Power" hidden="false" collective="false" import="true" targetId="a520-01ab-3cef-a486" type="selectionEntryGroup"/>
         <entryLink id="702a-a57b-a5ff-d153" name="Invaders Host Extra General" hidden="false" collective="false" import="true" targetId="511a-c718-0d06-1bc5" type="selectionEntry"/>
         <entryLink id="6ca8-7157-b496-f7e6" name="Hedonites Spell Lores" hidden="false" collective="false" import="true" targetId="87c2-3bb8-b59b-6d11" type="selectionEntryGroup"/>
+        <entryLink id="03b1-b93b-f6f5-c868" name="Battalion Formation" hidden="false" collective="false" import="true" targetId="d07d-93de-3bf7-d401" type="selectionEntryGroup"/>
       </entryLinks>
     </entryLink>
     <entryLink id="39cd-5ffa-240d-eb36" name="Myrmidesh Painbringers" hidden="false" collective="false" import="true" targetId="1326-840f-9c0d-cb87" type="selectionEntry">
@@ -447,6 +685,9 @@
       <categoryLinks>
         <categoryLink id="36cb-8dc9-cf08-aee5" name="BATTLELINE" hidden="false" targetId="a42d-220e-6a88-7bf6" primary="false"/>
       </categoryLinks>
+      <entryLinks>
+        <entryLink id="2715-6e96-6c68-acf3" name="Battalion Formation" hidden="false" collective="false" import="true" targetId="d07d-93de-3bf7-d401" type="selectionEntryGroup"/>
+      </entryLinks>
     </entryLink>
     <entryLink id="9694-9bbc-03be-255f" name="Glutos Orscollion, Lord of Gluttony" hidden="false" collective="false" import="true" targetId="30e9-0004-6ff3-ce7a" type="selectionEntry">
       <entryLinks>
@@ -457,6 +698,7 @@
         </entryLink>
         <entryLink id="e148-82b8-191b-81c8" name="Hedonites Spell Lores" hidden="false" collective="false" import="true" targetId="87c2-3bb8-b59b-6d11" type="selectionEntryGroup"/>
         <entryLink id="d04c-97ce-98ea-5af7" name="Invaders Host Extra General" hidden="false" collective="false" import="true" targetId="511a-c718-0d06-1bc5" type="selectionEntry"/>
+        <entryLink id="4f1b-fbce-895f-79c4" name="Battalion Formation" hidden="false" collective="false" import="true" targetId="d07d-93de-3bf7-d401" type="selectionEntryGroup"/>
       </entryLinks>
     </entryLink>
     <entryLink id="5d0e-33f4-1395-52d8" name="Blissbarb Archers" hidden="false" collective="false" import="true" targetId="b309-c000-e0c8-b592" type="selectionEntry">
@@ -476,11 +718,15 @@
       <categoryLinks>
         <categoryLink id="0a91-fd14-aec5-07f7" name="BATTLELINE" hidden="false" targetId="a42d-220e-6a88-7bf6" primary="false"/>
       </categoryLinks>
+      <entryLinks>
+        <entryLink id="b8a5-cd91-7379-0371" name="Battalion Formation" hidden="false" collective="false" import="true" targetId="d07d-93de-3bf7-d401" type="selectionEntryGroup"/>
+      </entryLinks>
     </entryLink>
-    <entryLink id="a47b-1536-5d5f-53a3" name="Blissbarb Seekers" hidden="false" collective="false" import="true" targetId="c904-4f68-bac3-f7a8" type="selectionEntry"/>
-    <entryLink id="3dc2-4c2d-4a99-5cb0" name="Depraved Carnival" hidden="false" collective="false" import="true" targetId="87ee-0f1d-94de-295b" type="selectionEntry"/>
-    <entryLink id="d86b-48a5-0003-4386" name="Exalted Speed-Knights" hidden="false" collective="false" import="true" targetId="0f61-eb4c-7939-9bec" type="selectionEntry"/>
-    <entryLink id="c546-64f0-b43c-cd79" name="Nobles of Excess" hidden="false" collective="false" import="true" targetId="6a9b-f492-9b4b-d123" type="selectionEntry"/>
+    <entryLink id="a47b-1536-5d5f-53a3" name="Blissbarb Seekers" hidden="false" collective="false" import="true" targetId="c904-4f68-bac3-f7a8" type="selectionEntry">
+      <entryLinks>
+        <entryLink id="e2d2-b7d0-ff1c-da59" name="Battalion Formation" hidden="false" collective="false" import="true" targetId="d07d-93de-3bf7-d401" type="selectionEntryGroup"/>
+      </entryLinks>
+    </entryLink>
     <entryLink id="26e1-90e0-ffd5-f8cb" name="Dexcessa, The Talon of Slaanesh" hidden="false" collective="false" import="true" targetId="84a8-6768-1da9-5016" type="selectionEntry">
       <entryLinks>
         <entryLink id="90da-5815-8b28-b63f" name="General" hidden="false" collective="false" import="true" targetId="98a4-3d6d-a7b9-399f" type="selectionEntry">
@@ -488,6 +734,7 @@
             <categoryLink id="2d6e-24c2-eb37-4acc" name="Named General" hidden="false" targetId="8b3d-7f03-e1f9-eaf5" primary="false"/>
           </categoryLinks>
         </entryLink>
+        <entryLink id="d4b1-4e8a-fb2a-8802" name="Battalion Formation" hidden="false" collective="false" import="true" targetId="d07d-93de-3bf7-d401" type="selectionEntryGroup"/>
       </entryLinks>
     </entryLink>
     <entryLink id="c539-72bf-0ab7-53dd" name="Synessa, The Voice of Slaanesh" hidden="false" collective="false" import="true" targetId="077d-8b8f-3cfc-84db" type="selectionEntry">
@@ -497,9 +744,9 @@
             <categoryLink id="1818-8295-a240-78db" name="Named General" hidden="false" targetId="8b3d-7f03-e1f9-eaf5" primary="false"/>
           </categoryLinks>
         </entryLink>
+        <entryLink id="6aa5-8554-832c-e446" name="Battalion Formation" hidden="false" collective="false" import="true" targetId="d07d-93de-3bf7-d401" type="selectionEntryGroup"/>
       </entryLinks>
     </entryLink>
-    <entryLink id="3116-0c54-422f-c8fd" name="The Exquisite Pursuit" hidden="false" collective="false" import="true" targetId="35f4-f345-7e8b-83ac" type="selectionEntry"/>
     <entryLink id="604a-1918-3b08-c818" name="Beastlord" hidden="false" collective="false" import="true" targetId="9e0e-4909-17ad-0438" type="selectionEntry">
       <categoryLinks>
         <categoryLink id="77c9-8c4b-222d-d6bf" name="Allegiant - Beasts of Chaos" hidden="false" targetId="d121-941f-b5b7-ed73" primary="false"/>
@@ -722,823 +969,6 @@ If that HERO you picked has an artefact of power, instead of suffering 1 mortal 
         <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="575d-2e74-1b3c-87c2" name="Seeker Cavalcade" publicationId="29d6-453f-ecc0-3e4b" hidden="false" collective="false" import="true" type="upgrade">
-      <profiles>
-        <profile id="9444-7cc8-533b-dff0" name="Drawn to Battle" hidden="false" typeId="66c5-932e-004a-574c" typeName="Battalion Abilities">
-          <characteristics>
-            <characteristic name="Battalion Ability" typeId="23f7-32c0-e059-29b2">Units from this battalion is eligible to fight in the combat phase if it is within 6&quot; of an enemy unit instead of 3&quot;, and can move an extra 3&quot; when they pile in.</characteristic>
-          </characteristics>
-        </profile>
-      </profiles>
-      <categoryLinks>
-        <categoryLink id="06bd-29e1-8cf8-a93f" name="New CategoryLink" hidden="false" targetId="3706-e0e8-674f-c41b" primary="true"/>
-      </categoryLinks>
-      <selectionEntryGroups>
-        <selectionEntryGroup id="3fdc-9af8-7937-8f0a" name="0-4 units of Seeker Chariots" hidden="false" collective="false" import="true">
-          <constraints>
-            <constraint field="selections" scope="parent" value="4.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="23aa-0e6f-cb3e-9d2e" type="max"/>
-          </constraints>
-          <entryLinks>
-            <entryLink id="4154-41c4-8b5f-f673" name="Seeker Chariots" hidden="false" collective="false" import="true" targetId="6e66-d774-74f1-5ea4" type="selectionEntry">
-              <modifiers>
-                <modifier type="remove" field="category" value="a42d-220e-6a88-7bf6">
-                  <conditionGroups>
-                    <conditionGroup type="or">
-                      <conditions>
-                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4373-740f-1bf3-b0aa" type="instanceOf"/>
-                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="e3a6-45ca-4974-b489" type="instanceOf"/>
-                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="6cd6-b22e-bfcb-9589" type="instanceOf"/>
-                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="a15a-dd81-d8ca-0db2" type="equalTo"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
-                </modifier>
-              </modifiers>
-            </entryLink>
-          </entryLinks>
-        </selectionEntryGroup>
-        <selectionEntryGroup id="2662-b8ab-d6c3-fe8e" name="2-6 featured units in any combination" hidden="false" collective="false" import="true">
-          <constraints>
-            <constraint field="selections" scope="parent" value="6.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="17d1-c000-ea67-97a7" type="max"/>
-            <constraint field="selections" scope="parent" value="2.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="1679-a924-9ef8-e326" type="min"/>
-          </constraints>
-          <entryLinks>
-            <entryLink id="32b3-38ad-ce1e-1294" name="Seekers" hidden="false" collective="false" import="true" targetId="557e-4177-4be2-2d54" type="selectionEntry"/>
-            <entryLink id="fcaa-edaa-f6ba-f0d0" name="Hellstriders" hidden="false" collective="false" import="true" targetId="6b4e-c19c-2989-76d9" type="selectionEntry"/>
-          </entryLinks>
-        </selectionEntryGroup>
-      </selectionEntryGroups>
-      <costs>
-        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="140.0"/>
-      </costs>
-    </selectionEntry>
-    <selectionEntry id="0d49-fcf0-39c2-bb25" name="Epicurean Revellers" publicationId="29d6-453f-ecc0-3e4b" hidden="false" collective="false" import="true" type="upgrade">
-      <profiles>
-        <profile id="f643-7b4d-6a4f-5ac9" name="Perfect Destroyers" hidden="false" typeId="66c5-932e-004a-574c" typeName="Battalion Abilities">
-          <characteristics>
-            <characteristic name="Battalion Ability" typeId="23f7-32c0-e059-29b2">If the unmodified wound roll for an attack made with a melee weapon by a DAEMONETTE from this battalion is 6, that attack inflicts 1 mortal wound on the target and the attack sequence ends (do not make a save roll).</characteristic>
-          </characteristics>
-        </profile>
-      </profiles>
-      <categoryLinks>
-        <categoryLink id="07e0-80bc-ec6e-bac1" name="New CategoryLink" hidden="false" targetId="3706-e0e8-674f-c41b" primary="true"/>
-      </categoryLinks>
-      <selectionEntryGroups>
-        <selectionEntryGroup id="6112-4808-abd9-fca9" name="0-4 featured units in any combination" hidden="false" collective="false" import="true">
-          <constraints>
-            <constraint field="selections" scope="parent" value="4.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="a04e-ea21-e0a9-3d16" type="max"/>
-          </constraints>
-          <entryLinks>
-            <entryLink id="ff91-de55-27ab-f918" name="Hellflayer" hidden="false" collective="false" import="true" targetId="4e37-e703-ab95-0533" type="selectionEntry"/>
-            <entryLink id="8bfc-02dc-8b4e-fa79" name="Exalted Chariot" hidden="false" collective="false" import="true" targetId="b424-d9c3-3fe2-9257" type="selectionEntry"/>
-            <entryLink id="7df1-d69c-cc9f-d930" name="Fiends" hidden="false" collective="false" import="true" targetId="b07f-0154-0c3b-91a7" type="selectionEntry"/>
-          </entryLinks>
-        </selectionEntryGroup>
-        <selectionEntryGroup id="3269-8bb6-e12b-6dca" name="2-6 units of Daemonettes" hidden="false" collective="false" import="true">
-          <constraints>
-            <constraint field="selections" scope="parent" value="6.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="a443-f8fb-a686-3d0a" type="max"/>
-            <constraint field="selections" scope="parent" value="2.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="705e-95db-99ee-a5cf" type="min"/>
-          </constraints>
-          <entryLinks>
-            <entryLink id="4e17-e836-876b-5088" name="Daemonettes" hidden="false" collective="false" import="true" targetId="9aab-dbef-7f28-de38" type="selectionEntry"/>
-          </entryLinks>
-        </selectionEntryGroup>
-      </selectionEntryGroups>
-      <costs>
-        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="180.0"/>
-      </costs>
-    </selectionEntry>
-    <selectionEntry id="1c9f-5f4c-6802-fd42" name="Supreme Sybarites" publicationId="29d6-453f-ecc0-3e4b" hidden="false" collective="false" import="true" type="upgrade">
-      <modifiers>
-        <modifier type="set" field="hidden" value="true">
-          <conditions>
-            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="03b9-deb1-b97e-0204" type="greaterThan"/>
-          </conditions>
-        </modifier>
-      </modifiers>
-      <profiles>
-        <profile id="771b-aa94-4c09-cdeb" name="Ruling Cabal" hidden="false" typeId="66c5-932e-004a-574c" typeName="Battalion Abilities">
-          <characteristics>
-            <characteristic name="Battalion Ability" typeId="23f7-32c0-e059-29b2">At the start of your hero phase, roll a dice. If the roll is less than or equal to the number of HEROES from this battalion that are on the battlefield, you receive 1 command point.</characteristic>
-          </characteristics>
-        </profile>
-      </profiles>
-      <categoryLinks>
-        <categoryLink id="1a3a-4c17-3e3d-633c" name="New CategoryLink" hidden="false" targetId="3706-e0e8-674f-c41b" primary="true"/>
-      </categoryLinks>
-      <selectionEntryGroups>
-        <selectionEntryGroup id="72fb-749d-7f3d-b942" name="3-6 SLAANESH HEROES" hidden="false" collective="false" import="true">
-          <modifierGroups>
-            <modifierGroup>
-              <conditions>
-                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="02b3-0743-81d2-87d5" type="greaterThan"/>
-              </conditions>
-              <modifiers>
-                <modifier type="set" field="name" value="1 CHAOS SLAANESH HERO"/>
-                <modifier type="set" field="a0ba-5647-7f9f-9bf9" value="1.0"/>
-                <modifier type="set" field="2115-652a-03d7-0471" value="1.0"/>
-              </modifiers>
-            </modifierGroup>
-          </modifierGroups>
-          <constraints>
-            <constraint field="selections" scope="parent" value="6.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="a0ba-5647-7f9f-9bf9" type="max"/>
-            <constraint field="selections" scope="parent" value="3.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="2115-652a-03d7-0471" type="min"/>
-          </constraints>
-          <entryLinks>
-            <entryLink id="1fa8-a2bd-d4bf-3cbd" name="Archaon the Everchosen" hidden="false" collective="false" import="true" targetId="b236-3f69-c15f-a954" type="selectionEntry"/>
-            <entryLink id="728f-71c6-941b-1dcd" name="Chaos Lord" hidden="false" collective="false" import="true" targetId="57c2-5dde-47de-fec0" type="selectionEntry"/>
-            <entryLink id="77a2-61c7-b71a-76d2" name="Chaos Lord on Daemonic Mount" hidden="false" collective="false" import="true" targetId="e0d8-c1c4-780e-e06c" type="selectionEntry"/>
-            <entryLink id="3f2d-d4a8-9f21-b883" name="Chaos Lord on Karkadrak" hidden="false" collective="false" import="true" targetId="ae17-f81f-42d9-00dc" type="selectionEntry"/>
-            <entryLink id="ad95-c4cf-50bf-5da0" name="Chaos Lord on Manticore" hidden="false" collective="false" import="true" targetId="1052-3276-9416-b2a8" type="selectionEntry"/>
-            <entryLink id="0d08-fc18-a763-1beb" name="Chaos Sorcerer Lord on Manticore" hidden="false" collective="false" import="true" targetId="9256-c7f4-4b50-4548" type="selectionEntry"/>
-            <entryLink id="d0ae-891e-cf8a-febc" name="Chaos Sorceror Lord" hidden="false" collective="false" import="true" targetId="e75f-c557-c734-1416" type="selectionEntry"/>
-            <entryLink id="b02c-50c2-88b9-aebb" name="Exalted Hero of Chaos" hidden="false" collective="false" import="true" targetId="2b14-92e7-6138-eb76" type="selectionEntry"/>
-            <entryLink id="d6d3-4028-e6a9-93e2" name="Slaves to Darkness Daemon Prince" hidden="false" collective="false" import="true" targetId="293f-06ab-2a5a-f895" type="selectionEntry"/>
-            <entryLink id="bf07-0369-9e09-617c" name="Viceleader, Herald of Slaanesh" hidden="false" collective="false" import="true" targetId="5dff-3db2-6670-832b" type="selectionEntry">
-              <entryLinks>
-                <entryLink id="27cf-bd8c-3d0c-bdcc" name="General" hidden="false" collective="false" import="true" targetId="98a4-3d6d-a7b9-399f" type="selectionEntry"/>
-                <entryLink id="da57-026c-4cec-9f71" name="Artefacts of Power" hidden="false" collective="false" import="true" targetId="a520-01ab-3cef-a486" type="selectionEntryGroup"/>
-                <entryLink id="cc09-c1be-776b-5036" name="Command Traits" hidden="false" collective="false" import="true" targetId="548e-e11c-aeda-8d1b" type="selectionEntryGroup"/>
-                <entryLink id="2e04-ddfd-ca5b-7db3" name="Hedonites Spell Lores" hidden="false" collective="false" import="true" targetId="87c2-3bb8-b59b-6d11" type="selectionEntryGroup"/>
-                <entryLink id="8695-8ecc-8906-8680" name="Invaders Host Extra General" hidden="false" collective="false" import="true" targetId="511a-c718-0d06-1bc5" type="selectionEntry"/>
-              </entryLinks>
-            </entryLink>
-            <entryLink id="29a9-eeca-5073-eeb3" name="The Masque" hidden="false" collective="false" import="true" targetId="5681-22c5-9f75-7dc9" type="selectionEntry">
-              <entryLinks>
-                <entryLink id="362e-b502-c5fa-57bf" name="General" hidden="false" collective="false" import="true" targetId="98a4-3d6d-a7b9-399f" type="selectionEntry">
-                  <categoryLinks>
-                    <categoryLink id="bf02-23b3-b419-1ebc" name="Named General" hidden="false" targetId="8b3d-7f03-e1f9-eaf5" primary="false"/>
-                  </categoryLinks>
-                </entryLink>
-                <entryLink id="8703-847e-b821-1a66" name="Invaders Host Extra General" hidden="false" collective="false" import="true" targetId="511a-c718-0d06-1bc5" type="selectionEntry"/>
-              </entryLinks>
-            </entryLink>
-            <entryLink id="913f-4357-3ce7-07d5" name="The Contorted Epitome" hidden="false" collective="false" import="true" targetId="98d7-c82a-5c0a-0d98" type="selectionEntry">
-              <entryLinks>
-                <entryLink id="c25d-27cf-9087-fe80" name="General" hidden="false" collective="false" import="true" targetId="98a4-3d6d-a7b9-399f" type="selectionEntry"/>
-                <entryLink id="6f5e-fe23-1ed7-b99f" name="Artefacts of Power" hidden="false" collective="false" import="true" targetId="a520-01ab-3cef-a486" type="selectionEntryGroup"/>
-                <entryLink id="2a37-88d9-c470-e2c9" name="Command Traits" hidden="false" collective="false" import="true" targetId="548e-e11c-aeda-8d1b" type="selectionEntryGroup"/>
-                <entryLink id="8e43-06ed-60a5-9008" name="Hedonites Spell Lores" hidden="false" collective="false" import="true" targetId="87c2-3bb8-b59b-6d11" type="selectionEntryGroup"/>
-                <entryLink id="9843-5415-3477-5a9d" name="Invaders Host Extra General" hidden="false" collective="false" import="true" targetId="511a-c718-0d06-1bc5" type="selectionEntry"/>
-              </entryLinks>
-            </entryLink>
-            <entryLink id="06ad-6652-baf3-5bde" name="Syll&apos;esske, The Vengeful Allegiance" hidden="false" collective="false" import="true" targetId="2c44-67c6-cb68-5df8" type="selectionEntry">
-              <entryLinks>
-                <entryLink id="daf6-1090-d170-c6e3" name="General" hidden="false" collective="false" import="true" targetId="98a4-3d6d-a7b9-399f" type="selectionEntry">
-                  <categoryLinks>
-                    <categoryLink id="d236-c361-a58a-1096" name="Named General" hidden="false" targetId="8b3d-7f03-e1f9-eaf5" primary="false"/>
-                  </categoryLinks>
-                </entryLink>
-                <entryLink id="368b-ed53-b00f-b876" name="Hedonites Spell Lores" hidden="false" collective="false" import="true" targetId="87c2-3bb8-b59b-6d11" type="selectionEntryGroup"/>
-                <entryLink id="e207-6a56-595b-e2dd" name="Invaders Host Extra General" hidden="false" collective="false" import="true" targetId="511a-c718-0d06-1bc5" type="selectionEntry"/>
-              </entryLinks>
-            </entryLink>
-            <entryLink id="832d-970c-e191-6eb3" name="Soulfeaster Keeper of Secrets" hidden="false" collective="false" import="true" targetId="978c-59bb-a63f-91c5" type="selectionEntry">
-              <entryLinks>
-                <entryLink id="f0f2-705d-070a-e3bf" name="General" hidden="false" collective="false" import="true" targetId="98a4-3d6d-a7b9-399f" type="selectionEntry"/>
-                <entryLink id="9cad-2322-34dd-291f" name="Artefacts of Power" hidden="false" collective="false" import="true" targetId="a520-01ab-3cef-a486" type="selectionEntryGroup"/>
-                <entryLink id="6204-71ab-e32d-0c7f" name="Command Traits" hidden="false" collective="false" import="true" targetId="548e-e11c-aeda-8d1b" type="selectionEntryGroup"/>
-                <entryLink id="3b63-df8d-38d0-2f5d" name="Hedonites Spell Lores" hidden="false" collective="false" import="true" targetId="87c2-3bb8-b59b-6d11" type="selectionEntryGroup"/>
-                <entryLink id="d3e2-0d66-f293-5f63" name="Invaders Host Extra General" hidden="false" collective="false" import="true" targetId="511a-c718-0d06-1bc5" type="selectionEntry"/>
-              </entryLinks>
-            </entryLink>
-            <entryLink id="d93f-a125-75c2-e6e1" name="Shalaxi Helbane" hidden="false" collective="false" import="true" targetId="61bb-d7b3-5a07-1593" type="selectionEntry">
-              <entryLinks>
-                <entryLink id="1069-7123-b225-3a16" name="General" hidden="false" collective="false" import="true" targetId="98a4-3d6d-a7b9-399f" type="selectionEntry">
-                  <categoryLinks>
-                    <categoryLink id="f918-fc2d-d963-0a0d" name="Named General" hidden="false" targetId="8b3d-7f03-e1f9-eaf5" primary="false"/>
-                  </categoryLinks>
-                </entryLink>
-                <entryLink id="a76c-fbfb-cf4b-3669" name="Hedonites Spell Lores" hidden="false" collective="false" import="true" targetId="87c2-3bb8-b59b-6d11" type="selectionEntryGroup"/>
-                <entryLink id="01b2-ad61-bd87-18bd" name="Invaders Host Extra General" hidden="false" collective="false" import="true" targetId="511a-c718-0d06-1bc5" type="selectionEntry"/>
-              </entryLinks>
-            </entryLink>
-            <entryLink id="d28f-3f78-26e1-fe88" name="Keeper of Secrets" hidden="false" collective="false" import="true" targetId="b3e0-d34d-4dfc-278b" type="selectionEntry">
-              <entryLinks>
-                <entryLink id="e124-5bc5-c77e-6659" name="General" hidden="false" collective="false" import="true" targetId="98a4-3d6d-a7b9-399f" type="selectionEntry"/>
-                <entryLink id="378e-6ade-2a1d-49f1" name="Artefacts of Power" hidden="false" collective="false" import="true" targetId="a520-01ab-3cef-a486" type="selectionEntryGroup"/>
-                <entryLink id="d884-c5f3-1b0b-bdf5" name="Command Traits" hidden="false" collective="false" import="true" targetId="548e-e11c-aeda-8d1b" type="selectionEntryGroup"/>
-                <entryLink id="bd79-7b8c-99fe-d0c5" name="Hedonites Spell Lores" hidden="false" collective="false" import="true" targetId="87c2-3bb8-b59b-6d11" type="selectionEntryGroup"/>
-                <entryLink id="2304-5fb9-0125-712a" name="Invaders Host Extra General" hidden="false" collective="false" import="true" targetId="511a-c718-0d06-1bc5" type="selectionEntry"/>
-              </entryLinks>
-            </entryLink>
-            <entryLink id="f0b1-6382-431d-6344" name="Infernal Enrapturess, Herald of Slaanesh" hidden="false" collective="false" import="true" targetId="3941-490e-33fe-80bf" type="selectionEntry">
-              <entryLinks>
-                <entryLink id="a6eb-5f30-2ffe-ca94" name="General" hidden="false" collective="false" import="true" targetId="98a4-3d6d-a7b9-399f" type="selectionEntry"/>
-                <entryLink id="60a5-b543-04ff-7b7b" name="Artefacts of Power" hidden="false" collective="false" import="true" targetId="a520-01ab-3cef-a486" type="selectionEntryGroup"/>
-                <entryLink id="8218-3aab-5716-492f" name="Command Traits" hidden="false" collective="false" import="true" targetId="548e-e11c-aeda-8d1b" type="selectionEntryGroup"/>
-                <entryLink id="f9af-4a9a-f93c-8f8c" name="Invaders Host Extra General" hidden="false" collective="false" import="true" targetId="511a-c718-0d06-1bc5" type="selectionEntry"/>
-              </entryLinks>
-            </entryLink>
-            <entryLink id="0eed-a324-6f3b-be02" name="Bladebringer, Herald on Seeker Chariot" hidden="false" collective="false" import="true" targetId="4f96-1e8c-44dc-cc9b" type="selectionEntry">
-              <entryLinks>
-                <entryLink id="9c85-ca07-0015-230b" name="General" hidden="false" collective="false" import="true" targetId="98a4-3d6d-a7b9-399f" type="selectionEntry"/>
-                <entryLink id="f1db-1906-93cd-61ca" name="Artefacts of Power" hidden="false" collective="false" import="true" targetId="a520-01ab-3cef-a486" type="selectionEntryGroup"/>
-                <entryLink id="1c10-e4cd-5158-1650" name="Command Traits" hidden="false" collective="false" import="true" targetId="548e-e11c-aeda-8d1b" type="selectionEntryGroup"/>
-                <entryLink id="daf0-5375-d7ab-3c95" name="Hedonites Spell Lores" hidden="false" collective="false" import="true" targetId="87c2-3bb8-b59b-6d11" type="selectionEntryGroup"/>
-                <entryLink id="59bb-a5ed-f1ad-faca" name="Invaders Host Extra General" hidden="false" collective="false" import="true" targetId="511a-c718-0d06-1bc5" type="selectionEntry"/>
-              </entryLinks>
-            </entryLink>
-            <entryLink id="ea0d-d47c-9d8d-c586" name="Bladebringer, Herald on Hellflayer" hidden="false" collective="false" import="true" targetId="63f9-8750-1d37-c96e" type="selectionEntry">
-              <entryLinks>
-                <entryLink id="6f74-308b-1596-43ad" name="General" hidden="false" collective="false" import="true" targetId="98a4-3d6d-a7b9-399f" type="selectionEntry"/>
-                <entryLink id="0fbe-2eb4-78c2-7528" name="Artefacts of Power" hidden="false" collective="false" import="true" targetId="a520-01ab-3cef-a486" type="selectionEntryGroup"/>
-                <entryLink id="b5fb-da7f-8cdc-027f" name="Command Traits" hidden="false" collective="false" import="true" targetId="548e-e11c-aeda-8d1b" type="selectionEntryGroup"/>
-                <entryLink id="57cc-b35e-808b-2111" name="Hedonites Spell Lores" hidden="false" collective="false" import="true" targetId="87c2-3bb8-b59b-6d11" type="selectionEntryGroup"/>
-                <entryLink id="fd37-a612-4a17-7f61" name="Invaders Host Extra General" hidden="false" collective="false" import="true" targetId="511a-c718-0d06-1bc5" type="selectionEntry"/>
-              </entryLinks>
-            </entryLink>
-            <entryLink id="c5fd-79ff-4d91-5bb9" name="Bladebringer, Herald on Exalted Chariot" hidden="false" collective="false" import="true" targetId="8471-c5e8-69d9-a046" type="selectionEntry">
-              <entryLinks>
-                <entryLink id="7bac-bc2d-fb9c-6527" name="General" hidden="false" collective="false" import="true" targetId="98a4-3d6d-a7b9-399f" type="selectionEntry"/>
-                <entryLink id="50ab-f4dd-8e29-bfbd" name="Artefacts of Power" hidden="false" collective="false" import="true" targetId="a520-01ab-3cef-a486" type="selectionEntryGroup"/>
-                <entryLink id="d14a-ae82-73fe-6989" name="Command Traits" hidden="false" collective="false" import="true" targetId="548e-e11c-aeda-8d1b" type="selectionEntryGroup"/>
-                <entryLink id="9018-901b-3b68-0206" name="Hedonites Spell Lores" hidden="false" collective="false" import="true" targetId="87c2-3bb8-b59b-6d11" type="selectionEntryGroup"/>
-                <entryLink id="f935-f75a-51dd-5201" name="Invaders Host Extra General" hidden="false" collective="false" import="true" targetId="511a-c718-0d06-1bc5" type="selectionEntry"/>
-              </entryLinks>
-            </entryLink>
-            <entryLink id="cf40-a537-4c21-1e48" name="Lord of Pain" hidden="false" collective="false" import="true" targetId="9b8f-acbd-252f-6b7d" type="selectionEntry">
-              <entryLinks>
-                <entryLink id="246a-0b13-d7fd-b078" name="General" hidden="false" collective="false" import="true" targetId="98a4-3d6d-a7b9-399f" type="selectionEntry"/>
-                <entryLink id="0204-fa92-ba8c-f441" name="Invaders Host Extra General" hidden="false" collective="false" import="true" targetId="511a-c718-0d06-1bc5" type="selectionEntry"/>
-                <entryLink id="a93d-a17e-04ef-1c10" name="Artefacts of Power" hidden="false" collective="false" import="true" targetId="a520-01ab-3cef-a486" type="selectionEntryGroup"/>
-                <entryLink id="8aff-bc61-8b78-664f" name="Command Traits" hidden="false" collective="false" import="true" targetId="548e-e11c-aeda-8d1b" type="selectionEntryGroup"/>
-              </entryLinks>
-            </entryLink>
-            <entryLink id="1f71-7ef9-ad11-790d" name="Shardspeaker of Slaanesh" hidden="false" collective="false" import="true" targetId="9802-e51c-f34a-1953" type="selectionEntry">
-              <entryLinks>
-                <entryLink id="9e9a-dcdf-e1c6-de78" name="General" hidden="false" collective="false" import="true" targetId="98a4-3d6d-a7b9-399f" type="selectionEntry"/>
-                <entryLink id="2a3b-6e00-c10c-ddc7" name="Command Traits" hidden="false" collective="false" import="true" targetId="548e-e11c-aeda-8d1b" type="selectionEntryGroup"/>
-                <entryLink id="4a94-e7f0-cdd5-b2f3" name="Artefacts of Power" hidden="false" collective="false" import="true" targetId="a520-01ab-3cef-a486" type="selectionEntryGroup"/>
-                <entryLink id="6b68-36d6-0bc5-e764" name="Invaders Host Extra General" hidden="false" collective="false" import="true" targetId="511a-c718-0d06-1bc5" type="selectionEntry"/>
-                <entryLink id="539d-1793-ea00-992c" name="Hedonites Spell Lores" hidden="false" collective="false" import="true" targetId="87c2-3bb8-b59b-6d11" type="selectionEntryGroup"/>
-              </entryLinks>
-            </entryLink>
-            <entryLink id="aa3c-5021-0dea-56e5" name="Sigvald, Prince of Slaanesh" hidden="false" collective="false" import="true" targetId="1567-e643-31ac-f08a" type="selectionEntry">
-              <entryLinks>
-                <entryLink id="a46f-8f7d-0691-7a48" name="General" hidden="false" collective="false" import="true" targetId="98a4-3d6d-a7b9-399f" type="selectionEntry">
-                  <categoryLinks>
-                    <categoryLink id="3398-5b0d-a8bb-44aa" name="Named General" hidden="false" targetId="8b3d-7f03-e1f9-eaf5" primary="false"/>
-                  </categoryLinks>
-                </entryLink>
-                <entryLink id="7807-14af-9c21-99a6" name="Invaders Host Extra General" hidden="false" collective="false" import="true" targetId="511a-c718-0d06-1bc5" type="selectionEntry"/>
-              </entryLinks>
-            </entryLink>
-            <entryLink id="b452-a591-aeb8-f1c2" name="Glutos Orscollion, Lord of Gluttony" hidden="false" collective="false" import="true" targetId="30e9-0004-6ff3-ce7a" type="selectionEntry">
-              <entryLinks>
-                <entryLink id="9ad6-3da2-e8f5-faca" name="General" hidden="false" collective="false" import="true" targetId="98a4-3d6d-a7b9-399f" type="selectionEntry">
-                  <categoryLinks>
-                    <categoryLink id="3351-99a7-5861-a29c" name="Named General" hidden="false" targetId="8b3d-7f03-e1f9-eaf5" primary="false"/>
-                  </categoryLinks>
-                </entryLink>
-                <entryLink id="2534-9158-b25f-dce7" name="Hedonites Spell Lores" hidden="false" collective="false" import="true" targetId="87c2-3bb8-b59b-6d11" type="selectionEntryGroup"/>
-                <entryLink id="5589-2f2d-9277-09da" name="Invaders Host Extra General" hidden="false" collective="false" import="true" targetId="511a-c718-0d06-1bc5" type="selectionEntry"/>
-              </entryLinks>
-            </entryLink>
-          </entryLinks>
-        </selectionEntryGroup>
-      </selectionEntryGroups>
-      <costs>
-        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="150.0"/>
-      </costs>
-    </selectionEntry>
-    <selectionEntry id="63c1-f629-9479-b0db" name="Hedonite Host" publicationId="29d6-453f-ecc0-3e4b" hidden="false" collective="false" import="true" type="upgrade">
-      <modifiers>
-        <modifier type="set" field="hidden" value="true">
-          <conditions>
-            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="03b9-deb1-b97e-0204" type="greaterThan"/>
-          </conditions>
-        </modifier>
-      </modifiers>
-      <profiles>
-        <profile id="3f50-3884-8478-552f" name="Transcendental Warriors" hidden="false" typeId="66c5-932e-004a-574c" typeName="Battalion Abilities">
-          <characteristics>
-            <characteristic name="Battalion Ability" typeId="23f7-32c0-e059-29b2">Add 1 to the Bravery characteristic of units in this battalion. In addition, if this battalion is part of a Slaanesh army, at the start of your hero phase you receive D3 depravity points.</characteristic>
-          </characteristics>
-        </profile>
-      </profiles>
-      <categoryLinks>
-        <categoryLink id="deed-5e7c-3a81-b71a" name="New CategoryLink" hidden="false" targetId="3706-e0e8-674f-c41b" primary="true"/>
-      </categoryLinks>
-      <selectionEntryGroups>
-        <selectionEntryGroup id="303c-a15b-0e7c-4d06" name="1-3 Epicurean Revellers" hidden="false" collective="false" import="true">
-          <modifierGroups>
-            <modifierGroup>
-              <conditions>
-                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="441c-7740-77af-9ddc" type="greaterThan"/>
-              </conditions>
-              <modifiers>
-                <modifier type="set" field="name" value="2-4 Epicurean Revellers"/>
-                <modifier type="set" field="5ac5-3306-f130-c70a" value="2.0"/>
-                <modifier type="set" field="a5e1-be0e-3350-f7a4" value="4.0"/>
-              </modifiers>
-            </modifierGroup>
-            <modifierGroup>
-              <conditions>
-                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="a15a-dd81-d8ca-0db2" type="greaterThan"/>
-              </conditions>
-              <modifiers>
-                <modifier type="set" field="name" value="0-2 Epicurean Revellers"/>
-                <modifier type="set" field="5ac5-3306-f130-c70a" value="0.0"/>
-                <modifier type="set" field="a5e1-be0e-3350-f7a4" value="2.0"/>
-              </modifiers>
-            </modifierGroup>
-          </modifierGroups>
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="5ac5-3306-f130-c70a" type="min"/>
-            <constraint field="selections" scope="parent" value="3.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="a5e1-be0e-3350-f7a4" type="max"/>
-          </constraints>
-          <entryLinks>
-            <entryLink id="29b1-d26c-1258-2466" name="Epicurean Revellers" hidden="false" collective="false" import="true" targetId="0d49-fcf0-39c2-bb25" type="selectionEntry"/>
-          </entryLinks>
-        </selectionEntryGroup>
-        <selectionEntryGroup id="2a28-b493-5db3-dc07" name="1-3 Seeker Cavalcades" hidden="false" collective="false" import="true">
-          <modifierGroups>
-            <modifierGroup>
-              <conditions>
-                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="441c-7740-77af-9ddc" type="greaterThan"/>
-              </conditions>
-              <modifiers>
-                <modifier type="set" field="name" value="0-2 Seeker Cavalcades"/>
-                <modifier type="set" field="7671-9456-4e87-4749" value="0.0"/>
-                <modifier type="set" field="bd4b-8214-3976-e77e" value="2.0"/>
-              </modifiers>
-            </modifierGroup>
-            <modifierGroup>
-              <conditions>
-                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="a15a-dd81-d8ca-0db2" type="greaterThan"/>
-              </conditions>
-              <modifiers>
-                <modifier type="set" field="name" value="2-4 Seeker Cavalcades"/>
-                <modifier type="set" field="7671-9456-4e87-4749" value="2.0"/>
-                <modifier type="set" field="bd4b-8214-3976-e77e" value="4.0"/>
-              </modifiers>
-            </modifierGroup>
-          </modifierGroups>
-          <constraints>
-            <constraint field="selections" scope="parent" value="3.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="bd4b-8214-3976-e77e" type="max"/>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="7671-9456-4e87-4749" type="min"/>
-          </constraints>
-          <entryLinks>
-            <entryLink id="56d6-bc52-468d-665a" name="Seeker Cavalcade" hidden="false" collective="false" import="true" targetId="575d-2e74-1b3c-87c2" type="selectionEntry"/>
-          </entryLinks>
-        </selectionEntryGroup>
-        <selectionEntryGroup id="f79b-9ffb-8a10-9f41" name="1 Supreme Sybarites" hidden="false" collective="false" import="true">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="9035-12cd-db96-3eaf" type="min"/>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="1591-f7f2-bdb0-10f8" type="max"/>
-          </constraints>
-          <entryLinks>
-            <entryLink id="1c91-793c-5d4a-31bd" name="Supreme Sybarites" hidden="false" collective="false" import="true" targetId="1c9f-5f4c-6802-fd42" type="selectionEntry"/>
-          </entryLinks>
-        </selectionEntryGroup>
-      </selectionEntryGroups>
-      <costs>
-        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="130.0"/>
-      </costs>
-    </selectionEntry>
-    <selectionEntry id="f9fe-a859-29cc-8013" name="Daemonsteel Contingent" hidden="false" collective="false" import="true" type="upgrade">
-      <profiles>
-        <profile id="9bef-b4fd-3042-4185" name="The Debt" hidden="false" typeId="66c5-932e-004a-574c" typeName="Battalion Abilities">
-          <characteristics>
-            <characteristic name="Battalion Ability" typeId="23f7-32c0-e059-29b2">Add 1 to hit rolls for attacks made by SOUL GRINDERS in this battalion, and add 1 to save rolls for attacks that target SOUL GRINDERS in this battalion.</characteristic>
-          </characteristics>
-        </profile>
-      </profiles>
-      <categoryLinks>
-        <categoryLink id="9da8-a98d-9aa1-6ad6" name="New CategoryLink" hidden="false" targetId="3706-e0e8-674f-c41b" primary="true"/>
-      </categoryLinks>
-      <selectionEntryGroups>
-        <selectionEntryGroup id="f540-b214-39c7-b6de" name="1-3 Soul Grinder units" hidden="false" collective="false" import="true">
-          <constraints>
-            <constraint field="selections" scope="parent" value="3.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="1818-9b62-5dca-3f02" type="max"/>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="2bac-b357-42b0-767c" type="min"/>
-          </constraints>
-          <entryLinks>
-            <entryLink id="407a-c7e5-2fa6-95d5" name="Soul Grinder" hidden="false" collective="false" import="true" targetId="d97a-886d-a857-5e6e" type="selectionEntry"/>
-          </entryLinks>
-        </selectionEntryGroup>
-      </selectionEntryGroups>
-      <costs>
-        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="110.0"/>
-      </costs>
-    </selectionEntry>
-    <selectionEntry id="2c73-2321-e8f6-14ee" name="Vengeful Throng" hidden="false" collective="false" import="true" type="upgrade">
-      <profiles>
-        <profile id="bc7f-199a-bcf6-1f81" name="Headlong Charge" hidden="false" typeId="66c5-932e-004a-574c" typeName="Battalion Abilities">
-          <characteristics>
-            <characteristic name="Battalion Ability" typeId="23f7-32c0-e059-29b2">Once per battle, at the start of your charge phase, you can say that this battalion will make a headlong charge. If you do so, in that charge phase you can attempt to charge with a unit from this battalion if it is within 18&quot; of the enemy instead of 12&quot;, and you can roll 3D6 instead of 2D6 when making charge rolls for units from this battalion. In addition, after each unit from this battalion makes a headlong charge move, pick one enemy unit within 1&quot; of that charging unit and roll a dice. On a 5+ that enemy unit suffers D3 mortal wounds at the end of the charge phase.</characteristic>
-          </characteristics>
-        </profile>
-      </profiles>
-      <categoryLinks>
-        <categoryLink id="f41d-2a88-d028-d214" name="New CategoryLink" hidden="false" targetId="3706-e0e8-674f-c41b" primary="true"/>
-      </categoryLinks>
-      <selectionEntryGroups>
-        <selectionEntryGroup id="3ff5-4228-c385-ee03" name="0-4 featured units in any combination" hidden="false" collective="false" import="true">
-          <constraints>
-            <constraint field="selections" scope="parent" value="4.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="ad9d-d5f3-5be6-45d9" type="max"/>
-          </constraints>
-          <entryLinks>
-            <entryLink id="fc4c-59a3-7b5a-88c5" name="Chaos Chariots" hidden="false" collective="false" import="true" targetId="9dd9-cc5b-2b21-b996" type="selectionEntry">
-              <modifiers>
-                <modifier type="remove" field="category" value="a42d-220e-6a88-7bf6"/>
-              </modifiers>
-            </entryLink>
-            <entryLink id="7449-ee3d-af22-8e29" name="Gorebeast Chariots" hidden="false" collective="false" import="true" targetId="ff78-a08a-de5f-8969" type="selectionEntry"/>
-          </entryLinks>
-        </selectionEntryGroup>
-        <selectionEntryGroup id="9f33-38fa-d260-9ed3" name="1 MORTAL SLAANESH HERO with mount or that can fly" hidden="false" collective="false" import="true">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="9f7f-5692-b04b-ae88" type="max"/>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="bac5-e918-ced3-c6cd" type="min"/>
-          </constraints>
-          <entryLinks>
-            <entryLink id="65a6-1659-dcdc-bbfe" name="Archaon the Everchosen" hidden="false" collective="false" import="true" targetId="b236-3f69-c15f-a954" type="selectionEntry"/>
-            <entryLink id="9938-8e10-d375-3c8e" name="Chaos Lord on Daemonic Mount" hidden="false" collective="false" import="true" targetId="e0d8-c1c4-780e-e06c" type="selectionEntry"/>
-            <entryLink id="2ad0-d648-81d4-4716" name="Chaos Lord on Karkadrak" hidden="false" collective="false" import="true" targetId="ae17-f81f-42d9-00dc" type="selectionEntry"/>
-            <entryLink id="86bd-0e21-ece2-18c3" name="Chaos Lord on Manticore" hidden="false" collective="false" import="true" targetId="1052-3276-9416-b2a8" type="selectionEntry"/>
-            <entryLink id="718d-81b8-6977-14b8" name="Chaos Sorcerer Lord on Manticore" hidden="false" collective="false" import="true" targetId="9256-c7f4-4b50-4548" type="selectionEntry"/>
-          </entryLinks>
-        </selectionEntryGroup>
-        <selectionEntryGroup id="8dde-e25f-32e8-4e4a" name="2-6 featured units in any combination" hidden="false" collective="false" import="true">
-          <constraints>
-            <constraint field="selections" scope="parent" value="6.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="dd06-9994-7808-1a5c" type="max"/>
-            <constraint field="selections" scope="parent" value="2.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="a17d-8ba9-a0cd-67f9" type="min"/>
-          </constraints>
-          <entryLinks>
-            <entryLink id="af37-084c-d5d1-f591" name="Chaos Knights" hidden="false" collective="false" import="true" targetId="73fe-2d86-24a1-fe98" type="selectionEntry">
-              <modifiers>
-                <modifier type="remove" field="category" value="a42d-220e-6a88-7bf6"/>
-              </modifiers>
-            </entryLink>
-            <entryLink id="8297-f19c-8d95-6405" name="Chaos Marauder Horsemen" hidden="false" collective="false" import="true" targetId="fad7-8185-4954-cd2a" type="selectionEntry">
-              <modifiers>
-                <modifier type="remove" field="category" value="a42d-220e-6a88-7bf6"/>
-              </modifiers>
-            </entryLink>
-          </entryLinks>
-        </selectionEntryGroup>
-      </selectionEntryGroups>
-      <costs>
-        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="140.0"/>
-      </costs>
-    </selectionEntry>
-    <selectionEntry id="c1ed-bbff-8e8f-eecd" name="Devout Supplicants" hidden="false" collective="false" import="true" type="upgrade">
-      <profiles>
-        <profile id="ad58-5bf6-7e81-15b5" name="Favoured of Slaanesh" hidden="false" typeId="66c5-932e-004a-574c" typeName="Battalion Abilities">
-          <characteristics>
-            <characteristic name="Battalion Ability" typeId="23f7-32c0-e059-29b2">When you use the Favour of the Ruinous Powers ability for a WARSHRINE from this battalion, the prayer is answered on a 2+ instead of a 3+.</characteristic>
-          </characteristics>
-        </profile>
-      </profiles>
-      <categoryLinks>
-        <categoryLink id="1b90-6a77-984e-630b" name="New CategoryLink" hidden="false" targetId="3706-e0e8-674f-c41b" primary="true"/>
-      </categoryLinks>
-      <selectionEntryGroups>
-        <selectionEntryGroup id="2082-d35f-bbc9-b473" name="0-2 Chaos Spawn units" hidden="false" collective="false" import="true">
-          <constraints>
-            <constraint field="selections" scope="parent" value="2.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="bb6a-f27c-c169-42af" type="max"/>
-          </constraints>
-          <entryLinks>
-            <entryLink id="10b4-f2db-6456-4cca" name="Slaves to Darkness Chaos Spawn" hidden="false" collective="false" import="true" targetId="2533-1c28-a6a1-1f76" type="selectionEntry"/>
-          </entryLinks>
-        </selectionEntryGroup>
-        <selectionEntryGroup id="13dd-a51f-9444-5ac6" name="1 MORTAL SLAANESH HERO" hidden="false" collective="false" import="true">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="46a6-6979-da3f-4670" type="max"/>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="4347-a358-4daa-915e" type="min"/>
-          </constraints>
-          <entryLinks>
-            <entryLink id="e488-504d-d91d-9278" name="Archaon the Everchosen" hidden="false" collective="false" import="true" targetId="b236-3f69-c15f-a954" type="selectionEntry">
-              <entryLinks>
-                <entryLink id="6b13-2314-f84f-d770" name="General" hidden="false" collective="false" import="true" targetId="98a4-3d6d-a7b9-399f" type="selectionEntry">
-                  <categoryLinks>
-                    <categoryLink id="f50d-3029-c4cb-3d64" name="Named General" hidden="false" targetId="8b3d-7f03-e1f9-eaf5" primary="false"/>
-                  </categoryLinks>
-                </entryLink>
-                <entryLink id="8e46-6514-a4cc-9ccb" name="Invaders Host Extra General" hidden="false" collective="false" import="true" targetId="511a-c718-0d06-1bc5" type="selectionEntry"/>
-                <entryLink id="fcc2-8ce0-a272-161f" name="Hedonites Spell Lores" hidden="false" collective="false" import="true" targetId="87c2-3bb8-b59b-6d11" type="selectionEntryGroup"/>
-              </entryLinks>
-            </entryLink>
-            <entryLink id="7fc1-783a-ad21-a23a" name="Chaos Lord" hidden="false" collective="false" import="true" targetId="57c2-5dde-47de-fec0" type="selectionEntry">
-              <entryLinks>
-                <entryLink id="74c5-795b-e84c-2155" name="General" hidden="false" collective="false" import="true" targetId="98a4-3d6d-a7b9-399f" type="selectionEntry"/>
-                <entryLink id="827f-0cce-1b56-3f69" name="Artefacts of Power" hidden="false" collective="false" import="true" targetId="a520-01ab-3cef-a486" type="selectionEntryGroup"/>
-                <entryLink id="4117-1bb6-99c8-fc83" name="Command Traits" hidden="false" collective="false" import="true" targetId="548e-e11c-aeda-8d1b" type="selectionEntryGroup"/>
-                <entryLink id="1a36-383b-17fb-85f1" name="Invaders Host Extra General" hidden="false" collective="false" import="true" targetId="511a-c718-0d06-1bc5" type="selectionEntry"/>
-              </entryLinks>
-            </entryLink>
-            <entryLink id="4344-5c52-ed1c-1c15" name="Chaos Lord on Daemonic Mount" hidden="false" collective="false" import="true" targetId="e0d8-c1c4-780e-e06c" type="selectionEntry">
-              <entryLinks>
-                <entryLink id="1c70-e93e-ade0-0415" name="General" hidden="false" collective="false" import="true" targetId="98a4-3d6d-a7b9-399f" type="selectionEntry"/>
-                <entryLink id="36b0-283e-d3da-055d" name="Artefacts of Power" hidden="false" collective="false" import="true" targetId="a520-01ab-3cef-a486" type="selectionEntryGroup"/>
-                <entryLink id="cd49-3dfa-2236-fcb0" name="Command Traits" hidden="false" collective="false" import="true" targetId="548e-e11c-aeda-8d1b" type="selectionEntryGroup"/>
-                <entryLink id="93a6-27ff-923e-71e8" name="Invaders Host Extra General" hidden="false" collective="false" import="true" targetId="511a-c718-0d06-1bc5" type="selectionEntry"/>
-              </entryLinks>
-            </entryLink>
-            <entryLink id="81cd-e08f-0616-6eb2" name="Chaos Lord on Karkadrak" hidden="false" collective="false" import="true" targetId="ae17-f81f-42d9-00dc" type="selectionEntry">
-              <entryLinks>
-                <entryLink id="67ab-778b-9fdb-abb3" name="General" hidden="false" collective="false" import="true" targetId="98a4-3d6d-a7b9-399f" type="selectionEntry"/>
-                <entryLink id="d513-c110-0ba2-62e8" name="Artefacts of Power" hidden="false" collective="false" import="true" targetId="a520-01ab-3cef-a486" type="selectionEntryGroup"/>
-                <entryLink id="98e1-026f-0575-1220" name="Command Traits" hidden="false" collective="false" import="true" targetId="548e-e11c-aeda-8d1b" type="selectionEntryGroup"/>
-                <entryLink id="3887-be10-f644-5afb" name="Invaders Host Extra General" hidden="false" collective="false" import="true" targetId="511a-c718-0d06-1bc5" type="selectionEntry"/>
-              </entryLinks>
-            </entryLink>
-            <entryLink id="397d-c568-4d2c-1fb2" name="Chaos Lord on Manticore" hidden="false" collective="false" import="true" targetId="1052-3276-9416-b2a8" type="selectionEntry">
-              <entryLinks>
-                <entryLink id="8b06-0f06-b2bc-68df" name="General" hidden="false" collective="false" import="true" targetId="98a4-3d6d-a7b9-399f" type="selectionEntry"/>
-                <entryLink id="67a6-5ceb-e34c-78e7" name="Artefacts of Power" hidden="false" collective="false" import="true" targetId="a520-01ab-3cef-a486" type="selectionEntryGroup"/>
-                <entryLink id="6dbc-8e4a-c0fa-6a1d" name="Command Traits" hidden="false" collective="false" import="true" targetId="548e-e11c-aeda-8d1b" type="selectionEntryGroup"/>
-                <entryLink id="b540-f669-7763-84bf" name="Invaders Host Extra General" hidden="false" collective="false" import="true" targetId="511a-c718-0d06-1bc5" type="selectionEntry"/>
-              </entryLinks>
-            </entryLink>
-            <entryLink id="40ee-527b-9f00-1eb1" name="Chaos Sorcerer Lord on Manticore" hidden="false" collective="false" import="true" targetId="9256-c7f4-4b50-4548" type="selectionEntry">
-              <entryLinks>
-                <entryLink id="3a67-f03f-866d-cfc9" name="Hedonites Spell Lores" hidden="false" collective="false" import="true" targetId="87c2-3bb8-b59b-6d11" type="selectionEntryGroup"/>
-                <entryLink id="0e13-6172-d142-5762" name="General" hidden="false" collective="false" import="true" targetId="98a4-3d6d-a7b9-399f" type="selectionEntry"/>
-                <entryLink id="44b6-32a5-b837-02bd" name="Artefacts of Power" hidden="false" collective="false" import="true" targetId="a520-01ab-3cef-a486" type="selectionEntryGroup"/>
-                <entryLink id="27ed-a92c-7a44-43d8" name="Command Traits" hidden="false" collective="false" import="true" targetId="548e-e11c-aeda-8d1b" type="selectionEntryGroup"/>
-                <entryLink id="0c91-921a-2353-8601" name="Invaders Host Extra General" hidden="false" collective="false" import="true" targetId="511a-c718-0d06-1bc5" type="selectionEntry"/>
-              </entryLinks>
-            </entryLink>
-            <entryLink id="f48e-d543-306b-fcd1" name="Chaos Sorceror Lord" hidden="false" collective="false" import="true" targetId="e75f-c557-c734-1416" type="selectionEntry">
-              <entryLinks>
-                <entryLink id="f905-5a08-dc34-039f" name="Hedonites Spell Lores" hidden="false" collective="false" import="true" targetId="87c2-3bb8-b59b-6d11" type="selectionEntryGroup"/>
-                <entryLink id="2866-09de-e638-c331" name="General" hidden="false" collective="false" import="true" targetId="98a4-3d6d-a7b9-399f" type="selectionEntry"/>
-                <entryLink id="c208-74a4-6d4c-d98c" name="Artefacts of Power" hidden="false" collective="false" import="true" targetId="a520-01ab-3cef-a486" type="selectionEntryGroup"/>
-                <entryLink id="b4d6-073a-4670-10dd" name="Command Traits" hidden="false" collective="false" import="true" targetId="548e-e11c-aeda-8d1b" type="selectionEntryGroup"/>
-                <entryLink id="3021-8359-f74b-363f" name="Invaders Host Extra General" hidden="false" collective="false" import="true" targetId="511a-c718-0d06-1bc5" type="selectionEntry"/>
-              </entryLinks>
-            </entryLink>
-            <entryLink id="cfe0-bb2b-dae5-848d" name="Exalted Hero of Chaos" hidden="false" collective="false" import="true" targetId="2b14-92e7-6138-eb76" type="selectionEntry">
-              <entryLinks>
-                <entryLink id="4fc5-a127-c1d0-0a02" name="General" hidden="false" collective="false" import="true" targetId="98a4-3d6d-a7b9-399f" type="selectionEntry"/>
-                <entryLink id="c5f2-d038-b1e0-e616" name="Artefacts of Power" hidden="false" collective="false" import="true" targetId="a520-01ab-3cef-a486" type="selectionEntryGroup"/>
-                <entryLink id="adec-76d7-f630-2f75" name="Command Traits" hidden="false" collective="false" import="true" targetId="548e-e11c-aeda-8d1b" type="selectionEntryGroup"/>
-                <entryLink id="b9db-5c39-fb54-fcc4" name="Invaders Host Extra General" hidden="false" collective="false" import="true" targetId="511a-c718-0d06-1bc5" type="selectionEntry"/>
-              </entryLinks>
-            </entryLink>
-            <entryLink id="b424-fa6a-1db2-f3c8" name="Lord of Pain" hidden="false" collective="false" import="true" targetId="9b8f-acbd-252f-6b7d" type="selectionEntry">
-              <entryLinks>
-                <entryLink id="5bfd-2517-7cc7-cef0" name="General" hidden="false" collective="false" import="true" targetId="98a4-3d6d-a7b9-399f" type="selectionEntry"/>
-                <entryLink id="d88a-a035-3b85-36f6" name="Invaders Host Extra General" hidden="false" collective="false" import="true" targetId="511a-c718-0d06-1bc5" type="selectionEntry"/>
-                <entryLink id="f5cf-5f8b-89fd-3079" name="Artefacts of Power" hidden="false" collective="false" import="true" targetId="a520-01ab-3cef-a486" type="selectionEntryGroup"/>
-                <entryLink id="bb58-2915-95f8-18d5" name="Command Traits" hidden="false" collective="false" import="true" targetId="548e-e11c-aeda-8d1b" type="selectionEntryGroup"/>
-              </entryLinks>
-            </entryLink>
-            <entryLink id="2852-1baa-53a0-445c" name="Shardspeaker of Slaanesh" hidden="false" collective="false" import="true" targetId="9802-e51c-f34a-1953" type="selectionEntry">
-              <entryLinks>
-                <entryLink id="861f-c155-a555-2748" name="General" hidden="false" collective="false" import="true" targetId="98a4-3d6d-a7b9-399f" type="selectionEntry"/>
-                <entryLink id="fb19-bc45-b214-7bc9" name="Command Traits" hidden="false" collective="false" import="true" targetId="548e-e11c-aeda-8d1b" type="selectionEntryGroup"/>
-                <entryLink id="d54c-1bd0-4742-441b" name="Artefacts of Power" hidden="false" collective="false" import="true" targetId="a520-01ab-3cef-a486" type="selectionEntryGroup"/>
-                <entryLink id="50ad-dd3a-249b-4f89" name="Invaders Host Extra General" hidden="false" collective="false" import="true" targetId="511a-c718-0d06-1bc5" type="selectionEntry"/>
-                <entryLink id="60db-2f1b-c5ee-e314" name="Hedonites Spell Lores" hidden="false" collective="false" import="true" targetId="87c2-3bb8-b59b-6d11" type="selectionEntryGroup"/>
-              </entryLinks>
-            </entryLink>
-            <entryLink id="0679-4d17-5a8e-87b6" name="Glutos Orscollion, Lord of Gluttony" hidden="false" collective="false" import="true" targetId="30e9-0004-6ff3-ce7a" type="selectionEntry">
-              <entryLinks>
-                <entryLink id="e13c-9e9c-9562-1018" name="General" hidden="false" collective="false" import="true" targetId="98a4-3d6d-a7b9-399f" type="selectionEntry">
-                  <categoryLinks>
-                    <categoryLink id="a40b-afde-d4c9-ce07" name="Named General" hidden="false" targetId="8b3d-7f03-e1f9-eaf5" primary="false"/>
-                  </categoryLinks>
-                </entryLink>
-                <entryLink id="8693-4676-3d22-785c" name="Hedonites Spell Lores" hidden="false" collective="false" import="true" targetId="87c2-3bb8-b59b-6d11" type="selectionEntryGroup"/>
-                <entryLink id="db1b-5960-916f-be30" name="Invaders Host Extra General" hidden="false" collective="false" import="true" targetId="511a-c718-0d06-1bc5" type="selectionEntry"/>
-              </entryLinks>
-            </entryLink>
-            <entryLink id="a952-ea3c-4e49-194a" name="Sigvald, Prince of Slaanesh" hidden="false" collective="false" import="true" targetId="1567-e643-31ac-f08a" type="selectionEntry">
-              <entryLinks>
-                <entryLink id="f282-6ac9-218c-5889" name="General" hidden="false" collective="false" import="true" targetId="98a4-3d6d-a7b9-399f" type="selectionEntry">
-                  <categoryLinks>
-                    <categoryLink id="f224-78f3-c7d4-219d" name="Named General" hidden="false" targetId="8b3d-7f03-e1f9-eaf5" primary="false"/>
-                  </categoryLinks>
-                </entryLink>
-                <entryLink id="eb06-bc60-7dbf-702f" name="Invaders Host Extra General" hidden="false" collective="false" import="true" targetId="511a-c718-0d06-1bc5" type="selectionEntry"/>
-              </entryLinks>
-            </entryLink>
-          </entryLinks>
-        </selectionEntryGroup>
-        <selectionEntryGroup id="b82e-2c94-e39f-71ef" name="1-2 Chaos Warshrine units" hidden="false" collective="false" import="true">
-          <constraints>
-            <constraint field="selections" scope="parent" value="2.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="ebd6-4c06-3ee7-f7a2" type="max"/>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="cf12-9cdc-09e1-06c0" type="min"/>
-          </constraints>
-          <entryLinks>
-            <entryLink id="ae82-8bab-3924-f6de" name="Chaos Warshrine" hidden="false" collective="false" import="true" targetId="5ba7-fe45-c11e-a8da" type="selectionEntry"/>
-          </entryLinks>
-        </selectionEntryGroup>
-        <selectionEntryGroup id="d315-9a48-8748-3a5e" name="2-6 featured units in any combination" hidden="false" collective="false" import="true">
-          <constraints>
-            <constraint field="selections" scope="parent" value="6.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="dca5-48f9-dbfa-cf41" type="max"/>
-            <constraint field="selections" scope="parent" value="2.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="6823-c073-9476-e90f" type="min"/>
-          </constraints>
-          <entryLinks>
-            <entryLink id="c026-693b-60a2-48f4" name="Chaos Chosen" hidden="false" collective="false" import="true" targetId="ea93-8ff3-9b86-c8f0" type="selectionEntry"/>
-            <entryLink id="8ede-a3fa-91a2-2739" name="Chaos Marauders" hidden="false" collective="false" import="true" targetId="e057-b25e-b5b4-4df1" type="selectionEntry">
-              <modifiers>
-                <modifier type="remove" field="category" value="a42d-220e-6a88-7bf6"/>
-              </modifiers>
-            </entryLink>
-            <entryLink id="00f4-1230-1db1-b50e" name="Chaos Warriors" hidden="false" collective="false" import="true" targetId="60a2-6f0e-3dac-fcc4" type="selectionEntry">
-              <modifiers>
-                <modifier type="remove" field="category" value="a42d-220e-6a88-7bf6"/>
-              </modifiers>
-            </entryLink>
-          </entryLinks>
-        </selectionEntryGroup>
-      </selectionEntryGroups>
-      <costs>
-        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="160.0"/>
-      </costs>
-    </selectionEntry>
-    <selectionEntry id="d834-6c28-b8b0-cfd0" name="The Vengeful Alliance" hidden="false" collective="false" import="true" type="upgrade">
-      <profiles>
-        <profile id="f897-f3f3-1ed8-02e1" name="The Vengeful Alliance" hidden="false" typeId="66c5-932e-004a-574c" typeName="Battalion Abilities">
-          <characteristics>
-            <characteristic name="Battalion Ability" typeId="23f7-32c0-e059-29b2">All MORTAL units in this battalion count as having a Bravery characteristic of 10 as long as SYLL&apos;ESSKE is part of your army and on the battlefield. In addition, at the start of your hero phase you receive 1 command point if SYLL’ESSKE is part of your army and on the battlefield.</characteristic>
-          </characteristics>
-        </profile>
-      </profiles>
-      <categoryLinks>
-        <categoryLink id="2927-577d-a744-cdc3" name="New CategoryLink" hidden="false" targetId="3706-e0e8-674f-c41b" primary="true"/>
-      </categoryLinks>
-      <selectionEntryGroups>
-        <selectionEntryGroup id="b514-39ad-d942-aa87" name="0-2 Daemonsteel Contingents battalions" hidden="false" collective="false" import="true">
-          <constraints>
-            <constraint field="selections" scope="parent" value="2.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="03fa-3314-2cf6-d176" type="max"/>
-          </constraints>
-          <entryLinks>
-            <entryLink id="fe5d-29d8-e7c0-f587" name="Daemonsteel Contingent" hidden="false" collective="false" import="true" targetId="f9fe-a859-29cc-8013" type="selectionEntry"/>
-          </entryLinks>
-        </selectionEntryGroup>
-        <selectionEntryGroup id="87eb-5b4d-21d2-7d44" name="0-2 Epicurean Revellers battalions" hidden="false" collective="false" import="true">
-          <constraints>
-            <constraint field="selections" scope="parent" value="2.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="2639-6e7d-dc7d-dc29" type="max"/>
-          </constraints>
-          <entryLinks>
-            <entryLink id="a585-d097-639c-233e" name="Epicurean Revellers" hidden="false" collective="false" import="true" targetId="0d49-fcf0-39c2-bb25" type="selectionEntry"/>
-          </entryLinks>
-        </selectionEntryGroup>
-        <selectionEntryGroup id="c5fb-3707-da6b-9912" name="1-2 Seeker Cavalcade battalions" hidden="false" collective="false" import="true">
-          <constraints>
-            <constraint field="selections" scope="parent" value="2.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="34d7-b76d-e107-ac71" type="max"/>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="49b6-6abb-4a55-3ae4" type="min"/>
-          </constraints>
-          <entryLinks>
-            <entryLink id="647c-e35a-94a7-1db2" name="Seeker Cavalcade" hidden="false" collective="false" import="true" targetId="575d-2e74-1b3c-87c2" type="selectionEntry"/>
-          </entryLinks>
-        </selectionEntryGroup>
-        <selectionEntryGroup id="f471-4449-0a3c-4a0f" name="1-2 featured battalions in any combination" hidden="false" collective="false" import="true">
-          <constraints>
-            <constraint field="selections" scope="parent" value="2.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="993c-adfe-29fe-1559" type="max"/>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="df07-39df-8afd-156e" type="min"/>
-          </constraints>
-          <entryLinks>
-            <entryLink id="c03f-8c99-280c-6cc2" name="Devout Supplicants" hidden="false" collective="false" import="true" targetId="c1ed-bbff-8e8f-eecd" type="selectionEntry"/>
-            <entryLink id="bc78-9f8c-fe64-2907" name="Vengeful Throng" hidden="false" collective="false" import="true" targetId="2c73-2321-e8f6-14ee" type="selectionEntry"/>
-          </entryLinks>
-        </selectionEntryGroup>
-        <selectionEntryGroup id="7796-de1b-6372-6135" name="1 Syll&apos;Esske, The Vengeful Allegiance" hidden="false" collective="false" import="true">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d7fa-3a9a-0795-b77a" type="max"/>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="1e95-b63b-6107-ad21" type="min"/>
-          </constraints>
-          <entryLinks>
-            <entryLink id="4b1e-8bf4-6869-9ecf" name="Syll&apos;esske, The Vengeful Allegiance" hidden="false" collective="false" import="true" targetId="2c44-67c6-cb68-5df8" type="selectionEntry">
-              <entryLinks>
-                <entryLink id="e0ce-b3b6-80bf-5eb1" name="General" hidden="false" collective="false" import="true" targetId="98a4-3d6d-a7b9-399f" type="selectionEntry">
-                  <categoryLinks>
-                    <categoryLink id="be81-7c77-3dcd-a76d" name="Named General" hidden="false" targetId="8b3d-7f03-e1f9-eaf5" primary="false"/>
-                  </categoryLinks>
-                </entryLink>
-                <entryLink id="0f89-b43b-7e11-c909" name="Hedonites Spell Lores" hidden="false" collective="false" import="true" targetId="87c2-3bb8-b59b-6d11" type="selectionEntryGroup"/>
-                <entryLink id="a4ff-a497-7abe-c06c" name="Invaders Host Extra General" hidden="false" collective="false" import="true" targetId="511a-c718-0d06-1bc5" type="selectionEntry"/>
-              </entryLinks>
-            </entryLink>
-          </entryLinks>
-        </selectionEntryGroup>
-        <selectionEntryGroup id="ecb2-2b2b-fe3f-e27b" name="0-5 CHAOS SLAANESH HEROES" hidden="false" collective="false" import="true">
-          <constraints>
-            <constraint field="selections" scope="parent" value="5.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="2d39-632b-efcb-f631" type="max"/>
-          </constraints>
-          <entryLinks>
-            <entryLink id="8d04-ce16-2667-68d6" name="Archaon the Everchosen" hidden="false" collective="false" import="true" targetId="b236-3f69-c15f-a954" type="selectionEntry"/>
-            <entryLink id="ec5d-a481-bf7f-1a65" name="Chaos Lord" hidden="false" collective="false" import="true" targetId="57c2-5dde-47de-fec0" type="selectionEntry"/>
-            <entryLink id="d26c-e5ef-d40a-c0a2" name="Chaos Lord on Daemonic Mount" hidden="false" collective="false" import="true" targetId="e0d8-c1c4-780e-e06c" type="selectionEntry"/>
-            <entryLink id="ad23-bc2c-238b-d770" name="Chaos Lord on Karkadrak" hidden="false" collective="false" import="true" targetId="ae17-f81f-42d9-00dc" type="selectionEntry"/>
-            <entryLink id="7b44-6f76-6e98-128d" name="Chaos Lord on Manticore" hidden="false" collective="false" import="true" targetId="1052-3276-9416-b2a8" type="selectionEntry"/>
-            <entryLink id="0f84-640f-63ee-8fc7" name="Chaos Sorcerer Lord on Manticore" hidden="false" collective="false" import="true" targetId="9256-c7f4-4b50-4548" type="selectionEntry"/>
-            <entryLink id="9898-e3d3-1d58-0f71" name="Chaos Sorceror Lord" hidden="false" collective="false" import="true" targetId="e75f-c557-c734-1416" type="selectionEntry"/>
-            <entryLink id="ed68-9aef-258c-f4a3" name="Exalted Hero of Chaos" hidden="false" collective="false" import="true" targetId="2b14-92e7-6138-eb76" type="selectionEntry"/>
-            <entryLink id="e24a-1994-f9ea-5efd" name="Slaves to Darkness Daemon Prince" hidden="false" collective="false" import="true" targetId="293f-06ab-2a5a-f895" type="selectionEntry"/>
-            <entryLink id="423e-6bc6-566a-5ead" name="Viceleader, Herald of Slaanesh" hidden="false" collective="false" import="true" targetId="5dff-3db2-6670-832b" type="selectionEntry">
-              <entryLinks>
-                <entryLink id="c566-12aa-20b4-425b" name="General" hidden="false" collective="false" import="true" targetId="98a4-3d6d-a7b9-399f" type="selectionEntry"/>
-                <entryLink id="8f36-a9fb-9653-411c" name="Artefacts of Power" hidden="false" collective="false" import="true" targetId="a520-01ab-3cef-a486" type="selectionEntryGroup"/>
-                <entryLink id="e2b6-f72e-2a5b-410a" name="Command Traits" hidden="false" collective="false" import="true" targetId="548e-e11c-aeda-8d1b" type="selectionEntryGroup"/>
-                <entryLink id="04b8-580e-c647-71f1" name="Hedonites Spell Lores" hidden="false" collective="false" import="true" targetId="87c2-3bb8-b59b-6d11" type="selectionEntryGroup"/>
-                <entryLink id="da50-baec-8130-a2db" name="Invaders Host Extra General" hidden="false" collective="false" import="true" targetId="511a-c718-0d06-1bc5" type="selectionEntry"/>
-              </entryLinks>
-            </entryLink>
-            <entryLink id="107f-d4f3-4542-2545" name="The Masque" hidden="false" collective="false" import="true" targetId="5681-22c5-9f75-7dc9" type="selectionEntry">
-              <entryLinks>
-                <entryLink id="5047-e9f1-c69c-41fc" name="General" hidden="false" collective="false" import="true" targetId="98a4-3d6d-a7b9-399f" type="selectionEntry">
-                  <categoryLinks>
-                    <categoryLink id="b2fe-8e5c-f605-85d7" name="Named General" hidden="false" targetId="8b3d-7f03-e1f9-eaf5" primary="false"/>
-                  </categoryLinks>
-                </entryLink>
-                <entryLink id="cda8-9ead-25ed-d08a" name="Invaders Host Extra General" hidden="false" collective="false" import="true" targetId="511a-c718-0d06-1bc5" type="selectionEntry"/>
-              </entryLinks>
-            </entryLink>
-            <entryLink id="ea02-a0b8-26f2-2959" name="The Contorted Epitome" hidden="false" collective="false" import="true" targetId="98d7-c82a-5c0a-0d98" type="selectionEntry">
-              <entryLinks>
-                <entryLink id="8064-b25d-031e-0521" name="General" hidden="false" collective="false" import="true" targetId="98a4-3d6d-a7b9-399f" type="selectionEntry"/>
-                <entryLink id="91b5-7fab-da13-3b1f" name="Artefacts of Power" hidden="false" collective="false" import="true" targetId="a520-01ab-3cef-a486" type="selectionEntryGroup"/>
-                <entryLink id="e3e2-cebc-ed6e-4244" name="Command Traits" hidden="false" collective="false" import="true" targetId="548e-e11c-aeda-8d1b" type="selectionEntryGroup"/>
-                <entryLink id="5866-7c36-b8ea-1c25" name="Hedonites Spell Lores" hidden="false" collective="false" import="true" targetId="87c2-3bb8-b59b-6d11" type="selectionEntryGroup"/>
-                <entryLink id="0b55-2657-1eea-34b6" name="Invaders Host Extra General" hidden="false" collective="false" import="true" targetId="511a-c718-0d06-1bc5" type="selectionEntry"/>
-              </entryLinks>
-            </entryLink>
-            <entryLink id="725d-2a35-bce9-a1b1" name="Soulfeaster Keeper of Secrets" hidden="false" collective="false" import="true" targetId="978c-59bb-a63f-91c5" type="selectionEntry">
-              <entryLinks>
-                <entryLink id="6493-13d4-c47d-a551" name="General" hidden="false" collective="false" import="true" targetId="98a4-3d6d-a7b9-399f" type="selectionEntry"/>
-                <entryLink id="f3a6-4950-0590-1aec" name="Artefacts of Power" hidden="false" collective="false" import="true" targetId="a520-01ab-3cef-a486" type="selectionEntryGroup"/>
-                <entryLink id="aa53-d18c-15de-31df" name="Command Traits" hidden="false" collective="false" import="true" targetId="548e-e11c-aeda-8d1b" type="selectionEntryGroup"/>
-                <entryLink id="444c-98c8-8356-924d" name="Hedonites Spell Lores" hidden="false" collective="false" import="true" targetId="87c2-3bb8-b59b-6d11" type="selectionEntryGroup"/>
-                <entryLink id="9d4e-d8b2-96fa-a0de" name="Invaders Host Extra General" hidden="false" collective="false" import="true" targetId="511a-c718-0d06-1bc5" type="selectionEntry"/>
-              </entryLinks>
-            </entryLink>
-            <entryLink id="4501-5b05-20e2-1260" name="Shalaxi Helbane" hidden="false" collective="false" import="true" targetId="61bb-d7b3-5a07-1593" type="selectionEntry">
-              <entryLinks>
-                <entryLink id="1cb4-c41c-3b9d-3b9f" name="General" hidden="false" collective="false" import="true" targetId="98a4-3d6d-a7b9-399f" type="selectionEntry">
-                  <categoryLinks>
-                    <categoryLink id="d067-9731-cd59-7065" name="Named General" hidden="false" targetId="8b3d-7f03-e1f9-eaf5" primary="false"/>
-                  </categoryLinks>
-                </entryLink>
-                <entryLink id="8f23-271c-18ec-7e0c" name="Hedonites Spell Lores" hidden="false" collective="false" import="true" targetId="87c2-3bb8-b59b-6d11" type="selectionEntryGroup"/>
-                <entryLink id="ce8d-414c-50f5-c28a" name="Invaders Host Extra General" hidden="false" collective="false" import="true" targetId="511a-c718-0d06-1bc5" type="selectionEntry"/>
-              </entryLinks>
-            </entryLink>
-            <entryLink id="867b-d8c4-0960-bc9f" name="Keeper of Secrets" hidden="false" collective="false" import="true" targetId="b3e0-d34d-4dfc-278b" type="selectionEntry">
-              <entryLinks>
-                <entryLink id="81bd-f167-e0b6-e4eb" name="General" hidden="false" collective="false" import="true" targetId="98a4-3d6d-a7b9-399f" type="selectionEntry"/>
-                <entryLink id="ad6d-53e6-67f3-9ef5" name="Artefacts of Power" hidden="false" collective="false" import="true" targetId="a520-01ab-3cef-a486" type="selectionEntryGroup"/>
-                <entryLink id="b62b-55bd-5ec6-93f3" name="Command Traits" hidden="false" collective="false" import="true" targetId="548e-e11c-aeda-8d1b" type="selectionEntryGroup"/>
-                <entryLink id="76da-11ab-cfce-8c98" name="Hedonites Spell Lores" hidden="false" collective="false" import="true" targetId="87c2-3bb8-b59b-6d11" type="selectionEntryGroup"/>
-                <entryLink id="6549-81b9-8e67-22f4" name="Invaders Host Extra General" hidden="false" collective="false" import="true" targetId="511a-c718-0d06-1bc5" type="selectionEntry"/>
-              </entryLinks>
-            </entryLink>
-            <entryLink id="227c-def2-7adb-6dfc" name="Infernal Enrapturess, Herald of Slaanesh" hidden="false" collective="false" import="true" targetId="3941-490e-33fe-80bf" type="selectionEntry">
-              <entryLinks>
-                <entryLink id="eccc-ba1e-c381-1dfa" name="General" hidden="false" collective="false" import="true" targetId="98a4-3d6d-a7b9-399f" type="selectionEntry"/>
-                <entryLink id="ed7c-4ecc-ef13-afe7" name="Artefacts of Power" hidden="false" collective="false" import="true" targetId="a520-01ab-3cef-a486" type="selectionEntryGroup"/>
-                <entryLink id="30a8-64e1-bf3b-3638" name="Command Traits" hidden="false" collective="false" import="true" targetId="548e-e11c-aeda-8d1b" type="selectionEntryGroup"/>
-                <entryLink id="b0da-96ba-2759-4ba2" name="Invaders Host Extra General" hidden="false" collective="false" import="true" targetId="511a-c718-0d06-1bc5" type="selectionEntry"/>
-              </entryLinks>
-            </entryLink>
-            <entryLink id="de9a-5169-7c23-b09b" name="Bladebringer, Herald on Seeker Chariot" hidden="false" collective="false" import="true" targetId="4f96-1e8c-44dc-cc9b" type="selectionEntry">
-              <entryLinks>
-                <entryLink id="c2e1-5394-4a4b-b2c4" name="General" hidden="false" collective="false" import="true" targetId="98a4-3d6d-a7b9-399f" type="selectionEntry"/>
-                <entryLink id="90f7-a443-a5cc-2e55" name="Artefacts of Power" hidden="false" collective="false" import="true" targetId="a520-01ab-3cef-a486" type="selectionEntryGroup"/>
-                <entryLink id="abff-f038-4e5a-e163" name="Command Traits" hidden="false" collective="false" import="true" targetId="548e-e11c-aeda-8d1b" type="selectionEntryGroup"/>
-                <entryLink id="bdd8-4f81-58fc-0f74" name="Hedonites Spell Lores" hidden="false" collective="false" import="true" targetId="87c2-3bb8-b59b-6d11" type="selectionEntryGroup"/>
-                <entryLink id="22b3-a95e-9ffb-8602" name="Invaders Host Extra General" hidden="false" collective="false" import="true" targetId="511a-c718-0d06-1bc5" type="selectionEntry"/>
-              </entryLinks>
-            </entryLink>
-            <entryLink id="36ea-274d-92c1-dfd5" name="Bladebringer, Herald on Hellflayer" hidden="false" collective="false" import="true" targetId="63f9-8750-1d37-c96e" type="selectionEntry">
-              <entryLinks>
-                <entryLink id="cd80-743e-fbe7-2294" name="General" hidden="false" collective="false" import="true" targetId="98a4-3d6d-a7b9-399f" type="selectionEntry"/>
-                <entryLink id="7d6c-507a-65ff-3709" name="Artefacts of Power" hidden="false" collective="false" import="true" targetId="a520-01ab-3cef-a486" type="selectionEntryGroup"/>
-                <entryLink id="7d05-5fdb-349c-464f" name="Command Traits" hidden="false" collective="false" import="true" targetId="548e-e11c-aeda-8d1b" type="selectionEntryGroup"/>
-                <entryLink id="551a-fcf9-a86b-33f8" name="Hedonites Spell Lores" hidden="false" collective="false" import="true" targetId="87c2-3bb8-b59b-6d11" type="selectionEntryGroup"/>
-                <entryLink id="ebac-6327-879e-8448" name="Invaders Host Extra General" hidden="false" collective="false" import="true" targetId="511a-c718-0d06-1bc5" type="selectionEntry"/>
-              </entryLinks>
-            </entryLink>
-            <entryLink id="d029-2899-48e6-4555" name="Bladebringer, Herald on Exalted Chariot" hidden="false" collective="false" import="true" targetId="8471-c5e8-69d9-a046" type="selectionEntry">
-              <entryLinks>
-                <entryLink id="9392-ec52-7c3d-96fa" name="General" hidden="false" collective="false" import="true" targetId="98a4-3d6d-a7b9-399f" type="selectionEntry"/>
-                <entryLink id="857e-4e76-eab6-4041" name="Artefacts of Power" hidden="false" collective="false" import="true" targetId="a520-01ab-3cef-a486" type="selectionEntryGroup"/>
-                <entryLink id="d6a0-eff0-02bd-3539" name="Command Traits" hidden="false" collective="false" import="true" targetId="548e-e11c-aeda-8d1b" type="selectionEntryGroup"/>
-                <entryLink id="c1c4-dde8-b228-de98" name="Hedonites Spell Lores" hidden="false" collective="false" import="true" targetId="87c2-3bb8-b59b-6d11" type="selectionEntryGroup"/>
-                <entryLink id="87e8-a8d1-b03d-793d" name="Invaders Host Extra General" hidden="false" collective="false" import="true" targetId="511a-c718-0d06-1bc5" type="selectionEntry"/>
-              </entryLinks>
-            </entryLink>
-            <entryLink id="c28b-6da2-2a17-3d8e" name="Lord of Pain" hidden="false" collective="false" import="true" targetId="9b8f-acbd-252f-6b7d" type="selectionEntry">
-              <entryLinks>
-                <entryLink id="0542-b05b-d8e4-a8bb" name="General" hidden="false" collective="false" import="true" targetId="98a4-3d6d-a7b9-399f" type="selectionEntry"/>
-                <entryLink id="b0cd-f0c5-5d5b-a8ee" name="Invaders Host Extra General" hidden="false" collective="false" import="true" targetId="511a-c718-0d06-1bc5" type="selectionEntry"/>
-                <entryLink id="fc91-51cd-dcaf-d7e5" name="Artefacts of Power" hidden="false" collective="false" import="true" targetId="a520-01ab-3cef-a486" type="selectionEntryGroup"/>
-                <entryLink id="bb84-7642-baf2-0bfe" name="Command Traits" hidden="false" collective="false" import="true" targetId="548e-e11c-aeda-8d1b" type="selectionEntryGroup"/>
-              </entryLinks>
-            </entryLink>
-          </entryLinks>
-        </selectionEntryGroup>
-      </selectionEntryGroups>
-      <costs>
-        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="100.0"/>
-      </costs>
-    </selectionEntry>
     <selectionEntry id="511a-c718-0d06-1bc5" name="Invaders Host Extra General" hidden="false" collective="false" import="true" type="upgrade">
       <modifiers>
         <modifier type="set" field="hidden" value="true">
@@ -1559,583 +989,6 @@ If that HERO you picked has an artefact of power, instead of suffering 1 mortal 
       </constraints>
       <costs>
         <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
-      </costs>
-    </selectionEntry>
-    <selectionEntry id="fd52-7e90-39ba-555a" name="Depraved Drove" publicationId="f0d1-73ce-b949-8524" hidden="false" collective="false" import="true" type="upgrade">
-      <profiles>
-        <profile id="3966-1466-0e69-d836" name="Covetous Fury" hidden="false" typeId="66c5-932e-004a-574c" typeName="Battalion Abilities">
-          <characteristics>
-            <characteristic name="Battalion Ability" typeId="23f7-32c0-e059-29b2">You can re-roll failed charge rolls made for units from this battalion while they are within 12&quot; of an enemy HERO with an artefact of power. In addition, you can re-roll hit rolls for attacks made with melee weapons by models from this battalion that target an enemy HERO with an artefact of power.</characteristic>
-          </characteristics>
-        </profile>
-        <profile id="021e-afa6-de5b-93f2" name="Marked by the Decadent Fiend" hidden="false" typeId="66c5-932e-004a-574c" typeName="Battalion Abilities">
-          <characteristics>
-            <characteristic name="Battalion Ability" typeId="23f7-32c0-e059-29b2">Units from this battalion gain the Slaanesh keyword. In addition, this warscroll battalion is part of the Slaanesh faction and the Beasts of Chaos faction.</characteristic>
-          </characteristics>
-        </profile>
-      </profiles>
-      <categoryLinks>
-        <categoryLink id="59c1-576c-581f-2c84" name="New CategoryLink" hidden="false" targetId="3706-e0e8-674f-c41b" primary="true"/>
-      </categoryLinks>
-      <selectionEntryGroups>
-        <selectionEntryGroup id="ac96-15ef-9412-8f69" name="0-2 featured units in any combination" hidden="false" collective="false" import="true">
-          <constraints>
-            <constraint field="selections" scope="parent" value="2.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="0f7a-d69e-eee8-a5eb" type="max"/>
-          </constraints>
-          <entryLinks>
-            <entryLink id="fcf9-2b84-589a-b793" name="Cygor" hidden="false" collective="false" import="true" targetId="5e64-007b-e2f3-820b" type="selectionEntry"/>
-            <entryLink id="6b73-b176-3710-a4a7" name="Ghorgon" hidden="false" collective="false" import="true" targetId="ac76-a457-780f-f2a7" type="selectionEntry"/>
-          </entryLinks>
-        </selectionEntryGroup>
-        <selectionEntryGroup id="a25c-cb49-a4b5-0ad4" name="0-6 featured units in any combination" hidden="false" collective="false" import="true">
-          <constraints>
-            <constraint field="selections" scope="parent" value="6.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="fe51-8186-4a4f-137a" type="max"/>
-          </constraints>
-          <entryLinks>
-            <entryLink id="12e2-10a9-13d8-18c3" name="Dragon Ogors" hidden="false" collective="false" import="true" targetId="4700-1580-b11f-ec45" type="selectionEntry"/>
-            <entryLink id="1479-7294-1449-9e9e" name="Bullgors" hidden="false" collective="false" import="true" targetId="3660-c5d4-c829-81f9" type="selectionEntry"/>
-            <entryLink id="2a65-8009-dcbc-e943" name="Bestigors" hidden="false" collective="false" import="true" targetId="8e23-a1ff-a2dd-7335" type="selectionEntry"/>
-          </entryLinks>
-        </selectionEntryGroup>
-        <selectionEntryGroup id="cd41-5cbf-d782-3a7c" name="3-6 featured units in any combination" hidden="false" collective="false" import="true">
-          <constraints>
-            <constraint field="selections" scope="parent" value="6.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="5c4e-215b-e04b-201b" type="max"/>
-            <constraint field="selections" scope="parent" value="3.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="ac4d-9cba-cebf-89d5" type="min"/>
-          </constraints>
-          <entryLinks>
-            <entryLink id="f5a7-708d-c256-08af" name="Gors" hidden="false" collective="false" import="true" targetId="4537-b647-f36b-b1d0" type="selectionEntry">
-              <modifiers>
-                <modifier type="remove" field="category" value="a42d-220e-6a88-7bf6"/>
-              </modifiers>
-            </entryLink>
-            <entryLink id="781b-65ee-684d-1b4a" name="Ungor Raiders" hidden="false" collective="false" import="true" targetId="3394-027d-be0c-1dec" type="selectionEntry"/>
-            <entryLink id="e389-ce45-cb38-e9b9" name="Ungors" hidden="false" collective="false" import="true" targetId="dcba-04fd-ff28-5c8d" type="selectionEntry">
-              <modifiers>
-                <modifier type="remove" field="category" value="a42d-220e-6a88-7bf6"/>
-              </modifiers>
-            </entryLink>
-            <entryLink id="e003-cf2d-eb33-9083" name="Tuskgor Chariots" hidden="false" collective="false" import="true" targetId="d7fb-e05b-0ebd-6279" type="selectionEntry"/>
-            <entryLink id="dcc0-0ca6-7801-8687" name="Centigors" hidden="false" collective="false" import="true" targetId="6158-d1b8-b8b3-d46b" type="selectionEntry"/>
-          </entryLinks>
-        </selectionEntryGroup>
-        <selectionEntryGroup id="7cea-4bfe-dbe9-4b69" name="1-4 featured HEROES in any combination" hidden="false" collective="false" import="true">
-          <constraints>
-            <constraint field="selections" scope="parent" value="4.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="f9ea-3347-8ace-241f" type="max"/>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="5d3f-9534-b7b9-334f" type="min"/>
-          </constraints>
-          <entryLinks>
-            <entryLink id="95d5-ebce-1b5e-1172" name="Beastlord" hidden="false" collective="false" import="true" targetId="9e0e-4909-17ad-0438" type="selectionEntry">
-              <entryLinks>
-                <entryLink id="c747-e644-faff-2ffb" name="General" hidden="false" collective="false" import="true" targetId="98a4-3d6d-a7b9-399f" type="selectionEntry">
-                  <categoryLinks>
-                    <categoryLink id="39ae-ab02-b816-b085" name="General - Beastlord" hidden="false" targetId="721d-5248-9126-34c7" primary="false"/>
-                  </categoryLinks>
-                </entryLink>
-                <entryLink id="900d-97c7-a92a-f842" name="Artefacts of Power" hidden="false" collective="false" import="true" targetId="a520-01ab-3cef-a486" type="selectionEntryGroup"/>
-                <entryLink id="3efd-91b6-12e6-9658" name="Command Traits" hidden="false" collective="false" import="true" targetId="548e-e11c-aeda-8d1b" type="selectionEntryGroup"/>
-              </entryLinks>
-            </entryLink>
-            <entryLink id="1697-179b-c0a1-240a" name="Doombull" hidden="false" collective="false" import="true" targetId="7f9f-95a3-b4dc-b597" type="selectionEntry">
-              <entryLinks>
-                <entryLink id="56a2-3d3f-dcec-8d71" name="General" hidden="false" collective="false" import="true" targetId="98a4-3d6d-a7b9-399f" type="selectionEntry">
-                  <categoryLinks>
-                    <categoryLink id="8c2f-ff92-5ffd-cbe2" name="General - Doombull" hidden="false" targetId="c77d-829c-56f6-50e8" primary="false"/>
-                  </categoryLinks>
-                </entryLink>
-                <entryLink id="115a-4379-42d0-0574" name="Artefacts of Power" hidden="false" collective="false" import="true" targetId="a520-01ab-3cef-a486" type="selectionEntryGroup"/>
-                <entryLink id="b3ec-93ad-e547-628a" name="Command Traits" hidden="false" collective="false" import="true" targetId="548e-e11c-aeda-8d1b" type="selectionEntryGroup"/>
-              </entryLinks>
-            </entryLink>
-            <entryLink id="db7c-e271-f339-c023" name="Dragon Ogor Shaggoth" hidden="false" collective="false" import="true" targetId="7dd5-c271-6d90-5705" type="selectionEntry">
-              <entryLinks>
-                <entryLink id="acc2-4140-fb13-df0c" name="General" hidden="false" collective="false" import="true" targetId="98a4-3d6d-a7b9-399f" type="selectionEntry">
-                  <categoryLinks>
-                    <categoryLink id="9ae6-8042-b7c4-5aa9" name="General - Dragon Ogor Shaggoth" hidden="false" targetId="3ca0-c6b0-8f3c-df36" primary="false"/>
-                  </categoryLinks>
-                </entryLink>
-                <entryLink id="aabe-d086-5aba-c04b" name="Artefacts of Power" hidden="false" collective="false" import="true" targetId="a520-01ab-3cef-a486" type="selectionEntryGroup"/>
-                <entryLink id="435c-f3c1-706a-a81d" name="Command Traits" hidden="false" collective="false" import="true" targetId="548e-e11c-aeda-8d1b" type="selectionEntryGroup"/>
-                <entryLink id="bd49-da8c-0602-ed2e" name="Hedonites Spell Lores" hidden="false" collective="false" import="true" targetId="87c2-3bb8-b59b-6d11" type="selectionEntryGroup"/>
-              </entryLinks>
-            </entryLink>
-            <entryLink id="42d1-32f9-b047-b084" name="Great Bray-Shaman" hidden="false" collective="false" import="true" targetId="0fa1-a648-2716-c96d" type="selectionEntry">
-              <entryLinks>
-                <entryLink id="e17c-bd66-ddf7-f6c0" name="General" hidden="false" collective="false" import="true" targetId="98a4-3d6d-a7b9-399f" type="selectionEntry">
-                  <categoryLinks>
-                    <categoryLink id="9c4c-f09d-5212-8dd8" name="Great Bray-Shaman" hidden="false" targetId="add9-40c3-0f42-95e3" primary="false"/>
-                  </categoryLinks>
-                </entryLink>
-                <entryLink id="a8ff-b91e-c7cf-cbeb" name="Artefacts of Power" hidden="false" collective="false" import="true" targetId="a520-01ab-3cef-a486" type="selectionEntryGroup"/>
-                <entryLink id="e574-e5f0-19dc-4ed8" name="Hedonites Spell Lores" hidden="false" collective="false" import="true" targetId="87c2-3bb8-b59b-6d11" type="selectionEntryGroup"/>
-                <entryLink id="aee6-17dc-0405-80b8" name="Command Traits" hidden="false" collective="false" import="true" targetId="548e-e11c-aeda-8d1b" type="selectionEntryGroup"/>
-              </entryLinks>
-            </entryLink>
-          </entryLinks>
-        </selectionEntryGroup>
-      </selectionEntryGroups>
-      <costs>
-        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="150.0"/>
-      </costs>
-    </selectionEntry>
-    <selectionEntry id="a738-1cc3-1950-c861" name="Pleasurebound Warband" hidden="false" collective="false" import="true" type="unit">
-      <profiles>
-        <profile id="b11e-84ba-7664-0feb" name="Perverse Yearnings" hidden="false" typeId="66c5-932e-004a-574c" typeName="Battalion Abilities">
-          <characteristics>
-            <characteristic name="Battalion Ability" typeId="23f7-32c0-e059-29b2">If a model from this battalion is slain in the combat phase, units from the same battalion can move an extra 3&quot; when they pile in until your next hero phase.</characteristic>
-          </characteristics>
-        </profile>
-        <profile id="cb04-3c20-74f5-29c1" name="Pleasurebound Warband" hidden="false" typeId="ce32-0c40-1990-4c8a" typeName="Restriction">
-          <characteristics>
-            <characteristic name="Restriction" typeId="edbe-5fe5-1142-afa6">This warscroll battalion is part of the Slaanesh faction and the Slaves to Darkness faction.</characteristic>
-          </characteristics>
-        </profile>
-      </profiles>
-      <categoryLinks>
-        <categoryLink id="f46f-71db-138c-c1cf" name="Pleasurebound Warband" hidden="false" targetId="88c3-24cd-76f5-d659" primary="false"/>
-        <categoryLink id="d504-1023-b26e-2e9c" name="New CategoryLink" hidden="false" targetId="3706-e0e8-674f-c41b" primary="true"/>
-      </categoryLinks>
-      <selectionEntryGroups>
-        <selectionEntryGroup id="9561-9385-fcf6-ab2f" name="1 MORTAL SLAVES TO DARKNESS SLAANESH HERO" hidden="false" collective="false" import="true">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="a5db-7835-9291-dc7f" type="min"/>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="a809-623b-2320-5f4b" type="max"/>
-          </constraints>
-          <entryLinks>
-            <entryLink id="f9f9-618e-9662-379d" name="Archaon the Everchosen" hidden="false" collective="false" import="true" targetId="b236-3f69-c15f-a954" type="selectionEntry">
-              <entryLinks>
-                <entryLink id="5517-cae3-485a-cac1" name="General" hidden="false" collective="false" import="true" targetId="98a4-3d6d-a7b9-399f" type="selectionEntry">
-                  <categoryLinks>
-                    <categoryLink id="1d47-0e19-06f0-442c" name="Named General" hidden="false" targetId="8b3d-7f03-e1f9-eaf5" primary="false"/>
-                  </categoryLinks>
-                </entryLink>
-                <entryLink id="8a40-f364-3033-b1a7" name="Hedonites Spell Lores" hidden="false" collective="false" import="true" targetId="87c2-3bb8-b59b-6d11" type="selectionEntryGroup"/>
-                <entryLink id="9ab3-bee6-1729-2e2d" name="Invaders Host Extra General" hidden="false" collective="false" import="true" targetId="511a-c718-0d06-1bc5" type="selectionEntry"/>
-              </entryLinks>
-            </entryLink>
-            <entryLink id="00dc-23d0-dc9e-0165" name="Chaos Lord" hidden="false" collective="false" import="true" targetId="57c2-5dde-47de-fec0" type="selectionEntry">
-              <entryLinks>
-                <entryLink id="b350-fd61-247c-4a81" name="General" hidden="false" collective="false" import="true" targetId="98a4-3d6d-a7b9-399f" type="selectionEntry"/>
-                <entryLink id="a404-f190-9874-f098" name="Artefacts of Power" hidden="false" collective="false" import="true" targetId="a520-01ab-3cef-a486" type="selectionEntryGroup"/>
-                <entryLink id="cfc8-f64e-56f3-07f0" name="Command Traits" hidden="false" collective="false" import="true" targetId="548e-e11c-aeda-8d1b" type="selectionEntryGroup"/>
-                <entryLink id="42db-1e4f-00ba-c432" name="Invaders Host Extra General" hidden="false" collective="false" import="true" targetId="511a-c718-0d06-1bc5" type="selectionEntry"/>
-              </entryLinks>
-            </entryLink>
-            <entryLink id="c74f-1293-19e2-876c" name="Chaos Lord on Daemonic Mount" hidden="false" collective="false" import="true" targetId="e0d8-c1c4-780e-e06c" type="selectionEntry">
-              <entryLinks>
-                <entryLink id="a5cf-778a-b4e0-1a57" name="General" hidden="false" collective="false" import="true" targetId="98a4-3d6d-a7b9-399f" type="selectionEntry"/>
-                <entryLink id="b92f-5bb4-c39c-f448" name="Artefacts of Power" hidden="false" collective="false" import="true" targetId="a520-01ab-3cef-a486" type="selectionEntryGroup"/>
-                <entryLink id="881a-651c-6ccc-b764" name="Command Traits" hidden="false" collective="false" import="true" targetId="548e-e11c-aeda-8d1b" type="selectionEntryGroup"/>
-                <entryLink id="336c-de08-8824-6962" name="Invaders Host Extra General" hidden="false" collective="false" import="true" targetId="511a-c718-0d06-1bc5" type="selectionEntry"/>
-              </entryLinks>
-            </entryLink>
-            <entryLink id="3139-983b-c864-fedc" name="Chaos Lord on Karkadrak" hidden="false" collective="false" import="true" targetId="ae17-f81f-42d9-00dc" type="selectionEntry">
-              <entryLinks>
-                <entryLink id="7d97-b9e2-81b3-4f93" name="General" hidden="false" collective="false" import="true" targetId="98a4-3d6d-a7b9-399f" type="selectionEntry"/>
-                <entryLink id="dca8-e00f-07bb-4d1a" name="Artefacts of Power" hidden="false" collective="false" import="true" targetId="a520-01ab-3cef-a486" type="selectionEntryGroup"/>
-                <entryLink id="db06-983f-0a73-fc16" name="Command Traits" hidden="false" collective="false" import="true" targetId="548e-e11c-aeda-8d1b" type="selectionEntryGroup"/>
-                <entryLink id="3331-e34c-7115-3f0d" name="Invaders Host Extra General" hidden="false" collective="false" import="true" targetId="511a-c718-0d06-1bc5" type="selectionEntry"/>
-              </entryLinks>
-            </entryLink>
-            <entryLink id="53c0-dd96-19d9-5b16" name="Chaos Lord on Manticore" hidden="false" collective="false" import="true" targetId="1052-3276-9416-b2a8" type="selectionEntry">
-              <entryLinks>
-                <entryLink id="87c9-e6a4-2747-99bc" name="General" hidden="false" collective="false" import="true" targetId="98a4-3d6d-a7b9-399f" type="selectionEntry"/>
-                <entryLink id="ad14-2dab-095e-0290" name="Artefacts of Power" hidden="false" collective="false" import="true" targetId="a520-01ab-3cef-a486" type="selectionEntryGroup"/>
-                <entryLink id="3898-977a-4a87-37c6" name="Command Traits" hidden="false" collective="false" import="true" targetId="548e-e11c-aeda-8d1b" type="selectionEntryGroup"/>
-                <entryLink id="01bf-7715-2b79-e56b" name="Invaders Host Extra General" hidden="false" collective="false" import="true" targetId="511a-c718-0d06-1bc5" type="selectionEntry"/>
-              </entryLinks>
-            </entryLink>
-            <entryLink id="c8f3-2052-c09a-8533" name="Chaos Sorcerer Lord on Manticore" hidden="false" collective="false" import="true" targetId="9256-c7f4-4b50-4548" type="selectionEntry">
-              <entryLinks>
-                <entryLink id="e3da-5c47-2d14-bbb8" name="General" hidden="false" collective="false" import="true" targetId="98a4-3d6d-a7b9-399f" type="selectionEntry"/>
-                <entryLink id="bc67-8534-5f69-aabe" name="Artefacts of Power" hidden="false" collective="false" import="true" targetId="a520-01ab-3cef-a486" type="selectionEntryGroup"/>
-                <entryLink id="94d9-ec24-aa1b-dda0" name="Command Traits" hidden="false" collective="false" import="true" targetId="548e-e11c-aeda-8d1b" type="selectionEntryGroup"/>
-                <entryLink id="7883-dafc-85f7-aaa2" name="Hedonites Spell Lores" hidden="false" collective="false" import="true" targetId="87c2-3bb8-b59b-6d11" type="selectionEntryGroup"/>
-                <entryLink id="1899-c04f-8d38-2544" name="Invaders Host Extra General" hidden="false" collective="false" import="true" targetId="511a-c718-0d06-1bc5" type="selectionEntry"/>
-              </entryLinks>
-            </entryLink>
-            <entryLink id="8c14-35c3-c91a-ea5d" name="Chaos Sorceror Lord" hidden="false" collective="false" import="true" targetId="e75f-c557-c734-1416" type="selectionEntry">
-              <entryLinks>
-                <entryLink id="e809-2d16-1fe8-46da" name="General" hidden="false" collective="false" import="true" targetId="98a4-3d6d-a7b9-399f" type="selectionEntry"/>
-                <entryLink id="4c5a-cdb3-7044-0be0" name="Hedonites Spell Lores" hidden="false" collective="false" import="true" targetId="87c2-3bb8-b59b-6d11" type="selectionEntryGroup"/>
-                <entryLink id="428c-2781-62c2-b3ec" name="Command Traits" hidden="false" collective="false" import="true" targetId="548e-e11c-aeda-8d1b" type="selectionEntryGroup"/>
-                <entryLink id="cd77-a99a-94c8-316c" name="Artefacts of Power" hidden="false" collective="false" import="true" targetId="a520-01ab-3cef-a486" type="selectionEntryGroup"/>
-                <entryLink id="7e0a-5584-8993-c272" name="Invaders Host Extra General" hidden="false" collective="false" import="true" targetId="511a-c718-0d06-1bc5" type="selectionEntry"/>
-              </entryLinks>
-            </entryLink>
-            <entryLink id="4193-6c9e-8191-a874" name="Exalted Hero of Chaos" hidden="false" collective="false" import="true" targetId="2b14-92e7-6138-eb76" type="selectionEntry">
-              <entryLinks>
-                <entryLink id="8ea0-c187-418a-1459" name="General" hidden="false" collective="false" import="true" targetId="98a4-3d6d-a7b9-399f" type="selectionEntry"/>
-                <entryLink id="397d-0535-0f12-349b" name="Artefacts of Power" hidden="false" collective="false" import="true" targetId="a520-01ab-3cef-a486" type="selectionEntryGroup"/>
-                <entryLink id="abe4-80a8-784b-3fe1" name="Command Traits" hidden="false" collective="false" import="true" targetId="548e-e11c-aeda-8d1b" type="selectionEntryGroup"/>
-                <entryLink id="1278-6a8a-4471-b5d9" name="Invaders Host Extra General" hidden="false" collective="false" import="true" targetId="511a-c718-0d06-1bc5" type="selectionEntry"/>
-              </entryLinks>
-            </entryLink>
-          </entryLinks>
-        </selectionEntryGroup>
-        <selectionEntryGroup id="d513-d723-26ff-d052" name="6 MORTAL SLAVES TO DARKNESS SLAANESH units" hidden="false" collective="false" import="true">
-          <constraints>
-            <constraint field="selections" scope="parent" value="6.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="6b55-06f9-c45c-74e2" type="min"/>
-            <constraint field="selections" scope="parent" value="6.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="580b-6b5b-3e2e-654a" type="max"/>
-          </constraints>
-          <entryLinks>
-            <entryLink id="efa1-1db7-5155-3cb9" name="Archaon the Everchosen" hidden="false" collective="false" import="true" targetId="b236-3f69-c15f-a954" type="selectionEntry">
-              <entryLinks>
-                <entryLink id="d9f2-f034-e89e-f7ea" name="General" hidden="false" collective="false" import="true" targetId="98a4-3d6d-a7b9-399f" type="selectionEntry">
-                  <categoryLinks>
-                    <categoryLink id="df5b-68b4-7b6b-009e" name="Named General" hidden="false" targetId="8b3d-7f03-e1f9-eaf5" primary="false"/>
-                  </categoryLinks>
-                </entryLink>
-                <entryLink id="e03a-5133-fbb8-f8cf" name="Hedonites Spell Lores" hidden="false" collective="false" import="true" targetId="87c2-3bb8-b59b-6d11" type="selectionEntryGroup"/>
-                <entryLink id="e888-45c4-e8a8-e9a2" name="Invaders Host Extra General" hidden="false" collective="false" import="true" targetId="511a-c718-0d06-1bc5" type="selectionEntry"/>
-              </entryLinks>
-            </entryLink>
-            <entryLink id="d92f-ced4-1a5b-850e" name="Chaos Chosen" hidden="false" collective="false" import="true" targetId="ea93-8ff3-9b86-c8f0" type="selectionEntry"/>
-            <entryLink id="1b64-71c3-3249-3685" name="Chaos Chariots" hidden="false" collective="false" import="true" targetId="9dd9-cc5b-2b21-b996" type="selectionEntry">
-              <modifiers>
-                <modifier type="remove" field="category" value="a42d-220e-6a88-7bf6">
-                  <conditionGroups>
-                    <conditionGroup type="or">
-                      <conditions>
-                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="eb59-f0ad-9828-dad9" type="instanceOf"/>
-                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="087e-befa-6f4f-edd7" type="equalTo"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
-                </modifier>
-              </modifiers>
-              <categoryLinks>
-                <categoryLink id="7eab-4c4a-3b08-3b3a" name="BATTLELINE" hidden="false" targetId="a42d-220e-6a88-7bf6" primary="false"/>
-              </categoryLinks>
-            </entryLink>
-            <entryLink id="d07e-148c-df07-dd94" name="Chaos Knights" hidden="false" collective="false" import="true" targetId="73fe-2d86-24a1-fe98" type="selectionEntry">
-              <modifiers>
-                <modifier type="remove" field="category" value="a42d-220e-6a88-7bf6">
-                  <conditionGroups>
-                    <conditionGroup type="or">
-                      <conditions>
-                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="eb59-f0ad-9828-dad9" type="instanceOf"/>
-                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="087e-befa-6f4f-edd7" type="equalTo"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
-                </modifier>
-              </modifiers>
-              <categoryLinks>
-                <categoryLink id="b876-6168-9744-749a" name="BATTLELINE" hidden="false" targetId="a42d-220e-6a88-7bf6" primary="false"/>
-              </categoryLinks>
-            </entryLink>
-            <entryLink id="a573-bd5c-49a3-f309" name="Chaos Lord" hidden="false" collective="false" import="true" targetId="57c2-5dde-47de-fec0" type="selectionEntry">
-              <entryLinks>
-                <entryLink id="9808-1911-de63-26f9" name="General" hidden="false" collective="false" import="true" targetId="98a4-3d6d-a7b9-399f" type="selectionEntry"/>
-                <entryLink id="1be8-e7d9-09b5-3c10" name="Command Traits" hidden="false" collective="false" import="true" targetId="548e-e11c-aeda-8d1b" type="selectionEntryGroup"/>
-                <entryLink id="e443-321b-cc88-99a8" name="Artefacts of Power" hidden="false" collective="false" import="true" targetId="a520-01ab-3cef-a486" type="selectionEntryGroup"/>
-                <entryLink id="3352-b08b-939d-0c5b" name="Invaders Host Extra General" hidden="false" collective="false" import="true" targetId="511a-c718-0d06-1bc5" type="selectionEntry"/>
-              </entryLinks>
-            </entryLink>
-            <entryLink id="0397-415d-1217-935c" name="Chaos Lord on Daemonic Mount" hidden="false" collective="false" import="true" targetId="e0d8-c1c4-780e-e06c" type="selectionEntry">
-              <entryLinks>
-                <entryLink id="ef89-4f43-21d1-06b8" name="General" hidden="false" collective="false" import="true" targetId="98a4-3d6d-a7b9-399f" type="selectionEntry"/>
-                <entryLink id="926f-30cb-265f-435c" name="Command Traits" hidden="false" collective="false" import="true" targetId="548e-e11c-aeda-8d1b" type="selectionEntryGroup"/>
-                <entryLink id="cf1c-3171-c5ce-f559" name="Artefacts of Power" hidden="false" collective="false" import="true" targetId="a520-01ab-3cef-a486" type="selectionEntryGroup"/>
-                <entryLink id="2c5a-42df-e24a-a161" name="Invaders Host Extra General" hidden="false" collective="false" import="true" targetId="511a-c718-0d06-1bc5" type="selectionEntry"/>
-              </entryLinks>
-            </entryLink>
-            <entryLink id="9de9-db2e-239f-1a7a" name="Chaos Lord on Karkadrak" hidden="false" collective="false" import="true" targetId="ae17-f81f-42d9-00dc" type="selectionEntry">
-              <entryLinks>
-                <entryLink id="6cf6-e867-c6f7-d4c6" name="General" hidden="false" collective="false" import="true" targetId="98a4-3d6d-a7b9-399f" type="selectionEntry"/>
-                <entryLink id="a64c-006f-dc9e-94fa" name="Command Traits" hidden="false" collective="false" import="true" targetId="548e-e11c-aeda-8d1b" type="selectionEntryGroup"/>
-                <entryLink id="3664-9635-70f2-2959" name="Artefacts of Power" hidden="false" collective="false" import="true" targetId="a520-01ab-3cef-a486" type="selectionEntryGroup"/>
-                <entryLink id="d4a6-d10e-74d9-6802" name="Invaders Host Extra General" hidden="false" collective="false" import="true" targetId="511a-c718-0d06-1bc5" type="selectionEntry"/>
-              </entryLinks>
-            </entryLink>
-            <entryLink id="01e5-7f83-492a-a621" name="Chaos Lord on Manticore" hidden="false" collective="false" import="true" targetId="1052-3276-9416-b2a8" type="selectionEntry">
-              <entryLinks>
-                <entryLink id="5afb-d9f3-67f4-6fad" name="General" hidden="false" collective="false" import="true" targetId="98a4-3d6d-a7b9-399f" type="selectionEntry"/>
-                <entryLink id="7b61-0dce-6f32-60b8" name="Command Traits" hidden="false" collective="false" import="true" targetId="548e-e11c-aeda-8d1b" type="selectionEntryGroup"/>
-                <entryLink id="a8d9-36a2-9287-b3f3" name="Artefacts of Power" hidden="false" collective="false" import="true" targetId="a520-01ab-3cef-a486" type="selectionEntryGroup"/>
-                <entryLink id="6b92-5517-354f-2e04" name="Invaders Host Extra General" hidden="false" collective="false" import="true" targetId="511a-c718-0d06-1bc5" type="selectionEntry"/>
-              </entryLinks>
-            </entryLink>
-            <entryLink id="23c5-b1a0-bbca-fd29" name="Chaos Marauder Horsemen" hidden="false" collective="false" import="true" targetId="fad7-8185-4954-cd2a" type="selectionEntry">
-              <modifiers>
-                <modifier type="remove" field="category" value="a42d-220e-6a88-7bf6">
-                  <conditionGroups>
-                    <conditionGroup type="or">
-                      <conditions>
-                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="eb59-f0ad-9828-dad9" type="instanceOf"/>
-                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="087e-befa-6f4f-edd7" type="equalTo"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
-                </modifier>
-              </modifiers>
-              <categoryLinks>
-                <categoryLink id="1428-d33c-9e78-bdd4" name="BATTLELINE" hidden="false" targetId="a42d-220e-6a88-7bf6" primary="false"/>
-              </categoryLinks>
-            </entryLink>
-            <entryLink id="edc3-dc13-795c-81b3" name="Chaos Marauders" hidden="false" collective="false" import="true" targetId="e057-b25e-b5b4-4df1" type="selectionEntry"/>
-            <entryLink id="e162-c150-18c8-9b8b" name="Chaos Warshrine" hidden="false" collective="false" import="true" targetId="5ba7-fe45-c11e-a8da" type="selectionEntry"/>
-            <entryLink id="e566-92a0-af84-9f7f" name="Chaos Warriors" hidden="false" collective="false" import="true" targetId="60a2-6f0e-3dac-fcc4" type="selectionEntry"/>
-            <entryLink id="3ace-8fa9-63d1-490f" name="Exalted Hero of Chaos" hidden="false" collective="false" import="true" targetId="2b14-92e7-6138-eb76" type="selectionEntry">
-              <entryLinks>
-                <entryLink id="7c49-f538-0075-2d8b" name="General" hidden="false" collective="false" import="true" targetId="98a4-3d6d-a7b9-399f" type="selectionEntry"/>
-                <entryLink id="b330-4eeb-5203-2a7b" name="Artefacts of Power" hidden="false" collective="false" import="true" targetId="a520-01ab-3cef-a486" type="selectionEntryGroup"/>
-                <entryLink id="6fd1-91bf-06e0-08c3" name="Command Traits" hidden="false" collective="false" import="true" targetId="548e-e11c-aeda-8d1b" type="selectionEntryGroup"/>
-                <entryLink id="c818-06f3-b103-5dce" name="Invaders Host Extra General" hidden="false" collective="false" import="true" targetId="511a-c718-0d06-1bc5" type="selectionEntry"/>
-              </entryLinks>
-            </entryLink>
-            <entryLink id="d8a9-5623-ceee-130a" name="Gorebeast Chariots" hidden="false" collective="false" import="true" targetId="ff78-a08a-de5f-8969" type="selectionEntry"/>
-            <entryLink id="4438-622c-4eb2-06ad" name="Slaves to Darkness Chaos Spawn" hidden="false" collective="false" import="true" targetId="2533-1c28-a6a1-1f76" type="selectionEntry"/>
-            <entryLink id="8437-05a5-cb71-9c52" name="Varanguard" hidden="false" collective="false" import="true" targetId="6b24-be40-5821-6573" type="selectionEntry">
-              <modifiers>
-                <modifier type="remove" field="category" value="a42d-220e-6a88-7bf6">
-                  <conditionGroups>
-                    <conditionGroup type="or">
-                      <conditions>
-                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="eb59-f0ad-9828-dad9" type="instanceOf"/>
-                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="087e-befa-6f4f-edd7" type="equalTo"/>
-                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="563a-9283-dac5-84c3" type="greaterThan"/>
-                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="a119-b44a-5e1a-f1e3" type="greaterThan"/>
-                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="aa14-7bf2-84b8-c573" type="greaterThan"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
-                </modifier>
-              </modifiers>
-              <categoryLinks>
-                <categoryLink id="2c46-06ad-422b-1688" name="BATTLELINE" hidden="false" targetId="a42d-220e-6a88-7bf6" primary="false"/>
-              </categoryLinks>
-            </entryLink>
-            <entryLink id="0362-7ece-9551-a39d" name="Chaos Sorcerer Lord on Manticore" hidden="false" collective="false" import="true" targetId="9256-c7f4-4b50-4548" type="selectionEntry">
-              <entryLinks>
-                <entryLink id="7b05-c98e-4c1f-a2c7" name="General" hidden="false" collective="false" import="true" targetId="98a4-3d6d-a7b9-399f" type="selectionEntry"/>
-                <entryLink id="92f7-c771-dd86-dd7c" name="Hedonites Spell Lores" hidden="false" collective="false" import="true" targetId="87c2-3bb8-b59b-6d11" type="selectionEntryGroup"/>
-                <entryLink id="69ea-3edc-ff67-c33c" name="Command Traits" hidden="false" collective="false" import="true" targetId="548e-e11c-aeda-8d1b" type="selectionEntryGroup"/>
-                <entryLink id="e2e6-1809-f3fe-9204" name="Artefacts of Power" hidden="false" collective="false" import="true" targetId="a520-01ab-3cef-a486" type="selectionEntryGroup"/>
-                <entryLink id="5a8a-0046-2472-5754" name="Invaders Host Extra General" hidden="false" collective="false" import="true" targetId="511a-c718-0d06-1bc5" type="selectionEntry"/>
-              </entryLinks>
-            </entryLink>
-            <entryLink id="1320-dddb-4acd-d665" name="Chaos Sorceror Lord" hidden="false" collective="false" import="true" targetId="e75f-c557-c734-1416" type="selectionEntry">
-              <entryLinks>
-                <entryLink id="849e-2404-2ab6-be47" name="General" hidden="false" collective="false" import="true" targetId="98a4-3d6d-a7b9-399f" type="selectionEntry"/>
-                <entryLink id="fd00-c6e0-9ff9-a6b1" name="Artefacts of Power" hidden="false" collective="false" import="true" targetId="a520-01ab-3cef-a486" type="selectionEntryGroup"/>
-                <entryLink id="3689-03ad-e553-09fa" name="Hedonites Spell Lores" hidden="false" collective="false" import="true" targetId="87c2-3bb8-b59b-6d11" type="selectionEntryGroup"/>
-                <entryLink id="78de-042b-7b34-56a9" name="Command Traits" hidden="false" collective="true" import="true" targetId="548e-e11c-aeda-8d1b" type="selectionEntryGroup"/>
-                <entryLink id="d92f-f839-b8ad-c1d7" name="Invaders Host Extra General" hidden="false" collective="false" import="true" targetId="511a-c718-0d06-1bc5" type="selectionEntry"/>
-              </entryLinks>
-            </entryLink>
-          </entryLinks>
-        </selectionEntryGroup>
-      </selectionEntryGroups>
-      <costs>
-        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="160.0"/>
-      </costs>
-    </selectionEntry>
-    <selectionEntry id="87ee-0f1d-94de-295b" name="Depraved Carnival" publicationId="29d6-453f-ecc0-3e4b" hidden="false" collective="false" import="true" type="upgrade">
-      <profiles>
-        <profile id="2763-8974-0f56-ae03" name="Honed by the Inimical" hidden="false" typeId="66c5-932e-004a-574c" typeName="Battalion Abilities">
-          <characteristics>
-            <characteristic name="Battalion Ability" typeId="23f7-32c0-e059-29b2">Once per turn, in your hero phase, you can pick 1 BLISSBARB ARCHERS unit from this battalion. That unit can shoot.</characteristic>
-          </characteristics>
-        </profile>
-      </profiles>
-      <categoryLinks>
-        <categoryLink id="50e3-948f-3649-ddbd" name="New CategoryLink" hidden="false" targetId="3706-e0e8-674f-c41b" primary="true"/>
-      </categoryLinks>
-      <selectionEntryGroups>
-        <selectionEntryGroup id="d2c0-2e85-d8f9-1ca9" name="3 Blissbarb Archers" hidden="false" collective="false" import="true">
-          <constraints>
-            <constraint field="selections" scope="parent" value="3.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="fa2e-5bc0-e309-37dd" type="max"/>
-            <constraint field="selections" scope="parent" value="3.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="827a-7f97-7d64-2d2e" type="min"/>
-          </constraints>
-          <entryLinks>
-            <entryLink id="108b-b503-2414-49c0" name="Blissbarb Archers" hidden="false" collective="false" import="true" targetId="b309-c000-e0c8-b592" type="selectionEntry"/>
-          </entryLinks>
-        </selectionEntryGroup>
-        <selectionEntryGroup id="3e11-447d-595e-e568" name="3 featured heroes" hidden="false" collective="false" import="true">
-          <constraints>
-            <constraint field="selections" scope="parent" value="3.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="da48-9bca-021c-c37a" type="max"/>
-            <constraint field="selections" scope="parent" value="3.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="1d31-4ad0-0d9a-1719" type="min"/>
-          </constraints>
-          <entryLinks>
-            <entryLink id="bad1-1da4-7851-d11a" name="Shardspeaker of Slaanesh" hidden="false" collective="false" import="true" targetId="9802-e51c-f34a-1953" type="selectionEntry">
-              <entryLinks>
-                <entryLink id="b187-5fb6-b34b-af28" name="General" hidden="false" collective="false" import="true" targetId="98a4-3d6d-a7b9-399f" type="selectionEntry"/>
-                <entryLink id="882c-617c-ce4e-7011" name="Command Traits" hidden="false" collective="false" import="true" targetId="548e-e11c-aeda-8d1b" type="selectionEntryGroup"/>
-                <entryLink id="362b-3054-7e04-e927" name="Artefacts of Power" hidden="false" collective="false" import="true" targetId="a520-01ab-3cef-a486" type="selectionEntryGroup"/>
-                <entryLink id="f605-1f24-ea7c-7ca9" name="Invaders Host Extra General" hidden="false" collective="false" import="true" targetId="511a-c718-0d06-1bc5" type="selectionEntry"/>
-                <entryLink id="6ce4-0867-1e9a-35cf" name="Hedonites Spell Lores" hidden="false" collective="false" import="true" targetId="87c2-3bb8-b59b-6d11" type="selectionEntryGroup"/>
-              </entryLinks>
-            </entryLink>
-            <entryLink id="d33e-8d7d-7fee-4494" name="Lord of Pain" hidden="false" collective="false" import="true" targetId="9b8f-acbd-252f-6b7d" type="selectionEntry">
-              <entryLinks>
-                <entryLink id="6e74-bc74-571f-600f" name="General" hidden="false" collective="false" import="true" targetId="98a4-3d6d-a7b9-399f" type="selectionEntry">
-                  <categoryLinks>
-                    <categoryLink id="aa55-ebcd-3465-a531" name="General - Lord of Pain" hidden="false" targetId="0088-a682-195b-9c0d" primary="false"/>
-                  </categoryLinks>
-                </entryLink>
-                <entryLink id="a469-cfaf-0c83-fd82" name="Invaders Host Extra General" hidden="false" collective="false" import="true" targetId="511a-c718-0d06-1bc5" type="selectionEntry">
-                  <categoryLinks>
-                    <categoryLink id="be39-751a-ff4f-0f74" name="General - Lord of Pain" hidden="false" targetId="0088-a682-195b-9c0d" primary="false"/>
-                  </categoryLinks>
-                </entryLink>
-                <entryLink id="0fb8-c8a8-abe9-9d0a" name="Artefacts of Power" hidden="false" collective="false" import="true" targetId="a520-01ab-3cef-a486" type="selectionEntryGroup"/>
-                <entryLink id="5b43-e72e-05f3-077d" name="Command Traits" hidden="false" collective="false" import="true" targetId="548e-e11c-aeda-8d1b" type="selectionEntryGroup"/>
-              </entryLinks>
-            </entryLink>
-          </entryLinks>
-        </selectionEntryGroup>
-      </selectionEntryGroups>
-      <costs>
-        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="160.0"/>
-      </costs>
-    </selectionEntry>
-    <selectionEntry id="6a9b-f492-9b4b-d123" name="Nobles of Excess" publicationId="29d6-453f-ecc0-3e4b" hidden="false" collective="false" import="true" type="upgrade">
-      <profiles>
-        <profile id="f4d1-0818-7efa-676e" name="A Demonstration of Prowess" hidden="false" typeId="66c5-932e-004a-574c" typeName="Battalion Abilities">
-          <characteristics>
-            <characteristic name="Battalion Ability" typeId="23f7-32c0-e059-29b2">You can re-roll wound rolls for attacks made with melee weapons by units from this battalion that made a charge move in the same turn.</characteristic>
-          </characteristics>
-        </profile>
-      </profiles>
-      <categoryLinks>
-        <categoryLink id="29f7-7aea-12a1-f9cb" name="New CategoryLink" hidden="false" targetId="3706-e0e8-674f-c41b" primary="true"/>
-      </categoryLinks>
-      <selectionEntryGroups>
-        <selectionEntryGroup id="d282-ec05-5c07-7234" name="3-6 featured units" hidden="false" collective="false" import="true">
-          <constraints>
-            <constraint field="selections" scope="parent" value="6.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="09bc-c79f-5765-fbd9" type="max"/>
-            <constraint field="selections" scope="parent" value="3.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="047b-26df-c16e-39c8" type="min"/>
-          </constraints>
-          <entryLinks>
-            <entryLink id="369f-deb5-c88b-6461" name="Symbaresh Twinsouls" hidden="false" collective="false" import="true" targetId="27c7-4eb8-6783-73e6" type="selectionEntry">
-              <modifiers>
-                <modifier type="remove" field="category" value="a42d-220e-6a88-7bf6">
-                  <conditions>
-                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="0088-a682-195b-9c0d" type="equalTo"/>
-                  </conditions>
-                </modifier>
-              </modifiers>
-              <categoryLinks>
-                <categoryLink id="7e25-5de9-bb28-54e3" name="BATTLELINE" hidden="false" targetId="a42d-220e-6a88-7bf6" primary="false"/>
-              </categoryLinks>
-            </entryLink>
-            <entryLink id="6ae3-5501-32b5-9750" name="Myrmidesh Painbringers" hidden="false" collective="false" import="true" targetId="1326-840f-9c0d-cb87" type="selectionEntry">
-              <modifiers>
-                <modifier type="remove" field="category" value="a42d-220e-6a88-7bf6">
-                  <conditions>
-                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="0088-a682-195b-9c0d" type="equalTo"/>
-                  </conditions>
-                </modifier>
-              </modifiers>
-              <categoryLinks>
-                <categoryLink id="4c00-bd00-8820-0951" name="BATTLELINE" hidden="false" targetId="a42d-220e-6a88-7bf6" primary="false"/>
-              </categoryLinks>
-            </entryLink>
-          </entryLinks>
-        </selectionEntryGroup>
-      </selectionEntryGroups>
-      <costs>
-        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="140.0"/>
-      </costs>
-    </selectionEntry>
-    <selectionEntry id="0f61-eb4c-7939-9bec" name="Exalted Speed-Knights" publicationId="29d6-453f-ecc0-3e4b" hidden="false" collective="false" import="true" type="upgrade">
-      <profiles>
-        <profile id="733d-bed1-9ce1-ac5f" name="Timing is Everything" hidden="false" typeId="66c5-932e-004a-574c" typeName="Battalion Abilities">
-          <characteristics>
-            <characteristic name="Battalion Ability" typeId="23f7-32c0-e059-29b2">After armies are set up but before the first battle round begins, up to D6 units from this battalion can move up to 6&quot;.</characteristic>
-          </characteristics>
-        </profile>
-      </profiles>
-      <categoryLinks>
-        <categoryLink id="6609-0742-80fd-864a" name="New CategoryLink" hidden="false" targetId="3706-e0e8-674f-c41b" primary="true"/>
-      </categoryLinks>
-      <selectionEntryGroups>
-        <selectionEntryGroup id="4bf5-de5a-4187-2de4" name="2-3 Blissbarb Seekers" hidden="false" collective="false" import="true">
-          <constraints>
-            <constraint field="selections" scope="parent" value="3.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="a1fd-7ccc-594e-911f" type="max"/>
-            <constraint field="selections" scope="parent" value="3.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="4ac7-551e-31b1-d448" type="min"/>
-          </constraints>
-          <entryLinks>
-            <entryLink id="606d-c3ab-4132-4d69" name="Blissbarb Seekers" hidden="false" collective="false" import="true" targetId="c904-4f68-bac3-f7a8" type="selectionEntry"/>
-          </entryLinks>
-        </selectionEntryGroup>
-        <selectionEntryGroup id="e3a2-1621-7d49-9d63" name="2-3 Slickblade Seekers" hidden="false" collective="false" import="true">
-          <constraints>
-            <constraint field="selections" scope="parent" value="3.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="df04-421f-814e-a883" type="max"/>
-            <constraint field="selections" scope="parent" value="3.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="146f-5d7e-2fec-66a0" type="min"/>
-          </constraints>
-          <entryLinks>
-            <entryLink id="cd06-95fb-9001-f63f" name="Slickblade Seekers" hidden="false" collective="false" import="true" targetId="681e-a2c6-4833-1d5a" type="selectionEntry"/>
-          </entryLinks>
-        </selectionEntryGroup>
-        <selectionEntryGroup id="76d8-9e76-e5da-cd3e" name="2-3 Seekers" hidden="false" collective="false" import="true">
-          <constraints>
-            <constraint field="selections" scope="parent" value="3.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="f502-60a0-30c5-2566" type="max"/>
-            <constraint field="selections" scope="parent" value="3.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="2ab9-e456-7376-a922" type="min"/>
-          </constraints>
-          <entryLinks>
-            <entryLink id="4b0c-2a65-3243-6584" name="Seekers" hidden="false" collective="false" import="true" targetId="557e-4177-4be2-2d54" type="selectionEntry"/>
-          </entryLinks>
-        </selectionEntryGroup>
-      </selectionEntryGroups>
-      <costs>
-        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="120.0"/>
-      </costs>
-    </selectionEntry>
-    <selectionEntry id="35f4-f345-7e8b-83ac" name="The Exquisite Pursuit" hidden="false" collective="false" import="true" type="upgrade">
-      <constraints>
-        <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="789a-cdec-a15a-6d22" type="max"/>
-      </constraints>
-      <profiles>
-        <profile id="a072-9bd1-4a05-3b5b" name="The Mirror of Twisted Truths" hidden="false" typeId="66c5-932e-004a-574c" typeName="Battalion Abilities">
-          <characteristics>
-            <characteristic name="Battalion Ability" typeId="23f7-32c0-e059-29b2">In your shooting phase, you can either pick 1 enemy unit that is within 3&quot; of Luxion and Vresca or pick 1 enemy unit that is within 12&quot; of the Luxion and Vresca and more than 3&quot; from any other units in your army. Roll a dice for each model in that unit. If that unit has a Wounds characteristic of 1, for each 6, that unit suffers 1 mortal wound. If that unit has a Wounds characteristic of more than 1, for each 6, that unit suffers D3 mortal wounds.</characteristic>
-          </characteristics>
-        </profile>
-      </profiles>
-      <categoryLinks>
-        <categoryLink id="4350-4de0-5b1f-7bcc" name="New CategoryLink" hidden="false" targetId="3706-e0e8-674f-c41b" primary="true"/>
-      </categoryLinks>
-      <selectionEntryGroups>
-        <selectionEntryGroup id="5661-0196-302c-6810" name="1 Seekers unit" hidden="false" collective="false" import="true">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="86af-f2c5-b2b5-7e70" type="max"/>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="31bd-e7d3-db9d-f175" type="min"/>
-          </constraints>
-          <entryLinks>
-            <entryLink id="10fc-5e28-027f-597a" name="Seekers" hidden="false" collective="false" import="true" targetId="557e-4177-4be2-2d54" type="selectionEntry"/>
-          </entryLinks>
-        </selectionEntryGroup>
-        <selectionEntryGroup id="6487-482b-8408-72aa" name="1 Fiends unit" hidden="false" collective="false" import="true">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="a519-7038-d332-94cc" type="max"/>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d966-7c92-3e13-9bca" type="min"/>
-          </constraints>
-          <entryLinks>
-            <entryLink id="44e2-4d27-a367-4443" name="Fiends" hidden="false" collective="false" import="true" targetId="b07f-0154-0c3b-91a7" type="selectionEntry"/>
-          </entryLinks>
-        </selectionEntryGroup>
-        <selectionEntryGroup id="39d7-ebc4-ff01-7c74" name="The Contorted Epitome (Luxion and Vresca)" hidden="false" collective="false" import="true">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="5871-f624-51be-2cb7" type="max"/>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="7c77-a08f-be59-de3d" type="min"/>
-          </constraints>
-          <entryLinks>
-            <entryLink id="50a6-626f-9d57-70ac" name="The Contorted Epitome" hidden="false" collective="false" import="true" targetId="98d7-c82a-5c0a-0d98" type="selectionEntry">
-              <entryLinks>
-                <entryLink id="224e-32d5-4ee1-fb0f" name="General" hidden="false" collective="false" import="true" targetId="98a4-3d6d-a7b9-399f" type="selectionEntry"/>
-                <entryLink id="2172-d275-7ece-6503" name="Artefacts of Power" hidden="false" collective="false" import="true" targetId="a520-01ab-3cef-a486" type="selectionEntryGroup"/>
-                <entryLink id="586b-b2d8-34ea-94e2" name="Command Traits" hidden="false" collective="false" import="true" targetId="548e-e11c-aeda-8d1b" type="selectionEntryGroup"/>
-                <entryLink id="8406-549c-65fa-2811" name="Hedonites Spell Lores" hidden="false" collective="false" import="true" targetId="87c2-3bb8-b59b-6d11" type="selectionEntryGroup"/>
-                <entryLink id="dea3-e924-9aea-326b" name="Invaders Host Extra General" hidden="false" collective="false" import="true" targetId="511a-c718-0d06-1bc5" type="selectionEntry"/>
-              </entryLinks>
-            </entryLink>
-          </entryLinks>
-        </selectionEntryGroup>
-      </selectionEntryGroups>
-      <costs>
-        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="130.0"/>
       </costs>
     </selectionEntry>
   </sharedSelectionEntries>
@@ -3103,6 +1956,103 @@ If that HERO you picked has an artefact of power, instead of suffering 1 mortal 
       </constraints>
       <entryLinks>
         <entryLink id="1c5d-effe-7eba-828f" name="Universal Prayer Scripture" hidden="false" collective="false" import="true" targetId="7104-ab27-d136-1df0" type="selectionEntryGroup"/>
+      </entryLinks>
+    </selectionEntryGroup>
+    <selectionEntryGroup id="d07d-93de-3bf7-d401" name="Battalion Formation" hidden="false" collective="false" import="true">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="c03a-b1a8-66c6-3637" type="equalTo"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <constraints>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="a586-2251-0f52-37b9" type="max"/>
+      </constraints>
+      <selectionEntryGroups>
+        <selectionEntryGroup id="35e7-a008-8b4b-f280" name="Hedonites of Slaanesh Battalions" hidden="false" collective="false" import="true">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4373-740f-1bf3-b0aa" type="instanceOf"/>
+                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="e3a6-45ca-4974-b489" type="instanceOf"/>
+                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="996a-613c-4006-25e3" type="instanceOf"/>
+                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="6cd6-b22e-bfcb-9589" type="instanceOf"/>
+                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="b543-cb16-0c79-fbc6" type="instanceOf"/>
+                  </conditions>
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="df48-9f95-bf56-4b8d" type="equalTo"/>
+                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="3b2a-7a13-d929-283f" type="equalTo"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="42d9-fe5f-efdc-8c34" type="max"/>
+          </constraints>
+          <selectionEntries>
+            <selectionEntry id="ee80-cf26-f0e8-9b75" name="Nobles of Excess" hidden="false" collective="false" import="true" type="upgrade">
+              <modifiers>
+                <modifier type="set" field="hidden" value="true">
+                  <conditionGroups>
+                    <conditionGroup type="or">
+                      <conditions>
+                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="df48-9f95-bf56-4b8d" type="equalTo"/>
+                      </conditions>
+                      <conditionGroups>
+                        <conditionGroup type="and">
+                          <conditions>
+                            <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="ba50-dcd8-d40c-3fd3" type="notInstanceOf"/>
+                            <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="d81b-3aa7-a34a-fa45" type="notInstanceOf"/>
+                          </conditions>
+                        </conditionGroup>
+                      </conditionGroups>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+              </modifiers>
+              <costs>
+                <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="c737-c091-bcb0-5fd5" name="Epicurean Revellers" hidden="false" collective="false" import="true" type="upgrade">
+              <modifiers>
+                <modifier type="set" field="hidden" value="true">
+                  <conditionGroups>
+                    <conditionGroup type="or">
+                      <conditions>
+                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="3b2a-7a13-d929-283f" type="equalTo"/>
+                      </conditions>
+                      <conditionGroups>
+                        <conditionGroup type="and">
+                          <conditions>
+                            <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="0fb9-409f-8aa1-9619" type="notInstanceOf"/>
+                            <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="7618-2ff6-1bcf-4a74" type="notInstanceOf"/>
+                            <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="27cd-44d0-87c3-67ec" type="notInstanceOf"/>
+                            <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="d088-46fb-3c14-3933" type="notInstanceOf"/>
+                          </conditions>
+                        </conditionGroup>
+                      </conditionGroups>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+              </modifiers>
+              <costs>
+                <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
+              </costs>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
+      <entryLinks>
+        <entryLink id="e5bd-453b-643e-ba7d" name="Core Battalions" hidden="false" collective="false" import="true" targetId="8c04-393d-d72d-c2a8" type="selectionEntryGroup"/>
       </entryLinks>
     </selectionEntryGroup>
   </sharedSelectionEntryGroups>
