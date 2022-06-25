@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<gameSystem id="e832-3291-06be-cab1" name="Age of Sigmar - Thul Ed" revision="27" battleScribeVersion="2.03" authorName="Thulram" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
+<gameSystem id="e832-3291-06be-cab1" name="Age of Sigmar - Thul Ed" revision="29" battleScribeVersion="2.03" authorName="Thulram" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
   <publications>
     <publication id="bf0c-0cbf-1f5d-5885" name="Chaos Battletome - Blades of Khorne"/>
     <publication id="6ce4-e8a3-f18f-be55" name="Order Battletome - Daughters of Khaine"/>
@@ -149,6 +149,12 @@
         <characteristicType id="faec-beac-0874-3c6e" name="Effect"/>
       </characteristicTypes>
     </profileType>
+    <profileType id="592d-8852-ad05-1dce" name="Krondspine Incarnate State Table">
+      <characteristicTypes>
+        <characteristicType id="78e0-5f66-cbf2-7abb" name="Level"/>
+        <characteristicType id="ac22-e0d1-4fde-5b06" name="Domination Range"/>
+      </characteristicTypes>
+    </profileType>
   </profileTypes>
   <categoryEntries>
     <categoryEntry id="eb59-f0ad-9828-dad9" name="Allies" hidden="false"/>
@@ -263,7 +269,7 @@
     <categoryEntry id="23fe-1fcc-5c96-cc6b" name="Stormvault" hidden="false"/>
     <categoryEntry id="796f-4091-16ed-a397" name="Penumbral Engine" hidden="false"/>
     <categoryEntry id="ec0f-042a-b925-6dae" name="Aqshy" hidden="false"/>
-    <categoryEntry id="e49c-796b-cede-8705" name="Ghur" hidden="false"/>
+    <categoryEntry id="e49c-796b-cede-8705" name="GHUR" hidden="false"/>
     <categoryEntry id="8805-d9e6-6ad7-0573" name="Ghyran" hidden="false"/>
     <categoryEntry id="9314-4d3b-8fa1-49b3" name="Ulgu" hidden="false"/>
     <categoryEntry id="3d6d-d56b-ed5b-01cb" name="Chamon" hidden="false"/>
@@ -346,6 +352,8 @@
       </constraints>
     </categoryEntry>
     <categoryEntry id="d75e-a123-ace4-2aa9" name="UniquePlus" hidden="false"/>
+    <categoryEntry id="080e-7adc-0056-6534" name="KRONDSPINE INCARNATE" hidden="false"/>
+    <categoryEntry id="5b8a-3441-3d9e-bea2" name="INCARNATE" hidden="false"/>
   </categoryEntries>
   <forceEntries>
     <forceEntry id="582e-fd89-8731-30c8" name="-Pitched Battle - 2000pts" hidden="false">
@@ -1857,6 +1865,7 @@
     <entryLink id="5bb9-4cbd-bb8a-202d" name="Endless Spell - Shards of Vallagharr" hidden="false" collective="false" import="true" targetId="df97-6761-aa09-4823" type="selectionEntry"/>
     <entryLink id="4d6c-1720-3996-507f" name="Endless Spell - Lauchon the Soulseeker" hidden="false" collective="false" import="true" targetId="fc6c-4d7a-cc50-db15" type="selectionEntry"/>
     <entryLink id="fda6-18ed-e521-1967" name="Endless Spell - Horrorghast" hidden="false" collective="false" import="true" targetId="7e0a-6ffe-4578-3577" type="selectionEntry"/>
+    <entryLink id="6c5e-3efb-0fe3-58a1" name="Krondspine Incarnate" hidden="false" collective="false" import="true" targetId="cbf0-ddbd-d718-4a7f" type="selectionEntry"/>
   </entryLinks>
   <sharedSelectionEntries>
     <selectionEntry id="98a4-3d6d-a7b9-399f" name="General" hidden="false" collective="false" import="true" type="upgrade">
@@ -1911,7 +1920,7 @@
         <categoryLink id="5a6f-cf9c-46db-436e" name="New CategoryLink" hidden="false" targetId="ecf9-78bd-d326-2a82" primary="true"/>
       </categoryLinks>
       <costs>
-        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="65.0"/>
+        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="40.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="6565-5685-eb04-d0a4" name="Endless Spell - Chronomantic Cogs" publicationId="d283-510e-eaa4-06e2" hidden="false" collective="false" import="true" type="model">
@@ -1942,7 +1951,7 @@ At the start of the hero phase, if there is a friendly WIZARD within 6&quot; of 
         <categoryLink id="60ff-273e-1527-0b44" name="New CategoryLink" hidden="false" targetId="ecf9-78bd-d326-2a82" primary="true"/>
       </categoryLinks>
       <costs>
-        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="45.0"/>
+        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="40.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="24fe-af98-69d8-abc1" name="Endless Spell - Emerald Lifeswarm" publicationId="d283-510e-eaa4-06e2" hidden="false" collective="false" import="true" type="model">
@@ -2003,7 +2012,7 @@ At the start of the hero phase, if there is a friendly WIZARD within 6&quot; of 
         <categoryLink id="141a-7f06-812c-84ed" name="New CategoryLink" hidden="false" targetId="ecf9-78bd-d326-2a82" primary="true"/>
       </categoryLinks>
       <costs>
-        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="80.0"/>
+        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="40.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="d3a3-3415-beaf-d183" name="Endless Spell - Malevolent Maelstrom" publicationId="d283-510e-eaa4-06e2" hidden="false" collective="false" import="true" type="model">
@@ -2035,7 +2044,7 @@ At the end of the combat phase, if this endless spell is on the battlefield, rol
         <categoryLink id="55a9-21c7-3de0-3266" name="New CategoryLink" hidden="false" targetId="ecf9-78bd-d326-2a82" primary="true"/>
       </categoryLinks>
       <costs>
-        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="65.0"/>
+        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="50.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="9b5e-2e4b-7796-8d1e" name="Endless Spell - Prismatic Palisade" publicationId="d283-510e-eaa4-06e2" hidden="false" collective="false" import="true" type="model">
@@ -2119,7 +2128,7 @@ A unit cannot be removed and set up again this way more than once per phase. A u
         <categoryLink id="e50f-15bf-b0f4-26b1" name="Soulscream Bridge" hidden="false" targetId="889e-7ffd-ffc9-7c5f" primary="false"/>
       </categoryLinks>
       <costs>
-        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="70.0"/>
+        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="80.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="9ba7-7898-886c-1744" name="Endless Spell - Quicksilver Swords" publicationId="d283-510e-eaa4-06e2" hidden="false" collective="false" import="true" type="model">
@@ -2149,7 +2158,7 @@ A unit cannot be removed and set up again this way more than once per phase. A u
         <categoryLink id="607f-72d9-df57-fc7f" name="Quicksilver Swords" hidden="false" targetId="786e-4199-c325-343b" primary="false"/>
       </categoryLinks>
       <costs>
-        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="90.0"/>
+        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="60.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="d9e4-ce49-ecc7-fae8" name="Endless Spell - Ravenak&apos;s Gnashing Jaws" publicationId="d283-510e-eaa4-06e2" hidden="false" collective="false" import="true" type="model">
@@ -2179,7 +2188,7 @@ A unit cannot be removed and set up again this way more than once per phase. A u
         <categoryLink id="67b0-40e2-3dbe-5a6f" name="Ravenak&apos;s Gnashing Jaws" hidden="false" targetId="38f1-1ef8-8056-6513" primary="false"/>
       </categoryLinks>
       <costs>
-        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="55.0"/>
+        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="60.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="586f-773e-d7d6-2412" name="Endless Spell - Soulsnare Shackles" publicationId="d283-510e-eaa4-06e2" hidden="false" collective="false" import="true" type="model">
@@ -2204,7 +2213,7 @@ A unit cannot be removed and set up again this way more than once per phase. A u
         <categoryLink id="6605-a2cf-07ad-6ded" name="Soulsnare Shackles" hidden="false" targetId="a6a2-e340-480f-fd3b" primary="false"/>
       </categoryLinks>
       <costs>
-        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="65.0"/>
+        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="50.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="dcf7-f431-661e-2feb" name="Endless Spell - Suffocating Gravetide" publicationId="d283-510e-eaa4-06e2" hidden="false" collective="false" import="true" type="model">
@@ -2234,7 +2243,7 @@ A unit cannot be removed and set up again this way more than once per phase. A u
         <categoryLink id="f528-983b-5173-1779" name="Suffocating Gravetide" hidden="false" targetId="86d4-b1f8-7951-e9c3" primary="false"/>
       </categoryLinks>
       <costs>
-        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="50.0"/>
+        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="40.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="ac05-76f2-36c2-9f98" name="Endless Spell - The Burning Head" publicationId="d283-510e-eaa4-06e2" hidden="false" collective="false" import="true" type="model">
@@ -2321,7 +2330,7 @@ In addition, once per turn, when a predatory endless spell within 6&quot; of thi
         <categoryLink id="c0a1-2a91-f7fd-3a60" name="Shards of Valagharr" hidden="false" targetId="8f27-0154-a719-3596" primary="false"/>
       </categoryLinks>
       <costs>
-        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="70.0"/>
+        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="50.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="fc6c-4d7a-cc50-db15" name="Endless Spell - Lauchon the Soulseeker" hidden="false" collective="false" import="true" type="model">
@@ -2351,7 +2360,7 @@ In addition, once per turn, when a predatory endless spell within 6&quot; of thi
         <categoryLink id="f94a-cc96-9aed-ac51" name="Lauchon the Soulseeker" hidden="false" targetId="d58e-b376-52ea-a019" primary="false"/>
       </categoryLinks>
       <costs>
-        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="55.0"/>
+        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="30.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="7e0a-6ffe-4578-3577" name="Endless Spell - Horrorghast" hidden="false" collective="false" import="true" type="model">
@@ -2381,7 +2390,7 @@ In addition, once per turn, when a predatory endless spell within 6&quot; of thi
         <categoryLink id="ac23-f691-ab14-f865" name="Horrorghast" hidden="false" targetId="8aea-d7aa-5928-0c6b" primary="false"/>
       </categoryLinks>
       <costs>
-        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="65.0"/>
+        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="40.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="d9a8-9174-73a9-ee2d" name="Terrain Feature - Penumbral Engine" hidden="false" collective="false" import="true" type="unit">
@@ -2562,6 +2571,156 @@ At the start of your hero phase, you receive 1 extra command point if any friend
       </constraints>
       <costs>
         <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="cbf0-ddbd-d718-4a7f" name="Krondspine Incarnate" hidden="false" collective="false" import="true" type="unit">
+      <constraints>
+        <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="7dff-366f-afdf-d863" type="max"/>
+      </constraints>
+      <profiles>
+        <profile id="4c81-9696-cad9-c633" name="Krondspine Incarnate" hidden="false" typeId="3956-f6dd-6c88-ae4b" typeName="Unit">
+          <characteristics>
+            <characteristic name="Move" typeId="5bbe-8910-4dfa-7b1c">12&quot;</characteristic>
+            <characteristic name="Wounds" typeId="a0c6-af64-2f24-5759">--</characteristic>
+            <characteristic name="Save" typeId="93b6-2f96-2df7-e330">4+</characteristic>
+            <characteristic name="Bravery" typeId="2420-1c5c-1016-7033">10</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="5bd0-9ef2-8031-79c3" name="Devour Endless Spell" hidden="false" typeId="1193-4081-af87-68cd" typeName="Heroic Action/Monstrous Rampage">
+          <characteristics>
+            <characteristic name="Effect" typeId="faec-beac-0874-3c6e">Pick 1 endless spell that was summoned by an enemy WIZARD and that is within 3&quot; of this incarnate, and roll 2D6. Add this incarnate’s level to the roll. If the roll is greater than the casting value of the spell used to summon that endless spell, that endless spell is dispelled and the level of this incarnate is increased by 1. On any other roll, the level of this incarnate is reduced by 1.</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="4072-fad5-44d6-edc7" name="Arcane Predator" hidden="false" typeId="7861-da01-01c0-88d9" typeName="Ability">
+          <characteristics>
+            <characteristic name="Ability" typeId="9bce-4deb-8b79-eaec">In your charge phase, if this incarnate is within 12&quot; of an endless spell that was summoned by an enemy WIZARD, it can attempt a charge, and it can make a charge move as long as that charge move finishes within 1/2&quot; of an enemy model or endless spell that was summoned by an enemy WIZARD.
+
+In addition, this incarnate can carry out the Devour Endless Spell monstrous rampage instead of any other monstrous rampage it can carryout.</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="0189-4a34-cfa2-6dc9" name="1- Empowered" hidden="false" typeId="592d-8852-ad05-1dce" typeName="Krondspine Incarnate State Table">
+          <characteristics>
+            <characteristic name="Level" typeId="78e0-5f66-cbf2-7abb">3</characteristic>
+            <characteristic name="Domination Range" typeId="ac22-e0d1-4fde-5b06">12&quot;</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="4976-8aea-d6ce-2f70" name="4- Abolished" hidden="false" typeId="592d-8852-ad05-1dce" typeName="Krondspine Incarnate State Table">
+          <characteristics>
+            <characteristic name="Level" typeId="78e0-5f66-cbf2-7abb">0</characteristic>
+            <characteristic name="Domination Range" typeId="ac22-e0d1-4fde-5b06">-</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="20b4-ee7a-c4c3-ca32" name="3- Weakened" hidden="false" typeId="592d-8852-ad05-1dce" typeName="Krondspine Incarnate State Table">
+          <characteristics>
+            <characteristic name="Level" typeId="78e0-5f66-cbf2-7abb">1</characteristic>
+            <characteristic name="Domination Range" typeId="ac22-e0d1-4fde-5b06">8&quot;</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="7fb5-6686-8098-f9c9" name="2- Primal" hidden="false" typeId="592d-8852-ad05-1dce" typeName="Krondspine Incarnate State Table">
+          <characteristics>
+            <characteristic name="Level" typeId="78e0-5f66-cbf2-7abb">2</characteristic>
+            <characteristic name="Domination Range" typeId="ac22-e0d1-4fde-5b06">10&quot;</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="9e71-42fc-7d4b-34ac" name="Inflamed Savagery" hidden="false" typeId="7861-da01-01c0-88d9" typeName="Ability">
+          <characteristics>
+            <characteristic name="Ability" typeId="9bce-4deb-8b79-eaec">The following effects apply to all units that are wholly within domination range of this incarnate:
+
+• The unit’s commanding player can re-roll run rolls and charge rolls for the unit.
+• The unit cannot retreat.
+• If the unit is a WIZARD that it is not bonded to this incarnate, subtract 1 from casting, dispelling and unbinding rolls for that WIZARD.</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="baa6-c146-f6ad-8096" name="Bonding" hidden="false" typeId="ce32-0c40-1990-4c8a" typeName="Restriction">
+          <characteristics>
+            <characteristic name="Restriction" typeId="edbe-5fe5-1142-afa6">This incarnate can only receive commands issued by the HERO it is bonded to.
+
+If the All-out Attack command is received by this incarnate, the command is also received by all friendly units that are wholly within domination range of this incarnate, that are within 3&quot; of an enemy unit, and that have not already received a command in that phase.
+
+Add 1 to casting, dispelling and unbinding rolls for a WIZARD that is within domination range of an incarnate they are bonded to.</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="c6fd-58be-f26e-d983" name="Empowerment" hidden="false" typeId="ce32-0c40-1990-4c8a" typeName="Restriction">
+          <characteristics>
+            <characteristic name="Restriction" typeId="edbe-5fe5-1142-afa6">If a MONSTER is slain by wounds inflicted by this incarnate’s attacks, increase this incarnate’s level by 1.</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="b4f7-7615-6190-d626" name="Wild Form" hidden="false" typeId="ce32-0c40-1990-4c8a" typeName="Restriction">
+          <characteristics>
+            <characteristic name="Restriction" typeId="edbe-5fe5-1142-afa6">Add 1 to hit rolls for attacks made by this incarnate while it is in its wild form. This incarnate can run and still charge in the same turn while it is in its wild form. If this incarnate is in its wild form and is within 12&quot; of a unit or an endless spell at the start of your charge phase, it must attempt a charge and must make a charge move if it is possible for it to do so.
+
+Designer’s Note: Remember that an incarnate in its wild form treats other units in your army as enemy units, so it may be forced to charge and attack those units.</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoLinks>
+        <infoLink id="0dbc-c91e-eead-2ac5" name="Fly" hidden="false" targetId="dd68-953d-c8fb-7075" type="profile"/>
+      </infoLinks>
+      <categoryLinks>
+        <categoryLink id="ae70-cf11-99ab-cb5a" name="GHUR" hidden="false" targetId="e49c-796b-cede-8705" primary="false"/>
+        <categoryLink id="58d8-13f9-9831-9608" name="INCARNATE" hidden="false" targetId="5b8a-3441-3d9e-bea2" primary="false"/>
+        <categoryLink id="9f37-e7f4-291f-c330" name="KRONDSPINE INCARNATE" hidden="false" targetId="080e-7adc-0056-6534" primary="false"/>
+        <categoryLink id="5c72-f9d7-18de-f2b1" name="MONSTER" hidden="false" targetId="e3bc-f9bd-b6f8-7afd" primary="false"/>
+        <categoryLink id="e782-91cc-44ce-e3c5" name="New CategoryLink" hidden="false" targetId="7f62-b7f5-32d5-e13b" primary="true"/>
+      </categoryLinks>
+      <selectionEntries>
+        <selectionEntry id="0cb3-0161-2f0c-45cb" name="Tearing Fangs" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="05b4-ed7e-9a61-e1ef" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="14f8-ba57-8bad-bd96" type="min"/>
+          </constraints>
+          <profiles>
+            <profile id="df1d-d936-eecb-f4f4" name="Krondspine Incarnate" hidden="false" typeId="ce32-0c40-1990-4c8a" typeName="Restriction">
+              <characteristics>
+                <characteristic name="Restriction" typeId="edbe-5fe5-1142-afa6">*Add the incarnate’s level to the Attacks characteristic.</characteristic>
+              </characteristics>
+            </profile>
+            <profile id="5c55-b864-aa6a-3565" name="Tearing Fangs" hidden="false" typeId="2905-f6bd-06e5-6642" typeName="Weapon">
+              <characteristics>
+                <characteristic name="Type" typeId="1a08-195b-76fd-2c2b">Melee</characteristic>
+                <characteristic name="Range" typeId="1406-f935-3f8e-b27f">2&quot;</characteristic>
+                <characteristic name="Attacks" typeId="4c19-dba6-f094-5165">1*</characteristic>
+                <characteristic name="To-Hit" typeId="7a4f-9704-2095-96c8">3+</characteristic>
+                <characteristic name="To-Wound" typeId="172f-fc84-895b-04b7">2+</characteristic>
+                <characteristic name="Rend" typeId="0c05-bd2e-b7e7-3925">-3</characteristic>
+                <characteristic name="Damage" typeId="01c2-d16a-8788-e52b">4</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <costs>
+            <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="f5a0-8af8-a7bd-dfcc" name="Vicious Claws" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8e77-005c-92b0-356f" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="7dc6-f3fe-f664-6f50" type="min"/>
+          </constraints>
+          <profiles>
+            <profile id="6c38-390a-20b8-230b" name="Vicious Claws" hidden="false" typeId="2905-f6bd-06e5-6642" typeName="Weapon">
+              <characteristics>
+                <characteristic name="Type" typeId="1a08-195b-76fd-2c2b">Melee</characteristic>
+                <characteristic name="Range" typeId="1406-f935-3f8e-b27f">1&quot;</characteristic>
+                <characteristic name="Attacks" typeId="4c19-dba6-f094-5165">6*</characteristic>
+                <characteristic name="To-Hit" typeId="7a4f-9704-2095-96c8">3+</characteristic>
+                <characteristic name="To-Wound" typeId="172f-fc84-895b-04b7">3+</characteristic>
+                <characteristic name="Rend" typeId="0c05-bd2e-b7e7-3925">-2</characteristic>
+                <characteristic name="Damage" typeId="01c2-d16a-8788-e52b">2</characteristic>
+              </characteristics>
+            </profile>
+            <profile id="a6a5-abad-cb97-f010" name="Krondspine Incarnate" hidden="false" typeId="ce32-0c40-1990-4c8a" typeName="Restriction">
+              <characteristics>
+                <characteristic name="Restriction" typeId="edbe-5fe5-1142-afa6">*Add the incarnate’s level to the Attacks characteristic.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <costs>
+            <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
+          </costs>
+        </selectionEntry>
+      </selectionEntries>
+      <costs>
+        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="400.0"/>
       </costs>
     </selectionEntry>
   </sharedSelectionEntries>

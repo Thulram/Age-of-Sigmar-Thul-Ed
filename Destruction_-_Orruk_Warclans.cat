@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="baec-b910-0f21-3dd6" name="Destruction - Orruk Warclans" revision="15" battleScribeVersion="2.03" authorName="Thulram" library="false" gameSystemId="e832-3291-06be-cab1" gameSystemRevision="14" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="baec-b910-0f21-3dd6" name="Destruction - Orruk Warclans" revision="16" battleScribeVersion="2.03" authorName="Thulram" library="false" gameSystemId="e832-3291-06be-cab1" gameSystemRevision="15" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <profileTypes>
     <profileType id="2112-3fb5-330c-b45d" name="Waaagh! Power - Pts">
       <characteristicTypes>
@@ -1063,6 +1063,7 @@
       </modifiers>
       <entryLinks>
         <entryLink id="772c-c42e-2d90-02fb" name="Battalion Formation" hidden="false" collective="false" import="true" targetId="9128-4dae-cce8-78d6" type="selectionEntryGroup"/>
+        <entryLink id="77a0-6305-851a-91c1" name="Hobgrot Slittaz Battleline" hidden="false" collective="false" import="true" targetId="7709-7fd8-3574-2a42" type="selectionEntry"/>
       </entryLinks>
     </entryLink>
     <entryLink id="dd6e-afda-a0e5-88b4" name="Man-skewer Boltboyz" hidden="false" collective="false" import="true" targetId="47d2-162d-a768-bd35" type="selectionEntry">
@@ -1415,7 +1416,7 @@
                 </profile>
                 <profile id="2f32-42f0-bd21-ea68" name="Spirit of Gorkamorka" hidden="false" typeId="c0c2-177b-e761-ec41" typeName="Allegiance Abilities">
                   <characteristics>
-                    <characteristic name="Allegiance Ability" typeId="0506-f62d-68b3-5499">If the unmodified hit roll for an attack made with a melee weapon by a friendly BONESPLITTERZ unit that has 5 or more models is 6, that attack scores 2 hits on the target instead of 1 (make a wound roll and save roll for each hit).</characteristic>
+                    <characteristic name="Allegiance Ability" typeId="0506-f62d-68b3-5499">If the unmodified hit roll for an attack made with a melee weapon by a friendly BONESPLITTERZ unit is 6, that attack scores 2 hits on the target instead of 1 (make a wound roll and save roll for each hit).</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
@@ -1623,7 +1624,7 @@ Covered in Mud: Roll 3 dice. For each 4+, pick 1 friendly unit that is not a HER
                       <profiles>
                         <profile id="bf2e-0e29-2ecc-324e" name="Out of the Mists" hidden="false" typeId="c0c2-177b-e761-ec41" typeName="Allegiance Abilities">
                           <characteristics>
-                            <characteristic name="Allegiance Ability" typeId="0506-f62d-68b3-5499">During the first battle round, friendly GRINNIN&apos; BLADES units are not visible to enemy models that are more than 12&quot; away from them.</characteristic>
+                            <characteristic name="Allegiance Ability" typeId="0506-f62d-68b3-5499">Friendly GRINNIN&apos; BLADES units are not visible to enemy models that are more than 12&quot; away from them.</characteristic>
                           </characteristics>
                         </profile>
                       </profiles>
@@ -1641,6 +1642,41 @@ Covered in Mud: Roll 3 dice. For each 4+, pick 1 friendly unit that is not a HER
           </selectionEntries>
         </selectionEntryGroup>
       </selectionEntryGroups>
+      <costs>
+        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="7709-7fd8-3574-2a42" name="Hobgrot Slittaz Battleline" hidden="false" collective="false" import="true" type="upgrade">
+      <modifiers>
+        <modifier type="increment" field="c36b-7a5a-de81-2aa9" value="1.0">
+          <repeats>
+            <repeat field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="d6ba-3b0a-20d4-7720" repeats="1" roundUp="false"/>
+          </repeats>
+          <conditions>
+            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="d6ba-3b0a-20d4-7720" type="greaterThan"/>
+          </conditions>
+        </modifier>
+        <modifier type="set" field="hidden" value="true">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4373-740f-1bf3-b0aa" type="instanceOf"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="e3a6-45ca-4974-b489" type="instanceOf"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="996a-613c-4006-25e3" type="instanceOf"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="6cd6-b22e-bfcb-9589" type="instanceOf"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="b543-cb16-0c79-fbc6" type="instanceOf"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+      <constraints>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="317a-28a9-edf8-2162" type="max"/>
+        <constraint field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="c36b-7a5a-de81-2aa9" type="max"/>
+      </constraints>
+      <categoryLinks>
+        <categoryLink id="b42a-062d-86a2-7d53" name="BATTLELINE" hidden="false" targetId="a42d-220e-6a88-7bf6" primary="false"/>
+      </categoryLinks>
       <costs>
         <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
       </costs>

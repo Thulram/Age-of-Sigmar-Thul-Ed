@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="0323-3d4f-ac64-f863" name="Chaos - Slaves to Darkness - Data" revision="14" battleScribeVersion="2.03" authorName="Thulram" library="true" gameSystemId="e832-3291-06be-cab1" gameSystemRevision="14" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="0323-3d4f-ac64-f863" name="Chaos - Slaves to Darkness - Data" revision="15" battleScribeVersion="2.03" authorName="Thulram" library="true" gameSystemId="e832-3291-06be-cab1" gameSystemRevision="14" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <profileTypes>
     <profileType id="6d8f-5fb8-9cc5-2146" name="Archaon Wounds">
       <characteristicTypes>
@@ -2301,7 +2301,7 @@ Choose 1 unit from the following list:
         <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="210.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="87e0-5971-b2ad-74df" name="Darkoath Warqueen" publicationId="3fe3-bddd-c287-5968" hidden="false" collective="false" import="true" type="upgrade">
+    <selectionEntry id="87e0-5971-b2ad-74df" name="Darkoath Warqueen" publicationId="3fe3-bddd-c287-5968" hidden="false" collective="false" import="true" type="unit">
       <profiles>
         <profile id="0198-5510-808d-2200" name="Darkoath Warqueen" hidden="false" typeId="3956-f6dd-6c88-ae4b" typeName="Unit">
           <characteristics>
@@ -2746,6 +2746,16 @@ In addition, add 1 to the Damage characteristic of this model’s Rune-etched Ax
       </costs>
     </selectionEntry>
     <selectionEntry id="2533-1c28-a6a1-1f76" name="Slaves to Darkness Chaos Spawn" publicationId="3fe3-bddd-c287-5968" hidden="false" collective="false" import="true" type="unit">
+      <modifiers>
+        <modifier type="increment" field="b0b4-6aec-82c2-02ae" value="55.0">
+          <repeats>
+            <repeat field="selections" scope="2533-1c28-a6a1-1f76" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e20c-48d8-e5e3-1a36" repeats="1" roundUp="false"/>
+          </repeats>
+          <conditions>
+            <condition field="selections" scope="2533-1c28-a6a1-1f76" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e20c-48d8-e5e3-1a36" type="greaterThan"/>
+          </conditions>
+        </modifier>
+      </modifiers>
       <profiles>
         <profile id="1171-d12c-bcab-5728" name="Slaves to Darkness Chaos Spawn" hidden="false" typeId="3956-f6dd-6c88-ae4b" typeName="Unit">
           <characteristics>
@@ -2767,12 +2777,9 @@ In addition, add 1 to the Damage characteristic of this model’s Rune-etched Ax
       <selectionEntries>
         <selectionEntry id="08b8-56c3-531a-e6a7" name="Chaos Spawn" hidden="false" collective="false" import="true" type="model">
           <constraints>
-            <constraint field="selections" scope="parent" value="2.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="ab3a-2b38-d7e7-58c0" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="ab3a-2b38-d7e7-58c0" type="max"/>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="3d08-b712-8460-1599" type="min"/>
           </constraints>
-          <costs>
-            <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="55.0"/>
-          </costs>
         </selectionEntry>
         <selectionEntry id="523e-9065-69d1-868e" name="Freakish Mutations" hidden="false" collective="false" import="true" type="upgrade">
           <constraints>
@@ -2804,9 +2811,10 @@ In addition, add 1 to the Damage characteristic of this model’s Rune-etched Ax
       </selectionEntries>
       <entryLinks>
         <entryLink id="376c-824e-b487-1364" name="Mark of Chaos" hidden="false" collective="false" import="true" targetId="7b9f-eff9-b978-9129" type="selectionEntry"/>
+        <entryLink id="4515-ff5b-354f-c8f7" name="Unit Reinforcement" hidden="false" collective="false" import="true" targetId="b493-d9e6-82ca-5488" type="selectionEntry"/>
       </entryLinks>
       <costs>
-        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
+        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="55.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="9dd9-cc5b-2b21-b996" name="Chaos Chariots" publicationId="3fe3-bddd-c287-5968" hidden="false" collective="false" import="true" type="unit">
@@ -6899,6 +6907,14 @@ In addition, KNIGHTS OF THE EMPTY THRONE VARANGUARD HERO units have the Leader b
             </conditionGroup>
           </conditionGroups>
         </modifier>
+        <modifier type="increment" field="b0b4-6aec-82c2-02ae" value="280.0">
+          <repeats>
+            <repeat field="selections" scope="11ad-4858-ca0e-691c" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e20c-48d8-e5e3-1a36" repeats="1" roundUp="false"/>
+          </repeats>
+          <conditions>
+            <condition field="selections" scope="11ad-4858-ca0e-691c" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e20c-48d8-e5e3-1a36" type="greaterThan"/>
+          </conditions>
+        </modifier>
       </modifiers>
       <profiles>
         <profile id="bb74-cc57-b792-d25c" name="Varanguard" hidden="false" typeId="3956-f6dd-6c88-ae4b" typeName="Unit">
@@ -6932,14 +6948,11 @@ In addition, KNIGHTS OF THE EMPTY THRONE VARANGUARD HERO units have the Leader b
         <categoryLink id="b77c-41d0-d679-3b1e" name="New CategoryLink" hidden="false" targetId="93cb-21d9-e1d5-6161" primary="true"/>
       </categoryLinks>
       <selectionEntries>
-        <selectionEntry id="3669-b757-4596-1116" name="3 Varanguard" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="3669-b757-4596-1116" name="3 Varanguard" hidden="false" collective="false" import="true" type="model">
           <constraints>
-            <constraint field="selections" scope="parent" value="2.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="830c-4532-0e85-f3a5" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="830c-4532-0e85-f3a5" type="max"/>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="b792-ebdc-da4a-1513" type="min"/>
           </constraints>
-          <costs>
-            <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="300.0"/>
-          </costs>
         </selectionEntry>
         <selectionEntry id="fa47-7a40-3268-91b8" name="Mount" hidden="false" collective="false" import="true" type="upgrade">
           <constraints>
@@ -7073,9 +7086,10 @@ In addition, KNIGHTS OF THE EMPTY THRONE VARANGUARD HERO units have the Leader b
       </selectionEntryGroups>
       <entryLinks>
         <entryLink id="93c4-af0f-58ca-f61d" name="Mark of Chaos" hidden="false" collective="false" import="true" targetId="7b9f-eff9-b978-9129" type="selectionEntry"/>
+        <entryLink id="55ed-2d2f-e29f-a69a" name="Unit Reinforcement" hidden="false" collective="false" import="true" targetId="b493-d9e6-82ca-5488" type="selectionEntry"/>
       </entryLinks>
       <costs>
-        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
+        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="280.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="3f59-9ed6-06ef-ac47" name="Khagra&apos;s Ravagers" hidden="false" collective="false" import="true" type="unit">
