@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="2fc2-5782-755c-0fb0" name="Chaos Data" revision="14" battleScribeVersion="2.03" library="true" gameSystemId="e832-3291-06be-cab1" gameSystemRevision="13" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="2fc2-5782-755c-0fb0" name="Chaos Data" revision="16" battleScribeVersion="2.03" library="true" gameSystemId="e832-3291-06be-cab1" gameSystemRevision="16" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <profileTypes>
     <profileType id="8c83-705b-eae0-877a" name="Blood Tithe Rewards Table">
       <characteristicTypes>
@@ -194,7 +194,7 @@ If you have 2 or more Blood Tithe points at the end of your movement phase, you 
           <characteristics>
             <characteristic name="Allegiance Ability" typeId="0506-f62d-68b3-5499">A Blades of Khorne army can include coalition units (see below) as follows:
 
-- 2 in every 4 units in the army can be a coalition unit from the Slaves to Darkness faction that has the MARK OF CHAOS keyword. Those units must be given the KHORNE Mark of Chaos keyword.
+- 2 in every 4 units in the army can be a coalition unit from the Slaves to Darkness faction that has the MARK OF CHAOS or KHORNE keyword and does not have the WIZARD keyword. Those units gain the KHORNE keyword (if they do not already have it).
 
 - 1 in every 4 units in the army can be a coalition unit from the Beasts of Chaos faction. Those units gain the KHORNE keyword.
 
@@ -461,7 +461,7 @@ If a unit already has a Host of Slaanesh keyword on its warsroll, it cannot gain
           <characteristics>
             <characteristic name="Allegiance Ability" typeId="0506-f62d-68b3-5499">A Hedonites of Slaanesh army can include coalition units (see below) as follows:
 
-- 2 in every 4 units in the army can be a coalition unit from the Slaves to Darkness faction that has the MARK OF CHAOS keyword. Those units must be given the SLAANESH Mark of Chaos keyword.
+- 2 in every 4 units in the army can be a coalition unit from the Slaves to Darkness faction that has the MARK OF CHAOS keyword. Those units gain the SLAANESH keyword.
 
 - 1 in every 4 units in the army can be a coalition unit from the Beasts of Chaos faction. Those units gain the SLAANESH keyword. A Hedonites of Slaanesh army cannot include coalition units with the KHORNE keyword.
 
@@ -658,19 +658,14 @@ You receive the command point for having a general on the battlefield at the sta
         <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="ab42-c434-3770-073f" name="Tzeentch" publicationId="97ef-9bf4-54c7-6623" hidden="false" collective="false" import="true" type="upgrade">
+    <selectionEntry id="ab42-c434-3770-073f" name="Disciples of Tzeentch" publicationId="97ef-9bf4-54c7-6623" hidden="false" collective="false" import="true" type="upgrade">
       <profiles>
         <profile id="0894-ce5b-38e8-3fe0" name="Masters of Destiny" hidden="false" typeId="c0c2-177b-e761-ec41" typeName="Allegiance Abilities">
           <characteristics>
-            <characteristic name="Allegiance Ability" typeId="0506-f62d-68b3-5499">After armies have been set up but before the first battle round begins, roll 9 dice and put them to one side. These are your Destiny Dice. Destiny Dice can be used during the battle to change the results of different dice rolls.
+            <characteristic name="Allegiance Ability" typeId="0506-f62d-68b3-5499">At the end of deployment, roll 9 dice and put them to one side. These are your Destiny Dice. Destiny Dice can be used during the battle to change dice rolls.
 
-The number of Destiny Dice you have at any time must never exceed 9.
+Instead of making 1 of the rolls from the list below for a friendly DISCIPLES OF TZEENTCH unit, you can spend 1 or more of your Destiny Dice. The roll you would have made is replaced with the roll on the Destiny Dice you spend. If you want to replace an xD6 roll, you must spend a number of Destiny Dice equal to the ‘x’. Any rolls that have been replaced count as unmodified rolls and cannot be re-rolled or modified unless noted below. Destiny Dice can be spent in place of the following dice rolls:
 
-Designer’s Note: It is recommended that you represent your Destiny Dice using different-coloured and/or different-sized D6s to prevent confusion and easily keep track of their results in your games.
-
-Instead of making one of the rolls from the list below for a friendly DISCIPLES OF TZEENTCH unit, you can spend one or more of your Destiny Dice. The result of the roll you would have made is replaced with the value on the Destiny Dice you spent. For example, instead of rolling a dice to see how far a DISCIPLES OF TZEENTCH unit would run in the movement phase, you could spend a Destiny Dice to determine the distance. If you spent a Destiny Dice with a value of 5, the unit would run 5&quot;.
-
-Destiny Dice can be spent in place of the following dice rolls:
 • Casting rolls
 • Unbinding rolls
 • Dispelling rolls
@@ -678,47 +673,37 @@ Destiny Dice can be spent in place of the following dice rolls:
 • Charge rolls
 • Hit rolls
 • Wound rolls
-• Save rolls
+• Save rolls (You must still modify the roll by the Rend characteristic of the attacking weapon)
 • Any roll that determines the Damage characteristic of a missile or melee weapon
-• Battleshock tests
+• Battleshock tests (You must still modify the roll by the number of models slain from the unit)
 
-Each Destiny Dice spent only allows you to replace a single dice roll. If you want to replace a 2D6 roll (such as a casting roll or charge roll), you must spend 2 Destiny Dice. In addition, any rolls that have been replaced count as unmodified rolls and cannot be rerolled. They also cannot be modified, with the following two exceptions:
-
-- If you spend a Destiny Dice to replace a save roll, the result of that Destiny Dice is modified by the Rend characteristic of the attack as normal.
-
-- If you spend a Destiny Dice to replace a battleshock test, the result of that Destiny Dice is modified by the number of models slain from that unit as normal.
-
-Designer’s Note: This means that for the purposes of Pink Horror Icon Bearers, a Destiny Dice of 1 used to replace a battleshock roll counts as an unmodified roll of 1.</characteristic>
+Designer’s Note: It is recommended that you represent your Destiny Dice with dice that are a different colour and/or size to those used for other rolls.</characteristic>
           </characteristics>
         </profile>
         <profile id="cbf6-e2f9-899f-a89f" name="Locus of Change" hidden="false" typeId="c0c2-177b-e761-ec41" typeName="Allegiance Abilities">
           <characteristics>
-            <characteristic name="Allegiance Ability" typeId="0506-f62d-68b3-5499">Subtract 1 from hit rolls for attacks made with melee weapons that target friendly TZEENTCH DAEMON units that are wholly within 12&quot; of a friendly TZEENTCH DAEMON HERO.</characteristic>
+            <characteristic name="Allegiance Ability" typeId="0506-f62d-68b3-5499">Subtract 1 from hit rolls for attacks made with melee weapons that target friendly DISCIPLES OF TZEENTCH DAEMON units that are wholly within 12&quot; of a friendly DISCIPLES OF TZEENTCH DAEMON HERO.</characteristic>
           </characteristics>
         </profile>
         <profile id="4c9b-33f7-24cf-ee13" name="Change Covens" hidden="false" typeId="c0c2-177b-e761-ec41" typeName="Allegiance Abilities">
           <characteristics>
-            <characteristic name="Allegiance Ability" typeId="0506-f62d-68b3-5499">When you choose an Tzeentch army, you can give it a Change Coven keyword from the list below. All DISCIPLES OF TZEENTCH units in your army gain that keyword, and you can use the extra abilities listed for that Change Coven on the page indicated.
+            <characteristic name="Allegiance Ability" typeId="0506-f62d-68b3-5499">You can pick 1 of the following subfactions for your army. All DISCIPLES OF TZEENTCH units in your army gain the keyword of the subfaction you picked, and you can use the allegiance abilities for that subfaction. If a unit already has a different subfaction keyword on its warscroll, it cannot gain another one. This does not preclude you from including the unit in your army, but you cannot use the allegiance abilities for its subfaction.
 
 • ETERNAL CONFLAGRATION
 • HOSTS DUPLICITOUS
 • HOSTS ARCANUM
 • CULT OF THE TRANSIENT FORM
 • PYROFANE CULT
-• GUILD OF SUMMONERS
-
-If a model already has a Change Coven keyword on its warscroll, it cannot gain another one. This does not preclude you from including the unit in your army.</characteristic>
+• GUILD OF SUMMONERS</characteristic>
           </characteristics>
         </profile>
         <profile id="b06f-aec3-77de-808a" name="Summon of Daemons of Tzeentch" hidden="false" typeId="c0c2-177b-e761-ec41" typeName="Allegiance Abilities">
           <characteristics>
-            <characteristic name="Allegiance Ability" typeId="0506-f62d-68b3-5499">You can summon units of TZEENTCH DAEMONS to the battlefield if you collect enough Fate Points. Each time a casting roll (made by friend or foe) is successful and the spell is not unbound, you receive 1 Fate Point.
+            <characteristic name="Allegiance Ability" typeId="0506-f62d-68b3-5499">You can summon DISCIPLES OF TZEENTCH DAEMONS units to the battlefield if you have enough Fate Points. Each time a casting roll is successful and the spell is not unbound, you receive 1 Fate Point.
 
-Once per turn, at the end of your movement phase, you can spend Fate Points to summon 1 unit from the list opposite to the battlefield and add it to your army.
+Designer’s Note: You receive a Fate Point when a friendly or an enemy WIZARD successfully casts a spell.
 
-Each unit you summon costs a number of Fate Points as shown on the list, and you can only summon a unit if you have enough Fate Points to do so.
-
-Summoned units must be set up wholly within 12&quot; of a friendly TZEENTCH HERO and more than 9&quot; from any enemy units. Immediately after you have set up the summoned unit, subtract its cost from the total number of Fate Points you have.</characteristic>
+If you have any Fate Points at the end of your movement phase, you can summon 1 unit from the list below to the battlefield and add it to your army. Each unit you summon costs the number of Fate Points shown on the list, and you can only summon it if you have enough Fate Points to do so. Units must be set up more than 9&quot; from all enemy units and wholly within 9&quot; of a friendly DISCIPLES OF TZEENTCH HERO.</characteristic>
           </characteristics>
         </profile>
         <profile id="2d76-de60-cbca-74e7" name="(09) 10 Blue Horrors of Tzeentch" hidden="false" typeId="9726-b6aa-5340-af6d" typeName="Fate Summoning Table">
@@ -776,52 +761,28 @@ Summoned units must be set up wholly within 12&quot; of a friendly TZEENTCH HERO
             <characteristic name="Fate Point Cost" typeId="5e3e-5999-f262-7464">24</characteristic>
           </characteristics>
         </profile>
-        <profile id="3de0-d5c0-d2e3-cbb0" name="Agendas of Anarchy" hidden="false" typeId="c0c2-177b-e761-ec41" typeName="Allegiance Abilities">
+        <profile id="3de0-d5c0-d2e3-cbb0" name="Arcane Armies" hidden="false" typeId="c0c2-177b-e761-ec41" typeName="Allegiance Abilities">
           <characteristics>
-            <characteristic name="Allegiance Ability" typeId="0506-f62d-68b3-5499">At the start of your hero phase, you can say that your army intends to complete one of the following agendas before the start of your next hero phase. You must tell your opponent which agenda you intend to complete, and you cannot complete the same agenda more than once per battle.
-
-If a friendly TZEENTCH unit completes one of the following agendas during a battle, that unit gains that agenda’s ability for the rest of the battle.
-
-Friendly TZEENTCH units that complete more than one agenda must choose which ability they wish to keep; any other abilities gained through this battle trait are lost.
-
-- Mass Conjuration:
-Agenda: Pick 1 friendly TZEENTCH WIZARD. If that WIZARD successfully casts 2 spells and/or endless spells in that hero phase with an unmodified casting roll of 9+ and neither spell or endless spell is unbound, this agenda is completed.
-
-Ability: Add 1 to casting rolls for the TZEENTCH WIZARD that completed this agenda.
-
-- Ninefold Dismantlement:
-Agenda: Pick 1 enemy unit on the battlefield that has 9 or more models. If that unit is destroyed before the end of that turn, this agenda is completed.
-
-Ability: Add 1 to hit rolls for attacks made with melee weapons by the friendly TZEENTCH unit that destroyed that unit to complete this agenda.
-
-- Overthrow Leaders:
-Agenda: Pick 1 enemy HERO or MONSTER on the battlefield with a Wounds characteristic of 9 or more. If that HERO or MONSTER is slain before the end of that turn, this agenda is completed.
-
-Ability: Add 1 to save rolls for attacks that target the friendly TZEENTCH unit that destroyed that HERO or MONSTER to complete this agenda.
-
-- Reckless Abandon:
-Agenda: At the start of your charge phase, pick 1 friendly TZEENTCH unit that is 9&quot; or more from any enemy units. If that unit ends a charge move in that charge phase within ½&quot; of an enemy model, this agenda is completed.
-
-Ability: Add 1 to the Attacks characteristic of melee weapons used by the TZEENTCH unit that completed this agenda if that unit made a charge move in the same turn.
-
-- Tides of Anarchy:
-Agenda: If a friendly TZEENTCH unit that has 9 or more models gains control of an objective that was controlled by your opponent at the start of your hero phase, this agenda is completed (the friendly TZEENTCH unit must have 9 or more models when it gains control of the objective).
-
-Ability: Each TZEENTCH model in the unit that completed this agenda counts as 2 models instead of 1 when determining control of that objective.</characteristic>
+            <characteristic name="Allegiance Ability" typeId="0506-f62d-68b3-5499">In the first battle round, after the players have received their starting command points, but before the start of the first turn, you can pick 1 friendly DISCIPLES OF TZEENTCH WIZARD on the battlefield. That WIZARD can automatically cast a spell that they know that summons a Burning Sigil of Tzeentch, Tome of Eyes or Daemonic Simulacrum endless spell (do not make a casting roll). That spell cannot be unbound, and cannot be dispelled in the first battle round. Set up the endless spell as described in the effect for that spell.</characteristic>
           </characteristics>
         </profile>
         <profile id="f8c8-e3c8-ccc2-634b" name="Legions of Chaos" hidden="false" typeId="c0c2-177b-e761-ec41" typeName="Allegiance Abilities">
           <characteristics>
-            <characteristic name="Allegiance Ability" typeId="0506-f62d-68b3-5499">A Disciples of Tzeentch army can include coalition units (see below) as follows:
+            <characteristic name="Allegiance Ability" typeId="0506-f62d-68b3-5499">A Disciples of Tzeentch army can include coalition units as follows:
 
-- 2 in every 4 units in the army can be a coalition unit from the Slaves to Darkness faction that has the MARK OF CHAOS keyword. Those units must be given the TZEENTCH Mark of Chaos keyword.
+• 2 in every 4 units in the army can be a coalition unit from the SLAVES TO DARKNESS faction that has the MARK OF CHAOS keyword. Those units must be given the TZEENTCH Mark of Chaos keyword.
 
-- 1 in every 4 units in the army can be a coalition unit from the Beasts of Chaos faction. Those units gain the TZEENTCH keyword. A Disciples of Tzeentch army cannot include coalition units with the KHORNE or NURGLE keyword.
+• 1 in every 4 units in the army can be a coalition unit from the BEASTS OF CHAOS faction that does not have the TZEENTCH keyword. Those units gain the TZEENTCH keyword.
+A Disciples of Tzeentch army cannot include coalition units with the KHORNE or NURGLE keyword.
 
-COALITION UNITS
-Coalition units do not count towards the number of Battleline units in your army. However, they do count towards the maximum number of Leader, Behemoth and Artillery units in your army. Coalition units cannot be generals. In addition, Coalition units are ignored when determining if the units in your army are from a single faction.
+Designer&apos;s Note: Coalition units are not allied units, so the limitations that apply to allied units do not apply to them. This means that coalition units can be given one of your army’s enhancements, as long as they have the correct keywords or are of the correct unit type needed to receive it.</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="07b7-a746-9c0e-e63f" name="Transformed to Spawn" hidden="false" typeId="c0c2-177b-e761-ec41" typeName="Allegiance Abilities">
+          <characteristics>
+            <characteristic name="Allegiance Ability" typeId="0506-f62d-68b3-5499">If a model is transformed into a Spawn, you can add 1 TZEENTCH CHAOS SPAWN unit that has 1 model to your army. Set up the TZEENTCH CHAOS SPAWN unit within 1&quot; of the model that has been transformed, and then remove the transformed model from play.
 
-Designer’s Note: Coalition units are not allied units, so the limitations that apply to allied units do not apply to them. This means that coalition units can be given one of your army’s enhancements, as long as they have the correct keywords or are of the correct unit type needed to receive it.</characteristic>
+Designer’s Note: A transformed model does not count as a slain model for the purposes of the Battleshock rules, and cannot be returned if you are allowed to bring back slain models (the model has not been slain). In addition, if your general is transformed to spawn, that Chaos Spawn becomes your general and cannot issue commands.</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -841,11 +802,6 @@ Designer’s Note: Coalition units are not allied units, so the limitations that
                     <characteristic name="Allegiance Ability" typeId="0506-f62d-68b3-5499">Improve the Rend characteristic of friendly ETERNAL CONFLAGRATION units’ Warpflame, Billowing Warpflame and Magical Flames missile weapons by 1.</characteristic>
                   </characteristics>
                 </profile>
-                <profile id="8508-9c48-8d7c-8930" name="Infernos of Mutation" hidden="false" typeId="6364-f76d-fc0c-80bc" typeName="Command Abilities">
-                  <characteristics>
-                    <characteristic name="Command Ability" typeId="36cb-f8a4-d94b-8aa8">You can use this command ability in the shooting phase. If you do so, pick 1 friendly ETERNAL CONFLAGRATION DAEMON unit wholly within 12&quot; of a friendly ETERNAL CONFLAGRATION DAEMON HERO. If the unmodified hit roll for any attack made by that unit’s Warpflame, Billowing Warpflame or Magical Flames missile weapons is 6, subtract 2 from the Bravery characteristic of the target unit until the end of that battle round. A unit cannot benefit from this command ability more than once per turn.</characteristic>
-                  </characteristics>
-                </profile>
               </profiles>
               <costs>
                 <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
@@ -855,12 +811,7 @@ Designer’s Note: Coalition units are not allied units, so the limitations that
               <profiles>
                 <profile id="0ab9-9d15-2da6-441d" name="Ranks of Mishievous Mirages" hidden="false" typeId="c0c2-177b-e761-ec41" typeName="Allegiance Abilities">
                   <characteristics>
-                    <characteristic name="Allegiance Ability" typeId="0506-f62d-68b3-5499">Enemy units within 3&quot; of a HOSTS DUPLICITOUS unit cannot retreat.</characteristic>
-                  </characteristics>
-                </profile>
-                <profile id="9a9e-1bcb-f8a0-aecd" name="Impossible to Anticipate" hidden="false" typeId="6364-f76d-fc0c-80bc" typeName="Command Abilities">
-                  <characteristics>
-                    <characteristic name="Command Ability" typeId="36cb-f8a4-d94b-8aa8">You can use this command ability once per battle after a friendly HOSTS DUPLICITOUS HORRORS OF TZEENTCH unit is destroyed. If you do so, roll a dice. On a 5+, add a new HOSTS DUPLICITOUS HORRORS OF TZEENTCH unit with 10 models to your army. Set up the new unit wholly within 12&quot; of a friendly HOSTS DUPLICITOUS HERO and more than 9&quot; from all enemy units.</characteristic>
+                    <characteristic name="Allegiance Ability" typeId="0506-f62d-68b3-5499">Enemy units within 3&quot; of a friendly HOSTS DUPLICITOUS unit with 10 or more models cannot retreat. In addition, once per battle, when a HOSTS DUPLICITOUS HORRORS OF TZEENTCH unit from your starting army is destroyed, you can roll a dice. On a 4+, add a HOSTS DUPLICITOUS HORRORS OF TZEENTCH unit with 5 models to your army. Set up the new unit wholly within 12&quot; of a friendly HOSTS DUPLICITOUS HERO and more than 9&quot; from all enemy units.</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
@@ -872,12 +823,7 @@ Designer’s Note: Coalition units are not allied units, so the limitations that
               <profiles>
                 <profile id="8134-a591-e8b1-4f31" name="Thieves of All Things Arcane" hidden="false" typeId="c0c2-177b-e761-ec41" typeName="Allegiance Abilities">
                   <characteristics>
-                    <characteristic name="Allegiance Ability" typeId="0506-f62d-68b3-5499">Once per turn, in the first, third and fifth battle rounds, when a friendly HOSTS ARCANUM WIZARD attempts to unbind a spell, the spell is automatically unbound (do not roll 2D6).</characteristic>
-                  </characteristics>
-                </profile>
-                <profile id="e5c9-9c35-2b56-fa5d" name="Entourage of Sky-sharks" hidden="false" typeId="6364-f76d-fc0c-80bc" typeName="Command Abilities">
-                  <characteristics>
-                    <characteristic name="Command Ability" typeId="36cb-f8a4-d94b-8aa8">You can use this command ability in your hero phase. If you do so, pick 1 friendly HOSTS ARCANUM SCREAMERS OF TZEENTCH unit wholly within 12&quot; of a friendly HOSTS ARCANUM HERO. Until your next hero phase, add 1 to save rolls for attacks that target that unit. In addition, until your next hero phase, improve the Rend characteristic of that unit’s Lamprey Bite by 1. A unit cannot benefit from the effects of this ability more than once per turn.</characteristic>
+                    <characteristic name="Allegiance Ability" typeId="0506-f62d-68b3-5499">Once per turn, in the first, third and fifth battle rounds, when a friendly HOSTS ARCANUM WIZARD attempts to unbind a spell, you can choose for that spell to be automatically unbound (do not roll 2D6).</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
@@ -889,12 +835,7 @@ Designer’s Note: Coalition units are not allied units, so the limitations that
               <profiles>
                 <profile id="fe45-7f4c-2031-6922" name="The Change-gift" hidden="false" typeId="c0c2-177b-e761-ec41" typeName="Allegiance Abilities">
                   <characteristics>
-                    <characteristic name="Allegiance Ability" typeId="0506-f62d-68b3-5499">Roll a dice each time a friendly CULT OF THE TRANSIENT FORM KAIRIC ACOLYTE model is slain in the combat phase. On a 2-5, before removing that model from play, that model can fight. On a 6, before removing that model from play, you can add 1  model to a friendly TZAANGOR unit within 9&quot; of the slain model. The new model can only be set up within 3&quot; of an enemy unit if the unit to which it is added is within 3&quot; of an enemy unit.</characteristic>
-                  </characteristics>
-                </profile>
-                <profile id="e29e-32ac-ae9c-c16c" name="Fate of Transmutation" hidden="false" typeId="6364-f76d-fc0c-80bc" typeName="Command Abilities">
-                  <characteristics>
-                    <characteristic name="Command Ability" typeId="36cb-f8a4-d94b-8aa8">You can use this command ability in your hero phase. If you do so, pick 1 CULT OF THE TRANSIENT FORM KAIRIC ACOLYTE unit wholly within 12&quot; of a friendly CULT OF THE TRANSIENT FORM HERO. Until your next hero phase, each time a KAIRIC ACOLYTE model from that unit is slain, add 1 to the dice roll made for that unit’s Change-gift ability.</characteristic>
+                    <characteristic name="Allegiance Ability" typeId="0506-f62d-68b3-5499">Roll a dice each time a friendly CULT OF THE TRANSIENT FORM KAIRIC ACOLYTE model is slain in the combat phase. On a 2-5, before removing that model from play, that model can fight. On a 6, before removing that model from play, you can add 1 Tzaangor model to a friendly TZAANGOR HOST within 9&quot; of the slain model. The new model can only be set up within 3&quot; of an enemy unit if the unit to which it was added is within 3&quot; of that enemy unit.</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
@@ -906,12 +847,7 @@ Designer’s Note: Coalition units are not allied units, so the limitations that
               <profiles>
                 <profile id="c2b3-dcc5-0f68-af7a" name="Arrows of Tzeentch" hidden="false" typeId="c0c2-177b-e761-ec41" typeName="Allegiance Abilities">
                   <characteristics>
-                    <characteristic name="Allegiance Ability" typeId="0506-f62d-68b3-5499">Add 1 to hit rolls for attacks made with Sorcerous Bolts by friendly PYROFANE CULT KAIRIC ACOLYTE units. In addition, at the end of your shooting phase, roll a dice for each enemy unit that suffered any wounds inflicted by attacks made with Sorcerous Bolts by friendly PYROFANE CULT units in that phase. On a 5+, that unit suffers D3 mortal wounds.</characteristic>
-                  </characteristics>
-                </profile>
-                <profile id="5c26-74eb-4a3e-1465" name="Immolate" hidden="false" typeId="6364-f76d-fc0c-80bc" typeName="Command Abilities">
-                  <characteristics>
-                    <characteristic name="Command Ability" typeId="36cb-f8a4-d94b-8aa8">You can use this command ability in your shooting phase. If you do so, pick 1 friendly PYROFANE CULT KAIRIC ACOLYTE unit wholly within 12&quot; of a friendly PYROFANE CULT HERO. You can re-roll wound rolls for attacks made by that unit until the end of that phase.</characteristic>
+                    <characteristic name="Allegiance Ability" typeId="0506-f62d-68b3-5499">Add 1 to hit rolls for attacks made with Sorcerous Bolts by friendly PYROFANE CULT KAIRIC ACOLYTE units. In addition, at the end of your shooting phase, roll a dice for each enemy unit that suffered any wounds caused by attacks made with Sorcerous Bolts by friendly PYROFANE CULT units in that phase. On a 5+, that unit suffers D3 mortal wounds.</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
@@ -923,46 +859,7 @@ Designer’s Note: Coalition units are not allied units, so the limitations that
               <profiles>
                 <profile id="6100-4d43-0338-2c90" name="Scions of the Exiled" hidden="false" typeId="c0c2-177b-e761-ec41" typeName="Allegiance Abilities">
                   <characteristics>
-                    <characteristic name="Allegiance Ability" typeId="0506-f62d-68b3-5499">If your army has the GUILD OF SUMMONERS keyword, your Fate Points can only be used to summon LORD OF CHANGE units. Instead of a Fate Point cost of 30, a GUILD OF SUMMONERS LORD OF CHANGE costs 9 Fate Points to summon the first time, 18 Fate Points the second time, and 30 Fate Points each time thereafter for the rest of the battle.</characteristic>
-                  </characteristics>
-                </profile>
-                <profile id="420c-b078-0c9b-52be" name="Will of the Arcane Lords" hidden="false" typeId="6364-f76d-fc0c-80bc" typeName="Command Abilities">
-                  <characteristics>
-                    <characteristic name="Command Ability" typeId="36cb-f8a4-d94b-8aa8">You can use this command ability in your hero phase. If you do so, pick a friendly GUILD OF SUMMONERS WIZARD wholly within 9&quot; of a friendly GUILD OF SUMMONERS HERO or wholly within 18&quot; of a friendly GUILD OF SUMMONERS HERO that is a general. Add 1 to casting rolls for that WIZARD until the end of that phase. A unit cannot benefit from this command ability more than once per turn.</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-              <costs>
-                <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
-              </costs>
-            </selectionEntry>
-            <selectionEntry id="ac20-99fa-5e1f-6c47" name="The Unbound Flux" hidden="false" collective="false" import="true" type="upgrade">
-              <profiles>
-                <profile id="85fa-38e0-f620-d7e3" name="Maddening Cascade" hidden="false" typeId="c0c2-177b-e761-ec41" typeName="Allegiance Abilities">
-                  <characteristics>
-                    <characteristic name="Allegiance Ability" typeId="0506-f62d-68b3-5499">Each time a friendly UNBOUND FLUX DAEMON WIZARD casts a spell that inflicts any mortal wounds, roll a dice for each unit that suffered any mortal wounds inflicted by that spell. On a 4+, that unit suffers 1 additional mortal wound.</characteristic>
-                  </characteristics>
-                </profile>
-                <profile id="76fe-ce4c-7403-d5c7" name="The Unbound Flux" hidden="false" typeId="6364-f76d-fc0c-80bc" typeName="Command Abilities">
-                  <characteristics>
-                    <characteristic name="Command Ability" typeId="36cb-f8a4-d94b-8aa8">You can use this command ability in your hero phase. If you do so, pick 1 friendly UNBOUND FLUX DAEMON WIZARD wholly within 9&quot; of a friendly UNBOUND FLUX DAEMON HERO or wholly within 18&quot; of a friendly UNBOUND FLUX DAEMON HERO that is a general. Add 1 to casting rolls for that WIZARD until the end of that phase. A unit cannot benefit from this command ability more than once per turn.</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-              <costs>
-                <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
-              </costs>
-            </selectionEntry>
-            <selectionEntry id="a226-3485-0def-ea55" name="The Cult of A Thousand Eyes" hidden="false" collective="false" import="true" type="upgrade">
-              <profiles>
-                <profile id="9932-fb7f-b9fb-53fe" name="Marked for Death" hidden="false" typeId="c0c2-177b-e761-ec41" typeName="Allegiance Abilities">
-                  <characteristics>
-                    <characteristic name="Allegiance Ability" typeId="0506-f62d-68b3-5499">After armies have been set up but before the first battle round begins, pick up to D3 different enemy units. For the rest of the battle, you can re-roll hit rolls for attacks made with melee weapons by friendly CULT OF A THOUSAND EYES MORTAL units that target those enemy units.</characteristic>
-                  </characteristics>
-                </profile>
-                <profile id="473b-2bb7-79aa-2351" name="Eyes Everywhere" hidden="false" typeId="6364-f76d-fc0c-80bc" typeName="Command Abilities">
-                  <characteristics>
-                    <characteristic name="Command Ability" typeId="36cb-f8a4-d94b-8aa8">You can use this command ability at the start of your hero phase. If you do so, pick 1 friendly CULT OF A THOUSAND EYES MORTAL unit wholly within 12&quot; of a friendly CULT OF A THOUSAND EYES MORTAL HERO. Until the start of your next hero phase, enemy units do not receive the benefit of cover against attacks made by that unit.</characteristic>
+                    <characteristic name="Allegiance Ability" typeId="0506-f62d-68b3-5499">If your army has the GUILD OF SUMMONERS keyword, your Fate Points can only be used to summon LORD OF CHANGE units. Instead of a Fate Point cost of 30, a GUILD OF SUMMONERS LORD OF CHANGE costs 9 Fate Points to summon the first time, and 18 Fate Points each time thereafter for the rest of the battle. In addition, LORD OF CHANGE units summoned in this way must be set up wholly within 9&quot; of a GUILD OF SUMMONERS ARCANITE HERO and more than 9&quot; from all enemy units.	</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
@@ -1063,7 +960,7 @@ If you have any CPs at the end of your movement phase, you can summon 1 unit or 
           <characteristics>
             <characteristic name="Allegiance Ability" typeId="0506-f62d-68b3-5499">A Maggotkin of Nurgle army can include coalition units (see below) as follows:
 
-- 2 in every 4 units in the army can be a coalition unit from the Slaves to Darkness faction that has the MARK OF CHAOS keyword. Those units must be given the NURGLE Mark of Chaos keyword.
+- 2 in every 4 units in the army can be a coalition unit from the Slaves to Darkness faction that has the MARK OF CHAOS keyword. Those units gain the NURGLE keyword.
 
 - 1 in every 4 units in the army can be a coalition unit from the Skaven faction that has the CLANS PESTILENS keyword.
 

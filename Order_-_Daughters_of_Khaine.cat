@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="59a1-5368-2000-69dc" name="Order - Daughters of Khaine" revision="16" battleScribeVersion="2.03" authorName="Thulram" library="false" gameSystemId="e832-3291-06be-cab1" gameSystemRevision="15" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="59a1-5368-2000-69dc" name="Order - Daughters of Khaine" revision="18" battleScribeVersion="2.03" authorName="Thulram" library="false" gameSystemId="e832-3291-06be-cab1" gameSystemRevision="18" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <profileTypes>
     <profileType id="0d12-66d5-133a-d36d" name="Morathi Wounds">
       <characteristicTypes>
@@ -80,7 +80,7 @@
         </entryLink>
       </entryLinks>
       <costs>
-        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="185.0"/>
+        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="170.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="285c-2895-c2b7-b415" name="Morathi-Khaine and The Shadow Queen" hidden="false" collective="false" import="true" type="upgrade">
@@ -177,7 +177,7 @@
         </entryLink>
       </entryLinks>
       <costs>
-        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="680.0"/>
+        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="700.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="4f35-f638-09c6-dada" name="Grand Strategy" hidden="false" collective="false" import="true" type="upgrade">
@@ -327,7 +327,7 @@
         </profile>
         <profile id="37a5-f1b0-5ed1-e927" name="Tide of Blades" hidden="false" typeId="4bb2-448c-446c-f522" typeName="Battle Tactic">
           <characteristics>
-            <characteristic name="Battle Tactic" typeId="8c0f-be41-a70e-c699">You complete this tactic if there are 2 or more units from your starting army wholly within your opponent’s territory at the end of this turn. If 2 or more of those units are WITCH AELVES, score 1 additional victory point.</characteristic>
+            <characteristic name="Battle Tactic" typeId="8c0f-be41-a70e-c699">You complete this tactic if there are 2 or more units from your starting army wholly within your opponent’s territory at the end of this turn.</characteristic>
           </characteristics>
         </profile>
         <profile id="09f6-8ba7-2653-526e" name="Cruel Delight" hidden="false" typeId="4bb2-448c-446c-f522" typeName="Battle Tactic">
@@ -337,7 +337,7 @@
         </profile>
         <profile id="4530-9350-e515-7fee" name="Clash of Arms" hidden="false" typeId="4bb2-448c-446c-f522" typeName="Battle Tactic">
           <characteristics>
-            <characteristic name="Battle Tactic" typeId="8c0f-be41-a70e-c699">You complete this tactic if 3 or more friendly units make a charge move this turn. If 2 or more of those units are WITCH AELVES or SISTERS OF SLAUGHTER, score 1 additional victory point.</characteristic>
+            <characteristic name="Battle Tactic" typeId="8c0f-be41-a70e-c699">You complete this tactic if 3 or more friendly units make a charge move this turn.</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -541,7 +541,7 @@
         </entryLink>
       </entryLinks>
       <costs>
-        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="290.0"/>
+        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="210.0"/>
       </costs>
     </selectionEntry>
   </selectionEntries>
@@ -592,6 +592,72 @@
       </entryLinks>
     </entryLink>
     <entryLink id="d4ce-a66a-4c8b-9c32" name="Witch Aelves" hidden="false" collective="false" import="true" targetId="a90f-18fa-f3ce-877d" type="selectionEntry">
+      <selectionEntries>
+        <selectionEntry id="4cf9-c0e7-c966-98e5" name="Unit Reinforcement" hidden="false" collective="false" import="true" type="upgrade">
+          <modifiers>
+            <modifier type="remove" field="category" value="e20c-48d8-e5e3-1a36">
+              <conditions>
+                <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="upgrade" type="equalTo"/>
+              </conditions>
+            </modifier>
+            <modifier type="add" field="category" value="f2af-9e09-b083-3850">
+              <conditions>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="84e7-7461-6bd6-792c" type="greaterThan"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="baba-daa0-0fa0-1853" type="max"/>
+          </constraints>
+          <categoryLinks>
+            <categoryLink id="3e83-d619-b780-f8ad" name="Reinforcement" hidden="false" targetId="e20c-48d8-e5e3-1a36" primary="false"/>
+          </categoryLinks>
+          <selectionEntryGroups>
+            <selectionEntryGroup id="36cb-af6c-6a2c-84f7" name="Unit Reinforcement" hidden="false" collective="false" import="true" defaultSelectionEntryId="0011-43c6-76fc-aede">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="bbd9-d7e3-7cc7-77ff" type="max"/>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="ebe3-ada2-2279-36da" type="min"/>
+              </constraints>
+              <selectionEntries>
+                <selectionEntry id="5ced-c776-1b71-3f46" name="(x3) Double reinforced" hidden="false" collective="false" import="true" type="upgrade">
+                  <modifiers>
+                    <modifier type="set" field="hidden" value="true">
+                      <conditions>
+                        <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="a42d-220e-6a88-7bf6" type="notInstanceOf"/>
+                      </conditions>
+                    </modifier>
+                    <modifier type="add" field="category" value="f2af-9e09-b083-3850">
+                      <conditions>
+                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="84e7-7461-6bd6-792c" type="greaterThan"/>
+                      </conditions>
+                    </modifier>
+                  </modifiers>
+                  <constraints>
+                    <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="b714-2ad0-e543-6147" type="max"/>
+                  </constraints>
+                  <categoryLinks>
+                    <categoryLink id="054e-a44e-b63d-33cc" name="Reinforcement" hidden="false" targetId="e20c-48d8-e5e3-1a36" primary="false"/>
+                  </categoryLinks>
+                  <costs>
+                    <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
+                  </costs>
+                </selectionEntry>
+                <selectionEntry id="0011-43c6-76fc-aede" name="(x2) Single reinforced" hidden="false" collective="false" import="true" type="upgrade">
+                  <constraints>
+                    <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="e4b8-fd97-2fdd-aefd" type="max"/>
+                  </constraints>
+                  <costs>
+                    <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
+                  </costs>
+                </selectionEntry>
+              </selectionEntries>
+            </selectionEntryGroup>
+          </selectionEntryGroups>
+          <costs>
+            <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
+          </costs>
+        </selectionEntry>
+      </selectionEntries>
       <entryLinks>
         <entryLink id="242c-2264-92c2-35fc" name="Battalion Formation" hidden="false" collective="false" import="true" targetId="8eab-07b1-3d8f-aa1c" type="selectionEntryGroup"/>
       </entryLinks>
@@ -814,6 +880,13 @@ BR 5 - Unquenchable Fervour: Friendly DAUGHTERS OF KHAINE units have a ward of 5
               </constraints>
               <selectionEntries>
                 <selectionEntry id="d496-1809-881c-745a" name="Hagg Nar" hidden="false" collective="false" import="true" type="upgrade">
+                  <modifiers>
+                    <modifier type="add" field="category" value="3712-8606-a6b7-b2f8">
+                      <conditions>
+                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2720-ae74-87c1-3326" type="greaterThan"/>
+                      </conditions>
+                    </modifier>
+                  </modifiers>
                   <profiles>
                     <profile id="9f48-c39e-6046-b1f0" name="Daughters of the First Temple" hidden="false" typeId="c0c2-177b-e761-ec41" typeName="Allegiance Abilities">
                       <characteristics>
@@ -878,7 +951,7 @@ BR 5 - Unquenchable Fervour: Friendly DAUGHTERS OF KHAINE units have a ward of 5
                   <profiles>
                     <profile id="4c1e-5882-1feb-eef5" name="Khaine&apos;s Essence" hidden="false" typeId="c0c2-177b-e761-ec41" typeName="Allegiance Abilities">
                       <characteristics>
-                        <characteristic name="Allegiance Ability" typeId="0506-f62d-68b3-5499">Each time a model in a friendly ZAINTHAR KAI MELUSAI unit is slain, that model can fight before it is removed from play.</characteristic>
+                        <characteristic name="Allegiance Ability" typeId="0506-f62d-68b3-5499">Each time a model in a friendly ZAINTHAR KAI MELUSAI unit is slain by an attack made with a melee weapon, that model can fight before it is removed from play.</characteristic>
                       </characteristics>
                     </profile>
                   </profiles>
@@ -1532,7 +1605,9 @@ BR 5 - Unquenchable Fervour: Friendly DAUGHTERS OF KHAINE units have a ward of 5
               <profiles>
                 <profile id="5fbe-42ff-db01-bebb" name="Mirror Dance" hidden="false" typeId="13da-11a8-b7d1-77a7" typeName="Spell">
                   <characteristics>
-                    <characteristic name="Spell" typeId="1170-c916-1b73-ae34">Mirror Dance is a spell that has a casting value of 6 and a range of 18&quot;. If successfully cast, pick 2 friendly DAUGHTERS OF KHAINE HEROES that are wholly within range, visible to the caster and each more than 3&quot; from all enemy units. Remove those HEROES from the battlefield. Then, set each model up again within 1&quot; of the location that had been occupied by the other model before it was removed from the battlefield and more than 3&quot; from all enemy units.</characteristic>
+                    <characteristic name="Spell" typeId="1170-c916-1b73-ae34">Mirror Dance is a spell that has a casting value of 6 and a range of 18&quot;. If successfully cast, pick 2 friendly DAUGHTERS OF KHAINE HEROES that are wholly within range, visible to the caster and each more than 3&quot; from all enemy units. Remove those HEROES from the battlefield. Then, set each model up again within 1&quot; of the location that had been occupied by the other model before it was removed from the battlefield and more than 3&quot; from all enemy units.
+
+If it is not possible to set up either of the picked HEROES on the battlefield, return both HEROES to their original positions.</characteristic>
                   </characteristics>
                 </profile>
               </profiles>

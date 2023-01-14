@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="ec7a-9885-ba24-384d" name="Chaos - Blades of Khorne" revision="15" battleScribeVersion="2.03" authorName="Thulram" library="false" gameSystemId="e832-3291-06be-cab1" gameSystemRevision="14" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="ec7a-9885-ba24-384d" name="Chaos - Blades of Khorne" revision="17" battleScribeVersion="2.03" authorName="Thulram" library="false" gameSystemId="e832-3291-06be-cab1" gameSystemRevision="16" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <profileTypes>
     <profileType id="2d45-64c0-bdf3-61f9" name="Skarbrand Wounds">
       <characteristicTypes>
@@ -249,6 +249,39 @@
       </categoryLinks>
       <costs>
         <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="4e96-3c8c-c33a-1961" name="Dromm &amp; his Gorechosen" hidden="false" collective="false" import="true" type="upgrade">
+      <constraints>
+        <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="c056-690d-0f1d-a397" type="max"/>
+      </constraints>
+      <categoryLinks>
+        <categoryLink id="5537-d524-0960-0cca" name="New CategoryLink" hidden="false" targetId="93cb-21d9-e1d5-6161" primary="true"/>
+      </categoryLinks>
+      <entryLinks>
+        <entryLink id="3640-7aa1-cdb0-281a" name="Dromm" hidden="false" collective="false" import="true" targetId="6ad0-2381-1c3f-b729" type="selectionEntry">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="c4ad-6574-d95c-5525" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="0ed2-4a0e-f3ba-1bee" type="min"/>
+          </constraints>
+          <entryLinks>
+            <entryLink id="5113-af69-d7b0-b756" name="General" hidden="false" collective="false" import="true" targetId="98a4-3d6d-a7b9-399f" type="selectionEntry">
+              <categoryLinks>
+                <categoryLink id="fa93-cf77-16f1-c2ae" name="Named General" hidden="false" targetId="8b3d-7f03-e1f9-eaf5" primary="false"/>
+              </categoryLinks>
+            </entryLink>
+            <entryLink id="f874-1a75-1425-35f0" name="Khorne Prayer Scriptures" hidden="false" collective="false" import="true" targetId="b5a3-3f21-d1e6-f331" type="selectionEntryGroup"/>
+          </entryLinks>
+        </entryLink>
+        <entryLink id="dcce-3d6a-bec3-97b7" name="Gorechosen of Dromm" hidden="false" collective="false" import="true" targetId="5ef4-7510-9dee-cff1" type="selectionEntry">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8f62-c205-3b00-2d0d" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8489-5037-5714-c6c2" type="max"/>
+          </constraints>
+        </entryLink>
+      </entryLinks>
+      <costs>
+        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="160.0"/>
       </costs>
     </selectionEntry>
   </selectionEntries>
@@ -3913,7 +3946,7 @@ You can re-roll prayer rolls of 1 for friendly FLAYED PRIESTS wholly within 8&qu
               <profiles>
                 <profile id="5db4-4784-eddc-2902" name="Bronzed Flesh" hidden="false" typeId="161a-85bd-f19e-a5a7" typeName="Prayer">
                   <characteristics>
-                    <characteristic name="Prayer" typeId="19bc-965a-768d-defa">Bronzed Flesh has an answer value of 4 and a range of 16&quot;. If answered, pick 1 friendly Khorne unit wholly within range of the chanter that is visible to them. Add 1 to save rolls for attacks that target that unit until the start of your next hero phase.</characteristic>
+                    <characteristic name="Prayer" typeId="19bc-965a-768d-defa">Bronzed Flesh has an answer value of 4 and a range of 16&quot;. If answered, pick 1 friendly BLADES OF KHORNE unit wholly within range of the chanter that is visible to them. Add 1 to save rolls for attacks that target that unit until the start of your next hero phase.</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
@@ -3943,7 +3976,7 @@ You can re-roll prayer rolls of 1 for friendly FLAYED PRIESTS wholly within 8&qu
               <profiles>
                 <profile id="ffcf-3d74-3ee9-ed52" name="Killing Frenzy" hidden="false" typeId="161a-85bd-f19e-a5a7" typeName="Prayer">
                   <characteristics>
-                    <characteristic name="Prayer" typeId="19bc-965a-768d-defa">Killing Frenzy has an answer value of 4 and a range of 16&quot;. If answered, pick 1 friendly Khorne unit wholly within range of the chanter that is visible to them. Add 1 to hit rolls for attacks made by that unit until the start of your next hero phase.</characteristic>
+                    <characteristic name="Prayer" typeId="19bc-965a-768d-defa">Killing Frenzy has an answer value of 4 and a range of 16&quot;. If answered, pick 1 friendly BLADES OF KHORNE unit wholly within range of the chanter that is visible to them. Add 1 to hit rolls for attacks made by that unit until the start of your next hero phase.</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
@@ -3958,7 +3991,7 @@ You can re-roll prayer rolls of 1 for friendly FLAYED PRIESTS wholly within 8&qu
               <profiles>
                 <profile id="cc65-29d4-ce0a-ac66" name="Brazen Fury" hidden="false" typeId="161a-85bd-f19e-a5a7" typeName="Prayer">
                   <characteristics>
-                    <characteristic name="Prayer" typeId="19bc-965a-768d-defa">Brazen Fury has an answer value of 4 and a range of 16&quot;. If answered, pick 1 friendly Khorne unit wholly within range of the chanter that is visible to them. Do not take battleshock tests for that unit until the start of your next hero phase.</characteristic>
+                    <characteristic name="Prayer" typeId="19bc-965a-768d-defa">Brazen Fury has an answer value of 4 and a range of 16&quot;. If answered, pick 1 friendly BLADES OF KHORNE unit wholly within range of the chanter that is visible to them. Do not take battleshock tests for that unit until the start of your next hero phase.</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
@@ -3973,7 +4006,7 @@ You can re-roll prayer rolls of 1 for friendly FLAYED PRIESTS wholly within 8&qu
               <profiles>
                 <profile id="8720-50db-de11-cd86" name="Resanguination" hidden="false" typeId="161a-85bd-f19e-a5a7" typeName="Prayer">
                   <characteristics>
-                    <characteristic name="Prayer" typeId="19bc-965a-768d-defa">Resanguination has an answer value of 4 and a range of 16&quot;. If answered, pick 1 friendly Khorne unit wholly within range of the chanter that is visible to them. You can heal up to D3 wounds allocated to that unit.</characteristic>
+                    <characteristic name="Prayer" typeId="19bc-965a-768d-defa">Resanguination has an answer value of 4 and a range of 16&quot;. If answered, pick 1 friendly BLADES OF KHORNE unit wholly within range of the chanter that is visible to them. You can heal up to D3 wounds allocated to that unit.</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
@@ -3988,7 +4021,7 @@ You can re-roll prayer rolls of 1 for friendly FLAYED PRIESTS wholly within 8&qu
               <profiles>
                 <profile id="bd41-a660-65be-7543" name="Blood Sacrifice" hidden="false" typeId="161a-85bd-f19e-a5a7" typeName="Prayer">
                   <characteristics>
-                    <characteristic name="Prayer" typeId="19bc-965a-768d-defa">Blood Sacrifice has an answer value of 4 and a range of 8&quot;. If answered, pick 1 friendly Khorne unit wholly within range of the chanter that is visible to them. That unit suffers D3 mortal wounds and you receive 1 Blood Tithe point.</characteristic>
+                    <characteristic name="Prayer" typeId="19bc-965a-768d-defa">Blood Sacrifice has an answer value of 4 and a range of 8&quot;. If answered, pick 1 friendly BLADES OF KHORNE unit wholly within range of the chanter that is visible to them. That unit suffers D3 mortal wounds and you receive 1 Blood Tithe point.</characteristic>
                   </characteristics>
                 </profile>
               </profiles>

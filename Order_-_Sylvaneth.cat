@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="af77-d512-8a1c-bb4d" name="Order - Sylvaneth" revision="13" battleScribeVersion="2.03" authorName="Thulram" library="false" gameSystemId="e832-3291-06be-cab1" gameSystemRevision="12" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="af77-d512-8a1c-bb4d" name="Order - Sylvaneth" revision="15" battleScribeVersion="2.03" authorName="Thulram" library="false" gameSystemId="e832-3291-06be-cab1" gameSystemRevision="14" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <categoryEntries>
     <categoryEntry id="6bc7-51c4-43a5-9b1b" name="Gnarlroot" hidden="false"/>
     <categoryEntry id="5953-aa46-e26e-7dc2" name="Heartwood" hidden="false"/>
@@ -8,7 +8,6 @@
     <categoryEntry id="3334-3fa3-546e-6cfb" name="Dreadwood" hidden="false"/>
     <categoryEntry id="8cb0-5f1e-23c2-1d0a" name="Harvestboon" hidden="false"/>
     <categoryEntry id="5295-011e-5e2f-a786" name="Wargrove" hidden="true"/>
-    <categoryEntry id="14fd-cb1c-4eae-8a51" name="SpellPlusRenewal" hidden="false"/>
   </categoryEntries>
   <selectionEntries>
     <selectionEntry id="627d-2b6d-378c-29ba" name="Allegiance" hidden="false" collective="false" import="true" type="upgrade">
@@ -40,21 +39,23 @@
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="3b2d-aa6e-f13e-1e42" type="max"/>
           </constraints>
           <profiles>
-            <profile id="419b-149c-3c38-d1ad" name="Forest Spirits" hidden="false" typeId="c0c2-177b-e761-ec41" typeName="Allegiance Abilities">
+            <profile id="419b-149c-3c38-d1ad" name="From the Woodland Depths" hidden="false" typeId="c0c2-177b-e761-ec41" typeName="Allegiance Abilities">
               <characteristics>
-                <characteristic name="Allegiance Ability" typeId="0506-f62d-68b3-5499">Instead of setting up a SYLVANETH unit on the battlefield, you can place it to one side and say that it is set up in the hidden enclaves as a reserve unit. You can set up one reserve unit in the hidden enclaves for each unit you set up on the battlefield. At the end of your movement phase, you can set up one or more of the reserve units that are in the hidden enclaves on the battlefield wholly within 6&quot; of an AWAKENED WYLDWOOD and more than 9&quot; from any enemy units. Any reserve units in the hidden enclaves that are not set up on the battlefield before the start of the fourth battle round are slain.</characteristic>
+                <characteristic name="Allegiance Ability" typeId="0506-f62d-68b3-5499">Once per turn, in your combat phase, immediately after a friendly SYLVANETH unit that is wholly within 9&quot; of an overgrown terrain feature or friendly Awakened Wyldwood has fought and slain models (if any) have been removed from play, you can remove that unit from the battlefield and set it up again more than 9&quot; from all enemy units and wholly within 9&quot; of either a different overgrown terrain feature that is more than 3&quot; from all enemy units or a different friendly Awakened Wyldwood that is more than 3&quot; from all enemy units.
+
+Designer’s Note: This means that any abilities or effects that come into play when a model is slain but before it is removed from play (such as the ‘Blaze of Glory’ battle trait for the Stormcast Eternals) are resolved before the ‘Strike and Fade’ effect regardless of whose turn is taking place.</characteristic>
               </characteristics>
             </profile>
             <profile id="f565-6be6-e54b-21d7" name="Places of Power" hidden="false" typeId="c0c2-177b-e761-ec41" typeName="Allegiance Abilities">
               <characteristics>
-                <characteristic name="Allegiance Ability" typeId="0506-f62d-68b3-5499">After territories have been chosen but before armies are set up, you can pick 1 terrain feature on the battlefield that was not set up by your opponent as part of their army. Do not take battleshock tests for friendly SYLVANETH units while they are wholly within 6&quot; of that terrain feature.</characteristic>
+                <characteristic name="Allegiance Ability" typeId="0506-f62d-68b3-5499">After territories are determined, before faction terrain features are set up, you can pick up to 3 terrain features on the battlefield that are wholly outside enemy territory. Those terrain features are considered by you to be overgrown terrain features.
+
+At the start of your hero phase, you can heal 1 wound allocated to each friendly SYLVANETH unit that is wholly within 9&quot; of an overgrown terrain feature or friendly Awakened Wyldwood.</characteristic>
               </characteristics>
             </profile>
             <profile id="6141-3538-9b75-7fe1" name="Glades" hidden="false" typeId="c0c2-177b-e761-ec41" typeName="Allegiance Abilities">
               <characteristics>
-                <characteristic name="Allegiance Ability" typeId="0506-f62d-68b3-5499">If your army is a Sylvaneth army, you can give it a Glade keyword. All SYLVANETH units in your army gain that keyword. You can either choose one of the Glades listed below, or choose another Glade you have read about or created yourself. If you choose one from the list below, all units with that keyword benefit from the extra abilities listed for that Glade on the page indicated. If you choose a different Glade, simply pick the Glade that most closely matches the nature of your own.
-
-If a model already has a Glade keyword on its warscroll, it cannot gain another one. This does not preclude you from including the unit in your army, but you cannot use the allegiance abilities for its Glade.
+                <characteristic name="Allegiance Ability" typeId="0506-f62d-68b3-5499">You can pick 1 of the following subfactions for your army. All SYLVANETH units in your army gain the keyword of the subfaction you picked, and you can use the allegiance abilities for that subfaction. If a unit already has a different subfaction keyword on its warscroll, it cannot gain another one. This does not preclude you from including the unit in your army, but you cannot use the allegiance abilities for its subfaction.
 
 • OAKENBROW
 • GNARLROOT
@@ -82,12 +83,7 @@ If a model already has a Glade keyword on its warscroll, it cannot gain another 
                   <profiles>
                     <profile id="3c10-5628-aa0a-26ea" name="Our Roots Run Deep" hidden="false" typeId="c0c2-177b-e761-ec41" typeName="Allegiance Abilities">
                       <characteristics>
-                        <characteristic name="Allegiance Ability" typeId="0506-f62d-68b3-5499">Subtract 2 from the number of wounds suffered by OAKENBROW SPIRITS OF DURTHU, OAKENBROW TREELORD ANCIENTS and OAKENBROW TREELORDS when determining which row on their damage table to use (to a minimum of 0).</characteristic>
-                      </characteristics>
-                    </profile>
-                    <profile id="adb4-09c0-7157-7a35" name="Yield to None" hidden="false" typeId="6364-f76d-fc0c-80bc" typeName="Command Abilities">
-                      <characteristics>
-                        <characteristic name="Command Ability" typeId="36cb-f8a4-d94b-8aa8">You can use this command ability at the start of the battleshock phase. If you do so, pick 1 friendly OAKENBROW HERO. Until the end of that phase, do not take battleshock tests for friendly OAKENBROW DRYADS units while they are wholly within 16&quot; of that HERO.</characteristic>
+                        <characteristic name="Allegiance Ability" typeId="0506-f62d-68b3-5499">When determining which row to use on the damage table of a friendly OAKENBROW TREELORD, TREELORD ANCIENT or SPIRIT OF DURTHU, it is treated as having suffered half the number of wounds that are actually allocated to it (rounding up).</characteristic>
                       </characteristics>
                     </profile>
                   </profiles>
@@ -100,14 +96,9 @@ If a model already has a Glade keyword on its warscroll, it cannot gain another 
                 </selectionEntry>
                 <selectionEntry id="5415-c161-b206-9101" name="Gnarlroot" hidden="false" collective="false" import="true" type="upgrade">
                   <profiles>
-                    <profile id="1d13-e400-24ce-53f5" name="Shield the Arcane" hidden="false" typeId="c0c2-177b-e761-ec41" typeName="Allegiance Abilities">
+                    <profile id="1d13-e400-24ce-53f5" name="Keepers of the Arcane" hidden="false" typeId="c0c2-177b-e761-ec41" typeName="Allegiance Abilities">
                       <characteristics>
-                        <characteristic name="Allegiance Ability" typeId="0506-f62d-68b3-5499">Re-roll hit rolls of 1 for attacks made by friendly GNARLROOT units while they are wholly within 12&quot; of any friendly GNARLROOT WIZARDS.</characteristic>
-                      </characteristics>
-                    </profile>
-                    <profile id="36ce-a94f-8b4b-9380" name="The Earth Defends" hidden="false" typeId="6364-f76d-fc0c-80bc" typeName="Command Abilities">
-                      <characteristics>
-                        <characteristic name="Command Ability" typeId="36cb-f8a4-d94b-8aa8">You can use this command ability at the start of the combat phase. If you do so, pick 1 friendly GNARLROOT unit wholly within 12&quot; of a friendly GNARLROOT HERO. Until the end of that phase, roll a dice each time you allocate a wound or mortal wound to that unit. On a 6+ that wound or mortal wound is negated.</characteristic>
+                        <characteristic name="Allegiance Ability" typeId="0506-f62d-68b3-5499">Once per turn, when you make a casting roll or unbinding roll for a friendly GNARLROOT WIZARD that is wholly within 9&quot; of an overgrown terrain feature or friendly Awakened Wyldwood, you can roll 3D6 instead of 2D6. If you do so, remove 1 dice of your choice from the roll, and then use the remaining dice to determine that casting roll or unbinding roll.</characteristic>
                       </characteristics>
                     </profile>
                   </profiles>
@@ -120,14 +111,9 @@ If a model already has a Glade keyword on its warscroll, it cannot gain another 
                 </selectionEntry>
                 <selectionEntry id="4cf2-4ad9-f691-228e" name="Heartwood" hidden="false" collective="false" import="true" type="upgrade">
                   <profiles>
-                    <profile id="556e-77a0-0b8d-7f87" name="Courage For Kurnoth" hidden="false" typeId="c0c2-177b-e761-ec41" typeName="Allegiance Abilities">
+                    <profile id="556e-77a0-0b8d-7f87" name="Masters of the Hunt" hidden="false" typeId="c0c2-177b-e761-ec41" typeName="Allegiance Abilities">
                       <characteristics>
-                        <characteristic name="Allegiance Ability" typeId="0506-f62d-68b3-5499">Add 1 to the Bravery characteristic of friendly HEARTWOOD units while they are wholly within 12&quot; of any friendly HEARTWOOD HEROES.</characteristic>
-                      </characteristics>
-                    </profile>
-                    <profile id="912e-df6f-8e8f-04ca" name="Lord of the Hunt" hidden="false" typeId="6364-f76d-fc0c-80bc" typeName="Command Abilities">
-                      <characteristics>
-                        <characteristic name="Command Ability" typeId="36cb-f8a4-d94b-8aa8">You can use this command ability at the start of the combat phase. If you do so, pick 1 enemy unit within 12&quot; of a friendly HEARTWOOD HERO. Until the end of that phase, you can re-roll hit and wound rolls of 1 for attacks made by friendly HEARTWOOD units that target that enemy unit.</characteristic>
+                        <characteristic name="Allegiance Ability" typeId="0506-f62d-68b3-5499">After deployment but before the first battle round begins, you can pick up to 3 different enemy units on the battlefield to be the quarry of the hunt. If you do so, add 1 to hit rolls for attacks made by friendly HEARTWOOD units that target those units.</characteristic>
                       </characteristics>
                     </profile>
                   </profiles>
@@ -140,14 +126,9 @@ If a model already has a Glade keyword on its warscroll, it cannot gain another 
                 </selectionEntry>
                 <selectionEntry id="e98e-fbcc-d3e5-cd3e" name="Ironbark" hidden="false" collective="false" import="true" type="upgrade">
                   <profiles>
-                    <profile id="6aaf-2ba2-8b89-8f67" name="Stubborn and Taciturn" hidden="false" typeId="c0c2-177b-e761-ec41" typeName="Allegiance Abilities">
-                      <characteristics>
-                        <characteristic name="Allegiance Ability" typeId="0506-f62d-68b3-5499">You can re-roll battleshock tests for friendly IRONBARK units while they are wholly within 12&quot; of any friendly IRONBARK HEROES.</characteristic>
-                      </characteristics>
-                    </profile>
                     <profile id="dadb-362a-0586-801f" name="Stand Firm" hidden="false" typeId="6364-f76d-fc0c-80bc" typeName="Command Abilities">
                       <characteristics>
-                        <characteristic name="Command Ability" typeId="36cb-f8a4-d94b-8aa8">You can use this command ability in the combat phase, before the players pick any units to fight. If you do so, pick 1 enemy unit that made a charge move this turn and is within 1&quot; of a friendly IRONBARK unit and roll a dice. On a 2+ that enemy unit suffers D3 mortal wounds.</characteristic>
+                        <characteristic name="Command Ability" typeId="36cb-f8a4-d94b-8aa8">You can use this command ability at the start of the enemy combat phase. The unit that receives the command must be a friendly IRONBARK unit that is within 3&quot; of an enemy unit that made a charge move in the same turn. Pick 1 enemy unit within 3&quot; of that friendly IRONBARK unit and roll a dice. On a 2+, that enemy unit suffers D3 mortal wounds. You can use this command ability more than once in the same phase, but if you do so, you cannot pick the same enemy unit more than once in the same phase.</characteristic>
                       </characteristics>
                     </profile>
                   </profiles>
@@ -162,12 +143,7 @@ If a model already has a Glade keyword on its warscroll, it cannot gain another 
                   <profiles>
                     <profile id="cf4a-02bc-099c-61d8" name="Winter&apos;s Bite" hidden="false" typeId="c0c2-177b-e761-ec41" typeName="Allegiance Abilities">
                       <characteristics>
-                        <characteristic name="Allegiance Ability" typeId="0506-f62d-68b3-5499">If the unmodified hit roll for an attack made with a melee weapon by a friendly WINTERLEAF unit is 6, that attack inflicts 2 hits on the target instead of 1. Make a wound and save roll for each hit.</characteristic>
-                      </characteristics>
-                    </profile>
-                    <profile id="b4d3-4022-6f29-07c2" name="Branch Blizzard" hidden="false" typeId="6364-f76d-fc0c-80bc" typeName="Command Abilities">
-                      <characteristics>
-                        <characteristic name="Command Ability" typeId="36cb-f8a4-d94b-8aa8">You can use this command ability when you pick a friendly WINTERLEAF unit to shoot in your shooting phase. That unit must receive the command. Until the end of that phase, if the unmodified hit roll for a shooting attack made by that unit is 6, that attack causes 1 mortal wound to the target in addition to any damage it inflicts.</characteristic>
+                        <characteristic name="Allegiance Ability" typeId="0506-f62d-68b3-5499">Enemy units within 3&quot; of a friendly WINTERLEAF unit cannot retreat. In addition, if you pick Everdusk from the Seasons of War battle trait for a Winterleaf army, enemy units within 3&quot; of a friendly 1 WINTERLEAF unit cannot be removed from the battlefield through an effect that would allow them to be set up again later in the battle.</characteristic>
                       </characteristics>
                     </profile>
                   </profiles>
@@ -182,12 +158,7 @@ If a model already has a Glade keyword on its warscroll, it cannot gain another 
                   <profiles>
                     <profile id="6e95-184d-242e-15a1" name="Malicious Tormentors" hidden="false" typeId="c0c2-177b-e761-ec41" typeName="Allegiance Abilities">
                       <characteristics>
-                        <characteristic name="Allegiance Ability" typeId="0506-f62d-68b3-5499">You can re-roll hit rolls of 1 for attacks made by DREADWOOD SPITE-REVENANTS.</characteristic>
-                      </characteristics>
-                    </profile>
-                    <profile id="868f-9e17-0bd0-f0ec" name="Sinister Ambush" hidden="false" typeId="6364-f76d-fc0c-80bc" typeName="Command Abilities">
-                      <characteristics>
-                        <characteristic name="Command Ability" typeId="36cb-f8a4-d94b-8aa8">You can use this command ability once during each of your turns, at the end of your movement phase. If you do so, pick 1 friendly DREADWOOD unit wholly within 18&quot; of a friendly DREADWOOD HERO. Remove that unit from the battlefield and then set it up again anywhere on the battlefield more than 9&quot; from any enemy units.</characteristic>
+                        <characteristic name="Allegiance Ability" typeId="0506-f62d-68b3-5499">Once per battle, you can use Walk the Hidden Paths twice in the same turn, but if you do so, at least one of the units you pick must be a friendly DREADWOOD SPITE-REVENANTS unit. In addition, once per battle, you can use Strike and Fade twice in the same turn, but if you do so, at least one of the units you pick must be a friendly DREADWOOD SPITE-REVENANTS unit.</characteristic>
                       </characteristics>
                     </profile>
                   </profiles>
@@ -202,18 +173,69 @@ If a model already has a Glade keyword on its warscroll, it cannot gain another 
                   <profiles>
                     <profile id="61cb-466a-5658-ad41" name="Vibrant Surge" hidden="false" typeId="c0c2-177b-e761-ec41" typeName="Allegiance Abilities">
                       <characteristics>
-                        <characteristic name="Allegiance Ability" typeId="0506-f62d-68b3-5499">You can re-roll hit rolls of 1 for attacks made by friendly HARVESTBOON units that made a charge move in the same turn.</characteristic>
-                      </characteristics>
-                    </profile>
-                    <profile id="e7e1-ce4a-aa6b-4feb" name="Fertile Ground" hidden="false" typeId="6364-f76d-fc0c-80bc" typeName="Command Abilities">
-                      <characteristics>
-                        <characteristic name="Command Ability" typeId="36cb-f8a4-d94b-8aa8">You can use this command ability at the start of the combat phase. If you do so, pick 1 friendly HARVESTBOON unit wholly within 12&quot; of a friendly HARVESTBOON HERO. Until the end of that phase, add 1 to the Attacks characteristic of that unit’s melee weapons. You cannot pick the same unit to benefit from this command ability more than once per combat phase.</characteristic>
+                        <characteristic name="Allegiance Ability" typeId="0506-f62d-68b3-5499">After deployment but before the first battle round begins, you can move each friendly HARVESTBOON SPITERIDER LANCERS and REVENANT SEEKERS unit up to 12&quot;. If both players can move units before the first battle round begins, they must roll off and the winner chooses who moves their units first.</characteristic>
                       </characteristics>
                     </profile>
                   </profiles>
                   <categoryLinks>
                     <categoryLink id="1f6c-df79-5a87-5df3" name="Harvestboon" hidden="false" targetId="8cb0-5f1e-23c2-1d0a" primary="false"/>
                   </categoryLinks>
+                  <costs>
+                    <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
+                  </costs>
+                </selectionEntry>
+              </selectionEntries>
+            </selectionEntryGroup>
+            <selectionEntryGroup id="6ea3-fea1-de6a-efab" name="Seasons of War" hidden="false" collective="false" import="true">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="fd74-2d79-dd0e-b50b" type="max"/>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="604b-2743-8c83-09cc" type="min"/>
+              </constraints>
+              <selectionEntries>
+                <selectionEntry id="287f-12dc-c8cf-48ea" name="The Burgeoning" hidden="false" collective="false" import="true" type="upgrade">
+                  <profiles>
+                    <profile id="bfc6-0fc7-3c6d-6883" name="The Burgeoning" hidden="false" typeId="c0c2-177b-e761-ec41" typeName="Allegiance Abilities">
+                      <characteristics>
+                        <characteristic name="Allegiance Ability" typeId="0506-f62d-68b3-5499">Friendly SYLVANETH units that did not charge in the same turn and are wholly within 9&quot; of an overgrown terrain feature or friendly Awakened Wyldwood have a ward of 6+.</characteristic>
+                      </characteristics>
+                    </profile>
+                  </profiles>
+                  <costs>
+                    <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
+                  </costs>
+                </selectionEntry>
+                <selectionEntry id="c6f5-37b2-2137-453a" name="The Reaping" hidden="false" collective="false" import="true" type="upgrade">
+                  <profiles>
+                    <profile id="384a-eb86-e029-794c" name="The Reaping" hidden="false" typeId="c0c2-177b-e761-ec41" typeName="Allegiance Abilities">
+                      <characteristics>
+                        <characteristic name="Allegiance Ability" typeId="0506-f62d-68b3-5499">Add 3&quot; to the range within which you can pick friendly SYLVANETH units with the Places of Power and From the Woodland Depths battle traits.</characteristic>
+                      </characteristics>
+                    </profile>
+                  </profiles>
+                  <costs>
+                    <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
+                  </costs>
+                </selectionEntry>
+                <selectionEntry id="f4ad-fdf6-be51-f594" name="The Dwindling" hidden="false" collective="false" import="true" type="upgrade">
+                  <profiles>
+                    <profile id="dd6f-abe7-5524-4d66" name="The Dwindling" hidden="false" typeId="c0c2-177b-e761-ec41" typeName="Allegiance Abilities">
+                      <characteristics>
+                        <characteristic name="Allegiance Ability" typeId="0506-f62d-68b3-5499">In the hero phase, you can re-roll 1 casting roll, 1 unbinding roll and 1 dispelling roll, so long as the friendly WIZARD you pick is a SYLVANETH WIZARD that is wholly within 9&quot; of an overgrown terrain feature or friendly Awakened Wyldwood.</characteristic>
+                      </characteristics>
+                    </profile>
+                  </profiles>
+                  <costs>
+                    <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
+                  </costs>
+                </selectionEntry>
+                <selectionEntry id="58e2-d247-c89f-d2b1" name="Everdusk" hidden="false" collective="false" import="true" type="upgrade">
+                  <profiles>
+                    <profile id="cc85-4815-acf2-076f" name="Everdusk" hidden="false" typeId="c0c2-177b-e761-ec41" typeName="Allegiance Abilities">
+                      <characteristics>
+                        <characteristic name="Allegiance Ability" typeId="0506-f62d-68b3-5499">Subtract 3&quot; from the range within which you can pick friendly SYLVANETH units with the Places of Power and From the Woodland Depths battle traits. However, if the unmodified hit roll for an attack made with a melee weapon by a friendly SYLVANETH unit wholly within 6&quot; of an overgrown terrain feature or friendly Awakened Wyldwood is 6, that attack scores 2 hits on the target instead of 1. Make a wound and save roll for each hit.</characteristic>
+                      </characteristics>
+                    </profile>
+                  </profiles>
                   <costs>
                     <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
                   </costs>
@@ -231,13 +253,6 @@ If a model already has a Glade keyword on its warscroll, it cannot gain another 
       </costs>
     </selectionEntry>
     <selectionEntry id="65dd-c147-59b0-185c" name="Terrain Featrue - Awakened Wyldwood" publicationId="41a4-7d44-770a-c56b" hidden="false" collective="false" import="true" type="upgrade">
-      <modifiers>
-        <modifier type="set" field="f6f2-6ce4-b008-a7d8" value="2.0">
-          <conditions>
-            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="5295-011e-5e2f-a786" type="greaterThan"/>
-          </conditions>
-        </modifier>
-      </modifiers>
       <constraints>
         <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="f6f2-6ce4-b008-a7d8" type="max"/>
       </constraints>
@@ -246,14 +261,16 @@ If a model already has a Glade keyword on its warscroll, it cannot gain another 
           <characteristics>
             <characteristic name="Set-Up Rules" typeId="fb13-8187-bb28-76fe">After territories are determined, you can set up this faction terrain feature wholly within your territory and more than 3&quot; from all objectives and other terrain features. If both players can set up faction terrain features at the same time, they must roll off and the winner chooses who sets up their faction terrain features first.
 
-Abilities that allow you to add Awakened Wyldwood terrain features to the battlefield will tell you how to set them up. In addition, they must be set up more than 3&quot; from all models, objectives, other terrain features, endless spells and invocations.
+When you set up this terrain feature, it can be set up as either a small, medium or large Awakened Wyldwood. A small Awakened Wyldwood consists of 1 scenery piece, a medium Awakened Wyldwood consists of 2 scenery pieces, and a large Awakened Wyldwood consists of 3 scenery pieces.
 
-This faction terrain feature consists of 1-3 scenery pieces. If an Awakened Wyldwood has more than 1 scenery piece, each piece must be set up touching all of the other pieces to form a circle with an area of open ground inside the circle. The area of open ground inside the circle is considered to be part of the Awakened Wyldwood terrain feature.</characteristic>
+If this terrain feature is set up as a medium or large Awakened Wyldwood, all of its scenery pieces must be set up touching so that they form a circle with an area of open ground inside the circle. This area is considered to be part of the Awakened Wyldwood terrain feature.
+
+Abilities that allow you to add an Awakened Wyldwood to your army during the battle will tell you how to set it up, and they may also specify the maximum number of scenery pieces it can consist of. In addition, it must be set up more than 3&quot; from all models, objectives, other terrain features, endless spells and invocations, unless noted otherwise.</characteristic>
           </characteristics>
         </profile>
         <profile id="7845-8793-7953-7c8e" name="Vengeful Forest Spirits" hidden="false" typeId="1c58-2b3d-482e-2a35" typeName="Scenery Rules">
           <characteristics>
-            <characteristic name="Scenery Rule" typeId="a333-0c4a-7f67-677c">At the end of the charge phase, roll a dice for each unit that does not have the SYLVANETH keyword that is within 1&quot; of any terrain features with this scenery rule. Add 2 to the roll if any WIZARDS or endless spells are within 6&quot; of any of those terrain features. On a 6+, that unit suffers D3 mortal wounds.</characteristic>
+            <characteristic name="Scenery Rule" typeId="a333-0c4a-7f67-677c">At the end of the charge phase, roll a dice for each unit that does not have the SYLVANETH keyword that is within 1&quot; of any Awakened Wyldwoods. Add 2 to the roll if any WIZARDS or endless spells are within 6&quot; of an Awakened Wyldwood that is within 1&quot; of the unit being rolled for. On a 6+, that unit suffers D3 mortal wounds.</characteristic>
           </characteristics>
         </profile>
         <profile id="eaa1-de76-ee77-b2cf" name="Overgrown Wilderness" hidden="false" typeId="1c58-2b3d-482e-2a35" typeName="Scenery Rules">
@@ -263,8 +280,6 @@ This faction terrain feature consists of 1-3 scenery pieces. If an Awakened Wyld
         </profile>
       </profiles>
       <categoryLinks>
-        <categoryLink id="0abc-2164-0a47-5884" name="Scenery" hidden="false" targetId="bab2-426b-5501-5fe8" primary="false"/>
-        <categoryLink id="53ec-cc8c-2a1f-47d6" name="Awakened Wyldwood" hidden="false" targetId="89ba-5402-6299-c00e" primary="false"/>
         <categoryLink id="8428-f77f-52ff-cafd" name="New CategoryLink" hidden="false" targetId="29f4-e63d-fa5b-1611" primary="true"/>
       </categoryLinks>
       <costs>
@@ -294,6 +309,7 @@ This faction terrain feature consists of 1-3 scenery pieces. If an Awakened Wyld
               </categoryLinks>
             </entryLink>
             <entryLink id="4e88-690c-b188-76a5" name="Spell Lores" hidden="false" collective="false" import="true" targetId="b3b8-66ca-b330-95fc" type="selectionEntryGroup"/>
+            <entryLink id="c292-e9b7-3a18-5b0e" name="Battalion Formation" hidden="false" collective="false" import="true" targetId="bb4c-8d89-1fb3-4d92" type="selectionEntryGroup"/>
           </entryLinks>
         </entryLink>
         <entryLink id="3293-0e28-b246-095a" name="Ylthari&apos;s Guardians" hidden="false" collective="false" import="true" targetId="2dba-0f42-f7ba-e386" type="selectionEntry">
@@ -301,10 +317,13 @@ This faction terrain feature consists of 1-3 scenery pieces. If an Awakened Wyld
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="fac8-0da7-02c9-69c4" type="min"/>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="1230-787e-5423-cb74" type="max"/>
           </constraints>
+          <entryLinks>
+            <entryLink id="1f30-7d7b-4697-dac1" name="Battalion Formation" hidden="false" collective="false" import="true" targetId="bb4c-8d89-1fb3-4d92" type="selectionEntryGroup"/>
+          </entryLinks>
         </entryLink>
       </entryLinks>
       <costs>
-        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="150.0"/>
+        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="160.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="cf2f-342c-2f21-5fb9" name="Grand Strategy" hidden="false" collective="false" import="true" type="upgrade">
@@ -351,11 +370,159 @@ This faction terrain feature consists of 1-3 scenery pieces. If an Awakened Wyld
           <categoryLinks>
             <categoryLink id="4a4b-a571-1da8-9a97" name="Grand Strategy" hidden="false" targetId="318c-fa55-0855-47ef" primary="false"/>
           </categoryLinks>
+          <selectionEntryGroups>
+            <selectionEntryGroup id="64bc-f740-eaeb-9b15" name="Seeds of Triumph" hidden="false" collective="false" import="true">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="ebcd-31bd-fe24-5fdf" type="max"/>
+              </constraints>
+              <selectionEntries>
+                <selectionEntry id="b1a0-97b7-90ec-fba0" name="The Roots of Victory" hidden="false" collective="false" import="true" type="upgrade">
+                  <profiles>
+                    <profile id="3cb8-6cbc-fee8-991f" name="The Roots of Victory" hidden="false" typeId="7dc6-98f0-f5ba-fc16" typeName="Grand Strategy">
+                      <characteristics>
+                        <characteristic name="Grand Strategy" typeId="22d6-b382-f824-6381">When the battle ends, you complete this grand strategy if there is a friendly Awakened Wyldwood in each quarter of the battlefield and all enemy units are more than 6&quot; from all friendly Awakened Wyldwoods on the battlefield.</characteristic>
+                      </characteristics>
+                    </profile>
+                  </profiles>
+                  <costs>
+                    <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
+                  </costs>
+                </selectionEntry>
+                <selectionEntry id="d23f-1bf0-21cc-f1b7" name="Vengeance and Spite" hidden="false" collective="false" import="true" type="upgrade">
+                  <profiles>
+                    <profile id="5ffd-2428-610e-f41b" name="Vengeance and Spite" hidden="false" typeId="7dc6-98f0-f5ba-fc16" typeName="Grand Strategy">
+                      <characteristics>
+                        <characteristic name="Grand Strategy" typeId="22d6-b382-f824-6381">When the battle ends, you complete this grand strategy if the model picked to be your opponent’s general was slain by an attack made by a friendly OUTCASTS unit.</characteristic>
+                      </characteristics>
+                    </profile>
+                  </profiles>
+                  <costs>
+                    <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
+                  </costs>
+                </selectionEntry>
+                <selectionEntry id="7d8c-0622-30c3-0f4d" name="Chorus of the Woodlands" hidden="false" collective="false" import="true" type="upgrade">
+                  <profiles>
+                    <profile id="d3c6-a13c-9751-83c9" name="Chorus of the Woodlands" hidden="false" typeId="7dc6-98f0-f5ba-fc16" typeName="Grand Strategy">
+                      <characteristics>
+                        <characteristic name="Grand Strategy" typeId="22d6-b382-f824-6381">When the battle ends, you complete this grand strategy if you completed at least 4 battle tactics and every battle tactic you completed was from the ‘Songs of War’ list.</characteristic>
+                      </characteristics>
+                    </profile>
+                  </profiles>
+                  <costs>
+                    <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
+                  </costs>
+                </selectionEntry>
+              </selectionEntries>
+            </selectionEntryGroup>
+          </selectionEntryGroups>
           <entryLinks>
             <entryLink id="24f1-7989-d1ff-700f" name="GHB &apos;21" hidden="false" collective="false" import="true" targetId="bb2d-2110-60b8-c13e" type="selectionEntryGroup"/>
           </entryLinks>
         </selectionEntryGroup>
       </selectionEntryGroups>
+      <costs>
+        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="9086-edf5-9c0c-3476" name="Sylvaneth Battle Tactics" hidden="false" collective="false" import="true" type="upgrade">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4373-740f-1bf3-b0aa" type="instanceOf"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="e3a6-45ca-4974-b489" type="instanceOf"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="996a-613c-4006-25e3" type="instanceOf"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="6cd6-b22e-bfcb-9589" type="instanceOf"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="b543-cb16-0c79-fbc6" type="instanceOf"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+      <constraints>
+        <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="68e3-1c83-1b37-0545" type="max"/>
+      </constraints>
+      <profiles>
+        <profile id="e705-98e7-af6f-c21e" name="Unleash Ghyran&apos;s Wrath" hidden="false" typeId="4bb2-448c-446c-f522" typeName="Battle Tactic">
+          <characteristics>
+            <characteristic name="Battle Tactic" typeId="8c0f-be41-a70e-c699">Pick 1 friendly SYLVANETH WIZARD on the battlefield. You complete this battle tactic if a spell successfully cast by that WIZARD, or an endless spell summoned by that WIZARD, destroys an enemy unit this turn.</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="2304-248d-bb13-bd67" name="March of the Forest Lords" hidden="false" typeId="4bb2-448c-446c-f522" typeName="Battle Tactic">
+          <characteristics>
+            <characteristic name="Battle Tactic" typeId="8c0f-be41-a70e-c699">Pick 1 enemy MONSTER on the battlefield. You complete this battle tactic if that MONSTER is slain by an attack made by a friendly SPIRIT OF DURTHU, TREELORD ANCIENT or TREELORD during this turn.</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="01c4-71bc-ff83-3584" name="Balance the Cycle" hidden="false" typeId="4bb2-448c-446c-f522" typeName="Battle Tactic">
+          <characteristics>
+            <characteristic name="Battle Tactic" typeId="8c0f-be41-a70e-c699">Pick 1 enemy unit within 12&quot; of an overgrown terrain feature or friendly Awakened Wyldwood. You complete this battle tactic if that unit is destroyed by an attack made by a friendly SYLVANETH unit that was added to your army this turn.</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="d829-519d-ec37-74a2" name="Harness the Spirit Paths" hidden="false" typeId="4bb2-448c-446c-f522" typeName="Battle Tactic">
+          <characteristics>
+            <characteristic name="Battle Tactic" typeId="8c0f-be41-a70e-c699">You complete this battle tactic if any models in a friendly SYLVANETH unit that was set up using the From the Woodland Depths battle trait this turn make a charge move this turn.</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="3816-6975-fad2-b6ce" name="Eradicate Trespassers" hidden="false" typeId="4bb2-448c-446c-f522" typeName="Battle Tactic">
+          <characteristics>
+            <characteristic name="Battle Tactic" typeId="8c0f-be41-a70e-c699">Pick 1 enemy unit within 6&quot; of a friendly Awakened Wyldwood. You complete this battle tactic if that unit is destroyed during this turn.</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <categoryLinks>
+        <categoryLink id="ba1d-3946-9fee-84b7" name="New CategoryLink" hidden="false" targetId="29f4-e63d-fa5b-1611" primary="true"/>
+      </categoryLinks>
+      <costs>
+        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="ec6c-984e-c758-e792" name="Lords of the Clan" hidden="false" collective="false" import="true" type="upgrade">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4373-740f-1bf3-b0aa" type="instanceOf"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="e3a6-45ca-4974-b489" type="instanceOf"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="996a-613c-4006-25e3" type="instanceOf"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="6cd6-b22e-bfcb-9589" type="instanceOf"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="b543-cb16-0c79-fbc6" type="instanceOf"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+      <profiles>
+        <profile id="0a23-aa2b-5162-5070" name="Strategists" hidden="false" typeId="66c5-932e-004a-574c" typeName="Battalion Abilities">
+          <characteristics>
+            <characteristic name="Battalion Ability" typeId="23f7-32c0-e059-29b2">Once per battle, when you receive command points at the start of your hero phase, you can receive 1 extra command point.</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <categoryLinks>
+        <categoryLink id="a62e-96dd-17f3-443c" name="New CategoryLink" hidden="false" targetId="c03a-b1a8-66c6-3637" primary="true"/>
+      </categoryLinks>
+      <selectionEntries>
+        <selectionEntry id="1f70-7bc4-e6da-8bf5" name="Treelord" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="3.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="860e-793e-6618-8caa" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="df54-f1e1-f913-bfc4" type="min"/>
+          </constraints>
+          <costs>
+            <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="76e2-7b25-97e4-369d" name="Treelord Ancient" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="4.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="c3e6-2708-fff7-39fd" type="max"/>
+            <constraint field="selections" scope="parent" value="2.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="95c0-d6dd-6199-1211" type="min"/>
+          </constraints>
+          <costs>
+            <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
+          </costs>
+        </selectionEntry>
+      </selectionEntries>
       <costs>
         <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
       </costs>
@@ -366,76 +533,14 @@ This faction terrain feature consists of 1-3 scenery pieces. If an Awakened Wyld
       <infoLinks>
         <infoLink id="1864-5c62-9f17-2503" name="Verdant Blessing" hidden="false" targetId="6c8d-5483-d206-ba8e" type="profile"/>
       </infoLinks>
-      <selectionEntries>
-        <selectionEntry id="ea87-52fb-af7f-14a4" name="Lore of the Deepwood - All spells" hidden="false" collective="false" import="true" type="upgrade">
-          <modifiers>
-            <modifier type="set" field="hidden" value="true">
-              <conditionGroups>
-                <conditionGroup type="or">
-                  <conditions>
-                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4373-740f-1bf3-b0aa" type="instanceOf"/>
-                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="e3a6-45ca-4974-b489" type="instanceOf"/>
-                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="996a-613c-4006-25e3" type="instanceOf"/>
-                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="6cd6-b22e-bfcb-9589" type="instanceOf"/>
-                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="b543-cb16-0c79-fbc6" type="instanceOf"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
-            </modifier>
-            <modifier type="set" field="78da-ec36-8ca8-71ef" value="0">
-              <conditionGroups>
-                <conditionGroup type="or">
-                  <conditions>
-                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4373-740f-1bf3-b0aa" type="instanceOf"/>
-                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="e3a6-45ca-4974-b489" type="instanceOf"/>
-                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="996a-613c-4006-25e3" type="instanceOf"/>
-                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="6cd6-b22e-bfcb-9589" type="instanceOf"/>
-                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="b543-cb16-0c79-fbc6" type="instanceOf"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
-            </modifier>
-          </modifiers>
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="bfce-0af3-2f92-c210" type="max"/>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="78da-ec36-8ca8-71ef" type="min"/>
-          </constraints>
-          <profiles>
-            <profile id="f946-89ce-f531-af03" name="Throne of Vines" hidden="false" typeId="13da-11a8-b7d1-77a7" typeName="Spell">
-              <characteristics>
-                <characteristic name="Spell" typeId="1170-c916-1b73-ae34">Throne of Vines has a casting value of 5. If successfully cast, add 2 to casting rolls for the caster until the caster makes a move or is set up in a different location.</characteristic>
-              </characteristics>
-            </profile>
-            <profile id="6faf-ceb9-092e-e6bf" name="Regrowth" hidden="false" typeId="13da-11a8-b7d1-77a7" typeName="Spell">
-              <characteristics>
-                <characteristic name="Spell" typeId="1170-c916-1b73-ae34">Regrowth has a casting value of 5. If successfully cast, pick 1 friendly SYLVANETH unit wholly within 18&quot; of the caster and visible to them. You can heal up to D6 wounds allocated to that unit.</characteristic>
-              </characteristics>
-            </profile>
-            <profile id="2587-977c-7c47-d831" name="Deadly Harvest" hidden="false" typeId="13da-11a8-b7d1-77a7" typeName="Spell">
-              <characteristics>
-                <characteristic name="Spell" typeId="1170-c916-1b73-ae34">Deadly Harvest has a casting value of 6. If successfully cast, each enemy unit within 3&quot; of the caster suffers D3 mortal wounds (roll separately for each unit).</characteristic>
-              </characteristics>
-            </profile>
-            <profile id="5350-8bc1-60d2-4fa5" name="The Dwellers Below" hidden="false" typeId="13da-11a8-b7d1-77a7" typeName="Spell">
-              <characteristics>
-                <characteristic name="Spell" typeId="1170-c916-1b73-ae34">The Dwellers Below has a casting value of 7. If successfully cast, pick 1 enemy unit within 10&quot; of the caster and visible to them and roll a number of dice equal to the number of models in that unit. For each 6+ that unit suffers 1 mortal wound.</characteristic>
-              </characteristics>
-            </profile>
-            <profile id="8550-1198-6c8a-ab10" name="Verdurous Harmony" hidden="false" typeId="13da-11a8-b7d1-77a7" typeName="Spell">
-              <characteristics>
-                <characteristic name="Spell" typeId="1170-c916-1b73-ae34">Verdurous Harmony has a casting value of 7. If successfully cast, pick 1 friendly SYLVANETH unit wholly within 18&quot; of the caster and visible to them. You can return 1 slain model to that unit. If you picked a unit of DRYADS, TREEREVENANTS or SPITE-REVENANTS, you can return up to D3 slain models to that unit instead of 1.</characteristic>
-              </characteristics>
-            </profile>
-            <profile id="ccd6-3202-72e9-08ec" name="Treesong" hidden="false" typeId="13da-11a8-b7d1-77a7" typeName="Spell">
-              <characteristics>
-                <characteristic name="Spell" typeId="1170-c916-1b73-ae34">Treesong has a casting value of 7. If successfully cast, pick 1 enemy unit within 16&quot; of the caster and within 6&quot; of an AWAKENED WYLDWOOD. Until the end of the turn, you can re-roll hit and wound rolls of 1 for attacks made with melee weapons that target that unit.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-        </selectionEntry>
-      </selectionEntries>
       <entryLinks>
-        <entryLink id="8270-2f55-a535-e93b" name="Bonus General" hidden="false" collective="false" import="true" targetId="c608-7a89-b2b4-124d" type="selectionEntry"/>
+        <entryLink id="a568-22bf-0aed-948f" name="Spell Lores" hidden="false" collective="false" import="true" targetId="b3b8-66ca-b330-95fc" type="selectionEntryGroup"/>
+        <entryLink id="f221-a63b-6ba9-92b8" name="General" hidden="false" collective="false" import="true" targetId="98a4-3d6d-a7b9-399f" type="selectionEntry">
+          <categoryLinks>
+            <categoryLink id="69bf-bda9-ccc0-a977" name="Named General" hidden="false" targetId="8b3d-7f03-e1f9-eaf5" primary="false"/>
+          </categoryLinks>
+        </entryLink>
+        <entryLink id="2576-5155-488f-0c00" name="Battalion Formation" hidden="false" collective="false" import="true" targetId="bb4c-8d89-1fb3-4d92" type="selectionEntryGroup"/>
       </entryLinks>
     </entryLink>
     <entryLink id="e1ba-a8f6-37da-a861" name="Arch-Revenant" hidden="false" collective="false" import="true" targetId="9778-f497-1c63-ee1a" type="selectionEntry">
@@ -444,17 +549,7 @@ This faction terrain feature consists of 1-3 scenery pieces. If an Awakened Wyld
         <entryLink id="24ec-2d58-7487-7d2d" name="Artefacts of Power" hidden="false" collective="false" import="true" targetId="9d04-898d-3277-6818" type="selectionEntryGroup"/>
         <entryLink id="c2a0-fbf0-319c-1f7d" name="Command Traits" hidden="false" collective="false" import="true" targetId="7c9a-1584-aaf0-bf5a" type="selectionEntryGroup"/>
         <entryLink id="f401-9314-6e3d-eb3d" name="Spell Lores" hidden="false" collective="false" import="true" targetId="b3b8-66ca-b330-95fc" type="selectionEntryGroup"/>
-      </entryLinks>
-    </entryLink>
-    <entryLink id="7532-5363-785a-52a6" name="Branchwraith" hidden="false" collective="false" import="true" targetId="054f-31c2-f0e4-cfa4" type="selectionEntry">
-      <infoLinks>
-        <infoLink id="4844-b5b2-ce1d-9bcc" name="Verdant Blessing" hidden="false" targetId="6c8d-5483-d206-ba8e" type="profile"/>
-      </infoLinks>
-      <entryLinks>
-        <entryLink id="2720-2461-7d48-d458" name="Artefacts of Power" hidden="false" collective="false" import="true" targetId="9d04-898d-3277-6818" type="selectionEntryGroup"/>
-        <entryLink id="c275-0b7e-f731-beb9" name="Command Traits" hidden="false" collective="false" import="true" targetId="7c9a-1584-aaf0-bf5a" type="selectionEntryGroup"/>
-        <entryLink id="f924-633d-ff57-3713" name="General" hidden="false" collective="false" import="true" targetId="98a4-3d6d-a7b9-399f" type="selectionEntry"/>
-        <entryLink id="c57a-0ed6-7629-8815" name="Spell Lores" hidden="false" collective="false" import="true" targetId="b3b8-66ca-b330-95fc" type="selectionEntryGroup"/>
+        <entryLink id="a67c-3a82-0a47-b22b" name="Battalion Formation" hidden="false" collective="false" import="true" targetId="bb4c-8d89-1fb3-4d92" type="selectionEntryGroup"/>
       </entryLinks>
     </entryLink>
     <entryLink id="5275-7275-90cc-8573" name="Branchwych" hidden="false" collective="false" import="true" targetId="fcbf-911a-5836-bf94" type="selectionEntry">
@@ -466,9 +561,14 @@ This faction terrain feature consists of 1-3 scenery pieces. If an Awakened Wyld
         <entryLink id="0a8b-9c98-230e-7947" name="Command Traits" hidden="false" collective="false" import="true" targetId="7c9a-1584-aaf0-bf5a" type="selectionEntryGroup"/>
         <entryLink id="e2a9-a541-c707-2f5b" name="General" hidden="false" collective="false" import="true" targetId="98a4-3d6d-a7b9-399f" type="selectionEntry"/>
         <entryLink id="c4a0-3401-e3b3-aa9d" name="Spell Lores" hidden="false" collective="false" import="true" targetId="b3b8-66ca-b330-95fc" type="selectionEntryGroup"/>
+        <entryLink id="1f4c-6109-78be-b3ae" name="Battalion Formation" hidden="false" collective="false" import="true" targetId="bb4c-8d89-1fb3-4d92" type="selectionEntryGroup"/>
       </entryLinks>
     </entryLink>
-    <entryLink id="c1ab-3e02-3506-ff71" name="Dryads" hidden="false" collective="false" import="true" targetId="3692-5cec-4019-d6db" type="selectionEntry"/>
+    <entryLink id="c1ab-3e02-3506-ff71" name="Dryads" hidden="false" collective="false" import="true" targetId="3692-5cec-4019-d6db" type="selectionEntry">
+      <entryLinks>
+        <entryLink id="d3fd-91e0-dc47-1f22" name="Battalion Formation" hidden="false" collective="false" import="true" targetId="bb4c-8d89-1fb3-4d92" type="selectionEntryGroup"/>
+      </entryLinks>
+    </entryLink>
     <entryLink id="c300-4f93-f756-5be4" name="Drycha Hamadreth" hidden="false" collective="false" import="true" targetId="da0e-1bb4-10ec-bd79" type="selectionEntry">
       <infoLinks>
         <infoLink id="d608-c713-8afb-65e9" name="Verdant Blessing" hidden="false" targetId="6c8d-5483-d206-ba8e" type="profile"/>
@@ -480,6 +580,8 @@ This faction terrain feature consists of 1-3 scenery pieces. If an Awakened Wyld
           </categoryLinks>
         </entryLink>
         <entryLink id="8772-64a8-9c46-50e4" name="Spell Lores" hidden="false" collective="false" import="true" targetId="b3b8-66ca-b330-95fc" type="selectionEntryGroup"/>
+        <entryLink id="6318-bda9-a1a4-a95a" name="Bonus General" hidden="false" collective="false" import="true" targetId="c608-7a89-b2b4-124d" type="selectionEntry"/>
+        <entryLink id="b51a-c1c6-f546-4e0d" name="Battalion Formation" hidden="false" collective="false" import="true" targetId="bb4c-8d89-1fb3-4d92" type="selectionEntryGroup"/>
       </entryLinks>
     </entryLink>
     <entryLink id="9de0-2510-b021-03c9" name="Spirit of Durthu" hidden="false" collective="false" import="true" targetId="fb95-a697-2cdc-ef80" type="selectionEntry">
@@ -488,11 +590,55 @@ This faction terrain feature consists of 1-3 scenery pieces. If an Awakened Wyld
         <entryLink id="850c-1d76-4cb1-40f9" name="Artefacts of Power" hidden="false" collective="false" import="true" targetId="9d04-898d-3277-6818" type="selectionEntryGroup"/>
         <entryLink id="d21c-ef1a-f8c9-643f" name="Command Traits" hidden="false" collective="false" import="true" targetId="7c9a-1584-aaf0-bf5a" type="selectionEntryGroup"/>
         <entryLink id="2690-d7d7-fb3c-b1c4" name="Spell Lores" hidden="false" collective="false" import="true" targetId="b3b8-66ca-b330-95fc" type="selectionEntryGroup"/>
+        <entryLink id="2557-a77e-bf48-d7ed" name="Battalion Formation" hidden="false" collective="false" import="true" targetId="bb4c-8d89-1fb3-4d92" type="selectionEntryGroup"/>
       </entryLinks>
     </entryLink>
-    <entryLink id="ceed-a51e-1127-9df9" name="Spite-Revenants" hidden="false" collective="false" import="true" targetId="a9a4-5bfd-97bc-0479" type="selectionEntry"/>
-    <entryLink id="3052-b8fb-d6ca-d0a5" name="Tree-Revenants" hidden="false" collective="false" import="true" targetId="6fbc-82d9-3c7e-61e3" type="selectionEntry"/>
-    <entryLink id="2174-b3aa-c91c-83ef" name="Treelord" hidden="false" collective="false" import="true" targetId="587b-a51c-7470-1902" type="selectionEntry"/>
+    <entryLink id="ceed-a51e-1127-9df9" name="Spite-Revenants" hidden="false" collective="false" import="true" targetId="a9a4-5bfd-97bc-0479" type="selectionEntry">
+      <modifiers>
+        <modifier type="remove" field="category" value="a42d-220e-6a88-7bf6">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4373-740f-1bf3-b0aa" type="instanceOf"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="e3a6-45ca-4974-b489" type="instanceOf"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="996a-613c-4006-25e3" type="instanceOf"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="6cd6-b22e-bfcb-9589" type="instanceOf"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="b543-cb16-0c79-fbc6" type="instanceOf"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="8492-c46a-524e-7173" type="equalTo"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+      <categoryLinks>
+        <categoryLink id="d306-4a7e-e10f-ae72" name="Battleline" hidden="false" targetId="a42d-220e-6a88-7bf6" primary="false"/>
+      </categoryLinks>
+      <entryLinks>
+        <entryLink id="7977-9dc6-c52e-bc30" name="Battalion Formation" hidden="false" collective="false" import="true" targetId="bb4c-8d89-1fb3-4d92" type="selectionEntryGroup"/>
+      </entryLinks>
+    </entryLink>
+    <entryLink id="3052-b8fb-d6ca-d0a5" name="Tree-Revenants" hidden="false" collective="false" import="true" targetId="6fbc-82d9-3c7e-61e3" type="selectionEntry">
+      <entryLinks>
+        <entryLink id="5969-e72a-64cd-3f16" name="Battalion Formation" hidden="false" collective="false" import="true" targetId="bb4c-8d89-1fb3-4d92" type="selectionEntryGroup"/>
+      </entryLinks>
+    </entryLink>
+    <entryLink id="2174-b3aa-c91c-83ef" name="Treelord" hidden="false" collective="false" import="true" targetId="587b-a51c-7470-1902" type="selectionEntry">
+      <modifierGroups>
+        <modifierGroup>
+          <conditions>
+            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="3b2a-2840-2aea-5149" type="greaterThan"/>
+          </conditions>
+          <modifiers>
+            <modifier type="add" field="category" value="a42d-220e-6a88-7bf6"/>
+            <modifier type="remove" field="category" value="7f62-b7f5-32d5-e13b"/>
+            <modifier type="set-primary" field="category" value="6230-ed60-e374-add4"/>
+          </modifiers>
+        </modifierGroup>
+      </modifierGroups>
+      <entryLinks>
+        <entryLink id="1aba-7013-3ba9-e33b" name="Battalion Formation" hidden="false" collective="false" import="true" targetId="bb4c-8d89-1fb3-4d92" type="selectionEntryGroup"/>
+      </entryLinks>
+    </entryLink>
     <entryLink id="faf8-c5c6-f76b-ec90" name="Treelord Ancient" hidden="false" collective="false" import="true" targetId="c9a3-a47a-cbaa-1314" type="selectionEntry">
       <infoLinks>
         <infoLink id="6bb4-845c-4260-de99" name="Verdant Blessing" hidden="false" targetId="6c8d-5483-d206-ba8e" type="profile"/>
@@ -502,18 +648,33 @@ This faction terrain feature consists of 1-3 scenery pieces. If an Awakened Wyld
         <entryLink id="937d-7ae5-b995-24c9" name="Artefacts of Power" hidden="false" collective="false" import="true" targetId="9d04-898d-3277-6818" type="selectionEntryGroup"/>
         <entryLink id="501c-b6a5-188d-40a1" name="Command Traits" hidden="false" collective="false" import="true" targetId="7c9a-1584-aaf0-bf5a" type="selectionEntryGroup"/>
         <entryLink id="0a17-f1ed-2c39-83b4" name="Spell Lores" hidden="false" collective="false" import="true" targetId="b3b8-66ca-b330-95fc" type="selectionEntryGroup"/>
+        <entryLink id="f141-ced3-4bf0-f741" name="Battalion Formation" hidden="false" collective="false" import="true" targetId="bb4c-8d89-1fb3-4d92" type="selectionEntryGroup"/>
       </entryLinks>
     </entryLink>
-    <entryLink id="b91c-7999-dc43-6728" name="Kurnoth Hunters" hidden="false" collective="false" import="true" targetId="c5b3-332d-4ff8-b510" type="selectionEntry"/>
-    <entryLink id="c957-36c1-4e47-9b06" name="Forest Folk" hidden="false" collective="false" import="true" targetId="d8fd-04cc-3bb5-6ad1" type="selectionEntry"/>
-    <entryLink id="240f-b01e-fca8-8923" name="Free Spirits" hidden="false" collective="false" import="true" targetId="4419-54b3-73a0-96bc" type="selectionEntry"/>
-    <entryLink id="d0d6-c9a8-04ef-14bd" name="Household" hidden="false" collective="false" import="true" targetId="6c51-19db-5005-0058" type="selectionEntry"/>
-    <entryLink id="c794-1e42-acc4-a44b" name="Lords of the Clan" hidden="false" collective="false" import="true" targetId="ebb2-dcb9-98a5-0c44" type="selectionEntry"/>
-    <entryLink id="e9bc-4453-6d7b-53dc" name="Outcasts" hidden="false" collective="false" import="true" targetId="c3cb-f94e-92e0-6b48" type="selectionEntry"/>
-    <entryLink id="8a12-a0f6-bdd7-fbfb" name="Wargrove" hidden="false" collective="false" import="true" targetId="3097-a66a-7883-7860" type="selectionEntry"/>
-    <entryLink id="9dbb-137b-8935-5fd3" name="Endless Spell - Gladewyrm" hidden="false" collective="false" import="true" targetId="ff74-7c7b-3960-934d" type="selectionEntry"/>
-    <entryLink id="1bc1-4363-241e-f09e" name="Endless Spell - Spiteswarm Hive" hidden="false" collective="false" import="true" targetId="213f-b57e-6381-478b" type="selectionEntry"/>
-    <entryLink id="2abd-b2ba-16b0-c16e" name="Endless Spell - Vengeful Skullroot" hidden="false" collective="false" import="true" targetId="5d54-a663-7bf3-7fb2" type="selectionEntry"/>
+    <entryLink id="b91c-7999-dc43-6728" name="Kurnoth Hunters" hidden="false" collective="false" import="true" targetId="c5b3-332d-4ff8-b510" type="selectionEntry">
+      <modifiers>
+        <modifier type="remove" field="category" value="a42d-220e-6a88-7bf6">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4373-740f-1bf3-b0aa" type="instanceOf"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="e3a6-45ca-4974-b489" type="instanceOf"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="996a-613c-4006-25e3" type="instanceOf"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="6cd6-b22e-bfcb-9589" type="instanceOf"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="b543-cb16-0c79-fbc6" type="instanceOf"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="4cf2-4ad9-f691-228e" type="equalTo"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+      <categoryLinks>
+        <categoryLink id="85ea-0f63-8c1b-41d0" name="Battleline" hidden="false" targetId="a42d-220e-6a88-7bf6" primary="false"/>
+      </categoryLinks>
+      <entryLinks>
+        <entryLink id="530f-8815-d243-cffa" name="Battalion Formation" hidden="false" collective="false" import="true" targetId="bb4c-8d89-1fb3-4d92" type="selectionEntryGroup"/>
+      </entryLinks>
+    </entryLink>
     <entryLink id="5a32-971c-5f9f-078a" name="Warsong Revenant" hidden="false" collective="false" import="true" targetId="0887-65bf-11c5-92bb" type="selectionEntry">
       <infoLinks>
         <infoLink id="3eaa-b4e5-72db-fa5c" name="Verdant Blessing" hidden="false" targetId="6c8d-5483-d206-ba8e" type="profile"/>
@@ -523,328 +684,128 @@ This faction terrain feature consists of 1-3 scenery pieces. If an Awakened Wyld
         <entryLink id="0280-50ae-e4b1-e5a9" name="Artefacts of Power" hidden="false" collective="false" import="true" targetId="9d04-898d-3277-6818" type="selectionEntryGroup"/>
         <entryLink id="ca20-70cb-f7af-c503" name="Command Traits" hidden="false" collective="false" import="true" targetId="7c9a-1584-aaf0-bf5a" type="selectionEntryGroup"/>
         <entryLink id="ffde-cb9b-39ac-b88a" name="Spell Lores" hidden="false" collective="false" import="true" targetId="b3b8-66ca-b330-95fc" type="selectionEntryGroup"/>
+        <entryLink id="a4bc-80f2-ebdd-5006" name="Battalion Formation" hidden="false" collective="false" import="true" targetId="bb4c-8d89-1fb3-4d92" type="selectionEntryGroup"/>
       </entryLinks>
     </entryLink>
-    <entryLink id="181f-deb4-dbdd-9410" name="Drycha&apos;s Spitegrove" hidden="false" collective="false" import="true" targetId="3003-99e8-003e-d5b6" type="selectionEntry"/>
-    <entryLink id="34b6-9043-86d7-bb8a" name="Skaeth&apos;s Wild Hunt" hidden="false" collective="false" import="true" targetId="b2ab-0c5f-104f-f8ba" type="selectionEntry"/>
+    <entryLink id="34b6-9043-86d7-bb8a" name="Skaeth&apos;s Wild Hunt" hidden="false" collective="false" import="true" targetId="b2ab-0c5f-104f-f8ba" type="selectionEntry">
+      <entryLinks>
+        <entryLink id="b7f0-d957-0964-abec" name="Battalion Formation" hidden="false" collective="false" import="true" targetId="bb4c-8d89-1fb3-4d92" type="selectionEntryGroup"/>
+      </entryLinks>
+    </entryLink>
+    <entryLink id="850c-a208-195c-2ce0" name="Gossamid Archers" hidden="false" collective="false" import="true" targetId="968e-1180-d00a-b159" type="selectionEntry">
+      <entryLinks>
+        <entryLink id="adcc-1640-120a-f95a" name="Battalion Formation" hidden="false" collective="false" import="true" targetId="bb4c-8d89-1fb3-4d92" type="selectionEntryGroup"/>
+      </entryLinks>
+    </entryLink>
+    <entryLink id="2134-5406-5acd-25f9" name="Revenant Seekers" hidden="false" collective="false" import="true" targetId="ce42-e50c-75a3-88f7" type="selectionEntry">
+      <modifiers>
+        <modifier type="remove" field="category" value="a42d-220e-6a88-7bf6">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4373-740f-1bf3-b0aa" type="instanceOf"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="e3a6-45ca-4974-b489" type="instanceOf"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="996a-613c-4006-25e3" type="instanceOf"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="6cd6-b22e-bfcb-9589" type="instanceOf"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="b543-cb16-0c79-fbc6" type="instanceOf"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="7b73-418e-0b4e-c3ed" type="equalTo"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+      <categoryLinks>
+        <categoryLink id="b2c0-77ef-0198-d787" name="Battleline" hidden="false" targetId="a42d-220e-6a88-7bf6" primary="false"/>
+      </categoryLinks>
+      <entryLinks>
+        <entryLink id="84b4-f38a-6500-fa8c" name="Battalion Formation" hidden="false" collective="false" import="true" targetId="bb4c-8d89-1fb3-4d92" type="selectionEntryGroup"/>
+      </entryLinks>
+    </entryLink>
+    <entryLink id="c3a9-de31-0f8b-654b" name="Spiterider Lances" hidden="false" collective="false" import="true" targetId="0cfa-a1bc-0dfb-9f6e" type="selectionEntry">
+      <modifiers>
+        <modifier type="remove" field="category" value="a42d-220e-6a88-7bf6">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4373-740f-1bf3-b0aa" type="instanceOf"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="e3a6-45ca-4974-b489" type="instanceOf"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="996a-613c-4006-25e3" type="instanceOf"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="6cd6-b22e-bfcb-9589" type="instanceOf"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="b543-cb16-0c79-fbc6" type="instanceOf"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="7b73-418e-0b4e-c3ed" type="equalTo"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+      <entryLinks>
+        <entryLink id="740e-1634-7b72-9489" name="Battalion Formation" hidden="false" collective="false" import="true" targetId="bb4c-8d89-1fb3-4d92" type="selectionEntryGroup"/>
+      </entryLinks>
+    </entryLink>
+    <entryLink id="c7db-d5d5-7d1b-1e7e" name="The Lady of Vines" hidden="false" collective="false" import="true" targetId="3830-8fbd-8f64-2dc7" type="selectionEntry">
+      <infoLinks>
+        <infoLink id="d188-2abc-e82f-a06f" name="Verdant Blessing" hidden="false" targetId="6c8d-5483-d206-ba8e" type="profile"/>
+      </infoLinks>
+      <entryLinks>
+        <entryLink id="5497-7f30-800a-6658" name="Bonus General" hidden="false" collective="false" import="true" targetId="c608-7a89-b2b4-124d" type="selectionEntry"/>
+        <entryLink id="e6d8-f9cb-308d-2878" name="Spell Lores" hidden="false" collective="false" import="true" targetId="b3b8-66ca-b330-95fc" type="selectionEntryGroup"/>
+        <entryLink id="ebe3-05da-9c8b-6c79" name="General" hidden="false" collective="false" import="true" targetId="98a4-3d6d-a7b9-399f" type="selectionEntry">
+          <categoryLinks>
+            <categoryLink id="d550-beac-014c-c2f4" name="Named General" hidden="false" targetId="8b3d-7f03-e1f9-eaf5" primary="false"/>
+          </categoryLinks>
+        </entryLink>
+        <entryLink id="d653-8138-e2be-89a1" name="Battalion Formation" hidden="false" collective="false" import="true" targetId="bb4c-8d89-1fb3-4d92" type="selectionEntryGroup"/>
+      </entryLinks>
+    </entryLink>
+    <entryLink id="2ac6-771b-06cf-213b" name="Kurnoth Hunters with Kurnoth Greatswords" hidden="false" collective="false" import="true" targetId="3f18-7386-76e4-2126" type="selectionEntry">
+      <modifiers>
+        <modifier type="remove" field="category" value="a42d-220e-6a88-7bf6">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4373-740f-1bf3-b0aa" type="instanceOf"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="e3a6-45ca-4974-b489" type="instanceOf"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="996a-613c-4006-25e3" type="instanceOf"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="6cd6-b22e-bfcb-9589" type="instanceOf"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="b543-cb16-0c79-fbc6" type="instanceOf"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="4cf2-4ad9-f691-228e" type="equalTo"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+      <categoryLinks>
+        <categoryLink id="52ec-d448-f244-2636" name="Battleline" hidden="false" targetId="a42d-220e-6a88-7bf6" primary="false"/>
+      </categoryLinks>
+      <entryLinks>
+        <entryLink id="9876-c6d7-b9bc-b3ae" name="Battalion Formation" hidden="false" collective="false" import="true" targetId="bb4c-8d89-1fb3-4d92" type="selectionEntryGroup"/>
+      </entryLinks>
+    </entryLink>
+    <entryLink id="a9e5-256e-2a17-ecdd" name="Kurnoth Hunters with Kurnoth Scythes" hidden="false" collective="false" import="true" targetId="d96e-ff23-a0c8-84e2" type="selectionEntry">
+      <modifiers>
+        <modifier type="remove" field="category" value="a42d-220e-6a88-7bf6">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4373-740f-1bf3-b0aa" type="instanceOf"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="e3a6-45ca-4974-b489" type="instanceOf"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="996a-613c-4006-25e3" type="instanceOf"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="6cd6-b22e-bfcb-9589" type="instanceOf"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="b543-cb16-0c79-fbc6" type="instanceOf"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="4cf2-4ad9-f691-228e" type="equalTo"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+      <categoryLinks>
+        <categoryLink id="9200-5584-d08c-3144" name="Battleline" hidden="false" targetId="a42d-220e-6a88-7bf6" primary="false"/>
+      </categoryLinks>
+      <entryLinks>
+        <entryLink id="34ac-50a0-7d7f-5b4e" name="Battalion Formation" hidden="false" collective="false" import="true" targetId="bb4c-8d89-1fb3-4d92" type="selectionEntryGroup"/>
+      </entryLinks>
+    </entryLink>
   </entryLinks>
-  <sharedSelectionEntries>
-    <selectionEntry id="c3cb-f94e-92e0-6b48" name="Outcasts" publicationId="41a4-7d44-770a-c56b" hidden="false" collective="false" import="true" type="upgrade">
-      <profiles>
-        <profile id="6e65-4d15-a1c3-1581" name="Fear the Forest-kin" hidden="false" typeId="66c5-932e-004a-574c" typeName="Battalion Abilities">
-          <characteristics>
-            <characteristic name="Battalion Ability" typeId="23f7-32c0-e059-29b2">If an enemy unit fails a battleshock test within 3&quot; of any units from this battalion, add D3 to the number of models that flee.</characteristic>
-          </characteristics>
-        </profile>
-      </profiles>
-      <categoryLinks>
-        <categoryLink id="5973-5a29-2cd3-2e92" name="Warscroll Battalions" hidden="false" targetId="3706-e0e8-674f-c41b" primary="true"/>
-      </categoryLinks>
-      <selectionEntryGroups>
-        <selectionEntryGroup id="574e-2bb5-3848-29d1" name="3 units of Spite-Revenants" hidden="false" collective="false" import="true">
-          <constraints>
-            <constraint field="selections" scope="parent" value="3.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8b7b-5720-e5d3-b020" type="min"/>
-            <constraint field="selections" scope="parent" value="3.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="552c-7a25-a18e-d029" type="max"/>
-          </constraints>
-          <entryLinks>
-            <entryLink id="2f08-4c36-b207-d70c" name="Spite-Revenants" hidden="false" collective="false" import="true" targetId="a9a4-5bfd-97bc-0479" type="selectionEntry"/>
-          </entryLinks>
-        </selectionEntryGroup>
-      </selectionEntryGroups>
-      <costs>
-        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="100.0"/>
-      </costs>
-    </selectionEntry>
-    <selectionEntry id="d8fd-04cc-3bb5-6ad1" name="Forest Folk" publicationId="41a4-7d44-770a-c56b" hidden="false" collective="false" import="true" type="upgrade">
-      <profiles>
-        <profile id="aff0-c8bf-3ba1-a72c" name="Swift as the Breeze" hidden="false" typeId="66c5-932e-004a-574c" typeName="Battalion Abilities">
-          <characteristics>
-            <characteristic name="Battalion Ability" typeId="23f7-32c0-e059-29b2">Units from this battalion can retreat and still charge later in the same turn.</characteristic>
-          </characteristics>
-        </profile>
-      </profiles>
-      <categoryLinks>
-        <categoryLink id="6e14-be8d-7b35-eea9" name="Warscroll Battalions" hidden="false" targetId="3706-e0e8-674f-c41b" primary="true"/>
-      </categoryLinks>
-      <selectionEntryGroups>
-        <selectionEntryGroup id="f3c0-a26f-5600-3ff9" name="1 Branchwraith" hidden="false" collective="false" import="true">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="73a2-8437-4ccd-f7bf" type="min"/>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="a474-faac-fd9b-ed42" type="max"/>
-          </constraints>
-          <entryLinks>
-            <entryLink id="6ad5-d234-73f6-d735" name="Branchwraith" hidden="false" collective="false" import="true" targetId="054f-31c2-f0e4-cfa4" type="selectionEntry">
-              <entryLinks>
-                <entryLink id="3d60-20e0-872e-6265" name="General" hidden="false" collective="false" import="true" targetId="98a4-3d6d-a7b9-399f" type="selectionEntry"/>
-                <entryLink id="3c40-7e72-97ba-fb2f" name="Artefacts of Power" hidden="false" collective="false" import="true" targetId="9d04-898d-3277-6818" type="selectionEntryGroup"/>
-                <entryLink id="3d4a-180b-e875-4b65" name="Command Traits" hidden="false" collective="false" import="true" targetId="7c9a-1584-aaf0-bf5a" type="selectionEntryGroup"/>
-                <entryLink id="d52f-b96c-4175-87b4" name="Spell Lores" hidden="false" collective="false" import="true" targetId="b3b8-66ca-b330-95fc" type="selectionEntryGroup"/>
-              </entryLinks>
-            </entryLink>
-          </entryLinks>
-        </selectionEntryGroup>
-        <selectionEntryGroup id="221d-ae07-82d2-868d" name="3 units of Dryads" hidden="false" collective="false" import="true">
-          <constraints>
-            <constraint field="selections" scope="parent" value="3.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="2b9d-42a0-4d7c-b095" type="min"/>
-            <constraint field="selections" scope="parent" value="3.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="5de5-c05d-a624-5cee" type="max"/>
-          </constraints>
-          <entryLinks>
-            <entryLink id="1983-365d-5f07-0def" name="Dryads" hidden="false" collective="false" import="true" targetId="3692-5cec-4019-d6db" type="selectionEntry"/>
-          </entryLinks>
-        </selectionEntryGroup>
-      </selectionEntryGroups>
-      <costs>
-        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="140.0"/>
-      </costs>
-    </selectionEntry>
-    <selectionEntry id="6c51-19db-5005-0058" name="Household" publicationId="41a4-7d44-770a-c56b" hidden="false" collective="false" import="true" type="upgrade">
-      <profiles>
-        <profile id="6aa4-b7dd-fca9-afe5" name="Discipline of the Ages" hidden="false" typeId="66c5-932e-004a-574c" typeName="Battalion Abilities">
-          <characteristics>
-            <characteristic name="Battalion Ability" typeId="23f7-32c0-e059-29b2">Enemy units within 3&quot; of any units from this battalion cannot retreat.</characteristic>
-          </characteristics>
-        </profile>
-      </profiles>
-      <categoryLinks>
-        <categoryLink id="a77f-60f8-c3fb-e0ba" name="Warscroll Battalions" hidden="false" targetId="3706-e0e8-674f-c41b" primary="true"/>
-      </categoryLinks>
-      <selectionEntryGroups>
-        <selectionEntryGroup id="6aa3-5144-aa20-2f8b" name="1 unit of Tree-Revenants" hidden="false" collective="false" import="true">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="7909-98f2-5ffc-2328" type="min"/>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="fe20-54a2-c03c-06f4" type="max"/>
-          </constraints>
-          <entryLinks>
-            <entryLink id="c33a-709a-f4c1-b5d8" name="Tree-Revenants" hidden="false" collective="false" import="true" targetId="6fbc-82d9-3c7e-61e3" type="selectionEntry"/>
-          </entryLinks>
-        </selectionEntryGroup>
-        <selectionEntryGroup id="253e-7ef5-3c46-6bb2" name="1 Treelord" hidden="false" collective="false" import="true">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="c7b6-7b07-d672-4945" type="min"/>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="67df-8238-29b5-af76" type="max"/>
-          </constraints>
-          <entryLinks>
-            <entryLink id="cebe-c2e9-a776-183d" name="Treelord" hidden="false" collective="false" import="true" targetId="587b-a51c-7470-1902" type="selectionEntry"/>
-          </entryLinks>
-        </selectionEntryGroup>
-        <selectionEntryGroup id="fbc5-8ac7-02cb-6688" name="1 Branchwych" hidden="false" collective="false" import="true">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="f4ca-694d-e0e4-2970" type="min"/>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="a177-dc73-cb2a-6a13" type="max"/>
-          </constraints>
-          <entryLinks>
-            <entryLink id="2613-a327-952c-3db5" name="Branchwych" hidden="false" collective="false" import="true" targetId="fcbf-911a-5836-bf94" type="selectionEntry">
-              <entryLinks>
-                <entryLink id="0b89-c723-6b41-03b1" name="General" hidden="false" collective="false" import="true" targetId="98a4-3d6d-a7b9-399f" type="selectionEntry"/>
-                <entryLink id="70e9-b7c0-faa3-76f0" name="Artefacts of Power" hidden="false" collective="false" import="true" targetId="9d04-898d-3277-6818" type="selectionEntryGroup"/>
-                <entryLink id="b8db-c806-b5ea-c2cc" name="Command Traits" hidden="false" collective="false" import="true" targetId="7c9a-1584-aaf0-bf5a" type="selectionEntryGroup"/>
-                <entryLink id="ad7d-adb6-7a82-f195" name="Spell Lores" hidden="false" collective="false" import="true" targetId="b3b8-66ca-b330-95fc" type="selectionEntryGroup"/>
-              </entryLinks>
-            </entryLink>
-          </entryLinks>
-        </selectionEntryGroup>
-      </selectionEntryGroups>
-      <costs>
-        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="100.0"/>
-      </costs>
-    </selectionEntry>
-    <selectionEntry id="ebb2-dcb9-98a5-0c44" name="Lords of the Clan" publicationId="41a4-7d44-770a-c56b" hidden="false" collective="false" import="true" type="upgrade">
-      <profiles>
-        <profile id="0f9c-bf08-cbb1-a011" name="Deadly Chorus" hidden="false" typeId="66c5-932e-004a-574c" typeName="Battalion Abilities">
-          <characteristics>
-            <characteristic name="Battalion Ability" typeId="23f7-32c0-e059-29b2">In your shooting phase, roll a dice for each enemy unit that is within 6&quot; of 2 or more models from this battalion. On a 2+ that enemy unit suffers D3 mortal wounds.</characteristic>
-          </characteristics>
-        </profile>
-      </profiles>
-      <categoryLinks>
-        <categoryLink id="9437-b10f-60a0-1dae" name="Warscroll Battalions" hidden="false" targetId="3706-e0e8-674f-c41b" primary="true"/>
-      </categoryLinks>
-      <selectionEntryGroups>
-        <selectionEntryGroup id="0975-fea2-e388-c748" name="2-4 Treelord Ancients" hidden="false" collective="false" import="true">
-          <constraints>
-            <constraint field="selections" scope="parent" value="2.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="795d-de77-8ace-37a9" type="min"/>
-            <constraint field="selections" scope="parent" value="4.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="2890-28a2-e065-8d2d" type="max"/>
-          </constraints>
-          <entryLinks>
-            <entryLink id="c734-f402-7bd6-4fef" name="Treelord Ancient" hidden="false" collective="false" import="true" targetId="c9a3-a47a-cbaa-1314" type="selectionEntry">
-              <entryLinks>
-                <entryLink id="bbd9-0ab0-6645-4a70" name="General" hidden="false" collective="false" import="true" targetId="98a4-3d6d-a7b9-399f" type="selectionEntry"/>
-                <entryLink id="5183-5cee-bf7a-1658" name="Artefacts of Power" hidden="false" collective="false" import="true" targetId="9d04-898d-3277-6818" type="selectionEntryGroup"/>
-                <entryLink id="3a00-e6e3-bcab-a7c8" name="Command Traits" hidden="false" collective="false" import="true" targetId="7c9a-1584-aaf0-bf5a" type="selectionEntryGroup"/>
-                <entryLink id="7fb9-8abf-81a7-efee" name="Spell Lores" hidden="false" collective="false" import="true" targetId="b3b8-66ca-b330-95fc" type="selectionEntryGroup"/>
-              </entryLinks>
-            </entryLink>
-          </entryLinks>
-        </selectionEntryGroup>
-        <selectionEntryGroup id="111d-3cff-97e7-cdfb" name="1-3 Treelords" hidden="false" collective="false" import="true">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="b5a7-19c7-f049-7a36" type="min"/>
-            <constraint field="selections" scope="parent" value="3.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="b7cb-9dc5-6383-2f2e" type="max"/>
-          </constraints>
-          <entryLinks>
-            <entryLink id="b929-8532-7bfb-6338" name="Treelord" hidden="false" collective="false" import="true" targetId="587b-a51c-7470-1902" type="selectionEntry"/>
-          </entryLinks>
-        </selectionEntryGroup>
-      </selectionEntryGroups>
-      <costs>
-        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="60.0"/>
-      </costs>
-    </selectionEntry>
-    <selectionEntry id="4419-54b3-73a0-96bc" name="Free Spirits" publicationId="41a4-7d44-770a-c56b" hidden="false" collective="false" import="true" type="upgrade">
-      <profiles>
-        <profile id="4cde-2dfd-ede5-6503" name="Swift Vengeance" hidden="false" typeId="66c5-932e-004a-574c" typeName="Battalion Abilities">
-          <characteristics>
-            <characteristic name="Battalion Ability" typeId="23f7-32c0-e059-29b2">In your movement phase, if you declare a unit from this battalion will run, do not make a run roll. Instead, add 6&quot; to the Move characteristic of that unit for that phase.</characteristic>
-          </characteristics>
-        </profile>
-      </profiles>
-      <categoryLinks>
-        <categoryLink id="b908-0f72-fe7f-a296" name="Warscroll Battalions" hidden="false" targetId="3706-e0e8-674f-c41b" primary="true"/>
-      </categoryLinks>
-      <selectionEntryGroups>
-        <selectionEntryGroup id="f2c3-3052-8c91-d774" name="3 units of Kurnoth Hunters" hidden="false" collective="false" import="true">
-          <constraints>
-            <constraint field="selections" scope="parent" value="3.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8b3b-e15e-6270-8f34" type="min"/>
-            <constraint field="selections" scope="parent" value="3.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="a133-1cf9-77cc-0d8f" type="max"/>
-          </constraints>
-          <entryLinks>
-            <entryLink id="cf52-96a3-c692-e2f0" name="Kurnoth Hunters" hidden="false" collective="false" import="true" targetId="c5b3-332d-4ff8-b510" type="selectionEntry"/>
-          </entryLinks>
-        </selectionEntryGroup>
-        <selectionEntryGroup id="c042-dee3-3fa0-3fb0" name="1 Spirit of Durthu" hidden="false" collective="false" import="true">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="b13e-99a3-7d30-13fb" type="min"/>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="7a66-5818-cac9-7407" type="max"/>
-          </constraints>
-          <entryLinks>
-            <entryLink id="3ea4-682f-54a9-5b1b" name="Spirit of Durthu" hidden="false" collective="false" import="true" targetId="fb95-a697-2cdc-ef80" type="selectionEntry">
-              <entryLinks>
-                <entryLink id="98d5-a258-fb51-60a6" name="General" hidden="false" collective="false" import="true" targetId="98a4-3d6d-a7b9-399f" type="selectionEntry"/>
-                <entryLink id="3144-4b7b-e734-0b3c" name="Artefacts of Power" hidden="false" collective="false" import="true" targetId="9d04-898d-3277-6818" type="selectionEntryGroup"/>
-                <entryLink id="3fc9-7885-90c6-8841" name="Command Traits" hidden="false" collective="false" import="true" targetId="7c9a-1584-aaf0-bf5a" type="selectionEntryGroup"/>
-              </entryLinks>
-            </entryLink>
-          </entryLinks>
-        </selectionEntryGroup>
-      </selectionEntryGroups>
-      <costs>
-        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="140.0"/>
-      </costs>
-    </selectionEntry>
-    <selectionEntry id="3097-a66a-7883-7860" name="Wargrove" publicationId="41a4-7d44-770a-c56b" hidden="false" collective="false" import="true" type="upgrade">
-      <profiles>
-        <profile id="7a9e-f5da-0185-f3dc" name="Mighty Wyldwood" hidden="false" typeId="66c5-932e-004a-574c" typeName="Battalion Abilities">
-          <characteristics>
-            <characteristic name="Battalion Ability" typeId="23f7-32c0-e059-29b2">When you choose a Sylvaneth army, you can include 2 AWAKENED WYLDWOOD terrain features instead of 1 if your army includes this battalion.</characteristic>
-          </characteristics>
-        </profile>
-      </profiles>
-      <categoryLinks>
-        <categoryLink id="82a9-91cb-4f96-071e" name="Wargrove" hidden="false" targetId="5295-011e-5e2f-a786" primary="false"/>
-        <categoryLink id="8946-1c02-d2c5-5578" name="Warscroll Battalions" hidden="false" targetId="3706-e0e8-674f-c41b" primary="true"/>
-      </categoryLinks>
-      <selectionEntryGroups>
-        <selectionEntryGroup id="59e4-bf70-dc67-a2b2" name="1 Lords of the Clan battalion" hidden="false" collective="false" import="true">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="b7cc-83c7-7e4a-ecd6" type="min"/>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="6ee1-401e-ef34-3ce2" type="max"/>
-          </constraints>
-          <entryLinks>
-            <entryLink id="5f30-007f-465f-42a9" name="Lords of the Clan" hidden="false" collective="false" import="true" targetId="ebb2-dcb9-98a5-0c44" type="selectionEntry"/>
-          </entryLinks>
-        </selectionEntryGroup>
-        <selectionEntryGroup id="71eb-4c81-ab91-002b" name="1 Free Spirits battalion" hidden="false" collective="false" import="true">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="384b-5c1f-0f23-0cbf" type="min"/>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="036d-3c70-9100-d7b9" type="max"/>
-          </constraints>
-          <entryLinks>
-            <entryLink id="b70e-7cc2-e138-d0f5" name="Free Spirits" hidden="false" collective="false" import="true" targetId="4419-54b3-73a0-96bc" type="selectionEntry"/>
-          </entryLinks>
-        </selectionEntryGroup>
-        <selectionEntryGroup id="aa59-716e-623c-c5a9" name="3 Forest Folk battalions" hidden="false" collective="false" import="true">
-          <constraints>
-            <constraint field="selections" scope="parent" value="3.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="fcca-1da8-6a05-0ac3" type="min"/>
-            <constraint field="selections" scope="parent" value="3.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="76d3-b076-543f-e4c6" type="max"/>
-          </constraints>
-          <entryLinks>
-            <entryLink id="60a9-21a7-4e2c-998a" name="Forest Folk" hidden="false" collective="false" import="true" targetId="d8fd-04cc-3bb5-6ad1" type="selectionEntry"/>
-          </entryLinks>
-        </selectionEntryGroup>
-        <selectionEntryGroup id="fe02-f45e-a496-1078" name="1 Outcasts battalion" hidden="false" collective="false" import="true">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="6a88-42fc-b25c-89cd" type="min"/>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="371b-17ce-412d-1f2f" type="max"/>
-          </constraints>
-          <entryLinks>
-            <entryLink id="e45a-d5de-7356-7f39" name="Outcasts" hidden="false" collective="false" import="true" targetId="c3cb-f94e-92e0-6b48" type="selectionEntry"/>
-          </entryLinks>
-        </selectionEntryGroup>
-        <selectionEntryGroup id="72e2-b75b-71cf-7fb4" name="3 Household battalions" hidden="false" collective="false" import="true">
-          <constraints>
-            <constraint field="selections" scope="parent" value="3.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="e63d-a972-d610-eff8" type="min"/>
-            <constraint field="selections" scope="parent" value="3.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="c7cd-e328-0c0d-1b9e" type="max"/>
-          </constraints>
-          <entryLinks>
-            <entryLink id="6233-01f1-45ce-d73d" name="Household" hidden="false" collective="false" import="true" targetId="6c51-19db-5005-0058" type="selectionEntry"/>
-          </entryLinks>
-        </selectionEntryGroup>
-      </selectionEntryGroups>
-      <costs>
-        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="80.0"/>
-      </costs>
-    </selectionEntry>
-    <selectionEntry id="3003-99e8-003e-d5b6" name="Drycha&apos;s Spitegrove" hidden="false" collective="false" import="true" type="upgrade">
-      <constraints>
-        <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="4356-5d9a-6147-0203" type="max"/>
-      </constraints>
-      <profiles>
-        <profile id="083b-6ba1-99cf-6e57" name="The Spitegrove" hidden="false" typeId="66c5-932e-004a-574c" typeName="Battalion Abilities">
-          <characteristics>
-            <characteristic name="Battalion Ability" typeId="23f7-32c0-e059-29b2">The Cruel Talons and Fangs used by units in this battalion have a Rend characteristic of -1 instead of ‘-’.</characteristic>
-          </characteristics>
-        </profile>
-      </profiles>
-      <categoryLinks>
-        <categoryLink id="ce06-a6ee-54b9-e696" name="New CategoryLink" hidden="false" targetId="3706-e0e8-674f-c41b" primary="true"/>
-      </categoryLinks>
-      <selectionEntryGroups>
-        <selectionEntryGroup id="8ebb-12a3-fb71-030f" name="Drycha Hamadreth" hidden="false" collective="false" import="true">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8eaa-e954-7163-6faa" type="max"/>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d198-f2f6-caed-7224" type="min"/>
-          </constraints>
-          <entryLinks>
-            <entryLink id="5a22-cc4c-cf3c-2a36" name="Drycha Hamadreth" hidden="false" collective="false" import="true" targetId="da0e-1bb4-10ec-bd79" type="selectionEntry">
-              <infoLinks>
-                <infoLink id="d056-d4aa-6f1a-babc" name="Verdant Blessing" hidden="false" targetId="6c8d-5483-d206-ba8e" type="profile"/>
-              </infoLinks>
-              <entryLinks>
-                <entryLink id="9de4-2e76-b259-589d" name="General" hidden="false" collective="false" import="true" targetId="98a4-3d6d-a7b9-399f" type="selectionEntry">
-                  <categoryLinks>
-                    <categoryLink id="97dc-bf5b-458f-00a5" name="Named General" hidden="false" targetId="8b3d-7f03-e1f9-eaf5" primary="false"/>
-                  </categoryLinks>
-                </entryLink>
-                <entryLink id="6dcb-d665-b9a4-1b7e" name="Spell Lores" hidden="false" collective="false" import="true" targetId="b3b8-66ca-b330-95fc" type="selectionEntryGroup"/>
-              </entryLinks>
-            </entryLink>
-          </entryLinks>
-        </selectionEntryGroup>
-        <selectionEntryGroup id="3d1c-976e-b1ee-f405" name="2 Spite Revenants units" hidden="false" collective="false" import="true">
-          <constraints>
-            <constraint field="selections" scope="parent" value="2.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="fa53-663c-84ce-f174" type="max"/>
-            <constraint field="selections" scope="parent" value="2.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="355c-9025-b4e4-1dfe" type="min"/>
-          </constraints>
-          <entryLinks>
-            <entryLink id="9d61-0a03-db9a-f753" name="Spite-Revenants" hidden="false" collective="false" import="true" targetId="a9a4-5bfd-97bc-0479" type="selectionEntry"/>
-          </entryLinks>
-        </selectionEntryGroup>
-      </selectionEntryGroups>
-      <costs>
-        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="120.0"/>
-      </costs>
-    </selectionEntry>
-  </sharedSelectionEntries>
   <sharedSelectionEntryGroups>
     <selectionEntryGroup id="7c9a-1584-aaf0-bf5a" name="Command Traits" hidden="false" collective="false" import="true">
       <modifiers>
@@ -857,269 +818,17 @@ This faction terrain feature consists of 1-3 scenery pieces. If an Awakened Wyld
       <constraints>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="be45-0bf1-4c7b-a9ad" type="max"/>
       </constraints>
-      <selectionEntries>
-        <selectionEntry id="849e-6196-023c-645c" name="0. Legacy of Valour" hidden="false" collective="false" import="true" type="upgrade">
-          <modifiers>
-            <modifier type="set" field="22e3-3282-02ec-ec96" value="1.0">
-              <conditionGroups>
-                <conditionGroup type="and">
-                  <conditions>
-                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="c661-44d6-0f5b-11ff" type="greaterThan"/>
-                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="4cf2-4ad9-f691-228e" type="greaterThan"/>
-                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="8b3d-7f03-e1f9-eaf5" type="equalTo"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
-            </modifier>
-            <modifier type="set" field="hidden" value="true">
-              <conditions>
-                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="4cf2-4ad9-f691-228e" type="equalTo"/>
-              </conditions>
-            </modifier>
-          </modifiers>
-          <constraints>
-            <constraint field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="22e3-3282-02ec-ec96" type="min"/>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="e994-f9bf-d5e0-22fa" type="max"/>
-          </constraints>
-          <profiles>
-            <profile id="776d-bfbf-2c0d-bf09" name="Legacy of Valour" hidden="false" typeId="1504-23bf-8850-4f65" typeName="Command Traits">
-              <characteristics>
-                <characteristic name="Command Trait" typeId="0145-9acf-f5dc-d543">If this general is slain, you can pick 1 enemy unit within 1&quot; of this general before they are removed from play and roll a dice. On a 2-5 that unit suffers D3 mortal wounds. On a 6, that unit suffers D6 mortal wounds.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <costs>
-            <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="bf5f-0ced-2637-5c59" name="0. Mere Rainfall" hidden="false" collective="false" import="true" type="upgrade">
-          <modifiers>
-            <modifier type="set" field="5741-019e-fbdd-b183" value="1.0">
-              <conditionGroups>
-                <conditionGroup type="and">
-                  <conditions>
-                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="c661-44d6-0f5b-11ff" type="greaterThan"/>
-                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e98e-fbcc-d3e5-cd3e" type="greaterThan"/>
-                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="8b3d-7f03-e1f9-eaf5" type="equalTo"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
-            </modifier>
-            <modifier type="set" field="hidden" value="true">
-              <conditions>
-                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e98e-fbcc-d3e5-cd3e" type="equalTo"/>
-              </conditions>
-            </modifier>
-          </modifiers>
-          <constraints>
-            <constraint field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="5741-019e-fbdd-b183" type="min"/>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="a51d-3147-99aa-bb00" type="max"/>
-          </constraints>
-          <profiles>
-            <profile id="e4e8-0ca0-5987-5711" name="Mere Rainfall" hidden="false" typeId="1504-23bf-8850-4f65" typeName="Command Traits">
-              <characteristics>
-                <characteristic name="Command Trait" typeId="0145-9acf-f5dc-d543">You can re-roll save rolls for attacks made with missile weapons that target this general.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <costs>
-            <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="c12f-83db-bfa0-4248" name="0. My Heart Is Ice" hidden="false" collective="false" import="true" type="upgrade">
-          <modifiers>
-            <modifier type="set" field="82e7-4c02-833f-5c91" value="1.0">
-              <conditionGroups>
-                <conditionGroup type="and">
-                  <conditions>
-                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="c661-44d6-0f5b-11ff" type="greaterThan"/>
-                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="81bc-207f-a5ad-71ee" type="greaterThan"/>
-                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="8b3d-7f03-e1f9-eaf5" type="equalTo"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
-            </modifier>
-            <modifier type="set" field="hidden" value="true">
-              <conditions>
-                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="81bc-207f-a5ad-71ee" type="equalTo"/>
-              </conditions>
-            </modifier>
-          </modifiers>
-          <constraints>
-            <constraint field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="82e7-4c02-833f-5c91" type="min"/>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="b023-f3db-8b83-aac7" type="max"/>
-          </constraints>
-          <profiles>
-            <profile id="4ddb-6feb-3f64-6f6d" name="My Heart Is Ice" hidden="false" typeId="1504-23bf-8850-4f65" typeName="Command Traits">
-              <characteristics>
-                <characteristic name="Command Trait" typeId="0145-9acf-f5dc-d543">Roll a dice each time a wound inflicted by a melee weapon is allocated to this general and not negated. On a 5+ the attacking unit suffers 1 mortal wound.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <costs>
-            <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="67f5-9788-9fd7-342d" name="0. Nurtured by Magic" hidden="false" collective="false" import="true" type="upgrade">
-          <modifiers>
-            <modifier type="set" field="1d06-b1d0-061e-28f3" value="1.0">
-              <conditionGroups>
-                <conditionGroup type="and">
-                  <conditions>
-                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="c661-44d6-0f5b-11ff" type="greaterThan"/>
-                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="5415-c161-b206-9101" type="greaterThan"/>
-                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="8b3d-7f03-e1f9-eaf5" type="equalTo"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
-            </modifier>
-            <modifier type="set" field="hidden" value="true">
-              <conditions>
-                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="5415-c161-b206-9101" type="equalTo"/>
-              </conditions>
-            </modifier>
-          </modifiers>
-          <constraints>
-            <constraint field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="1d06-b1d0-061e-28f3" type="min"/>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="4b76-61ff-0a25-6f27" type="max"/>
-          </constraints>
-          <profiles>
-            <profile id="044e-584e-ae78-7dae" name="Nurtured by Magic" hidden="false" typeId="1504-23bf-8850-4f65" typeName="Command Traits">
-              <characteristics>
-                <characteristic name="Command Trait" typeId="0145-9acf-f5dc-d543">Once in each of your hero phases, if this general successfully casts a spell that is not unbound, pick 1 friendly GNARLROOT unit wholly within 18&quot; of this general. You can heal up to D3 wounds allocated to that unit.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <costs>
-            <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="bb1d-2e48-a219-0f42" name="0. Paragon of Terror" hidden="false" collective="false" import="true" type="upgrade">
-          <modifiers>
-            <modifier type="set" field="hidden" value="true">
-              <conditions>
-                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="8492-c46a-524e-7173" type="equalTo"/>
-              </conditions>
-            </modifier>
-            <modifier type="set" field="6317-bcf0-d408-f1bf" value="1.0">
-              <conditionGroups>
-                <conditionGroup type="and">
-                  <conditions>
-                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="c661-44d6-0f5b-11ff" type="greaterThan"/>
-                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="8492-c46a-524e-7173" type="greaterThan"/>
-                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="8b3d-7f03-e1f9-eaf5" type="equalTo"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
-            </modifier>
-          </modifiers>
-          <constraints>
-            <constraint field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="6317-bcf0-d408-f1bf" type="min"/>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="f929-e87f-90cf-85b9" type="max"/>
-          </constraints>
-          <profiles>
-            <profile id="01a8-923d-5a87-97f3" name="Paragon of Terror" hidden="false" typeId="1504-23bf-8850-4f65" typeName="Command Traits">
-              <characteristics>
-                <characteristic name="Command Trait" typeId="0145-9acf-f5dc-d543">Re-roll successful battleshock tests for enemy units while they are within 6&quot; of this general.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <costs>
-            <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="eeda-f4b6-5eb8-b40f" name="0. Regal Old-growth" hidden="false" collective="false" import="true" type="upgrade">
-          <modifiers>
-            <modifier type="set" field="14aa-9c89-5ac4-9d4e" value="1.0">
-              <conditionGroups>
-                <conditionGroup type="and">
-                  <conditions>
-                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="c661-44d6-0f5b-11ff" type="greaterThan"/>
-                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="3b2a-2840-2aea-5149" type="greaterThan"/>
-                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="8b3d-7f03-e1f9-eaf5" type="equalTo"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
-            </modifier>
-            <modifier type="set" field="hidden" value="true">
-              <conditions>
-                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="3b2a-2840-2aea-5149" type="equalTo"/>
-              </conditions>
-            </modifier>
-          </modifiers>
-          <constraints>
-            <constraint field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="14aa-9c89-5ac4-9d4e" type="min"/>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="a70f-b6ab-e729-6056" type="max"/>
-          </constraints>
-          <profiles>
-            <profile id="eb01-1d24-cb63-5fb3" name="Regal Old-growth" hidden="false" typeId="1504-23bf-8850-4f65" typeName="Command Traits">
-              <characteristics>
-                <characteristic name="Command Trait" typeId="0145-9acf-f5dc-d543">Add 1 to the Wounds characteristic of this general.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <costs>
-            <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="0853-135d-ff47-c71a" name="0. Seek New Fruit" hidden="false" collective="false" import="true" type="upgrade">
-          <modifiers>
-            <modifier type="set" field="4944-967c-0d37-447f" value="1.0">
-              <conditionGroups>
-                <conditionGroup type="and">
-                  <conditions>
-                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="c661-44d6-0f5b-11ff" type="greaterThan"/>
-                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="7b73-418e-0b4e-c3ed" type="greaterThan"/>
-                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="8b3d-7f03-e1f9-eaf5" type="equalTo"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
-            </modifier>
-            <modifier type="set" field="hidden" value="true">
-              <conditions>
-                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="7b73-418e-0b4e-c3ed" type="equalTo"/>
-              </conditions>
-            </modifier>
-          </modifiers>
-          <constraints>
-            <constraint field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="4944-967c-0d37-447f" type="min"/>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="e3e8-e393-3dbb-ed00" type="max"/>
-          </constraints>
-          <profiles>
-            <profile id="0b96-aee1-c362-ada5" name="Seek New Fruit" hidden="false" typeId="1504-23bf-8850-4f65" typeName="Command Traits">
-              <characteristics>
-                <characteristic name="Command Trait" typeId="0145-9acf-f5dc-d543">Each time this general attacks with its melee weapons, it can make a 6&quot; move after all of its attacks have been resolved. If it does so, it must finish the move more than 3&quot; from enemy units.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <costs>
-            <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
-          </costs>
-        </selectionEntry>
-      </selectionEntries>
       <selectionEntryGroups>
         <selectionEntryGroup id="177a-9a31-150e-c790" name="Aspects of War" hidden="false" collective="false" import="true">
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="7ef6-7f20-6ac0-fd95" type="max"/>
           </constraints>
           <selectionEntries>
-            <selectionEntry id="da4a-fb3c-c94b-9b66" name="6. Wisdom of the Ancients" hidden="false" collective="false" import="true" type="upgrade">
-              <profiles>
-                <profile id="f7ff-fb68-7bd1-1244" name="Wisdom of the Ancients" hidden="false" typeId="1504-23bf-8850-4f65" typeName="Command Traits">
-                  <characteristics>
-                    <characteristic name="Command Trait" typeId="0145-9acf-f5dc-d543">Add 1 to the Bravery characteristic of friendly SYLVANETH units while they are wholly within 12&quot; of this general.</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-              <costs>
-                <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
-              </costs>
-            </selectionEntry>
-            <selectionEntry id="dad5-5c0c-af26-f445" name="5. Warsinger" hidden="false" collective="false" import="true" type="upgrade">
+            <selectionEntry id="dad5-5c0c-af26-f445" name="3. Warsinger" hidden="false" collective="false" import="true" type="upgrade">
               <profiles>
                 <profile id="9572-d5e3-dbe2-1481" name="Warsinger" hidden="false" typeId="1504-23bf-8850-4f65" typeName="Command Traits">
                   <characteristics>
-                    <characteristic name="Command Trait" typeId="0145-9acf-f5dc-d543">Add 2 to charge rolls for friendly SYLVANETH units wholly within 12&quot; of this general.</characteristic>
+                    <characteristic name="Command Trait" typeId="0145-9acf-f5dc-d543">If this general is on the battlefield at the start of your movement phase, add 3&quot; to the Move characteristic of friendly SYLVANETH units that start a move wholly within 12&quot; of this general until the end of that phase.</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
@@ -1127,11 +836,11 @@ This faction terrain feature consists of 1-3 scenery pieces. If an Awakened Wyld
                 <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
               </costs>
             </selectionEntry>
-            <selectionEntry id="48d4-d567-7cc1-b1a3" name="4. Lord of Spites" hidden="false" collective="false" import="true" type="upgrade">
+            <selectionEntry id="48d4-d567-7cc1-b1a3" name="2. Lord of Spites" hidden="false" collective="false" import="true" type="upgrade">
               <profiles>
                 <profile id="8317-1799-c79c-3ca7" name="Lord of Spites" hidden="false" typeId="1504-23bf-8850-4f65" typeName="Command Traits">
                   <characteristics>
-                    <characteristic name="Command Trait" typeId="0145-9acf-f5dc-d543">You can re-roll wound rolls of 1 for attacks made by this general.</characteristic>
+                    <characteristic name="Command Trait" typeId="0145-9acf-f5dc-d543">In the combat phase, subtract 1 from the Attacks characteristic of melee weapons used by enemy units (to a minimum of 1) that finish a pile-in move within 3&quot; of this general until the end of that phase.</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
@@ -1139,35 +848,11 @@ This faction terrain feature consists of 1-3 scenery pieces. If an Awakened Wyld
                 <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
               </costs>
             </selectionEntry>
-            <selectionEntry id="f0c8-083a-282d-7cbd" name="3. Gift of Ghyran" hidden="false" collective="false" import="true" type="upgrade">
-              <profiles>
-                <profile id="3dee-c4bf-27e0-2113" name="Gift of Ghyran" hidden="false" typeId="1504-23bf-8850-4f65" typeName="Command Traits">
-                  <characteristics>
-                    <characteristic name="Command Trait" typeId="0145-9acf-f5dc-d543">In your hero phase, you can heal 1 wound allocated to this general.</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-              <costs>
-                <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
-              </costs>
-            </selectionEntry>
-            <selectionEntry id="cd27-df14-30de-1237" name="2. Gnarled Warrior" hidden="false" collective="false" import="true" type="upgrade">
+            <selectionEntry id="cd27-df14-30de-1237" name="1. Gnarled Warrior" hidden="false" collective="false" import="true" type="upgrade">
               <profiles>
                 <profile id="b92f-e990-12c7-c0c8" name="Gnarled Warrior" hidden="false" typeId="1504-23bf-8850-4f65" typeName="Command Traits">
                   <characteristics>
-                    <characteristic name="Command Trait" typeId="0145-9acf-f5dc-d543">You can re-roll save rolls of 1 for attacks that target this general.</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-              <costs>
-                <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
-              </costs>
-            </selectionEntry>
-            <selectionEntry id="c97e-cfaa-28c2-bccb" name="1. Dread Harvester" hidden="false" collective="false" import="true" type="upgrade">
-              <profiles>
-                <profile id="e415-6e29-cb8c-bc16" name="Dread Harvester" hidden="false" typeId="1504-23bf-8850-4f65" typeName="Command Traits">
-                  <characteristics>
-                    <characteristic name="Command Trait" typeId="0145-9acf-f5dc-d543">You can re-roll hit rolls for attacks made with melee weapons by this general if this general made a charge move in the same turn.</characteristic>
+                    <characteristic name="Command Trait" typeId="0145-9acf-f5dc-d543">Ignore modifiers (positive and negative) to save rolls for attacks that target this general.</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
@@ -1189,11 +874,11 @@ This faction terrain feature consists of 1-3 scenery pieces. If an Awakened Wyld
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="bd1f-9f4e-516d-83cd" type="max"/>
           </constraints>
           <selectionEntries>
-            <selectionEntry id="c1f5-56e8-31f4-8d7c" name="6. Radiant Spirit" hidden="false" collective="false" import="true" type="upgrade">
+            <selectionEntry id="c1f5-56e8-31f4-8d7c" name="3. Radiant Spirit" hidden="false" collective="false" import="true" type="upgrade">
               <profiles>
                 <profile id="6c21-a883-24cc-44ff" name="Radiant Spirit" hidden="false" typeId="1504-23bf-8850-4f65" typeName="Command Traits">
                   <characteristics>
-                    <characteristic name="Command Trait" typeId="0145-9acf-f5dc-d543">Each time this general is affected by a spell or endless spell, you can roll a dice. If you do so, on a 4+ ignore the effects of that spell or endless spell on this general.</characteristic>
+                    <characteristic name="Command Trait" typeId="0145-9acf-f5dc-d543">Each time a friendly SYLVANETH unit wholly within 12&quot; of this general is affected by a spell or the abilities of an endless spell, you can roll a dice. On a 4+, ignore the effect of that spell or the effects of that endless spell’s abilities on that unit.</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
@@ -1201,11 +886,11 @@ This faction terrain feature consists of 1-3 scenery pieces. If an Awakened Wyld
                 <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
               </costs>
             </selectionEntry>
-            <selectionEntry id="e89c-6443-98ed-961e" name="5. Spellsinger" hidden="false" collective="false" import="true" type="upgrade">
+            <selectionEntry id="e89c-6443-98ed-961e" name="2. Spellsinger" hidden="false" collective="false" import="true" type="upgrade">
               <profiles>
                 <profile id="17b9-4873-226a-de00" name="Spellsinger" hidden="false" typeId="1504-23bf-8850-4f65" typeName="Command Traits">
                   <characteristics>
-                    <characteristic name="Command Trait" typeId="0145-9acf-f5dc-d543">Add 6&quot; to the range of each spell this general successfully casts.</characteristic>
+                    <characteristic name="Command Trait" typeId="0145-9acf-f5dc-d543">When this general attempts to cast a spell, before making the casting roll, you can pick 1 friendly Awakened Wyldwood on the battlefield. If you do so and the spell is successfully cast and not unbound, the range, visibility and effect of that spell can be measured from 1 scenery piece that is a part of that friendly Awakened Wyldwood. Spells that summon endless spells do not benefit from this effect.</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
@@ -1213,53 +898,14 @@ This faction terrain feature consists of 1-3 scenery pieces. If an Awakened Wyld
                 <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
               </costs>
             </selectionEntry>
-            <selectionEntry id="7683-7591-8d53-58a0" name="4. Glade Lore" hidden="false" collective="false" import="true" type="upgrade">
+            <selectionEntry id="aaa9-6694-782b-6cdc" name="1. Nurtured by Magic" hidden="false" collective="false" import="true" type="upgrade">
               <profiles>
-                <profile id="3ca1-fc58-772b-6435" name="Glade Lore" hidden="false" typeId="1504-23bf-8850-4f65" typeName="Command Traits">
+                <profile id="dfed-404a-e8a2-a6d8" name="Nurtured by Magic" hidden="false" typeId="1504-23bf-8850-4f65" typeName="Command Traits">
                   <characteristics>
-                    <characteristic name="Command Trait" typeId="0145-9acf-f5dc-d543">Add 1 to casting rolls for this general while it is wholly within 6&quot; of any AWAKENED WYLDWOODS.</characteristic>
+                    <characteristic name="Command Trait" typeId="0145-9acf-f5dc-d543">Once per turn, in your hero phase, if this general successfully casts a spell that is not unbound, you can pick 1 friendly SYLVANETH unit wholly within 18&quot; of this general. If you do so, heal up to D3 wounds allocated to that unit.</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
-              <costs>
-                <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
-              </costs>
-            </selectionEntry>
-            <selectionEntry id="d621-4722-2cd4-4be8" name="3. Voice of Warding" hidden="false" collective="false" import="true" type="upgrade">
-              <profiles>
-                <profile id="4443-5172-be8d-75ed" name="Voice of Warding" hidden="false" typeId="1504-23bf-8850-4f65" typeName="Command Traits">
-                  <characteristics>
-                    <characteristic name="Command Trait" typeId="0145-9acf-f5dc-d543">This general can attempt to unbind 1 extra spell in the enemy hero phase.</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-              <costs>
-                <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
-              </costs>
-            </selectionEntry>
-            <selectionEntry id="c3c1-4e3f-3c7c-a80b" name="2. Mystic Regrowth" hidden="false" collective="false" import="true" type="upgrade">
-              <profiles>
-                <profile id="f4e1-b471-9f4f-a7dd" name="Mystic Regrowth" hidden="false" typeId="1504-23bf-8850-4f65" typeName="Command Traits">
-                  <characteristics>
-                    <characteristic name="Command Trait" typeId="0145-9acf-f5dc-d543">At the end of your hero phase, if this general successfully cast any spells in that phase that were not unbound, you can heal D3 wounds allocated to this general.</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-              <costs>
-                <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
-              </costs>
-            </selectionEntry>
-            <selectionEntry id="a790-6ac3-cb0b-8d59" name="1. Arcane Bounty" hidden="false" collective="false" import="true" type="upgrade">
-              <profiles>
-                <profile id="fe86-8d6e-69a4-6507" name="Arcane Bounty" hidden="false" typeId="1504-23bf-8850-4f65" typeName="Command Traits">
-                  <characteristics>
-                    <characteristic name="Command Trait" typeId="0145-9acf-f5dc-d543">This general knows 1 extra spell from the Lore of the Deepwood.</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-              <categoryLinks>
-                <categoryLink id="c103-26f2-dc5a-f019" name="SpellPlusRenewal" hidden="false" targetId="14fd-cb1c-4eae-8a51" primary="false"/>
-              </categoryLinks>
               <costs>
                 <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
               </costs>
@@ -1293,344 +939,7 @@ This faction terrain feature consists of 1-3 scenery pieces. If an Awakened Wyld
       <categoryLinks>
         <categoryLink id="b994-52cd-7236-b461" name="Artefacts" hidden="false" targetId="ba14-5553-456e-33ad" primary="false"/>
       </categoryLinks>
-      <selectionEntries>
-        <selectionEntry id="9000-8794-f907-e1f9" name="0 -- Chalice of Nectar" hidden="false" collective="false" import="true" type="upgrade">
-          <modifiers>
-            <modifier type="set" field="hidden" value="true">
-              <conditions>
-                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="5415-c161-b206-9101" type="equalTo"/>
-              </conditions>
-            </modifier>
-            <modifier type="set" field="cbde-92fa-ef99-3ab1" value="1.0">
-              <conditionGroups>
-                <conditionGroup type="and">
-                  <conditions>
-                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="5415-c161-b206-9101" type="greaterThan"/>
-                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="ba14-5553-456e-33ad" type="greaterThan"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
-            </modifier>
-          </modifiers>
-          <constraints>
-            <constraint field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="cbde-92fa-ef99-3ab1" type="min"/>
-            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="e019-8c7d-d8f0-76e6" type="max"/>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="ee8a-b9f6-8ded-e649" type="max"/>
-          </constraints>
-          <profiles>
-            <profile id="e3ca-e52b-7d39-789e" name="Chalice of Nectar" hidden="false" typeId="0c9d-7abe-a53c-6a37" typeName="Artefacts">
-              <characteristics>
-                <characteristic name="Artefact" typeId="44b6-de26-0b54-1318">When making a casting or unbinding roll for the bearer, roll 3D6, remove 1 dice of your choice, and then use the remaining 2D6 to determine that casting or unbinding roll.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <costs>
-            <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="a81c-0398-ef9c-38da" name="0 -- Dawnflask" hidden="false" collective="false" import="true" type="upgrade">
-          <modifiers>
-            <modifier type="set" field="hidden" value="true">
-              <conditions>
-                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="3b2a-2840-2aea-5149" type="equalTo"/>
-              </conditions>
-            </modifier>
-            <modifier type="set" field="21f1-6af0-829b-1851" value="1.0">
-              <conditionGroups>
-                <conditionGroup type="and">
-                  <conditions>
-                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="3b2a-2840-2aea-5149" type="greaterThan"/>
-                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="ba14-5553-456e-33ad" type="greaterThan"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
-            </modifier>
-          </modifiers>
-          <constraints>
-            <constraint field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="21f1-6af0-829b-1851" type="min"/>
-            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="1317-7167-8545-1065" type="max"/>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="947e-d837-4a7d-a413" type="max"/>
-          </constraints>
-          <profiles>
-            <profile id="bb36-b7f0-a610-8149" name="Dawnflask" hidden="false" typeId="0c9d-7abe-a53c-6a37" typeName="Artefacts">
-              <characteristics>
-                <characteristic name="Artefact" typeId="44b6-de26-0b54-1318">Roll a dice each time you allocate a wound or mortal wound to the bearer. On a 6+ that wound or mortal wound is negated.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <costs>
-            <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="9278-cbe9-14e1-a4b8" name="0 -- Frozen Kernal" hidden="false" collective="false" import="true" type="upgrade">
-          <modifiers>
-            <modifier type="set" field="hidden" value="true">
-              <conditions>
-                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="81bc-207f-a5ad-71ee" type="equalTo"/>
-              </conditions>
-            </modifier>
-            <modifier type="set" field="9c84-4e66-fb91-d75c" value="1.0">
-              <conditionGroups>
-                <conditionGroup type="and">
-                  <conditions>
-                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="81bc-207f-a5ad-71ee" type="greaterThan"/>
-                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="ba14-5553-456e-33ad" type="greaterThan"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
-            </modifier>
-          </modifiers>
-          <constraints>
-            <constraint field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="9c84-4e66-fb91-d75c" type="min"/>
-            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="9af1-ac6a-3e19-8f69" type="max"/>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="dd05-d628-dcde-d815" type="max"/>
-          </constraints>
-          <profiles>
-            <profile id="787b-a39d-b8f4-f44c" name="Frozen Kernal" hidden="false" typeId="0c9d-7abe-a53c-6a37" typeName="Artefacts">
-              <characteristics>
-                <characteristic name="Artefact" typeId="44b6-de26-0b54-1318">Once per battle, at the start of the combat phase, you can pick 1 friendly WINTERLEAF unit wholly within 18&quot; of the bearer. After that unit has fought in that phase for the first time, if it is within 3&quot; of an enemy unit, it can make a pile-in move and then attack with all of the melee weapons it is armed with for a second time.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <costs>
-            <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="72b6-4882-2866-42c4" name="0 -- Horn of the Consort" hidden="false" collective="false" import="true" type="upgrade">
-          <modifiers>
-            <modifier type="set" field="hidden" value="true">
-              <conditions>
-                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="4cf2-4ad9-f691-228e" type="equalTo"/>
-              </conditions>
-            </modifier>
-            <modifier type="set" field="6471-11ac-3d45-0166" value="1.0">
-              <conditionGroups>
-                <conditionGroup type="and">
-                  <conditions>
-                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="4cf2-4ad9-f691-228e" type="greaterThan"/>
-                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="ba14-5553-456e-33ad" type="greaterThan"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
-            </modifier>
-          </modifiers>
-          <constraints>
-            <constraint field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="6471-11ac-3d45-0166" type="min"/>
-            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="c86a-1fa1-0f33-2d58" type="max"/>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="0a53-6461-7347-a567" type="max"/>
-          </constraints>
-          <profiles>
-            <profile id="97cd-e70c-77dd-0408" name="Horn of the Consort" hidden="false" typeId="0c9d-7abe-a53c-6a37" typeName="Artefacts">
-              <characteristics>
-                <characteristic name="Artefact" typeId="44b6-de26-0b54-1318">You can re-roll hit rolls for attacks made by friendly HEARTWOOD KURNOTH HUNTERS wholly within 12&quot; of the bearer.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <costs>
-            <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="9b50-e2a8-0231-9791" name="0 -- Ironbark Talisman" hidden="false" collective="false" import="true" type="upgrade">
-          <modifiers>
-            <modifier type="set" field="hidden" value="true">
-              <conditions>
-                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e98e-fbcc-d3e5-cd3e" type="equalTo"/>
-              </conditions>
-            </modifier>
-            <modifier type="set" field="85ef-a095-02ed-85fe" value="1.0">
-              <conditionGroups>
-                <conditionGroup type="and">
-                  <conditions>
-                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e98e-fbcc-d3e5-cd3e" type="greaterThan"/>
-                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="ba14-5553-456e-33ad" type="greaterThan"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
-            </modifier>
-          </modifiers>
-          <constraints>
-            <constraint field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="85ef-a095-02ed-85fe" type="min"/>
-            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="b6a9-7b72-6046-b28a" type="max"/>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="6d8c-5420-bce7-647a" type="max"/>
-          </constraints>
-          <profiles>
-            <profile id="981f-7ef2-349e-e107" name="Ironbark Talisman" hidden="false" typeId="0c9d-7abe-a53c-6a37" typeName="Artefacts">
-              <characteristics>
-                <characteristic name="Artefact" typeId="44b6-de26-0b54-1318">Add 1 to wound rolls for attacks made with melee weapons by the bearer.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <costs>
-            <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="a344-4257-36c2-5183" name="0 -- Jewel of Withering" hidden="false" collective="false" import="true" type="upgrade">
-          <modifiers>
-            <modifier type="set" field="hidden" value="true">
-              <conditions>
-                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="8492-c46a-524e-7173" type="equalTo"/>
-              </conditions>
-            </modifier>
-            <modifier type="set" field="423d-14a8-00f6-9af6" value="1.0">
-              <conditionGroups>
-                <conditionGroup type="and">
-                  <conditions>
-                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="8492-c46a-524e-7173" type="greaterThan"/>
-                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="ba14-5553-456e-33ad" type="greaterThan"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
-            </modifier>
-          </modifiers>
-          <constraints>
-            <constraint field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="423d-14a8-00f6-9af6" type="min"/>
-            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="7baf-5ffe-79c7-d183" type="max"/>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="3ea3-71ff-b357-5dd8" type="max"/>
-          </constraints>
-          <profiles>
-            <profile id="0a34-1e2e-c626-ae3e" name="Jewel of Withering" hidden="false" typeId="0c9d-7abe-a53c-6a37" typeName="Artefacts">
-              <characteristics>
-                <characteristic name="Artefact" typeId="44b6-de26-0b54-1318">Subtract 1 from wound rolls for attacks made with melee weapons that target the bearer.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <costs>
-            <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="8094-1205-fe05-c525" name="0 -- The Silent Sickle" hidden="false" collective="false" import="true" type="upgrade">
-          <modifiers>
-            <modifier type="set" field="hidden" value="true">
-              <conditions>
-                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="7b73-418e-0b4e-c3ed" type="equalTo"/>
-              </conditions>
-            </modifier>
-            <modifier type="set" field="5f5b-f1cb-03f8-90de" value="1.0">
-              <conditionGroups>
-                <conditionGroup type="and">
-                  <conditions>
-                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="7b73-418e-0b4e-c3ed" type="greaterThan"/>
-                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="ba14-5553-456e-33ad" type="greaterThan"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
-            </modifier>
-          </modifiers>
-          <constraints>
-            <constraint field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="5f5b-f1cb-03f8-90de" type="min"/>
-            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="a422-0966-373f-149c" type="max"/>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="381f-6cec-ed1b-fbba" type="max"/>
-          </constraints>
-          <profiles>
-            <profile id="cc4c-191c-8e71-49f8" name="The Silent Sickle" hidden="false" typeId="0c9d-7abe-a53c-6a37" typeName="Artefacts">
-              <characteristics>
-                <characteristic name="Artefact" typeId="44b6-de26-0b54-1318">Pick 1 of the bearer’s melee weapons. Add 1 to the Attacks characteristic of that weapon.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <costs>
-            <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
-          </costs>
-        </selectionEntry>
-      </selectionEntries>
       <selectionEntryGroups>
-        <selectionEntryGroup id="07c8-8721-ad90-9186" name="Weapons of the Glades" hidden="false" collective="false" import="true">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="53eb-9095-3e70-df1d" type="max"/>
-          </constraints>
-          <selectionEntries>
-            <selectionEntry id="feb1-7a6b-eaac-3362" name="6 -- The Darkest Bough" hidden="false" collective="false" import="true" type="upgrade">
-              <constraints>
-                <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="0749-104c-2e4d-2c08" type="max"/>
-              </constraints>
-              <profiles>
-                <profile id="1327-6a48-9fce-65c0" name="The Darkest Bough" hidden="false" typeId="0c9d-7abe-a53c-6a37" typeName="Artefacts">
-                  <characteristics>
-                    <characteristic name="Artefact" typeId="44b6-de26-0b54-1318">Pick 1 of the bearer’s melee weapons. If the unmodified wound roll for an attack made with that weapon is 6, that attack inflicts D3 mortal wounds on the target in addition to any normal damage.</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-              <costs>
-                <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
-              </costs>
-            </selectionEntry>
-            <selectionEntry id="bc0d-756b-002f-e441" name="5 -- Ancient Barkblade" hidden="false" collective="false" import="true" type="upgrade">
-              <constraints>
-                <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="2da2-0c93-8da9-8391" type="max"/>
-              </constraints>
-              <profiles>
-                <profile id="f745-33bd-4e5f-4e74" name="Ancient Barkblade" hidden="false" typeId="0c9d-7abe-a53c-6a37" typeName="Artefacts">
-                  <characteristics>
-                    <characteristic name="Artefact" typeId="44b6-de26-0b54-1318">Pick 1 of the bearer’s melee weapons. Add 1 to the Damage characteristic of that weapon.</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-              <costs>
-                <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
-              </costs>
-            </selectionEntry>
-            <selectionEntry id="b1e0-d1a6-b73c-9de2" name="4 -- Winnowstaff" hidden="false" collective="false" import="true" type="upgrade">
-              <constraints>
-                <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="d7a9-f714-741a-48fe" type="max"/>
-              </constraints>
-              <profiles>
-                <profile id="8749-3015-1179-a699" name="Winnowstaff" hidden="false" typeId="0c9d-7abe-a53c-6a37" typeName="Artefacts">
-                  <characteristics>
-                    <characteristic name="Artefact" typeId="44b6-de26-0b54-1318">Pick 1 of the bearer’s melee weapons. You can re-roll hit rolls for attacks made with that weapon that target a unit with a Wounds characteristic of 1.</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-              <costs>
-                <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
-              </costs>
-            </selectionEntry>
-            <selectionEntry id="311d-282d-920b-c444" name="3 -- Autumn&apos;s Ire" hidden="false" collective="false" import="true" type="upgrade">
-              <constraints>
-                <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="bf0c-24e4-55ba-e5a5" type="max"/>
-              </constraints>
-              <profiles>
-                <profile id="1d6d-b213-688c-8cec" name="Autumn&apos;s Ire" hidden="false" typeId="0c9d-7abe-a53c-6a37" typeName="Artefacts">
-                  <characteristics>
-                    <characteristic name="Artefact" typeId="44b6-de26-0b54-1318">Pick 1 of the bearer’s melee weapons. You can re-roll hit and wound rolls of 1 for attacks made with that weapon while any wounds are allocated to the bearer.</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-              <costs>
-                <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
-              </costs>
-            </selectionEntry>
-            <selectionEntry id="8ff3-4ba3-ef7a-d828" name="2 -- Greenwood Gladius" hidden="false" collective="false" import="true" type="upgrade">
-              <constraints>
-                <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="f297-4ede-644f-7e4d" type="max"/>
-              </constraints>
-              <profiles>
-                <profile id="d288-92a8-9828-f4a8" name="Greenwood Gladius" hidden="false" typeId="0c9d-7abe-a53c-6a37" typeName="Artefacts">
-                  <characteristics>
-                    <characteristic name="Artefact" typeId="44b6-de26-0b54-1318">Pick 1 of the bearer’s melee weapons. Add 2 to the Attacks characteristic of that weapon if the bearer made a charge move in the same turn.</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-              <costs>
-                <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
-              </costs>
-            </selectionEntry>
-            <selectionEntry id="381e-8fb5-ba63-823d" name="1 -- Daith&apos;s Reaper" hidden="false" collective="false" import="true" type="upgrade">
-              <constraints>
-                <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="7773-7110-a02d-349d" type="max"/>
-              </constraints>
-              <profiles>
-                <profile id="7b4d-ff5c-3b4d-b124" name="Daith&apos;s Reaper" hidden="false" typeId="0c9d-7abe-a53c-6a37" typeName="Artefacts">
-                  <characteristics>
-                    <characteristic name="Artefact" typeId="44b6-de26-0b54-1318">Pick 1 of the bearer’s melee weapons. Improve the Rend characteristic of that weapon by 1.</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-              <costs>
-                <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
-              </costs>
-            </selectionEntry>
-          </selectionEntries>
-        </selectionEntryGroup>
         <selectionEntryGroup id="86e1-57e2-fb1c-b7aa" name="Relics of Nature" hidden="false" collective="false" import="true">
           <modifiers>
             <modifier type="set" field="hidden" value="true">
@@ -1643,44 +952,14 @@ This faction terrain feature consists of 1-3 scenery pieces. If an Awakened Wyld
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="dad7-a7a0-d866-86f8" type="max"/>
           </constraints>
           <selectionEntries>
-            <selectionEntry id="ae66-b297-05dc-6f8c" name="6 -- Wychwood Glaive" hidden="false" collective="false" import="true" type="upgrade">
-              <constraints>
-                <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="a390-0a7d-5e57-a53a" type="max"/>
-              </constraints>
-              <profiles>
-                <profile id="e079-c950-1a9d-395f" name="Wychwood Glaive" hidden="false" typeId="0c9d-7abe-a53c-6a37" typeName="Artefacts">
-                  <characteristics>
-                    <characteristic name="Artefact" typeId="44b6-de26-0b54-1318">Pick 1 of the bearer’s melee weapons. Add 2 to the damage inflicted by that weapon for attacks that target a WIZARD.</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-              <costs>
-                <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
-              </costs>
-            </selectionEntry>
-            <selectionEntry id="5923-f1b3-521b-bf1b" name="5 -- Hagbane Spite" hidden="false" collective="false" import="true" type="upgrade">
-              <constraints>
-                <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="92b4-5d0a-d3ad-844f" type="max"/>
-              </constraints>
-              <profiles>
-                <profile id="b0d6-7aed-3032-8999" name="Hagbane Spite" hidden="false" typeId="0c9d-7abe-a53c-6a37" typeName="Artefacts">
-                  <characteristics>
-                    <characteristic name="Artefact" typeId="44b6-de26-0b54-1318">If the bearer successfully unbinds a spell, the caster suffers 1 mortal wound.</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-              <costs>
-                <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
-              </costs>
-            </selectionEntry>
-            <selectionEntry id="cee8-3e76-951b-e136" name="4 -- Luneth&apos;s Lamp" hidden="false" collective="false" import="true" type="upgrade">
+            <selectionEntry id="cee8-3e76-951b-e136" name="2 -- Luneth&apos;s Lamp" hidden="false" collective="false" import="true" type="upgrade">
               <constraints>
                 <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="6bb7-4875-35ce-6056" type="max"/>
               </constraints>
               <profiles>
                 <profile id="5897-2ee0-bb58-bec3" name="Luneth&apos;s Lamp" hidden="false" typeId="0c9d-7abe-a53c-6a37" typeName="Artefacts">
                   <characteristics>
-                    <characteristic name="Artefact" typeId="44b6-de26-0b54-1318">Add 2 to the roll when the bearer attempts to unbind or dispel an endless spell.</characteristic>
+                    <characteristic name="Artefact" typeId="44b6-de26-0b54-1318">The bearer can attempt to banish 1 invocation in the hero phase even if they are not a PRIEST. In addition, add 2 to dispelling rolls and banishment rolls for the bearer.</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
@@ -1695,22 +974,7 @@ This faction terrain feature consists of 1-3 scenery pieces. If an Awakened Wyld
               <profiles>
                 <profile id="190a-ffcd-07f5-c7ab" name="The Vesperal Gem" hidden="false" typeId="0c9d-7abe-a53c-6a37" typeName="Artefacts">
                   <characteristics>
-                    <characteristic name="Artefact" typeId="44b6-de26-0b54-1318">Once in each of your hero phases, when the bearer attempts to cast a spell from the Lore of the Deepwood, instead of making a casting roll you can say they are using the Vesperal Gem. If you do so, that spell is automatically cast (do not roll 2D6) and cannot be unbound. After the effect of that spell has been resolved, roll a dice. On a 1, the bearer suffers D3 mortal wounds.</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-              <costs>
-                <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
-              </costs>
-            </selectionEntry>
-            <selectionEntry id="2fe6-7cbb-54d9-ed07" name="2 -- Spiritsong Stave" hidden="false" collective="false" import="true" type="upgrade">
-              <constraints>
-                <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="ddae-ca32-201e-e706" type="max"/>
-              </constraints>
-              <profiles>
-                <profile id="726a-28f1-b1ed-2aba" name="Spiritsong Stave" hidden="false" typeId="0c9d-7abe-a53c-6a37" typeName="Artefacts">
-                  <characteristics>
-                    <characteristic name="Artefact" typeId="44b6-de26-0b54-1318">The bearer can attempt to cast 1 extra spell in your hero phase.</characteristic>
+                    <characteristic name="Artefact" typeId="44b6-de26-0b54-1318">Once per turn, in your hero phase, before the bearer attempts to cast a spell from the Lore of the Deepwood, instead of making a casting roll for that spell, you can say they will use the Vesperal Gem. If you do so, that spell is automatically cast (do not make a casting roll) and cannot be unbound. After the effect of that spell has been resolved, roll a dice. On a 1, the bearer suffers D3 mortal wounds.</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
@@ -1725,7 +989,7 @@ This faction terrain feature consists of 1-3 scenery pieces. If an Awakened Wyld
               <profiles>
                 <profile id="78fa-3109-05e3-827d" name="Acorn of the Ages" hidden="false" typeId="0c9d-7abe-a53c-6a37" typeName="Artefacts">
                   <characteristics>
-                    <characteristic name="Artefact" typeId="44b6-de26-0b54-1318">Once per battle, at the start of your hero phase, you can set up an AWAKENED WYLDWOOD wholly within 12&quot; of the bearer and more than 1&quot; from any other model, terrain feature or objective, and add it to your army.</characteristic>
+                    <characteristic name="Artefact" typeId="44b6-de26-0b54-1318">Once per battle, at the start of your hero phase, if the bearer is on the battlefield, you can set up 1 Awakened Wyldwood terrain feature wholly within 12&quot; of the bearer, more than 3&quot; from all other models, endless spells, invocations, terrain features and objectives, and add it to your army.</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
@@ -1740,14 +1004,14 @@ This faction terrain feature consists of 1-3 scenery pieces. If an Awakened Wyld
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="b7d2-38c2-1267-2309" type="max"/>
           </constraints>
           <selectionEntries>
-            <selectionEntry id="e824-ef08-4ef3-7f4a" name="6 -- Nightbloom Garland" hidden="false" collective="false" import="true" type="upgrade">
+            <selectionEntry id="75b7-d704-2cf0-3db5" name="1 -- Greenwood Gladius" hidden="false" collective="false" import="true" type="upgrade">
               <constraints>
-                <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="afff-c02a-870a-caba" type="max"/>
+                <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="b014-0120-e3c0-b54c" type="max"/>
               </constraints>
               <profiles>
-                <profile id="21bf-1db4-5c86-89c4" name="Nightbloom Garland" hidden="false" typeId="0c9d-7abe-a53c-6a37" typeName="Artefacts">
+                <profile id="2e9d-5d31-1a53-7426" name="Greenwood Gladius" hidden="false" typeId="0c9d-7abe-a53c-6a37" typeName="Artefacts">
                   <characteristics>
-                    <characteristic name="Artefact" typeId="44b6-de26-0b54-1318">The bearer is not visible to enemy models that are more than 12&quot; from the bearer.</characteristic>
+                    <characteristic name="Artefact" typeId="44b6-de26-0b54-1318">Pick 1 of the bearer’s melee weapons. At the start of the combat phase, roll a D3. Add the result to the Attacks characteristic of that weapon until the end of that phase.</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
@@ -1755,14 +1019,14 @@ This faction terrain feature consists of 1-3 scenery pieces. If an Awakened Wyld
                 <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
               </costs>
             </selectionEntry>
-            <selectionEntry id="2d17-7dfd-bb02-b1fc" name="5 -- Silken Snares" hidden="false" collective="false" import="true" type="upgrade">
+            <selectionEntry id="904a-b4c1-abf9-f716" name="2 -- Crown of Fell Bowers" hidden="false" collective="false" import="true" type="upgrade">
               <constraints>
-                <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="ec45-fdda-6706-1670" type="max"/>
+                <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="e1f8-9dfc-e8a6-a311" type="max"/>
               </constraints>
               <profiles>
-                <profile id="fcd7-725b-0ada-3675" name="Silken Snares" hidden="false" typeId="0c9d-7abe-a53c-6a37" typeName="Artefacts">
+                <profile id="7e5b-9cc6-240a-331c" name="Crown of Fell Bowers" hidden="false" typeId="0c9d-7abe-a53c-6a37" typeName="Artefacts">
                   <characteristics>
-                    <characteristic name="Artefact" typeId="44b6-de26-0b54-1318">If the weapon used for an attack that targets the bearer has a Rend characteristic of -1, change the Rend characteristic for that attack to ‘-’.</characteristic>
+                    <characteristic name="Artefact" typeId="44b6-de26-0b54-1318">At the start of the combat phase, pick 1 enemy unit within 6&quot; of the bearer. Add 1 to wound rolls for attacks made by friendly SYLVANETH units that target that unit in that phase.</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
@@ -1770,156 +1034,14 @@ This faction terrain feature consists of 1-3 scenery pieces. If an Awakened Wyld
                 <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
               </costs>
             </selectionEntry>
-            <selectionEntry id="9d67-4f7a-7d7c-f751" name="4 -- Lashvines" hidden="false" collective="false" import="true" type="upgrade">
+            <selectionEntry id="efc2-bf63-bb76-7241" name="3 -- Seed of Rebirth" hidden="false" collective="false" import="true" type="upgrade">
               <constraints>
-                <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="d2c0-f140-c545-211a" type="max"/>
+                <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="0036-9d29-d55e-7dd8" type="max"/>
               </constraints>
               <profiles>
-                <profile id="3a9e-6d62-32ac-ed3b" name="Lashvines" hidden="false" typeId="0c9d-7abe-a53c-6a37" typeName="Artefacts">
+                <profile id="c249-1ba8-7d38-196b" name="Seed of Rebirth" hidden="false" typeId="0c9d-7abe-a53c-6a37" typeName="Artefacts">
                   <characteristics>
-                    <characteristic name="Artefact" typeId="44b6-de26-0b54-1318">Roll a dice each time a wound inflicted by a melee weapon is allocated to the bearer and not negated. On a 6+ the attacking unit suffers 1 mortal wound.</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-              <costs>
-                <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
-              </costs>
-            </selectionEntry>
-            <selectionEntry id="f6d6-c4a3-6f80-7c46" name="3 -- Glamourwave" hidden="false" collective="false" import="true" type="upgrade">
-              <constraints>
-                <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="eb44-133c-d8f7-005e" type="max"/>
-              </constraints>
-              <profiles>
-                <profile id="723d-cee5-46c8-e506" name="Glamourwave" hidden="false" typeId="0c9d-7abe-a53c-6a37" typeName="Artefacts">
-                  <characteristics>
-                    <characteristic name="Artefact" typeId="44b6-de26-0b54-1318">Roll a dice each time you allocate a mortal wound to the bearer. On a 5+ that mortal wound is negated.</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-              <costs>
-                <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
-              </costs>
-            </selectionEntry>
-            <selectionEntry id="5fca-9d2e-1bb9-434e" name="2 -- Briar Sheath" hidden="false" collective="false" import="true" type="upgrade">
-              <constraints>
-                <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="42b0-4f63-44b9-be06" type="max"/>
-              </constraints>
-              <profiles>
-                <profile id="0526-e681-8711-2395" name="Briar Sheath" hidden="false" typeId="0c9d-7abe-a53c-6a37" typeName="Artefacts">
-                  <characteristics>
-                    <characteristic name="Artefact" typeId="44b6-de26-0b54-1318">Subtract 1 from hit rolls for attacks that target the bearer.</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-              <costs>
-                <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
-              </costs>
-            </selectionEntry>
-            <selectionEntry id="7c19-8c42-14ab-4db7" name="1 -- The Oaken Armour" hidden="false" collective="false" import="true" type="upgrade">
-              <constraints>
-                <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="dddc-620c-fb40-021a" type="max"/>
-              </constraints>
-              <profiles>
-                <profile id="25ce-2dd5-5853-9cb2" name="The Oaken Armour" hidden="false" typeId="0c9d-7abe-a53c-6a37" typeName="Artefacts">
-                  <characteristics>
-                    <characteristic name="Artefact" typeId="44b6-de26-0b54-1318">You can re-roll save rolls of 1 made for attacks that target the bearer.</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-              <costs>
-                <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
-              </costs>
-            </selectionEntry>
-          </selectionEntries>
-        </selectionEntryGroup>
-        <selectionEntryGroup id="e43b-e45c-bd1c-0cdb" name="Verdant Treasures" hidden="false" collective="false" import="true">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="0f33-0932-5251-dc6d" type="max"/>
-          </constraints>
-          <selectionEntries>
-            <selectionEntry id="ebbd-dccd-d141-3add" name="6 -- Etherblossom" hidden="false" collective="false" import="true" type="upgrade">
-              <constraints>
-                <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="cdbe-70d4-8d5f-39b5" type="max"/>
-              </constraints>
-              <profiles>
-                <profile id="11ac-6819-93f3-da3d" name="Etherblossom" hidden="false" typeId="0c9d-7abe-a53c-6a37" typeName="Artefacts">
-                  <characteristics>
-                    <characteristic name="Artefact" typeId="44b6-de26-0b54-1318">The bearer can fly.</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-              <costs>
-                <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
-              </costs>
-            </selectionEntry>
-            <selectionEntry id="94aa-6364-5f56-4199" name="5 -- Crown of Fell Bowers" hidden="false" collective="false" import="true" type="upgrade">
-              <constraints>
-                <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="ef5b-bc11-0be4-57cc" type="max"/>
-              </constraints>
-              <profiles>
-                <profile id="9cce-19fb-3734-6aab" name="Crown of Fell Bowers" hidden="false" typeId="0c9d-7abe-a53c-6a37" typeName="Artefacts">
-                  <characteristics>
-                    <characteristic name="Artefact" typeId="44b6-de26-0b54-1318">At the start of the combat phase, pick 1 enemy unit within 6&quot; of the bearer. You can re-roll wound rolls for attacks made by friendly SYLVANETH units that target that unit in that phase.</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-              <costs>
-                <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
-              </costs>
-            </selectionEntry>
-            <selectionEntry id="eaae-e975-4a52-c69f" name="4 -- Lifewreath" hidden="false" collective="false" import="true" type="upgrade">
-              <constraints>
-                <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="6166-8886-7dd7-e7c0" type="max"/>
-              </constraints>
-              <profiles>
-                <profile id="33c6-d632-472c-357a" name="Lifewreath" hidden="false" typeId="0c9d-7abe-a53c-6a37" typeName="Artefacts">
-                  <characteristics>
-                    <characteristic name="Artefact" typeId="44b6-de26-0b54-1318">In your hero phase, roll a dice. On a 3+ you can heal D3 wounds allocated to each friendly SYLVANETH unit wholly within 10&quot; of the bearer.</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-              <costs>
-                <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
-              </costs>
-            </selectionEntry>
-            <selectionEntry id="0cc7-5c15-712e-a49e" name="3 -- Everdew Vial" hidden="false" collective="false" import="true" type="upgrade">
-              <constraints>
-                <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="38ec-9f71-0c30-0f11" type="max"/>
-              </constraints>
-              <profiles>
-                <profile id="0e46-e440-c9f1-3044" name="Everdew Vial" hidden="false" typeId="0c9d-7abe-a53c-6a37" typeName="Artefacts">
-                  <characteristics>
-                    <characteristic name="Artefact" typeId="44b6-de26-0b54-1318">Add 2 to run rolls and charge rolls for the bearer.</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-              <costs>
-                <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
-              </costs>
-            </selectionEntry>
-            <selectionEntry id="9c31-483c-ae39-996a" name="2 -- Wraithstone" hidden="false" collective="false" import="true" type="upgrade">
-              <constraints>
-                <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="f8cd-1dea-2c3b-63a9" type="max"/>
-              </constraints>
-              <profiles>
-                <profile id="0054-b6b2-8824-27e8" name="Wraithstone" hidden="false" typeId="0c9d-7abe-a53c-6a37" typeName="Artefacts">
-                  <characteristics>
-                    <characteristic name="Artefact" typeId="44b6-de26-0b54-1318">Subtract 1 from the Bravery characteristic of enemy units while they are within 10&quot; of the bearer.</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-              <costs>
-                <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
-              </costs>
-            </selectionEntry>
-            <selectionEntry id="77ef-c70a-5b8d-c72f" name="1 -- Seed of Rebirth" hidden="false" collective="false" import="true" type="upgrade">
-              <constraints>
-                <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="54d4-86fa-670a-bada" type="max"/>
-              </constraints>
-              <profiles>
-                <profile id="5f64-fc53-eb1e-141f" name="Seed of Rebirth" hidden="false" typeId="0c9d-7abe-a53c-6a37" typeName="Artefacts">
-                  <characteristics>
-                    <characteristic name="Artefact" typeId="44b6-de26-0b54-1318">The first time the bearer is slain, before removing them from the battlefield, roll a dice. On a 1, the bearer is slain. On a 2+ the bearer is not slain, you can heal up to D3 wounds allocated to them, and any wounds that remain to be allocated to them are negated.</characteristic>
+                    <characteristic name="Artefact" typeId="44b6-de26-0b54-1318">The first time the bearer is slain, before removing them from play, roll a dice. On a 1, the bearer is slain. On a 2+, the bearer is not slain, you can heal up to D3 wounds allocated to them, and any wounds that remain to be allocated to them are negated.</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
@@ -1965,11 +1087,6 @@ This faction terrain feature consists of 1-3 scenery pieces. If an Awakened Wyld
             <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="9e49-bd7f-45ee-1a96" type="greaterThan"/>
           </conditions>
         </modifier>
-        <modifier type="increment" field="a13c-5b21-ee38-bc2e" value="1.0">
-          <conditions>
-            <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="14fd-cb1c-4eae-8a51" type="greaterThan"/>
-          </conditions>
-        </modifier>
       </modifiers>
       <constraints>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="a13c-5b21-ee38-bc2e" type="max"/>
@@ -1977,11 +1094,6 @@ This faction terrain feature consists of 1-3 scenery pieces. If an Awakened Wyld
       <selectionEntryGroups>
         <selectionEntryGroup id="5e08-d7c1-11ec-7031" name="Lore of the Deepwood" hidden="false" collective="false" import="true">
           <modifiers>
-            <modifier type="increment" field="f4ab-0772-ca50-7137" value="1.0">
-              <conditions>
-                <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="14fd-cb1c-4eae-8a51" type="greaterThan"/>
-              </conditions>
-            </modifier>
             <modifier type="increment" field="f4ab-0772-ca50-7137" value="1.0">
               <repeats>
                 <repeat field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="9e49-bd7f-45ee-1a96" repeats="1" roundUp="false"/>
@@ -2002,7 +1114,7 @@ This faction terrain feature consists of 1-3 scenery pieces. If an Awakened Wyld
               <profiles>
                 <profile id="01c4-f3ec-b3db-99fb" name="Treesong" hidden="false" typeId="13da-11a8-b7d1-77a7" typeName="Spell">
                   <characteristics>
-                    <characteristic name="Spell" typeId="1170-c916-1b73-ae34">Treesong has a casting value of 7. If successfully cast, pick 1 enemy unit within 16&quot; of the caster and within 6&quot; of an AWAKENED WYLDWOOD. Until the end of the turn, you can re-roll hit and wound rolls of 1 for attacks made with melee weapons that target that unit.</characteristic>
+                    <characteristic name="Spell" typeId="1170-c916-1b73-ae34">Treesong is a spell that has a casting value of 7 and a range of 16&quot;. If successfully cast, pick 1 friendly Awakened Wyldwood within range of the caster. Until the start of your next hero phase, improve the Rend characteristic of melee weapons used by friendly SYLVANETH units by 1 while they are wholly within 9&quot; of that Awakened Wyldwood.</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
@@ -2017,7 +1129,7 @@ This faction terrain feature consists of 1-3 scenery pieces. If an Awakened Wyld
               <profiles>
                 <profile id="583c-65a8-2a8b-8cd8" name="Deadly Harvest" hidden="false" typeId="13da-11a8-b7d1-77a7" typeName="Spell">
                   <characteristics>
-                    <characteristic name="Spell" typeId="1170-c916-1b73-ae34">Deadly Harvest has a casting value of 6. If successfully cast, each enemy unit within 3&quot; of the caster suffers D3 mortal wounds (roll separately for each unit).</characteristic>
+                    <characteristic name="Spell" typeId="1170-c916-1b73-ae34">Deadly Harvest is a spell that has a casting value of 6 and a range of 3&quot;. If successfully cast, each enemy unit within range of the caster suffers D3 mortal wounds (roll separately for each unit).</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
@@ -2032,7 +1144,7 @@ This faction terrain feature consists of 1-3 scenery pieces. If an Awakened Wyld
               <profiles>
                 <profile id="eb9d-292b-9a6c-87ef" name="Verdurous Harmony" hidden="false" typeId="13da-11a8-b7d1-77a7" typeName="Spell">
                   <characteristics>
-                    <characteristic name="Spell" typeId="1170-c916-1b73-ae34">Verdurous Harmony has a casting value of 7. If successfully cast, pick 1 friendly SYLVANETH unit wholly within 18&quot; of the caster and visible to them. You can return 1 slain model to that unit. If you picked a unit of DRYADS, TREEREVENANTS or SPITE-REVENANTS, you can return up to D3 slain models to that unit instead of 1.</characteristic>
+                    <characteristic name="Spell" typeId="1170-c916-1b73-ae34">Verdurous Harmony is a spell that has a casting value of 7 and a range of 18&quot;. If successfully cast, pick 1 friendly SYLVANETH unit wholly within range and visible to the caster. You can return 1 slain model to that unit. If you picked a DRYADS, TREE-REVENANTS or SPITE-REVENANTS unit, you can return up to D3 slain models to that unit instead of 1.</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
@@ -2047,7 +1159,7 @@ This faction terrain feature consists of 1-3 scenery pieces. If an Awakened Wyld
               <profiles>
                 <profile id="c4a5-b5c5-a2b1-334c" name="The Dwellers Below" hidden="false" typeId="13da-11a8-b7d1-77a7" typeName="Spell">
                   <characteristics>
-                    <characteristic name="Spell" typeId="1170-c916-1b73-ae34">The Dwellers Below has a casting value of 7. If successfully cast, pick 1 enemy unit within 10&quot; of the caster and visible to them and roll a number of dice equal to the number of models in that unit. For each 6+ that unit suffers 1 mortal wound.</characteristic>
+                    <characteristic name="Spell" typeId="1170-c916-1b73-ae34">The Dwellers Below is a spell that has a casting value of 7 and a range of 12&quot;. If successfully cast, pick 1 enemy unit within range and visible to the caster, and roll a number of dice equal to the number of models in that unit. For each 5+, that unit suffers 1 mortal wound.</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
@@ -2062,7 +1174,7 @@ This faction terrain feature consists of 1-3 scenery pieces. If an Awakened Wyld
               <profiles>
                 <profile id="7f5c-0e79-2f1b-466a" name="Regrowth" hidden="false" typeId="13da-11a8-b7d1-77a7" typeName="Spell">
                   <characteristics>
-                    <characteristic name="Spell" typeId="1170-c916-1b73-ae34">Regrowth has a casting value of 5. If successfully cast, pick 1 friendly SYLVANETH unit wholly within 18&quot; of the caster and visible to them. You can heal up to D6 wounds allocated to that unit.</characteristic>
+                    <characteristic name="Spell" typeId="1170-c916-1b73-ae34">Regrowth is a spell that has a casting value of 5 and a range of 18&quot;. If successfully cast, pick 1 friendly SYLVANETH unit wholly within range and visible to the caster. You can heal up to D6 wounds allocated to that unit.</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
@@ -2077,7 +1189,7 @@ This faction terrain feature consists of 1-3 scenery pieces. If an Awakened Wyld
               <profiles>
                 <profile id="9c9d-84ac-98c4-4007" name="Throne of Vines" hidden="false" typeId="13da-11a8-b7d1-77a7" typeName="Spell">
                   <characteristics>
-                    <characteristic name="Spell" typeId="1170-c916-1b73-ae34">Throne of Vines has a casting value of 5. If successfully cast, add 2 to casting rolls for the caster until the caster makes a move or is set up in a different location.</characteristic>
+                    <characteristic name="Spell" typeId="1170-c916-1b73-ae34">Throne of Vines is a spell that has a casting value of 9. If successfully cast, at the end of each phase until the start of your next hero phase, you can heal 1 wound allocated to the caster.</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
@@ -2092,11 +1204,52 @@ This faction terrain feature consists of 1-3 scenery pieces. If an Awakened Wyld
         <entryLink id="9e85-f8bb-acad-50f0" name="Universal Spell Lore" hidden="false" collective="false" import="true" targetId="93f7-7e2a-3308-d150" type="selectionEntryGroup"/>
       </entryLinks>
     </selectionEntryGroup>
+    <selectionEntryGroup id="bb4c-8d89-1fb3-4d92" name="Battalion Formation" hidden="false" collective="false" import="true">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="c03a-b1a8-66c6-3637" type="equalTo"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <constraints>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="2156-da5d-07e0-9905" type="max"/>
+      </constraints>
+      <selectionEntries>
+        <selectionEntry id="7515-f228-0a92-a281" name="Lords of the Clan" hidden="false" collective="false" import="true" type="upgrade">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="ec6c-984e-c758-e792" type="equalTo"/>
+                  </conditions>
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="5c31-15b5-1eb6-62ca" type="notInstanceOf"/>
+                        <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e441-c09e-91cd-1482" type="notInstanceOf"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
+          <costs>
+            <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
+          </costs>
+        </selectionEntry>
+      </selectionEntries>
+      <entryLinks>
+        <entryLink id="dd38-1a9a-b4b7-b442" name="Core Battalions" hidden="false" collective="false" import="true" targetId="8c04-393d-d72d-c2a8" type="selectionEntryGroup"/>
+      </entryLinks>
+    </selectionEntryGroup>
   </sharedSelectionEntryGroups>
   <sharedProfiles>
     <profile id="6c8d-5483-d206-ba8e" name="Verdant Blessing" hidden="false" typeId="13da-11a8-b7d1-77a7" typeName="Spell">
       <characteristics>
-        <characteristic name="Spell" typeId="1170-c916-1b73-ae34">Verdant Blessing has a casting value of 6. If successfully cast, set up 1 AWAKENED WYLDWOOD wholly within 24&quot; of the caster and more than 1&quot; from any other model, terrain feature or objective.</characteristic>
+        <characteristic name="Spell" typeId="1170-c916-1b73-ae34">Verdant Blessing is a spell that has a casting value of 6 and a range of 18&quot;. If successfully cast, set up 1 Awakened Wyldwood terrain feature wholly within range and visible to the caster, and more than 3&quot; from all other models, endless spells, invocations, terrain features and objectives, and add it to your army.</characteristic>
       </characteristics>
     </profile>
   </sharedProfiles>

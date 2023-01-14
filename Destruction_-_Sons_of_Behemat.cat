@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="a565-1f79-d7fa-f1cb" name="Destruction - Sons of Behemat" revision="8" battleScribeVersion="2.03" authorName="Thulram" library="false" gameSystemId="e832-3291-06be-cab1" gameSystemRevision="7" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="a565-1f79-d7fa-f1cb" name="Destruction - Sons of Behemat" revision="10" battleScribeVersion="2.03" authorName="Thulram" library="false" gameSystemId="e832-3291-06be-cab1" gameSystemRevision="9" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <categoryEntries>
     <categoryEntry id="d819-a402-4c2f-6a5a" name="General - Kraken-eater" hidden="false"/>
     <categoryEntry id="09fb-7e27-d6b9-c6e9" name="General - Warstomper" hidden="false"/>
     <categoryEntry id="334c-111d-a093-d42a" name="General - Gatebreaker" hidden="false"/>
+    <categoryEntry id="5e6f-5fd6-4ddb-6ab8" name="General - Beast-smasher" hidden="false"/>
   </categoryEntries>
   <selectionEntries>
     <selectionEntry id="0ff7-acbb-6889-50bb" name="Bosses of the Stomp" hidden="false" collective="false" import="true" type="upgrade">
@@ -197,20 +198,60 @@
           <categoryLinks>
             <categoryLink id="e2a8-6b7e-9d80-09f0" name="Grand Strategy" hidden="false" targetId="318c-fa55-0855-47ef" primary="false"/>
           </categoryLinks>
-          <selectionEntries>
-            <selectionEntry id="e897-3640-a056-b5e1" name="Make the Land Tremble" hidden="false" collective="false" import="true" type="upgrade">
-              <profiles>
-                <profile id="e6bc-0c35-d37f-f9b0" name="Make the Land Tremble" hidden="false" typeId="7dc6-98f0-f5ba-fc16" typeName="Grand Strategy">
-                  <characteristics>
-                    <characteristic name="Grand Strategy" typeId="22d6-b382-f824-6381">When the battle ends, you complete this grand strategy if any friendly units made a run or charge move in every battle round (it does not have to be the same unit that runs or makes a charge move in every battle round).</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-              <costs>
-                <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
-              </costs>
-            </selectionEntry>
-          </selectionEntries>
+          <selectionEntryGroups>
+            <selectionEntryGroup id="76df-1d0f-34cf-6239" name="Stomping Order" hidden="false" collective="false" import="true">
+              <selectionEntries>
+                <selectionEntry id="4267-bd78-67a1-ba1f" name="Make the Land Tremble!" hidden="false" collective="false" import="true" type="upgrade">
+                  <profiles>
+                    <profile id="ae6a-d079-5c99-7422" name="Make the Land Tremble!" hidden="false" typeId="7dc6-98f0-f5ba-fc16" typeName="Grand Strategy">
+                      <characteristics>
+                        <characteristic name="Grand Strategy" typeId="22d6-b382-f824-6381">When the battle ends, you complete this grand strategy if any friendly units ran or made a charge move in every battle round (it does not have to be the same unit that runs or makes a charge move in every battle round).</characteristic>
+                      </characteristics>
+                    </profile>
+                  </profiles>
+                  <costs>
+                    <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
+                  </costs>
+                </selectionEntry>
+                <selectionEntry id="7681-85dc-fd0a-90ea" name="Show &apos;Em Who&apos;s Boss!" hidden="false" collective="false" import="true" type="upgrade">
+                  <profiles>
+                    <profile id="0e72-c315-8b54-5123" name="Show &apos;Em Who&apos;s Boss!" hidden="false" typeId="7dc6-98f0-f5ba-fc16" typeName="Grand Strategy">
+                      <characteristics>
+                        <characteristic name="Grand Strategy" typeId="22d6-b382-f824-6381">At the start of the battle, the enemy unit with the highest Wounds characteristic is marked as the big ’un. If there are multiple enemy units tied for the highest Wounds characteristic, you can pick which of these will be the big ’un. When the battle ends, you complete this grand strategy if the big ’un has been slain and the model chosen to be your general has not been slain.</characteristic>
+                      </characteristics>
+                    </profile>
+                  </profiles>
+                  <costs>
+                    <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
+                  </costs>
+                </selectionEntry>
+                <selectionEntry id="8122-f8b4-b138-de40" name="On the Warpath" hidden="false" collective="false" import="true" type="upgrade">
+                  <profiles>
+                    <profile id="3a91-5c36-f4d7-d96a" name="On the Warpath" hidden="false" typeId="7dc6-98f0-f5ba-fc16" typeName="Grand Strategy">
+                      <characteristics>
+                        <characteristic name="Grand Strategy" typeId="22d6-b382-f824-6381">When the battle ends, you complete this grand strategy if every friendly unit on the battlefield is within enemy territory.</characteristic>
+                      </characteristics>
+                    </profile>
+                  </profiles>
+                  <costs>
+                    <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
+                  </costs>
+                </selectionEntry>
+                <selectionEntry id="6ee0-6ba5-6500-f7a7" name="Brodd&apos;s Revenge" hidden="false" collective="false" import="true" type="upgrade">
+                  <profiles>
+                    <profile id="caa9-f7a3-c976-7180" name="Brodd&apos;s Revenge" hidden="false" typeId="7dc6-98f0-f5ba-fc16" typeName="Grand Strategy">
+                      <characteristics>
+                        <characteristic name="Grand Strategy" typeId="22d6-b382-f824-6381">You can only pick this grand strategy if your army includes KING BRODD. When the battle ends, you complete this grand strategy if the friendly KING BRODD has not been slain and you picked each of the 3 effects of the Power of Behemat prayer to apply at least once during the battle.</characteristic>
+                      </characteristics>
+                    </profile>
+                  </profiles>
+                  <costs>
+                    <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
+                  </costs>
+                </selectionEntry>
+              </selectionEntries>
+            </selectionEntryGroup>
+          </selectionEntryGroups>
           <entryLinks>
             <entryLink id="e006-b4e4-6753-8c47" name="GHB &apos;21" hidden="false" collective="false" import="true" targetId="bb2d-2110-60b8-c13e" type="selectionEntryGroup"/>
           </entryLinks>
@@ -224,17 +265,32 @@
       <profiles>
         <profile id="6c64-6bcd-f1ee-8e52" name="&apos;That&apos;s Mine!&apos;" hidden="false" typeId="4bb2-448c-446c-f522" typeName="Battle Tactic">
           <characteristics>
-            <characteristic name="Battle Tactic" typeId="8c0f-be41-a70e-c699">Pick 1 objective on the battlefield wholly outside of your territory. You complete this tactic if that objective marker is kicked away and is wholly within your territory at the end of this turn.</characteristic>
+            <characteristic name="Battle Tactic" typeId="8c0f-be41-a70e-c699">Pick 1 objective on the battlefield that is not within your territory. You complete this tactic if that objective was kicked away (see Get Orf Me Land! ability) and is wholly within your territory at the end of this turn.</characteristic>
           </characteristics>
         </profile>
         <profile id="a29b-97ff-3a9f-ee6b" name="Wrecking Crew" hidden="false" typeId="4bb2-448c-446c-f522" typeName="Battle Tactic">
           <characteristics>
-            <characteristic name="Battle Tactic" typeId="8c0f-be41-a70e-c699">You complete this tactic if a faction terrain feature in your opponent’s army is demolished this turn.</characteristic>
+            <characteristic name="Battle Tactic" typeId="8c0f-be41-a70e-c699">You complete this tactic if an enemy faction terrain feature was demolished during this turn.</characteristic>
           </characteristics>
         </profile>
-        <profile id="0602-0099-4ba2-531e" name="Manskittles" hidden="false" typeId="4bb2-448c-446c-f522" typeName="Battle Tactic">
+        <profile id="0602-0099-4ba2-531e" name="Man-skittles" hidden="false" typeId="4bb2-448c-446c-f522" typeName="Battle Tactic">
           <characteristics>
-            <characteristic name="Battle Tactic" typeId="8c0f-be41-a70e-c699">You complete this tactic if a friendly WARSTOMPER MEGA-GARGANT uses its ‘Hurled Body’ ability, the enemy model you pick for the first part of this ability is slain, and an enemy Battleline unit is picked as the target for the second part of the ability and suffers any mortal wounds as a result.</characteristic>
+            <characteristic name="Battle Tactic" typeId="8c0f-be41-a70e-c699">You complete this tactic at the end of this turn if a friendly WARSTOMPER used its Hurled Body ability, an enemy model was slain by the first part of the ability, and an enemy Battleline unit was picked for the second part of the ability and suffered any mortal wounds.</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="5ff4-e304-65a7-ac63" name="Fury of Titans" hidden="false" typeId="4bb2-448c-446c-f522" typeName="Battle Tactic">
+          <characteristics>
+            <characteristic name="Battle Tactic" typeId="8c0f-be41-a70e-c699">You complete this tactic if you carry out the Beast Grapple, Earth-shaking Roar and Colossal Slam monstrous rampages this turn.</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="a91e-2563-86e2-13c6" name="Splat!" hidden="false" typeId="4bb2-448c-446c-f522" typeName="Battle Tactic">
+          <characteristics>
+            <characteristic name="Battle Tactic" typeId="8c0f-be41-a70e-c699">Pick 1 enemy HERO. You complete this tactic if that HERO is slain by wounds caused by an attack made with Throwin’ Rocks, Hurled Debris or a Hurled Boulder during this turn.</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="292a-8d47-070d-a65b" name="Colossal Violence" hidden="false" typeId="4bb2-448c-446c-f522" typeName="Battle Tactic">
+          <characteristics>
+            <characteristic name="Battle Tactic" typeId="8c0f-be41-a70e-c699">Pick 1 friendly MEGA-GARGANT. You complete this tactic if you carried out the Titanic Duel monstrous rampage with that unit during this turn and the enemy MONSTER picked as the target was slain by attacks made by that unit during this turn.</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -256,22 +312,12 @@
         </entryLink>
         <entryLink id="faf9-d949-814c-ca6d" name="Artefacts of Power" hidden="false" collective="false" import="true" targetId="c221-dcce-8761-8619" type="selectionEntryGroup"/>
         <entryLink id="d625-8813-044a-b42e" name="Command Traits" hidden="false" collective="false" import="true" targetId="4062-35b3-efff-dd5b" type="selectionEntryGroup"/>
-        <entryLink id="655b-f93e-cefd-46b2" name="Universal Spell Lore" hidden="false" collective="false" import="true" targetId="93f7-7e2a-3308-d150" type="selectionEntryGroup">
-          <modifiers>
-            <modifier type="set" field="hidden" value="true">
-              <conditionGroups>
-                <conditionGroup type="and">
-                  <conditions>
-                    <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="7ee2-0d81-544f-5d7e" type="equalTo"/>
-                    <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="7ee2-0d81-544f-5d7e" type="notInstanceOf"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
-            </modifier>
-          </modifiers>
-        </entryLink>
+        <entryLink id="655b-f93e-cefd-46b2" name="Universal Spell Lore" hidden="false" collective="false" import="true" targetId="93f7-7e2a-3308-d150" type="selectionEntryGroup"/>
         <entryLink id="9979-f40d-36b1-1bb7" name="Battalion Formation" hidden="false" collective="false" import="true" targetId="41a1-ae4d-94d3-e9df" type="selectionEntryGroup"/>
       </entryLinks>
+      <costs>
+        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="520.0"/>
+      </costs>
     </entryLink>
     <entryLink id="eaef-4b39-0de3-2653" name="Kraken-eater Mega-Gargant" hidden="false" collective="false" import="true" targetId="4edc-1f4a-99fa-4cb3" type="selectionEntry">
       <entryLinks>
@@ -282,27 +328,20 @@
         </entryLink>
         <entryLink id="7557-d83e-7e20-2b6b" name="Artefacts of Power" hidden="false" collective="false" import="true" targetId="c221-dcce-8761-8619" type="selectionEntryGroup"/>
         <entryLink id="fcf0-6263-5d7e-a750" name="Command Traits" hidden="false" collective="false" import="true" targetId="4062-35b3-efff-dd5b" type="selectionEntryGroup"/>
-        <entryLink id="825b-0e52-90ca-4d28" name="Universal Spell Lore" hidden="false" collective="false" import="true" targetId="93f7-7e2a-3308-d150" type="selectionEntryGroup">
-          <modifiers>
-            <modifier type="set" field="hidden" value="true">
-              <conditionGroups>
-                <conditionGroup type="and">
-                  <conditions>
-                    <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="7ee2-0d81-544f-5d7e" type="equalTo"/>
-                    <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="7ee2-0d81-544f-5d7e" type="notInstanceOf"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
-            </modifier>
-          </modifiers>
-        </entryLink>
+        <entryLink id="825b-0e52-90ca-4d28" name="Universal Spell Lore" hidden="false" collective="false" import="true" targetId="93f7-7e2a-3308-d150" type="selectionEntryGroup"/>
         <entryLink id="653f-db98-bb03-133a" name="Battalion Formation" hidden="false" collective="false" import="true" targetId="41a1-ae4d-94d3-e9df" type="selectionEntryGroup"/>
       </entryLinks>
+      <costs>
+        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="490.0"/>
+      </costs>
     </entryLink>
     <entryLink id="0cb1-af4d-cd04-08eb" name="Mancrusher Gargants" hidden="false" collective="false" import="true" targetId="78ba-54ba-0520-842d" type="selectionEntry">
       <entryLinks>
         <entryLink id="2e12-8936-9e74-a6c4" name="Battalion Formation" hidden="false" collective="false" import="true" targetId="41a1-ae4d-94d3-e9df" type="selectionEntryGroup"/>
       </entryLinks>
+      <costs>
+        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="450.0"/>
+      </costs>
     </entryLink>
     <entryLink id="1b9c-b4d7-8ea4-70df" name="Warstomper Mega-Gargant" hidden="false" collective="false" import="true" targetId="6453-cf3c-50fb-db1c" type="selectionEntry">
       <entryLinks>
@@ -313,22 +352,12 @@
         </entryLink>
         <entryLink id="63b9-48c3-501a-a090" name="Artefacts of Power" hidden="false" collective="false" import="true" targetId="c221-dcce-8761-8619" type="selectionEntryGroup"/>
         <entryLink id="9fb7-f036-356d-675d" name="Command Traits" hidden="false" collective="false" import="true" targetId="4062-35b3-efff-dd5b" type="selectionEntryGroup"/>
-        <entryLink id="269b-d19f-3722-aad3" name="Universal Spell Lore" hidden="false" collective="false" import="true" targetId="93f7-7e2a-3308-d150" type="selectionEntryGroup">
-          <modifiers>
-            <modifier type="set" field="hidden" value="true">
-              <conditionGroups>
-                <conditionGroup type="and">
-                  <conditions>
-                    <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="7ee2-0d81-544f-5d7e" type="equalTo"/>
-                    <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="7ee2-0d81-544f-5d7e" type="notInstanceOf"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
-            </modifier>
-          </modifiers>
-        </entryLink>
+        <entryLink id="269b-d19f-3722-aad3" name="Universal Spell Lore" hidden="false" collective="false" import="true" targetId="93f7-7e2a-3308-d150" type="selectionEntryGroup"/>
         <entryLink id="2bbc-43a9-e4e1-7857" name="Battalion Formation" hidden="false" collective="false" import="true" targetId="41a1-ae4d-94d3-e9df" type="selectionEntryGroup"/>
       </entryLinks>
+      <costs>
+        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="450.0"/>
+      </costs>
     </entryLink>
     <entryLink id="7947-579b-0d8a-fc7b" name="Allegiance" hidden="false" collective="false" import="true" targetId="c85d-d860-2f43-d56d" type="selectionEntry">
       <modifiers>
@@ -349,13 +378,48 @@
       <entryLinks>
         <entryLink id="87eb-5aa4-8c03-cc0e" name="Battalion Formation" hidden="false" collective="false" import="true" targetId="41a1-ae4d-94d3-e9df" type="selectionEntryGroup"/>
       </entryLinks>
+      <costs>
+        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="535.0"/>
+      </costs>
     </entryLink>
     <entryLink id="c09b-364d-20b0-7b10" name="Mancrusher Gargant" hidden="false" collective="false" import="true" targetId="488c-01e0-df1a-9de4" type="selectionEntry">
       <entryLinks>
         <entryLink id="c91c-2974-977e-a5dc" name="Battalion Formation" hidden="false" collective="false" import="true" targetId="41a1-ae4d-94d3-e9df" type="selectionEntryGroup"/>
       </entryLinks>
+      <costs>
+        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="150.0"/>
+      </costs>
     </entryLink>
-    <entryLink id="23c0-5ef9-067a-baee" name="Kragnos, The End of Empires" hidden="false" collective="false" import="true" targetId="52c3-aded-0a1a-6c1e" type="selectionEntry"/>
+    <entryLink id="23c0-5ef9-067a-baee" name="Kragnos, The End of Empires" hidden="false" collective="false" import="true" targetId="52c3-aded-0a1a-6c1e" type="selectionEntry">
+      <entryLinks>
+        <entryLink id="01ec-7e8e-5ebe-a8a2" name="Battalion Formation" hidden="false" collective="false" import="true" targetId="41a1-ae4d-94d3-e9df" type="selectionEntryGroup"/>
+      </entryLinks>
+    </entryLink>
+    <entryLink id="e2bd-3205-9fd5-aa16" name="Beast-smasher Mega-Gargant" hidden="false" collective="false" import="true" targetId="a387-4e99-28e8-aafc" type="selectionEntry">
+      <entryLinks>
+        <entryLink id="03d3-b2f5-9c63-fdaa" name="General" hidden="false" collective="false" import="true" targetId="98a4-3d6d-a7b9-399f" type="selectionEntry">
+          <categoryLinks>
+            <categoryLink id="9693-d83d-4538-1298" name="General - Beast-smasher" hidden="false" targetId="5e6f-5fd6-4ddb-6ab8" primary="false"/>
+          </categoryLinks>
+        </entryLink>
+        <entryLink id="fc90-8665-ec5b-d668" name="Artefacts of Power" hidden="false" collective="false" import="true" targetId="c221-dcce-8761-8619" type="selectionEntryGroup"/>
+        <entryLink id="e402-36a1-b134-4440" name="Command Traits" hidden="false" collective="false" import="true" targetId="4062-35b3-efff-dd5b" type="selectionEntryGroup"/>
+        <entryLink id="0d8e-839d-1879-8133" name="Battalion Formation" hidden="false" collective="false" import="true" targetId="41a1-ae4d-94d3-e9df" type="selectionEntryGroup"/>
+        <entryLink id="afd3-a92a-5a57-6c1a" name="Universal Spell Lore" hidden="false" collective="false" import="true" targetId="93f7-7e2a-3308-d150" type="selectionEntryGroup"/>
+      </entryLinks>
+      <costs>
+        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="500.0"/>
+      </costs>
+    </entryLink>
+    <entryLink id="889e-9265-e926-0e3c" name="King Brodd" hidden="false" collective="false" import="true" targetId="0a06-455a-4e7c-6ec3" type="selectionEntry">
+      <entryLinks>
+        <entryLink id="a259-244d-a117-f79f" name="Bonus General" hidden="false" collective="false" import="true" targetId="c608-7a89-b2b4-124d" type="selectionEntry"/>
+        <entryLink id="1a85-acf2-2a2a-100e" name="Battalion Formation" hidden="false" collective="false" import="true" targetId="41a1-ae4d-94d3-e9df" type="selectionEntryGroup"/>
+      </entryLinks>
+      <costs>
+        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="550.0"/>
+      </costs>
+    </entryLink>
   </entryLinks>
   <sharedSelectionEntries>
     <selectionEntry id="c85d-d860-2f43-d56d" name="Allegiance" hidden="false" collective="false" import="true" type="upgrade">
@@ -387,132 +451,173 @@
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="36b1-edc8-a896-4d56" type="min"/>
           </constraints>
           <profiles>
-            <profile id="1f07-e3aa-354d-921f" name="Sons of Behemat" hidden="false" typeId="c0c2-177b-e761-ec41" typeName="Allegiance Abilities">
+            <profile id="1f07-e3aa-354d-921f" name="Mightier Makes Rightier" hidden="false" typeId="c0c2-177b-e761-ec41" typeName="Allegiance Abilities">
               <characteristics>
-                <characteristic name="Allegiance Ability" typeId="0506-f62d-68b3-5499">When determining control of an objective, each friendly MANCRUSHER GARGANT model counts as 10 models instead of 1, and each friendly MEGAGARGANT counts as 20 models instead of 1.
-
-Designer’s Note: If the battleplan being played does not follow the normal rules for controlling objectives, you can pick whether to use this battle trait or to follow the rules from the battleplan each time control of the objective is determined.</characteristic>
+                <characteristic name="Allegiance Ability" typeId="0506-f62d-68b3-5499">Each MEGA-GARGANT has a Mightier Makes Rightier value listed on its damage table on its warscroll. For the purposes of contesting objectives, each MEGA-GARGANT model in a Sons of Behemat army counts as a number of models equal to its Mightier Makes Rightier value, while each MANCRUSHER GARGANT model counts as 10 models.</characteristic>
               </characteristics>
             </profile>
-            <profile id="be03-81c4-bacd-cbfd" name="Chuck Rocks" hidden="false" typeId="c0c2-177b-e761-ec41" typeName="Allegiance Abilities">
+            <profile id="be03-81c4-bacd-cbfd" name="Wrath of Titans" hidden="false" typeId="c0c2-177b-e761-ec41" typeName="Allegiance Abilities">
               <characteristics>
-                <characteristic name="Allegiance Ability" typeId="0506-f62d-68b3-5499">In your shooting phase, you can pick 1 friendly MANCRUSHER GARGANT unit wholly within 18&quot; of your general. Each model in that unit can make a shooting attack with the Chuck Rocks missile weapon below:
+                <characteristic name="Allegiance Ability" typeId="0506-f62d-68b3-5499">When you carry out a monstrous rampage with a friendly MEGA-GARGANT, you can carry out 1 of the monstrous rampages below instead of any other monstrous rampage you can carry out with that unit.
 
-Range: 18&quot;, Attacks: D3, To Hit: 4+, To Wound: 3+, Rend: -1, Damage: D3</characteristic>
+Beast Grapple: Pick 1 enemy MONSTER that is not part of a unit consisting of 2 or more models, that is within 3&quot; of this unit and roll a dice. On a 3+, until the end of the following combat phase, the strike-last effect applies to both that MONSTER and the unit carrying out this monstrous rampage.
+
+Earth-shaking Roar: Pick 1 enemy unit with a Wounds characteristic of 1 or 2 within 3&quot; of this unit and roll 2D6. If the roll is higher than that unit’s Bravery characteristic, for each point by which the roll exceeds the unit’s Bravery characteristic, 1 model in that unit flees. That unit’s commanding player decides which models flee. The effect of this monstrous rampage is not considered to be a battleshock test.
+
+Colossal Slam: Pick 1 enemy MONSTER that is not part of a unit consisting of 2 or more models and that is within 1/2&quot; of this unit. Roll a dice. On a 3+, you can remove that MONSTER from the battlefield and set it up again anywhere wholly on open ground within 1/2&quot; of this unit. That MONSTER suffers D3 mortal wounds. In addition, subtract 1 from hit rolls for attacks made by the unit carrying out this monstrous rampage until the end of the following combat phase.
+
+Designer’s Note: If it is not possible to set up that MONSTER on the battlefield, return that MONSTER to its original position.</characteristic>
               </characteristics>
             </profile>
             <profile id="33e2-137b-935f-eefd" name="Lord and Master" hidden="false" typeId="c0c2-177b-e761-ec41" typeName="Allegiance Abilities">
               <characteristics>
-                <characteristic name="Allegiance Ability" typeId="0506-f62d-68b3-5499">The general of a Sons of Behemat army must be one of the following types of MEGA-GARGANT. Depending on the type of MEGA-GARGANT you choose, you can use the extra abilities listed on the pages indicated.
+                <characteristic name="Allegiance Ability" typeId="0506-f62d-68b3-5499">You must decide whether your Sons of Behemat army will be a Taker Tribe army, a Breaker Tribe army, a Smasher Tribe army or a Stomper Tribe army. The type you pick dictates the general of your army, as follows:
 
-• KRAKEN-EATER. A Sons of Behemat army with this type of general is referred to as a ‘Taker Tribe’.
+Taker Tribe: Your general must be a KRAKEN-EATER.
 
-• WARSTOMPER. A Sons of Behemat army with this type of general is referred to as a ‘Stomper Tribe’.
+Breaker Tribe: Your general must be a GATEBREAKER.
 
-• GATEBREAKER. A Sons of Behemat army with this type of general is referred to as a ‘Breaker Tribe’.</characteristic>
-              </characteristics>
-            </profile>
-            <profile id="cf54-81cc-f696-70e6" name="Get Rid of &apos;Em!" hidden="false" typeId="c0c2-177b-e761-ec41" typeName="Allegiance Abilities">
-              <modifiers>
-                <modifier type="set" field="hidden" value="true">
-                  <conditions>
-                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="d819-a402-4c2f-6a5a" type="equalTo"/>
-                  </conditions>
-                </modifier>
-              </modifiers>
-              <characteristics>
-                <characteristic name="Allegiance Ability" typeId="0506-f62d-68b3-5499">When using the Mightier Makes Rightier rule to determining control of an objective, each friendly MANCRUSHER GARGANT model counts as 15 models instead of 10, and each friendly MEGAGARGANT counts as 30 models instead of 20.</characteristic>
-              </characteristics>
-            </profile>
-            <profile id="b06e-c352-4d88-022d" name="More Stuff For Me Collection" hidden="false" typeId="c0c2-177b-e761-ec41" typeName="Allegiance Abilities">
-              <modifiers>
-                <modifier type="set" field="hidden" value="true">
-                  <conditions>
-                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="d819-a402-4c2f-6a5a" type="equalTo"/>
-                  </conditions>
-                </modifier>
-              </modifiers>
-              <characteristics>
-                <characteristic name="Allegiance Ability" typeId="0506-f62d-68b3-5499">Each time an enemy model with an artefact of power is slain, you can roll for a triumph on the Triumph table. You can use that triumph during the current battle, even if you have already used it. If you do not use it during the current battle, it is lost (you cannot use it in your next battle).</characteristic>
-              </characteristics>
-            </profile>
-            <profile id="11cb-f6ee-d063-6c8b" name="Getting Stuck In" hidden="false" typeId="c0c2-177b-e761-ec41" typeName="Allegiance Abilities">
-              <modifiers>
-                <modifier type="set" field="hidden" value="true">
-                  <conditions>
-                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="09fb-7e27-d6b9-c6e9" type="equalTo"/>
-                  </conditions>
-                </modifier>
-              </modifiers>
-              <characteristics>
-                <characteristic name="Allegiance Ability" typeId="0506-f62d-68b3-5499">Add 1 to the damage inflicted by each successful attack made by a friendly MANCRUSHER GARGANT unit that targets a unit with 10 or more models. Add 2 instead of 1 to the damage inflicted by each successful attack made by a friendly MANCRUSHER GARGANT unit that targets a unit with 20 or more models.</characteristic>
-              </characteristics>
-            </profile>
-            <profile id="bf4f-5b45-fdf6-c85d" name="Big Shouts" hidden="false" typeId="c0c2-177b-e761-ec41" typeName="Allegiance Abilities">
-              <modifiers>
-                <modifier type="set" field="hidden" value="true">
-                  <conditions>
-                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="09fb-7e27-d6b9-c6e9" type="equalTo"/>
-                  </conditions>
-                </modifier>
-              </modifiers>
-              <characteristics>
-                <characteristic name="Allegiance Ability" typeId="0506-f62d-68b3-5499">If your army is a Stomper Tribe, your general must use the following Big Shout command abilities (they cannot use any other command abilities):
+Smasher Tribe: Your general must be a BEAST-SMASHER.
 
-Get a Move On, You Slackers!: You can use this command ability at the start of your movement phase. If you do so, until the end of that phase, if you make a run roll for a friendly MANCRUSHER GARGANT unit that is within 18&quot; of your general, that roll is treated as being 6.
+Stomper Tribe: Your general must be a WARSTOMPER.
 
-Grab Those Rocks and Chuck &apos;Em at Somethin&apos;!: You can use this command ability at the start of your shooting phase. If you do so, when you use the Chuck Rocks battle trait, you can pick all friendly MANCRUSHER GARGANT units within 18&quot; of your general to make Chuck Rocks shooting attacks, instead of only 1 unit.
-
-Oi, You! Yes, You! Charge!: You can use this command ability at the start of your charge phase. If you do so, until the end of that phase, you can re-roll charge rolls for friendly MANCRUSHER GARGANT units that are within 18&quot; of your general.
-
-Stop Muckin&apos; About and Hit &apos;Em!: You can use this command ability at the start of the combat phase. If you do so, until the end of that phase, you can re-roll hit rolls of 1 for attacks made by friendly MANCRUSHER GARGANT units that are within 18&quot; of your general.
-
-Watch Yer Backs, You Gormless Lot!: You can use this command ability at the start of the combat phase. If you do so, until the end of that phase, you can re-roll save rolls of 1 for attacks that target friendly MANCRUSHER GARGANT units that are within 18&quot; of your general.
-
-Where Do You Think You&apos;re Going?: You can use this command ability at the start of your battleshock phase. If you do so, until the end of that phase, do not take battleshock tests for friendly MANCRUSHER GARGANT units that are within 18&quot; of your general.</characteristic>
-              </characteristics>
-            </profile>
-            <profile id="607c-5681-3f04-3b6b" name="Breaking Down the Houses" hidden="false" typeId="c0c2-177b-e761-ec41" typeName="Allegiance Abilities">
-              <modifiers>
-                <modifier type="set" field="hidden" value="true">
-                  <conditions>
-                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="334c-111d-a093-d42a" type="equalTo"/>
-                  </conditions>
-                </modifier>
-              </modifiers>
-              <characteristics>
-                <characteristic name="Allegiance Ability" typeId="0506-f62d-68b3-5499">Add 1 to the damage inflicted by each successful attack made by a friendly MANCRUSHER GARGANT unit that targets a unit that is part of a garrison or is wholly on or within a terrain feature.
-
-In addition, at the end of the combat phase, you can pick 1 terrain feature within 3&quot; of a friendly MANCRUSHER GARGANT unit and roll a dice. Add the number of models in that unit to the roll. On a 7+, that terrain feature is reduced to rubble: all of its scenery rules are replaced with the Deadly scenery rule, and its keywords are changed to SCENERY, RUBBLE.</characteristic>
-              </characteristics>
-            </profile>
-            <profile id="99b9-65f7-fd71-6da9" name="Fierce Loathings" hidden="false" typeId="c0c2-177b-e761-ec41" typeName="Allegiance Abilities">
-              <modifiers>
-                <modifier type="set" field="hidden" value="true">
-                  <conditions>
-                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="334c-111d-a093-d42a" type="equalTo"/>
-                  </conditions>
-                </modifier>
-              </modifiers>
-              <characteristics>
-                <characteristic name="Allegiance Ability" typeId="0506-f62d-68b3-5499">When you pick a Breaker Tribe army, you can choose or roll for 1 ability from the Fierce Loathings table. The ability applies to friendly GATEBREAKER MEGA-GARGANTS and friendly MANCRUSHER GARGANT units.
-
-D6 -- Fierce Loathing
-
-1 -- Bossy Pants and Clever Clogs: Add 1 to hit rolls for attacks made by units with this ability that target a HERO or WIZARD.
-
-2 -- Idiots with Flags: Add 1 to hit rolls for attacks made by units with this ability that target a TOTEM or a unit with any command models.
-
-3 -- Shiny &apos;Uns: Add 1 to hit rolls for attacks made by units with this ability that target a unit with a Save characteristic of 1+, 2+, 3+ or 4+ and that is not a HERO or MONSTER.
-
-4 -- Crowds: Add 1 to hit rolls for attacks made by units with this ability that target a unit with 20 or more models.
-
-5 -- Wannabes: Add 1 to hit rolls for attacks made by units with this ability that target a WAR MACHINE or MONSTER.
-
-6 -- Piggybackers: Add 1 to hit rolls for attacks made by units with this ability that target a unit with a mount and that is not a MONSTER.</characteristic>
+Additional allegiance abilities are available to each type of Sons of Behemat army.</characteristic>
               </characteristics>
             </profile>
           </profiles>
+          <selectionEntryGroups>
+            <selectionEntryGroup id="2d9d-33f4-18f9-cf9c" name="Tribe" hidden="false" collective="false" import="true">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="30c5-ff9f-733d-531f" type="max"/>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="f06b-97b6-78cc-0202" type="min"/>
+              </constraints>
+              <selectionEntries>
+                <selectionEntry id="bd0c-1f0c-c104-0f2f" name="Stomper Tribe" hidden="false" collective="false" import="true" type="upgrade">
+                  <profiles>
+                    <profile id="f193-0a68-8fc5-55ae" name="Big Shouts" hidden="false" typeId="c0c2-177b-e761-ec41" typeName="Allegiance Abilities">
+                      <characteristics>
+                        <characteristic name="Allegiance Ability" typeId="0506-f62d-68b3-5499">After your general issues a command to a friendly MANCRUSHER GARGANT unit, until the end of the phase, they can issue the same command to any other friendly MANCRUSHER GARGANT units without any further command points being spent.</characteristic>
+                      </characteristics>
+                    </profile>
+                    <profile id="653c-5341-415a-3cb0" name="Getting Stuck In" hidden="false" typeId="c0c2-177b-e761-ec41" typeName="Allegiance Abilities">
+                      <characteristics>
+                        <characteristic name="Allegiance Ability" typeId="0506-f62d-68b3-5499">Add 1 to the damage inflicted by each successful attack made by a friendly MANCRUSHER GARGANT unit if it targets an enemy unit that has 10-19 models. Add 2 to the damage inflicted by each successful attack made by a friendly MANCRUSHER GARGANT unit instead if it targets an enemy unit that has 20 or more models.</characteristic>
+                      </characteristics>
+                    </profile>
+                    <profile id="f204-0220-40fe-fab6" name="&apos;Grab Those Rocks and Chuck &apos;em!&apos;" hidden="false" typeId="6364-f76d-fc0c-80bc" typeName="Command Abilities">
+                      <characteristics>
+                        <characteristic name="Command Ability" typeId="36cb-f8a4-d94b-8aa8">You can use this command ability at the start of your shooting phase. The unit that receives the command must be a friendly MANCRUSHER GARGANT unit. Until the end of that phase, add 1 to the Attacks characteristic of that unit’s Throwin’ Rocks.</characteristic>
+                      </characteristics>
+                    </profile>
+                  </profiles>
+                  <costs>
+                    <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
+                  </costs>
+                </selectionEntry>
+                <selectionEntry id="6b30-1ff6-d394-4744" name="Breaker Tribe" hidden="false" collective="false" import="true" type="upgrade">
+                  <profiles>
+                    <profile id="460d-6a97-d5fd-a433" name="Breaking Down the Houses" hidden="false" typeId="c0c2-177b-e761-ec41" typeName="Allegiance Abilities">
+                      <characteristics>
+                        <characteristic name="Allegiance Ability" typeId="0506-f62d-68b3-5499">Add 1 to the damage inflicted by each successful attack made by a friendly MANCRUSHER GARGANT unit that targets an enemy unit that is part of a garrison or that is wholly on a terrain feature.</characteristic>
+                      </characteristics>
+                    </profile>
+                    <profile id="340a-a101-30d6-343d" name="Ramming Speed" hidden="false" typeId="6364-f76d-fc0c-80bc" typeName="Command Abilities">
+                      <characteristics>
+                        <characteristic name="Command Ability" typeId="36cb-f8a4-d94b-8aa8">You can use this command ability at the start of your charge phase. The command can only be issued by your general, and the unit that receives the command must be a friendly MANCRUSHER GARGANT unit. Until the end of that phase, you can attempt a charge with the unit that received the command if it is within 18&quot; of an enemy unit instead of 12&quot;. In addition, roll 3D6 instead of 2D6 when making a charge roll for that unit until the end of that phase.</characteristic>
+                      </characteristics>
+                    </profile>
+                    <profile id="a935-33ef-afc4-0ff4" name="Fierce Loathings" hidden="false" typeId="c0c2-177b-e761-ec41" typeName="Allegiance Abilities">
+                      <characteristics>
+                        <characteristic name="Allegiance Ability" typeId="0506-f62d-68b3-5499">When you pick a Breaker Tribe army, you can pick 1 of the fierce loathings and record it on your army roster. The rule for that fierce loathing applies to friendly GATEBREAKER and MANCRUSHER GARGANT units.</characteristic>
+                      </characteristics>
+                    </profile>
+                  </profiles>
+                  <selectionEntryGroups>
+                    <selectionEntryGroup id="b45a-26aa-1cab-0a20" name="Fierce Loathings" hidden="false" collective="false" import="true">
+                      <constraints>
+                        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="feaf-e816-4ce5-fee9" type="max"/>
+                      </constraints>
+                      <selectionEntries>
+                        <selectionEntry id="2c2c-afd5-7f6e-e6e8" name="Wannabes" hidden="false" collective="false" import="true" type="upgrade">
+                          <profiles>
+                            <profile id="4fff-439e-e6d4-b3a6" name="Wannabes" hidden="false" typeId="c0c2-177b-e761-ec41" typeName="Allegiance Abilities">
+                              <characteristics>
+                                <characteristic name="Allegiance Ability" typeId="0506-f62d-68b3-5499">Add 1 to hit rolls for attacks made by this unit that target an enemy WAR MACHINE or MONSTER.</characteristic>
+                              </characteristics>
+                            </profile>
+                          </profiles>
+                          <costs>
+                            <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
+                          </costs>
+                        </selectionEntry>
+                        <selectionEntry id="a24a-8c42-6ce2-a3e8" name="Idiots with Fangs" hidden="false" collective="false" import="true" type="upgrade">
+                          <profiles>
+                            <profile id="d728-ed69-8cbf-ad44" name="Idiots with Fangs" hidden="false" typeId="c0c2-177b-e761-ec41" typeName="Allegiance Abilities">
+                              <characteristics>
+                                <characteristic name="Allegiance Ability" typeId="0506-f62d-68b3-5499">Add 1 to hit rolls for attacks made by this unit that target an enemy TOTEM or unit with any command models.</characteristic>
+                              </characteristics>
+                            </profile>
+                          </profiles>
+                          <costs>
+                            <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
+                          </costs>
+                        </selectionEntry>
+                        <selectionEntry id="44d1-e321-ee80-a515" name="Bossyboots and Clever Clogs" hidden="false" collective="false" import="true" type="upgrade">
+                          <profiles>
+                            <profile id="508d-700a-ef8f-6b9e" name="Bossyboots and Clever Clogs" hidden="false" typeId="c0c2-177b-e761-ec41" typeName="Allegiance Abilities">
+                              <characteristics>
+                                <characteristic name="Allegiance Ability" typeId="0506-f62d-68b3-5499">Add 1 to hit rolls for attacks made by this unit that target an enemy HERO or WIZARD.</characteristic>
+                              </characteristics>
+                            </profile>
+                          </profiles>
+                          <costs>
+                            <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
+                          </costs>
+                        </selectionEntry>
+                      </selectionEntries>
+                    </selectionEntryGroup>
+                  </selectionEntryGroups>
+                  <costs>
+                    <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
+                  </costs>
+                </selectionEntry>
+                <selectionEntry id="d101-cbef-797d-d07b" name="Smasher Tribe" hidden="false" collective="false" import="true" type="upgrade">
+                  <profiles>
+                    <profile id="02e0-18f3-b7b1-db9d" name="Bone-crunching Strikes" hidden="false" typeId="c0c2-177b-e761-ec41" typeName="Allegiance Abilities">
+                      <characteristics>
+                        <characteristic name="Allegiance Ability" typeId="0506-f62d-68b3-5499">When a friendly MANCRUSHER GARGANT unit fights, if it is within 3&quot; of an enemy MONSTER, you can say that it will unleash a bone-crunching strike. If you do so, until the end of the phase, the Attacks characteristic of that unit’s Massive Club is 1 and cannot be modified, the Damage characteristic is 4D6, and all attacks made with its Massive Club must target an enemy MONSTER.</characteristic>
+                      </characteristics>
+                    </profile>
+                    <profile id="833c-70ce-aac9-bf29" name="&apos;Don&apos;t Let a Few Cuts Stop Yer!&apos;" hidden="false" typeId="6364-f76d-fc0c-80bc" typeName="Command Abilities">
+                      <characteristics>
+                        <characteristic name="Command Ability" typeId="36cb-f8a4-d94b-8aa8">You can use this command ability at the start of the combat phase. The command can only be issued by your general, and the unit that receives the command must be a friendly MANCRUSHER GARGANT unit. Until the end of that phase, use the top row on that unit’s damage table, regardless of how many wounds it has suffered. In addition, until the end of that phase, each time a model in that unit is slain, if that unit has not yet fought in that phase, that model can fight before it is removed from play.</characteristic>
+                      </characteristics>
+                    </profile>
+                  </profiles>
+                  <costs>
+                    <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
+                  </costs>
+                </selectionEntry>
+                <selectionEntry id="7c64-e0d3-0cec-c1cf" name="Taker Tribe" hidden="false" collective="false" import="true" type="upgrade">
+                  <profiles>
+                    <profile id="39f9-9fd6-f509-8a12" name="&apos;Get Rid of &apos;em!&apos;" hidden="false" typeId="c0c2-177b-e761-ec41" typeName="Allegiance Abilities">
+                      <characteristics>
+                        <characteristic name="Allegiance Ability" typeId="0506-f62d-68b3-5499">For the purposes of contesting objectives, each friendly MANCRUSHER GARGANT model counts as 15 models instead of 10. In addition, add 5 to the Mightier Makes Rightier value for friendly KRAKEN-EATERS that are contesting an objective.</characteristic>
+                      </characteristics>
+                    </profile>
+                    <profile id="e3f9-ecba-7fa6-2bdc" name="&apos;I Want That For Me Collection!&apos;" hidden="false" typeId="6364-f76d-fc0c-80bc" typeName="Command Abilities">
+                      <characteristics>
+                        <characteristic name="Command Ability" typeId="36cb-f8a4-d94b-8aa8">You can use this command ability at the start of the combat phase. The command can only be issued by your general, and the unit that receives the command must be a friendly MANCRUSHER GARGANT unit. Until the end of that phase, add 1 to the Damage characteristic of attacks made with melee weapons that target an enemy unit that bears an artefact of power or is Unique.</characteristic>
+                      </characteristics>
+                    </profile>
+                  </profiles>
+                  <costs>
+                    <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
+                  </costs>
+                </selectionEntry>
+              </selectionEntries>
+            </selectionEntryGroup>
+          </selectionEntryGroups>
           <costs>
             <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
           </costs>
@@ -536,23 +641,16 @@ D6 -- Fierce Loathing
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="a585-9d43-17af-ea64" type="max"/>
       </constraints>
       <selectionEntryGroups>
-        <selectionEntryGroup id="ab9a-a12c-bea8-3bc1" name="Irascible Old Bullies" hidden="false" collective="false" import="true">
-          <modifiers>
-            <modifier type="set" field="hidden" value="true">
-              <conditions>
-                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="d819-a402-4c2f-6a5a" type="equalTo"/>
-              </conditions>
-            </modifier>
-          </modifiers>
+        <selectionEntryGroup id="ab9a-a12c-bea8-3bc1" name="Big Personalities" hidden="false" collective="false" import="true">
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="6eb9-e4f3-c92c-7d1a" type="max"/>
           </constraints>
           <selectionEntries>
-            <selectionEntry id="da15-4099-f43f-1337" name="6. Extremely Intimidating" hidden="false" collective="false" import="true" type="upgrade">
+            <selectionEntry id="7d61-ef6c-efa6-5332" name="2. Furious Temper" hidden="false" collective="false" import="true" type="upgrade">
               <profiles>
-                <profile id="e670-8f7a-d8db-147b" name="Extremely Intimidating" hidden="false" typeId="1504-23bf-8850-4f65" typeName="Command Traits">
+                <profile id="cb5f-46dd-1649-897e" name="Furious Temper" hidden="false" typeId="1504-23bf-8850-4f65" typeName="Command Traits">
                   <characteristics>
-                    <characteristic name="Command Trait" typeId="0145-9acf-f5dc-d543">Subtract 1 from hit rolls for enemy models that are within 3&quot; of this general.</characteristic>
+                    <characteristic name="Command Trait" typeId="0145-9acf-f5dc-d543">Once per battle, when this general is picked to fight, you can say that they are overcome with rage. If you do so, until the end of that phase, use the top row on this general’s damage table, regardless of how many wounds they have suffered.</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
@@ -560,53 +658,11 @@ D6 -- Fierce Loathing
                 <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
               </costs>
             </selectionEntry>
-            <selectionEntry id="7d61-ef6c-efa6-5332" name="2. Old and Gnarly" hidden="false" collective="false" import="true" type="upgrade">
+            <selectionEntry id="0e2c-b692-219d-8454" name="3. Rabble Rouser" hidden="false" collective="false" import="true" type="upgrade">
               <profiles>
-                <profile id="cb5f-46dd-1649-897e" name="Old and Gnarly" hidden="false" typeId="1504-23bf-8850-4f65" typeName="Command Traits">
+                <profile id="1dd5-ffad-4c35-1863" name="Rabble Rouser" hidden="false" typeId="1504-23bf-8850-4f65" typeName="Command Traits">
                   <characteristics>
-                    <characteristic name="Command Trait" typeId="0145-9acf-f5dc-d543">You can re-roll save rolls of 1 for attacks that target this general.</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-              <costs>
-                <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
-              </costs>
-            </selectionEntry>
-            <selectionEntry id="1233-d596-a8c7-f2b7" name="5. Very Acquisitive" hidden="false" collective="false" import="true" type="upgrade">
-              <profiles>
-                <profile id="7a38-29b7-f14b-7ce1" name="Very Acquisitive" hidden="false" typeId="1504-23bf-8850-4f65" typeName="Command Traits">
-                  <characteristics>
-                    <characteristic name="Command Trait" typeId="0145-9acf-f5dc-d543">You can take 1 extra Trophies Taken By Force artefact of power for this general’s army. In addition, this general can have up to 2 artefacts of power instead of 1.</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-              <categoryLinks>
-                <categoryLink id="d35f-7b95-7c37-7356" name="ArtefactPlus" hidden="false" targetId="606f-9b75-948c-bf2c" primary="false"/>
-              </categoryLinks>
-              <entryLinks>
-                <entryLink id="a7ed-cc3d-1c73-f9cb" name="Artefacts of Power" hidden="false" collective="false" import="true" targetId="c221-dcce-8761-8619" type="selectionEntryGroup"/>
-              </entryLinks>
-              <costs>
-                <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
-              </costs>
-            </selectionEntry>
-            <selectionEntry id="5614-8653-1ba2-78be" name="4. Strong Right Foot" hidden="false" collective="false" import="true" type="upgrade">
-              <profiles>
-                <profile id="e015-81bc-779a-b7b7" name="Strong Right Foot" hidden="false" typeId="1504-23bf-8850-4f65" typeName="Command Traits">
-                  <characteristics>
-                    <characteristic name="Command Trait" typeId="0145-9acf-f5dc-d543">When you use this general’s Get Orf Me Land! ability to kick an objective marker away, you can roll 3D6 instead of 2D6 to determine how far it is kicked.</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-              <costs>
-                <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
-              </costs>
-            </selectionEntry>
-            <selectionEntry id="0e2c-b692-219d-8454" name="3. Louder than Words" hidden="false" collective="false" import="true" type="upgrade">
-              <profiles>
-                <profile id="1dd5-ffad-4c35-1863" name="Louder than Words" hidden="false" typeId="1504-23bf-8850-4f65" typeName="Command Traits">
-                  <characteristics>
-                    <characteristic name="Command Trait" typeId="0145-9acf-f5dc-d543">Add 1 to the Attacks characteristic of this general’s Shipwrecka Warclub.</characteristic>
+                    <characteristic name="Command Trait" typeId="0145-9acf-f5dc-d543">Add 1 to charge rolls for friendly SONS OF BEHEMAT units wholly within 18&quot; of this general.</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
@@ -628,11 +684,11 @@ D6 -- Fierce Loathing
             </selectionEntry>
           </selectionEntries>
         </selectionEntryGroup>
-        <selectionEntryGroup id="19bd-172f-d262-174e" name="Veterans of One-sided Battle" hidden="false" collective="false" import="true">
+        <selectionEntryGroup id="19bd-172f-d262-174e" name="Stomper Tribe" hidden="false" collective="false" import="true">
           <modifiers>
             <modifier type="set" field="hidden" value="true">
               <conditions>
-                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="09fb-7e27-d6b9-c6e9" type="equalTo"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="bd0c-1f0c-c104-0f2f" type="equalTo"/>
               </conditions>
             </modifier>
           </modifiers>
@@ -640,11 +696,11 @@ D6 -- Fierce Loathing
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="6d75-14e6-1c0e-e46e" type="max"/>
           </constraints>
           <selectionEntries>
-            <selectionEntry id="2877-ec0c-6e30-d5aa" name="6. Eager for the Fight" hidden="false" collective="false" import="true" type="upgrade">
+            <selectionEntry id="2877-ec0c-6e30-d5aa" name="2. Eager for the Fight" hidden="false" collective="false" import="true" type="upgrade">
               <profiles>
                 <profile id="84e8-3bce-4134-ee42" name="Eager for the Fight" hidden="false" typeId="1504-23bf-8850-4f65" typeName="Command Traits">
                   <characteristics>
-                    <characteristic name="Command Trait" typeId="0145-9acf-f5dc-d543">You can attempt to charge with this general if it is within 18&quot; of the enemy instead of 12&quot;. Roll 3D6 instead of 2D6 when making a charge roll for this general.</characteristic>
+                    <characteristic name="Command Trait" typeId="0145-9acf-f5dc-d543">You can attempt a charge with this general if it is within 18&quot; of an enemy unit instead of 12&quot;. In addition, roll 3D6 instead of 2D6 when making a charge roll for this general.</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
@@ -652,59 +708,11 @@ D6 -- Fierce Loathing
                 <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
               </costs>
             </selectionEntry>
-            <selectionEntry id="6623-681e-b0de-9845" name="5. Very Shouty" hidden="false" collective="false" import="true" type="upgrade">
-              <profiles>
-                <profile id="ec7a-727f-6e90-836c" name="Very Shouty" hidden="false" typeId="1504-23bf-8850-4f65" typeName="Command Traits">
-                  <characteristics>
-                    <characteristic name="Command Trait" typeId="0145-9acf-f5dc-d543">If this general is on the battlefield at the start of the first battle round, you receive D3 extra command points.</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-              <costs>
-                <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
-              </costs>
-            </selectionEntry>
-            <selectionEntry id="915c-5bb5-625e-35ca" name="4. Inescapable Grip" hidden="false" collective="false" import="true" type="upgrade">
+            <selectionEntry id="915c-5bb5-625e-35ca" name="1. Inescapable Grip" hidden="false" collective="false" import="true" type="upgrade">
               <profiles>
                 <profile id="e39e-452b-a719-9dcc" name="Inescapable Grip" hidden="false" typeId="1504-23bf-8850-4f65" typeName="Command Traits">
                   <characteristics>
-                    <characteristic name="Command Trait" typeId="0145-9acf-f5dc-d543">When you use this general’s Hurled Body ability, you can re-roll the dice that determines if the target is slain and thrown.</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-              <costs>
-                <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
-              </costs>
-            </selectionEntry>
-            <selectionEntry id="0d9d-ad53-3d38-039b" name="1. Monstrously Tough" hidden="false" collective="false" import="true" type="upgrade">
-              <profiles>
-                <profile id="b5b9-e4fc-40aa-736f" name="Monstrously Tough" hidden="false" typeId="1504-23bf-8850-4f65" typeName="Command Traits">
-                  <characteristics>
-                    <characteristic name="Command Trait" typeId="0145-9acf-f5dc-d543">This general has a Wounds characteristic of 40 instead of 35.</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-              <costs>
-                <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
-              </costs>
-            </selectionEntry>
-            <selectionEntry id="10c5-f68e-3b9c-8c9a" name="2. Old and Gnarly" hidden="false" collective="false" import="true" type="upgrade">
-              <profiles>
-                <profile id="f544-f654-0ed7-ae59" name="Old and Gnarly" hidden="false" typeId="1504-23bf-8850-4f65" typeName="Command Traits">
-                  <characteristics>
-                    <characteristic name="Command Trait" typeId="0145-9acf-f5dc-d543">You can re-roll save rolls of 1 for attacks that target this general.</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-              <costs>
-                <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
-              </costs>
-            </selectionEntry>
-            <selectionEntry id="6dec-3c28-1d02-83a4" name="3. Louder than Words" hidden="false" collective="false" import="true" type="upgrade">
-              <profiles>
-                <profile id="880d-ce5a-512c-dffc" name="Louder than Words" hidden="false" typeId="1504-23bf-8850-4f65" typeName="Command Traits">
-                  <characteristics>
-                    <characteristic name="Command Trait" typeId="0145-9acf-f5dc-d543">Add 1 to the Attacks characteristic of this general’s Shipwrecka Warclub.</characteristic>
+                    <characteristic name="Command Trait" typeId="0145-9acf-f5dc-d543">When you use this general’s Hurled Body ability, you can re-roll both dice rolls.</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
@@ -714,11 +722,11 @@ D6 -- Fierce Loathing
             </selectionEntry>
           </selectionEntries>
         </selectionEntryGroup>
-        <selectionEntryGroup id="9f43-ca3e-e945-6809" name="Unstoppable Besiegers" hidden="false" collective="false" import="true">
+        <selectionEntryGroup id="9f43-ca3e-e945-6809" name="Breaker Tribe" hidden="false" collective="false" import="true">
           <modifiers>
             <modifier type="set" field="hidden" value="true">
               <conditions>
-                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="334c-111d-a093-d42a" type="equalTo"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="6b30-1ff6-d394-4744" type="equalTo"/>
               </conditions>
             </modifier>
           </modifiers>
@@ -726,59 +734,68 @@ D6 -- Fierce Loathing
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="1f45-5d5a-87d0-6b93" type="max"/>
           </constraints>
           <selectionEntries>
-            <selectionEntry id="8cc8-19a7-7e1f-b7b2" name="2. Old and Gnarly" hidden="false" collective="false" import="true" type="upgrade">
-              <profiles>
-                <profile id="8af2-24a7-d355-d998" name="Old and Gnarly" hidden="false" typeId="1504-23bf-8850-4f65" typeName="Command Traits">
-                  <characteristics>
-                    <characteristic name="Command Trait" typeId="0145-9acf-f5dc-d543">You can re-roll save rolls of 1 for attacks that target this general.</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-              <costs>
-                <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
-              </costs>
-            </selectionEntry>
-            <selectionEntry id="25e8-097b-0b3b-1d0c" name="3. Louder than Words" hidden="false" collective="false" import="true" type="upgrade">
-              <profiles>
-                <profile id="6121-8c97-fc06-29de" name="Louder than Words" hidden="false" typeId="1504-23bf-8850-4f65" typeName="Command Traits">
-                  <characteristics>
-                    <characteristic name="Command Trait" typeId="0145-9acf-f5dc-d543">Add 1 to the Attacks characteristic of this general’s Shipwrecka Warclub.</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-              <costs>
-                <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
-              </costs>
-            </selectionEntry>
-            <selectionEntry id="3666-df44-8b8d-f4a3" name="1. Monstrously Tough" hidden="false" collective="false" import="true" type="upgrade">
-              <profiles>
-                <profile id="663c-2e8a-4a4a-d45b" name="Monstrously Tough" hidden="false" typeId="1504-23bf-8850-4f65" typeName="Command Traits">
-                  <characteristics>
-                    <characteristic name="Command Trait" typeId="0145-9acf-f5dc-d543">This general has a Wounds characteristic of 40 instead of 35.</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-              <costs>
-                <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
-              </costs>
-            </selectionEntry>
-            <selectionEntry id="b5b1-87a0-2782-ccaf" name="4. Extremely Bitter" hidden="false" collective="false" import="true" type="upgrade">
+            <selectionEntry id="b5b1-87a0-2782-ccaf" name="1. Extremely Bitter" hidden="false" collective="false" import="true" type="upgrade">
               <profiles>
                 <profile id="e454-9bf5-d2d3-643f" name="Extremely Bitter" hidden="false" typeId="1504-23bf-8850-4f65" typeName="Command Traits">
                   <characteristics>
-                    <characteristic name="Command Trait" typeId="0145-9acf-f5dc-d543">You can choose or roll for 2 abilities from the Fierce Loathings table for your army instead of 1. If you randomly generate the second, roll again if it is the same as the first. The second ability only applies to the general.</characteristic>
+                    <characteristic name="Command Trait" typeId="0145-9acf-f5dc-d543">You can pick a second fierce loathing that applies only to your general.</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
+              <selectionEntryGroups>
+                <selectionEntryGroup id="1733-f81c-636b-80dd" name="Fierce Loathings" hidden="false" collective="false" import="true">
+                  <constraints>
+                    <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="7375-fb4a-3f95-d60e" type="max"/>
+                  </constraints>
+                  <selectionEntries>
+                    <selectionEntry id="e81a-b36e-38d5-39fa" name="Wannabes" hidden="false" collective="false" import="true" type="upgrade">
+                      <profiles>
+                        <profile id="3ec6-d04b-2ce7-5cf6" name="Wannabes" hidden="false" typeId="c0c2-177b-e761-ec41" typeName="Allegiance Abilities">
+                          <characteristics>
+                            <characteristic name="Allegiance Ability" typeId="0506-f62d-68b3-5499">Add 1 to hit rolls for attacks made by this unit that target an enemy WAR MACHINE or MONSTER.</characteristic>
+                          </characteristics>
+                        </profile>
+                      </profiles>
+                      <costs>
+                        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
+                      </costs>
+                    </selectionEntry>
+                    <selectionEntry id="4151-daa6-c32d-270d" name="Idiots with Fangs" hidden="false" collective="false" import="true" type="upgrade">
+                      <profiles>
+                        <profile id="2367-bc30-b363-e9c3" name="Idiots with Fangs" hidden="false" typeId="c0c2-177b-e761-ec41" typeName="Allegiance Abilities">
+                          <characteristics>
+                            <characteristic name="Allegiance Ability" typeId="0506-f62d-68b3-5499">Add 1 to hit rolls for attacks made by this unit that target an enemy TOTEM or unit with any command models.</characteristic>
+                          </characteristics>
+                        </profile>
+                      </profiles>
+                      <costs>
+                        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
+                      </costs>
+                    </selectionEntry>
+                    <selectionEntry id="e26b-e866-003e-a4fc" name="Bossyboots and Clever Clogs" hidden="false" collective="false" import="true" type="upgrade">
+                      <profiles>
+                        <profile id="cf82-a1be-5e45-47ec" name="Bossyboots and Clever Clogs" hidden="false" typeId="c0c2-177b-e761-ec41" typeName="Allegiance Abilities">
+                          <characteristics>
+                            <characteristic name="Allegiance Ability" typeId="0506-f62d-68b3-5499">Add 1 to hit rolls for attacks made by this unit that target an enemy HERO or WIZARD.</characteristic>
+                          </characteristics>
+                        </profile>
+                      </profiles>
+                      <costs>
+                        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
+                      </costs>
+                    </selectionEntry>
+                  </selectionEntries>
+                </selectionEntryGroup>
+              </selectionEntryGroups>
               <costs>
                 <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
               </costs>
             </selectionEntry>
-            <selectionEntry id="401f-1227-ef2f-6b3e" name="6. Sees Red" hidden="false" collective="false" import="true" type="upgrade">
+            <selectionEntry id="401f-1227-ef2f-6b3e" name="2. Sees Red" hidden="false" collective="false" import="true" type="upgrade">
               <profiles>
                 <profile id="8a9f-9977-0bba-6017" name="Sees Red" hidden="false" typeId="1504-23bf-8850-4f65" typeName="Command Traits">
                   <characteristics>
-                    <characteristic name="Command Trait" typeId="0145-9acf-f5dc-d543">While this general is within 9&quot; of a terrain feature that can have a garrison, when you look up a value on this general’s damage table, they are treated as if they have suffered 0 wounds.</characteristic>
+                    <characteristic name="Command Trait" typeId="0145-9acf-f5dc-d543">In the combat phase, if this general is within 3&quot; of a defensible terrain feature or an enemy unit that is wholly on a terrain feature, use the top row on this general’s damage table, regardless of how many wounds they have suffered.</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
@@ -786,11 +803,81 @@ D6 -- Fierce Loathing
                 <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
               </costs>
             </selectionEntry>
-            <selectionEntry id="686e-67db-c1b7-ca2c" name="5. Smasher" hidden="false" collective="false" import="true" type="upgrade">
+          </selectionEntries>
+        </selectionEntryGroup>
+        <selectionEntryGroup id="fb24-0c06-533b-7f60" name="Taker Tribe" hidden="false" collective="false" import="true">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="7c64-e0d3-0cec-c1cf" type="equalTo"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="f5de-bf47-f8e6-d538" type="max"/>
+          </constraints>
+          <selectionEntries>
+            <selectionEntry id="5570-42f7-440f-97ae" name="2. Extremely Intimidating" hidden="false" collective="false" import="true" type="upgrade">
               <profiles>
-                <profile id="abb8-ff20-3a14-a639" name="Smasher" hidden="false" typeId="1504-23bf-8850-4f65" typeName="Command Traits">
+                <profile id="d9ee-9318-7152-b579" name="Extremely Intimidating" hidden="false" typeId="1504-23bf-8850-4f65" typeName="Command Traits">
                   <characteristics>
-                    <characteristic name="Command Trait" typeId="0145-9acf-f5dc-d543">When you use this general’s Smash Down ability, you can re-roll the dice roll that determines if the terrain feature is turned into rubble.</characteristic>
+                    <characteristic name="Command Trait" typeId="0145-9acf-f5dc-d543">Enemy units within 6&quot; of this general cannot receive the Inspiring Presence or Rally commands.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <costs>
+                <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="043f-004a-c860-43fc" name="1. Very Acquisitive" hidden="false" collective="false" import="true" type="upgrade">
+              <profiles>
+                <profile id="48df-d961-d0f5-55eb" name="Very Acquisitive" hidden="false" typeId="1504-23bf-8850-4f65" typeName="Command Traits">
+                  <characteristics>
+                    <characteristic name="Command Trait" typeId="0145-9acf-f5dc-d543">If you give an artefact of power to this general, you can pick 1 additional artefact of power and give it to them as well (this general can have 2 artefacts of power). Both artefacts of power must be different.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <categoryLinks>
+                <categoryLink id="fb25-6d39-2605-1e7c" name="ArtefactPlus" hidden="false" targetId="606f-9b75-948c-bf2c" primary="false"/>
+              </categoryLinks>
+              <entryLinks>
+                <entryLink id="4afd-cde3-0764-e262" name="Artefacts of Power" hidden="false" collective="false" import="true" targetId="c221-dcce-8761-8619" type="selectionEntryGroup"/>
+              </entryLinks>
+              <costs>
+                <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
+              </costs>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
+        <selectionEntryGroup id="f81b-e0ad-7c17-fc02" name="Smasher Tribe" hidden="false" collective="false" import="true">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="d101-cbef-797d-d07b" type="equalTo"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="4fff-b548-3f4c-7a62" type="max"/>
+          </constraints>
+          <selectionEntries>
+            <selectionEntry id="c785-c240-c576-00ea" name="2. Marrow-drinker" hidden="false" collective="false" import="true" type="upgrade">
+              <profiles>
+                <profile id="b8d3-37e2-2490-8a27" name="Marrow-drinker" hidden="false" typeId="1504-23bf-8850-4f65" typeName="Command Traits">
+                  <characteristics>
+                    <characteristic name="Command Trait" typeId="0145-9acf-f5dc-d543">Each time an enemy MONSTER is slain by this general, roll a number of dice equal to that MONSTER’s Wounds characteristic. For each 5+, you can heal 1 wound allocated to this general.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <costs>
+                <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="e2e5-b0c3-66f1-904e" name="1. Sees Green" hidden="false" collective="false" import="true" type="upgrade">
+              <profiles>
+                <profile id="07f6-970e-0daa-7e68" name="Sees Green" hidden="false" typeId="1504-23bf-8850-4f65" typeName="Command Traits">
+                  <characteristics>
+                    <characteristic name="Command Trait" typeId="0145-9acf-f5dc-d543">Once per battle, at the start of a phase, you can say that this general is Gorkamorka made manifest. If you do so, this general has a ward of 4+ against mortal wounds until the end of that phase.</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
@@ -828,41 +915,31 @@ D6 -- Fierce Loathing
         <categoryLink id="a1f2-5e63-dab3-a8cf" name="Artefacts" hidden="false" targetId="ba14-5553-456e-33ad" primary="false"/>
       </categoryLinks>
       <selectionEntryGroups>
-        <selectionEntryGroup id="3efa-b560-8f8b-8f68" name="Trophies Taken by Force" hidden="false" collective="false" import="true">
+        <selectionEntryGroup id="3efa-b560-8f8b-8f68" name="Taker Tribe" hidden="false" collective="false" import="true">
           <modifiers>
             <modifier type="set" field="hidden" value="true">
-              <conditions>
-                <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="ebef-e4eb-8af6-f17c" type="notInstanceOf"/>
-              </conditions>
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="ebef-e4eb-8af6-f17c" type="notInstanceOf"/>
+                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="7c64-e0d3-0cec-c1cf" type="equalTo"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
             </modifier>
           </modifiers>
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="a084-a6d5-78cc-84a2" type="max"/>
           </constraints>
           <selectionEntries>
-            <selectionEntry id="8209-9534-9975-dd76" name="6 -- Krakenskin Sandals" hidden="false" collective="false" import="true" type="upgrade">
-              <constraints>
-                <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="1aa2-e007-461f-163d" type="max"/>
-              </constraints>
-              <profiles>
-                <profile id="33a0-f4d3-5c6d-abfc" name="Krakenskin Sandals" hidden="false" typeId="0c9d-7abe-a53c-6a37" typeName="Artefacts">
-                  <characteristics>
-                    <characteristic name="Artefact" typeId="44b6-de26-0b54-1318">The bearer’s Almighty Stomp has an Attacks characteristic of 3 instead of 2, a Rend characteristic of -3 instead of -2, and a Damage characteristic of 3 instead of D3.</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-              <costs>
-                <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
-              </costs>
-            </selectionEntry>
-            <selectionEntry id="2d3a-7121-9610-1c8c" name="5 -- Glowy Lantern" hidden="false" collective="false" import="true" type="upgrade">
+            <selectionEntry id="2d3a-7121-9610-1c8c" name="2 -- Glowy Lantern" hidden="false" collective="false" import="true" type="upgrade">
               <constraints>
                 <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="af12-6ffe-dd8d-170d" type="max"/>
               </constraints>
               <profiles>
                 <profile id="2d30-3744-8ba9-ffbe" name="Glowy Lantern" hidden="false" typeId="0c9d-7abe-a53c-6a37" typeName="Artefacts">
                   <characteristics>
-                    <characteristic name="Artefact" typeId="44b6-de26-0b54-1318">The bearer is a WIZARD. They can attempt to cast 1 spell in your hero phase and attempt to unbind 1 spell in the enemy hero phase.</characteristic>
+                    <characteristic name="Artefact" typeId="44b6-de26-0b54-1318">KRAKEN-EATER only. The bearer gains the WIZARD keyword. It can attempt to cast 1 spell in your hero phase that summons an endless spell. It only knows spells that summon endless spells and cannot attempt to cast any other spells. In addition, double the range of spells cast by the bearer that summon endless spells.</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
@@ -870,59 +947,14 @@ D6 -- Fierce Loathing
                 <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
               </costs>
             </selectionEntry>
-            <selectionEntry id="07d8-f4b3-e0a5-0348" name="3 -- Jar of Burny Grog" hidden="false" collective="false" import="true" type="upgrade">
-              <constraints>
-                <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="4807-81a5-171b-7f92" type="max"/>
-              </constraints>
-              <profiles>
-                <profile id="1456-76b9-8410-3e77" name="Jar of Burny Grog" hidden="false" typeId="0c9d-7abe-a53c-6a37" typeName="Artefacts">
-                  <characteristics>
-                    <characteristic name="Artefact" typeId="44b6-de26-0b54-1318">Once per battle, at the start of the combat phase, you can pick 1 enemy unit within 3&quot; of the bearer and roll a dice. On a 2+, that unit suffers D3 mortal wounds and, until the end of that phase, you can re-roll wounds rolls for attacks made by friendly GARGANTS that target that unit. On a 1, the bearer suffers D3 mortal wounds.</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-              <costs>
-                <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
-              </costs>
-            </selectionEntry>
-            <selectionEntry id="93c6-48c2-4240-e716" name="2 -- Wallopin&apos; Tentacles" hidden="false" collective="false" import="true" type="upgrade">
+            <selectionEntry id="93c6-48c2-4240-e716" name="1 -- Wallopin&apos; Tentacle" hidden="false" collective="false" import="true" type="upgrade">
               <constraints>
                 <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="4866-eece-64d3-aa66" type="max"/>
               </constraints>
               <profiles>
-                <profile id="2d0a-470f-2a57-9385" name="Wallopin&apos; Tentacles" hidden="false" typeId="0c9d-7abe-a53c-6a37" typeName="Artefacts">
+                <profile id="2d0a-470f-2a57-9385" name="Wallopin&apos; Tentacle" hidden="false" typeId="0c9d-7abe-a53c-6a37" typeName="Artefacts">
                   <characteristics>
-                    <characteristic name="Artefact" typeId="44b6-de26-0b54-1318">At the start of the combat phase, you can pick 1 enemy HERO within 3&quot; of the bearer and roll a dice. On a 4+, that HERO suffers 1 mortal wound, and you can re-roll hit rolls of 1 for attacks that target that HERO until the end of that phase.</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-              <costs>
-                <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
-              </costs>
-            </selectionEntry>
-            <selectionEntry id="934a-933c-cf6f-9f61" name="4 -- Net of the Beast-reaver" hidden="false" collective="false" import="true" type="upgrade">
-              <constraints>
-                <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="b057-65ac-da1d-2add" type="max"/>
-              </constraints>
-              <profiles>
-                <profile id="cb28-47a0-6d3f-be9f" name="Net of the Beast-reaver" hidden="false" typeId="0c9d-7abe-a53c-6a37" typeName="Artefacts">
-                  <characteristics>
-                    <characteristic name="Artefact" typeId="44b6-de26-0b54-1318">At the start of the combat phase, you can pick 1 enemy MONSTER within 3&quot; of the bearer and roll a dice. On a 4+, until the end of that phase, subtract 1 from hit rolls for attacks made by that MONSTER, and you can add 1 to hit rolls for attacks that target that MONSTER.</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-              <costs>
-                <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
-              </costs>
-            </selectionEntry>
-            <selectionEntry id="5ec1-61a2-4143-6491" name="1 -- Jaws of the Megalodon" hidden="false" collective="false" import="true" type="upgrade">
-              <constraints>
-                <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="3af6-d578-2a2f-1d78" type="max"/>
-              </constraints>
-              <profiles>
-                <profile id="261c-e96a-0d39-69a9" name="Jaws of the Megalodon" hidden="false" typeId="0c9d-7abe-a53c-6a37" typeName="Artefacts">
-                  <characteristics>
-                    <characteristic name="Artefact" typeId="44b6-de26-0b54-1318">Once per phase, you can re-roll 1 hit roll or 1 wound roll for an attack made by the bearer, or 1 save roll for an attack that targets the bearer. You cannot use this ability to re-roll more than one dice for the bearer in the same phase.</characteristic>
+                    <characteristic name="Artefact" typeId="44b6-de26-0b54-1318">KRAKEN-EATER only. At the start of the combat phase, you can pick 1 enemy HERO within 3&quot; of the bearer and roll a dice. On a 4+, that HERO suffers D3 mortal wounds and the strike-last effect applies to that HERO until the end of that phase.</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
@@ -932,26 +964,31 @@ D6 -- Fierce Loathing
             </selectionEntry>
           </selectionEntries>
         </selectionEntryGroup>
-        <selectionEntryGroup id="7bda-b391-870f-a94a" name="Trappings of the Titan" hidden="false" collective="false" import="true">
+        <selectionEntryGroup id="7bda-b391-870f-a94a" name="Stomper Tribe" hidden="false" collective="false" import="true">
           <modifiers>
             <modifier type="set" field="hidden" value="true">
-              <conditions>
-                <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="077f-3d7c-5af0-67db" type="notInstanceOf"/>
-              </conditions>
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="077f-3d7c-5af0-67db" type="notInstanceOf"/>
+                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="bd0c-1f0c-c104-0f2f" type="equalTo"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
             </modifier>
           </modifiers>
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="2091-0ef7-71e0-32e9" type="max"/>
           </constraints>
           <selectionEntries>
-            <selectionEntry id="cdce-a5eb-ab1b-f568" name="3 -- Mantle of the Destroyer" hidden="false" collective="false" import="true" type="upgrade">
+            <selectionEntry id="cdce-a5eb-ab1b-f568" name="2 -- Mantle of the Destroyer" hidden="false" collective="false" import="true" type="upgrade">
               <constraints>
                 <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="7cc9-4f96-a427-e94f" type="max"/>
               </constraints>
               <profiles>
                 <profile id="263c-f1c1-0bb7-a6c3" name="Mantle of the Destroyer" hidden="false" typeId="0c9d-7abe-a53c-6a37" typeName="Artefacts">
                   <characteristics>
-                    <characteristic name="Artefact" typeId="44b6-de26-0b54-1318">Friendly GARGANTS have a Bravery characteristic of 10 while they are within 12&quot; of the bearer. In addition you can re-roll charge rolls for friendly GARGANTS that are within 12&quot; of the bearer.</characteristic>
+                    <characteristic name="Artefact" typeId="44b6-de26-0b54-1318">WARSTOMPER only. Friendly SONS OF BEHEMAT units within 12&quot; of the bearer have a Bravery characteristic of 10.</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
@@ -959,29 +996,14 @@ D6 -- Fierce Loathing
                 <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
               </costs>
             </selectionEntry>
-            <selectionEntry id="f00e-7c40-b458-1583" name="2 -- Club of the First Oak" hidden="false" collective="false" import="true" type="upgrade">
+            <selectionEntry id="f00e-7c40-b458-1583" name="1 -- Club of the First Oak" hidden="false" collective="false" import="true" type="upgrade">
               <constraints>
                 <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="5559-01a4-0e47-e0c4" type="max"/>
               </constraints>
               <profiles>
                 <profile id="3ab0-7bbc-674d-72e1" name="Club of the First Oak" hidden="false" typeId="0c9d-7abe-a53c-6a37" typeName="Artefacts">
                   <characteristics>
-                    <characteristic name="Artefact" typeId="44b6-de26-0b54-1318">In your hero phase, you can heal 1 wound allocated to the bearer. In addition, if the bearer is slain, roll a dice before the bearer’s model is removed from play. On a 4+, the wound or mortal wound is negated and the bearer is not slain, and any wounds that remain to be allocated to the bearer are negated.</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-              <costs>
-                <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
-              </costs>
-            </selectionEntry>
-            <selectionEntry id="b01c-0cd2-a7a6-d3fc" name="1 -- Ironweld Cestus" hidden="false" collective="false" import="true" type="upgrade">
-              <constraints>
-                <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="247a-2d68-5249-0573" type="max"/>
-              </constraints>
-              <profiles>
-                <profile id="c074-b4e9-0576-c6eb" name="Ironweld Cestus" hidden="false" typeId="0c9d-7abe-a53c-6a37" typeName="Artefacts">
-                  <characteristics>
-                    <characteristic name="Artefact" typeId="44b6-de26-0b54-1318">You can re-roll save rolls for attacks that target the bearer. In addition, if the re-rolled save roll is an unmodified 6 and the attack was made with a melee weapon, the attacking unit suffers 1 mortal wound after all of its attacks have been resolved.</characteristic>
+                    <characteristic name="Artefact" typeId="44b6-de26-0b54-1318">WARSTOMPER only. In your hero phase, you can heal 1 wound allocated to the bearer. In addition, while the bearer has 25 or more wounds allocated to them, they have a ward of 5+.</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
@@ -991,26 +1013,31 @@ D6 -- Fierce Loathing
             </selectionEntry>
           </selectionEntries>
         </selectionEntryGroup>
-        <selectionEntryGroup id="8efb-3313-a0eb-dc44" name="Legacy of Demolition" hidden="false" collective="false" import="true">
+        <selectionEntryGroup id="8efb-3313-a0eb-dc44" name="Breaker Tribe" hidden="false" collective="false" import="true">
           <modifiers>
             <modifier type="set" field="hidden" value="true">
-              <conditions>
-                <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="05cb-0307-f445-617b" type="notInstanceOf"/>
-              </conditions>
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="6b30-1ff6-d394-4744" type="equalTo"/>
+                    <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="05cb-0307-f445-617b" type="notInstanceOf"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
             </modifier>
           </modifiers>
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="b55e-805c-ad5f-223a" type="max"/>
           </constraints>
           <selectionEntries>
-            <selectionEntry id="42aa-979f-64c2-c722" name="3 -- Kingslaughter Cowl" hidden="false" collective="false" import="true" type="upgrade">
+            <selectionEntry id="42aa-979f-64c2-c722" name="2 -- Kingslaughter Cowl" hidden="false" collective="false" import="true" type="upgrade">
               <constraints>
                 <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="73ce-bfb1-6cb8-9649" type="max"/>
               </constraints>
               <profiles>
                 <profile id="7522-797d-8669-12cc" name="Kingslaughter Cowl" hidden="false" typeId="0c9d-7abe-a53c-6a37" typeName="Artefacts">
                   <characteristics>
-                    <characteristic name="Artefact" typeId="44b6-de26-0b54-1318">You can re-roll wound rolls of 1 for attacks made by the bearer that target a HERO. In addition, you can re-roll wound rolls for attacks made by the bearer that target a general.</characteristic>
+                    <characteristic name="Artefact" typeId="44b6-de26-0b54-1318">GATEBREAKER only. Add 1 to wound rolls for attacks made by the bearer that target an enemy HERO.</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
@@ -1018,14 +1045,14 @@ D6 -- Fierce Loathing
                 <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
               </costs>
             </selectionEntry>
-            <selectionEntry id="8ca6-a717-c3f0-2759" name="2 -- The Great Wrecka" hidden="false" collective="false" import="true" type="upgrade">
+            <selectionEntry id="8ca6-a717-c3f0-2759" name="1 -- The Great Wrecka" hidden="false" collective="false" import="true" type="upgrade">
               <constraints>
                 <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="7003-b508-124e-c856" type="max"/>
               </constraints>
               <profiles>
                 <profile id="3db8-d9e8-04b2-3164" name="The Great Wrecka" hidden="false" typeId="0c9d-7abe-a53c-6a37" typeName="Artefacts">
                   <characteristics>
-                    <characteristic name="Artefact" typeId="44b6-de26-0b54-1318">If the unmodified hit roll for an attack made with the bearer’s Fortcrusha Flail is 6, that attack inflicts 1 mortal wound on the target in addition to any normal damage. In addition, when you use the bearer’s Smash Down ability, you can add 1 to the dice roll that determines if the terrain feature is reduced to rubble.</characteristic>
+                    <characteristic name="Artefact" typeId="44b6-de26-0b54-1318">GATEBREAKER only. If the unmodified hit roll for an attack made with the bearer’s Fortcrusha Flail is 6, that attack causes D3 mortal wounds to the target in addition to any damage it inflicts.</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
@@ -1033,14 +1060,122 @@ D6 -- Fierce Loathing
                 <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
               </costs>
             </selectionEntry>
-            <selectionEntry id="e7f6-3022-5036-9bcf" name="1 -- Enhanced Portcullis" hidden="false" collective="false" import="true" type="upgrade">
+          </selectionEntries>
+        </selectionEntryGroup>
+        <selectionEntryGroup id="07b2-cac1-cb57-1d94" name="Titanic Trophies" hidden="false" collective="false" import="true">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="438a-b840-5586-4df5" type="max"/>
+          </constraints>
+          <selectionEntries>
+            <selectionEntry id="fe57-2ee5-8f24-8718" name="4 -- Amberbone Totem" hidden="false" collective="false" import="true" type="upgrade">
               <constraints>
-                <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="f879-399d-a907-73cc" type="max"/>
+                <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="8387-9163-d157-46ce" type="max"/>
               </constraints>
               <profiles>
-                <profile id="c7d6-d99e-bbf8-e7db" name="Enhanced Portcullis" hidden="false" typeId="0c9d-7abe-a53c-6a37" typeName="Artefacts">
+                <profile id="1489-560e-805e-da2a" name="Amberbone Totem" hidden="false" typeId="0c9d-7abe-a53c-6a37" typeName="Artefacts">
                   <characteristics>
-                    <characteristic name="Artefact" typeId="44b6-de26-0b54-1318">Roll a dice each time you allocate a wound or mortal wound to the bearer. On a 6, that wound or mortal wound is negated.</characteristic>
+                    <characteristic name="Artefact" typeId="44b6-de26-0b54-1318">The bearer can attempt a charge even if they ran in the same turn.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <costs>
+                <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="040d-6522-a512-f635" name="3 -- Scavenger Wake" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="a4f3-b676-92b1-9bf1" type="max"/>
+              </constraints>
+              <profiles>
+                <profile id="f8ac-d26d-f810-a179" name="Scavenger Wake" hidden="false" typeId="0c9d-7abe-a53c-6a37" typeName="Artefacts">
+                  <characteristics>
+                    <characteristic name="Artefact" typeId="44b6-de26-0b54-1318">Once per battle, at the start of the combat phase, you can pick 1 enemy unit within 3&quot; of the bearer and roll a number of dice equal to the number of models in that unit (to a maximum of 10). For each 4+, that enemy unit suffers 1 mortal wound.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <costs>
+                <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="e150-aacf-ff9d-92af" name="2 -- Glowy Shield of Protectiness" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="8370-eebd-a8c3-170a" type="max"/>
+              </constraints>
+              <profiles>
+                <profile id="8658-cbae-21f4-6159" name="Glowy Shield of Protectiness" hidden="false" typeId="0c9d-7abe-a53c-6a37" typeName="Artefacts">
+                  <characteristics>
+                    <characteristic name="Artefact" typeId="44b6-de26-0b54-1318">When this unit is targeted by an attack, if the weapon used for that attack has a Rend characteristic of -1, change the Rend characteristic for that attack to ‘-’. In addition, if the unmodified save roll for an attack made with a melee weapon that targets the bearer is 6, the attacking unit suffers 1 mortal wound after all of its attacks have been resolved.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <costs>
+                <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="49b3-9625-1ac7-d8ce" name="1 -- Extra-calloused Feet" hidden="false" collective="false" import="true" type="upgrade">
+              <modifiers>
+                <modifier type="set" field="hidden" value="true">
+                  <conditions>
+                    <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="077f-3d7c-5af0-67db" type="instanceOf"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+              <constraints>
+                <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="d049-f6f1-655f-897a" type="max"/>
+              </constraints>
+              <profiles>
+                <profile id="7ac9-d1da-5887-8ebd" name="Extra-calloused Feet" hidden="false" typeId="0c9d-7abe-a53c-6a37" typeName="Artefacts">
+                  <characteristics>
+                    <characteristic name="Artefact" typeId="44b6-de26-0b54-1318">Model armed with an Almighty Stomp only. The bearer’s Almighty Stomp has an Attacks characteristic of 3 instead of 2, a Rend characteristic of -3 instead of -2, and a Damage characteristic of 3 instead of D3.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <costs>
+                <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
+              </costs>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
+        <selectionEntryGroup id="bbca-85ac-d59d-f986" name="Smasher Tribe" hidden="false" collective="false" import="true">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="057b-87fc-1d33-a48b" type="notInstanceOf"/>
+                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="d101-cbef-797d-d07b" type="equalTo"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="6971-a20f-93c7-d4aa" type="max"/>
+          </constraints>
+          <selectionEntries>
+            <selectionEntry id="85e3-2236-6eb6-9d69" name="2 -- Mantle of Tusks and Horns" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="e673-1d62-c4c2-283a" type="max"/>
+              </constraints>
+              <profiles>
+                <profile id="107a-ccd1-30ce-0d4f" name="Mantle of Tusks and Horns" hidden="false" typeId="0c9d-7abe-a53c-6a37" typeName="Artefacts">
+                  <characteristics>
+                    <characteristic name="Artefact" typeId="44b6-de26-0b54-1318">BEAST-SMASHER only. Once per battle, at the start of the combat phase, you can say that the bearer will channel the Waaagh!. If you do so, add 1 to hit rolls for attacks made with melee weapons by friendly SONS OF BEHEMAT units until the end of that phase.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <costs>
+                <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="db27-f32e-dc0a-bb31" name="1 -- The Shatterer" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="6496-afd6-2109-7ef5" type="max"/>
+              </constraints>
+              <profiles>
+                <profile id="b37a-fe09-dafb-f1b3" name="The Shatterer" hidden="false" typeId="0c9d-7abe-a53c-6a37" typeName="Artefacts">
+                  <characteristics>
+                    <characteristic name="Artefact" typeId="44b6-de26-0b54-1318">BEAST-SMASHER only. If the unmodified wound roll for an attack made with the bearer’s Menhir Club that targets an enemy HERO, MONSTER or WAR MACHINE is 6, that unit’s armour has been shattered. If a unit’s armour has been shattered, until the end of the battle, ignore positive modifiers to save rolls for attacks that target that unit.</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
@@ -1092,7 +1227,7 @@ D6 -- Fierce Loathing
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="147e-928f-3412-287d" type="max"/>
           </constraints>
           <selectionEntries>
-            <selectionEntry id="83f2-386f-b07b-3897" name="Bosses of the Swamp" hidden="false" collective="false" import="true" type="upgrade">
+            <selectionEntry id="83f2-386f-b07b-3897" name="Bosses of the Stomp" hidden="false" collective="false" import="true" type="upgrade">
               <modifiers>
                 <modifier type="set" field="hidden" value="true">
                   <conditionGroups>

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<gameSystem id="e832-3291-06be-cab1" name="Age of Sigmar - Thul Ed" revision="29" battleScribeVersion="2.03" authorName="Thulram" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
+<gameSystem id="e832-3291-06be-cab1" name="Age of Sigmar - Thul Ed" revision="31" battleScribeVersion="2.03" authorName="Thulram" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
   <publications>
     <publication id="bf0c-0cbf-1f5d-5885" name="Chaos Battletome - Blades of Khorne"/>
     <publication id="6ce4-e8a3-f18f-be55" name="Order Battletome - Daughters of Khaine"/>
@@ -333,11 +333,7 @@
     <categoryEntry id="a65e-70f1-ab1e-3f89" name="EnhancementPlus" hidden="false"/>
     <categoryEntry id="9e49-bd7f-45ee-1a96" name="SpellPlus" hidden="false"/>
     <categoryEntry id="c7bd-c872-ef57-2468" name="PrayerPlus" hidden="false"/>
-    <categoryEntry id="e20c-48d8-e5e3-1a36" name="Reinforcement" hidden="false">
-      <constraints>
-        <constraint field="selections" scope="roster" value="4.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="4bef-d526-e63c-0731" type="max"/>
-      </constraints>
-    </categoryEntry>
+    <categoryEntry id="e20c-48d8-e5e3-1a36" name="Reinforcement" hidden="false"/>
     <categoryEntry id="99e1-bf54-e3ec-ab80" name="MountTraitPlus" hidden="false"/>
     <categoryEntry id="5d50-548d-d917-283c" name="KRULEBOYZ" hidden="false"/>
     <categoryEntry id="e388-0edb-9ff2-cda6" name="ORRUK WARCLANS" hidden="false"/>
@@ -354,6 +350,7 @@
     <categoryEntry id="d75e-a123-ace4-2aa9" name="UniquePlus" hidden="false"/>
     <categoryEntry id="080e-7adc-0056-6534" name="KRONDSPINE INCARNATE" hidden="false"/>
     <categoryEntry id="5b8a-3441-3d9e-bea2" name="INCARNATE" hidden="false"/>
+    <categoryEntry id="f2af-9e09-b083-3850" name="PlusOneReinforcement" hidden="false"/>
   </categoryEntries>
   <forceEntries>
     <forceEntry id="582e-fd89-8731-30c8" name="-Pitched Battle - 2000pts" hidden="false">
@@ -483,7 +480,21 @@
             </modifier>
           </modifiers>
         </categoryLink>
-        <categoryLink id="dcac-a6c2-5131-eb81" name="Reinforcement" hidden="false" targetId="e20c-48d8-e5e3-1a36" primary="false"/>
+        <categoryLink id="dcac-a6c2-5131-eb81" name="Reinforcement" hidden="false" targetId="e20c-48d8-e5e3-1a36" primary="false">
+          <modifiers>
+            <modifier type="increment" field="9717-0fe1-785f-2523" value="1.0">
+              <repeats>
+                <repeat field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="f2af-9e09-b083-3850" repeats="1" roundUp="false"/>
+              </repeats>
+              <conditions>
+                <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="f2af-9e09-b083-3850" type="greaterThan"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint field="selections" scope="roster" value="4.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="9717-0fe1-785f-2523" type="max"/>
+          </constraints>
+        </categoryLink>
       </categoryLinks>
     </forceEntry>
     <forceEntry id="85e6-5eeb-b3e5-4316" name="-Pitched Battle - 3000pts" hidden="false">
@@ -614,6 +625,16 @@
           </modifiers>
         </categoryLink>
         <categoryLink id="c268-4d37-086b-6c32" name="Reinforcement" hidden="false" targetId="e20c-48d8-e5e3-1a36" primary="false">
+          <modifiers>
+            <modifier type="increment" field="c906-4d4e-1ac4-d72e" value="1.0">
+              <repeats>
+                <repeat field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="f2af-9e09-b083-3850" repeats="1" roundUp="false"/>
+              </repeats>
+              <conditions>
+                <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="f2af-9e09-b083-3850" type="greaterThan"/>
+              </conditions>
+            </modifier>
+          </modifiers>
           <constraints>
             <constraint field="selections" scope="force" value="6.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="c906-4d4e-1ac4-d72e" type="max"/>
           </constraints>
@@ -753,6 +774,16 @@
           </modifiers>
         </categoryLink>
         <categoryLink id="6524-9802-411a-ac14" name="Reinforcement" hidden="false" targetId="e20c-48d8-e5e3-1a36" primary="false">
+          <modifiers>
+            <modifier type="increment" field="f6a5-97bf-f350-7f03" value="1.0">
+              <repeats>
+                <repeat field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="f2af-9e09-b083-3850" repeats="1" roundUp="false"/>
+              </repeats>
+              <conditions>
+                <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="f2af-9e09-b083-3850" type="greaterThan"/>
+              </conditions>
+            </modifier>
+          </modifiers>
           <constraints>
             <constraint field="selections" scope="force" value="2.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="f6a5-97bf-f350-7f03" type="max"/>
           </constraints>
@@ -904,6 +935,16 @@
           </modifiers>
         </categoryLink>
         <categoryLink id="6bbf-15fb-4ce5-497a" name="Reinforcement" hidden="false" targetId="e20c-48d8-e5e3-1a36" primary="false">
+          <modifiers>
+            <modifier type="increment" field="8d4e-7db1-4d12-1b2d" value="1.0">
+              <repeats>
+                <repeat field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="f2af-9e09-b083-3850" repeats="1" roundUp="false"/>
+              </repeats>
+              <conditions>
+                <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="f2af-9e09-b083-3850" type="greaterThan"/>
+              </conditions>
+            </modifier>
+          </modifiers>
           <constraints>
             <constraint field="selections" scope="force" value="3.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="8d4e-7db1-4d12-1b2d" type="max"/>
           </constraints>
@@ -1020,6 +1061,16 @@
           </modifiers>
         </categoryLink>
         <categoryLink id="d9f1-2fc0-5daf-f8b3" name="Reinforcement" hidden="false" targetId="e20c-48d8-e5e3-1a36" primary="false">
+          <modifiers>
+            <modifier type="increment" field="3903-7c5c-b421-214f" value="1.0">
+              <repeats>
+                <repeat field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="f2af-9e09-b083-3850" repeats="1" roundUp="false"/>
+              </repeats>
+              <conditions>
+                <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="f2af-9e09-b083-3850" type="greaterThan"/>
+              </conditions>
+            </modifier>
+          </modifiers>
           <constraints>
             <constraint field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="3903-7c5c-b421-214f" type="max"/>
           </constraints>
@@ -1920,7 +1971,7 @@
         <categoryLink id="5a6f-cf9c-46db-436e" name="New CategoryLink" hidden="false" targetId="ecf9-78bd-d326-2a82" primary="true"/>
       </categoryLinks>
       <costs>
-        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="40.0"/>
+        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="30.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="6565-5685-eb04-d0a4" name="Endless Spell - Chronomantic Cogs" publicationId="d283-510e-eaa4-06e2" hidden="false" collective="false" import="true" type="model">
@@ -1951,7 +2002,7 @@ At the start of the hero phase, if there is a friendly WIZARD within 6&quot; of 
         <categoryLink id="60ff-273e-1527-0b44" name="New CategoryLink" hidden="false" targetId="ecf9-78bd-d326-2a82" primary="true"/>
       </categoryLinks>
       <costs>
-        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="40.0"/>
+        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="70.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="24fe-af98-69d8-abc1" name="Endless Spell - Emerald Lifeswarm" publicationId="d283-510e-eaa4-06e2" hidden="false" collective="false" import="true" type="model">
@@ -2012,7 +2063,7 @@ At the start of the hero phase, if there is a friendly WIZARD within 6&quot; of 
         <categoryLink id="141a-7f06-812c-84ed" name="New CategoryLink" hidden="false" targetId="ecf9-78bd-d326-2a82" primary="true"/>
       </categoryLinks>
       <costs>
-        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="40.0"/>
+        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="50.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="d3a3-3415-beaf-d183" name="Endless Spell - Malevolent Maelstrom" publicationId="d283-510e-eaa4-06e2" hidden="false" collective="false" import="true" type="model">
@@ -2044,7 +2095,7 @@ At the end of the combat phase, if this endless spell is on the battlefield, rol
         <categoryLink id="55a9-21c7-3de0-3266" name="New CategoryLink" hidden="false" targetId="ecf9-78bd-d326-2a82" primary="true"/>
       </categoryLinks>
       <costs>
-        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="50.0"/>
+        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="30.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="9b5e-2e4b-7796-8d1e" name="Endless Spell - Prismatic Palisade" publicationId="d283-510e-eaa4-06e2" hidden="false" collective="false" import="true" type="model">
@@ -2069,7 +2120,7 @@ At the end of the combat phase, if this endless spell is on the battlefield, rol
         <categoryLink id="a697-7030-1f34-c03b" name="Prismatic Palisade" hidden="false" targetId="8daa-aaf7-41f0-2cd5" primary="false"/>
       </categoryLinks>
       <costs>
-        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="40.0"/>
+        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="30.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="03b8-536f-2e94-bbd2" name="Endless Spell - Purple Sun of Shyish" publicationId="d283-510e-eaa4-06e2" hidden="false" collective="false" import="true" type="model">
@@ -2089,9 +2140,7 @@ At the end of the combat phase, if this endless spell is on the battlefield, rol
         </profile>
         <profile id="7fc6-ead5-0760-9993" name="End Given Form" hidden="false" typeId="7861-da01-01c0-88d9" typeName="Ability">
           <characteristics>
-            <characteristic name="Ability" typeId="9bce-4deb-8b79-eaec">At the end of the hero phase, before determining control of predatory endless spells, roll a dice for this endless spell. On a 5+, this endless spell becomes wild for the rest of the battle (do not roll for it again).
-
-After this endless spell has moved, roll a dice for each unit that has any models it passed across and for each other unit that is within 1&quot; of it at the end of its move. On a 1, nothing happens. On a 2-5, that unit suffers D3 mortal wounds. On a 6, that unit suffers D6 mortal wounds.</characteristic>
+            <characteristic name="Ability" typeId="9bce-4deb-8b79-eaec">Subtract 1 from save rolls for attacks that target units within 6&quot; of this endless spell. In addition, roll a dice for each unit within 1&quot; of this endless spell after this endless spell has moved. On a 1, that unit has been touched by the Purple Sun’s rays. If that unit has a Wounds characteristic of 9 or less, 1 model in that unit is slain. Otherwise, that unit suffers D6+6 mortal wounds</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -2101,7 +2150,7 @@ After this endless spell has moved, roll a dice for each unit that has any model
         <categoryLink id="a0be-1bba-d315-9365" name="Purple Sun of Shyish" hidden="false" targetId="1adf-1a76-1246-d509" primary="false"/>
       </categoryLinks>
       <costs>
-        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="70.0"/>
+        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="90.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="4fe5-18d3-f708-a61f" name="Endless Spell - Soulscream Bridge" hidden="false" collective="false" import="true" type="model">
@@ -2178,7 +2227,7 @@ A unit cannot be removed and set up again this way more than once per phase. A u
         </profile>
         <profile id="0eff-8329-596b-4a4d" name="Ravening Hunger" hidden="false" typeId="7861-da01-01c0-88d9" typeName="Ability">
           <characteristics>
-            <characteristic name="Ability" typeId="9bce-4deb-8b79-eaec">After this endless spell has moved, the commanding player can pick 1 unit that has any models it passed across and roll a number of dice equal to the roll that was made for the move. For each 6, that unit suffers 1 mortal wound.</characteristic>
+            <characteristic name="Ability" typeId="9bce-4deb-8b79-eaec">After this endless spell has moved, pick 1 unit that has any models it passed across or that is within 1&quot; of it at the end of its move and roll a dice. On a 2+, if the roll for this endless spell’s move was greater than that unit’s Move characteristic, that unit suffers a number of mortal wounds equal to the difference between that unit’s Move characteristic (rounded up if necessary) and the roll for this endless spell’s move.</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -2188,7 +2237,7 @@ A unit cannot be removed and set up again this way more than once per phase. A u
         <categoryLink id="67b0-40e2-3dbe-5a6f" name="Ravenak&apos;s Gnashing Jaws" hidden="false" targetId="38f1-1ef8-8056-6513" primary="false"/>
       </categoryLinks>
       <costs>
-        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="60.0"/>
+        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="70.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="586f-773e-d7d6-2412" name="Endless Spell - Soulsnare Shackles" publicationId="d283-510e-eaa4-06e2" hidden="false" collective="false" import="true" type="model">
@@ -2213,7 +2262,7 @@ A unit cannot be removed and set up again this way more than once per phase. A u
         <categoryLink id="6605-a2cf-07ad-6ded" name="Soulsnare Shackles" hidden="false" targetId="a6a2-e340-480f-fd3b" primary="false"/>
       </categoryLinks>
       <costs>
-        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="50.0"/>
+        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="40.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="dcf7-f431-661e-2feb" name="Endless Spell - Suffocating Gravetide" publicationId="d283-510e-eaa4-06e2" hidden="false" collective="false" import="true" type="model">
@@ -2243,7 +2292,7 @@ A unit cannot be removed and set up again this way more than once per phase. A u
         <categoryLink id="f528-983b-5173-1779" name="Suffocating Gravetide" hidden="false" targetId="86d4-b1f8-7951-e9c3" primary="false"/>
       </categoryLinks>
       <costs>
-        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="40.0"/>
+        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="30.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="ac05-76f2-36c2-9f98" name="Endless Spell - The Burning Head" publicationId="d283-510e-eaa4-06e2" hidden="false" collective="false" import="true" type="model">
@@ -2273,7 +2322,7 @@ A unit cannot be removed and set up again this way more than once per phase. A u
         <categoryLink id="a256-c31e-07b1-27c7" name="The Burning Head" hidden="false" targetId="5bef-73fb-da5b-789c" primary="false"/>
       </categoryLinks>
       <costs>
-        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="20.0"/>
+        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="30.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="ac8c-6bff-ef61-600d" name="Endless Spell - Umbral Spellportal" publicationId="d283-510e-eaa4-06e2" hidden="false" collective="false" import="true" type="model">
@@ -2300,7 +2349,7 @@ In addition, once per turn, when a predatory endless spell within 6&quot; of thi
         <categoryLink id="5dd2-ff6d-d42e-3789" name="Umbral Spellportal" hidden="false" targetId="f2be-83d7-b8a6-c949" primary="false"/>
       </categoryLinks>
       <costs>
-        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="70.0"/>
+        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="80.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="df97-6761-aa09-4823" name="Endless Spell - Shards of Vallagharr" hidden="false" collective="false" import="true" type="model">
@@ -2330,7 +2379,7 @@ In addition, once per turn, when a predatory endless spell within 6&quot; of thi
         <categoryLink id="c0a1-2a91-f7fd-3a60" name="Shards of Valagharr" hidden="false" targetId="8f27-0154-a719-3596" primary="false"/>
       </categoryLinks>
       <costs>
-        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="50.0"/>
+        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="40.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="fc6c-4d7a-cc50-db15" name="Endless Spell - Lauchon the Soulseeker" hidden="false" collective="false" import="true" type="model">
@@ -2360,7 +2409,7 @@ In addition, once per turn, when a predatory endless spell within 6&quot; of thi
         <categoryLink id="f94a-cc96-9aed-ac51" name="Lauchon the Soulseeker" hidden="false" targetId="d58e-b376-52ea-a019" primary="false"/>
       </categoryLinks>
       <costs>
-        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="30.0"/>
+        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="50.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="7e0a-6ffe-4578-3577" name="Endless Spell - Horrorghast" hidden="false" collective="false" import="true" type="model">
@@ -2390,7 +2439,7 @@ In addition, once per turn, when a predatory endless spell within 6&quot; of thi
         <categoryLink id="ac23-f691-ab14-f865" name="Horrorghast" hidden="false" targetId="8aea-d7aa-5928-0c6b" primary="false"/>
       </categoryLinks>
       <costs>
-        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="40.0"/>
+        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="70.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="d9a8-9174-73a9-ee2d" name="Terrain Feature - Penumbral Engine" hidden="false" collective="false" import="true" type="unit">
@@ -2595,7 +2644,7 @@ At the start of your hero phase, you receive 1 extra command point if any friend
           <characteristics>
             <characteristic name="Ability" typeId="9bce-4deb-8b79-eaec">In your charge phase, if this incarnate is within 12&quot; of an endless spell that was summoned by an enemy WIZARD, it can attempt a charge, and it can make a charge move as long as that charge move finishes within 1/2&quot; of an enemy model or endless spell that was summoned by an enemy WIZARD.
 
-In addition, this incarnate can carry out the Devour Endless Spell monstrous rampage instead of any other monstrous rampage it can carryout.</characteristic>
+In addition, this incarnate can carry out the Devour Endless Spell monstrous rampage instead of any other monstrous rampage it can carry out.</characteristic>
           </characteristics>
         </profile>
         <profile id="0189-4a34-cfa2-6dc9" name="1- Empowered" hidden="false" typeId="592d-8852-ad05-1dce" typeName="Krondspine Incarnate State Table">
@@ -2647,9 +2696,14 @@ Add 1 to casting, dispelling and unbinding rolls for a WIZARD that is within dom
         </profile>
         <profile id="b4f7-7615-6190-d626" name="Wild Form" hidden="false" typeId="ce32-0c40-1990-4c8a" typeName="Restriction">
           <characteristics>
-            <characteristic name="Restriction" typeId="edbe-5fe5-1142-afa6">Add 1 to hit rolls for attacks made by this incarnate while it is in its wild form. This incarnate can run and still charge in the same turn while it is in its wild form. If this incarnate is in its wild form and is within 12&quot; of a unit or an endless spell at the start of your charge phase, it must attempt a charge and must make a charge move if it is possible for it to do so.
+            <characteristic name="Restriction" typeId="edbe-5fe5-1142-afa6">Add 1 to hit rolls for attacks made by this incarnate while it is in its wild form. This incarnate can run and still charge in the same turn while it is in its wild form. If this incarnate is in its wild form, is within 12&quot; of another unit or an endless spell, and is not within 3&quot; of another unit at the start of your charge phase, it must attempt a charge and must make a charge move if it is possible for it to do so.
 
 Designer’s Note: Remember that an incarnate in its wild form treats other units in your army as enemy units, so it may be forced to charge and attack those units.</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="18d2-c567-7ea6-1786" name="Incarnate" hidden="false" typeId="ce32-0c40-1990-4c8a" typeName="Restriction">
+          <characteristics>
+            <characteristic name="Restriction" typeId="edbe-5fe5-1142-afa6">For all rules purposes and abilities that refer to a Wounds characteristic, an incarnate is treated as having a Wounds characteristic of 18. If an incarnate is affected by an ability that slays the target without any wounds or mortal wounds being allocated, then the level of the incarnate goes down by 1 instead.</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -2720,7 +2774,7 @@ Designer’s Note: Remember that an incarnate in its wild form treats other unit
         </selectionEntry>
       </selectionEntries>
       <costs>
-        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="400.0"/>
+        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="480.0"/>
       </costs>
     </selectionEntry>
   </sharedSelectionEntries>
@@ -2877,9 +2931,14 @@ Designer’s Note: Remember that an incarnate in its wild form treats other unit
           </conditions>
         </modifier>
         <modifier type="set" field="hidden" value="true">
-          <conditions>
-            <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="543e-1cc9-6d38-f8b3" type="instanceOf"/>
-          </conditions>
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="543e-1cc9-6d38-f8b3" type="instanceOf"/>
+                <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="7ee2-0d81-544f-5d7e" type="instanceOf"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
         </modifier>
       </modifiers>
       <constraints>
@@ -2942,6 +3001,16 @@ Designer’s Note: Remember that an incarnate in its wild form treats other unit
           <conditions>
             <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="c7bd-c872-ef57-2468" type="greaterThan"/>
           </conditions>
+        </modifier>
+        <modifier type="set" field="hidden" value="true">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="543e-1cc9-6d38-f8b3" type="instanceOf"/>
+                <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="f0a9-dd66-8662-61ce" type="instanceOf"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
         </modifier>
       </modifiers>
       <constraints>
