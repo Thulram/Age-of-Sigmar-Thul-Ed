@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="d0f5-3583-d7c8-28a4" name="Order - Stormcast Eternals" revision="14" battleScribeVersion="2.03" authorName="Thulram" library="false" gameSystemId="e832-3291-06be-cab1" gameSystemRevision="13" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="d0f5-3583-d7c8-28a4" name="Order - Stormcast Eternals" revision="15" battleScribeVersion="2.03" authorName="Thulram" library="false" gameSystemId="e832-3291-06be-cab1" gameSystemRevision="14" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <categoryEntries>
     <categoryEntry id="7427-eb31-81d6-d218" name="General - Keiser Ven Brecht" hidden="false"/>
     <categoryEntry id="0046-6be2-ce3d-7696" name="Allegiant - Cities of Sigmar" hidden="false">
@@ -370,7 +370,7 @@ Designer’s Note: Coalition units are units from another faction that can be in
             </selectionEntryGroup>
           </selectionEntryGroups>
           <entryLinks>
-            <entryLink id="da05-fd3f-cbde-22d6" name="GHB &apos;21" hidden="false" collective="false" import="true" targetId="bb2d-2110-60b8-c13e" type="selectionEntryGroup"/>
+            <entryLink id="da05-fd3f-cbde-22d6" name="Rulebook Grand Strategies" hidden="false" collective="false" import="true" targetId="daaa-4fe4-c2fa-6a7f" type="selectionEntryGroup"/>
           </entryLinks>
         </selectionEntryGroup>
       </selectionEntryGroups>
@@ -379,6 +379,21 @@ Designer’s Note: Coalition units are units from another faction that can be in
       </costs>
     </selectionEntry>
     <selectionEntry id="965c-0ff8-aeca-d96a" name="Stormcast Eternals Battle Tactics" hidden="false" collective="false" import="true" type="upgrade">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4373-740f-1bf3-b0aa" type="instanceOf"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="e3a6-45ca-4974-b489" type="instanceOf"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="996a-613c-4006-25e3" type="instanceOf"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="6cd6-b22e-bfcb-9589" type="instanceOf"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="b543-cb16-0c79-fbc6" type="instanceOf"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
       <constraints>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="b860-e402-b40c-6532" type="max"/>
       </constraints>
@@ -417,6 +432,9 @@ Designer’s Note: Coalition units are units from another faction that can be in
       <categoryLinks>
         <categoryLink id="5a6f-cc47-8717-8457" name="New CategoryLink" hidden="false" targetId="29f4-e63d-fa5b-1611" primary="true"/>
       </categoryLinks>
+      <entryLinks>
+        <entryLink id="304c-c91d-e353-a976" name="Rulebook Battle Tactics" hidden="false" collective="false" import="true" targetId="e22d-0e63-82f1-7001" type="selectionEntry"/>
+      </entryLinks>
       <costs>
         <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
       </costs>
