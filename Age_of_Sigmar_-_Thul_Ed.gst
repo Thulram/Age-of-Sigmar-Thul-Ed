@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<gameSystem id="e832-3291-06be-cab1" name="Age of Sigmar - Thul Ed" revision="34" battleScribeVersion="2.03" authorName="Thulram" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
+<gameSystem id="e832-3291-06be-cab1" name="Age of Sigmar - Thul Ed" revision="36" battleScribeVersion="2.03" authorName="Thulram" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
   <publications>
     <publication id="bf0c-0cbf-1f5d-5885" name="Chaos Battletome - Blades of Khorne"/>
     <publication id="6ce4-e8a3-f18f-be55" name="Order Battletome - Daughters of Khaine"/>
@@ -356,6 +356,11 @@
     <categoryEntry id="080e-7adc-0056-6534" name="KRONDSPINE INCARNATE" hidden="false"/>
     <categoryEntry id="5b8a-3441-3d9e-bea2" name="INCARNATE" hidden="false"/>
     <categoryEntry id="f2af-9e09-b083-3850" name="PlusOneReinforcement" hidden="false"/>
+    <categoryEntry id="a73e-41f7-f3c6-0a5e" name="REGIMENT OF RENOWN" hidden="false">
+      <constraints>
+        <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="459f-bd82-216b-1413" type="max"/>
+      </constraints>
+    </categoryEntry>
   </categoryEntries>
   <forceEntries>
     <forceEntry id="582e-fd89-8731-30c8" name="-Pitched Battle - 2000pts" hidden="false">
@@ -382,7 +387,7 @@
       <forceEntries>
         <forceEntry id="6cd6-b22e-bfcb-9589" name="Allies" hidden="false">
           <modifiers>
-            <modifier type="set" field="9d2d-b9c8-e120-0b50" value="435.0">
+            <modifier type="set" field="9d2d-b9c8-e120-0b50" value="480.0">
               <conditionGroups>
                 <conditionGroup type="and">
                   <conditions>
@@ -693,7 +698,7 @@
       <forceEntries>
         <forceEntry id="e3a6-45ca-4974-b489" name="Allies" hidden="false">
           <modifiers>
-            <modifier type="set" field="d0a1-67be-783c-8616" value="435.0">
+            <modifier type="set" field="d0a1-67be-783c-8616" value="480.0">
               <conditionGroups>
                 <conditionGroup type="and">
                   <conditions>
@@ -708,9 +713,15 @@
                 <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="6f50-e069-0aac-3300" type="greaterThan"/>
               </conditions>
             </modifier>
+            <modifier type="set" field="6538-1438-f500-589a" value="1.0">
+              <conditions>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="a73e-41f7-f3c6-0a5e" type="greaterThan"/>
+              </conditions>
+            </modifier>
           </modifiers>
           <constraints>
             <constraint field="b0b4-6aec-82c2-02ae" scope="e3a6-45ca-4974-b489" value="200.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="d0a1-67be-783c-8616" type="max"/>
+            <constraint field="selections" scope="e3a6-45ca-4974-b489" value="-1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="6538-1438-f500-589a" type="max"/>
           </constraints>
           <categoryLinks>
             <categoryLink id="24d5-68c9-51a5-a1bb" name="Leader" hidden="false" targetId="93cb-21d9-e1d5-6161" primary="false"/>
@@ -868,7 +879,7 @@
       <forceEntries>
         <forceEntry id="b543-cb16-0c79-fbc6" name="Allies" hidden="false">
           <modifiers>
-            <modifier type="set" field="ff6c-ce72-c356-93c1" value="435.0">
+            <modifier type="set" field="ff6c-ce72-c356-93c1" value="480.0">
               <conditionGroups>
                 <conditionGroup type="and">
                   <conditions>
@@ -883,9 +894,15 @@
                 <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="6f50-e069-0aac-3300" type="greaterThan"/>
               </conditions>
             </modifier>
+            <modifier type="set" field="0f3a-b1c2-c77f-7aab" value="1.0">
+              <conditions>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="a73e-41f7-f3c6-0a5e" type="greaterThan"/>
+              </conditions>
+            </modifier>
           </modifiers>
           <constraints>
             <constraint field="b0b4-6aec-82c2-02ae" scope="b543-cb16-0c79-fbc6" value="300.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="ff6c-ce72-c356-93c1" type="max"/>
+            <constraint field="selections" scope="b543-cb16-0c79-fbc6" value="-1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="0f3a-b1c2-c77f-7aab" type="max"/>
           </constraints>
           <categoryLinks>
             <categoryLink id="22c9-f4c0-29ca-fac5" name="Leader" hidden="false" targetId="93cb-21d9-e1d5-6161" primary="false"/>
@@ -1016,7 +1033,7 @@
       <forceEntries>
         <forceEntry id="996a-613c-4006-25e3" name="Allies" hidden="false">
           <modifiers>
-            <modifier type="set" field="4168-656c-2415-d682" value="435.0">
+            <modifier type="set" field="4168-656c-2415-d682" value="480.0">
               <conditionGroups>
                 <conditionGroup type="and">
                   <conditions>
@@ -1031,9 +1048,15 @@
                 <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="6f50-e069-0aac-3300" type="greaterThan"/>
               </conditions>
             </modifier>
+            <modifier type="set" field="68bf-11cd-a10d-d1fb" value="1.0">
+              <conditions>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="a73e-41f7-f3c6-0a5e" type="greaterThan"/>
+              </conditions>
+            </modifier>
           </modifiers>
           <constraints>
             <constraint field="b0b4-6aec-82c2-02ae" scope="996a-613c-4006-25e3" value="100.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="4168-656c-2415-d682" type="max"/>
+            <constraint field="selections" scope="996a-613c-4006-25e3" value="-1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="68bf-11cd-a10d-d1fb" type="max"/>
           </constraints>
           <categoryLinks>
             <categoryLink id="39c6-dfb7-3a10-b741" name="Leader" hidden="false" targetId="93cb-21d9-e1d5-6161" primary="false"/>
@@ -2303,6 +2326,61 @@ At the start of each battle round, before determining priority, the players roll
         <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
       </costs>
     </selectionEntry>
+    <selectionEntry id="e591-7b14-a2ac-10dd" name="Regiment of Renown" hidden="false" collective="false" import="true" type="upgrade">
+      <modifierGroups>
+        <modifierGroup>
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="a73e-41f7-f3c6-0a5e" type="equalTo"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="17c6-e52e-27bd-a759" value="1.0">
+              <conditions>
+                <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="a73e-41f7-f3c6-0a5e" type="greaterThan"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </modifierGroup>
+      </modifierGroups>
+      <constraints>
+        <constraint field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="17c6-e52e-27bd-a759" type="min"/>
+        <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="e1c4-42e1-9dfe-d4dd" type="max"/>
+      </constraints>
+      <profiles>
+        <profile id="4f22-1c1d-70a3-e03b" name="Unified" hidden="false" typeId="66c5-932e-004a-574c" typeName="Battalion Abilities">
+          <characteristics>
+            <characteristic name="Battalion Ability" typeId="23f7-32c0-e059-29b2">One-drop deployment. Each unit in this battalion must be within 6&quot; of the HERO in the same battalion at the end of deployment.</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <categoryLinks>
+        <categoryLink id="6bf5-f1f0-8d70-6825" name="New CategoryLink" hidden="false" targetId="c03a-b1a8-66c6-3637" primary="true"/>
+      </categoryLinks>
+      <selectionEntries>
+        <selectionEntry id="8b68-ba3a-a0b9-59ef" name="Renowned Commander" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="e50c-f724-7018-a7e9" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="e3d9-e7bd-8df3-67f0" type="min"/>
+          </constraints>
+          <costs>
+            <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="038a-c6fc-6bf0-9360" name="Renowned Troops" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="3.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="ab2f-5b01-ea94-8d09" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8d5d-e038-8263-09c7" type="min"/>
+          </constraints>
+          <costs>
+            <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
+          </costs>
+        </selectionEntry>
+      </selectionEntries>
+      <costs>
+        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
+      </costs>
+    </selectionEntry>
   </selectionEntries>
   <entryLinks>
     <entryLink id="dd77-8b8f-a11e-a426" name="Endless Spell - Aethervoid Pendulum" hidden="false" collective="false" import="true" targetId="0804-c05f-5a86-c4ee" type="selectionEntry"/>
@@ -2322,7 +2400,23 @@ At the start of each battle round, before determining priority, the players roll
     <entryLink id="5bb9-4cbd-bb8a-202d" name="Endless Spell - Shards of Vallagharr" hidden="false" collective="false" import="true" targetId="df97-6761-aa09-4823" type="selectionEntry"/>
     <entryLink id="4d6c-1720-3996-507f" name="Endless Spell - Lauchon the Soulseeker" hidden="false" collective="false" import="true" targetId="fc6c-4d7a-cc50-db15" type="selectionEntry"/>
     <entryLink id="fda6-18ed-e521-1967" name="Endless Spell - Horrorghast" hidden="false" collective="false" import="true" targetId="7e0a-6ffe-4578-3577" type="selectionEntry"/>
-    <entryLink id="6c5e-3efb-0fe3-58a1" name="Krondspine Incarnate" hidden="false" collective="false" import="true" targetId="cbf0-ddbd-d718-4a7f" type="selectionEntry"/>
+    <entryLink id="6c5e-3efb-0fe3-58a1" name="Krondspine Incarnate" hidden="false" collective="false" import="true" targetId="cbf0-ddbd-d718-4a7f" type="selectionEntry">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="b543-cb16-0c79-fbc6" type="instanceOf"/>
+                <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="6cd6-b22e-bfcb-9589" type="instanceOf"/>
+                <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="e3a6-45ca-4974-b489" type="instanceOf"/>
+                <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="996a-613c-4006-25e3" type="instanceOf"/>
+                <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4373-740f-1bf3-b0aa" type="instanceOf"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+    </entryLink>
   </entryLinks>
   <sharedSelectionEntries>
     <selectionEntry id="98a4-3d6d-a7b9-399f" name="General" hidden="false" collective="false" import="true" type="upgrade">
@@ -2931,6 +3025,11 @@ At the start of your hero phase, you receive 1 extra command point if any friend
         <modifier type="remove" field="category" value="e20c-48d8-e5e3-1a36">
           <conditions>
             <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="upgrade" type="equalTo"/>
+          </conditions>
+        </modifier>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="a73e-41f7-f3c6-0a5e" type="instanceOf"/>
           </conditions>
         </modifier>
       </modifiers>

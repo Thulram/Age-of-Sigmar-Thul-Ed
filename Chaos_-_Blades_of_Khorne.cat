@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="ec7a-9885-ba24-384d" name="Chaos - Blades of Khorne" revision="19" battleScribeVersion="2.03" authorName="Thulram" library="false" gameSystemId="e832-3291-06be-cab1" gameSystemRevision="19" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="ec7a-9885-ba24-384d" name="Chaos - Blades of Khorne" revision="20" battleScribeVersion="2.03" authorName="Thulram" library="false" gameSystemId="e832-3291-06be-cab1" gameSystemRevision="20" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <profileTypes>
     <profileType id="2d45-64c0-bdf3-61f9" name="Skarbrand Wounds">
       <characteristicTypes>
@@ -92,32 +92,13 @@
     <categoryEntry id="ad54-f500-f694-72a2" name="Bloodreavers" hidden="false"/>
     <categoryEntry id="028c-4827-856f-ca61" name="Garrek&apos;s Reavers" hidden="false"/>
     <categoryEntry id="549d-95f3-80c6-dc9a" name="Magore&apos;s Fiends" hidden="false"/>
-    <categoryEntry id="9605-27c4-55e8-34c2" name="Riptooth" hidden="false"/>
     <categoryEntry id="dd4c-a9ee-afac-1634" name="Wrathmongers" hidden="false"/>
     <categoryEntry id="ad24-f371-c602-3e28" name="Mighty Skullcrushers" hidden="false"/>
     <categoryEntry id="6bf2-068a-1741-3ac2" name="Skullreapers" hidden="false"/>
     <categoryEntry id="10b9-e2c2-04cd-0834" name="Scyla Anfingrimm" hidden="false"/>
     <categoryEntry id="c8ee-f8c7-4234-cd05" name="Khorgoraths" hidden="false"/>
-    <categoryEntry id="8463-0ecd-e2ae-ca26" name="Blood Legion" hidden="false"/>
-    <categoryEntry id="8750-eb5b-c6e7-5073" name="Murderhost" hidden="false"/>
-    <categoryEntry id="7838-86d2-f51b-a50e" name="Bloodthunder Stampede" hidden="false"/>
-    <categoryEntry id="9766-744d-fa94-619e" name="Tyrants of Blood" hidden="false"/>
-    <categoryEntry id="5f4e-9a8a-2999-a211" name="Blood Hunt" hidden="false"/>
-    <categoryEntry id="1076-0154-9f4b-d921" name="Gorethunder Cohort" hidden="false"/>
-    <categoryEntry id="d953-971f-2778-bbfd" name="Blood Host" hidden="false"/>
-    <categoryEntry id="9606-e671-d739-3eb0" name="Charnel Host" hidden="false"/>
-    <categoryEntry id="b7d7-a200-9c83-23bd" name="Skullseeker Host" hidden="false"/>
-    <categoryEntry id="a51a-d4f2-f861-f017" name="Bloodbound Warhorde" hidden="false"/>
     <categoryEntry id="efc3-307d-f4a2-412c" name="Gorechosen" hidden="false"/>
-    <categoryEntry id="edea-d3bc-49b4-e9c9" name="Brass Stampede" hidden="false"/>
-    <categoryEntry id="53c2-5be0-cf9e-bbf3" name="Dark Feast" hidden="false"/>
-    <categoryEntry id="64a0-8477-4a17-2600" name="Bloodmad Warband" hidden="false"/>
-    <categoryEntry id="98a3-ff6b-8606-709e" name="Red Headsmen" hidden="false"/>
-    <categoryEntry id="50cd-f506-8a23-65af" name="Skulltake" hidden="false"/>
     <categoryEntry id="7bfa-3392-579f-e627" name="Slaughterborn" hidden="false"/>
-    <categoryEntry id="2e7f-06ed-be90-aaac" name="Gore Pilgrims" hidden="false"/>
-    <categoryEntry id="e493-e85d-0ef8-5091" name="Bloodforged" hidden="false"/>
-    <categoryEntry id="35f5-5897-980e-1c3c" name="Skull Altar" hidden="false"/>
     <categoryEntry id="eabd-1e03-9fd1-e4eb" name="Bloodcrusher Battleline" hidden="true"/>
     <categoryEntry id="2359-297c-55b3-1eed" name="Mighty Skullcrusher Battleline" hidden="true"/>
     <categoryEntry id="8788-aac5-4e40-7942" name="Mazarall the Butcher" hidden="false"/>
@@ -289,6 +270,7 @@
               </categoryLinks>
             </entryLink>
             <entryLink id="f874-1a75-1425-35f0" name="Khorne Prayer Scriptures" hidden="false" collective="false" import="true" targetId="b5a3-3f21-d1e6-f331" type="selectionEntryGroup"/>
+            <entryLink id="4838-555a-9de8-a061" name="Battalion Formation" hidden="false" collective="false" import="true" targetId="72e3-52ed-dcde-7811" type="selectionEntryGroup"/>
           </entryLinks>
         </entryLink>
         <entryLink id="dcce-3d6a-bec3-97b7" name="Gorechosen of Dromm" hidden="false" collective="false" import="true" targetId="5ef4-7510-9dee-cff1" type="selectionEntry">
@@ -296,11 +278,58 @@
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8f62-c205-3b00-2d0d" type="max"/>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8489-5037-5714-c6c2" type="max"/>
           </constraints>
+          <entryLinks>
+            <entryLink id="9cb2-e134-a993-9e84" name="Battalion Formation" hidden="false" collective="false" import="true" targetId="72e3-52ed-dcde-7811" type="selectionEntryGroup"/>
+          </entryLinks>
         </entryLink>
       </entryLinks>
       <costs>
         <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="160.0"/>
       </costs>
+    </selectionEntry>
+    <selectionEntry id="1667-1795-10a0-6075" name="Gorechosen" hidden="false" collective="false" import="true" type="upgrade">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4373-740f-1bf3-b0aa" type="instanceOf"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="e3a6-45ca-4974-b489" type="instanceOf"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="996a-613c-4006-25e3" type="instanceOf"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="6cd6-b22e-bfcb-9589" type="instanceOf"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="b543-cb16-0c79-fbc6" type="instanceOf"/>
+                <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="8b40-a3bb-e05e-a738" type="equalTo"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+      <profiles>
+        <profile id="be1f-6893-17a8-2fbc" name="Unified" hidden="false" typeId="66c5-932e-004a-574c" typeName="Battalion Abilities">
+          <characteristics>
+            <characteristic name="Battalion Ability" typeId="23f7-32c0-e059-29b2">One-drop Deployment</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="bc1c-4992-2a7a-4f76" name="Magnificent" hidden="false" typeId="66c5-932e-004a-574c" typeName="Battalion Abilities">
+          <characteristics>
+            <characteristic name="Battalion Ability" typeId="23f7-32c0-e059-29b2">When you pick enhancements for your army, you can pick 1 extra enhancement.</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <categoryLinks>
+        <categoryLink id="0feb-90d9-8285-a504" name="New CategoryLink" hidden="false" targetId="c03a-b1a8-66c6-3637" primary="true"/>
+      </categoryLinks>
+      <selectionEntryGroups>
+        <selectionEntryGroup id="029a-af85-b67e-96aa" name="GORECHOSEN" hidden="false" collective="false" import="true">
+          <constraints>
+            <constraint field="selections" scope="parent" value="8.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="9a46-7233-85d7-99d6" type="max"/>
+            <constraint field="selections" scope="parent" value="5.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="1cf4-54e8-8404-6a60" type="min"/>
+          </constraints>
+          <selectionEntries>
+            <selectionEntry id="eee6-790e-48c8-6bcc" name="GORECHOSEN unit" hidden="false" collective="false" import="true" type="upgrade"/>
+          </selectionEntries>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
     </selectionEntry>
   </selectionEntries>
   <entryLinks>
@@ -311,6 +340,7 @@
             <categoryLink id="2a33-5b56-3a3b-da44" name="Named General" hidden="false" targetId="8b3d-7f03-e1f9-eaf5" primary="false"/>
           </categoryLinks>
         </entryLink>
+        <entryLink id="876f-06c4-efb5-f56b" name="Battalion Formation" hidden="false" collective="false" import="true" targetId="72e3-52ed-dcde-7811" type="selectionEntryGroup"/>
       </entryLinks>
     </entryLink>
     <entryLink id="ccc9-1e07-5e60-f6af" name="Bloodthirster of Unfettered Fury" hidden="false" collective="false" import="true" targetId="dd41-9e1d-fb0c-f5bb" type="selectionEntry">
@@ -332,6 +362,7 @@
             </modifier>
           </modifiers>
         </entryLink>
+        <entryLink id="5ec0-5eb0-404a-6151" name="Battalion Formation" hidden="false" collective="false" import="true" targetId="72e3-52ed-dcde-7811" type="selectionEntryGroup"/>
       </entryLinks>
     </entryLink>
     <entryLink id="3043-f7e3-b17f-0444" name="Bloodthirster of Insensate Rage" hidden="false" collective="false" import="true" targetId="3656-ca9d-a788-ae72" type="selectionEntry">
@@ -353,6 +384,7 @@
             </modifier>
           </modifiers>
         </entryLink>
+        <entryLink id="50e6-1be6-261f-a894" name="Battalion Formation" hidden="false" collective="false" import="true" targetId="72e3-52ed-dcde-7811" type="selectionEntryGroup"/>
       </entryLinks>
     </entryLink>
     <entryLink id="e3c5-7789-55d7-fbf5" name="Wrath of Khorne Bloodthirster" hidden="false" collective="false" import="true" targetId="6c00-12bb-831b-2d48" type="selectionEntry">
@@ -374,6 +406,7 @@
             </modifier>
           </modifiers>
         </entryLink>
+        <entryLink id="b2e4-1c5c-6c81-fc4c" name="Battalion Formation" hidden="false" collective="false" import="true" targetId="72e3-52ed-dcde-7811" type="selectionEntryGroup"/>
       </entryLinks>
     </entryLink>
     <entryLink id="05f4-1e02-2923-ff2b" name="Skulltaker" hidden="false" collective="false" import="true" targetId="9752-bfd8-974b-061e" type="selectionEntry">
@@ -395,10 +428,19 @@
             </modifier>
           </modifiers>
         </entryLink>
+        <entryLink id="a83b-155e-e27f-1100" name="Battalion Formation" hidden="false" collective="false" import="true" targetId="72e3-52ed-dcde-7811" type="selectionEntryGroup"/>
       </entryLinks>
     </entryLink>
-    <entryLink id="ea43-9f44-ddcd-74de" name="Karanak" hidden="false" collective="false" import="true" targetId="3531-f59d-bca3-db66" type="selectionEntry"/>
-    <entryLink id="e881-cd3d-bb0d-1d57" name="Flesh Hounds" hidden="false" collective="false" import="true" targetId="6943-23a0-5190-2239" type="selectionEntry"/>
+    <entryLink id="ea43-9f44-ddcd-74de" name="Karanak" hidden="false" collective="false" import="true" targetId="3531-f59d-bca3-db66" type="selectionEntry">
+      <entryLinks>
+        <entryLink id="dbf6-3c80-4565-ac4a" name="Battalion Formation" hidden="false" collective="false" import="true" targetId="72e3-52ed-dcde-7811" type="selectionEntryGroup"/>
+      </entryLinks>
+    </entryLink>
+    <entryLink id="e881-cd3d-bb0d-1d57" name="Flesh Hounds" hidden="false" collective="false" import="true" targetId="6943-23a0-5190-2239" type="selectionEntry">
+      <entryLinks>
+        <entryLink id="6c2e-27bd-a582-1283" name="Battalion Formation" hidden="false" collective="false" import="true" targetId="72e3-52ed-dcde-7811" type="selectionEntryGroup"/>
+      </entryLinks>
+    </entryLink>
     <entryLink id="628f-4b5c-fc9b-f67b" name="Skullmaster, Herald of Khorne" hidden="false" collective="false" import="true" targetId="608e-1398-c222-466e" type="selectionEntry">
       <entryLinks>
         <entryLink id="334a-39b0-56ed-3c38" name="Artefacts of Power" hidden="false" collective="false" import="true" targetId="0cf8-cdc5-99aa-65f4" type="selectionEntryGroup"/>
@@ -422,6 +464,7 @@
             </modifier>
           </modifiers>
         </entryLink>
+        <entryLink id="ceea-a336-ad3d-9876" name="Battalion Formation" hidden="false" collective="false" import="true" targetId="72e3-52ed-dcde-7811" type="selectionEntryGroup"/>
       </entryLinks>
     </entryLink>
     <entryLink id="98e5-c311-8bbc-46b3" name="Bloodmaster, Herald of Khorne" hidden="false" collective="false" import="true" targetId="2077-5760-f4b6-436c" type="selectionEntry">
@@ -443,9 +486,14 @@
             </modifier>
           </modifiers>
         </entryLink>
+        <entryLink id="f8ab-b477-7cc4-132a" name="Battalion Formation" hidden="false" collective="false" import="true" targetId="72e3-52ed-dcde-7811" type="selectionEntryGroup"/>
       </entryLinks>
     </entryLink>
-    <entryLink id="ebd8-756f-6d9d-949f" name="Bloodletters" hidden="false" collective="false" import="true" targetId="540a-4c05-e1e0-0cb3" type="selectionEntry"/>
+    <entryLink id="ebd8-756f-6d9d-949f" name="Bloodletters" hidden="false" collective="false" import="true" targetId="540a-4c05-e1e0-0cb3" type="selectionEntry">
+      <entryLinks>
+        <entryLink id="3f0b-f5cb-f38d-bef1" name="Battalion Formation" hidden="false" collective="false" import="true" targetId="72e3-52ed-dcde-7811" type="selectionEntryGroup"/>
+      </entryLinks>
+    </entryLink>
     <entryLink id="b983-23df-7586-9215" name="Bloodcrushers" hidden="false" collective="false" import="true" targetId="3f30-b44e-5f5a-9008" type="selectionEntry">
       <modifiers>
         <modifier type="remove" field="category" value="a42d-220e-6a88-7bf6">
@@ -464,6 +512,9 @@
       <categoryLinks>
         <categoryLink id="46d6-1825-750b-9d24" name="BATTLELINE" hidden="false" targetId="a42d-220e-6a88-7bf6" primary="false"/>
       </categoryLinks>
+      <entryLinks>
+        <entryLink id="abd4-dc73-ae19-5f44" name="Battalion Formation" hidden="false" collective="false" import="true" targetId="72e3-52ed-dcde-7811" type="selectionEntryGroup"/>
+      </entryLinks>
     </entryLink>
     <entryLink id="500b-ea88-8d50-4a28" name="Herald of Khorne on Blood Throne" hidden="false" collective="false" import="true" targetId="e6e5-0780-ac90-23cb" type="selectionEntry">
       <entryLinks>
@@ -484,9 +535,14 @@
             </modifier>
           </modifiers>
         </entryLink>
+        <entryLink id="d621-b092-c4e2-414d" name="Battalion Formation" hidden="false" collective="false" import="true" targetId="72e3-52ed-dcde-7811" type="selectionEntryGroup"/>
       </entryLinks>
     </entryLink>
-    <entryLink id="a679-4e8a-5b0a-4fe4" name="Skull Cannons" hidden="false" collective="false" import="true" targetId="dbc0-8b14-9e3e-39d3" type="selectionEntry"/>
+    <entryLink id="a679-4e8a-5b0a-4fe4" name="Skull Cannons" hidden="false" collective="false" import="true" targetId="dbc0-8b14-9e3e-39d3" type="selectionEntry">
+      <entryLinks>
+        <entryLink id="3eec-bf6c-f5ef-836a" name="Battalion Formation" hidden="false" collective="false" import="true" targetId="72e3-52ed-dcde-7811" type="selectionEntryGroup"/>
+      </entryLinks>
+    </entryLink>
     <entryLink id="f745-b418-1087-88dd" name="Korghos Khul" hidden="false" collective="false" import="true" targetId="4b1c-1007-6270-e604" type="selectionEntry">
       <entryLinks>
         <entryLink id="ba0f-e1e8-4525-891f" name="General" hidden="false" collective="false" import="true" targetId="98a4-3d6d-a7b9-399f" type="selectionEntry">
@@ -494,6 +550,7 @@
             <categoryLink id="6ddf-a82c-4c0c-d04c" name="Named General" hidden="false" targetId="8b3d-7f03-e1f9-eaf5" primary="false"/>
           </categoryLinks>
         </entryLink>
+        <entryLink id="6641-96be-b825-741d" name="Battalion Formation" hidden="false" collective="false" import="true" targetId="72e3-52ed-dcde-7811" type="selectionEntryGroup"/>
       </entryLinks>
     </entryLink>
     <entryLink id="6273-1551-f6b4-e807" name="Skarr Bloodwrath" hidden="false" collective="false" import="true" targetId="cbeb-0822-2fee-51cc" type="selectionEntry">
@@ -503,6 +560,7 @@
             <categoryLink id="5b89-71a6-f32a-7c5c" name="Named General" hidden="false" targetId="8b3d-7f03-e1f9-eaf5" primary="false"/>
           </categoryLinks>
         </entryLink>
+        <entryLink id="db6b-c4fd-8fa0-fcf2" name="Battalion Formation" hidden="false" collective="false" import="true" targetId="72e3-52ed-dcde-7811" type="selectionEntryGroup"/>
       </entryLinks>
     </entryLink>
     <entryLink id="cf47-5e7e-2c0f-c363" name="Valkia The Bloody" hidden="false" collective="false" import="true" targetId="988c-d8c6-8622-e532" type="selectionEntry">
@@ -512,6 +570,7 @@
             <categoryLink id="57e2-913d-07ad-610c" name="Named General" hidden="false" targetId="8b3d-7f03-e1f9-eaf5" primary="false"/>
           </categoryLinks>
         </entryLink>
+        <entryLink id="b458-0b8d-7b54-b5aa" name="Battalion Formation" hidden="false" collective="false" import="true" targetId="72e3-52ed-dcde-7811" type="selectionEntryGroup"/>
       </entryLinks>
     </entryLink>
     <entryLink id="ae9e-2cee-63c9-7e46" name="Mighty Lord of Khorne" hidden="false" collective="false" import="true" targetId="eb18-3cc9-7f14-2458" type="selectionEntry">
@@ -533,6 +592,7 @@
             </modifier>
           </modifiers>
         </entryLink>
+        <entryLink id="8338-523a-d6e1-04c6" name="Battalion Formation" hidden="false" collective="false" import="true" targetId="72e3-52ed-dcde-7811" type="selectionEntryGroup"/>
       </entryLinks>
     </entryLink>
     <entryLink id="bd12-de82-ba4f-3584" name="Bloodsecrator" hidden="false" collective="false" import="true" targetId="d481-c956-d8dd-98b4" type="selectionEntry">
@@ -554,6 +614,7 @@
             </modifier>
           </modifiers>
         </entryLink>
+        <entryLink id="6b2d-bf04-d962-78b9" name="Battalion Formation" hidden="false" collective="false" import="true" targetId="72e3-52ed-dcde-7811" type="selectionEntryGroup"/>
       </entryLinks>
     </entryLink>
     <entryLink id="5c55-c413-a0be-b5e8" name="Lord of Khorne on Juggernaut" hidden="false" collective="false" import="true" targetId="68f1-a71a-2656-7593" type="selectionEntry">
@@ -579,6 +640,7 @@
             </modifier>
           </modifiers>
         </entryLink>
+        <entryLink id="22e8-9877-8f37-56c6" name="Battalion Formation" hidden="false" collective="false" import="true" targetId="72e3-52ed-dcde-7811" type="selectionEntryGroup"/>
       </entryLinks>
     </entryLink>
     <entryLink id="35f2-02f4-f03d-fc63" name="Slaughterpriest" hidden="false" collective="false" import="true" targetId="2842-2a6e-20e1-597b" type="selectionEntry">
@@ -601,6 +663,7 @@
             </modifier>
           </modifiers>
         </entryLink>
+        <entryLink id="95c8-c1c9-8c89-e00b" name="Battalion Formation" hidden="false" collective="false" import="true" targetId="72e3-52ed-dcde-7811" type="selectionEntryGroup"/>
       </entryLinks>
     </entryLink>
     <entryLink id="cf16-6faf-c833-0cc3" name="Skullgrinder" hidden="false" collective="false" import="true" targetId="34f2-48dc-252e-86dd" type="selectionEntry">
@@ -622,6 +685,7 @@
             </modifier>
           </modifiers>
         </entryLink>
+        <entryLink id="8028-6cff-d1ac-cd82" name="Battalion Formation" hidden="false" collective="false" import="true" targetId="72e3-52ed-dcde-7811" type="selectionEntryGroup"/>
       </entryLinks>
     </entryLink>
     <entryLink id="6adf-0bbf-6590-6d4c" name="Aspiring Deathbringer" hidden="false" collective="false" import="true" targetId="de1b-c174-3a69-028c" type="selectionEntry">
@@ -643,6 +707,7 @@
             </modifier>
           </modifiers>
         </entryLink>
+        <entryLink id="2174-2e41-ae0f-d191" name="Battalion Formation" hidden="false" collective="false" import="true" targetId="72e3-52ed-dcde-7811" type="selectionEntryGroup"/>
       </entryLinks>
     </entryLink>
     <entryLink id="ab26-6ff8-9e2d-294d" name="Exalted Deathbringer" hidden="false" collective="false" import="true" targetId="6880-6e50-7185-d811" type="selectionEntry">
@@ -664,6 +729,7 @@
             </modifier>
           </modifiers>
         </entryLink>
+        <entryLink id="6ab0-04fd-21e5-605e" name="Battalion Formation" hidden="false" collective="false" import="true" targetId="72e3-52ed-dcde-7811" type="selectionEntryGroup"/>
       </entryLinks>
     </entryLink>
     <entryLink id="6663-9189-1c4c-cda5" name="Bloodstoker" hidden="false" collective="false" import="true" targetId="3b7c-2e39-b169-309d" type="selectionEntry">
@@ -685,12 +751,29 @@
             </modifier>
           </modifiers>
         </entryLink>
+        <entryLink id="329b-c85d-504a-4d47" name="Battalion Formation" hidden="false" collective="false" import="true" targetId="72e3-52ed-dcde-7811" type="selectionEntryGroup"/>
       </entryLinks>
     </entryLink>
-    <entryLink id="d561-2782-0790-8849" name="Blood Warriors" hidden="false" collective="false" import="true" targetId="7239-8f5d-57ac-5354" type="selectionEntry"/>
-    <entryLink id="3997-124e-5766-d20b" name="Bloodreavers" hidden="false" collective="false" import="true" targetId="2603-9e23-067c-ad46" type="selectionEntry"/>
-    <entryLink id="ea2f-27fe-5121-a515" name="Garrek&apos;s Reavers" hidden="false" collective="false" import="true" targetId="ab4d-ddb5-91a6-b8a3" type="selectionEntry"/>
-    <entryLink id="2716-2605-d83b-c6d3" name="Magore&apos;s Fiends and Riptooth (separate units)" hidden="false" collective="false" import="true" targetId="e5e0-519b-6673-62e3" type="selectionEntry"/>
+    <entryLink id="d561-2782-0790-8849" name="Blood Warriors" hidden="false" collective="false" import="true" targetId="7239-8f5d-57ac-5354" type="selectionEntry">
+      <entryLinks>
+        <entryLink id="f556-b5ab-7f7c-38fc" name="Battalion Formation" hidden="false" collective="false" import="true" targetId="72e3-52ed-dcde-7811" type="selectionEntryGroup"/>
+      </entryLinks>
+    </entryLink>
+    <entryLink id="3997-124e-5766-d20b" name="Bloodreavers" hidden="false" collective="false" import="true" targetId="2603-9e23-067c-ad46" type="selectionEntry">
+      <entryLinks>
+        <entryLink id="5c87-b440-49c4-6160" name="Battalion Formation" hidden="false" collective="false" import="true" targetId="72e3-52ed-dcde-7811" type="selectionEntryGroup"/>
+      </entryLinks>
+    </entryLink>
+    <entryLink id="ea2f-27fe-5121-a515" name="Garrek&apos;s Reavers" hidden="false" collective="false" import="true" targetId="ab4d-ddb5-91a6-b8a3" type="selectionEntry">
+      <entryLinks>
+        <entryLink id="2f59-ce17-e4cf-9df2" name="Battalion Formation" hidden="false" collective="false" import="true" targetId="72e3-52ed-dcde-7811" type="selectionEntryGroup"/>
+      </entryLinks>
+    </entryLink>
+    <entryLink id="2716-2605-d83b-c6d3" name="Magore&apos;s Fiends" hidden="false" collective="false" import="true" targetId="826b-2231-c475-bec4" type="selectionEntry">
+      <entryLinks>
+        <entryLink id="5feb-29b9-313f-c983" name="Battalion Formation" hidden="false" collective="false" import="true" targetId="72e3-52ed-dcde-7811" type="selectionEntryGroup"/>
+      </entryLinks>
+    </entryLink>
     <entryLink id="af75-82bd-8066-0526" name="Mighty Skullcrushers" hidden="false" collective="false" import="true" targetId="704a-8cd9-39be-6a5e" type="selectionEntry">
       <modifiers>
         <modifier type="remove" field="category" value="a42d-220e-6a88-7bf6">
@@ -709,9 +792,20 @@
       <categoryLinks>
         <categoryLink id="122c-523e-b48e-9262" name="BATTLELINE" hidden="false" targetId="a42d-220e-6a88-7bf6" primary="false"/>
       </categoryLinks>
+      <entryLinks>
+        <entryLink id="e3d6-e366-7821-03e5" name="Battalion Formation" hidden="false" collective="false" import="true" targetId="72e3-52ed-dcde-7811" type="selectionEntryGroup"/>
+      </entryLinks>
     </entryLink>
-    <entryLink id="1b36-24b5-2559-7efe" name="Wrathmongers" hidden="false" collective="false" import="true" targetId="ef6e-c9aa-7140-9769" type="selectionEntry"/>
-    <entryLink id="75d4-8649-d636-5599" name="Skullreapers" hidden="false" collective="false" import="true" targetId="d422-65ae-ef23-1eaa" type="selectionEntry"/>
+    <entryLink id="1b36-24b5-2559-7efe" name="Wrathmongers" hidden="false" collective="false" import="true" targetId="ef6e-c9aa-7140-9769" type="selectionEntry">
+      <entryLinks>
+        <entryLink id="960d-1823-1276-12bb" name="Battalion Formation" hidden="false" collective="false" import="true" targetId="72e3-52ed-dcde-7811" type="selectionEntryGroup"/>
+      </entryLinks>
+    </entryLink>
+    <entryLink id="75d4-8649-d636-5599" name="Skullreapers" hidden="false" collective="false" import="true" targetId="d422-65ae-ef23-1eaa" type="selectionEntry">
+      <entryLinks>
+        <entryLink id="c694-fc19-1f85-90e5" name="Battalion Formation" hidden="false" collective="false" import="true" targetId="72e3-52ed-dcde-7811" type="selectionEntryGroup"/>
+      </entryLinks>
+    </entryLink>
     <entryLink id="a01b-8fa0-2cbf-0b45" name="Scyla Anfingrimm" hidden="false" collective="false" import="true" targetId="65f2-d1f3-b014-d2dc" type="selectionEntry">
       <entryLinks>
         <entryLink id="93c6-c542-fbcd-7d49" name="General" hidden="false" collective="false" import="true" targetId="98a4-3d6d-a7b9-399f" type="selectionEntry">
@@ -719,9 +813,14 @@
             <categoryLink id="69fa-6357-7c89-bca8" name="Named General" hidden="false" targetId="8b3d-7f03-e1f9-eaf5" primary="false"/>
           </categoryLinks>
         </entryLink>
+        <entryLink id="4a59-d6b6-a309-5c2e" name="Battalion Formation" hidden="false" collective="false" import="true" targetId="72e3-52ed-dcde-7811" type="selectionEntryGroup"/>
       </entryLinks>
     </entryLink>
-    <entryLink id="3fc1-4f4c-862b-13b8" name="Khorgoraths" hidden="false" collective="false" import="true" targetId="4cfb-1d01-ffb9-8c1e" type="selectionEntry"/>
+    <entryLink id="3fc1-4f4c-862b-13b8" name="Khorgoraths" hidden="false" collective="false" import="true" targetId="4cfb-1d01-ffb9-8c1e" type="selectionEntry">
+      <entryLinks>
+        <entryLink id="8e81-4650-16a6-cf5d" name="Battalion Formation" hidden="false" collective="false" import="true" targetId="72e3-52ed-dcde-7811" type="selectionEntryGroup"/>
+      </entryLinks>
+    </entryLink>
     <entryLink id="b8dc-d948-573c-d62a" name="Skull Altar" hidden="false" collective="false" import="true" targetId="571a-8311-be05-4b72" type="selectionEntry"/>
     <entryLink id="98b1-4245-5699-5eb1" name="Allegiance" hidden="false" collective="false" import="true" targetId="6f2b-7adc-b51b-6aaa" type="selectionEntry">
       <modifiers>
@@ -745,6 +844,7 @@
             <categoryLink id="a37e-3206-ecd3-cfde" name="Named General" hidden="false" targetId="8b3d-7f03-e1f9-eaf5" primary="false"/>
           </categoryLinks>
         </entryLink>
+        <entryLink id="33ad-2161-7241-bca6" name="Battalion Formation" hidden="false" collective="false" import="true" targetId="72e3-52ed-dcde-7811" type="selectionEntryGroup"/>
       </entryLinks>
     </entryLink>
     <entryLink id="eb0a-a19a-c235-afd3" name="Exalted Greater Daemon of Khorne" hidden="false" collective="false" import="true" targetId="eeec-df85-3315-56c3" type="selectionEntry">
@@ -766,6 +866,7 @@
             </modifier>
           </modifiers>
         </entryLink>
+        <entryLink id="c09e-18e2-de54-ce5e" name="Battalion Formation" hidden="false" collective="false" import="true" targetId="72e3-52ed-dcde-7811" type="selectionEntryGroup"/>
       </entryLinks>
     </entryLink>
     <entryLink id="1ea5-d8c8-ef63-4470" name="Skaarac the Bloodborn" hidden="false" collective="false" import="true" targetId="3033-9255-b2f2-61e3" type="selectionEntry">
@@ -775,6 +876,7 @@
             <categoryLink id="75d8-ada9-ceb3-7d3a" name="Named General" hidden="false" targetId="8b3d-7f03-e1f9-eaf5" primary="false"/>
           </categoryLinks>
         </entryLink>
+        <entryLink id="b5c5-c471-7f1f-21f6" name="Battalion Formation" hidden="false" collective="false" import="true" targetId="72e3-52ed-dcde-7811" type="selectionEntryGroup"/>
       </entryLinks>
     </entryLink>
     <entryLink id="038f-c5d1-4558-5eb2" name="Vorgaroth the Scarred on Skalok the Skull Host of Khorne" hidden="false" collective="false" import="true" targetId="eaa9-d1ac-5dc8-c9a4" type="selectionEntry">
@@ -784,6 +886,7 @@
             <categoryLink id="4e4d-80d3-3c20-eb0e" name="Named General" hidden="false" targetId="8b3d-7f03-e1f9-eaf5" primary="false"/>
           </categoryLinks>
         </entryLink>
+        <entryLink id="063c-90d5-d1b8-6867" name="Battalion Formation" hidden="false" collective="false" import="true" targetId="72e3-52ed-dcde-7811" type="selectionEntryGroup"/>
       </entryLinks>
     </entryLink>
     <entryLink id="7d00-f684-2431-37c5" name="Chaos Chariots" hidden="false" collective="false" import="true" targetId="9dd9-cc5b-2b21-b996" type="selectionEntry">
@@ -793,11 +896,17 @@
       <categoryLinks>
         <categoryLink id="5d5b-3569-cab1-8683" name="Allegiant - Slaves to Darkness" hidden="false" targetId="81e2-476c-de0f-7978" primary="false"/>
       </categoryLinks>
+      <entryLinks>
+        <entryLink id="9b26-6d16-df48-b785" name="Core Battalions" hidden="false" collective="false" import="true" targetId="8c04-393d-d72d-c2a8" type="selectionEntryGroup"/>
+      </entryLinks>
     </entryLink>
     <entryLink id="3ed6-d27e-081d-2b79" name="Chaos Chosen" hidden="false" collective="false" import="true" targetId="ea93-8ff3-9b86-c8f0" type="selectionEntry">
       <categoryLinks>
         <categoryLink id="8759-fb91-c708-f926" name="Allegiant - Slaves to Darkness" hidden="false" targetId="81e2-476c-de0f-7978" primary="false"/>
       </categoryLinks>
+      <entryLinks>
+        <entryLink id="5d69-508b-730f-e87c" name="Core Battalions" hidden="false" collective="false" import="true" targetId="8c04-393d-d72d-c2a8" type="selectionEntryGroup"/>
+      </entryLinks>
     </entryLink>
     <entryLink id="4dfe-76d2-a93e-d6e1" name="Chaos Knights" hidden="false" collective="false" import="true" targetId="73fe-2d86-24a1-fe98" type="selectionEntry">
       <modifiers>
@@ -806,6 +915,9 @@
       <categoryLinks>
         <categoryLink id="c3e1-1f5b-43d3-1a99" name="Allegiant - Slaves to Darkness" hidden="false" targetId="81e2-476c-de0f-7978" primary="false"/>
       </categoryLinks>
+      <entryLinks>
+        <entryLink id="9514-1bd0-b23a-f51b" name="Core Battalions" hidden="false" collective="false" import="true" targetId="8c04-393d-d72d-c2a8" type="selectionEntryGroup"/>
+      </entryLinks>
     </entryLink>
     <entryLink id="33a8-5963-9c74-7c0d" name="Chaos Marauder Horsemen" hidden="false" collective="false" import="true" targetId="fad7-8185-4954-cd2a" type="selectionEntry">
       <modifiers>
@@ -814,6 +926,9 @@
       <categoryLinks>
         <categoryLink id="e275-921e-b5f2-cdd5" name="Allegiant - Slaves to Darkness" hidden="false" targetId="81e2-476c-de0f-7978" primary="false"/>
       </categoryLinks>
+      <entryLinks>
+        <entryLink id="fd4c-ce56-d804-85ae" name="Core Battalions" hidden="false" collective="false" import="true" targetId="8c04-393d-d72d-c2a8" type="selectionEntryGroup"/>
+      </entryLinks>
     </entryLink>
     <entryLink id="78e6-7a93-f1dd-6303" name="Chaos Marauders" hidden="false" collective="false" import="true" targetId="e057-b25e-b5b4-4df1" type="selectionEntry">
       <modifiers>
@@ -822,6 +937,9 @@
       <categoryLinks>
         <categoryLink id="e8fd-89c8-eef0-df4e" name="Allegiant - Slaves to Darkness" hidden="false" targetId="81e2-476c-de0f-7978" primary="false"/>
       </categoryLinks>
+      <entryLinks>
+        <entryLink id="a68a-d3db-7b79-df5c" name="Core Battalions" hidden="false" collective="false" import="true" targetId="8c04-393d-d72d-c2a8" type="selectionEntryGroup"/>
+      </entryLinks>
     </entryLink>
     <entryLink id="f8a9-ac2c-a2a2-aee7" name="Chaos Warriors" hidden="false" collective="false" import="true" targetId="60a2-6f0e-3dac-fcc4" type="selectionEntry">
       <modifiers>
@@ -830,16 +948,25 @@
       <categoryLinks>
         <categoryLink id="bec3-c2e0-b33a-499a" name="Allegiant - Slaves to Darkness" hidden="false" targetId="81e2-476c-de0f-7978" primary="false"/>
       </categoryLinks>
+      <entryLinks>
+        <entryLink id="7562-66c5-7dd7-b7eb" name="Core Battalions" hidden="false" collective="false" import="true" targetId="8c04-393d-d72d-c2a8" type="selectionEntryGroup"/>
+      </entryLinks>
     </entryLink>
     <entryLink id="19f2-e630-097d-6421" name="Slaves to Darkness Chaos Spawn" hidden="false" collective="false" import="true" targetId="2533-1c28-a6a1-1f76" type="selectionEntry">
       <categoryLinks>
         <categoryLink id="b8a2-ae6d-dfd9-525c" name="Allegiant - Slaves to Darkness" hidden="false" targetId="81e2-476c-de0f-7978" primary="false"/>
       </categoryLinks>
+      <entryLinks>
+        <entryLink id="49ac-716a-547a-d36f" name="Core Battalions" hidden="false" collective="false" import="true" targetId="8c04-393d-d72d-c2a8" type="selectionEntryGroup"/>
+      </entryLinks>
     </entryLink>
     <entryLink id="fafc-f087-0c7e-2156" name="Varanguard" hidden="false" collective="false" import="true" targetId="6b24-be40-5821-6573" type="selectionEntry">
       <categoryLinks>
         <categoryLink id="9614-d822-b13d-856b" name="Allegiant - Slaves to Darkness" hidden="false" targetId="81e2-476c-de0f-7978" primary="false"/>
       </categoryLinks>
+      <entryLinks>
+        <entryLink id="8a61-c045-9076-b361" name="Core Battalions" hidden="false" collective="false" import="true" targetId="8c04-393d-d72d-c2a8" type="selectionEntryGroup"/>
+      </entryLinks>
     </entryLink>
     <entryLink id="a238-fea4-5d63-9877" name="Archaon the Everchosen" hidden="false" collective="false" import="true" targetId="b236-3f69-c15f-a954" type="selectionEntry">
       <entryLinks>
@@ -853,6 +980,7 @@
       </categoryLinks>
       <entryLinks>
         <entryLink id="3b3e-f229-eb87-96d9" name="Artefacts of Power" hidden="false" collective="false" import="true" targetId="0cf8-cdc5-99aa-65f4" type="selectionEntryGroup"/>
+        <entryLink id="8a77-01cc-945d-bd63" name="Core Battalions" hidden="false" collective="false" import="true" targetId="8c04-393d-d72d-c2a8" type="selectionEntryGroup"/>
       </entryLinks>
     </entryLink>
     <entryLink id="c676-83c0-930a-428f" name="Chaos Lord on Daemonic Mount" hidden="false" collective="false" import="true" targetId="e0d8-c1c4-780e-e06c" type="selectionEntry">
@@ -861,6 +989,7 @@
       </categoryLinks>
       <entryLinks>
         <entryLink id="1ec0-f708-5f08-47ee" name="Artefacts of Power" hidden="false" collective="false" import="true" targetId="0cf8-cdc5-99aa-65f4" type="selectionEntryGroup"/>
+        <entryLink id="040f-7695-ee36-4b88" name="Core Battalions" hidden="false" collective="false" import="true" targetId="8c04-393d-d72d-c2a8" type="selectionEntryGroup"/>
       </entryLinks>
     </entryLink>
     <entryLink id="ec3b-3752-341c-cb21" name="Chaos Lord on Karkadrak" hidden="false" collective="false" import="true" targetId="ae17-f81f-42d9-00dc" type="selectionEntry">
@@ -869,6 +998,7 @@
       </categoryLinks>
       <entryLinks>
         <entryLink id="cb24-6be2-5f10-fb93" name="Artefacts of Power" hidden="false" collective="false" import="true" targetId="0cf8-cdc5-99aa-65f4" type="selectionEntryGroup"/>
+        <entryLink id="23f2-0b54-97a1-e66a" name="Core Battalions" hidden="false" collective="false" import="true" targetId="8c04-393d-d72d-c2a8" type="selectionEntryGroup"/>
       </entryLinks>
     </entryLink>
     <entryLink id="d19f-9150-60c6-fb49" name="Chaos Lord on Manticore" hidden="false" collective="false" import="true" targetId="1052-3276-9416-b2a8" type="selectionEntry">
@@ -878,6 +1008,7 @@
       </categoryLinks>
       <entryLinks>
         <entryLink id="e9e0-3c98-9213-9a1d" name="Artefacts of Power" hidden="false" collective="false" import="true" targetId="0cf8-cdc5-99aa-65f4" type="selectionEntryGroup"/>
+        <entryLink id="0157-b120-633f-da02" name="Core Battalions" hidden="false" collective="false" import="true" targetId="8c04-393d-d72d-c2a8" type="selectionEntryGroup"/>
       </entryLinks>
     </entryLink>
     <entryLink id="63f0-9dc1-5438-5b84" name="Exalted Hero of Chaos" hidden="false" collective="false" import="true" targetId="2b14-92e7-6138-eb76" type="selectionEntry">
@@ -886,6 +1017,7 @@
       </categoryLinks>
       <entryLinks>
         <entryLink id="56a3-88f7-55b5-11dd" name="Artefacts of Power" hidden="false" collective="false" import="true" targetId="0cf8-cdc5-99aa-65f4" type="selectionEntryGroup"/>
+        <entryLink id="4696-5756-b770-01bc" name="Core Battalions" hidden="false" collective="false" import="true" targetId="8c04-393d-d72d-c2a8" type="selectionEntryGroup"/>
       </entryLinks>
     </entryLink>
     <entryLink id="35c8-50f6-0fc3-efb5" name="Chaos Warshrine" hidden="false" collective="false" import="true" targetId="5ba7-fe45-c11e-a8da" type="selectionEntry">
@@ -895,6 +1027,7 @@
       </categoryLinks>
       <entryLinks>
         <entryLink id="4613-e9d5-6dff-4b41" name="Khorne Prayer Scriptures" hidden="false" collective="false" import="true" targetId="b5a3-3f21-d1e6-f331" type="selectionEntryGroup"/>
+        <entryLink id="a082-28e1-012b-1d47" name="Core Battalions" hidden="false" collective="false" import="true" targetId="8c04-393d-d72d-c2a8" type="selectionEntryGroup"/>
       </entryLinks>
     </entryLink>
     <entryLink id="ae77-5d97-c55a-8735" name="Soul Grinder" hidden="false" collective="false" import="true" targetId="d97a-886d-a857-5e6e" type="selectionEntry">
@@ -902,6 +1035,9 @@
         <categoryLink id="d53f-04c5-3f77-92c4" name="MinusOneBehemoth" hidden="false" targetId="c8a6-0af5-623c-375d" primary="false"/>
         <categoryLink id="b35b-acad-5b84-07e2" name="Allegiant - Slaves to Darkness" hidden="false" targetId="81e2-476c-de0f-7978" primary="false"/>
       </categoryLinks>
+      <entryLinks>
+        <entryLink id="79ba-2239-0a27-37ef" name="Core Battalions" hidden="false" collective="false" import="true" targetId="8c04-393d-d72d-c2a8" type="selectionEntryGroup"/>
+      </entryLinks>
     </entryLink>
     <entryLink id="f838-1d81-84e4-649c" name="Slaves to Darkness Daemon Prince" hidden="false" collective="false" import="true" targetId="293f-06ab-2a5a-f895" type="selectionEntry">
       <categoryLinks>
@@ -909,6 +1045,7 @@
       </categoryLinks>
       <entryLinks>
         <entryLink id="7ebc-aa2d-0043-d224" name="Artefacts of Power" hidden="false" collective="false" import="true" targetId="0cf8-cdc5-99aa-65f4" type="selectionEntryGroup"/>
+        <entryLink id="cc6d-d96a-75fb-dc0f" name="Core Battalions" hidden="false" collective="false" import="true" targetId="8c04-393d-d72d-c2a8" type="selectionEntryGroup"/>
       </entryLinks>
     </entryLink>
     <entryLink id="41c5-4407-3976-8e30" name="Slaughterbrute" hidden="false" collective="false" import="true" targetId="efeb-5536-3616-2ba6" type="selectionEntry">
@@ -916,6 +1053,9 @@
         <categoryLink id="33c4-2b15-241d-03b0" name="MinusOneBehemoth" hidden="false" targetId="c8a6-0af5-623c-375d" primary="false"/>
         <categoryLink id="7b8c-4d1f-16b4-606d" name="Allegiant - Slaves to Darkness" hidden="false" targetId="81e2-476c-de0f-7978" primary="false"/>
       </categoryLinks>
+      <entryLinks>
+        <entryLink id="b048-f213-1848-ea0d" name="Core Battalions" hidden="false" collective="false" import="true" targetId="8c04-393d-d72d-c2a8" type="selectionEntryGroup"/>
+      </entryLinks>
     </entryLink>
     <entryLink id="d9b7-d318-0043-4f5c" name="Ungors" hidden="false" collective="false" import="true" targetId="dcba-04fd-ff28-5c8d" type="selectionEntry">
       <modifiers>
@@ -924,26 +1064,41 @@
       <categoryLinks>
         <categoryLink id="1fbe-656b-0e21-a5d6" name="Allegiant - Beasts of Chaos" hidden="false" targetId="71cf-598a-6ef7-b9fb" primary="false"/>
       </categoryLinks>
+      <entryLinks>
+        <entryLink id="101d-1d94-b50d-f77b" name="Core Battalions" hidden="false" collective="false" import="true" targetId="8c04-393d-d72d-c2a8" type="selectionEntryGroup"/>
+      </entryLinks>
     </entryLink>
     <entryLink id="6fe6-d7b1-3cd6-522e" name="Ungor Raiders" hidden="false" collective="false" import="true" targetId="3394-027d-be0c-1dec" type="selectionEntry">
       <categoryLinks>
         <categoryLink id="b79a-d508-0e5e-396f" name="Allegiant - Beasts of Chaos" hidden="false" targetId="71cf-598a-6ef7-b9fb" primary="false"/>
       </categoryLinks>
+      <entryLinks>
+        <entryLink id="c35d-e60f-6d5a-d488" name="Core Battalions" hidden="false" collective="false" import="true" targetId="8c04-393d-d72d-c2a8" type="selectionEntryGroup"/>
+      </entryLinks>
     </entryLink>
     <entryLink id="0112-19bf-e672-4371" name="Tuskgor Chariots" hidden="false" collective="false" import="true" targetId="d7fb-e05b-0ebd-6279" type="selectionEntry">
       <categoryLinks>
         <categoryLink id="225c-ee9d-3a0e-3b3e" name="Allegiant - Beasts of Chaos" hidden="false" targetId="71cf-598a-6ef7-b9fb" primary="false"/>
       </categoryLinks>
+      <entryLinks>
+        <entryLink id="4d4f-8e3b-67f3-cc62" name="Core Battalions" hidden="false" collective="false" import="true" targetId="8c04-393d-d72d-c2a8" type="selectionEntryGroup"/>
+      </entryLinks>
     </entryLink>
     <entryLink id="1204-acb9-df23-b8ac" name="Razorgors" hidden="false" collective="false" import="true" targetId="b1dd-9a66-a634-095a" type="selectionEntry">
       <categoryLinks>
         <categoryLink id="0966-838c-4b23-ac67" name="Allegiant - Beasts of Chaos" hidden="false" targetId="71cf-598a-6ef7-b9fb" primary="false"/>
       </categoryLinks>
+      <entryLinks>
+        <entryLink id="6e7d-2d1c-b4b5-3959" name="Core Battalions" hidden="false" collective="false" import="true" targetId="8c04-393d-d72d-c2a8" type="selectionEntryGroup"/>
+      </entryLinks>
     </entryLink>
     <entryLink id="fe31-5952-222c-7da0" name="Jabberslythe" hidden="false" collective="false" import="true" targetId="f90e-58fb-1dc0-c921" type="selectionEntry">
       <categoryLinks>
         <categoryLink id="a52a-de20-8e90-e045" name="Allegiant - Beasts of Chaos" hidden="false" targetId="71cf-598a-6ef7-b9fb" primary="false"/>
       </categoryLinks>
+      <entryLinks>
+        <entryLink id="5389-b070-17b9-905b" name="Core Battalions" hidden="false" collective="false" import="true" targetId="8c04-393d-d72d-c2a8" type="selectionEntryGroup"/>
+      </entryLinks>
     </entryLink>
     <entryLink id="b1c9-f45d-9684-92b1" name="Gors" hidden="false" collective="false" import="true" targetId="4537-b647-f36b-b1d0" type="selectionEntry">
       <modifiers>
@@ -952,16 +1107,25 @@
       <categoryLinks>
         <categoryLink id="1f2e-9088-ba57-9ec7" name="Allegiant - Beasts of Chaos" hidden="false" targetId="71cf-598a-6ef7-b9fb" primary="false"/>
       </categoryLinks>
+      <entryLinks>
+        <entryLink id="2de5-e447-e05f-249d" name="Core Battalions" hidden="false" collective="false" import="true" targetId="8c04-393d-d72d-c2a8" type="selectionEntryGroup"/>
+      </entryLinks>
     </entryLink>
     <entryLink id="16bc-c888-332f-2cc8" name="Ghorgon" hidden="false" collective="false" import="true" targetId="ac76-a457-780f-f2a7" type="selectionEntry">
       <categoryLinks>
         <categoryLink id="fc31-0a21-51ce-3b08" name="Allegiant - Beasts of Chaos" hidden="false" targetId="71cf-598a-6ef7-b9fb" primary="false"/>
       </categoryLinks>
+      <entryLinks>
+        <entryLink id="12d4-e9d8-6476-ce8c" name="Core Battalions" hidden="false" collective="false" import="true" targetId="8c04-393d-d72d-c2a8" type="selectionEntryGroup"/>
+      </entryLinks>
     </entryLink>
     <entryLink id="cf3f-626e-8062-e243" name="Dragon Ogors" hidden="false" collective="false" import="true" targetId="4700-1580-b11f-ec45" type="selectionEntry">
       <categoryLinks>
         <categoryLink id="0479-69d3-cf97-8238" name="Allegiant - Beasts of Chaos" hidden="false" targetId="71cf-598a-6ef7-b9fb" primary="false"/>
       </categoryLinks>
+      <entryLinks>
+        <entryLink id="9655-c633-e5c9-0df8" name="Core Battalions" hidden="false" collective="false" import="true" targetId="8c04-393d-d72d-c2a8" type="selectionEntryGroup"/>
+      </entryLinks>
     </entryLink>
     <entryLink id="45d6-e77d-6c75-4d3c" name="Doombull" hidden="false" collective="false" import="true" targetId="7f9f-95a3-b4dc-b597" type="selectionEntry">
       <categoryLinks>
@@ -969,52 +1133,80 @@
       </categoryLinks>
       <entryLinks>
         <entryLink id="308b-70db-6dc3-1204" name="Artefacts of Power" hidden="false" collective="false" import="true" targetId="0cf8-cdc5-99aa-65f4" type="selectionEntryGroup"/>
+        <entryLink id="44f2-0b51-5c4e-7cdc" name="Core Battalions" hidden="false" collective="false" import="true" targetId="8c04-393d-d72d-c2a8" type="selectionEntryGroup"/>
       </entryLinks>
     </entryLink>
     <entryLink id="f82c-a7c8-d725-9d98" name="Cygor" hidden="false" collective="false" import="true" targetId="5e64-007b-e2f3-820b" type="selectionEntry">
       <categoryLinks>
         <categoryLink id="4d55-d86f-f160-8e10" name="Allegiant - Beasts of Chaos" hidden="false" targetId="71cf-598a-6ef7-b9fb" primary="false"/>
       </categoryLinks>
+      <entryLinks>
+        <entryLink id="6bd2-ea86-9d2d-8005" name="Core Battalions" hidden="false" collective="false" import="true" targetId="8c04-393d-d72d-c2a8" type="selectionEntryGroup"/>
+      </entryLinks>
     </entryLink>
     <entryLink id="e742-c40d-32bf-228a" name="Cockatrice" hidden="false" collective="false" import="true" targetId="66d7-3ab0-6877-ff92" type="selectionEntry">
       <categoryLinks>
         <categoryLink id="e444-714f-0544-9caa" name="Allegiant - Beasts of Chaos" hidden="false" targetId="71cf-598a-6ef7-b9fb" primary="false"/>
       </categoryLinks>
+      <entryLinks>
+        <entryLink id="3f32-c960-1e9e-00b6" name="Core Battalions" hidden="false" collective="false" import="true" targetId="8c04-393d-d72d-c2a8" type="selectionEntryGroup"/>
+      </entryLinks>
     </entryLink>
     <entryLink id="4123-7390-1ff1-1440" name="Chimera" hidden="false" collective="false" import="true" targetId="376f-46a5-c292-8e3a" type="selectionEntry">
       <categoryLinks>
         <categoryLink id="48c4-740b-a669-4f3f" name="Allegiant - Beasts of Chaos" hidden="false" targetId="71cf-598a-6ef7-b9fb" primary="false"/>
       </categoryLinks>
+      <entryLinks>
+        <entryLink id="04ac-c554-e3cb-92d8" name="Core Battalions" hidden="false" collective="false" import="true" targetId="8c04-393d-d72d-c2a8" type="selectionEntryGroup"/>
+      </entryLinks>
     </entryLink>
     <entryLink id="263e-cbbd-0ff5-88f7" name="Chaos Warhounds" hidden="false" collective="false" import="true" targetId="e117-3b1e-25e6-282d" type="selectionEntry">
       <categoryLinks>
         <categoryLink id="c4bb-b997-239c-f936" name="Allegiant - Beasts of Chaos" hidden="false" targetId="71cf-598a-6ef7-b9fb" primary="false"/>
       </categoryLinks>
+      <entryLinks>
+        <entryLink id="58cf-f3d4-9b81-0066" name="Core Battalions" hidden="false" collective="false" import="true" targetId="8c04-393d-d72d-c2a8" type="selectionEntryGroup"/>
+      </entryLinks>
     </entryLink>
     <entryLink id="2361-755f-409f-c5ce" name="Chaos Spawn" hidden="false" collective="false" import="true" targetId="cb35-889c-057e-a892" type="selectionEntry">
       <categoryLinks>
         <categoryLink id="8ca4-4d23-59e0-ddec" name="Allegiant - Beasts of Chaos" hidden="false" targetId="71cf-598a-6ef7-b9fb" primary="false"/>
       </categoryLinks>
+      <entryLinks>
+        <entryLink id="1328-931b-cc35-97bd" name="Core Battalions" hidden="false" collective="false" import="true" targetId="8c04-393d-d72d-c2a8" type="selectionEntryGroup"/>
+      </entryLinks>
     </entryLink>
     <entryLink id="e145-bbec-efb7-1883" name="Chaos Gargant" hidden="false" collective="false" import="true" targetId="37ca-d904-4cb6-8a08" type="selectionEntry">
       <categoryLinks>
         <categoryLink id="6a1c-b8c2-d727-fa2c" name="Allegiant - Beasts of Chaos" hidden="false" targetId="71cf-598a-6ef7-b9fb" primary="false"/>
       </categoryLinks>
+      <entryLinks>
+        <entryLink id="6783-873e-f461-e5c7" name="Core Battalions" hidden="false" collective="false" import="true" targetId="8c04-393d-d72d-c2a8" type="selectionEntryGroup"/>
+      </entryLinks>
     </entryLink>
     <entryLink id="2f90-11c4-7671-454d" name="Centigors" hidden="false" collective="false" import="true" targetId="6158-d1b8-b8b3-d46b" type="selectionEntry">
       <categoryLinks>
         <categoryLink id="26c1-5ade-8cf5-72c0" name="Allegiant - Beasts of Chaos" hidden="false" targetId="71cf-598a-6ef7-b9fb" primary="false"/>
       </categoryLinks>
+      <entryLinks>
+        <entryLink id="edc5-e31d-774f-a279" name="Core Battalions" hidden="false" collective="false" import="true" targetId="8c04-393d-d72d-c2a8" type="selectionEntryGroup"/>
+      </entryLinks>
     </entryLink>
     <entryLink id="03e3-ec23-43c4-d056" name="Bullgors" hidden="false" collective="false" import="true" targetId="3660-c5d4-c829-81f9" type="selectionEntry">
       <categoryLinks>
         <categoryLink id="6aba-d66f-d13e-732c" name="Allegiant - Beasts of Chaos" hidden="false" targetId="71cf-598a-6ef7-b9fb" primary="false"/>
       </categoryLinks>
+      <entryLinks>
+        <entryLink id="51c9-003e-0fd0-46d2" name="Core Battalions" hidden="false" collective="false" import="true" targetId="8c04-393d-d72d-c2a8" type="selectionEntryGroup"/>
+      </entryLinks>
     </entryLink>
     <entryLink id="19ff-9995-f43f-161d" name="Bestigors" hidden="false" collective="false" import="true" targetId="8e23-a1ff-a2dd-7335" type="selectionEntry">
       <categoryLinks>
         <categoryLink id="6f01-c4ef-164d-b32a" name="Allegiant - Beasts of Chaos" hidden="false" targetId="71cf-598a-6ef7-b9fb" primary="false"/>
       </categoryLinks>
+      <entryLinks>
+        <entryLink id="f3a8-eb8f-2a4e-2316" name="Core Battalions" hidden="false" collective="false" import="true" targetId="8c04-393d-d72d-c2a8" type="selectionEntryGroup"/>
+      </entryLinks>
     </entryLink>
     <entryLink id="704d-01b9-410f-26e7" name="Beastlord" hidden="false" collective="false" import="true" targetId="9e0e-4909-17ad-0438" type="selectionEntry">
       <categoryLinks>
@@ -1022,6 +1214,51 @@
       </categoryLinks>
       <entryLinks>
         <entryLink id="1e51-cb96-3eb9-50eb" name="Artefacts of Power" hidden="false" collective="false" import="true" targetId="0cf8-cdc5-99aa-65f4" type="selectionEntryGroup"/>
+        <entryLink id="4e04-af53-886b-d8f9" name="Core Battalions" hidden="false" collective="false" import="true" targetId="8c04-393d-d72d-c2a8" type="selectionEntryGroup"/>
+      </entryLinks>
+    </entryLink>
+    <entryLink id="d3ca-e0fc-e503-cbd6" name="Claws of Karanak" hidden="false" collective="false" import="true" targetId="f042-b3e9-2620-c787" type="selectionEntry">
+      <entryLinks>
+        <entryLink id="e09f-311f-dcf5-b0b6" name="Battalion Formation" hidden="false" collective="false" import="true" targetId="72e3-52ed-dcde-7811" type="selectionEntryGroup"/>
+      </entryLinks>
+    </entryLink>
+    <entryLink id="b874-893e-0775-4666" name="Realmgore Ritualist" hidden="false" collective="false" import="true" targetId="57e2-cafb-d1c9-a6ce" type="selectionEntry">
+      <entryLinks>
+        <entryLink id="3e19-da6e-7c8e-4c59" name="General" hidden="false" collective="false" import="true" targetId="98a4-3d6d-a7b9-399f" type="selectionEntry"/>
+        <entryLink id="44f6-13bf-0377-cb98" name="Artefacts of Power" hidden="false" collective="false" import="true" targetId="0cf8-cdc5-99aa-65f4" type="selectionEntryGroup"/>
+        <entryLink id="6e15-db50-47d5-ab05" name="Command Traits" hidden="false" collective="false" import="true" targetId="202c-3f58-ff86-1b9e" type="selectionEntryGroup"/>
+        <entryLink id="8434-fa6e-fa9a-f51f" name="Universal Spell Lore" hidden="false" collective="false" import="true" targetId="93f7-7e2a-3308-d150" type="selectionEntryGroup">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="7ee2-0d81-544f-5d7e" type="equalTo"/>
+                    <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="7ee2-0d81-544f-5d7e" type="notInstanceOf"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
+        </entryLink>
+        <entryLink id="a570-3eb0-dc4e-e4f7" name="Battalion Formation" hidden="false" collective="false" import="true" targetId="72e3-52ed-dcde-7811" type="selectionEntryGroup"/>
+      </entryLinks>
+    </entryLink>
+    <entryLink id="9fcf-487d-7090-dc67" name="Ogroid Theridons" hidden="false" collective="false" import="true" targetId="7098-0416-a2e3-0568" type="selectionEntry">
+      <categoryLinks>
+        <categoryLink id="527d-a8a0-5337-2fce" name="Allegiant - Slaves to Darkness" hidden="false" targetId="81e2-476c-de0f-7978" primary="false"/>
+      </categoryLinks>
+      <entryLinks>
+        <entryLink id="0de2-ec9a-d722-b33c" name="Core Battalions" hidden="false" collective="false" import="true" targetId="8c04-393d-d72d-c2a8" type="selectionEntryGroup"/>
+      </entryLinks>
+    </entryLink>
+    <entryLink id="b5d9-bb47-b18f-08e1" name="Ogroid Myrmidon" hidden="false" collective="false" import="true" targetId="a411-8f0e-4dc5-fbe8" type="selectionEntry">
+      <categoryLinks>
+        <categoryLink id="90e0-f0be-7435-eaa7" name="Allegiant - Slaves to Darkness" hidden="false" targetId="81e2-476c-de0f-7978" primary="false"/>
+      </categoryLinks>
+      <entryLinks>
+        <entryLink id="662a-ec72-b58c-156b" name="Core Battalions" hidden="false" collective="false" import="true" targetId="8c04-393d-d72d-c2a8" type="selectionEntryGroup"/>
+        <entryLink id="2905-549b-91de-06d3" name="Artefacts of Power" hidden="false" collective="false" import="true" targetId="0cf8-cdc5-99aa-65f4" type="selectionEntryGroup"/>
       </entryLinks>
     </entryLink>
   </entryLinks>
@@ -1033,17 +1270,19 @@
       <profiles>
         <profile id="8582-df9f-1f46-7729" name="Skull Altar Set-Up" hidden="false" typeId="d508-c1d5-a06f-0103" typeName="Scenery Set-Up">
           <characteristics>
-            <characteristic name="Set-Up Rules" typeId="fb13-8187-bb28-76fe">After territories are determined, you can set up this faction terrain feature wholly within your territory and more than 3&quot; from all objectives and other terrain features. If both players can set up faction terrain features at the same time, they must roll off and the winner chooses who sets up their faction terrain features first.</characteristic>
+            <characteristic name="Set-Up Rules" typeId="fb13-8187-bb28-76fe">After territories are determined, you can set up this faction terrain feature wholly within your territory and more than 3&quot; from all objectives and other terrain features. If both players can set up faction terrain features at the same time, they must roll off and the winner chooses who sets up their faction terrain features first.
+
+Only Blades of Khorne armies can include this faction terrain feature.</characteristic>
           </characteristics>
         </profile>
         <profile id="efe1-2126-e368-06f4" name="Words of Hate" hidden="false" typeId="1c58-2b3d-482e-2a35" typeName="Scenery Rules">
           <characteristics>
-            <characteristic name="Scenery Rule" typeId="a333-0c4a-7f67-677c">You can re-roll chanting rolls for friendly KHORNE PRIESTS wholly within 8&quot; of this terrain feature</characteristic>
+            <characteristic name="Scenery Rule" typeId="a333-0c4a-7f67-677c">You can re-roll chanting rolls for friendly BLADES OF KHORNE PRIESTS while they are wholly within 8&quot; of this terrain feature.</characteristic>
           </characteristics>
         </profile>
         <profile id="aaa9-efb3-5a2b-a7d3" name="Witchbane" hidden="false" typeId="1c58-2b3d-482e-2a35" typeName="Scenery Rules">
           <characteristics>
-            <characteristic name="Scenery Rule" typeId="a333-0c4a-7f67-677c">While any terrain feature with this scenery rule is on the battlefield, if a spell is miscast, the caster suffers D6 mortal wounds instead of D3.</characteristic>
+            <characteristic name="Scenery Rule" typeId="a333-0c4a-7f67-677c">While any terrain features with this scenery rule are on the battlefield, if a spell is miscast, the caster suffers D6 mortal wounds instead of D3.</characteristic>
           </characteristics>
         </profile>
         <profile id="4f30-e77c-9594-a9b3" name="Defensible" hidden="false" typeId="1c58-2b3d-482e-2a35" typeName="Scenery Rules">
@@ -1053,14 +1292,12 @@
         </profile>
         <profile id="94e9-51d5-96e2-318b" name="Invoke Judgement" hidden="false" typeId="1c58-2b3d-482e-2a35" typeName="Scenery Rules">
           <characteristics>
-            <characteristic name="Scenery Rule" typeId="a333-0c4a-7f67-677c">While a KHORNE HERO garrisons this terrain feature, it can attempt to summon invocations in the same manner as a KHORNE PRIEST and benefits from the &apos;Words of Hate&apos; ability when it does so.</characteristic>
+            <characteristic name="Scenery Rule" typeId="a333-0c4a-7f67-677c">While a BLADES OF KHORNE PRIEST garrisons this terrain feature, double the range of any prayers it chants to summon invocations.</characteristic>
           </characteristics>
         </profile>
       </profiles>
       <categoryLinks>
-        <categoryLink id="c1ec-17d7-bb90-5e1a" name="KHORNE" hidden="false" targetId="14aa-41c0-f6b8-bb8b" primary="false"/>
         <categoryLink id="938e-37a4-6847-bb4f" name="Scenery" hidden="false" targetId="bab2-426b-5501-5fe8" primary="false"/>
-        <categoryLink id="95da-94d5-4cd4-5dbf" name="Skull Altar" hidden="false" targetId="35f5-5897-980e-1c3c" primary="false"/>
         <categoryLink id="5e56-3088-9366-ea09" name="New CategoryLink" hidden="false" targetId="29f4-e63d-fa5b-1611" primary="true"/>
       </categoryLinks>
       <costs>
@@ -1114,314 +1351,29 @@
       <constraints>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="f15d-5059-e7d3-1a1f" type="max"/>
       </constraints>
-      <selectionEntries>
-        <selectionEntry id="c511-d770-b6ef-ba1b" name="0. Hew the Foe" hidden="false" collective="false" import="true" type="upgrade">
-          <modifiers>
-            <modifier type="set" field="0b19-d3c5-8fc8-849e" value="1.0">
-              <conditionGroups>
-                <conditionGroup type="and">
-                  <conditions>
-                    <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="1db7-6ca5-f8bf-a5da" type="greaterThan"/>
-                    <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="8b3d-7f03-e1f9-eaf5" type="equalTo"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
-            </modifier>
-            <modifier type="set" field="hidden" value="true">
-              <conditions>
-                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="1db7-6ca5-f8bf-a5da" type="lessThan"/>
-              </conditions>
-            </modifier>
-          </modifiers>
-          <constraints>
-            <constraint field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="0b19-d3c5-8fc8-849e" type="min"/>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="000c-4707-e7bb-324e" type="max"/>
-          </constraints>
-          <profiles>
-            <profile id="fd59-3acf-589d-caec" name="Hew the Foe" hidden="false" typeId="1504-23bf-8850-4f65" typeName="Command Traits">
-              <characteristics>
-                <characteristic name="Command Trait" typeId="0145-9acf-f5dc-d543">Add 1 to the Damage characteristic of this general’s melee weapons.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <costs>
-            <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="3da0-37a9-3a79-e5c0" name="0. Mage Eater" hidden="false" collective="false" import="true" type="upgrade">
-          <modifiers>
-            <modifier type="set" field="3bfe-d9bc-d8fb-cea8" value="1.0">
-              <conditionGroups>
-                <conditionGroup type="and">
-                  <conditions>
-                    <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="8b3d-7f03-e1f9-eaf5" type="equalTo"/>
-                    <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="c0b3-03db-8cbf-8ccd" type="greaterThan"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
-            </modifier>
-            <modifier type="set" field="hidden" value="true">
-              <conditions>
-                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="c0b3-03db-8cbf-8ccd" type="lessThan"/>
-              </conditions>
-            </modifier>
-          </modifiers>
-          <constraints>
-            <constraint field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="3bfe-d9bc-d8fb-cea8" type="min"/>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="6f4e-e88c-0d2a-2a83" type="max"/>
-          </constraints>
-          <profiles>
-            <profile id="6d50-0028-c716-202d" name="Mage Eater" hidden="false" typeId="1504-23bf-8850-4f65" typeName="Command Traits">
-              <characteristics>
-                <characteristic name="Command Trait" typeId="0145-9acf-f5dc-d543">This general can attempt to unbind one spell in the enemy hero phase in the same manner as a WIZARD. In addition, if this general attempts to unbind a spell and the unmodified unbinding roll is 8, that spell is successfully unbound and the caster suffers D6 mortal wounds. If this general can already unbind spells, they can attempt to unbind 1 extra spell in the enemy hero phase (only the first unbinding roll in the phase can cause mortal wounds).</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <costs>
-            <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="df73-1788-3808-849e" name="0. Master Decapitator" hidden="false" collective="false" import="true" type="upgrade">
-          <modifiers>
-            <modifier type="set" field="c9dd-dc42-aff9-47c2" value="1.0">
-              <conditionGroups>
-                <conditionGroup type="and">
-                  <conditions>
-                    <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="8b3d-7f03-e1f9-eaf5" type="equalTo"/>
-                    <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="eacf-608c-4d4c-dff6" type="greaterThan"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
-            </modifier>
-            <modifier type="set" field="hidden" value="true">
-              <conditions>
-                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="eacf-608c-4d4c-dff6" type="lessThan"/>
-              </conditions>
-            </modifier>
-          </modifiers>
-          <constraints>
-            <constraint field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="c9dd-dc42-aff9-47c2" type="min"/>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="a313-d748-9eb5-4c31" type="max"/>
-          </constraints>
-          <profiles>
-            <profile id="87fb-dfd6-0332-5e5a" name="Master Decapitator" hidden="false" typeId="1504-23bf-8850-4f65" typeName="Command Traits">
-              <characteristics>
-                <characteristic name="Command Trait" typeId="0145-9acf-f5dc-d543">You receive 2 Blood Tithe points instead of 1 when this general slays a HERO.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <costs>
-            <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="3c92-3384-1786-61a2" name="0. Slaughterer&apos;s Thirst" hidden="false" collective="false" import="true" type="upgrade">
-          <modifiers>
-            <modifier type="set" field="673c-1455-8757-a5bf" value="1.0">
-              <conditionGroups>
-                <conditionGroup type="and">
-                  <conditions>
-                    <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="8b3d-7f03-e1f9-eaf5" type="equalTo"/>
-                    <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="4d52-97a8-88b9-6565" type="greaterThan"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
-            </modifier>
-            <modifier type="set" field="hidden" value="true">
-              <conditions>
-                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="4d52-97a8-88b9-6565" type="lessThan"/>
-              </conditions>
-            </modifier>
-          </modifiers>
-          <constraints>
-            <constraint field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="673c-1455-8757-a5bf" type="min"/>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d798-63de-8c46-0362" type="max"/>
-          </constraints>
-          <profiles>
-            <profile id="2ed5-38ae-0b85-7d92" name="Slaughterer&apos;s Thirst" hidden="false" typeId="1504-23bf-8850-4f65" typeName="Command Traits">
-              <characteristics>
-                <characteristic name="Command Trait" typeId="0145-9acf-f5dc-d543">Add 4&quot; to the Move characteristic of this general. In addition, you can re-roll charge rolls for this general.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <costs>
-            <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="89c4-d40c-e6dd-c61e" name="0. Thirst for Carnage" hidden="false" collective="false" import="true" type="upgrade">
-          <modifiers>
-            <modifier type="set" field="bf8b-268d-0d6c-24ad" value="1.0">
-              <conditionGroups>
-                <conditionGroup type="and">
-                  <conditions>
-                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="bfd7-14bc-af45-0bc6" type="greaterThan"/>
-                    <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="8b3d-7f03-e1f9-eaf5" type="equalTo"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
-            </modifier>
-            <modifier type="set" field="hidden" value="true">
-              <conditions>
-                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="bfd7-14bc-af45-0bc6" type="equalTo"/>
-              </conditions>
-            </modifier>
-          </modifiers>
-          <constraints>
-            <constraint field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="bf8b-268d-0d6c-24ad" type="min"/>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="0185-ae72-0e4c-146c" type="max"/>
-          </constraints>
-          <profiles>
-            <profile id="c275-8a51-6a26-be5d" name="Thirst for Carnage" hidden="false" typeId="1504-23bf-8850-4f65" typeName="Command Traits">
-              <characteristics>
-                <characteristic name="Command Trait" typeId="0145-9acf-f5dc-d543">A BALEFUL LORDS general must have this command trait.
-
-Add 1 to charge rolls for friendly BALEFUL LORDS BLOODTHIRSTERS within 8&quot; of this general.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <costs>
-            <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="5c73-2bb6-17f3-2b3d" name="0. Vessel of Butchery" hidden="false" collective="false" import="true" type="upgrade">
-          <modifiers>
-            <modifier type="set" field="2bff-aa9d-26d9-ab92" value="1.0">
-              <conditionGroups>
-                <conditionGroup type="and">
-                  <conditions>
-                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="ef3d-9056-ccff-caed" type="greaterThan"/>
-                    <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="8b3d-7f03-e1f9-eaf5" type="equalTo"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
-            </modifier>
-            <modifier type="set" field="hidden" value="true">
-              <conditions>
-                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="ef3d-9056-ccff-caed" type="equalTo"/>
-              </conditions>
-            </modifier>
-          </modifiers>
-          <constraints>
-            <constraint field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="2bff-aa9d-26d9-ab92" type="min"/>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="0866-9d2c-724d-730d" type="max"/>
-          </constraints>
-          <profiles>
-            <profile id="84c1-b500-44aa-309c" name="Vessel of Butchery" hidden="false" typeId="1504-23bf-8850-4f65" typeName="Command Traits">
-              <characteristics>
-                <characteristic name="Command Trait" typeId="0145-9acf-f5dc-d543">A FLAYED general must have this command trait.
-
-You can re-roll prayer rolls of 1 for friendly FLAYED PRIESTS wholly within 8&quot; of this general.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <costs>
-            <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
-          </costs>
-        </selectionEntry>
-      </selectionEntries>
       <selectionEntryGroups>
-        <selectionEntryGroup id="b63e-c03c-f166-bb14" name="Khorne Mortals" hidden="false" collective="false" import="true">
-          <modifiers>
-            <modifier type="set" field="hidden" value="true">
-              <conditions>
-                <condition field="selections" scope="ancestor" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="ca90-b9b0-010b-72d0" type="notInstanceOf"/>
-              </conditions>
-            </modifier>
-          </modifiers>
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="9fed-5ef0-c100-f304" type="max"/>
-          </constraints>
-          <selectionEntries>
-            <selectionEntry id="3536-cea6-3a05-b80e" name="1. Arch-slaughterer" hidden="false" collective="false" import="true" type="upgrade">
-              <profiles>
-                <profile id="9cc3-1921-809d-9097" name="Arch-slaughterer" hidden="false" typeId="1504-23bf-8850-4f65" typeName="Command Traits">
-                  <characteristics>
-                    <characteristic name="Command Trait" typeId="0145-9acf-f5dc-d543">Each time an attack made by this general with a melee weapon slays an enemy HERO or MONSTER, you receive 2 Blood Tithe points instead of 1.</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-              <costs>
-                <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
-              </costs>
-            </selectionEntry>
-            <selectionEntry id="5a38-616d-74cc-5ada" name="6. Violent Urgency" hidden="false" collective="false" import="true" type="upgrade">
-              <profiles>
-                <profile id="c74b-2f25-74d1-5251" name="Violent Urgency" hidden="false" typeId="1504-23bf-8850-4f65" typeName="Command Traits">
-                  <characteristics>
-                    <characteristic name="Command Trait" typeId="0145-9acf-f5dc-d543">You can re-roll charge rolls for friendly KHORNE units that are wholly within 12&quot; of this general when the charge roll is made.</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-              <costs>
-                <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
-              </costs>
-            </selectionEntry>
-            <selectionEntry id="675b-108e-2d97-8a1a" name="5. Beserker Lord" hidden="false" collective="false" import="true" type="upgrade">
-              <profiles>
-                <profile id="c8cc-c132-72d3-107b" name="Beserker Lord" hidden="false" typeId="1504-23bf-8850-4f65" typeName="Command Traits">
-                  <characteristics>
-                    <characteristic name="Command Trait" typeId="0145-9acf-f5dc-d543">Roll a dice each time you allocate a wound or mortal wound to this general. On a 5+ that wound or mortal wound is negated.</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-              <costs>
-                <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
-              </costs>
-            </selectionEntry>
-            <selectionEntry id="0f67-6aea-9d7a-4b8e" name="4. Hungry for Glory" hidden="false" collective="false" import="true" type="upgrade">
-              <profiles>
-                <profile id="0f2f-9483-48c1-8d6a" name="Hungry for Glory" hidden="false" typeId="1504-23bf-8850-4f65" typeName="Command Traits">
-                  <characteristics>
-                    <characteristic name="Command Trait" typeId="0145-9acf-f5dc-d543">You can re-roll hit and wound rolls for attacks made by this general that target an enemy HERO or MONSTER.</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-              <costs>
-                <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
-              </costs>
-            </selectionEntry>
-            <selectionEntry id="bc9d-26ed-02af-dc87" name="3. Slaughterborn" hidden="false" collective="false" import="true" type="upgrade">
-              <profiles>
-                <profile id="e744-e8bd-e8df-9e71" name="Slaughterborn" hidden="false" typeId="1504-23bf-8850-4f65" typeName="Command Traits">
-                  <characteristics>
-                    <characteristic name="Command Trait" typeId="0145-9acf-f5dc-d543">You can re-roll hit rolls for attacks made with melee weapons by this general.</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-              <costs>
-                <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
-              </costs>
-            </selectionEntry>
-            <selectionEntry id="cbb9-73e6-6b88-3cd9" name="2. Unrivalled Battle-lust" hidden="false" collective="false" import="true" type="upgrade">
-              <profiles>
-                <profile id="32a5-0b3a-fbc2-2a61" name="Unrivalled Battle-lust" hidden="false" typeId="1504-23bf-8850-4f65" typeName="Command Traits">
-                  <characteristics>
-                    <characteristic name="Command Trait" typeId="0145-9acf-f5dc-d543">At the end of your opponent’s charge phase, if this general is within 12&quot; of any enemy units (but not within 3&quot; of any enemy units), you can attempt to make a charge move with this general.</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-              <costs>
-                <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
-              </costs>
-            </selectionEntry>
-          </selectionEntries>
-        </selectionEntryGroup>
         <selectionEntryGroup id="92ba-5e64-b7bb-df17" name="Khorne Bloodbound" hidden="false" collective="false" import="true">
           <modifiers>
             <modifier type="set" field="hidden" value="true">
-              <conditions>
-                <condition field="selections" scope="ancestor" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="b72c-6500-82c2-e409" type="notInstanceOf"/>
-              </conditions>
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="660a-ffea-1ea6-c5fc" type="notInstanceOf"/>
+                    <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="b72c-6500-82c2-e409" type="notInstanceOf"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
             </modifier>
           </modifiers>
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="e623-56e1-a35e-83f6" type="max"/>
           </constraints>
           <selectionEntries>
-            <selectionEntry id="5a8d-643d-4f26-3799" name="1. Arch-slaughterer" hidden="false" collective="false" import="true" type="upgrade">
+            <selectionEntry id="5a8d-643d-4f26-3799" name="1. Diabolical Purpose" hidden="false" collective="false" import="true" type="upgrade">
               <profiles>
-                <profile id="07b5-4add-31f0-0049" name="Arch-slaughterer" hidden="false" typeId="1504-23bf-8850-4f65" typeName="Command Traits">
+                <profile id="07b5-4add-31f0-0049" name="Diabolical Purpose" hidden="false" typeId="1504-23bf-8850-4f65" typeName="Command Traits">
                   <characteristics>
-                    <characteristic name="Command Trait" typeId="0145-9acf-f5dc-d543">Each time an attack made by this general with a melee weapon slays an enemy HERO or MONSTER, you receive 2 Blood Tithe points instead of 1.</characteristic>
+                    <characteristic name="Command Trait" typeId="0145-9acf-f5dc-d543">Add 1 to the Damage characteristic of attacks made by this general that target an enemy HERO.</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
@@ -1429,11 +1381,18 @@ You can re-roll prayer rolls of 1 for friendly FLAYED PRIESTS wholly within 8&qu
                 <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
               </costs>
             </selectionEntry>
-            <selectionEntry id="39da-e4a6-f30f-2223" name="6. Disciple of Khorne" hidden="false" collective="false" import="true" type="upgrade">
+            <selectionEntry id="56df-1648-a2a2-1f1f" name="4. High Priest of Khorne" hidden="false" collective="false" import="true" type="upgrade">
+              <modifiers>
+                <modifier type="set" field="hidden" value="true">
+                  <conditions>
+                    <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="f0a9-dd66-8662-61ce" type="notInstanceOf"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
               <profiles>
-                <profile id="03c1-fbec-d022-b8f8" name="Disciple of Khorne" hidden="false" typeId="1504-23bf-8850-4f65" typeName="Command Traits">
+                <profile id="d650-e38e-29c3-01f2" name="High Priest of Khorne" hidden="false" typeId="1504-23bf-8850-4f65" typeName="Command Traits">
                   <characteristics>
-                    <characteristic name="Command Trait" typeId="0145-9acf-f5dc-d543">Add 2 to the Attacks characteristic of this general&apos;s melee weapons.</characteristic>
+                    <characteristic name="Command Trait" typeId="0145-9acf-f5dc-d543">PRIEST only. In each of your hero phases, your general can chant 2 prayers that they know instead of 1.</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
@@ -1441,11 +1400,11 @@ You can re-roll prayer rolls of 1 for friendly FLAYED PRIESTS wholly within 8&qu
                 <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
               </costs>
             </selectionEntry>
-            <selectionEntry id="edbb-40cc-ed81-ace6" name="5. Bloodsworn" hidden="false" collective="false" import="true" type="upgrade">
+            <selectionEntry id="b61c-d9f4-8fc2-61a0" name="3. Lord of the Gorechosen" hidden="false" collective="false" import="true" type="upgrade">
               <profiles>
-                <profile id="735e-1d1b-bff8-3578" name="Bloodsworn" hidden="false" typeId="1504-23bf-8850-4f65" typeName="Command Traits">
+                <profile id="e1db-8abe-5a22-fb2e" name="Lord of the Gorechosen" hidden="false" typeId="1504-23bf-8850-4f65" typeName="Command Traits">
                   <characteristics>
-                    <characteristic name="Command Trait" typeId="0145-9acf-f5dc-d543">While friendly KHORNE MORTAL units are wholly within 16&quot; of this general, they can use this general’s Bravery characteristic instead of their own.</characteristic>
+                    <characteristic name="Command Trait" typeId="0145-9acf-f5dc-d543">Add 1 to the Attacks characteristic of melee weapons used by friendly GORECHOSEN units while they are wholly within 16&quot; of this general.</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
@@ -1453,35 +1412,11 @@ You can re-roll prayer rolls of 1 for friendly FLAYED PRIESTS wholly within 8&qu
                 <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
               </costs>
             </selectionEntry>
-            <selectionEntry id="56df-1648-a2a2-1f1f" name="4. Mark of the Cannibal" hidden="false" collective="false" import="true" type="upgrade">
+            <selectionEntry id="328c-acef-e5b4-301a" name="2. Barbarian Lord" hidden="false" collective="false" import="true" type="upgrade">
               <profiles>
-                <profile id="d650-e38e-29c3-01f2" name="Mark of the Cannibal" hidden="false" typeId="1504-23bf-8850-4f65" typeName="Command Traits">
+                <profile id="248d-aae8-39b8-c5b4" name="Barbarian Lord" hidden="false" typeId="1504-23bf-8850-4f65" typeName="Command Traits">
                   <characteristics>
-                    <characteristic name="Command Trait" typeId="0145-9acf-f5dc-d543">At the end of the combat phase, if any enemy models were slain by this general’s attacks in that combat phase, you can heal 1 wound allocated to this general.</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-              <costs>
-                <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
-              </costs>
-            </selectionEntry>
-            <selectionEntry id="b61c-d9f4-8fc2-61a0" name="3. Slaughterborn" hidden="false" collective="false" import="true" type="upgrade">
-              <profiles>
-                <profile id="e1db-8abe-5a22-fb2e" name="Slaughterborn" hidden="false" typeId="1504-23bf-8850-4f65" typeName="Command Traits">
-                  <characteristics>
-                    <characteristic name="Command Trait" typeId="0145-9acf-f5dc-d543">You can re-roll hit rolls for attacks made with melee weapons by this general.</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-              <costs>
-                <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
-              </costs>
-            </selectionEntry>
-            <selectionEntry id="328c-acef-e5b4-301a" name="2. Unrivalled Battle-lust" hidden="false" collective="false" import="true" type="upgrade">
-              <profiles>
-                <profile id="248d-aae8-39b8-c5b4" name="Unrivalled Battle-lust" hidden="false" typeId="1504-23bf-8850-4f65" typeName="Command Traits">
-                  <characteristics>
-                    <characteristic name="Command Trait" typeId="0145-9acf-f5dc-d543">At the end of your opponent’s charge phase, if this general is within 12&quot; of any enemy units (but not within 3&quot; of any enemy units), you can attempt to make a charge move with this general.</characteristic>
+                    <characteristic name="Command Trait" typeId="0145-9acf-f5dc-d543">Add 1 to run rolls and charge rolls for this general and for friendly BLOODREAVERS, CLAWS OF KARANAK and FLESH HOUNDS units while they are wholly within 16&quot; of this general.</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
@@ -1491,23 +1426,28 @@ You can re-roll prayer rolls of 1 for friendly FLAYED PRIESTS wholly within 8&qu
             </selectionEntry>
           </selectionEntries>
         </selectionEntryGroup>
-        <selectionEntryGroup id="f150-7ae3-5511-f58b" name="Khorne Daemons" hidden="false" collective="false" import="true">
+        <selectionEntryGroup id="f150-7ae3-5511-f58b" name="Commanders of the Blood Legions" hidden="false" collective="false" import="true">
           <modifiers>
             <modifier type="set" field="hidden" value="true">
-              <conditions>
-                <condition field="selections" scope="ancestor" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="128a-35fa-6f1f-a15d" type="notInstanceOf"/>
-              </conditions>
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="660a-ffea-1ea6-c5fc" type="notInstanceOf"/>
+                    <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="128a-35fa-6f1f-a15d" type="notInstanceOf"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
             </modifier>
           </modifiers>
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="6eb3-0fde-15dc-d68c" type="max"/>
           </constraints>
           <selectionEntries>
-            <selectionEntry id="3051-80de-0e56-606f" name="1. Arch-slaughterer" hidden="false" collective="false" import="true" type="upgrade">
+            <selectionEntry id="3051-80de-0e56-606f" name="1. Embodiment of Wrath" hidden="false" collective="false" import="true" type="upgrade">
               <profiles>
-                <profile id="ec71-92b1-b0ca-027a" name="Arch-slaughterer" hidden="false" typeId="1504-23bf-8850-4f65" typeName="Command Traits">
+                <profile id="ec71-92b1-b0ca-027a" name="Embodiment of Wrath" hidden="false" typeId="1504-23bf-8850-4f65" typeName="Command Traits">
                   <characteristics>
-                    <characteristic name="Command Trait" typeId="0145-9acf-f5dc-d543">Each time an attack made by this general with a melee weapon slays an enemy HERO or MONSTER, you receive 2 Blood Tithe points instead of 1.</characteristic>
+                    <characteristic name="Command Trait" typeId="0145-9acf-f5dc-d543">At the start of your hero phase, roll a dice for each friendly BLOODLETTER HOST wholly within 16&quot; of this general. On a 2+, you can return D3 slain models to that unit.</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
@@ -1515,11 +1455,11 @@ You can re-roll prayer rolls of 1 for friendly FLAYED PRIESTS wholly within 8&qu
                 <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
               </costs>
             </selectionEntry>
-            <selectionEntry id="e6a0-345a-8b01-ed94" name="6. Devastating Blow" hidden="false" collective="false" import="true" type="upgrade">
+            <selectionEntry id="5c82-c5b2-bde6-744e" name="4. Unrelenting Hunter" hidden="false" collective="false" import="true" type="upgrade">
               <profiles>
-                <profile id="c3b5-94e4-172c-9e94" name="Devastating Blow" hidden="false" typeId="1504-23bf-8850-4f65" typeName="Command Traits">
+                <profile id="f76e-5950-92c8-2b89" name="Unrelenting Hunter" hidden="false" typeId="1504-23bf-8850-4f65" typeName="Command Traits">
                   <characteristics>
-                    <characteristic name="Command Trait" typeId="0145-9acf-f5dc-d543">If the unmodified wound roll for an attack made with a melee weapon by this general is 6, that attack inflicts a number of mortal wounds on the target equal to that melee weapon’s Damage characteristic and the attack sequence ends (do not make a wound or save roll).</characteristic>
+                    <characteristic name="Command Trait" typeId="0145-9acf-f5dc-d543">At the end of the combat phase, if this general fought in that phase and is within 3&quot; of any enemy units, this general can make a pile-in move. Alternatively, at the end of the combat phase, if this general fought in that phase and is more than 3&quot; from all enemy units, this general can make a normal move or attempt a charge.</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
@@ -1527,11 +1467,11 @@ You can re-roll prayer rolls of 1 for friendly FLAYED PRIESTS wholly within 8&qu
                 <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
               </costs>
             </selectionEntry>
-            <selectionEntry id="663f-2233-701f-e2b7" name="5. Aspect of Death" hidden="false" collective="false" import="true" type="upgrade">
+            <selectionEntry id="574e-87ef-8b5b-1c17" name="3. Firebrand" hidden="false" collective="false" import="true" type="upgrade">
               <profiles>
-                <profile id="5588-2014-e7ef-db9f" name="Aspect of Death" hidden="false" typeId="1504-23bf-8850-4f65" typeName="Command Traits">
+                <profile id="16d3-eb8e-90db-2eeb" name="Firebrand" hidden="false" typeId="1504-23bf-8850-4f65" typeName="Command Traits">
                   <characteristics>
-                    <characteristic name="Command Trait" typeId="0145-9acf-f5dc-d543">If an enemy unit fails a battleshock test within 8&quot; of this general, add D3 to the number of models that flee.</characteristic>
+                    <characteristic name="Command Trait" typeId="0145-9acf-f5dc-d543">This general becomes a PRIEST. If this general is already a PRIEST, they instead know 1 additional prayer from the Blood Blessings of Khorne.</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
@@ -1539,35 +1479,11 @@ You can re-roll prayer rolls of 1 for friendly FLAYED PRIESTS wholly within 8&qu
                 <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
               </costs>
             </selectionEntry>
-            <selectionEntry id="5c82-c5b2-bde6-744e" name="4. Rage Unchained" hidden="false" collective="false" import="true" type="upgrade">
+            <selectionEntry id="a6e3-1025-c018-7859" name="2. Favoured of Khorne" hidden="false" collective="false" import="true" type="upgrade">
               <profiles>
-                <profile id="f76e-5950-92c8-2b89" name="Rage Unchained" hidden="false" typeId="1504-23bf-8850-4f65" typeName="Command Traits">
+                <profile id="3dbb-48f2-c261-de73" name="Favoured of Khorne" hidden="false" typeId="1504-23bf-8850-4f65" typeName="Command Traits">
                   <characteristics>
-                    <characteristic name="Command Trait" typeId="0145-9acf-f5dc-d543">Add 1 to the Attacks characteristic of this general’s melee weapons.</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-              <costs>
-                <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
-              </costs>
-            </selectionEntry>
-            <selectionEntry id="574e-87ef-8b5b-1c17" name="3. Slaughterborn" hidden="false" collective="false" import="true" type="upgrade">
-              <profiles>
-                <profile id="16d3-eb8e-90db-2eeb" name="Slaughterborn" hidden="false" typeId="1504-23bf-8850-4f65" typeName="Command Traits">
-                  <characteristics>
-                    <characteristic name="Command Trait" typeId="0145-9acf-f5dc-d543">You can re-roll hit rolls for attacks made with melee weapons by this general.</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-              <costs>
-                <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
-              </costs>
-            </selectionEntry>
-            <selectionEntry id="a6e3-1025-c018-7859" name="2. Unrivalled Battle-lust" hidden="false" collective="false" import="true" type="upgrade">
-              <profiles>
-                <profile id="3dbb-48f2-c261-de73" name="Unrivalled Battle-lust" hidden="false" typeId="1504-23bf-8850-4f65" typeName="Command Traits">
-                  <characteristics>
-                    <characteristic name="Command Trait" typeId="0145-9acf-f5dc-d543">At the end of your opponent’s charge phase, if this general is within 12&quot; of any enemy units (but not within 3&quot; of any enemy units), you can attempt to make a charge move with this general.</characteristic>
+                    <characteristic name="Command Trait" typeId="0145-9acf-f5dc-d543">If your general has this command trait, you begin the battle with 1 Blood Tithe point.</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
@@ -1604,233 +1520,32 @@ You can re-roll prayer rolls of 1 for friendly FLAYED PRIESTS wholly within 8&qu
       <categoryLinks>
         <categoryLink id="2e2e-2cb3-a03b-7fa1" name="Artefacts" hidden="false" targetId="ba14-5553-456e-33ad" primary="false"/>
       </categoryLinks>
-      <selectionEntries>
-        <selectionEntry id="605f-9ce3-94b7-5b71" name="0 -- Black Brass Crown" hidden="false" collective="false" import="true" type="upgrade">
-          <modifiers>
-            <modifier type="set" field="d60a-a59e-8f55-dec9" value="1.0">
-              <conditionGroups>
-                <conditionGroup type="and">
-                  <conditions>
-                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="ba14-5553-456e-33ad" type="greaterThan"/>
-                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="bfd7-14bc-af45-0bc6" type="greaterThan"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
-            </modifier>
-            <modifier type="set" field="hidden" value="true">
-              <conditions>
-                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="bfd7-14bc-af45-0bc6" type="equalTo"/>
-              </conditions>
-            </modifier>
-          </modifiers>
-          <constraints>
-            <constraint field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="d60a-a59e-8f55-dec9" type="min"/>
-            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="0659-2d53-92c8-7086" type="max"/>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="fa4b-dd71-c1fb-34b3" type="max"/>
-          </constraints>
-          <profiles>
-            <profile id="67f3-41e2-5b8d-16ee" name="Black Brass Crown" hidden="false" typeId="0c9d-7abe-a53c-6a37" typeName="Artefacts">
-              <characteristics>
-                <characteristic name="Artefact" typeId="44b6-de26-0b54-1318">Add 1 to save rolls for attacks that target the bearer.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <costs>
-            <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="fa3d-fcef-78a9-bb38" name="0 -- Crowncleaver" hidden="false" collective="false" import="true" type="upgrade">
-          <modifiers>
-            <modifier type="set" field="cbfe-9424-4d48-477e" value="1.0">
-              <conditionGroups>
-                <conditionGroup type="and">
-                  <conditions>
-                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="eacf-608c-4d4c-dff6" type="greaterThan"/>
-                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="ba14-5553-456e-33ad" type="greaterThan"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
-            </modifier>
-            <modifier type="set" field="hidden" value="true">
-              <conditions>
-                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="eacf-608c-4d4c-dff6" type="equalTo"/>
-              </conditions>
-            </modifier>
-          </modifiers>
-          <constraints>
-            <constraint field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="cbfe-9424-4d48-477e" type="min"/>
-            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="9ca1-5e40-9b98-f31c" type="max"/>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="87be-4474-f73a-a4d3" type="max"/>
-          </constraints>
-          <profiles>
-            <profile id="87f0-7c61-fd6d-65a6" name="Crowncleaver" hidden="false" typeId="0c9d-7abe-a53c-6a37" typeName="Artefacts">
-              <characteristics>
-                <characteristic name="Artefact" typeId="44b6-de26-0b54-1318">Pick one of the bearer’s melee weapons. Add 2 to the Attacks characteristic of that weapon.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <costs>
-            <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="412b-b579-f272-e6ae" name="0 -- Halo of Blood" hidden="false" collective="false" import="true" type="upgrade">
-          <modifiers>
-            <modifier type="set" field="c533-09a2-e1a5-bcd8" value="1.0">
-              <conditionGroups>
-                <conditionGroup type="and">
-                  <conditions>
-                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="4d52-97a8-88b9-6565" type="greaterThan"/>
-                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="ba14-5553-456e-33ad" type="greaterThan"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
-            </modifier>
-            <modifier type="set" field="hidden" value="true">
-              <conditions>
-                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="4d52-97a8-88b9-6565" type="equalTo"/>
-              </conditions>
-            </modifier>
-          </modifiers>
-          <constraints>
-            <constraint field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="c533-09a2-e1a5-bcd8" type="min"/>
-            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="6fa3-7326-23c5-3a87" type="max"/>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="1742-c247-aba0-49ad" type="max"/>
-          </constraints>
-          <profiles>
-            <profile id="dd4a-c702-1759-a74c" name="Halo of Blood" hidden="false" typeId="0c9d-7abe-a53c-6a37" typeName="Artefacts">
-              <characteristics>
-                <characteristic name="Artefact" typeId="44b6-de26-0b54-1318">The bearer fights at the start of the combat phase, before the players pick any other units to fight in that combat phase. The bearer cannot fight again in that combat phase unless an ability or spell allows it to fight more than once.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <costs>
-            <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="1b1b-357f-7456-33e1" name="0 -- Skullshard Mantle" hidden="false" collective="false" import="true" type="upgrade">
-          <modifiers>
-            <modifier type="set" field="ebc4-4871-ce80-c0ac" value="1.0">
-              <conditionGroups>
-                <conditionGroup type="and">
-                  <conditions>
-                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="c0b3-03db-8cbf-8ccd" type="greaterThan"/>
-                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="ba14-5553-456e-33ad" type="greaterThan"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
-            </modifier>
-            <modifier type="set" field="hidden" value="true">
-              <conditions>
-                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="c0b3-03db-8cbf-8ccd" type="equalTo"/>
-              </conditions>
-            </modifier>
-          </modifiers>
-          <constraints>
-            <constraint field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="ebc4-4871-ce80-c0ac" type="min"/>
-            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="d427-9763-1179-5579" type="max"/>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="ff09-f723-0a97-2155" type="max"/>
-          </constraints>
-          <profiles>
-            <profile id="87e0-a4d8-01af-7198" name="Skullshard Mantle" hidden="false" typeId="0c9d-7abe-a53c-6a37" typeName="Artefacts">
-              <characteristics>
-                <characteristic name="Artefact" typeId="44b6-de26-0b54-1318">Each time the bearer is affected by a spell or endless spell, you can roll a dice. If you do so, on a 2+ ignore the effects of that spell on the bearer.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <costs>
-            <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="e747-4b46-9899-9f20" name="0 -- The Slaughterhelm" hidden="false" collective="false" import="true" type="upgrade">
-          <modifiers>
-            <modifier type="set" field="3807-d68d-b2fd-1015" value="1.0">
-              <conditionGroups>
-                <conditionGroup type="and">
-                  <conditions>
-                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="ba14-5553-456e-33ad" type="greaterThan"/>
-                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="ef3d-9056-ccff-caed" type="greaterThan"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
-            </modifier>
-            <modifier type="set" field="hidden" value="true">
-              <conditions>
-                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="ef3d-9056-ccff-caed" type="equalTo"/>
-              </conditions>
-            </modifier>
-          </modifiers>
-          <constraints>
-            <constraint field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="3807-d68d-b2fd-1015" type="min"/>
-            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="8d09-df97-abd4-31a4" type="max"/>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="c4ef-dc2d-5d71-49df" type="max"/>
-          </constraints>
-          <profiles>
-            <profile id="69d5-6e4b-77a7-9604" name="The Slaughterhelm" hidden="false" typeId="0c9d-7abe-a53c-6a37" typeName="Artefacts">
-              <characteristics>
-                <characteristic name="Artefact" typeId="44b6-de26-0b54-1318">Add 2 to charge rolls for the bearer.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <costs>
-            <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="cd83-f178-d994-f1e6" name="0 -- Thronebreaker&apos;s Torc" hidden="false" collective="false" import="true" type="upgrade">
-          <modifiers>
-            <modifier type="set" field="b96c-9fff-b697-1c36" value="1.0">
-              <conditionGroups>
-                <conditionGroup type="and">
-                  <conditions>
-                    <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="1db7-6ca5-f8bf-a5da" type="equalTo"/>
-                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="ba14-5553-456e-33ad" type="greaterThan"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
-            </modifier>
-            <modifier type="set" field="hidden" value="true">
-              <conditions>
-                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="1db7-6ca5-f8bf-a5da" type="equalTo"/>
-              </conditions>
-            </modifier>
-          </modifiers>
-          <constraints>
-            <constraint field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="b96c-9fff-b697-1c36" type="min"/>
-            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="7d26-a1b6-1b74-872b" type="max"/>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="9c01-fa3b-974d-fa8c" type="max"/>
-          </constraints>
-          <profiles>
-            <profile id="1b2a-742c-a026-ddc2" name="Thronebreaker&apos;s Torc" hidden="false" typeId="0c9d-7abe-a53c-6a37" typeName="Artefacts">
-              <characteristics>
-                <characteristic name="Artefact" typeId="44b6-de26-0b54-1318">Ignore modifiers (positive and negative) when making save rolls for attacks that target this model.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <costs>
-            <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
-          </costs>
-        </selectionEntry>
-      </selectionEntries>
       <selectionEntryGroups>
         <selectionEntryGroup id="2b52-2d5b-4d2d-69a4" name="Murderous Artefacts" hidden="false" collective="false" import="true">
           <modifiers>
             <modifier type="set" field="hidden" value="true">
-              <conditions>
-                <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="ca90-b9b0-010b-72d0" type="notInstanceOf"/>
-              </conditions>
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="660a-ffea-1ea6-c5fc" type="notInstanceOf"/>
+                    <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="b72c-6500-82c2-e409" type="notInstanceOf"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
             </modifier>
           </modifiers>
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="1767-64b3-c020-51c6" type="max"/>
           </constraints>
           <selectionEntries>
-            <selectionEntry id="f084-0952-08e4-7186" name="6 -- Blood Rune" hidden="false" collective="false" import="true" type="upgrade">
+            <selectionEntry id="f084-0952-08e4-7186" name="1 -- Blood Rune" hidden="false" collective="false" import="true" type="upgrade">
               <constraints>
                 <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="e519-c711-2003-1005" type="max"/>
               </constraints>
               <profiles>
                 <profile id="4340-5ebd-ed1a-1457" name="Blood Rune" hidden="false" typeId="0c9d-7abe-a53c-6a37" typeName="Artefacts">
                   <characteristics>
-                    <characteristic name="Artefact" typeId="44b6-de26-0b54-1318">Each time an attack made by the bearer with a melee weapon slays an enemy HERO or MONSTER, you receive 1 additional Blood Tithe point.</characteristic>
+                    <characteristic name="Artefact" typeId="44b6-de26-0b54-1318">At the end of the combat phase, if any wounds caused by an attack made by the bearer were allocated to a HERO or MONSTER and not negated, you receive 1 Blood Tithe point.</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
@@ -1838,14 +1553,14 @@ You can re-roll prayer rolls of 1 for friendly FLAYED PRIESTS wholly within 8&qu
                 <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
               </costs>
             </selectionEntry>
-            <selectionEntry id="fd40-0f86-4a68-b08d" name="5 -- The Crimson Plate" hidden="false" collective="false" import="true" type="upgrade">
+            <selectionEntry id="fd40-0f86-4a68-b08d" name="3 -- The Crimson Plate" hidden="false" collective="false" import="true" type="upgrade">
               <constraints>
                 <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="2456-711a-7d7d-6db9" type="max"/>
               </constraints>
               <profiles>
                 <profile id="7c1d-3ea6-f535-e71c" name="The Crimson Plate" hidden="false" typeId="0c9d-7abe-a53c-6a37" typeName="Artefacts">
                   <characteristics>
-                    <characteristic name="Artefact" typeId="44b6-de26-0b54-1318">You can re-roll save rolls of 1 for attacks that target the bearer.</characteristic>
+                    <characteristic name="Artefact" typeId="44b6-de26-0b54-1318">The bearer has a ward of 5+.</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
@@ -1860,7 +1575,7 @@ You can re-roll prayer rolls of 1 for friendly FLAYED PRIESTS wholly within 8&qu
               <profiles>
                 <profile id="f9cd-e4b4-ec67-5c82" name="Gorecleaver" hidden="false" typeId="0c9d-7abe-a53c-6a37" typeName="Artefacts">
                   <characteristics>
-                    <characteristic name="Artefact" typeId="44b6-de26-0b54-1318">Pick 1 of the bearer’s melee weapons. Improve the Rend characteristic of that weapon by 1. In addition, if the unmodified wound roll for an attack made with that weapon is 6, double the Damage characteristic for that attack.</characteristic>
+                    <characteristic name="Artefact" typeId="44b6-de26-0b54-1318">Pick 1 of the bearer’s melee weapons. Improve the Rend characteristic of that weapon by 1. In addition, if the unmodified hit roll for an attack made with that weapon is 6, that attack causes 1 mortal wound to the target in addition to any damage it inflicts.</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
@@ -1868,44 +1583,21 @@ You can re-roll prayer rolls of 1 for friendly FLAYED PRIESTS wholly within 8&qu
                 <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
               </costs>
             </selectionEntry>
-            <selectionEntry id="f5e6-348c-8da7-e939" name="3 -- Blood Drinker" hidden="false" collective="false" import="true" type="upgrade">
+            <selectionEntry id="fd80-4589-cc3e-2705" name="2 -- Banner of Blood" hidden="false" collective="false" import="true" type="upgrade">
+              <modifiers>
+                <modifier type="set" field="hidden" value="true">
+                  <conditions>
+                    <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="574a-9beb-b5c5-810a" type="notInstanceOf"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
               <constraints>
-                <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="a691-66e3-e6a5-fd19" type="max"/>
+                <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="2017-14c4-aaab-158f" type="max"/>
               </constraints>
               <profiles>
-                <profile id="e9c3-085e-ca9d-68ab" name="Blood Drinker" hidden="false" typeId="0c9d-7abe-a53c-6a37" typeName="Artefacts">
+                <profile id="b74c-6838-0035-a002" name="Banner of Blood" hidden="false" typeId="0c9d-7abe-a53c-6a37" typeName="Artefacts">
                   <characteristics>
-                    <characteristic name="Artefact" typeId="44b6-de26-0b54-1318">Pick 1 of the bearer’s melee weapons. At the end of the combat phase, if any attacks made by that weapon caused a wound or mortal wound to be allocated to an enemy unit that was not negated, you can heal up to D3 wounds allocated to the bearer.</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-              <costs>
-                <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
-              </costs>
-            </selectionEntry>
-            <selectionEntry id="80a9-ed44-b775-f9a8" name="2 -- Collar of Contempt" hidden="false" collective="false" import="true" type="upgrade">
-              <constraints>
-                <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="19e5-5e10-ece8-a859" type="max"/>
-              </constraints>
-              <profiles>
-                <profile id="f3bc-7f99-58cc-374d" name="Collar of Khorne" hidden="false" typeId="0c9d-7abe-a53c-6a37" typeName="Artefacts">
-                  <characteristics>
-                    <characteristic name="Artefact" typeId="44b6-de26-0b54-1318">The bearer can attempt to unbind one spell in the enemy hero phase in the same manner as a WIZARD. In addition, the bearer can attempt to dispel one endless spell at the start of your hero phase in the same manner as a WIZARD.</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-              <costs>
-                <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
-              </costs>
-            </selectionEntry>
-            <selectionEntry id="d076-232f-163c-24f1" name="1 -- Heart Seeker" hidden="false" collective="false" import="true" type="upgrade">
-              <constraints>
-                <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="ff08-4045-96f8-efb1" type="max"/>
-              </constraints>
-              <profiles>
-                <profile id="48fd-c5fb-6a82-d092" name="Heart Seeker" hidden="false" typeId="0c9d-7abe-a53c-6a37" typeName="Artefacts">
-                  <characteristics>
-                    <characteristic name="Artefact" typeId="44b6-de26-0b54-1318">Pick 1 of the bearer’s melee weapons. You can re-roll wound rolls for attacks made with that weapon.</characteristic>
+                    <characteristic name="Artefact" typeId="44b6-de26-0b54-1318">BLOODSECRATOR only. You can re-roll charge rolls for friendly BLADES OF KHORNE units wholly within 16&quot; of the bearer.</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
@@ -1918,38 +1610,28 @@ You can re-roll prayer rolls of 1 for friendly FLAYED PRIESTS wholly within 8&qu
         <selectionEntryGroup id="4306-0edf-f21f-22b6" name="Daemonic Adornments" hidden="false" collective="false" import="true">
           <modifiers>
             <modifier type="set" field="hidden" value="true">
-              <conditions>
-                <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="128a-35fa-6f1f-a15d" type="notInstanceOf"/>
-              </conditions>
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="660a-ffea-1ea6-c5fc" type="notInstanceOf"/>
+                    <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="128a-35fa-6f1f-a15d" type="notInstanceOf"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
             </modifier>
           </modifiers>
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="4a51-4c31-78ea-eaea" type="max"/>
           </constraints>
           <selectionEntries>
-            <selectionEntry id="f095-fe6c-591f-1162" name="6 -- Mark of the Slayer" hidden="false" collective="false" import="true" type="upgrade">
-              <constraints>
-                <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="b646-3b80-ba50-ed85" type="max"/>
-              </constraints>
-              <profiles>
-                <profile id="9226-e9f4-2fda-3c94" name="Mark of the Slayer" hidden="false" typeId="0c9d-7abe-a53c-6a37" typeName="Artefacts">
-                  <characteristics>
-                    <characteristic name="Artefact" typeId="44b6-de26-0b54-1318">You can re-roll hit rolls of 1 for attacks made with melee weapons by friendly KHORNE units wholly within 12&quot; of the bearer.</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-              <costs>
-                <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
-              </costs>
-            </selectionEntry>
-            <selectionEntry id="0c86-90a3-5634-49b3" name="5 -- Crimson Soulstone" hidden="false" collective="false" import="true" type="upgrade">
+            <selectionEntry id="0c86-90a3-5634-49b3" name="4 -- Skullshard Mantle" hidden="false" collective="false" import="true" type="upgrade">
               <constraints>
                 <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="8a2b-7004-e948-399f" type="max"/>
               </constraints>
               <profiles>
-                <profile id="21ad-a791-6630-78ee" name="Crimson Soulstone" hidden="false" typeId="0c9d-7abe-a53c-6a37" typeName="Artefacts">
+                <profile id="21ad-a791-6630-78ee" name="Skullshard Mantle" hidden="false" typeId="0c9d-7abe-a53c-6a37" typeName="Artefacts">
                   <characteristics>
-                    <characteristic name="Artefact" typeId="44b6-de26-0b54-1318">Each time an attack made by the bearer with a melee weapon slays an enemy HERO or MONSTER, you can heal up to D3 wounds allocated to the bearer.</characteristic>
+                    <characteristic name="Artefact" typeId="44b6-de26-0b54-1318">Add 2 to Hatred of Sorcery rolls made for the bearer.</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
@@ -1957,14 +1639,14 @@ You can re-roll prayer rolls of 1 for friendly FLAYED PRIESTS wholly within 8&qu
                 <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
               </costs>
             </selectionEntry>
-            <selectionEntry id="7db1-9d5d-657d-e798" name="4 -- Collar of Khorne" hidden="false" collective="false" import="true" type="upgrade">
+            <selectionEntry id="7db1-9d5d-657d-e798" name="3 -- Halo of Blood" hidden="false" collective="false" import="true" type="upgrade">
               <constraints>
                 <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="c99d-9e53-400a-1aa2" type="max"/>
               </constraints>
               <profiles>
-                <profile id="97f5-caf6-9d2c-25ec" name="Collar of Khorne" hidden="false" typeId="0c9d-7abe-a53c-6a37" typeName="Artefacts">
+                <profile id="97f5-caf6-9d2c-25ec" name="Halo of Blood" hidden="false" typeId="0c9d-7abe-a53c-6a37" typeName="Artefacts">
                   <characteristics>
-                    <characteristic name="Artefact" typeId="44b6-de26-0b54-1318">The bearer can attempt to unbind one spell in the enemy hero phase in the same manner as a WIZARD. In addition, the bearer can attempt to dispel one endless spell at the start of your hero phase in the same manner as a WIZARD.</characteristic>
+                    <characteristic name="Artefact" typeId="44b6-de26-0b54-1318">The strike-first effect applies to the bearer.</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
@@ -1972,14 +1654,14 @@ You can re-roll prayer rolls of 1 for friendly FLAYED PRIESTS wholly within 8&qu
                 <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
               </costs>
             </selectionEntry>
-            <selectionEntry id="6635-d788-340e-cee5" name="3 -- Mark of the Bloodreaper" hidden="false" collective="false" import="true" type="upgrade">
+            <selectionEntry id="6635-d788-340e-cee5" name="1 -- Mark of the Bloodreaper" hidden="false" collective="false" import="true" type="upgrade">
               <constraints>
                 <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="c379-f6d1-f261-647a" type="max"/>
               </constraints>
               <profiles>
                 <profile id="0a67-a5b8-6440-9bee" name="Mark of the Bloodreaper" hidden="false" typeId="0c9d-7abe-a53c-6a37" typeName="Artefacts">
                   <characteristics>
-                    <characteristic name="Artefact" typeId="44b6-de26-0b54-1318">You can re-roll save rolls of 1 for attacks that target the bearer.</characteristic>
+                    <characteristic name="Artefact" typeId="44b6-de26-0b54-1318">The bearer has a ward of 4+ against mortal wounds.</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
@@ -1987,296 +1669,14 @@ You can re-roll prayer rolls of 1 for friendly FLAYED PRIESTS wholly within 8&qu
                 <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
               </costs>
             </selectionEntry>
-            <selectionEntry id="359b-997d-e4f0-527f" name="2 -- Armour of Scorn" hidden="false" collective="false" import="true" type="upgrade">
+            <selectionEntry id="2dfb-f7b4-dd5f-6251" name="2 -- Ar&apos;gath, the King of Blades" hidden="false" collective="false" import="true" type="upgrade">
               <constraints>
-                <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="44ae-11dc-ce00-e1d3" type="max"/>
+                <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="8647-0acb-8419-583c" type="max"/>
               </constraints>
               <profiles>
-                <profile id="b0f7-dc10-799e-82b8" name="Armour of Scorn" hidden="false" typeId="0c9d-7abe-a53c-6a37" typeName="Artefacts">
+                <profile id="1063-58fa-c3ab-37b8" name="Ar&apos;gath, the King of Blades" hidden="false" typeId="0c9d-7abe-a53c-6a37" typeName="Artefacts">
                   <characteristics>
-                    <characteristic name="Artefact" typeId="44b6-de26-0b54-1318">Roll a dice each time you allocate a wound or mortal wound to the bearer. Add 2 to the roll if that wound or mortal wound was caused by a spell. On a 6+ that wound or mortal wound is negated.</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-              <costs>
-                <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
-              </costs>
-            </selectionEntry>
-            <selectionEntry id="db07-fe8e-0aee-bd43" name="1 -- The Crimson Crown" hidden="false" collective="false" import="true" type="upgrade">
-              <constraints>
-                <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="26d2-efa4-ebdf-fc27" type="max"/>
-              </constraints>
-              <profiles>
-                <profile id="40f6-c81e-b1db-f35c" name="The Crimson Crown" hidden="false" typeId="0c9d-7abe-a53c-6a37" typeName="Artefacts">
-                  <characteristics>
-                    <characteristic name="Artefact" typeId="44b6-de26-0b54-1318">Once per battle round, the bearer can use a command ability on their warscroll without a command point being spent.</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-              <costs>
-                <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
-              </costs>
-            </selectionEntry>
-          </selectionEntries>
-        </selectionEntryGroup>
-        <selectionEntryGroup id="1d2d-780b-2c40-9419" name="Daemonic Weapons" hidden="false" collective="false" import="true">
-          <modifiers>
-            <modifier type="set" field="hidden" value="true">
-              <conditions>
-                <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="128a-35fa-6f1f-a15d" type="notInstanceOf"/>
-              </conditions>
-            </modifier>
-          </modifiers>
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="83c8-3206-d804-584b" type="max"/>
-          </constraints>
-          <selectionEntries>
-            <selectionEntry id="394a-6a80-601b-8712" name="6 -- Foe&apos;s Bane" hidden="false" collective="false" import="true" type="upgrade">
-              <constraints>
-                <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="5e00-9505-16e2-f47b" type="max"/>
-              </constraints>
-              <profiles>
-                <profile id="466c-db62-6f00-fafd" name="Foe&apos;s Bane" hidden="false" typeId="0c9d-7abe-a53c-6a37" typeName="Artefacts">
-                  <characteristics>
-                    <characteristic name="Artefact" typeId="44b6-de26-0b54-1318">Pick 1 of the bearer’s melee weapons. Once per turn, you can re-roll 1 failed hit roll or 1 failed wound roll for an attack made with that weapon.</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-              <costs>
-                <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
-              </costs>
-            </selectionEntry>
-            <selectionEntry id="5b6a-c295-2c32-a0e1" name="5 -- Harvester of Skulls" hidden="false" collective="false" import="true" type="upgrade">
-              <constraints>
-                <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="a6bc-38ef-2e2e-f659" type="max"/>
-              </constraints>
-              <profiles>
-                <profile id="0a29-a929-40be-7556" name="Harvester of Skulls" hidden="false" typeId="0c9d-7abe-a53c-6a37" typeName="Artefacts">
-                  <characteristics>
-                    <characteristic name="Artefact" typeId="44b6-de26-0b54-1318">Pick 1 of the bearer’s melee weapons. Add 1 to the Attacks characteristic of that weapon.</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-              <costs>
-                <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
-              </costs>
-            </selectionEntry>
-            <selectionEntry id="6186-bbe6-864b-fcf0" name="4 -- Hellfire Blade" hidden="false" collective="false" import="true" type="upgrade">
-              <constraints>
-                <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="632c-d7d0-a5dc-c80c" type="max"/>
-              </constraints>
-              <profiles>
-                <profile id="6013-28c1-f6e7-545d" name="Hellfire Blade" hidden="false" typeId="0c9d-7abe-a53c-6a37" typeName="Artefacts">
-                  <characteristics>
-                    <characteristic name="Artefact" typeId="44b6-de26-0b54-1318">Pick 1 of the bearer’s melee weapons. If the unmodified wound roll for an attack made with that weapon is 6, that attack inflicts 1 mortal wound on the target in addition to any normal damage.</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-              <costs>
-                <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
-              </costs>
-            </selectionEntry>
-            <selectionEntry id="7f1a-8b32-0183-3a91" name="3 -- Khartoth the Bloodhunger" hidden="false" collective="false" import="true" type="upgrade">
-              <constraints>
-                <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="a90b-abda-86aa-fa56" type="max"/>
-              </constraints>
-              <profiles>
-                <profile id="ee67-eaca-c65e-106d" name="Khartoth the Bloodhunger" hidden="false" typeId="0c9d-7abe-a53c-6a37" typeName="Artefacts">
-                  <characteristics>
-                    <characteristic name="Artefact" typeId="44b6-de26-0b54-1318">At the start of the combat phase roll a dice. On a 4+ the bearer fights at the start of the combat phase, before the players pick any other units to fight in that combat phase. The bearer cannot fight again in that combat phase unless an ability or spell allows it to fight more than once.</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-              <costs>
-                <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
-              </costs>
-            </selectionEntry>
-            <selectionEntry id="ad16-f260-df7e-270f" name="2 -- Deathdealer" hidden="false" collective="false" import="true" type="upgrade">
-              <constraints>
-                <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="37b6-22ae-b082-945b" type="max"/>
-              </constraints>
-              <profiles>
-                <profile id="1be6-70fa-201f-2acd" name="Deathdealer" hidden="false" typeId="0c9d-7abe-a53c-6a37" typeName="Artefacts">
-                  <characteristics>
-                    <characteristic name="Artefact" typeId="44b6-de26-0b54-1318">Pick 1 of the bearer’s melee weapons. Improve the Rend characteristic of that weapon by 1.</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-              <costs>
-                <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
-              </costs>
-            </selectionEntry>
-            <selectionEntry id="e350-2059-9700-97ad" name="1 -- Argath, the King of Blades" hidden="false" collective="false" import="true" type="upgrade">
-              <constraints>
-                <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="da57-30a6-153d-6100" type="max"/>
-              </constraints>
-              <profiles>
-                <profile id="d823-9419-8111-6288" name="Argath, the King of Blades" hidden="false" typeId="0c9d-7abe-a53c-6a37" typeName="Artefacts">
-                  <characteristics>
-                    <characteristic name="Artefact" typeId="44b6-de26-0b54-1318">Pick 1 of the bearer’s melee weapons. Change the To Hit characteristic of that weapon for attacks that target a HERO to 2+.</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-              <costs>
-                <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
-              </costs>
-            </selectionEntry>
-          </selectionEntries>
-        </selectionEntryGroup>
-        <selectionEntryGroup id="f52e-8c59-f690-49a3" name="Trophies of War" hidden="false" collective="false" import="true">
-          <modifiers>
-            <modifier type="set" field="hidden" value="true">
-              <conditions>
-                <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="b72c-6500-82c2-e409" type="notInstanceOf"/>
-              </conditions>
-            </modifier>
-          </modifiers>
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="607c-7324-68f0-5e69" type="max"/>
-          </constraints>
-          <selectionEntries>
-            <selectionEntry id="c633-17fb-57e7-facf" name="6 -- Talisman of Burning Blood" hidden="false" collective="false" import="true" type="upgrade">
-              <constraints>
-                <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="2c98-2255-e2dd-27ba" type="max"/>
-              </constraints>
-              <profiles>
-                <profile id="de7a-e817-d0cb-79e4" name="Talisman of Burning Blood" hidden="false" typeId="0c9d-7abe-a53c-6a37" typeName="Artefacts">
-                  <characteristics>
-                    <characteristic name="Artefact" typeId="44b6-de26-0b54-1318">Add 1 to run rolls for friendly KHORNE units wholly within 12&quot; of the bearer when the run roll is made. In addition, add 1 to charge rolls for friendly KHORNE units wholly within 12&quot; of the bearer when the charge roll is made.</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-              <costs>
-                <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
-              </costs>
-            </selectionEntry>
-            <selectionEntry id="b6c7-5b47-3955-e0b8" name="5 -- Mark of the Destroyer" hidden="false" collective="false" import="true" type="upgrade">
-              <constraints>
-                <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="dd35-2652-e604-f9a4" type="max"/>
-              </constraints>
-              <profiles>
-                <profile id="e95a-5a7e-dc6d-30ed" name="Mark of the Destroyer" hidden="false" typeId="0c9d-7abe-a53c-6a37" typeName="Artefacts">
-                  <characteristics>
-                    <characteristic name="Artefact" typeId="44b6-de26-0b54-1318">Pick 1 of the bearer’s melee weapons. Add 2 to the Attacks characteristic of that weapon.</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-              <costs>
-                <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
-              </costs>
-            </selectionEntry>
-            <selectionEntry id="1c5e-680d-e9da-a677" name="4 -- Blade of Endless Bloodshed" hidden="false" collective="false" import="true" type="upgrade">
-              <constraints>
-                <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="75b6-8178-8ea8-bc9d" type="max"/>
-              </constraints>
-              <profiles>
-                <profile id="88e7-dba3-1a43-67de" name="Blade of Endless Bloodshed" hidden="false" typeId="0c9d-7abe-a53c-6a37" typeName="Artefacts">
-                  <characteristics>
-                    <characteristic name="Artefact" typeId="44b6-de26-0b54-1318">Pick 1 of the bearer’s melee weapons. Improve the Rend characteristic of that weapon by 1.</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-              <costs>
-                <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
-              </costs>
-            </selectionEntry>
-            <selectionEntry id="9098-2bb6-0cca-5fee" name="3 -- Brazen Rune" hidden="false" collective="false" import="true" type="upgrade">
-              <constraints>
-                <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="d15a-c521-26a9-e6af" type="max"/>
-              </constraints>
-              <profiles>
-                <profile id="f52a-bf56-29d9-326c" name="Brazen Rune" hidden="false" typeId="0c9d-7abe-a53c-6a37" typeName="Artefacts">
-                  <characteristics>
-                    <characteristic name="Artefact" typeId="44b6-de26-0b54-1318">Roll a dice each time you allocate a wound or mortal wound to the bearer that was inflicted by a spell. On a 2+ that wound or mortal wound is negated. In addition, once per battle, the bearer can attempt to unbind 1 spell in the enemy hero phase in the same manner as a WIZARD or attempt to dispel one endless spell at the start of your hero phase in the same manner as a WIZARD.</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-              <costs>
-                <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
-              </costs>
-            </selectionEntry>
-            <selectionEntry id="4f7d-f3ed-eb3c-180e" name="2 -- Blood-forged Armour" hidden="false" collective="false" import="true" type="upgrade">
-              <constraints>
-                <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="c165-16c8-ffd2-bc91" type="max"/>
-              </constraints>
-              <profiles>
-                <profile id="4148-a5f8-739e-0331" name="Blood-forged Armour" hidden="false" typeId="0c9d-7abe-a53c-6a37" typeName="Artefacts">
-                  <characteristics>
-                    <characteristic name="Artefact" typeId="44b6-de26-0b54-1318">Roll a dice each time you allocate a mortal wound to the bearer. On a 5+ that mortal wound is negated.</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-              <costs>
-                <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
-              </costs>
-            </selectionEntry>
-            <selectionEntry id="eee1-8a4f-c241-80ad" name="1 -- Skull-helm of Khorne" hidden="false" collective="false" import="true" type="upgrade">
-              <constraints>
-                <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="d52f-6ce9-2511-9328" type="max"/>
-              </constraints>
-              <profiles>
-                <profile id="ca7b-2b28-e257-fcb2" name="Skull-helm of Khorne" hidden="false" typeId="0c9d-7abe-a53c-6a37" typeName="Artefacts">
-                  <characteristics>
-                    <characteristic name="Artefact" typeId="44b6-de26-0b54-1318">Subtract 2 from the Bravery characteristic of enemy units while they are within 8&quot; of the bearer.</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-              <costs>
-                <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
-              </costs>
-            </selectionEntry>
-          </selectionEntries>
-        </selectionEntryGroup>
-        <selectionEntryGroup id="c765-3de2-b2d5-0750" name="Banners of Khorne" hidden="false" collective="false" import="true">
-          <modifiers>
-            <modifier type="set" field="hidden" value="true">
-              <conditions>
-                <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="29de-3558-f0b3-40ea" type="notInstanceOf"/>
-              </conditions>
-            </modifier>
-          </modifiers>
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="39f8-3fb1-0430-51f4" type="max"/>
-          </constraints>
-          <selectionEntries>
-            <selectionEntry id="90fe-1a35-207b-fbf6" name="3 -- Banner of Blood" hidden="false" collective="false" import="true" type="upgrade">
-              <constraints>
-                <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="278d-9f1b-b84c-bb05" type="max"/>
-              </constraints>
-              <profiles>
-                <profile id="9b83-0ad2-77bb-88a4" name="Banner of Blood" hidden="false" typeId="0c9d-7abe-a53c-6a37" typeName="Artefacts">
-                  <characteristics>
-                    <characteristic name="Artefact" typeId="44b6-de26-0b54-1318">You can re-roll charge rolls for friendly KHORNE units that are wholly within 12&quot; of the bearer when the charge roll is made.</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-              <costs>
-                <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
-              </costs>
-            </selectionEntry>
-            <selectionEntry id="9152-611e-8041-d23b" name="2 -- Banner of Wrath" hidden="false" collective="false" import="true" type="upgrade">
-              <constraints>
-                <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="e519-de8a-ba0b-2f01" type="max"/>
-              </constraints>
-              <profiles>
-                <profile id="0895-776a-b9e4-233b" name="Banner of Wrath" hidden="false" typeId="0c9d-7abe-a53c-6a37" typeName="Artefacts">
-                  <characteristics>
-                    <characteristic name="Artefact" typeId="44b6-de26-0b54-1318">At the start of the combat phase, roll a dice for each enemy unit within 8&quot; of the bearer. On a 4+, that unit suffers D3 mortal wounds.</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-              <costs>
-                <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
-              </costs>
-            </selectionEntry>
-            <selectionEntry id="777b-4452-1d22-347c" name="1 -- Banner of Rage" hidden="false" collective="false" import="true" type="upgrade">
-              <constraints>
-                <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="0933-1d61-a24b-aeab" type="max"/>
-              </constraints>
-              <profiles>
-                <profile id="713b-1fa9-aead-45f2" name="Banner of Rage" hidden="false" typeId="0c9d-7abe-a53c-6a37" typeName="Artefacts">
-                  <characteristics>
-                    <characteristic name="Artefact" typeId="44b6-de26-0b54-1318">You can re-roll hit rolls of 1 for attacks made with melee weapons by friendly KHORNE units that are wholly within 12&quot; of the bearer.</characteristic>
+                    <characteristic name="Artefact" typeId="44b6-de26-0b54-1318">Ward rolls cannot be made for enemy units while they are within 3&quot; of the bearer.</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
@@ -2330,6 +1730,7 @@ You can re-roll prayer rolls of 1 for friendly FLAYED PRIESTS wholly within 8&qu
                     <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="996a-613c-4006-25e3" type="instanceOf"/>
                     <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="6cd6-b22e-bfcb-9589" type="instanceOf"/>
                     <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="b543-cb16-0c79-fbc6" type="instanceOf"/>
+                    <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="660a-ffea-1ea6-c5fc" type="notInstanceOf"/>
                   </conditions>
                 </conditionGroup>
               </conditionGroups>
@@ -2348,14 +1749,14 @@ You can re-roll prayer rolls of 1 for friendly FLAYED PRIESTS wholly within 8&qu
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d802-3ce0-3669-4841" type="min"/>
           </constraints>
           <selectionEntries>
-            <selectionEntry id="c239-c4b1-a2b0-ccf8" name="1. Bronzed Flesh" hidden="false" collective="false" import="true" type="upgrade">
+            <selectionEntry id="c239-c4b1-a2b0-ccf8" name="3. Bronzed Flesh" hidden="false" collective="false" import="true" type="upgrade">
               <constraints>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="7797-c9b1-9b1b-f5f6" type="max"/>
               </constraints>
               <profiles>
                 <profile id="5db4-4784-eddc-2902" name="Bronzed Flesh" hidden="false" typeId="161a-85bd-f19e-a5a7" typeName="Prayer">
                   <characteristics>
-                    <characteristic name="Prayer" typeId="19bc-965a-768d-defa">Bronzed Flesh has an answer value of 4 and a range of 16&quot;. If answered, pick 1 friendly BLADES OF KHORNE unit wholly within range of the chanter that is visible to them. Add 1 to save rolls for attacks that target that unit until the start of your next hero phase.</characteristic>
+                    <characteristic name="Prayer" typeId="19bc-965a-768d-defa">Bronzed Flesh is a prayer that has an answer value of 3 and a range of 16&quot;. If answered, pick 1 friendly BLADES OF KHORNE unit wholly within range and visible to the chanter. Add 1 to save rolls for attacks that target that unit until the start of your next hero phase.</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
@@ -2363,14 +1764,14 @@ You can re-roll prayer rolls of 1 for friendly FLAYED PRIESTS wholly within 8&qu
                 <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
               </costs>
             </selectionEntry>
-            <selectionEntry id="a70b-4dce-433f-1ce5" name="6. Spellbane Hex" hidden="false" collective="false" import="true" type="upgrade">
+            <selectionEntry id="a70b-4dce-433f-1ce5" name="6. Witchbane Curse" hidden="false" collective="false" import="true" type="upgrade">
               <constraints>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="87c3-eae2-0888-4e01" type="max"/>
               </constraints>
               <profiles>
-                <profile id="2e41-f27f-59d2-659e" name="Spellbane Hex" hidden="false" typeId="161a-85bd-f19e-a5a7" typeName="Prayer">
+                <profile id="2e41-f27f-59d2-659e" name="Witchbane Curse" hidden="false" typeId="161a-85bd-f19e-a5a7" typeName="Prayer">
                   <characteristics>
-                    <characteristic name="Prayer" typeId="19bc-965a-768d-defa">Spellbane Hex has an answer value of 4 and a range of 16&quot;. If answered, you can pick 1 endless spell within range of the chanter. That endless spell is dispelled.</characteristic>
+                    <characteristic name="Prayer" typeId="19bc-965a-768d-defa">Witchbane Curse is a prayer that has an answer value of 4. If answered, pick 1 enemy WIZARD unit visible to the chanter. Until the start of your next hero phase, subtract 1 from casting rolls made for that unit. In addition, until the start of your next hero phase, each time that unit attempts to cast a spell and that spell is not successfully cast, that unit suffers D3 mortal wounds.</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
@@ -2378,14 +1779,14 @@ You can re-roll prayer rolls of 1 for friendly FLAYED PRIESTS wholly within 8&qu
                 <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
               </costs>
             </selectionEntry>
-            <selectionEntry id="91eb-146a-8c8d-ae7a" name="5. Killing Frenzy" hidden="false" collective="false" import="true" type="upgrade">
+            <selectionEntry id="91eb-146a-8c8d-ae7a" name="4. Killer Instinct" hidden="false" collective="false" import="true" type="upgrade">
               <constraints>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="56a6-dfb2-5dfb-a41d" type="max"/>
               </constraints>
               <profiles>
-                <profile id="ffcf-3d74-3ee9-ed52" name="Killing Frenzy" hidden="false" typeId="161a-85bd-f19e-a5a7" typeName="Prayer">
+                <profile id="ffcf-3d74-3ee9-ed52" name="Killer Instinct" hidden="false" typeId="161a-85bd-f19e-a5a7" typeName="Prayer">
                   <characteristics>
-                    <characteristic name="Prayer" typeId="19bc-965a-768d-defa">Killing Frenzy has an answer value of 4 and a range of 16&quot;. If answered, pick 1 friendly BLADES OF KHORNE unit wholly within range of the chanter that is visible to them. Add 1 to hit rolls for attacks made by that unit until the start of your next hero phase.</characteristic>
+                    <characteristic name="Prayer" typeId="19bc-965a-768d-defa">Killer Instinct is a prayer that has an answer value of 3 and a range of 16&quot;. If answered, pick 1 friendly BLADES OF KHORNE unit wholly within range, visible to the chanter and more than 3&quot; from all enemy units. That unit can make a normal move.</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
@@ -2393,14 +1794,14 @@ You can re-roll prayer rolls of 1 for friendly FLAYED PRIESTS wholly within 8&qu
                 <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
               </costs>
             </selectionEntry>
-            <selectionEntry id="ba47-7c00-99c0-124a" name="4. Brazen Fury" hidden="false" collective="false" import="true" type="upgrade">
+            <selectionEntry id="ba47-7c00-99c0-124a" name="5. Unholy Flames" hidden="false" collective="false" import="true" type="upgrade">
               <constraints>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="26cf-810e-805b-fdef" type="max"/>
               </constraints>
               <profiles>
-                <profile id="cc65-29d4-ce0a-ac66" name="Brazen Fury" hidden="false" typeId="161a-85bd-f19e-a5a7" typeName="Prayer">
+                <profile id="cc65-29d4-ce0a-ac66" name="Unholy Flames" hidden="false" typeId="161a-85bd-f19e-a5a7" typeName="Prayer">
                   <characteristics>
-                    <characteristic name="Prayer" typeId="19bc-965a-768d-defa">Brazen Fury has an answer value of 4 and a range of 16&quot;. If answered, pick 1 friendly BLADES OF KHORNE unit wholly within range of the chanter that is visible to them. Do not take battleshock tests for that unit until the start of your next hero phase.</characteristic>
+                    <characteristic name="Prayer" typeId="19bc-965a-768d-defa">Unholy Flames is a prayer that has an answer value of 4 and a range of 16&quot;. If answered, pick 1 friendly BLADES OF KHORNE unit wholly within range and visible to the chanter. Until the start of your next hero phase, improve the Rend characteristic of that unit’s melee weapons by 1.</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
@@ -2408,14 +1809,14 @@ You can re-roll prayer rolls of 1 for friendly FLAYED PRIESTS wholly within 8&qu
                 <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
               </costs>
             </selectionEntry>
-            <selectionEntry id="8253-3a37-3de7-3890" name="3. Resanguination" hidden="false" collective="false" import="true" type="upgrade">
+            <selectionEntry id="8253-3a37-3de7-3890" name="2. Bloodbind" hidden="false" collective="false" import="true" type="upgrade">
               <constraints>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="02eb-abbc-28bf-0461" type="max"/>
               </constraints>
               <profiles>
-                <profile id="8720-50db-de11-cd86" name="Resanguination" hidden="false" typeId="161a-85bd-f19e-a5a7" typeName="Prayer">
+                <profile id="8720-50db-de11-cd86" name="Bloodbind" hidden="false" typeId="161a-85bd-f19e-a5a7" typeName="Prayer">
                   <characteristics>
-                    <characteristic name="Prayer" typeId="19bc-965a-768d-defa">Resanguination has an answer value of 4 and a range of 16&quot;. If answered, pick 1 friendly BLADES OF KHORNE unit wholly within range of the chanter that is visible to them. You can heal up to D3 wounds allocated to that unit.</characteristic>
+                    <characteristic name="Prayer" typeId="19bc-965a-768d-defa">Bloodbind is a prayer that has an answer value of 3 and a range of 16&quot;. If answered, pick 1 enemy unit within range, visible to the chanter and more than 3&quot; from all friendly units. Your opponent must make a move of up to 8&quot; with that unit. All of the models in that unit must finish that move as close as possible to the chanter and can finish that move within 3&quot; of units in your army.</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
@@ -2423,14 +1824,14 @@ You can re-roll prayer rolls of 1 for friendly FLAYED PRIESTS wholly within 8&qu
                 <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
               </costs>
             </selectionEntry>
-            <selectionEntry id="603c-ece7-cbb8-c646" name="2. Blood Sacrifice" hidden="false" collective="false" import="true" type="upgrade">
+            <selectionEntry id="603c-ece7-cbb8-c646" name="1. Blood Sacrifice" hidden="false" collective="false" import="true" type="upgrade">
               <constraints>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="dc7e-5b62-bdbc-fb19" type="max"/>
               </constraints>
               <profiles>
                 <profile id="bd41-a660-65be-7543" name="Blood Sacrifice" hidden="false" typeId="161a-85bd-f19e-a5a7" typeName="Prayer">
                   <characteristics>
-                    <characteristic name="Prayer" typeId="19bc-965a-768d-defa">Blood Sacrifice has an answer value of 4 and a range of 8&quot;. If answered, pick 1 friendly BLADES OF KHORNE unit wholly within range of the chanter that is visible to them. That unit suffers D3 mortal wounds and you receive 1 Blood Tithe point.</characteristic>
+                    <characteristic name="Prayer" typeId="19bc-965a-768d-defa">Blood Sacrifice is a prayer that has an answer value of 4 and a range of 8&quot;. If answered, pick 1 friendly BLADES OF KHORNE unit wholly within range and visible to the chanter. That unit suffers D3 mortal wounds and you receive 1 Blood Tithe point.</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
@@ -2443,6 +1844,59 @@ You can re-roll prayer rolls of 1 for friendly FLAYED PRIESTS wholly within 8&qu
       </selectionEntryGroups>
       <entryLinks>
         <entryLink id="f201-876f-2ead-f609" name="Universal Prayer Scripture" hidden="false" collective="false" import="true" targetId="7104-ab27-d136-1df0" type="selectionEntryGroup"/>
+      </entryLinks>
+    </selectionEntryGroup>
+    <selectionEntryGroup id="72e3-52ed-dcde-7811" name="Battalion Formation" hidden="false" collective="false" import="true">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="c03a-b1a8-66c6-3637" type="equalTo"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <constraints>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="7185-2810-48ee-33a5" type="max"/>
+      </constraints>
+      <selectionEntryGroups>
+        <selectionEntryGroup id="7235-b903-5f77-d72f" name="Blades of Khorne Battalions" hidden="false" collective="false" import="true">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4373-740f-1bf3-b0aa" type="instanceOf"/>
+                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="e3a6-45ca-4974-b489" type="instanceOf"/>
+                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="996a-613c-4006-25e3" type="instanceOf"/>
+                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="6cd6-b22e-bfcb-9589" type="instanceOf"/>
+                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="b543-cb16-0c79-fbc6" type="instanceOf"/>
+                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="1667-1795-10a0-6075" type="equalTo"/>
+                    <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="efc3-307d-f4a2-412c" type="notInstanceOf"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="14cb-14b6-e51e-8303" type="max"/>
+          </constraints>
+          <selectionEntries>
+            <selectionEntry id="dbd5-8831-4443-ef0a" name="Gorechosen" hidden="false" collective="false" import="true" type="upgrade">
+              <modifiers>
+                <modifier type="set" field="hidden" value="true">
+                  <conditions>
+                    <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="efc3-307d-f4a2-412c" type="notInstanceOf"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+              <costs>
+                <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
+              </costs>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
+      <entryLinks>
+        <entryLink id="1153-5053-fc1d-3aa3" name="Core Battalions" hidden="false" collective="false" import="true" targetId="8c04-393d-d72d-c2a8" type="selectionEntryGroup"/>
       </entryLinks>
     </selectionEntryGroup>
   </sharedSelectionEntryGroups>

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="6529-a3f6-42f7-7556" name="Order - Daughters of Khaine - Data" revision="16" battleScribeVersion="2.03" authorName="Thulram" library="true" gameSystemId="e832-3291-06be-cab1" gameSystemRevision="16" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="6529-a3f6-42f7-7556" name="Order - Daughters of Khaine - Data" revision="17" battleScribeVersion="2.03" authorName="Thulram" library="true" gameSystemId="e832-3291-06be-cab1" gameSystemRevision="16" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <profileTypes>
     <profileType id="0d12-66d5-133a-d36d" name="Morathi Wounds">
       <characteristicTypes>
@@ -56,6 +56,8 @@
     <categoryEntry id="e44e-4c2a-ba06-c13b" name="SCÁTHBORN" hidden="false"/>
     <categoryEntry id="c18a-7dd7-1a6f-0f17" name="SYLTHAEL SHADESTALKER" hidden="false"/>
     <categoryEntry id="47ba-8d7c-d621-c72d" name="THE SHADEBORN" hidden="false"/>
+    <categoryEntry id="562f-bbec-79e8-8e8b" name="GRYSELLE&apos;S ARENAI" hidden="false"/>
+    <categoryEntry id="b16c-352e-03b7-59a0" name="HAR KURON" hidden="false"/>
   </categoryEntries>
   <sharedSelectionEntries>
     <selectionEntry id="8482-6f84-8e0c-0546" name="Hag Queen" publicationId="6ce4-e8a3-f18f-be55" hidden="false" collective="false" import="true" type="unit">
@@ -2871,6 +2873,94 @@ Wounds allocated to this unit cannot be healed.
       </selectionEntries>
       <costs>
         <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="986c-8c98-071d-7992" name="Gryselle&apos;s Arenai" hidden="false" collective="false" import="true" type="unit">
+      <constraints>
+        <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="ceac-5c4c-29d8-75aa" type="max"/>
+      </constraints>
+      <profiles>
+        <profile id="0cb5-e547-4523-23c8" name="Gryselle&apos;s Arenai" hidden="false" typeId="3956-f6dd-6c88-ae4b" typeName="Unit">
+          <characteristics>
+            <characteristic name="Move" typeId="5bbe-8910-4dfa-7b1c">6&quot;</characteristic>
+            <characteristic name="Wounds" typeId="a0c6-af64-2f24-5759">2</characteristic>
+            <characteristic name="Save" typeId="93b6-2f96-2df7-e330">5+</characteristic>
+            <characteristic name="Bravery" typeId="2420-1c5c-1016-7033">7</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="1c1e-c0e3-af2d-52d1" name="Champion" hidden="false" typeId="c23b-5a30-07e2-4706" typeName="Unit Options">
+          <characteristics>
+            <characteristic name="Unit Option" typeId="5879-9a21-e9d2-539d">Gryselle, the Slaughterer, is the unit champion and has a Wounds characteristic of 3. That model can issue commands to their own unit.</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="6529-8077-7aa7-ecf9" name="Dance of Death" hidden="false" typeId="7861-da01-01c0-88d9" typeName="Ability">
+          <characteristics>
+            <characteristic name="Ability" typeId="9bce-4deb-8b79-eaec">This unit is eligible to fight in the combat phase if it is within 6&quot; of an enemy unit instead of 3&quot;, and it can move an extra 3&quot; when it piles in.</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="9ba0-5c84-470f-53ef" name="Acrobatic Bloodshed" hidden="false" typeId="7861-da01-01c0-88d9" typeName="Ability">
+          <characteristics>
+            <characteristic name="Ability" typeId="9bce-4deb-8b79-eaec">If the unmodified hit rolls of 3 or more attacks made by this unit that target the same enemy unit in the same phase are 6, the strike-last effect applies to that enemy unit until the end of the turn.</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <categoryLinks>
+        <categoryLink id="a5e1-c63e-0508-5218" name="AELF" hidden="false" targetId="babf-cdeb-b0ab-05db" primary="false"/>
+        <categoryLink id="a24f-da91-f4ea-75f4" name="DAUGHTERS OF KHAINE" hidden="false" targetId="2e78-f70d-fb07-a172" primary="false"/>
+        <categoryLink id="99a0-9439-8f5b-e94c" name="GRYSELLE&apos;S ARENAI" hidden="false" targetId="562f-bbec-79e8-8e8b" primary="false"/>
+        <categoryLink id="182a-61e3-6105-0146" name="HAR KURON" hidden="false" targetId="b16c-352e-03b7-59a0" primary="false"/>
+        <categoryLink id="a417-2ffe-b82d-f464" name="ORDER" hidden="false" targetId="90c6-6c11-9677-1fa8" primary="false"/>
+        <categoryLink id="8595-5433-903e-a522" name="New CategoryLink" hidden="false" targetId="6230-ed60-e374-add4" primary="true"/>
+        <categoryLink id="1b9d-ecab-6a0e-a8be" name="SISTERS OF SLAUGHTER" hidden="false" targetId="2172-1721-6e98-3689" primary="false"/>
+      </categoryLinks>
+      <selectionEntries>
+        <selectionEntry id="e4b9-4dd4-7ffe-8810" name="5 Arenai" hidden="false" collective="false" import="true" type="model">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="40b8-25e6-b09d-6c6d" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="9b5e-31bd-b621-0912" type="min"/>
+          </constraints>
+        </selectionEntry>
+        <selectionEntry id="8bea-711e-3573-a791" name="Gladiatorial Blades" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="fb66-d5bc-2a85-9e97" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="40c8-e771-bf76-50b4" type="min"/>
+          </constraints>
+          <profiles>
+            <profile id="9817-ee88-c790-ae88" name="Gladiatorial Blades" hidden="false" typeId="2905-f6bd-06e5-6642" typeName="Weapon">
+              <characteristics>
+                <characteristic name="Type" typeId="1a08-195b-76fd-2c2b">Melee</characteristic>
+                <characteristic name="Range" typeId="1406-f935-3f8e-b27f">1&quot;</characteristic>
+                <characteristic name="Attacks" typeId="4c19-dba6-f094-5165">4</characteristic>
+                <characteristic name="To-Hit" typeId="7a4f-9704-2095-96c8">3+</characteristic>
+                <characteristic name="To-Wound" typeId="172f-fc84-895b-04b7">3+</characteristic>
+                <characteristic name="Rend" typeId="0c05-bd2e-b7e7-3925">-1</characteristic>
+                <characteristic name="Damage" typeId="01c2-d16a-8788-e52b">D3</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+        </selectionEntry>
+        <selectionEntry id="4bf0-3cdc-66c3-3268" name="Gladiatorial Weapons" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="dd60-70b7-caa3-fc70" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="967c-2c89-dc9c-9391" type="min"/>
+          </constraints>
+          <profiles>
+            <profile id="009e-d3d1-dc1a-1845" name="Gladiatorial Weapons" hidden="false" typeId="2905-f6bd-06e5-6642" typeName="Weapon">
+              <characteristics>
+                <characteristic name="Type" typeId="1a08-195b-76fd-2c2b">Melee</characteristic>
+                <characteristic name="Range" typeId="1406-f935-3f8e-b27f">1&quot;</characteristic>
+                <characteristic name="Attacks" typeId="4c19-dba6-f094-5165">3</characteristic>
+                <characteristic name="To-Hit" typeId="7a4f-9704-2095-96c8">3+</characteristic>
+                <characteristic name="To-Wound" typeId="172f-fc84-895b-04b7">3+</characteristic>
+                <characteristic name="Rend" typeId="0c05-bd2e-b7e7-3925">-</characteristic>
+                <characteristic name="Damage" typeId="01c2-d16a-8788-e52b">1</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+        </selectionEntry>
+      </selectionEntries>
+      <costs>
+        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="100.0"/>
       </costs>
     </selectionEntry>
   </sharedSelectionEntries>
