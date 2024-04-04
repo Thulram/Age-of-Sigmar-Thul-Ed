@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<gameSystem id="e832-3291-06be-cab1" name="Age of Sigmar - Thul Ed" revision="36" battleScribeVersion="2.03" authorName="Thulram" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
+<gameSystem id="e832-3291-06be-cab1" name="Age of Sigmar - Thul Ed" revision="37" battleScribeVersion="2.03" authorName="Thulram" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
   <publications>
     <publication id="bf0c-0cbf-1f5d-5885" name="Chaos Battletome - Blades of Khorne"/>
     <publication id="6ce4-e8a3-f18f-be55" name="Order Battletome - Daughters of Khaine"/>
@@ -844,6 +844,13 @@
         </categoryLink>
         <categoryLink id="a122-1461-98c7-05c1" name="List Options" hidden="false" targetId="29f4-e63d-fa5b-1611" primary="false"/>
         <categoryLink id="d741-daab-2f7c-4064" name="Allegiance" hidden="false" targetId="af41-ae78-5063-3d36" primary="false">
+          <modifiers>
+            <modifier type="set" field="a9a5-968d-462a-f50c" value="0.0">
+              <conditions>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="a73e-41f7-f3c6-0a5e" type="greaterThan"/>
+              </conditions>
+            </modifier>
+          </modifiers>
           <constraints>
             <constraint field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="a9a5-968d-462a-f50c" type="min"/>
           </constraints>
@@ -1206,7 +1213,7 @@
         <categoryLink id="e816-1107-5002-d202" name="List Options" hidden="false" targetId="29f4-e63d-fa5b-1611" primary="true"/>
       </categoryLinks>
       <selectionEntryGroups>
-        <selectionEntryGroup id="eadf-7785-3d38-dad3" name="Rules Set" hidden="false" collective="false" import="true" defaultSelectionEntryId="aaad-6362-db82-9f8f">
+        <selectionEntryGroup id="eadf-7785-3d38-dad3" name="Rules Set" hidden="false" collective="false" import="true" defaultSelectionEntryId="fcc2-5086-cde1-d5a1">
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="2005-e1f4-1fd7-d86f" type="max"/>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="3168-6881-42d7-e7da" type="min"/>
@@ -1298,163 +1305,30 @@ At the start of each battle round, before determining priority, the players roll
                 <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
               </costs>
             </selectionEntry>
-          </selectionEntries>
-        </selectionEntryGroup>
-      </selectionEntryGroups>
-      <costs>
-        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
-      </costs>
-    </selectionEntry>
-    <selectionEntry id="8fec-a15c-21f3-b2b1" name="Realm of Origin" publicationId="d283-510e-eaa4-06e2" hidden="false" collective="false" import="true" type="upgrade">
-      <constraints>
-        <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="b3d5-8f84-ddb9-b004" type="max"/>
-      </constraints>
-      <categoryLinks>
-        <categoryLink id="df0c-286a-f78e-ec96" name="List Options" hidden="false" targetId="29f4-e63d-fa5b-1611" primary="true"/>
-      </categoryLinks>
-      <selectionEntryGroups>
-        <selectionEntryGroup id="02e5-753c-31d2-5e10" name="Realm of Origin" hidden="false" collective="false" import="true">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="a7f2-86e0-8643-2e48" type="max"/>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="42b0-1ed6-3f14-72b1" type="min"/>
-          </constraints>
-          <selectionEntries>
-            <selectionEntry id="07f7-a9df-fbcc-c6e6" name="Shyish" hidden="false" collective="false" import="true" type="upgrade">
-              <modifiers>
-                <modifier type="set" field="hidden" value="true">
-                  <conditions>
-                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="83bd-c7a0-2ee2-4037" type="greaterThan"/>
-                  </conditions>
-                </modifier>
-              </modifiers>
-              <categoryLinks>
-                <categoryLink id="43d6-e9e6-6ee8-1529" name="Shyish" hidden="false" targetId="b347-5473-3854-2c40" primary="false"/>
-              </categoryLinks>
-              <costs>
-                <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
-              </costs>
-            </selectionEntry>
-            <selectionEntry id="94a6-4014-0d5b-27b2" name="Hysh" hidden="false" collective="false" import="true" type="upgrade">
-              <modifiers>
-                <modifier type="set" field="hidden" value="true">
-                  <conditionGroups>
-                    <conditionGroup type="or">
-                      <conditions>
-                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="717f-e16c-d728-7341" type="greaterThan"/>
-                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="975b-7166-c259-7c02" type="greaterThan"/>
-                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="919a-28f1-5685-7a36" type="greaterThan"/>
-                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="224e-af67-7897-13ce" type="greaterThan"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
-                </modifier>
-              </modifiers>
-              <categoryLinks>
-                <categoryLink id="e89d-dd7f-f1b3-9090" name="Hysh" hidden="false" targetId="e6a6-c6c5-7e4c-f31e" primary="false"/>
-              </categoryLinks>
-              <costs>
-                <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
-              </costs>
-            </selectionEntry>
-            <selectionEntry id="9943-7b56-8f2c-b831" name="Chamon" hidden="false" collective="false" import="true" type="upgrade">
-              <modifiers>
-                <modifier type="set" field="hidden" value="true">
-                  <conditions>
-                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="83bd-c7a0-2ee2-4037" type="greaterThan"/>
-                  </conditions>
-                </modifier>
-              </modifiers>
-              <categoryLinks>
-                <categoryLink id="5581-c095-46ad-a44b" name="Chamon" hidden="false" targetId="3d6d-d56b-ed5b-01cb" primary="false"/>
-              </categoryLinks>
-              <costs>
-                <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
-              </costs>
-            </selectionEntry>
-            <selectionEntry id="c326-759f-9d6a-3e81" name="Ulgu" hidden="false" collective="false" import="true" type="upgrade">
-              <modifiers>
-                <modifier type="set" field="hidden" value="true">
-                  <conditionGroups>
-                    <conditionGroup type="or">
-                      <conditions>
-                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="717f-e16c-d728-7341" type="greaterThan"/>
-                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="975b-7166-c259-7c02" type="greaterThan"/>
-                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="cfde-38dc-0d06-3bc4" type="greaterThan"/>
-                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="224e-af67-7897-13ce" type="greaterThan"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
-                </modifier>
-              </modifiers>
-              <categoryLinks>
-                <categoryLink id="5bc2-c3e9-6c93-8388" name="Ulgu" hidden="false" targetId="9314-4d3b-8fa1-49b3" primary="false"/>
-              </categoryLinks>
-              <costs>
-                <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
-              </costs>
-            </selectionEntry>
-            <selectionEntry id="3910-5344-67b7-4d86" name="Aqshy" hidden="false" collective="false" import="true" type="upgrade">
-              <modifiers>
-                <modifier type="set" field="hidden" value="true">
-                  <conditionGroups>
-                    <conditionGroup type="or">
-                      <conditions>
-                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="975b-7166-c259-7c02" type="greaterThan"/>
-                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="919a-28f1-5685-7a36" type="greaterThan"/>
-                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="cfde-38dc-0d06-3bc4" type="greaterThan"/>
-                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="224e-af67-7897-13ce" type="greaterThan"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
-                </modifier>
-              </modifiers>
-              <categoryLinks>
-                <categoryLink id="72b9-5579-65f4-1e81" name="Aqshy" hidden="false" targetId="ec0f-042a-b925-6dae" primary="false"/>
-              </categoryLinks>
-              <costs>
-                <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
-              </costs>
-            </selectionEntry>
-            <selectionEntry id="b4e1-d692-ddba-eef4" name="Ghur" hidden="false" collective="false" import="true" type="upgrade">
-              <modifiers>
-                <modifier type="set" field="hidden" value="true">
-                  <conditionGroups>
-                    <conditionGroup type="or">
-                      <conditions>
-                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="975b-7166-c259-7c02" type="greaterThan"/>
-                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="919a-28f1-5685-7a36" type="greaterThan"/>
-                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="cfde-38dc-0d06-3bc4" type="greaterThan"/>
-                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="717f-e16c-d728-7341" type="greaterThan"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
-                </modifier>
-              </modifiers>
-              <categoryLinks>
-                <categoryLink id="a3fd-b1b6-7d55-18ab" name="Ghur" hidden="false" targetId="e49c-796b-cede-8705" primary="false"/>
-              </categoryLinks>
-              <costs>
-                <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
-              </costs>
-            </selectionEntry>
-            <selectionEntry id="fa61-bb23-107d-cb50" name="Ghyran" hidden="false" collective="false" import="true" type="upgrade">
-              <modifiers>
-                <modifier type="set" field="hidden" value="true">
-                  <conditionGroups>
-                    <conditionGroup type="or">
-                      <conditions>
-                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="919a-28f1-5685-7a36" type="greaterThan"/>
-                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="717f-e16c-d728-7341" type="greaterThan"/>
-                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="cfde-38dc-0d06-3bc4" type="greaterThan"/>
-                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="224e-af67-7897-13ce" type="greaterThan"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
-                </modifier>
-              </modifiers>
-              <categoryLinks>
-                <categoryLink id="85a4-4d0a-5e6b-5f16" name="Ghyran" hidden="false" targetId="8805-d9e6-6ad7-0573" primary="false"/>
-              </categoryLinks>
+            <selectionEntry id="fcc2-5086-cde1-d5a1" name="Andtor (current)" hidden="false" collective="false" import="true" type="upgrade">
+              <profiles>
+                <profile id="c5e9-58d2-ae49-1bb4" name="One with the Land" hidden="false" typeId="7861-da01-01c0-88d9" typeName="Ability">
+                  <characteristics>
+                    <characteristic name="Ability" typeId="9bce-4deb-8b79-eaec">WIZARD HEROES with a Wounds characteristic of 9 or less that are not Unique gain the ANDTORIAN LOCUS keyword.</characteristic>
+                  </characteristics>
+                </profile>
+                <profile id="8b82-3fa0-0a75-94e9" name="Optimal Focus" hidden="false" typeId="7861-da01-01c0-88d9" typeName="Ability">
+                  <characteristics>
+                    <characteristic name="Ability" typeId="9bce-4deb-8b79-eaec">At the start of the battle round, after priority is determined, the player taking the second turn can pick 1 friendly HERO on the battlefield. If that HERO is an ANDTORIAN LOCUS, they can attempt to cast 1 extra spell and attempt to unbind 1 extra spell in that battle round. If they are not an ANDTORIAN LOCUS, you receive 1 command point that can only be spent to allow that HERO to issue a command.</characteristic>
+                  </characteristics>
+                </profile>
+                <profile id="32fb-e524-781b-43f0" name="Primal Magic" hidden="false" typeId="7861-da01-01c0-88d9" typeName="Ability">
+                  <characteristics>
+                    <characteristic name="Ability" typeId="9bce-4deb-8b79-eaec">At the start of the hero phase, both players roll a dice. For each 4+, each player receives 1 primal magic dice. After a player attempts to cast or unbind a spell, or after a player attempts to dispel an endless spell, they can roll 1 of their primal magic dice. If they do so, add the result to the casting, unbinding or dispelling roll. That player can continue to roll additional primal magic dice until the caster suffers a primal miscast (see below) or there are no more primal magic dice to be rolled.
+
+Abilities that allow you to re-roll casting, unbinding or dispelling rolls must be used before primal magic dice are rolled. If you choose to use an ability to re-roll a casting, unbinding or dispelling roll, you cannot use primal magic dice to supplement that roll. At the end of each battle round, any primal magic dice that have not been used are lost.
+
+When a primal magic dice modifies a casting roll, if two or more of the dice in the casting roll and primal magic dice are 1s, the caster suffers a primal miscast instead of a miscast. The spell is not successfully cast, the caster suffers D3+3 mortal wounds and each other unit within 3&quot; of the caster suffers D3 mortal wounds. In addition, the caster cannot attempt to cast any more spells in that phase.
+
+When a primal magic dice modifies a casting roll, if two or more of the dice in the casting roll and primal magic dice are 6s, and the caster did not suffer a primal miscast, the spell is successfully cast and cannot be unbound. In addition, the caster cannot attempt to cast any more spells in that phase and both players receive 1 primal magic dice.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
               <costs>
                 <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
               </costs>
@@ -2255,7 +2129,6 @@ At the start of each battle round, before determining priority, the players roll
             </modifier>
           </modifiers>
           <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="4795-c258-50c1-86ec" type="max"/>
             <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="b4ce-e9a4-98c9-66dc" type="max"/>
           </constraints>
           <selectionEntries>
@@ -2266,7 +2139,7 @@ At the start of each battle round, before determining priority, the players roll
               <profiles>
                 <profile id="d6de-85d6-aba9-ac3d" name="Leadership of the Alpha" hidden="false" typeId="e80d-99ef-9c11-dd0b" typeName="Unique Enhancement">
                   <characteristics>
-                    <characteristic name="Unique Enhancement" typeId="e146-2f27-d8b7-cd13">Once per battle, this GALLETIAN CHAMPION can issue one of the following commands up to 3 times in the same phase: Rally, All-out Attack, All-out Defence or Redeploy. If it does so, no command point is spent the second and third times this GALLETIAN CHAMPION issues that command in that phase.</characteristic>
+                    <characteristic name="Unique Enhancement" typeId="e146-2f27-d8b7-cd13">Once per battle, this GALLETIAN CHAMPION can issue one of the following commands up to 3 times in the same phase: Rally, All-out Attack, All-out Defence or Redeploy. If it does so, no command point is spent the second and third times this GALLETIAN CHAMPION issues that command in that phase. Each command issued in this manner must be received by a different friendly unit.</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
@@ -2381,6 +2254,200 @@ At the start of each battle round, before determining priority, the players roll
         <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
       </costs>
     </selectionEntry>
+    <selectionEntry id="2c5a-cb47-7ba3-1825" name="Nullstone Adornments" hidden="false" collective="false" import="true" type="upgrade">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="fcc2-5086-cde1-d5a1" type="equalTo"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <constraints>
+        <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="1d2e-c0c2-320c-d51f" type="max"/>
+      </constraints>
+      <rules>
+        <rule id="24ab-eb85-2720-cf54" name="Nullstone Adornments" hidden="false">
+          <description>A Nullstone Adornment is a unique enhancement that can only be taken in an army that does not include any WIZARDS or any units with abilities that would allow a unit to cast spells in the same manner as a WIZARD. You can always take 1 Nullstone Adornment enhancement in such an army. Each time you take a Nullstone Adornment enhancement, you can pick 1 Nullstone Adornment from the table below and give it to 1 HERO in your army that does not have an artefact of power. If a rule allows you to take an extra enhancement, you can take a Nullstone Adornment enhancement as that extra enhancement, but if you do so, you cannot pick the same Nullstone Adornment from the table below more than once, and you cannot give a Nullstone Adornment to a HERO that already has one or that has an artefact of power.</description>
+        </rule>
+      </rules>
+      <categoryLinks>
+        <categoryLink id="dd1d-1888-b088-647a" name="New CategoryLink" hidden="false" targetId="29f4-e63d-fa5b-1611" primary="true"/>
+      </categoryLinks>
+      <selectionEntryGroups>
+        <selectionEntryGroup id="712c-bbc1-ccbf-fc04" name="Nullstone Adornments" hidden="false" collective="false" import="true">
+          <modifiers>
+            <modifier type="increment" field="5237-9ddd-6501-361c" value="1.0">
+              <repeats>
+                <repeat field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="d75e-a123-ace4-2aa9" repeats="1" roundUp="false"/>
+              </repeats>
+              <conditions>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="d75e-a123-ace4-2aa9" type="greaterThan"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="5237-9ddd-6501-361c" type="max"/>
+          </constraints>
+          <selectionEntries>
+            <selectionEntry id="96c5-689c-4cef-db39" name="3 ~ Polished Nullstone Pebble" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="140a-e4cd-997a-af21" type="max"/>
+              </constraints>
+              <profiles>
+                <profile id="7b58-536c-0f7b-1589" name="Polished Nullstone Pebble" hidden="false" typeId="e80d-99ef-9c11-dd0b" typeName="Unique Enhancement">
+                  <characteristics>
+                    <characteristic name="Unique Enhancement" typeId="e146-2f27-d8b7-cd13">When this unit is picked as the target of a spell or the abilities of an endless spell, you can roll a dice. On a 4+, the caster must pick another unit within 3&quot; of this unit and within range of that spell or endless spell’s abilities to be the target. If, when picking another unit, there are no other units within 3&quot; of this unit and within range, ignore the effect of that spell or the effects of that endless spell’s abilities on this unit instead.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <costs>
+                <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="f291-c20e-09cb-a206" name="2 ~ Pouch of Nulldust" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="4cbd-1b5e-6126-28ae" type="max"/>
+              </constraints>
+              <profiles>
+                <profile id="0ab0-13af-63b8-4b94" name="Pouch of Nulldust" hidden="false" typeId="e80d-99ef-9c11-dd0b" typeName="Unique Enhancement">
+                  <characteristics>
+                    <characteristic name="Unique Enhancement" typeId="e146-2f27-d8b7-cd13">Once per battle, at the start of the hero phase, you can say that the bearer will use their Pouch of Nulldust. If you do so, until the end of that phase, unmodified casting rolls that include a double 1, double 2 or double 3 are treated as miscasts or, if a primal magic dice was rolled as part of the casting roll, as primal miscasts. In addition, roll a dice for each endless spell on the battlefield. On a 5+, that endless spell is dispelled.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <costs>
+                <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="9b43-5200-8904-942c" name="1 ~ Hand-carved Nullstone Icon" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="b283-9ad9-c9a3-ff87" type="max"/>
+              </constraints>
+              <profiles>
+                <profile id="5840-45f1-85d6-1ac0" name="Hand-carved Nullstone Icon" hidden="false" typeId="e80d-99ef-9c11-dd0b" typeName="Unique Enhancement">
+                  <characteristics>
+                    <characteristic name="Unique Enhancement" typeId="e146-2f27-d8b7-cd13">The bearer can attempt to unbind 1 spell or attempt to dispel 1 endless spell in the enemy hero phase in the same manner as a WIZARD. Each time the bearer successfully unbinds a spell or dispels an endless spell using this ability, the bearer can attempt to unbind 1 additional spell in that phase.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <costs>
+                <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
+              </costs>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
+      <costs>
+        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="8761-3e1f-56fb-de2e" name="Andtorian Acolytes" hidden="false" collective="false" import="true" type="upgrade">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="fcc2-5086-cde1-d5a1" type="equalTo"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <profiles>
+        <profile id="884c-6652-1e06-431b" name="Coordinated Augmentation" hidden="false" typeId="66c5-932e-004a-574c" typeName="Battalion Abilities">
+          <characteristics>
+            <characteristic name="Battalion Ability" typeId="23f7-32c0-e059-29b2">At the start of the hero phase, if there are 2 or more friendly ANDTORIAN LOCUS units in this battalion on the battlefield, roll a dice. On a 3+, you gain 1 primal magic dice.</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <categoryLinks>
+        <categoryLink id="3d28-852e-f801-f927" name="New CategoryLink" hidden="false" targetId="c03a-b1a8-66c6-3637" primary="true"/>
+      </categoryLinks>
+      <selectionEntries>
+        <selectionEntry id="7428-0a91-b8f0-bf61" name="Champion" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="3.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="6e53-8ca3-451d-d763" type="max"/>
+            <constraint field="selections" scope="parent" value="2.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="ee41-2326-8ed9-7de3" type="min"/>
+          </constraints>
+          <rules>
+            <rule id="9a61-4c51-556a-007c" name="Champion" hidden="false">
+              <description>HERO with a Wounds characteristic of less than 10, that does not have a mount (with the exception of companions) and is not Unique</description>
+            </rule>
+          </rules>
+          <costs>
+            <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
+          </costs>
+        </selectionEntry>
+      </selectionEntries>
+      <costs>
+        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="3ba6-64ba-6ba4-4c9a" name="Wizard-Finders of Andtor" hidden="false" collective="false" import="true" type="upgrade">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="fcc2-5086-cde1-d5a1" type="equalTo"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <profiles>
+        <profile id="68af-f1cc-bc80-4331" name="Magic Hunters" hidden="false" typeId="66c5-932e-004a-574c" typeName="Battalion Abilities">
+          <characteristics>
+            <characteristic name="Battalion Ability" typeId="23f7-32c0-e059-29b2">Each time a unit in this battalion is affected by a spell cast by an enemy unit or the abilities of an endless spell summoned by an enemy unit, you can roll a dice. On a 5+, ignore the effect of that spell or the effects of that endless spell’s abilities on this unit.
+
+Each time a unit in this battalion is picked to fight, you can say that it will go on a wizard hunt. If you do so, pick 1 melee weapon profile on that unit’s warscroll. Until the end of that phase, add 1 to the Attacks characteristic of that melee weapon, but all of the attacks that unit makes in that phase must target an enemy WIZARD.
+
+WIZARDS cannot be included in this battalion.</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <categoryLinks>
+        <categoryLink id="d967-5a57-22da-b1c9" name="New CategoryLink" hidden="false" targetId="c03a-b1a8-66c6-3637" primary="true"/>
+      </categoryLinks>
+      <selectionEntries>
+        <selectionEntry id="a09e-bd8f-bd5b-c38c" name="Champion" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="3c65-314e-62e2-4116" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="a53f-abae-f494-fd28" type="min"/>
+          </constraints>
+          <rules>
+            <rule id="98e6-9940-8009-696f" name="Champion" hidden="false">
+              <description>HERO with a Wounds characteristic of less than 10, that does not have a mount (with the exception of companions) and is not Unique</description>
+            </rule>
+          </rules>
+          <costs>
+            <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="81b1-4752-ae1f-e016" name="Infantry" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="2.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="401f-1c2f-21d7-3d8c" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="e966-a554-6b32-2e32" type="min"/>
+          </constraints>
+          <rules>
+            <rule id="4d2f-4587-ec8c-81ec" name="Infantry" hidden="false">
+              <description>Unit with a Wounds characteristic of 4 or less that is not Leader, Artillery or Behemoth and does not have mounts (with the exception of companions)</description>
+            </rule>
+          </rules>
+          <costs>
+            <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="0033-b1ee-4d70-1fe0" name="Monster" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8cf4-38d3-2793-c9cf" type="max"/>
+          </constraints>
+          <rules>
+            <rule id="b331-c246-ca9c-a649" name="Monster" hidden="false">
+              <description>Behemoth that is not Leader</description>
+            </rule>
+          </rules>
+          <costs>
+            <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
+          </costs>
+        </selectionEntry>
+      </selectionEntries>
+      <costs>
+        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
+      </costs>
+    </selectionEntry>
   </selectionEntries>
   <entryLinks>
     <entryLink id="dd77-8b8f-a11e-a426" name="Endless Spell - Aethervoid Pendulum" hidden="false" collective="false" import="true" targetId="0804-c05f-5a86-c4ee" type="selectionEntry"/>
@@ -2451,17 +2518,17 @@ At the start of each battle round, before determining priority, the players roll
       <profiles>
         <profile id="3c4f-7d50-9402-2c7d" name="Summon Aethervoid Pendulum" hidden="false" typeId="13da-11a8-b7d1-77a7" typeName="Spell">
           <characteristics>
-            <characteristic name="Spell" typeId="1170-c916-1b73-ae34">Summon Aethervoid Pendulum has a casting value of 5. If successfully cast, set up this endless spell wholly within 6&quot; of the caster then pivot the model so that the tip of the pendulum blade is pointing in the direction in which the endles spell is it to be moved.</characteristic>
+            <characteristic name="Spell" typeId="1170-c916-1b73-ae34">This endless spell is summoned with a spell that has a casting value of 6 and a range of 8&quot;. If successfully cast, set up the endless spell wholly within range of the caster. When this endless spell is set up, pivot the model so that the tip of the pendulum blade is pointing in the direction in which you wish the endless spell to move.</characteristic>
           </characteristics>
         </profile>
         <profile id="4898-38cf-38fb-377b" name="Predatory" hidden="false" typeId="ce32-0c40-1990-4c8a" typeName="Restriction">
           <characteristics>
-            <characteristic name="Restriction" typeId="edbe-5fe5-1142-afa6">This endless spell is a predatory endless spell. It can be moved up to 8&quot; and can fly. When this endless spell is moved, it must move in a straight line in the direction in which the tip of the pendulum blade is pointing.</characteristic>
+            <characteristic name="Restriction" typeId="edbe-5fe5-1142-afa6">This endless spell is a predatory endless spell. It can be moved up to 8&quot; and can fly. When you move this endless spell, it must move in a straight line either in the direction in which the tip of the pendulum blade is pointing or in the opposite direction to the direction in which the tip of the pendulum blade is pointing.</characteristic>
           </characteristics>
         </profile>
         <profile id="7211-6228-c02f-1385" name="Scything Blade" hidden="false" typeId="7861-da01-01c0-88d9" typeName="Ability">
           <characteristics>
-            <characteristic name="Ability" typeId="9bce-4deb-8b79-eaec">After this endless spell has moved, roll a dice for each unit that has any models it passed across and for each other unit that is within 1&quot; of it at the end of its move. On a 2+, that unit suffers D3 mortal wounds.</characteristic>
+            <characteristic name="Ability" typeId="9bce-4deb-8b79-eaec">After this endless spell has moved, roll a dice for each unit that has any models that it passed across, and each other unit that is within 1&quot; of it at the end of its move. On a 2+, that unit suffers D6 mortal wounds.</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -2471,7 +2538,7 @@ At the start of each battle round, before determining priority, the players roll
         <categoryLink id="5a6f-cf9c-46db-436e" name="New CategoryLink" hidden="false" targetId="ecf9-78bd-d326-2a82" primary="true"/>
       </categoryLinks>
       <costs>
-        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="30.0"/>
+        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="50.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="6565-5685-eb04-d0a4" name="Endless Spell - Chronomantic Cogs" publicationId="d283-510e-eaa4-06e2" hidden="false" collective="false" import="true" type="model">
@@ -2481,18 +2548,20 @@ At the start of each battle round, before determining priority, the players roll
       <profiles>
         <profile id="c706-3945-00ed-7073" name="Summon Chronomantic Cogs" hidden="false" typeId="13da-11a8-b7d1-77a7" typeName="Spell">
           <characteristics>
-            <characteristic name="Spell" typeId="1170-c916-1b73-ae34">Summon Chronomantic Cogs has a casting value of 6. If successfully cast, set up this endless spell wholly within 6&quot; of the caster.</characteristic>
+            <characteristic name="Spell" typeId="1170-c916-1b73-ae34">This endless spell is summoned with a spell that has a casting value of 6 and a range of 6&quot;. If successfully cast, set up the endless spell wholly within range of the caster.</characteristic>
           </characteristics>
         </profile>
         <profile id="bd1e-6d98-951c-1a2f" name="Mechanisms of Time" hidden="false" typeId="7861-da01-01c0-88d9" typeName="Ability">
           <characteristics>
-            <characteristic name="Ability" typeId="9bce-4deb-8b79-eaec">When this endless spell is set up, the commanding player must decide if it is increasing or decreasing the flow of time.
+            <characteristic name="Ability" typeId="9bce-4deb-8b79-eaec">When you set up this endless spell, you must decide if it is increasing or decreasing the flow of time.
 
-If it is increasing the flow of time, add 1 to charge rolls for units wholly within 18&quot; of this endless spell.
+If it is increasing the flow of time, players can re-roll charge rolls for friendly units while they are wholly within 12&quot; of any endless spells with this ability.
 
-If it is decreasing the flow of time, if a player has any friendly WIZARDS within 6&quot; of this endless spell in their hero phase, they can pick 1 of those WIZARDS to attempt to cast 1 extra spell in that hero phase.
+If it is decreasing the flow of time, players can attempt to cast either Arcane Bolt or Mystic Shield in their hero phase with a friendly WIZARD wholly within 6&quot; of this endless spell without counting that spell towards the number of spells that WIZARD can attempt to cast in that phase. In addition, subtract 1 from hit rolls for shooting attacks that target WIZARD HEROES while they are wholly within 6&quot; of any endless spells with this ability.
 
-At the start of the hero phase, if there is a friendly WIZARD within 6&quot; of this endless spell, the player whose turn is taking place can change whether this endless spell is increasing or decreasing the flow of time.</characteristic>
+If a player has any friendly WIZARDS within 6&quot; of this endless spell at the start of their hero phase, they can change whether this endless spell is increasing or decreasing the flow of time.
+
+Designer’s Note: If a player already cast Arcane Bolt or Mystic Shield earlier in their hero phase, this endless spell does not allow them to cast that spell again.</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -2502,7 +2571,7 @@ At the start of the hero phase, if there is a friendly WIZARD within 6&quot; of 
         <categoryLink id="60ff-273e-1527-0b44" name="New CategoryLink" hidden="false" targetId="ecf9-78bd-d326-2a82" primary="true"/>
       </categoryLinks>
       <costs>
-        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="70.0"/>
+        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="50.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="24fe-af98-69d8-abc1" name="Endless Spell - Emerald Lifeswarm" publicationId="d283-510e-eaa4-06e2" hidden="false" collective="false" import="true" type="model">
@@ -2512,8 +2581,7 @@ At the start of the hero phase, if there is a friendly WIZARD within 6&quot; of 
       <profiles>
         <profile id="63d7-087b-705a-5880" name="Summon Emerald Lifeswarm" hidden="false" typeId="13da-11a8-b7d1-77a7" typeName="Spell">
           <characteristics>
-            <characteristic name="Spell" typeId="1170-c916-1b73-ae34">Summon Emerald Lifeswarm has a casting value of 6. If successfully cast, set up this endless spell wholly within 6&quot; of the caster. 
-</characteristic>
+            <characteristic name="Spell" typeId="1170-c916-1b73-ae34">This endless spell is summoned with a spell that has a casting value of 6 and a range of 6&quot;. If successfully cast, set up the endless spell wholly within range of the caster.</characteristic>
           </characteristics>
         </profile>
         <profile id="3b00-ca08-d2af-a5dc" name="Predatory" hidden="false" typeId="ce32-0c40-1990-4c8a" typeName="Restriction">
@@ -2523,7 +2591,7 @@ At the start of the hero phase, if there is a friendly WIZARD within 6&quot; of 
         </profile>
         <profile id="a646-eb60-00c8-2a35" name="Bounteous Healing" hidden="false" typeId="7861-da01-01c0-88d9" typeName="Ability">
           <characteristics>
-            <characteristic name="Ability" typeId="9bce-4deb-8b79-eaec">After this model is set up and after it has moved, the commanding player can pick 1 unit within 1&quot; of it. They can heal up to D3 wounds allocated to that unit or, if no wounds are allocated to it, they can return a number of slain models to that unit that have a combined Wounds characteristic of D3 or less.</characteristic>
+            <characteristic name="Ability" typeId="9bce-4deb-8b79-eaec">After this endless spell has moved, the commanding player can pick 1 unit within 3&quot; of it. They can heal up to D3 wounds allocated to that unit or, if no wounds are allocated to it, they can return a number of slain models to that unit that have a combined Wounds characteristic of D3 or less.</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -2533,7 +2601,7 @@ At the start of the hero phase, if there is a friendly WIZARD within 6&quot; of 
         <categoryLink id="9f30-c93b-e618-5bf0" name="New CategoryLink" hidden="false" targetId="ecf9-78bd-d326-2a82" primary="true"/>
       </categoryLinks>
       <costs>
-        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="60.0"/>
+        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="50.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="2cc2-b9e5-5119-0ad9" name="Endless Spell - Geminids of Uhl-Gysh" publicationId="d283-510e-eaa4-06e2" hidden="false" collective="false" import="true" type="model">
@@ -2543,7 +2611,7 @@ At the start of the hero phase, if there is a friendly WIZARD within 6&quot; of 
       <profiles>
         <profile id="99ed-05a1-ff90-a0ee" name="Summon Geminids of Uhl-Gysh" hidden="false" typeId="13da-11a8-b7d1-77a7" typeName="Spell">
           <characteristics>
-            <characteristic name="Spell" typeId="1170-c916-1b73-ae34">Summon Geminids of Uhl-Gysh has a casting value of 6. If successfully cast, set up both models within 6&quot; of each other and both wholly within 9&quot; of the caster.</characteristic>
+            <characteristic name="Spell" typeId="1170-c916-1b73-ae34">This endless spell is summoned with a spell that has a casting value of 6 and a range of 8&quot;. If successfully cast, set up the parts of the endless spell within 6&quot; of each other and wholly within range of the caster.</characteristic>
           </characteristics>
         </profile>
         <profile id="6f09-c757-665c-0ef4" name="Predatory" hidden="false" typeId="ce32-0c40-1990-4c8a" typeName="Restriction">
@@ -2553,7 +2621,7 @@ At the start of the hero phase, if there is a friendly WIZARD within 6&quot; of 
         </profile>
         <profile id="1c72-60f6-c4c2-99a2" name="Tendrils of Shadow and Light" hidden="false" typeId="7861-da01-01c0-88d9" typeName="Ability">
           <characteristics>
-            <characteristic name="Ability" typeId="9bce-4deb-8b79-eaec">After this endless spell has moved, roll a dice for each unit that has any models it passed across and for each other unit that iw within 1&quot; of it at the end of its move. On a 2+, that unit suffers 1 mortal wound. In addition, if a mortal wound caused by this ability is allocated to a unit, that unit cannot issue or receive commands until the start of the next combat phase.</characteristic>
+            <characteristic name="Ability" typeId="9bce-4deb-8b79-eaec">After this endless spell has moved, roll a dice for each unit that has any models that it passed across, and for each other unit that is within 1&quot; of it at the end of its move. On a 2+, that unit cannot issue or receive commands until the start of the next hero phase.</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -2563,7 +2631,7 @@ At the start of the hero phase, if there is a friendly WIZARD within 6&quot; of 
         <categoryLink id="141a-7f06-812c-84ed" name="New CategoryLink" hidden="false" targetId="ecf9-78bd-d326-2a82" primary="true"/>
       </categoryLinks>
       <costs>
-        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="50.0"/>
+        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="60.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="d3a3-3415-beaf-d183" name="Endless Spell - Malevolent Maelstrom" publicationId="d283-510e-eaa4-06e2" hidden="false" collective="false" import="true" type="model">
@@ -2573,7 +2641,7 @@ At the start of the hero phase, if there is a friendly WIZARD within 6&quot; of 
       <profiles>
         <profile id="289f-95d0-390f-4c62" name="Summon Malevolent Maelstrom" hidden="false" typeId="13da-11a8-b7d1-77a7" typeName="Spell">
           <characteristics>
-            <characteristic name="Spell" typeId="1170-c916-1b73-ae34">Summon Malevolent Maelstrom has a casting value of 5. If successfully cast, set up this endless spell wholly within 6&quot; of the caster.</characteristic>
+            <characteristic name="Spell" typeId="1170-c916-1b73-ae34">This endless spell is summoned with a spell that has a casting value of 5 and a range of 8&quot;. If successfully cast, set up the endless spell wholly within range of the caster.</characteristic>
           </characteristics>
         </profile>
         <profile id="7a66-5697-aceb-d87c" name="Predatory" hidden="false" typeId="ce32-0c40-1990-4c8a" typeName="Restriction">
@@ -2583,9 +2651,9 @@ At the start of the hero phase, if there is a friendly WIZARD within 6&quot; of 
         </profile>
         <profile id="b19c-a398-67e9-19b9" name="Morbid Detonation" hidden="false" typeId="7861-da01-01c0-88d9" typeName="Ability">
           <characteristics>
-            <characteristic name="Ability" typeId="9bce-4deb-8b79-eaec">When this endless spell is set up, place a D6 beside it with the &apos;1&apos; facing up. Each time a spell is successfully cast by a unit within 12&quot; of this endless spell and not unbound, after the effects of the spell have been resolved, increase the value of the dice beside this endless spell by 1 (to a maximum of 6). In addition, each time a model is slain within 12&quot; of this endless spell, increase the value of the dice beside this endless spell by 1 (to a maximum of 6).
+            <characteristic name="Ability" typeId="9bce-4deb-8b79-eaec">After this endless spell is summoned, place a D6 beside it with the ‘1’ facing up. Each time a spell is successfully cast by a unit within 12&quot; of this endless spell and not unbound, after the effects of the spell have been resolved, increase the value of the dice beside this endless spell by 1 (to a maximum of 6). In addition, each time a model is slain within 12&quot; of this endless spell, increase the value of the dice beside this endless spell by 1 (to a maximum of 6). At the end of a phase in which the dice beside this endless spell reaches ‘6’, this endless spell is removed from play.
 
-At the end of the combat phase, if this endless spell is on the battlefield, roll a dice and add the value of the dice beside this endless spell to the roll. On a 10+, each unit within 12&quot; of this endless spell suffers D3 mortal wounds. Then, this endless spell is removed from play.</characteristic>
+When this endless spell is removed from play, if the dice beside it is a 6, this endless spell explodes. When it explodes, each unit within 9&quot; of this endless spell suffers D3 mortal wounds. WIZARD HEROES suffer 3 mortal wounds instead of D3.</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -2595,7 +2663,7 @@ At the end of the combat phase, if this endless spell is on the battlefield, rol
         <categoryLink id="55a9-21c7-3de0-3266" name="New CategoryLink" hidden="false" targetId="ecf9-78bd-d326-2a82" primary="true"/>
       </categoryLinks>
       <costs>
-        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="30.0"/>
+        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="50.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="9b5e-2e4b-7796-8d1e" name="Endless Spell - Prismatic Palisade" publicationId="d283-510e-eaa4-06e2" hidden="false" collective="false" import="true" type="model">
@@ -2605,12 +2673,12 @@ At the end of the combat phase, if this endless spell is on the battlefield, rol
       <profiles>
         <profile id="7b7f-aae1-38b5-cf3a" name="Summon Prismatic Palisade" hidden="false" typeId="13da-11a8-b7d1-77a7" typeName="Spell">
           <characteristics>
-            <characteristic name="Spell" typeId="1170-c916-1b73-ae34">Summon Prismatic Palisade has a casting value of 5. If successfully cast, set up this endless spell wholly within 6&quot; of the caster.</characteristic>
+            <characteristic name="Spell" typeId="1170-c916-1b73-ae34">This endless spell is summoned with a spell that has a casting value of 7 and a range of 18&quot;. If successfully cast, set up the endless spell wholly within range of the caster.</characteristic>
           </characteristics>
         </profile>
         <profile id="30eb-7484-90ac-1c3f" name="Blinding Light" hidden="false" typeId="7861-da01-01c0-88d9" typeName="Ability">
           <characteristics>
-            <characteristic name="Ability" typeId="9bce-4deb-8b79-eaec">Visibility between 2 models is blocked if a straight line drawn between the closest points of the 2 models passes across this endless spell.</characteristic>
+            <characteristic name="Ability" typeId="9bce-4deb-8b79-eaec">After this endless spell is set up and at the start of each subsequent hero phase, roll a dice for each unit within 6&quot; of this endless spell. On a 3+, that unit cannot make shooting attacks in that turn. Add 3&quot; to the range of this ability at the start of each battle round after the turn in which this endless spell was summoned.</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -2630,7 +2698,7 @@ At the end of the combat phase, if this endless spell is on the battlefield, rol
       <profiles>
         <profile id="66b8-ed5f-78a5-5fa0" name="Summon Purple Sun of Shyish" hidden="false" typeId="13da-11a8-b7d1-77a7" typeName="Spell">
           <characteristics>
-            <characteristic name="Spell" typeId="1170-c916-1b73-ae34">Summon Purple Sun of Shyish has a casting value of 8. If successfully cast, set up this endless spell wholly within 6&quot; of the caster.</characteristic>
+            <characteristic name="Spell" typeId="1170-c916-1b73-ae34">This endless spell is summoned with a spell that has a casting value of 8 and a range of 8&quot;. If successfully cast, set up the endless spell wholly within range of the caster.</characteristic>
           </characteristics>
         </profile>
         <profile id="fe42-03d6-ea76-28e1" name="Predatory" hidden="false" typeId="ce32-0c40-1990-4c8a" typeName="Restriction">
@@ -2640,7 +2708,7 @@ At the end of the combat phase, if this endless spell is on the battlefield, rol
         </profile>
         <profile id="7fc6-ead5-0760-9993" name="End Given Form" hidden="false" typeId="7861-da01-01c0-88d9" typeName="Ability">
           <characteristics>
-            <characteristic name="Ability" typeId="9bce-4deb-8b79-eaec">Subtract 1 from save rolls for attacks that target units within 6&quot; of this endless spell. In addition, roll a dice for each unit within 1&quot; of this endless spell after this endless spell has moved. On a 1, that unit has been touched by the Purple Sun’s rays. If that unit has a Wounds characteristic of 9 or less, 1 model in that unit is slain. Otherwise, that unit suffers D6+6 mortal wounds</characteristic>
+            <characteristic name="Ability" typeId="9bce-4deb-8b79-eaec">Subtract 1 from save rolls for attacks that target units while they are within 6&quot; of any endless spells with this ability. In addition, roll a dice for each unit within 1&quot; of this endless spell after this endless spell has moved. On a 1, that unit has been touched by the Purple Sun’s rays. If that unit has a Wounds characteristic of 9 or less, 1 model in that unit is slain. Otherwise, that unit suffers D6+6 mortal wounds.</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -2650,7 +2718,7 @@ At the end of the combat phase, if this endless spell is on the battlefield, rol
         <categoryLink id="a0be-1bba-d315-9365" name="Purple Sun of Shyish" hidden="false" targetId="1adf-1a76-1246-d509" primary="false"/>
       </categoryLinks>
       <costs>
-        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="90.0"/>
+        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="80.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="4fe5-18d3-f708-a61f" name="Endless Spell - Soulscream Bridge" hidden="false" collective="false" import="true" type="model">
@@ -2660,14 +2728,16 @@ At the end of the combat phase, if this endless spell is on the battlefield, rol
       <profiles>
         <profile id="bb31-0a82-154a-7c5a" name="Summon Soulscream Bridge" hidden="false" typeId="13da-11a8-b7d1-77a7" typeName="Spell">
           <characteristics>
-            <characteristic name="Spell" typeId="1170-c916-1b73-ae34">Summon Soulscream Bridge has a casting value of 6. If successfully cast, set up the parts of this endless spell wholly within 18&quot; of the caster.</characteristic>
+            <characteristic name="Spell" typeId="1170-c916-1b73-ae34">This endless spell is summoned with a spell that has a casting value of 6 and a range of 18&quot;. If successfully cast, set up 1 part of this endless spell within 1&quot; of the caster, then set up the other part wholly within range of the caster.
+
+This endless spell has 2 parts.</characteristic>
           </characteristics>
         </profile>
         <profile id="747c-e9e8-2865-94ea" name="Deathly Passage" hidden="false" typeId="7861-da01-01c0-88d9" typeName="Ability">
           <characteristics>
             <characteristic name="Ability" typeId="9bce-4deb-8b79-eaec">At the start of the movement phase, the player whose turn is taking place can remove 1 friendly unit that is wholly within 6&quot; of a part of this endless spell from the battlefield and set it up again wholly within 6&quot; of the other part of this endless spell and more than 9&quot; from all enemy units.
 
-A unit cannot be removed and set up again this way more than once per phase. A unit removed and set up again in this way cannot make a normal move in the same phase.</characteristic>
+A unit cannot be removed and set up again in this way more than once per phase. A unit removed and set up again in this way cannot make a normal move or run in the same phase and cannot issue or receive commands until the start of that player’s next hero phase.</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -2692,12 +2762,12 @@ A unit cannot be removed and set up again this way more than once per phase. A u
         </profile>
         <profile id="a5d4-06b8-5c5c-d652" name="Summon Quicksilver Swords" hidden="false" typeId="13da-11a8-b7d1-77a7" typeName="Spell">
           <characteristics>
-            <characteristic name="Spell" typeId="1170-c916-1b73-ae34">Summon Quicksilver Swords has a casting value of 6. If successfully cast, set up this endless spell wholly within 6&quot; of the caster.</characteristic>
+            <characteristic name="Spell" typeId="1170-c916-1b73-ae34">This endless spell is summoned with a spell that has a casting value of 6 and a range of 6&quot;. If successfully cast, set up the endless spell wholly within range of the caster.</characteristic>
           </characteristics>
         </profile>
         <profile id="6905-cb40-b2e3-1ded" name="Dancing Blades" hidden="false" typeId="7861-da01-01c0-88d9" typeName="Ability">
           <characteristics>
-            <characteristic name="Ability" typeId="9bce-4deb-8b79-eaec">After this endless spell has moved, the commanding player can pick 1 unit that has any models it passed across and roll 12 dice. For each 6, that unit suffers 1 mortal wound. In addition, ward rolls cannot be made for mortal wounds caused by this ability.</characteristic>
+            <characteristic name="Ability" typeId="9bce-4deb-8b79-eaec">After this endless spell has moved, you can pick 1 unit that has any models it passed across and roll 12 dice. For each 5+, that unit suffers 1 mortal wound. In addition, mortal wounds caused by this ability cannot be negated.</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -2707,7 +2777,7 @@ A unit cannot be removed and set up again this way more than once per phase. A u
         <categoryLink id="607f-72d9-df57-fc7f" name="Quicksilver Swords" hidden="false" targetId="786e-4199-c325-343b" primary="false"/>
       </categoryLinks>
       <costs>
-        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="60.0"/>
+        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="50.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="d9e4-ce49-ecc7-fae8" name="Endless Spell - Ravenak&apos;s Gnashing Jaws" publicationId="d283-510e-eaa4-06e2" hidden="false" collective="false" import="true" type="model">
@@ -2717,7 +2787,7 @@ A unit cannot be removed and set up again this way more than once per phase. A u
       <profiles>
         <profile id="3526-6f54-f8b5-df6b" name="Summon Ravenak&apos;s Gnashing Jaws" hidden="false" typeId="13da-11a8-b7d1-77a7" typeName="Spell">
           <characteristics>
-            <characteristic name="Spell" typeId="1170-c916-1b73-ae34">Summon Ravenak’s Gnashing Jaws has a casting value of 6. If successfully cast, set up this endless spell wholly within 6&quot; of the caster.</characteristic>
+            <characteristic name="Spell" typeId="1170-c916-1b73-ae34">This endless spell is summoned with a spell that has a casting value of 6 and a range of 8&quot;. If successfully cast, set up the endless spell wholly within range of the caster.</characteristic>
           </characteristics>
         </profile>
         <profile id="b8d8-6633-9c74-6c05" name="Predatory" hidden="false" typeId="ce32-0c40-1990-4c8a" typeName="Restriction">
@@ -2727,7 +2797,7 @@ A unit cannot be removed and set up again this way more than once per phase. A u
         </profile>
         <profile id="0eff-8329-596b-4a4d" name="Ravening Hunger" hidden="false" typeId="7861-da01-01c0-88d9" typeName="Ability">
           <characteristics>
-            <characteristic name="Ability" typeId="9bce-4deb-8b79-eaec">After this endless spell has moved, pick 1 unit that has any models it passed across or that is within 1&quot; of it at the end of its move and roll a dice. On a 2+, if the roll for this endless spell’s move was greater than that unit’s Move characteristic, that unit suffers a number of mortal wounds equal to the difference between that unit’s Move characteristic (rounded up if necessary) and the roll for this endless spell’s move.</characteristic>
+            <characteristic name="Ability" typeId="9bce-4deb-8b79-eaec">After this endless spell has moved, pick 1 unit that has any models it passed across or that is within 1&quot; of it at the end of its move and roll a dice. On a 2+, if the roll for this endless spell’s move was greater than that unit’s Move characteristic, that unit suffers a number of mortal wounds equal to the difference (rounding down) between that unit’s Move characteristic and the roll for this endless spell’s move.</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -2747,12 +2817,14 @@ A unit cannot be removed and set up again this way more than once per phase. A u
       <profiles>
         <profile id="19d4-9af8-f31c-f911" name="Summon Soulsnare Shackles" hidden="false" typeId="13da-11a8-b7d1-77a7" typeName="Spell">
           <characteristics>
-            <characteristic name="Spell" typeId="1170-c916-1b73-ae34">Summon Soulsnare Shackles has a casting value of 7. If successfully cast, set up the parts of this endless spell wholly within 3&quot; of each other and wholly within 12&quot; of the caster.</characteristic>
+            <characteristic name="Spell" typeId="1170-c916-1b73-ae34">This endless spell is summoned with a spell that has a casting value of 7 and a range of 8&quot;. If successfully cast, set up the parts of the endless spell wholly within 3&quot; of each other and wholly within range of the caster.
+
+This endless spell has 3 parts.</characteristic>
           </characteristics>
         </profile>
         <profile id="3cba-605f-5e8e-58c8" name="Bound for the Great Oubliette" hidden="false" typeId="7861-da01-01c0-88d9" typeName="Ability">
           <characteristics>
-            <characteristic name="Ability" typeId="9bce-4deb-8b79-eaec">Units within 6&quot; of this endless spell cannot run or attempt to charge. In addition, at the start of the movement phase, roll a dice for each unit within 6&quot; of this endless spell. On a 6, that unit suffers D3 mortal wounds.</characteristic>
+            <characteristic name="Ability" typeId="9bce-4deb-8b79-eaec">At the start of the movement phase, roll a dice for each unit within 6&quot; of this endless spell. Subtract the result from that unit’s Move characteristic (to a minimum of 0) until the end of that phase. In addition, if a unit’s Move characteristic is reduced to 0 by this ability, that unit suffers D3 mortal wounds.</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -2762,7 +2834,7 @@ A unit cannot be removed and set up again this way more than once per phase. A u
         <categoryLink id="6605-a2cf-07ad-6ded" name="Soulsnare Shackles" hidden="false" targetId="a6a2-e340-480f-fd3b" primary="false"/>
       </categoryLinks>
       <costs>
-        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="40.0"/>
+        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="30.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="dcf7-f431-661e-2feb" name="Endless Spell - Suffocating Gravetide" publicationId="d283-510e-eaa4-06e2" hidden="false" collective="false" import="true" type="model">
@@ -2772,17 +2844,17 @@ A unit cannot be removed and set up again this way more than once per phase. A u
       <profiles>
         <profile id="eff9-2bc8-903e-c597" name="Summon Suffocating Gravetide" hidden="false" typeId="13da-11a8-b7d1-77a7" typeName="Spell">
           <characteristics>
-            <characteristic name="Spell" typeId="1170-c916-1b73-ae34">Summon Suffocating Gravetide has a casting value of 6. If successfully cast, set up this endless spell wholly within 6&quot; of the caster.</characteristic>
+            <characteristic name="Spell" typeId="1170-c916-1b73-ae34">This endless spell is summoned with a spell that has a casting value of 6 and a range of 8&quot;. If successfully cast, set up the endless spell wholly within range of the caster.</characteristic>
           </characteristics>
         </profile>
         <profile id="a207-32ee-ea14-e84d" name="Predatory" hidden="false" typeId="ce32-0c40-1990-4c8a" typeName="Restriction">
           <characteristics>
-            <characteristic name="Restriction" typeId="edbe-5fe5-1142-afa6">This endless spell is a predatory endless spell. It can be moved up to 8&quot; and can fly.</characteristic>
+            <characteristic name="Restriction" typeId="edbe-5fe5-1142-afa6">This endless spell is a predatory endless spell. It can be moved up to 12&quot; and can fly.</characteristic>
           </characteristics>
         </profile>
         <profile id="f31c-786c-39e4-3109" name="Pulled to the Grave" hidden="false" typeId="7861-da01-01c0-88d9" typeName="Ability">
           <characteristics>
-            <characteristic name="Ability" typeId="9bce-4deb-8b79-eaec">After this endless spell has moved, for each unit that has any models it passes across, roll a number of dice equal to the number of models in that unit. For each 6, that unit suffers 1 mortal wound.</characteristic>
+            <characteristic name="Ability" typeId="9bce-4deb-8b79-eaec">After this endless spell has moved, for each unit that has any models it passed across, roll a number of dice equal to the number of models in that unit. For each 5+, that unit suffers 1 mortal wound.</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -2802,7 +2874,7 @@ A unit cannot be removed and set up again this way more than once per phase. A u
       <profiles>
         <profile id="6f17-080c-9b14-5d47" name="Summon The Burning Head" hidden="false" typeId="13da-11a8-b7d1-77a7" typeName="Spell">
           <characteristics>
-            <characteristic name="Spell" typeId="1170-c916-1b73-ae34">Summon Burning Head has a casting value of 7. If successfully cast, set up this endless spell wholly within 6&quot; of the caster.</characteristic>
+            <characteristic name="Spell" typeId="1170-c916-1b73-ae34">This endless spell is summoned with a spell that has a casting value of 6 and a range of 8&quot;. If successfully cast, set up the endless spell wholly within range of the caster.</characteristic>
           </characteristics>
         </profile>
         <profile id="c962-d31f-3780-2be3" name="Predatory" hidden="false" typeId="ce32-0c40-1990-4c8a" typeName="Restriction">
@@ -2812,7 +2884,9 @@ A unit cannot be removed and set up again this way more than once per phase. A u
         </profile>
         <profile id="4d92-56bf-92eb-1fe5" name="Flaming Skull" hidden="false" typeId="7861-da01-01c0-88d9" typeName="Ability">
           <characteristics>
-            <characteristic name="Ability" typeId="9bce-4deb-8b79-eaec">After this endless spell has moved, if any units are within 1&quot; of it, roll a dice for each unit within 1&quot; of this endless spell. On a 2+, that unit suffers D3 mortal wound. Then, this endless spell is removed from play.</characteristic>
+            <characteristic name="Ability" typeId="9bce-4deb-8b79-eaec">After this endless spell has moved, the commanding player can pick 1 enemy unit within 1&quot; of this endless spell and roll a dice. On a 2+, this endless spell is removed from play and that enemy unit becomes wreathed in flames.
+
+At the end of each movement phase, roll a dice for each unit that is wreathed in flames. On a 1-3, that unit is no longer wreathed in flames. On a 4+, that unit suffers D3 mortal wounds.</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -2822,7 +2896,7 @@ A unit cannot be removed and set up again this way more than once per phase. A u
         <categoryLink id="a256-c31e-07b1-27c7" name="The Burning Head" hidden="false" targetId="5bef-73fb-da5b-789c" primary="false"/>
       </categoryLinks>
       <costs>
-        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="30.0"/>
+        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="20.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="ac8c-6bff-ef61-600d" name="Endless Spell - Umbral Spellportal" publicationId="d283-510e-eaa4-06e2" hidden="false" collective="false" import="true" type="model">
@@ -2832,14 +2906,16 @@ A unit cannot be removed and set up again this way more than once per phase. A u
       <profiles>
         <profile id="4ffb-46b9-815d-8539" name="Summon Umbral Spellportal" hidden="false" typeId="13da-11a8-b7d1-77a7" typeName="Spell">
           <characteristics>
-            <characteristic name="Spell" typeId="1170-c916-1b73-ae34">Summon Umbral Spellportal has a casting value of 5. If successfully cast, set up the parts of this endless spell wholly within 18&quot; of the caster.</characteristic>
+            <characteristic name="Spell" typeId="1170-c916-1b73-ae34">This endless spell is summoned with a spell that has a casting value of 5 and a range of 18&quot;. If successfully cast, set up 1 part of this endless spell within 1&quot; of the caster, then set up the other part wholly within range of the caster.
+
+This endless spell has 2 parts.</characteristic>
           </characteristics>
         </profile>
         <profile id="bdae-250b-13cb-5c61" name="Arcane Passage" hidden="false" typeId="7861-da01-01c0-88d9" typeName="Ability">
           <characteristics>
-            <characteristic name="Ability" typeId="9bce-4deb-8b79-eaec">Once per turn, if a Wizard successfully casts a spell within 1&quot; of this endless spell, the range, visibility and effect of that spell can be measured from 1 part of this endless spell instead of the caster.
+            <characteristic name="Ability" typeId="9bce-4deb-8b79-eaec">Once per turn, when a WIZARD within 1&quot; of this endless spell attempts to cast a spell, the commanding player can say that the spell will be sent through the portal. If they do so, the range, visibility and effect of that spell can be measured from 1 part of this endless spell instead of the caster, and that part of the endless spell is considered to be the caster of the spell for the purposes of unbinding. Spells that summon endless spells do not benefit from this effect.
 
-In addition, once per turn, when a predatory endless spell within 6&quot; of this endless spell is picked to move, the commanding player of that predatory endless spell can remove it from the battlefield and set it up again within 6&quot; of the other part of this endless spell. A predatory endless spell set up in this manner does not count as having moved, but it cannot be picked to move again in the same phase.</characteristic>
+In addition, once per turn, if a predatory endless spell starts a move wholly within 6&quot; of this endless spell, instead of making a move with it, the commanding player can remove that predatory endless spell from the battlefield and set it up again anywhere wholly within 6&quot; of the other part of this endless spell. An endless spell set up in this manner does not count as having moved but cannot move until the next hero phase.</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -2859,17 +2935,19 @@ In addition, once per turn, when a predatory endless spell within 6&quot; of thi
       <profiles>
         <profile id="1dfb-a1bd-55fe-d836" name="Summon Shards of Vallagharr" hidden="false" typeId="13da-11a8-b7d1-77a7" typeName="Spell">
           <characteristics>
-            <characteristic name="Spell" typeId="1170-c916-1b73-ae34">Summon Shards of Valagharr has a casting value of 5. If successfully cast, set up the parts of this endless spell wolly within 12&quot; of each other and wholly within 18&quot; of the caster.</characteristic>
+            <characteristic name="Spell" typeId="1170-c916-1b73-ae34">This endless spell is summoned with a spell that has a casting value of 5 and a range of 18&quot;. If successfully cast, set up the parts of the endless spell wholly within 8&quot; of each other and wholly within range of the caster.
+
+This endless spell has 2 parts.</characteristic>
           </characteristics>
         </profile>
         <profile id="4866-fd03-77b1-6a28" name="Ensnaring Soul-drain" hidden="false" typeId="7861-da01-01c0-88d9" typeName="Ability">
           <characteristics>
-            <characteristic name="Ability" typeId="9bce-4deb-8b79-eaec">After this endless spell has moved, draw a straight line between the closest points of each part of this endless spell. Each unit that has any models passed across by this line is ensnared until the end of the turn. Halve the Move characteristic of a unit that is ensnared. In addition, a unit that is ensnared cannot fly.</characteristic>
+            <characteristic name="Ability" typeId="9bce-4deb-8b79-eaec">While they are within 6&quot; of any endless spells with this ability, units cannot fly or be removed from the battlefield with an effect that would allow them to be set up again in the same turn. In addition, units cannot be set up within 6&quot; of this endless spell.</characteristic>
           </characteristics>
         </profile>
         <profile id="3b95-4e18-5863-fc72" name="Predatory" hidden="false" typeId="ce32-0c40-1990-4c8a" typeName="Restriction">
           <characteristics>
-            <characteristic name="Restriction" typeId="edbe-5fe5-1142-afa6">This endless spell is a predatory endless spell. To move this endless spell, remove 1 of its parts from the battlefield and set it up again wholly within 12&quot; of its other part.</characteristic>
+            <characteristic name="Restriction" typeId="edbe-5fe5-1142-afa6">This endless spell is a predatory endless spell. When you pick this endless spell to move, remove 1 of its parts from the battlefield and set it up again wholly within 8&quot; of its other part.</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -2889,7 +2967,7 @@ In addition, once per turn, when a predatory endless spell within 6&quot; of thi
       <profiles>
         <profile id="eba9-49a9-326f-5025" name="Summon Lauchon the Soulseeker" hidden="false" typeId="13da-11a8-b7d1-77a7" typeName="Spell">
           <characteristics>
-            <characteristic name="Spell" typeId="1170-c916-1b73-ae34">Summon Lauchon the Soulseeker has a casting value of 6. If successfully cast, set up this endless spell wholly within 6&quot; of the caster.</characteristic>
+            <characteristic name="Spell" typeId="1170-c916-1b73-ae34">This endless spell is summoned with a spell that has a casting value of 6 and a range of 6&quot;. If successfully cast, set up the endless spell wholly within range of the caster.</characteristic>
           </characteristics>
         </profile>
         <profile id="1aa2-6e5b-a909-1378" name="Predatory" hidden="false" typeId="ce32-0c40-1990-4c8a" typeName="Restriction">
@@ -2899,7 +2977,7 @@ In addition, once per turn, when a predatory endless spell within 6&quot; of thi
         </profile>
         <profile id="d113-5f3c-28d7-0a8c" name="Soul Price" hidden="false" typeId="7861-da01-01c0-88d9" typeName="Ability">
           <characteristics>
-            <characteristic name="Ability" typeId="9bce-4deb-8b79-eaec">Before the commanding player moves this endless spell, they can pick 1 friendly WIZARD wholly within 3&quot; of this endless spell. Remove that WIZARD from the battlefield. After this endless spell has moved, set that WIZARD up again wholly within 3&quot; of this endless spell and more than 9&quot; from all enemy units. After that WIZARD has been set up, it suffers 1 mortal wound. That WIZARD cannot make a normal move or run in the same phase.</characteristic>
+            <characteristic name="Ability" typeId="9bce-4deb-8b79-eaec">Before the commanding player moves this endless spell, they can pick 1 friendly WIZARD with a Wounds characteristic of 9 or less wholly within 3&quot; of this endless spell. Remove that WIZARD from the battlefield. After this endless spell has moved, set that WIZARD up again wholly within 3&quot; of this endless spell and more than 9&quot; from all enemy units. After that WIZARD has been set up, it suffers 1 mortal wound. If it is the commanding player’s turn, that WIZARD can make a normal move or run in the following movement phase.</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -2919,7 +2997,7 @@ In addition, once per turn, when a predatory endless spell within 6&quot; of thi
       <profiles>
         <profile id="088c-be57-7937-ea51" name="Summon Horrorghast" hidden="false" typeId="13da-11a8-b7d1-77a7" typeName="Spell">
           <characteristics>
-            <characteristic name="Spell" typeId="1170-c916-1b73-ae34">Summon Horrorghast has a casting value of 6. If successfully cast, set up the endless spell wholly within 12&quot; of the caster.</characteristic>
+            <characteristic name="Spell" typeId="1170-c916-1b73-ae34">This endless spell is summoned with a spell that has a casting value of 5 and a range of 12&quot;. If successfully cast, set up the endless spell wholly within range of the caster.</characteristic>
           </characteristics>
         </profile>
         <profile id="13ab-8302-2d97-063a" name="Predatory" hidden="false" typeId="ce32-0c40-1990-4c8a" typeName="Restriction">
@@ -2929,7 +3007,7 @@ In addition, once per turn, when a predatory endless spell within 6&quot; of thi
         </profile>
         <profile id="04df-5cd1-d3ec-13f0" name="Prey on Fear" hidden="false" typeId="7861-da01-01c0-88d9" typeName="Ability">
           <characteristics>
-            <characteristic name="Ability" typeId="9bce-4deb-8b79-eaec">Units wholly within 12&quot; of this endless spell cannot receive commands in the battleshock phase. In addition, if a unit fails a battleshock test wholly within 12&quot; of this endless spell, add D3 to the number of models that flee.</characteristic>
+            <characteristic name="Ability" typeId="9bce-4deb-8b79-eaec">Units cannot receive commands in the battleshock phase while they are within 12&quot; of any endless spells with this ability. In addition, if a unit fails a battleshock test while it is within 12&quot; of any endless spells with this ability, add D3 to the number of models that flee.</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -2939,7 +3017,7 @@ In addition, once per turn, when a predatory endless spell within 6&quot; of thi
         <categoryLink id="ac23-f691-ab14-f865" name="Horrorghast" hidden="false" targetId="8aea-d7aa-5928-0c6b" primary="false"/>
       </categoryLinks>
       <costs>
-        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="70.0"/>
+        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="60.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="d9a8-9174-73a9-ee2d" name="Terrain Feature - Penumbral Engine" hidden="false" collective="false" import="true" type="unit">
@@ -3290,6 +3368,7 @@ Designer’s Note: Remember that an incarnate in its wild form treats other unit
               <conditions>
                 <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="aaad-6362-db82-9f8f" type="equalTo"/>
                 <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="4e72-c10d-7138-92b9" type="equalTo"/>
+                <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="fcc2-5086-cde1-d5a1" type="equalTo"/>
               </conditions>
             </conditionGroup>
           </conditionGroups>
@@ -3318,6 +3397,9 @@ Designer’s Note: Remember that an incarnate in its wild form treats other unit
               </conditions>
             </modifier>
           </modifiers>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="fc5c-2c20-7850-5d64" type="max"/>
+          </constraints>
           <profiles>
             <profile id="f30a-8b4a-5521-6518" name="Abolish It!" hidden="false" typeId="4bb2-448c-446c-f522" typeName="Battle Tactic">
               <characteristics>
@@ -3367,6 +3449,9 @@ Designer’s Note: Remember that an incarnate in its wild form treats other unit
               </conditions>
             </modifier>
           </modifiers>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="65b8-b210-3452-f039" type="max"/>
+          </constraints>
           <profiles>
             <profile id="d34c-2431-61df-8da0" name="An Eye for an Eye" hidden="false" typeId="4bb2-448c-446c-f522" typeName="Battle Tactic">
               <characteristics>
@@ -3413,6 +3498,76 @@ Designer’s Note: Remember that an incarnate in its wild form treats other unit
             <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
           </costs>
         </selectionEntry>
+        <selectionEntry id="de2d-f135-8493-8b57" name="Andtor" hidden="false" collective="false" import="true" type="upgrade">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="fcc2-5086-cde1-d5a1" type="equalTo"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="2a80-dba8-042b-d8f0" type="max"/>
+          </constraints>
+          <profiles>
+            <profile id="bf5e-cb89-0558-fc14" name="Intimidate the Invaders" hidden="false" typeId="4bb2-448c-446c-f522" typeName="Battle Tactic">
+              <characteristics>
+                <characteristic name="Battle Tactic" typeId="8c0f-be41-a70e-c699">You complete this battle tactic at the end of your turn if there are more friendly units wholly outside your territory than there are friendly units within your territory.</characteristic>
+              </characteristics>
+            </profile>
+            <profile id="c7ed-1320-aa89-a78a" name="Reprisal" hidden="false" typeId="4bb2-448c-446c-f522" typeName="Battle Tactic">
+              <characteristics>
+                <characteristic name="Battle Tactic" typeId="8c0f-be41-a70e-c699">You complete this battle tactic if an enemy unit that destroyed a friendly general earlier in the battle is destroyed in this turn.</characteristic>
+              </characteristics>
+            </profile>
+            <profile id="9c5c-3bfd-81bc-ffc7" name="Endless Expropriation" hidden="false" typeId="4bb2-448c-446c-f522" typeName="Battle Tactic">
+              <characteristics>
+                <characteristic name="Battle Tactic" typeId="8c0f-be41-a70e-c699">Pick 1 enemy unit that summoned an endless spell that is on the battlefield or that is bonded to an INCARNATE. You complete this battle tactic at the end of your turn if either of the following are true:
+
+• That enemy unit has been destroyed.
+• That INCARNATE is wild.</characteristic>
+              </characteristics>
+            </profile>
+            <profile id="a252-a505-1e8a-cf24" name="Magical Dominance" hidden="false" typeId="4bb2-448c-446c-f522" typeName="Battle Tactic">
+              <characteristics>
+                <characteristic name="Battle Tactic" typeId="8c0f-be41-a70e-c699">You complete this battle tactic at the end of your turn if a friendly WIZARD unit successfully cast 1 or more spells and none of the spells cast by any units in your army were unbound.</characteristic>
+              </characteristics>
+            </profile>
+            <profile id="c7db-c3bc-307a-17a8" name="Magical Mayhem" hidden="false" typeId="4bb2-448c-446c-f522" typeName="Battle Tactic">
+              <characteristics>
+                <characteristic name="Battle Tactic" typeId="8c0f-be41-a70e-c699">Pick 1 enemy unit on the battlefield. You complete this battle tactic if that unit is destroyed by a spell or the abilities of an endless spell.</characteristic>
+              </characteristics>
+            </profile>
+            <profile id="c068-330e-9e07-2f2d" name="Bait and Trap" hidden="false" typeId="4bb2-448c-446c-f522" typeName="Battle Tactic">
+              <characteristics>
+                <characteristic name="Battle Tactic" typeId="8c0f-be41-a70e-c699">You complete this battle tactic if 2 or more friendly units retreated this turn and 2 or more different friendly units made a charge move this turn.</characteristic>
+              </characteristics>
+            </profile>
+            <profile id="abc7-2925-0f6f-8a84" name="Led into the Maelstrom" hidden="false" typeId="4bb2-448c-446c-f522" typeName="Battle Tactic">
+              <characteristics>
+                <characteristic name="Battle Tactic" typeId="8c0f-be41-a70e-c699">You complete this battle tactic if all of the following are true:
+
+• At least 2 friendly units charged this turn.
+• At least 1 friendly Battleline unit charged this turn.
+• At least 1 friendly HERO charged this turn.
+• At least 1 friendly Battleline or HERO unit that charged this turn is within 3&quot; of an enemy unit at the end of the turn.</characteristic>
+              </characteristics>
+            </profile>
+            <profile id="3947-3158-b40b-8d9b" name="Surround and Destroy" hidden="false" typeId="4bb2-448c-446c-f522" typeName="Battle Tactic">
+              <characteristics>
+                <characteristic name="Battle Tactic" typeId="8c0f-be41-a70e-c699">Pick 3 different friendly units on the battlefield. You complete this battle tactic at the end of your turn if each of those units is wholly within 6&quot; of a different battlefield edge and 2 or more of those units are wholly outside your territory.</characteristic>
+              </characteristics>
+            </profile>
+            <profile id="d8ab-0a81-2710-b5c0" name="Drain Their Power" hidden="false" typeId="4bb2-448c-446c-f522" typeName="Battle Tactic">
+              <characteristics>
+                <characteristic name="Battle Tactic" typeId="8c0f-be41-a70e-c699">You complete this battle tactic at the end of your turn if a friendly HERO with a Nullstone Adornment is contesting an objective that was controlled by your opponent at the start of your turn.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <costs>
+            <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
+          </costs>
+        </selectionEntry>
       </selectionEntries>
       <costs>
         <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
@@ -3420,385 +3575,6 @@ Designer’s Note: Remember that an incarnate in its wild form treats other unit
     </selectionEntry>
   </sharedSelectionEntries>
   <sharedSelectionEntryGroups>
-    <selectionEntryGroup id="20f0-6df9-b464-3789" name="Universal Command Traits" hidden="false" collective="false" import="true">
-      <constraints>
-        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="c03a-03c6-926d-c357" type="max"/>
-      </constraints>
-      <selectionEntries>
-        <selectionEntry id="c68b-3caa-5527-b495" name="5. Master of Magic" hidden="false" collective="false" import="true" type="upgrade">
-          <profiles>
-            <profile id="fad2-a6f3-c66c-3ba4" name="Master of Magic" hidden="false" typeId="1504-23bf-8850-4f65" typeName="Command Traits">
-              <characteristics>
-                <characteristic name="Command Trait" typeId="0145-9acf-f5dc-d543">Once per hero phase, you can re-roll 1 casting roll, dispelling roll or unbinding roll for this general.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <costs>
-            <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="6c1e-d326-6c7f-85fc" name="3. Skilled Leader" hidden="false" collective="false" import="true" type="upgrade">
-          <profiles>
-            <profile id="d6f8-cc0d-32ce-fce4" name="Skilled Leader" hidden="false" typeId="1504-23bf-8850-4f65" typeName="Command Traits">
-              <characteristics>
-                <characteristic name="Command Trait" typeId="0145-9acf-f5dc-d543">If this general is on the battlefield at the start of your hero phase, roll a dice. On a 5+, you receive 1 extra command point.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <costs>
-            <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="623f-5b44-0832-2c58" name="1. Battle-lust" hidden="false" collective="false" import="true" type="upgrade">
-          <profiles>
-            <profile id="99d2-b8ad-2402-a692" name="Battle-lust" hidden="false" typeId="1504-23bf-8850-4f65" typeName="Command Traits">
-              <characteristics>
-                <characteristic name="Command Trait" typeId="0145-9acf-f5dc-d543">You can re-roll run rolls and charge rolls for this general.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <costs>
-            <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="1f2c-3764-85a8-d22f" name="4. Heroic Stature" hidden="false" collective="false" import="true" type="upgrade">
-          <profiles>
-            <profile id="9417-3dd8-2a86-3986" name="Heroic Stature" hidden="false" typeId="1504-23bf-8850-4f65" typeName="Command Traits">
-              <characteristics>
-                <characteristic name="Command Trait" typeId="0145-9acf-f5dc-d543">Add 1 to this general’s Wounds characteristic.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <costs>
-            <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="49f5-c9c2-32dd-2e87" name="2. High Priest" hidden="false" collective="false" import="true" type="upgrade">
-          <profiles>
-            <profile id="f4fa-4c8d-a87a-2e15" name="High Priest" hidden="false" typeId="1504-23bf-8850-4f65" typeName="Command Traits">
-              <characteristics>
-                <characteristic name="Command Trait" typeId="0145-9acf-f5dc-d543">You can re-roll chanting rolls for this general.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <costs>
-            <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
-          </costs>
-        </selectionEntry>
-      </selectionEntries>
-    </selectionEntryGroup>
-    <selectionEntryGroup id="dbd8-8f6f-f44a-884a" name="Universal Artefacts of Power" hidden="false" collective="false" import="true">
-      <constraints>
-        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="9a98-7c50-5af7-22eb" type="max"/>
-      </constraints>
-      <selectionEntries>
-        <selectionEntry id="3885-afe1-5123-d457" name="4 -- Seed of Rebirth" hidden="false" collective="false" import="true" type="upgrade">
-          <constraints>
-            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="cfea-9f95-7a54-cbf5" type="max"/>
-          </constraints>
-          <profiles>
-            <profile id="0be7-a62b-329d-e33e" name="Seed of Rebirth" hidden="false" typeId="0c9d-7abe-a53c-6a37" typeName="Artefacts">
-              <characteristics>
-                <characteristic name="Artefact" typeId="44b6-de26-0b54-1318">You can re-roll heroic recovery rolls for the bearer.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <costs>
-            <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="317b-4161-f2aa-eb5e" name="3 -- Arcane Tome" hidden="false" collective="false" import="true" type="upgrade">
-          <modifiers>
-            <modifier type="set" field="hidden" value="true">
-              <conditionGroups>
-                <conditionGroup type="or">
-                  <conditions>
-                    <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="f0a9-dd66-8662-61ce" type="instanceOf"/>
-                    <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="7ee2-0d81-544f-5d7e" type="instanceOf"/>
-                    <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="14aa-41c0-f6b8-bb8b" type="instanceOf"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
-            </modifier>
-          </modifiers>
-          <constraints>
-            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="a316-ae29-ca92-5ee6" type="max"/>
-          </constraints>
-          <profiles>
-            <profile id="7145-1476-9f7c-ba61" name="Arcane Tome" hidden="false" typeId="0c9d-7abe-a53c-6a37" typeName="Artefacts">
-              <characteristics>
-                <characteristic name="Artefact" typeId="44b6-de26-0b54-1318">HERO that does not have the WIZARD, PRIEST or KHORNE keyword. The bearer becomes a WIZARD that only knows the Arcane Bolt and Mystic Shield spells (if you take a spell lore enhancement, you cannot pick any spells from that spell lore for the bearer to know, but the bearer can attempt to summon any endless spells included on your roster if otherwise eligible). They can attempt to cast 1 spell in your hero phase and attempt to unbind 1 spell in the enemy hero phase.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <infoLinks>
-            <infoLink id="404e-bea8-6890-af97" name="Arcane Bolt" hidden="false" targetId="2dfe-38cb-0d5e-e85e" type="profile"/>
-            <infoLink id="5c45-5888-b2fb-267e" name="Mystic Shield" hidden="false" targetId="3b74-6720-61fa-1f0c" type="profile"/>
-          </infoLinks>
-          <categoryLinks>
-            <categoryLink id="a6c7-ca38-58a9-cd46" name="WIZARD" hidden="false" targetId="7ee2-0d81-544f-5d7e" primary="false"/>
-          </categoryLinks>
-          <costs>
-            <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="00f9-a157-2817-bfd5" name="2 -- Vial of Manticore Venom" hidden="false" collective="false" import="true" type="upgrade">
-          <constraints>
-            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="3494-ae35-35e9-cce2" type="max"/>
-          </constraints>
-          <profiles>
-            <profile id="77c9-aec7-4965-cb26" name="Vial of Manticore Venom" hidden="false" typeId="0c9d-7abe-a53c-6a37" typeName="Artefacts">
-              <characteristics>
-                <characteristic name="Artefact" typeId="44b6-de26-0b54-1318">Pick 1 of the bearer’s melee weapons. Add 1 to wound rolls for attacks made with that weapon.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <costs>
-            <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="a56c-d7cd-99d0-2a65" name="1 -- Amulet of Destiny" hidden="false" collective="false" import="true" type="upgrade">
-          <constraints>
-            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="bd7d-e1f6-e952-1f96" type="max"/>
-          </constraints>
-          <profiles>
-            <profile id="8900-a535-3015-b8de" name="Amulet of Destiny" hidden="false" typeId="0c9d-7abe-a53c-6a37" typeName="Artefacts">
-              <characteristics>
-                <characteristic name="Artefact" typeId="44b6-de26-0b54-1318">The bearer has a ward of 6+.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <costs>
-            <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="0fab-816f-0acc-a868" name="Tuskhelm" hidden="false" collective="false" import="true" type="upgrade">
-          <modifiers>
-            <modifier type="set" field="hidden" value="true">
-              <conditions>
-                <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="aaad-6362-db82-9f8f" type="equalTo"/>
-              </conditions>
-            </modifier>
-          </modifiers>
-          <constraints>
-            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="804f-814d-cadb-89ff" type="max"/>
-          </constraints>
-          <profiles>
-            <profile id="0171-eaaf-baa4-7b05" name="Tuskhelm" hidden="false" typeId="0c9d-7abe-a53c-6a37" typeName="Artefacts">
-              <characteristics>
-                <characteristic name="Artefact" typeId="44b6-de26-0b54-1318">After the bearer makes a charge move, you can pick 1 enemy unit within 1&quot; of the bearer. If you do so, roll a number of dice equal to the unmodified charge roll for that charge move. For each 4+, the target suffers 1 mortal wound. If the bearer already has an ability with an effect that triggers after they make a charge move, you must pick which effect applies (you cannot use both).</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <rules>
-            <rule id="53f5-9f88-0ea1-2a00" name="Galletian Champion" hidden="false">
-              <description>HERO with a Wounds characteristic of less than 10, that does not have a mount and is not Unique</description>
-            </rule>
-          </rules>
-          <costs>
-            <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="119b-6549-fce2-7887" name="Nightflyer Cloak" hidden="false" collective="false" import="true" type="upgrade">
-          <modifiers>
-            <modifier type="set" field="hidden" value="true">
-              <conditions>
-                <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="aaad-6362-db82-9f8f" type="equalTo"/>
-              </conditions>
-            </modifier>
-          </modifiers>
-          <constraints>
-            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="46a6-5ae8-7eb0-7b05" type="max"/>
-          </constraints>
-          <profiles>
-            <profile id="3953-24ca-2704-5578" name="Nightflyer Cloak" hidden="false" typeId="0c9d-7abe-a53c-6a37" typeName="Artefacts">
-              <characteristics>
-                <characteristic name="Artefact" typeId="44b6-de26-0b54-1318">During deployment, instead of setting up the bearer on the battlefield, you can place them to one side and say that they are set up in ambush as a reserve unit. At the end of your movement phase, you can set up the bearer on the battlefield, within 1&quot; of a friendly Battleline unit and more than 9&quot; from all enemy units.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <rules>
-            <rule id="0125-42d1-2fa3-4a7d" name="Galletian Champion" hidden="false">
-              <description>HERO with a Wounds characteristic of less than 10, that does not have a mount and is not Unique</description>
-            </rule>
-          </rules>
-          <costs>
-            <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="6363-1feb-28d8-0cd7" name="Gryph-feather Charm" hidden="false" collective="false" import="true" type="upgrade">
-          <modifiers>
-            <modifier type="set" field="hidden" value="true">
-              <conditions>
-                <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="aaad-6362-db82-9f8f" type="equalTo"/>
-              </conditions>
-            </modifier>
-          </modifiers>
-          <constraints>
-            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="cddb-7020-eab2-12b7" type="max"/>
-          </constraints>
-          <profiles>
-            <profile id="0702-025f-5f11-a8a4" name="Gryph-feather Charm" hidden="false" typeId="0c9d-7abe-a53c-6a37" typeName="Artefacts">
-              <characteristics>
-                <characteristic name="Artefact" typeId="44b6-de26-0b54-1318">The bearer has a ward of 5+.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <rules>
-            <rule id="85ec-647f-466f-e121" name="Galletian Champion" hidden="false">
-              <description>HERO with a Wounds characteristic of less than 10, that does not have a mount and is not Unique</description>
-            </rule>
-          </rules>
-          <costs>
-            <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
-          </costs>
-        </selectionEntry>
-      </selectionEntries>
-    </selectionEntryGroup>
-    <selectionEntryGroup id="93f7-7e2a-3308-d150" name="Universal Spell Lore" hidden="false" collective="false" import="true">
-      <modifiers>
-        <modifier type="increment" field="c319-15da-1042-6893" value="1.0">
-          <repeats>
-            <repeat field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="9e49-bd7f-45ee-1a96" repeats="1" roundUp="false"/>
-          </repeats>
-          <conditions>
-            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="9e49-bd7f-45ee-1a96" type="greaterThan"/>
-          </conditions>
-        </modifier>
-        <modifier type="set" field="hidden" value="true">
-          <conditionGroups>
-            <conditionGroup type="or">
-              <conditions>
-                <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="543e-1cc9-6d38-f8b3" type="instanceOf"/>
-                <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="7ee2-0d81-544f-5d7e" type="instanceOf"/>
-              </conditions>
-            </conditionGroup>
-          </conditionGroups>
-        </modifier>
-      </modifiers>
-      <constraints>
-        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="c319-15da-1042-6893" type="max"/>
-      </constraints>
-      <selectionEntries>
-        <selectionEntry id="3649-d3ca-772a-ba34" name="3 - Ghost-mist" hidden="false" collective="false" import="true" type="upgrade">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="ba25-950c-56a3-44d8" type="max"/>
-          </constraints>
-          <profiles>
-            <profile id="5343-09c3-7344-3781" name="Ghost-mist" hidden="false" typeId="13da-11a8-b7d1-77a7" typeName="Spell">
-              <characteristics>
-                <characteristic name="Spell" typeId="1170-c916-1b73-ae34">Ghost-mist is a spell that has a casting value of 5 and a range of 6&quot;. If successfully cast, pick 1 terrain feature within range and visible to the caster. Until your next hero phase, visibility between 2 models is blocked if a straight line 1mm wide drawn between the closest points of the 2 models passes across more than 3&quot; of that terrain feature. This effect does not block visibility to or from models with a Wounds characteristic of 10 or more.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <costs>
-            <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="a9c4-78f7-4961-94b1" name="2 - Levitate" hidden="false" collective="false" import="true" type="upgrade">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="795a-dab7-c79e-0dc3" type="max"/>
-          </constraints>
-          <profiles>
-            <profile id="d704-167d-43cd-7d07" name="Levitate" hidden="false" typeId="13da-11a8-b7d1-77a7" typeName="Spell">
-              <characteristics>
-                <characteristic name="Spell" typeId="1170-c916-1b73-ae34">Levitate is a spell that has a casting value of 8 and a range of 18&quot;. If successfully cast, pick 1 friendly unit wholly within range and visible to the caster. That unit can fly until your next hero phase.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <costs>
-            <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="85e7-629e-7706-60af" name="1 - Flaming Weapon" hidden="false" collective="false" import="true" type="upgrade">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="c7ec-2b6a-1f4a-f7d6" type="max"/>
-          </constraints>
-          <profiles>
-            <profile id="deeb-3bf3-a455-07b1" name="Flaming Weapon" hidden="false" typeId="13da-11a8-b7d1-77a7" typeName="Spell">
-              <characteristics>
-                <characteristic name="Spell" typeId="1170-c916-1b73-ae34">Flaming Weapon is a spell that has a casting value of 4. If successfully cast, pick 1 of the caster’s melee weapons. Add 1 to Damage characteristic of that weapon until your next hero phase.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <costs>
-            <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
-          </costs>
-        </selectionEntry>
-      </selectionEntries>
-    </selectionEntryGroup>
-    <selectionEntryGroup id="7104-ab27-d136-1df0" name="Universal Prayer Scripture" hidden="false" collective="false" import="true">
-      <modifiers>
-        <modifier type="increment" field="3804-d377-b03e-f93b" value="1.0">
-          <repeats>
-            <repeat field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="c7bd-c872-ef57-2468" repeats="1" roundUp="false"/>
-          </repeats>
-          <conditions>
-            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="c7bd-c872-ef57-2468" type="greaterThan"/>
-          </conditions>
-        </modifier>
-        <modifier type="set" field="hidden" value="true">
-          <conditionGroups>
-            <conditionGroup type="or">
-              <conditions>
-                <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="543e-1cc9-6d38-f8b3" type="instanceOf"/>
-                <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="f0a9-dd66-8662-61ce" type="notInstanceOf"/>
-              </conditions>
-            </conditionGroup>
-          </conditionGroups>
-        </modifier>
-      </modifiers>
-      <constraints>
-        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="3804-d377-b03e-f93b" type="max"/>
-      </constraints>
-      <selectionEntries>
-        <selectionEntry id="3e7d-cbfc-fdfa-034b" name="3 - Curse" hidden="false" collective="false" import="true" type="upgrade">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="ee06-2bb6-6733-a6c0" type="max"/>
-          </constraints>
-          <profiles>
-            <profile id="c5ec-084d-e9a5-3684" name="Curse" hidden="false" typeId="161a-85bd-f19e-a5a7" typeName="Prayer">
-              <characteristics>
-                <characteristic name="Prayer" typeId="19bc-965a-768d-defa">Curse is a prayer that has an answer value of 4 and a range of 9&quot;. If answered, pick 1 enemy unit within range and visible to the chanter. Until your next hero phase, if the unmodified hit roll for an attack that targets that unit is 6, that unit suffers 1 mortal wound in addition to any normal damage.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <costs>
-            <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="a157-5734-fa4c-484c" name="2 - Heal" hidden="false" collective="false" import="true" type="upgrade">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="2dd1-da65-aa35-81f5" type="max"/>
-          </constraints>
-          <profiles>
-            <profile id="e772-79f0-42c6-2f49" name="Heal" hidden="false" typeId="161a-85bd-f19e-a5a7" typeName="Prayer">
-              <characteristics>
-                <characteristic name="Prayer" typeId="19bc-965a-768d-defa">Heal is a prayer that has an answer value of 3 and a range of 12&quot;. If answered, pick 1 friendly model within range and visible to the chanter. You can heal up to D3 wounds allocated to that model.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <costs>
-            <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="8aea-2935-4edb-6c1c" name="1 - Guidance" hidden="false" collective="false" import="true" type="upgrade">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="9793-22cd-e78d-ca3d" type="max"/>
-          </constraints>
-          <profiles>
-            <profile id="4927-4320-99ae-d384" name="Guidance" hidden="false" typeId="161a-85bd-f19e-a5a7" typeName="Prayer">
-              <characteristics>
-                <characteristic name="Prayer" typeId="19bc-965a-768d-defa">Guidance is a prayer that has an answer value of 5. If answered, you receive 1 command point.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <costs>
-            <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
-          </costs>
-        </selectionEntry>
-      </selectionEntries>
-    </selectionEntryGroup>
     <selectionEntryGroup id="6966-a6a1-3990-8cc2" name="Unit Reinforcement" hidden="false" collective="false" import="true" defaultSelectionEntryId="091f-7960-08d9-3515">
       <constraints>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="c098-76ae-60b0-b31b" type="max"/>
@@ -4119,11 +3895,6 @@ Designer’s Note: Remember that an incarnate in its wild form treats other unit
         <selectionEntryGroup id="0c95-4ddb-9647-6062" name="Gallet" hidden="false" collective="false" import="true">
           <modifiers>
             <modifier type="set" field="hidden" value="true">
-              <conditions>
-                <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="aaad-6362-db82-9f8f" type="equalTo"/>
-              </conditions>
-            </modifier>
-            <modifier type="set" field="hidden" value="true">
               <conditionGroups>
                 <conditionGroup type="or">
                   <conditions>
@@ -4206,6 +3977,74 @@ Designer’s Note: Remember that an incarnate in its wild form treats other unit
             </selectionEntry>
           </selectionEntries>
         </selectionEntryGroup>
+        <selectionEntryGroup id="9b40-e14d-b181-bc37" name="Andtor" hidden="false" collective="false" import="true">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="fcc2-5086-cde1-d5a1" type="equalTo"/>
+                  </conditions>
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="8761-3e1f-56fb-de2e" type="equalTo"/>
+                        <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="3ba6-64ba-6ba4-4c9a" type="equalTo"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="7da0-db06-258f-2612" type="max"/>
+          </constraints>
+          <selectionEntries>
+            <selectionEntry id="6e50-3c63-0b50-18c5" name="Andtorian Acolytes" hidden="false" collective="false" import="true" type="upgrade">
+              <modifiers>
+                <modifier type="set" field="hidden" value="true">
+                  <conditionGroups>
+                    <conditionGroup type="or">
+                      <conditions>
+                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="8761-3e1f-56fb-de2e" type="equalTo"/>
+                        <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="93cb-21d9-e1d5-6161" type="notInstanceOf"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+              </modifiers>
+              <costs>
+                <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="2228-2924-4bf6-3f48" name="Wizard-Finders of Andtor" hidden="false" collective="false" import="true" type="upgrade">
+              <modifiers>
+                <modifier type="set" field="hidden" value="true">
+                  <conditionGroups>
+                    <conditionGroup type="or">
+                      <conditions>
+                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="3ba6-64ba-6ba4-4c9a" type="equalTo"/>
+                      </conditions>
+                      <conditionGroups>
+                        <conditionGroup type="and">
+                          <conditions>
+                            <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="93cb-21d9-e1d5-6161" type="notInstanceOf"/>
+                            <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="6230-ed60-e374-add4" type="notInstanceOf"/>
+                            <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="7f62-b7f5-32d5-e13b" type="notInstanceOf"/>
+                          </conditions>
+                        </conditionGroup>
+                      </conditionGroups>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+              </modifiers>
+              <costs>
+                <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
+              </costs>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
       </selectionEntryGroups>
     </selectionEntryGroup>
     <selectionEntryGroup id="daaa-4fe4-c2fa-6a7f" name="Rulebook Grand Strategies" hidden="false" collective="false" import="true">
@@ -4216,6 +4055,7 @@ Designer’s Note: Remember that an incarnate in its wild form treats other unit
               <conditions>
                 <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="aaad-6362-db82-9f8f" type="equalTo"/>
                 <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="4e72-c10d-7138-92b9" type="equalTo"/>
+                <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="fcc2-5086-cde1-d5a1" type="equalTo"/>
               </conditions>
             </conditionGroup>
           </conditionGroups>
@@ -4321,6 +4161,13 @@ Designer’s Note: Remember that an incarnate in its wild form treats other unit
           </selectionEntries>
         </selectionEntryGroup>
         <selectionEntryGroup id="6d63-c538-55e3-3978" name="GS - Gallet" hidden="false" collective="false" import="true">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="aaad-6362-db82-9f8f" type="equalTo"/>
+              </conditions>
+            </modifier>
+          </modifiers>
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8371-b2bf-b63b-6ed0" type="max"/>
           </constraints>
@@ -4390,6 +4237,732 @@ Designer’s Note: Remember that an incarnate in its wild form treats other unit
                 <profile id="704e-ad46-b3a0-77f1" name="Tame the Land" hidden="false" typeId="7dc6-98f0-f5ba-fc16" typeName="Grand Strategy">
                   <characteristics>
                     <characteristic name="Grand Strategy" typeId="22d6-b382-f824-6381">When the battle ends, you complete this grand strategy if you control all of the objectives on the battlefield that are wholly outside your territory.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <costs>
+                <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
+              </costs>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
+        <selectionEntryGroup id="e873-aa1f-eaee-79d2" name="GS - Andtor" hidden="false" collective="false" import="true">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="fcc2-5086-cde1-d5a1" type="equalTo"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="0dd2-26ee-566c-b94e" type="max"/>
+          </constraints>
+          <selectionEntries>
+            <selectionEntry id="9e45-d7bb-5ea3-1e1d" name="Magic Made Manifest" hidden="false" collective="false" import="true" type="upgrade">
+              <profiles>
+                <profile id="63a8-93c6-6721-b45c" name="Magic Made Manifest" hidden="false" typeId="7dc6-98f0-f5ba-fc16" typeName="Grand Strategy">
+                  <characteristics>
+                    <characteristic name="Grand Strategy" typeId="22d6-b382-f824-6381">When the battle ends, you complete this grand strategy if:
+
+• There are 2 or more endless spells on the battlefield that were summoned by friendly WIZARDS; or
+• There is a friendly Incarnate on the battlefield that is bonded to a friendly unit and there are 1 or more endless spells on the battlefield that were summoned by friendly WIZARDS.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <costs>
+                <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="ff2a-207a-5a17-aeb4" name="Overshadow" hidden="false" collective="false" import="true" type="upgrade">
+              <profiles>
+                <profile id="416a-1f64-aebc-b0a3" name="Overshadow" hidden="false" typeId="7dc6-98f0-f5ba-fc16" typeName="Grand Strategy">
+                  <characteristics>
+                    <characteristic name="Grand Strategy" typeId="22d6-b382-f824-6381">When the battle ends, you complete this grand strategy if all enemy Battleline units from your opponent’s starting army are destroyed and there is at least 1 friendly Battleline unit from your starting army on the battlefield.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <costs>
+                <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="f66f-59b3-fe98-0afb" name="Spellcasting Savant" hidden="false" collective="false" import="true" type="upgrade">
+              <profiles>
+                <profile id="3166-6041-aad0-0bf9" name="Spellcasting Savant" hidden="false" typeId="7dc6-98f0-f5ba-fc16" typeName="Grand Strategy">
+                  <characteristics>
+                    <characteristic name="Grand Strategy" typeId="22d6-b382-f824-6381">When the battle ends, you complete this grand strategy if the model picked to be your general is an ANDTORIAN LOCUS and that unit has not been slain.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <costs>
+                <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="1f29-8056-20e4-2fcb" name="Slaughter of Sorcery" hidden="false" collective="false" import="true" type="upgrade">
+              <profiles>
+                <profile id="2990-9e93-3445-8089" name="Slaughter of Sorcery" hidden="false" typeId="7dc6-98f0-f5ba-fc16" typeName="Grand Strategy">
+                  <characteristics>
+                    <characteristic name="Grand Strategy" typeId="22d6-b382-f824-6381">When the battle ends, you complete this grand strategy if there are no WIZARD units on the battlefield.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <costs>
+                <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="381c-318a-0c11-8fde" name="Barren Icescape" hidden="false" collective="false" import="true" type="upgrade">
+              <profiles>
+                <profile id="2d67-d9be-33a8-b818" name="Barren Icescape" hidden="false" typeId="7dc6-98f0-f5ba-fc16" typeName="Grand Strategy">
+                  <characteristics>
+                    <characteristic name="Grand Strategy" typeId="22d6-b382-f824-6381">When the battle ends, you complete this grand strategy if all enemy units that have artefacts of power are destroyed and there are no enemy units within 6&quot; of the centre of the battlefield.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <costs>
+                <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="3c61-dc0b-2cc7-312a" name="Control the Nexus" hidden="false" collective="false" import="true" type="upgrade">
+              <profiles>
+                <profile id="906d-1c88-554a-579a" name="Control the Nexus" hidden="false" typeId="7dc6-98f0-f5ba-fc16" typeName="Grand Strategy">
+                  <characteristics>
+                    <characteristic name="Grand Strategy" typeId="22d6-b382-f824-6381">When the battle ends, you complete this grand strategy if 2 or more friendly WIZARD units are wholly within 6&quot; of the centre of the battlefield.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <costs>
+                <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
+              </costs>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
+    </selectionEntryGroup>
+    <selectionEntryGroup id="8aee-7492-ee73-6d07" name="Rulebook Spell Lores" hidden="false" collective="false" import="true">
+      <modifiers>
+        <modifier type="increment" field="a7b3-4875-c51b-5f52" value="1.0">
+          <repeats>
+            <repeat field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="9e49-bd7f-45ee-1a96" repeats="1" roundUp="false"/>
+          </repeats>
+          <conditions>
+            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="9e49-bd7f-45ee-1a96" type="greaterThan"/>
+          </conditions>
+        </modifier>
+        <modifier type="set" field="hidden" value="true">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="543e-1cc9-6d38-f8b3" type="instanceOf"/>
+              </conditions>
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="7ee2-0d81-544f-5d7e" type="equalTo"/>
+                    <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="7ee2-0d81-544f-5d7e" type="notInstanceOf"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+      <constraints>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="a7b3-4875-c51b-5f52" type="max"/>
+      </constraints>
+      <selectionEntryGroups>
+        <selectionEntryGroup id="efcd-6c45-1055-9528" name="Universal Spell Lore" hidden="false" collective="false" import="true">
+          <modifiers>
+            <modifier type="increment" field="56ee-0f30-0ea6-4714" value="1.0">
+              <repeats>
+                <repeat field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="9e49-bd7f-45ee-1a96" repeats="1" roundUp="false"/>
+              </repeats>
+              <conditions>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="9e49-bd7f-45ee-1a96" type="greaterThan"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="56ee-0f30-0ea6-4714" type="max"/>
+          </constraints>
+          <selectionEntries>
+            <selectionEntry id="f9a2-93de-0f73-e6cb" name="3 - Ghost-mist" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="21d5-6431-6fac-473e" type="max"/>
+              </constraints>
+              <profiles>
+                <profile id="12e1-ccf2-7d61-5ed6" name="Ghost-mist" hidden="false" typeId="13da-11a8-b7d1-77a7" typeName="Spell">
+                  <characteristics>
+                    <characteristic name="Spell" typeId="1170-c916-1b73-ae34">Ghost-mist is a spell that has a casting value of 5 and a range of 6&quot;. If successfully cast, pick 1 terrain feature within range and visible to the caster. Until your next hero phase, visibility between 2 models is blocked if a straight line 1mm wide drawn between the closest points of the 2 models passes across more than 3&quot; of that terrain feature. This effect does not block visibility to or from models with a Wounds characteristic of 10 or more.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <costs>
+                <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="f690-5d4e-7fd1-29ef" name="2 - Levitate" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="5575-54d9-d5f7-e234" type="max"/>
+              </constraints>
+              <profiles>
+                <profile id="f1d6-1a81-5242-ba4e" name="Levitate" hidden="false" typeId="13da-11a8-b7d1-77a7" typeName="Spell">
+                  <characteristics>
+                    <characteristic name="Spell" typeId="1170-c916-1b73-ae34">Levitate is a spell that has a casting value of 8 and a range of 18&quot;. If successfully cast, pick 1 friendly unit wholly within range and visible to the caster. That unit can fly until your next hero phase.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <costs>
+                <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="a625-22ae-48c6-c124" name="1 - Flaming Weapon" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d22f-225f-2c33-3ea6" type="max"/>
+              </constraints>
+              <profiles>
+                <profile id="b5a4-b2ea-b7a6-5a63" name="Flaming Weapon" hidden="false" typeId="13da-11a8-b7d1-77a7" typeName="Spell">
+                  <characteristics>
+                    <characteristic name="Spell" typeId="1170-c916-1b73-ae34">Flaming Weapon is a spell that has a casting value of 4. If successfully cast, pick 1 of the caster’s melee weapons. Add 1 to Damage characteristic of that weapon until your next hero phase.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <costs>
+                <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
+              </costs>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
+        <selectionEntryGroup id="df10-5639-05fa-d3b9" name="Lore of Primal Frost" hidden="false" collective="false" import="true">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="fcc2-5086-cde1-d5a1" type="equalTo"/>
+                    <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="80ed-5154-b652-77d0" type="instanceOf"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+            <modifier type="increment" field="24b1-088e-44ea-012b" value="1.0">
+              <repeats>
+                <repeat field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="9e49-bd7f-45ee-1a96" repeats="1" roundUp="false"/>
+              </repeats>
+              <conditions>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="9e49-bd7f-45ee-1a96" type="greaterThan"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="24b1-088e-44ea-012b" type="max"/>
+          </constraints>
+          <selectionEntries>
+            <selectionEntry id="c43c-9a72-f986-c1d8" name="1 - Hoarfrost" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="5f77-064a-fe25-cc7e" type="max"/>
+              </constraints>
+              <profiles>
+                <profile id="a0c9-fefb-be37-ee3a" name="Hoarfrost" hidden="false" typeId="13da-11a8-b7d1-77a7" typeName="Spell">
+                  <characteristics>
+                    <characteristic name="Spell" typeId="1170-c916-1b73-ae34">Hoarfrost is a spell that has a casting value of 8 and a range of 12&quot;. If successfully cast, pick 1 friendly unit wholly within range and visible to the caster. Pick 1 melee weapon profile on that unit’s warscroll and roll a D3. Change the To Hit, To Wound or Rend characteristic of that melee weapon to match the result until the start of your next hero phase. For example, if the result was 2, you could change either the To Hit characteristic to 2+, the To Wound characteristic to 2+ or the Rend characteristic to -2.
+
+Designer’s Note: An unmodified hit roll or wound roll of 1 always fails.
+
+While a characteristic has been changed by the effects of this spell, that characteristic cannot be further changed or modified.
+
+Designer’s Note: While characteristics can’t be further changed or modified, this doesn’t prevent dice rolls from being modified; for example, you could still use an ability to add 1 to hit rolls after using Hoarfrost.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <costs>
+                <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="be1b-96d1-9731-9d9e" name="2 - Rupture" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="5577-de59-0aea-53ec" type="max"/>
+              </constraints>
+              <profiles>
+                <profile id="2f40-82e4-2b09-1169" name="Rupture" hidden="false" typeId="13da-11a8-b7d1-77a7" typeName="Spell">
+                  <characteristics>
+                    <characteristic name="Spell" typeId="1170-c916-1b73-ae34">Rupture is a spell that has a casting value of 10 and a range of 18&quot;. If successfully cast, resolve 1 of the following effects:
+
+• Pick 1 enemy INCARNATE within range and visible to the caster. Inflict D3 mortal wounds on the unit bonded to that INCARNATE. Then, that INCARNATE immediately loses a power level (to a minimum of 1) and becomes wild.
+• Pick 1 predatory endless spell within range and visible to the caster that was summoned by an enemy WIZARD. Inflict D3 mortal wounds on that enemy WIZARD. Then, that endless spell is dispelled.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <costs>
+                <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="97fc-e1e1-7839-a76a" name="3 - Merciless Blizzard" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="59b3-6c42-a9f7-97b5" type="max"/>
+              </constraints>
+              <profiles>
+                <profile id="04d8-ec05-c858-0e81" name="Merciless Blizzard" hidden="false" typeId="13da-11a8-b7d1-77a7" typeName="Spell">
+                  <characteristics>
+                    <characteristic name="Spell" typeId="1170-c916-1b73-ae34">Merciless Blizzard is a spell that has a casting value of 12 and a range of 12&quot;. If successfully cast, pick 1 enemy unit within range and visible to the caster. That unit suffers 4D6 mortal wounds, but for each roll of 1, the caster also suffers D3 mortal wounds that cannot be negated. The range of this spell cannot be modified and must be measured from the caster, even if an ability would allow you to measure it from elsewhere. This spell cannot be cast by a unit that was set up or moved earlier in this phase.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <costs>
+                <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
+              </costs>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
+    </selectionEntryGroup>
+    <selectionEntryGroup id="6978-81a2-4c55-65f3" name="Rulebook Command Traits" hidden="false" collective="false" import="true">
+      <constraints>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="3825-7c94-c4f7-8d4d" type="max"/>
+      </constraints>
+      <selectionEntryGroups>
+        <selectionEntryGroup id="b459-eb14-0e31-e987" name="Universal Command Traits" hidden="false" collective="false" import="true">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="5550-fe7d-248b-4a26" type="max"/>
+          </constraints>
+          <selectionEntries>
+            <selectionEntry id="80c9-916b-00d7-7eda" name="5. Master of Magic" hidden="false" collective="false" import="true" type="upgrade">
+              <profiles>
+                <profile id="5a09-91ec-4948-0167" name="Master of Magic" hidden="false" typeId="1504-23bf-8850-4f65" typeName="Command Traits">
+                  <characteristics>
+                    <characteristic name="Command Trait" typeId="0145-9acf-f5dc-d543">Once per hero phase, you can re-roll 1 casting roll, dispelling roll or unbinding roll for this general.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <costs>
+                <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="59b3-a4f5-9631-d978" name="3. Skilled Leader" hidden="false" collective="false" import="true" type="upgrade">
+              <profiles>
+                <profile id="e8bd-03c2-c6d2-6593" name="Skilled Leader" hidden="false" typeId="1504-23bf-8850-4f65" typeName="Command Traits">
+                  <characteristics>
+                    <characteristic name="Command Trait" typeId="0145-9acf-f5dc-d543">If this general is on the battlefield at the start of your hero phase, roll a dice. On a 5+, you receive 1 extra command point.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <costs>
+                <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="9781-d8f7-6548-e738" name="1. Battle-lust" hidden="false" collective="false" import="true" type="upgrade">
+              <profiles>
+                <profile id="9266-6de0-4ad5-cd1d" name="Battle-lust" hidden="false" typeId="1504-23bf-8850-4f65" typeName="Command Traits">
+                  <characteristics>
+                    <characteristic name="Command Trait" typeId="0145-9acf-f5dc-d543">You can re-roll run rolls and charge rolls for this general.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <costs>
+                <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="3bba-e715-e4e1-8f48" name="4. Heroic Stature" hidden="false" collective="false" import="true" type="upgrade">
+              <profiles>
+                <profile id="ee77-7678-9a52-2a0d" name="Heroic Stature" hidden="false" typeId="1504-23bf-8850-4f65" typeName="Command Traits">
+                  <characteristics>
+                    <characteristic name="Command Trait" typeId="0145-9acf-f5dc-d543">Add 1 to this general’s Wounds characteristic.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <costs>
+                <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="bc1f-0e03-b591-98ab" name="2. High Priest" hidden="false" collective="false" import="true" type="upgrade">
+              <profiles>
+                <profile id="d8cd-3ec5-dcaa-2afe" name="High Priest" hidden="false" typeId="1504-23bf-8850-4f65" typeName="Command Traits">
+                  <characteristics>
+                    <characteristic name="Command Trait" typeId="0145-9acf-f5dc-d543">You can re-roll chanting rolls for this general.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <costs>
+                <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
+              </costs>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
+        <selectionEntryGroup id="8049-f88f-e47d-d545" name="Dwellers of the Tundra" hidden="false" collective="false" import="true">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="fcc2-5086-cde1-d5a1" type="equalTo"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="95a4-f4dc-afd2-1a30" type="max"/>
+          </constraints>
+          <selectionEntries>
+            <selectionEntry id="80ed-5154-b652-77d0" name="1. Shaman of the Chilled Lands" hidden="false" collective="false" import="true" type="upgrade">
+              <profiles>
+                <profile id="cbeb-077b-cb5a-2ca4" name="Shaman of the Chilled Lands" hidden="false" typeId="1504-23bf-8850-4f65" typeName="Command Traits">
+                  <characteristics>
+                    <characteristic name="Command Trait" typeId="0145-9acf-f5dc-d543">This general knows all of the spells from the Lore of Primal Frost.</characteristic>
+                  </characteristics>
+                </profile>
+                <profile id="6c44-c691-382a-2c4f" name="Hoarfrost" hidden="false" typeId="13da-11a8-b7d1-77a7" typeName="Spell">
+                  <characteristics>
+                    <characteristic name="Spell" typeId="1170-c916-1b73-ae34">Hoarfrost is a spell that has a casting value of 8 and a range of 12&quot;. If successfully cast, pick 1 friendly unit wholly within range and visible to the caster. Pick 1 melee weapon profile on that unit’s warscroll and roll a D3. Change the To Hit, To Wound or Rend characteristic of that melee weapon to match the result until the start of your next hero phase. For example, if the result was 2, you could change either the To Hit characteristic to 2+, the To Wound characteristic to 2+ or the Rend characteristic to -2.
+
+Designer’s Note: An unmodified hit roll or wound roll of 1 always fails.
+
+While a characteristic has been changed by the effects of this spell, that characteristic cannot be further changed or modified.
+
+Designer’s Note: While characteristics can’t be further changed or modified, this doesn’t prevent dice rolls from being modified; for example, you could still use an ability to add 1 to hit rolls after using Hoarfrost.</characteristic>
+                  </characteristics>
+                </profile>
+                <profile id="3e85-2e05-4a19-7880" name="Rupture" hidden="false" typeId="13da-11a8-b7d1-77a7" typeName="Spell">
+                  <characteristics>
+                    <characteristic name="Spell" typeId="1170-c916-1b73-ae34">Rupture is a spell that has a casting value of 10 and a range of 18&quot;. If successfully cast, resolve 1 of the following effects:
+
+• Pick 1 enemy INCARNATE within range and visible to the caster. Inflict D3 mortal wounds on the unit bonded to that INCARNATE. Then, that INCARNATE immediately loses a power level (to a minimum of 1) and becomes wild.
+• Pick 1 predatory endless spell within range and visible to the caster that was summoned by an enemy WIZARD. Inflict D3 mortal wounds on that enemy WIZARD. Then, that endless spell is dispelled.</characteristic>
+                  </characteristics>
+                </profile>
+                <profile id="ef3e-6900-0a6c-23df" name="Merciless Blizzard" hidden="false" typeId="13da-11a8-b7d1-77a7" typeName="Spell">
+                  <characteristics>
+                    <characteristic name="Spell" typeId="1170-c916-1b73-ae34">Merciless Blizzard is a spell that has a casting value of 12 and a range of 12&quot;. If successfully cast, pick 1 enemy unit within range and visible to the caster. That unit suffers 4D6 mortal wounds, but for each roll of 1, the caster also suffers D3 mortal wounds that cannot be negated. The range of this spell cannot be modified and must be measured from the caster, even if an ability would allow you to measure it from elsewhere. This spell cannot be cast by a unit that was set up or moved earlier in this phase.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <costs>
+                <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="ed51-d20c-0caf-b730" name="2. Eye of the Blizzard" hidden="false" collective="false" import="true" type="upgrade">
+              <profiles>
+                <profile id="477d-1fa5-97e7-c5fd" name="Eye of the Blizzard" hidden="false" typeId="1504-23bf-8850-4f65" typeName="Command Traits">
+                  <characteristics>
+                    <characteristic name="Command Trait" typeId="0145-9acf-f5dc-d543">At the start of your hero phase, if this general is on the battlefield, roll a dice. On a 5+, you gain 1 primal magic dice.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <costs>
+                <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="cefe-eb22-0937-4d07" name="3. Chilled to the Bone" hidden="false" collective="false" import="true" type="upgrade">
+              <profiles>
+                <profile id="0e3a-61ef-31a2-229a" name="Chilled to the Bone" hidden="false" typeId="1504-23bf-8850-4f65" typeName="Command Traits">
+                  <characteristics>
+                    <characteristic name="Command Trait" typeId="0145-9acf-f5dc-d543">Once per battle, if this general suffers a miscast or primal miscast, you can roll a dice. On a 3+, this general can ignore the effects of that miscast or primal miscast.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <costs>
+                <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="a508-08c3-c6c9-cd50" name="4. Eater of Magic" hidden="false" collective="false" import="true" type="upgrade">
+              <profiles>
+                <profile id="409c-88a8-562c-9197" name="Eater of Magic" hidden="false" typeId="1504-23bf-8850-4f65" typeName="Command Traits">
+                  <characteristics>
+                    <characteristic name="Command Trait" typeId="0145-9acf-f5dc-d543">Each time this general successfully unbinds a spell, roll a dice. On a 5+, the caster no longer knows that spell and may not cast it again for the rest of the battle.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <costs>
+                <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
+              </costs>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
+    </selectionEntryGroup>
+    <selectionEntryGroup id="836b-19a4-b5b4-570d" name="Rulebook Artefacts of Power" hidden="false" collective="false" import="true">
+      <modifiers>
+        <modifier type="increment" field="e620-cd8a-c16a-258c" value="1.0">
+          <repeats>
+            <repeat field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="606f-9b75-948c-bf2c" repeats="1" roundUp="false"/>
+            <repeat field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="6af4-da37-ff6c-84cb" repeats="1" roundUp="false"/>
+          </repeats>
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="606f-9b75-948c-bf2c" type="greaterThan"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="6af4-da37-ff6c-84cb" type="greaterThan"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+      <constraints>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="e620-cd8a-c16a-258c" type="max"/>
+      </constraints>
+      <selectionEntryGroups>
+        <selectionEntryGroup id="85df-7aac-8f95-b3e3" name="Universal Artefacts of Power" hidden="false" collective="false" import="true">
+          <modifiers>
+            <modifier type="increment" field="5a0a-8077-c025-b8e0" value="1.0">
+              <repeats>
+                <repeat field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="606f-9b75-948c-bf2c" repeats="1" roundUp="false"/>
+                <repeat field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="6af4-da37-ff6c-84cb" repeats="1" roundUp="false"/>
+              </repeats>
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="606f-9b75-948c-bf2c" type="greaterThan"/>
+                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="6af4-da37-ff6c-84cb" type="greaterThan"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="5a0a-8077-c025-b8e0" type="max"/>
+          </constraints>
+          <selectionEntries>
+            <selectionEntry id="d4b1-fb61-6c9b-17e1" name="4 -- Seed of Rebirth" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="2919-10a5-a8db-65a5" type="max"/>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="403d-d865-b95c-4224" type="max"/>
+              </constraints>
+              <profiles>
+                <profile id="8b84-d098-c5b3-be2a" name="Seed of Rebirth" hidden="false" typeId="0c9d-7abe-a53c-6a37" typeName="Artefacts">
+                  <characteristics>
+                    <characteristic name="Artefact" typeId="44b6-de26-0b54-1318">You can re-roll heroic recovery rolls for the bearer.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <costs>
+                <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="a8e0-474c-4994-29ba" name="3 -- Arcane Tome" hidden="false" collective="false" import="true" type="upgrade">
+              <modifiers>
+                <modifier type="set" field="hidden" value="true">
+                  <conditionGroups>
+                    <conditionGroup type="or">
+                      <conditions>
+                        <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="f0a9-dd66-8662-61ce" type="instanceOf"/>
+                        <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="7ee2-0d81-544f-5d7e" type="instanceOf"/>
+                        <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="14aa-41c0-f6b8-bb8b" type="instanceOf"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+              </modifiers>
+              <constraints>
+                <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="4c98-e1a9-2d6b-63b5" type="max"/>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="7fbb-8937-649a-e486" type="max"/>
+              </constraints>
+              <profiles>
+                <profile id="ea87-7894-90c0-5221" name="Arcane Tome" hidden="false" typeId="0c9d-7abe-a53c-6a37" typeName="Artefacts">
+                  <characteristics>
+                    <characteristic name="Artefact" typeId="44b6-de26-0b54-1318">Hero that does not have the WIZARD, PRIEST or KHORNE keyword. The bearer becomes a WIZARD that can only cast Arcane Bolt, Mystic Shield and spells to summon endless spells on your army roster. They can attempt to cast 1 spell in your hero phase and attempt to unbind 1 spell in the enemy hero phase.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <infoLinks>
+                <infoLink id="4b5c-7784-23b8-ce94" name="Arcane Bolt" hidden="false" targetId="2dfe-38cb-0d5e-e85e" type="profile"/>
+                <infoLink id="6eda-7ed8-b55a-0997" name="Mystic Shield" hidden="false" targetId="3b74-6720-61fa-1f0c" type="profile"/>
+              </infoLinks>
+              <categoryLinks>
+                <categoryLink id="6168-184e-0af6-2595" name="WIZARD" hidden="false" targetId="7ee2-0d81-544f-5d7e" primary="false"/>
+              </categoryLinks>
+              <costs>
+                <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="0ddc-0b81-a8d5-0fc9" name="2 -- Vial of Manticore Venom" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="5126-4582-eed9-d915" type="max"/>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="84e4-9827-0a70-3414" type="max"/>
+              </constraints>
+              <profiles>
+                <profile id="d851-3807-ab9d-2fc7" name="Vial of Manticore Venom" hidden="false" typeId="0c9d-7abe-a53c-6a37" typeName="Artefacts">
+                  <characteristics>
+                    <characteristic name="Artefact" typeId="44b6-de26-0b54-1318">Pick 1 of the bearer’s melee weapons. Add 1 to wound rolls for attacks made with that weapon.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <costs>
+                <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="b1c9-e5a5-8014-4366" name="1 -- Amulet of Destiny" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="55f1-48e4-731c-8586" type="max"/>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="ef1b-4c85-2eec-544b" type="max"/>
+              </constraints>
+              <profiles>
+                <profile id="2059-5e10-61f6-f418" name="Amulet of Destiny" hidden="false" typeId="0c9d-7abe-a53c-6a37" typeName="Artefacts">
+                  <characteristics>
+                    <characteristic name="Artefact" typeId="44b6-de26-0b54-1318">The bearer has a ward of 6+.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <costs>
+                <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="6734-437c-6e99-0391" name="Tuskhelm" hidden="false" collective="false" import="true" type="upgrade">
+              <modifiers>
+                <modifier type="set" field="hidden" value="true">
+                  <conditions>
+                    <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="aaad-6362-db82-9f8f" type="equalTo"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+              <constraints>
+                <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="39e8-c471-a946-cf06" type="max"/>
+              </constraints>
+              <profiles>
+                <profile id="3de9-4f46-5e62-f345" name="Tuskhelm" hidden="false" typeId="0c9d-7abe-a53c-6a37" typeName="Artefacts">
+                  <characteristics>
+                    <characteristic name="Artefact" typeId="44b6-de26-0b54-1318">After the bearer makes a charge move, you can pick 1 enemy unit within 1&quot; of the bearer. If you do so, roll a number of dice equal to the unmodified charge roll for that charge move. For each 4+, the target suffers 1 mortal wound. If the bearer already has an ability with an effect that triggers after they make a charge move, you must pick which effect applies (you cannot use both).</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <rules>
+                <rule id="934b-1ae0-360e-c504" name="Galletian Champion" hidden="false">
+                  <description>HERO with a Wounds characteristic of less than 10, that does not have a mount and is not Unique</description>
+                </rule>
+              </rules>
+              <costs>
+                <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="540a-d9c6-9f11-5b24" name="Nightflyer Cloak" hidden="false" collective="false" import="true" type="upgrade">
+              <modifiers>
+                <modifier type="set" field="hidden" value="true">
+                  <conditions>
+                    <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="aaad-6362-db82-9f8f" type="equalTo"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+              <constraints>
+                <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="5add-3cce-6438-f177" type="max"/>
+              </constraints>
+              <profiles>
+                <profile id="048a-1c1e-40e2-5034" name="Nightflyer Cloak" hidden="false" typeId="0c9d-7abe-a53c-6a37" typeName="Artefacts">
+                  <characteristics>
+                    <characteristic name="Artefact" typeId="44b6-de26-0b54-1318">During deployment, instead of setting up the bearer on the battlefield, you can place them to one side and say that they are set up in ambush as a reserve unit. At the end of your movement phase, you can set up the bearer on the battlefield, within 1&quot; of a friendly Battleline unit and more than 9&quot; from all enemy units.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <rules>
+                <rule id="9121-fe1a-6911-5550" name="Galletian Champion" hidden="false">
+                  <description>HERO with a Wounds characteristic of less than 10, that does not have a mount and is not Unique</description>
+                </rule>
+              </rules>
+              <costs>
+                <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="6df4-f03e-4166-385e" name="Gryph-feather Charm" hidden="false" collective="false" import="true" type="upgrade">
+              <modifiers>
+                <modifier type="set" field="hidden" value="true">
+                  <conditions>
+                    <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="aaad-6362-db82-9f8f" type="equalTo"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+              <constraints>
+                <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="cd5d-010a-9629-3d1e" type="max"/>
+              </constraints>
+              <profiles>
+                <profile id="932c-dafb-040d-ed51" name="Gryph-feather Charm" hidden="false" typeId="0c9d-7abe-a53c-6a37" typeName="Artefacts">
+                  <characteristics>
+                    <characteristic name="Artefact" typeId="44b6-de26-0b54-1318">The bearer has a ward of 5+.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <rules>
+                <rule id="5377-f30d-a41b-9d34" name="Galletian Champion" hidden="false">
+                  <description>HERO with a Wounds characteristic of less than 10, that does not have a mount and is not Unique</description>
+                </rule>
+              </rules>
+              <costs>
+                <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
+              </costs>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
+    </selectionEntryGroup>
+    <selectionEntryGroup id="42b2-cfa5-744f-8062" name="Rulebook Prayer Scriptures" hidden="false" collective="false" import="true">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="543e-1cc9-6d38-f8b3" type="instanceOf"/>
+                <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="f0a9-dd66-8662-61ce" type="notInstanceOf"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+        <modifier type="increment" field="d8a6-336d-1a34-541f" value="1.0">
+          <repeats>
+            <repeat field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="c7bd-c872-ef57-2468" repeats="1" roundUp="false"/>
+          </repeats>
+          <conditions>
+            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="c7bd-c872-ef57-2468" type="greaterThan"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <constraints>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d8a6-336d-1a34-541f" type="max"/>
+      </constraints>
+      <selectionEntryGroups>
+        <selectionEntryGroup id="291b-78cf-1274-194e" name="Universal Prayer Scripture" hidden="false" collective="false" import="true">
+          <modifiers>
+            <modifier type="increment" field="b4d4-625a-e20f-50e5" value="1.0">
+              <repeats>
+                <repeat field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="c7bd-c872-ef57-2468" repeats="1" roundUp="false"/>
+              </repeats>
+              <conditions>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="c7bd-c872-ef57-2468" type="greaterThan"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="b4d4-625a-e20f-50e5" type="max"/>
+          </constraints>
+          <selectionEntries>
+            <selectionEntry id="97b6-c16b-8a39-0b06" name="3 - Curse" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="66b3-fa01-1883-0fc3" type="max"/>
+              </constraints>
+              <profiles>
+                <profile id="f48a-f075-58db-c2c3" name="Curse" hidden="false" typeId="161a-85bd-f19e-a5a7" typeName="Prayer">
+                  <characteristics>
+                    <characteristic name="Prayer" typeId="19bc-965a-768d-defa">Curse is a prayer that has an answer value of 4 and a range of 9&quot;. If answered, pick 1 enemy unit within range and visible to the chanter. Until your next hero phase, if the unmodified hit roll for an attack that targets that unit is 6, that unit suffers 1 mortal wound in addition to any normal damage.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <costs>
+                <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="40e4-de8d-379b-bd6a" name="2 - Heal" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="7d2b-e8b6-7648-a716" type="max"/>
+              </constraints>
+              <profiles>
+                <profile id="ceb9-c544-c75e-95f4" name="Heal" hidden="false" typeId="161a-85bd-f19e-a5a7" typeName="Prayer">
+                  <characteristics>
+                    <characteristic name="Prayer" typeId="19bc-965a-768d-defa">Heal is a prayer that has an answer value of 3 and a range of 12&quot;. If answered, pick 1 friendly model within range and visible to the chanter. You can heal up to D3 wounds allocated to that model.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <costs>
+                <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="0201-0573-eb6e-55be" name="1 - Guidance" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="ff6e-6e2a-dd9c-c204" type="max"/>
+              </constraints>
+              <profiles>
+                <profile id="840f-9c0e-bdfe-f065" name="Guidance" hidden="false" typeId="161a-85bd-f19e-a5a7" typeName="Prayer">
+                  <characteristics>
+                    <characteristic name="Prayer" typeId="19bc-965a-768d-defa">Guidance is a prayer that has an answer value of 5. If answered, you receive 1 command point.</characteristic>
                   </characteristics>
                 </profile>
               </profiles>

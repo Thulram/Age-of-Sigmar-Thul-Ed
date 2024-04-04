@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="e054-128c-e141-2db1" name="Order - Idoneth Deepkin" revision="13" battleScribeVersion="2.03" authorName="Thulram" library="false" gameSystemId="e832-3291-06be-cab1" gameSystemRevision="12" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="e054-128c-e141-2db1" name="Order - Idoneth Deepkin" revision="14" battleScribeVersion="2.03" authorName="Thulram" library="false" gameSystemId="e832-3291-06be-cab1" gameSystemRevision="14" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <profileTypes>
     <profileType id="3081-447d-82e2-cdb3" name="Leviadon Wounds">
       <characteristicTypes>
@@ -308,6 +308,35 @@
       </entryLinks>
       <costs>
         <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="4671-45eb-887e-48ab" name="Cyreni of the Abyss &amp; Razors (separate units)" hidden="false" collective="false" import="true" type="upgrade">
+      <constraints>
+        <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="3304-a181-3dae-f757" type="max"/>
+      </constraints>
+      <categoryLinks>
+        <categoryLink id="86f6-1ee7-4832-ffbd" name="Leader" hidden="false" targetId="93cb-21d9-e1d5-6161" primary="true"/>
+      </categoryLinks>
+      <entryLinks>
+        <entryLink id="e13a-ade7-8909-1de8" name="Cyreni of the Abyss" hidden="false" collective="false" import="true" targetId="4332-3e72-23d1-2efd" type="selectionEntry">
+          <entryLinks>
+            <entryLink id="b18d-af85-a409-fea3" name="General" hidden="false" collective="false" import="true" targetId="98a4-3d6d-a7b9-399f" type="selectionEntry">
+              <categoryLinks>
+                <categoryLink id="f13f-0b0f-c192-8184" name="Named General" hidden="false" targetId="8b3d-7f03-e1f9-eaf5" primary="false"/>
+              </categoryLinks>
+            </entryLink>
+            <entryLink id="1e6d-a77e-14e5-7be1" name="Idoneth Deepkin Spell Lores" hidden="false" collective="false" import="true" targetId="2efb-03e6-5e45-d982" type="selectionEntryGroup"/>
+            <entryLink id="2a57-9497-e9f3-26e0" name="Core Battalions" hidden="false" collective="false" import="true" targetId="8c04-393d-d72d-c2a8" type="selectionEntryGroup"/>
+          </entryLinks>
+        </entryLink>
+        <entryLink id="0cf2-5627-7185-f83d" name="Cyreni&apos;s Razors" hidden="false" collective="false" import="true" targetId="bd91-1fdd-d781-2712" type="selectionEntry">
+          <entryLinks>
+            <entryLink id="a38b-fda9-9cfb-2ba2" name="Core Battalions" hidden="false" collective="false" import="true" targetId="8c04-393d-d72d-c2a8" type="selectionEntryGroup"/>
+          </entryLinks>
+        </entryLink>
+      </entryLinks>
+      <costs>
+        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="180.0"/>
       </costs>
     </selectionEntry>
   </selectionEntries>
@@ -697,9 +726,9 @@ Ritual of the Spiteful Riptide: Before a friendly IDONETH DEEPKIN unit that is a
                 </selectionEntry>
                 <selectionEntry id="2e68-4ec5-ed55-c62d" name="Fuethán" hidden="false" collective="false" import="true" type="upgrade">
                   <profiles>
-                    <profile id="4add-583d-7310-9532" name="Revel in Slaughter" hidden="false" typeId="c0c2-177b-e761-ec41" typeName="Allegiance Abilities">
+                    <profile id="4add-583d-7310-9532" name="Bloodthirsty Shiver" hidden="false" typeId="c0c2-177b-e761-ec41" typeName="Allegiance Abilities">
                       <characteristics>
-                        <characteristic name="Allegiance Ability" typeId="0506-f62d-68b3-5499">You can include Bloodthirsty Shivers in your army. At the start of the combat phase, you can pick 1 unit from each Bloodthirsty Shiver in your army. If you do so, until the end of that phase, if the unmodified hit roll for an attack made with that unit’s Ferocious Bites is 6, that attack scores 2 hits on the target instead of 1. Make a wound roll and save roll for each hit. If the attacking unit is within 3&quot; of 1 or more other units from the same Bloodthirsty Shiver, its Ferocious Bite scores 3 hits on an unmodified hit roll of 6 instead.</characteristic>
+                        <characteristic name="Allegiance Ability" typeId="0506-f62d-68b3-5499">You can include Bloodthirsty Shivers in your army. If the unmodified hit roll for an attack made by a unit in a Bloodthirsty Shiver is a 6, that attack automatically wounds (do not make a wound roll).</characteristic>
                       </characteristics>
                     </profile>
                   </profiles>
@@ -830,7 +859,7 @@ Ritual of the Spiteful Riptide: Before a friendly IDONETH DEEPKIN unit that is a
               <profiles>
                 <profile id="a7c6-de57-54fa-d74e" name="Unstoppable Fury" hidden="false" typeId="1504-23bf-8850-4f65" typeName="Command Traits">
                   <characteristics>
-                    <characteristic name="Command Trait" typeId="0145-9acf-f5dc-d543">While this general is affected by the High Tide ability from the Tides of Death table, for each enemy unit within 3&quot; of them during the combat phase, add 2 to the Attacks characteristic of their melee weapons until the end of that phase.</characteristic>
+                    <characteristic name="Command Trait" typeId="0145-9acf-f5dc-d543">While this general is affected by the High Tide ability from the Tides of Death table, for each enemy unit within 3&quot; of them when they fight in the combat phase, add 2 to the Attacks characteristic of their melee weapons until the end of that phase.</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
@@ -962,7 +991,7 @@ Ritual of the Spiteful Riptide: Before a friendly IDONETH DEEPKIN unit that is a
         </selectionEntryGroup>
       </selectionEntryGroups>
       <entryLinks>
-        <entryLink id="d3d3-8381-8107-0615" name="Universal Command Traits" hidden="false" collective="false" import="true" targetId="20f0-6df9-b464-3789" type="selectionEntryGroup"/>
+        <entryLink id="d3d3-8381-8107-0615" name="Rulebook Command Traits" hidden="false" collective="false" import="true" targetId="6978-81a2-4c55-65f3" type="selectionEntryGroup"/>
       </entryLinks>
     </selectionEntryGroup>
     <selectionEntryGroup id="c67d-f797-383a-8040" name="Artefacts of Power" publicationId="dea8-e4a3-2500-1a33" hidden="false" collective="false" import="true">
@@ -1175,7 +1204,7 @@ Once per battle, in your shooting phase, you can pick 1 enemy unit within 12&quo
         </selectionEntryGroup>
       </selectionEntryGroups>
       <entryLinks>
-        <entryLink id="0dda-4c85-ce8c-ddf0" name="Universal Artefacts of Power" hidden="false" collective="false" import="true" targetId="dbd8-8f6f-f44a-884a" type="selectionEntryGroup"/>
+        <entryLink id="0dda-4c85-ce8c-ddf0" name="Rulebook Artefacts of Power" hidden="false" collective="false" import="true" targetId="836b-19a4-b5b4-570d" type="selectionEntryGroup"/>
       </entryLinks>
     </selectionEntryGroup>
     <selectionEntryGroup id="2bdf-1dd0-8b40-0dcd" name="Mount Traits" hidden="false" collective="false" import="true">
@@ -1496,7 +1525,7 @@ Once per battle, in your shooting phase, you can pick 1 enemy unit within 12&quo
         </selectionEntryGroup>
       </selectionEntryGroups>
       <entryLinks>
-        <entryLink id="03e0-5fe4-e102-885a" name="Universal Spell Lore" hidden="false" collective="false" import="true" targetId="93f7-7e2a-3308-d150" type="selectionEntryGroup"/>
+        <entryLink id="03e0-5fe4-e102-885a" name="Rulebook Spell Lores" hidden="false" collective="false" import="true" targetId="8aee-7492-ee73-6d07" type="selectionEntryGroup"/>
       </entryLinks>
     </selectionEntryGroup>
     <selectionEntryGroup id="7937-58cd-0ca2-38cf" name="Prayer Scriptures" hidden="false" collective="false" import="true">
@@ -1527,7 +1556,7 @@ Once per battle, in your shooting phase, you can pick 1 enemy unit within 12&quo
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="9101-53b5-51a4-f80e" type="max"/>
       </constraints>
       <entryLinks>
-        <entryLink id="4332-61a9-2452-0e1b" name="Universal Prayer Scripture" hidden="false" collective="false" import="true" targetId="7104-ab27-d136-1df0" type="selectionEntryGroup"/>
+        <entryLink id="4332-61a9-2452-0e1b" name="Rulebook Prayer Scriptures" hidden="false" collective="false" import="true" targetId="42b2-cfa5-744f-8062" type="selectionEntryGroup"/>
       </entryLinks>
     </selectionEntryGroup>
   </sharedSelectionEntryGroups>

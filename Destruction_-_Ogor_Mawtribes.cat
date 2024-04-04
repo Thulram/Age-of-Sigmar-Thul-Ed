@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="0154-f530-b576-332d" name="Destruction - Ogor Mawtribes" revision="15" battleScribeVersion="2.03" authorName="Thulram" library="false" gameSystemId="e832-3291-06be-cab1" gameSystemRevision="14" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="0154-f530-b576-332d" name="Destruction - Ogor Mawtribes" revision="16" battleScribeVersion="2.03" authorName="Thulram" library="false" gameSystemId="e832-3291-06be-cab1" gameSystemRevision="15" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <profileTypes>
     <profileType id="be3d-81f2-95ae-0aff" name="Mount Traits">
       <characteristicTypes>
@@ -59,6 +59,13 @@
   </categoryEntries>
   <selectionEntries>
     <selectionEntry id="8f4a-0d71-97f3-1850" name="Hrothgorn and Mantrappers (separate units)" hidden="false" collective="false" import="true" type="upgrade">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="7013-04e8-205d-36c3" type="greaterThan"/>
+          </conditions>
+        </modifier>
+      </modifiers>
       <constraints>
         <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="11e5-5f5c-376f-a076" type="max"/>
       </constraints>
@@ -138,8 +145,33 @@
           <categoryLinks>
             <categoryLink id="4eac-c919-7057-981c" name="Grand Strategy" hidden="false" targetId="318c-fa55-0855-47ef" primary="false"/>
           </categoryLinks>
+          <selectionEntries>
+            <selectionEntry id="67cf-1bfd-f98c-5018" name="Still Not Satiated" hidden="false" collective="false" import="true" type="upgrade">
+              <modifiers>
+                <modifier type="set" field="hidden" value="true">
+                  <conditions>
+                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="7013-04e8-205d-36c3" type="equalTo"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+              <profiles>
+                <profile id="39b6-8656-1db7-342c" name="Still Not Satiated" hidden="false" typeId="7dc6-98f0-f5ba-fc16" typeName="Grand Strategy">
+                  <characteristics>
+                    <characteristic name="Grand Strategy" typeId="22d6-b382-f824-6381">When the battle ends, you complete this grand strategy if 6 or more enemy models were slain by the Mawpit’s Head Butcher ability.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+            </selectionEntry>
+          </selectionEntries>
           <selectionEntryGroups>
             <selectionEntryGroup id="cab6-079a-9537-188a" name="Rampaging Warglutts" hidden="false" collective="false" import="true">
+              <modifiers>
+                <modifier type="set" field="hidden" value="true">
+                  <conditions>
+                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="7013-04e8-205d-36c3" type="greaterThan"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
               <constraints>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="5861-9ae8-5453-1048" type="max"/>
               </constraints>
@@ -225,33 +257,111 @@
       </constraints>
       <profiles>
         <profile id="101d-9f48-ede0-4919" name="Boil their Bones" hidden="false" typeId="4bb2-448c-446c-f522" typeName="Battle Tactic">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="7013-04e8-205d-36c3" type="greaterThan"/>
+              </conditions>
+            </modifier>
+          </modifiers>
           <characteristics>
             <characteristic name="Battle Tactic" typeId="8c0f-be41-a70e-c699">Pick 1 enemy HERO or enemy MONSTER. You complete this tactic if that enemy unit is destroyed within 6&quot; of an empty Great Mawpot in your army.</characteristic>
           </characteristics>
         </profile>
         <profile id="d10f-1156-919b-cc9b" name="Avalanche of Flesh" hidden="false" typeId="4bb2-448c-446c-f522" typeName="Battle Tactic">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="7013-04e8-205d-36c3" type="greaterThan"/>
+              </conditions>
+            </modifier>
+          </modifiers>
           <characteristics>
             <characteristic name="Battle Tactic" typeId="8c0f-be41-a70e-c699">You complete this tactic at the end of the turn if 10 or more mortal wounds were caused by the Trampling Charge battle trait this turn.</characteristic>
           </characteristics>
         </profile>
         <profile id="eaab-54de-0044-9018" name="Winter Take Thee" hidden="false" typeId="4bb2-448c-446c-f522" typeName="Battle Tactic">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="7013-04e8-205d-36c3" type="greaterThan"/>
+              </conditions>
+            </modifier>
+          </modifiers>
           <characteristics>
             <characteristic name="Battle Tactic" typeId="8c0f-be41-a70e-c699">Pick 1 enemy HERO or enemy MONSTER. You complete this tactic if that enemy unit is destroyed by wounds caused by the Grasp of the Everwinter battle trait this turn.</characteristic>
           </characteristics>
         </profile>
         <profile id="d503-d8d4-d71d-00be" name="Savour the Taste" hidden="false" typeId="4bb2-448c-446c-f522" typeName="Battle Tactic">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="7013-04e8-205d-36c3" type="greaterThan"/>
+              </conditions>
+            </modifier>
+          </modifiers>
           <characteristics>
-            <characteristic name="Battle Tactic" typeId="8c0f-be41-a70e-c699">You cannot pick this battle tactic in the first battle round. You complete this tactic at the end of your turn if every friendly OGOR unit is hungry.</characteristic>
+            <characteristic name="Battle Tactic" typeId="8c0f-be41-a70e-c699">You cannot pick this battle tactic in the first battle round. You complete this tactic at the end of your turn if every friendly OGOR unit on the battlefield is hungry.</characteristic>
           </characteristics>
         </profile>
         <profile id="60da-ff09-248f-2396" name="Let them Loose" hidden="false" typeId="4bb2-448c-446c-f522" typeName="Battle Tactic">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="7013-04e8-205d-36c3" type="greaterThan"/>
+              </conditions>
+            </modifier>
+          </modifiers>
           <characteristics>
             <characteristic name="Battle Tactic" typeId="8c0f-be41-a70e-c699">You complete this tactic at the end of your turn if you carried out 4 or more monstrous rampages this turn.</characteristic>
           </characteristics>
         </profile>
         <profile id="614a-fb66-c62b-ce30" name="Eat Your Fill" hidden="false" typeId="4bb2-448c-446c-f522" typeName="Battle Tactic">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="7013-04e8-205d-36c3" type="greaterThan"/>
+              </conditions>
+            </modifier>
+          </modifiers>
           <characteristics>
             <characteristic name="Battle Tactic" typeId="8c0f-be41-a70e-c699">You complete this tactic at the start of the combat phase if every friendly OGOR unit on the battlefield is eating.</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="ac37-9687-2801-9471" name="That Was Just a Morsel" hidden="false" typeId="4bb2-448c-446c-f522" typeName="Battle Tactic">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="7013-04e8-205d-36c3" type="equalTo"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <characteristics>
+            <characteristic name="Battle Tactic" typeId="8c0f-be41-a70e-c699">You complete this tactic if any enemy models were slain by the Mawpit’s Head Butcher ability in this turn.</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="6122-73a5-9408-ab48" name="Slavering Ambush" hidden="false" typeId="4bb2-448c-446c-f522" typeName="Battle Tactic">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="7013-04e8-205d-36c3" type="equalTo"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <characteristics>
+            <characteristic name="Battle Tactic" typeId="8c0f-be41-a70e-c699">You complete this tactic if a friendly GORGERS unit was set up on the battlefield using the Ambushing Hunters ability this turn and made a charge move this turn.</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="2c2e-6202-b299-2970" name="We Eated &apos;Em All" hidden="false" typeId="4bb2-448c-446c-f522" typeName="Battle Tactic">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="7013-04e8-205d-36c3" type="equalTo"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <characteristics>
+            <characteristic name="Battle Tactic" typeId="8c0f-be41-a70e-c699">Pick 1 objective controlled by your opponent. You complete this tactic if you control that objective at the end of this turn and there are no enemy models contesting it.</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -279,6 +389,11 @@
               </conditions>
             </conditionGroup>
           </conditionGroups>
+        </modifier>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="7013-04e8-205d-36c3" type="greaterThan"/>
+          </conditions>
         </modifier>
       </modifiers>
       <profiles>
@@ -347,6 +462,11 @@
             </conditionGroup>
           </conditionGroups>
         </modifier>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="7013-04e8-205d-36c3" type="greaterThan"/>
+          </conditions>
+        </modifier>
       </modifiers>
       <profiles>
         <profile id="7d95-1179-9757-07f4" name="Slayers" hidden="false" typeId="66c5-932e-004a-574c" typeName="Battalion Abilities">
@@ -414,6 +534,11 @@
             </conditionGroup>
           </conditionGroups>
         </modifier>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="7013-04e8-205d-36c3" type="greaterThan"/>
+          </conditions>
+        </modifier>
       </modifiers>
       <profiles>
         <profile id="f548-2f4d-97d7-ef12" name="Expert" hidden="false" typeId="66c5-932e-004a-574c" typeName="Battalion Abilities">
@@ -480,6 +605,11 @@
             </conditionGroup>
           </conditionGroups>
         </modifier>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="7013-04e8-205d-36c3" type="greaterThan"/>
+          </conditions>
+        </modifier>
       </modifiers>
       <profiles>
         <profile id="8e78-a128-5b77-f046" name="Slayers" hidden="false" typeId="66c5-932e-004a-574c" typeName="Battalion Abilities">
@@ -523,9 +653,11 @@
           <conditionGroups>
             <conditionGroup type="or">
               <conditions>
-                <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="6cd6-b22e-bfcb-9589" type="instanceOf"/>
-                <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="e3a6-45ca-4974-b489" type="instanceOf"/>
-                <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4373-740f-1bf3-b0aa" type="instanceOf"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4373-740f-1bf3-b0aa" type="instanceOf"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="e3a6-45ca-4974-b489" type="instanceOf"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="996a-613c-4006-25e3" type="instanceOf"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="6cd6-b22e-bfcb-9589" type="instanceOf"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="b543-cb16-0c79-fbc6" type="instanceOf"/>
               </conditions>
             </conditionGroup>
           </conditionGroups>
@@ -646,6 +778,13 @@
       </entryLinks>
     </entryLink>
     <entryLink id="85be-f37b-f6e2-69fd" name="Firebelly" hidden="false" collective="false" import="true" targetId="d5d6-9977-4cf5-260e" type="selectionEntry">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="7013-04e8-205d-36c3" type="greaterThan"/>
+          </conditions>
+        </modifier>
+      </modifiers>
       <entryLinks>
         <entryLink id="9617-a5bd-c458-4c1e" name="General" hidden="false" collective="false" import="true" targetId="98a4-3d6d-a7b9-399f" type="selectionEntry"/>
         <entryLink id="8de7-7ee9-87c7-4ce0" name="Artefacts of Power" hidden="false" collective="false" import="true" targetId="622e-a2e6-7a6c-4fb5" type="selectionEntryGroup"/>
@@ -654,11 +793,25 @@
       </entryLinks>
     </entryLink>
     <entryLink id="e9e2-36ee-6b14-0c94" name="Maneaters" hidden="false" collective="false" import="true" targetId="165a-5d01-3b35-d857" type="selectionEntry">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="7013-04e8-205d-36c3" type="greaterThan"/>
+          </conditions>
+        </modifier>
+      </modifiers>
       <entryLinks>
         <entryLink id="6e89-1ec9-c2d5-342e" name="Battalion Formation" hidden="false" collective="false" import="true" targetId="97bc-9442-939d-c1cf" type="selectionEntryGroup"/>
       </entryLinks>
     </entryLink>
     <entryLink id="30e4-350b-f2ad-44f3" name="Frostlord on Stonehorn" hidden="false" collective="false" import="true" targetId="2c94-55b4-d89b-d64d" type="selectionEntry">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="7013-04e8-205d-36c3" type="greaterThan"/>
+          </conditions>
+        </modifier>
+      </modifiers>
       <entryLinks>
         <entryLink id="6519-11ca-4a9e-05a9" name="Ogor Mawtribes Mount Traits" hidden="false" collective="false" import="true" targetId="66e4-2d14-7751-2cdf" type="selectionEntryGroup"/>
         <entryLink id="5d3f-3d73-967e-078d" name="Command Traits" hidden="false" collective="false" import="true" targetId="ec87-0b07-c4d9-268e" type="selectionEntryGroup"/>
@@ -673,6 +826,13 @@
       </entryLinks>
     </entryLink>
     <entryLink id="51ce-4020-ff14-aaaf" name="Huskard on Stonehorn" hidden="false" collective="false" import="true" targetId="a540-afa7-fa1b-7256" type="selectionEntry">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="7013-04e8-205d-36c3" type="greaterThan"/>
+          </conditions>
+        </modifier>
+      </modifiers>
       <entryLinks>
         <entryLink id="bc0d-3313-91e8-2d32" name="Ogor Mawtribes Mount Traits" hidden="false" collective="false" import="true" targetId="66e4-2d14-7751-2cdf" type="selectionEntryGroup"/>
         <entryLink id="ec4e-ef89-3a82-296b" name="Command Traits" hidden="false" collective="false" import="true" targetId="ec87-0b07-c4d9-268e" type="selectionEntryGroup"/>
@@ -687,6 +847,13 @@
       </entryLinks>
     </entryLink>
     <entryLink id="9a2e-c75e-eb38-73dd" name="Frostlord on Thundertusk" hidden="false" collective="false" import="true" targetId="c48f-f39a-af6d-9cb5" type="selectionEntry">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="7013-04e8-205d-36c3" type="greaterThan"/>
+          </conditions>
+        </modifier>
+      </modifiers>
       <entryLinks>
         <entryLink id="33e0-78eb-a6e5-48ef" name="Ogor Mawtribes Mount Traits" hidden="false" collective="false" import="true" targetId="66e4-2d14-7751-2cdf" type="selectionEntryGroup"/>
         <entryLink id="9dac-32cf-3367-bdf1" name="Command Traits" hidden="false" collective="false" import="true" targetId="ec87-0b07-c4d9-268e" type="selectionEntryGroup"/>
@@ -701,6 +868,13 @@
       </entryLinks>
     </entryLink>
     <entryLink id="664c-c952-0b91-9bd7" name="Huskard on Thundertusk" hidden="false" collective="false" import="true" targetId="7fdd-a029-909b-1bab" type="selectionEntry">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="7013-04e8-205d-36c3" type="greaterThan"/>
+          </conditions>
+        </modifier>
+      </modifiers>
       <entryLinks>
         <entryLink id="4e34-2fc9-3f9f-c56e" name="Ogor Mawtribes Mount Traits" hidden="false" collective="false" import="true" targetId="66e4-2d14-7751-2cdf" type="selectionEntryGroup"/>
         <entryLink id="09b4-2978-eac5-893d" name="Command Traits" hidden="false" collective="false" import="true" targetId="ec87-0b07-c4d9-268e" type="selectionEntryGroup"/>
@@ -716,6 +890,13 @@
       </entryLinks>
     </entryLink>
     <entryLink id="ba2f-d98b-7ba7-c638" name="Stonehorn Beastriders" hidden="false" collective="false" import="true" targetId="7f66-137b-03aa-5a7f" type="selectionEntry">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="7013-04e8-205d-36c3" type="greaterThan"/>
+          </conditions>
+        </modifier>
+      </modifiers>
       <modifierGroups>
         <modifierGroup>
           <conditionGroups>
@@ -742,6 +923,13 @@
       </entryLinks>
     </entryLink>
     <entryLink id="879b-94d5-05be-e03c" name="Thundertusk Beastriders" hidden="false" collective="false" import="true" targetId="32cd-49ae-c65c-f5a0" type="selectionEntry">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="7013-04e8-205d-36c3" type="greaterThan"/>
+          </conditions>
+        </modifier>
+      </modifiers>
       <modifierGroups>
         <modifierGroup>
           <conditionGroups>
@@ -783,6 +971,11 @@
             </conditionGroup>
           </conditionGroups>
         </modifier>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="7013-04e8-205d-36c3" type="greaterThan"/>
+          </conditions>
+        </modifier>
       </modifiers>
       <categoryLinks>
         <categoryLink id="2461-60ba-4744-ae36" name="BATTLELINE" hidden="false" targetId="a42d-220e-6a88-7bf6" primary="false"/>
@@ -792,6 +985,13 @@
       </entryLinks>
     </entryLink>
     <entryLink id="c3dc-41b3-a441-5d53" name="Icebrow Hunter" hidden="false" collective="false" import="true" targetId="a3dc-d5b9-82b1-c3ac" type="selectionEntry">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="7013-04e8-205d-36c3" type="greaterThan"/>
+          </conditions>
+        </modifier>
+      </modifiers>
       <entryLinks>
         <entryLink id="71b5-35b2-a06a-3507" name="Artefacts of Power" hidden="false" collective="false" import="true" targetId="622e-a2e6-7a6c-4fb5" type="selectionEntryGroup"/>
         <entryLink id="8513-78f8-8cd7-a272" name="Command Traits" hidden="false" collective="false" import="true" targetId="ec87-0b07-c4d9-268e" type="selectionEntryGroup"/>
@@ -820,6 +1020,11 @@
             </conditionGroup>
           </conditionGroups>
         </modifier>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="7013-04e8-205d-36c3" type="greaterThan"/>
+          </conditions>
+        </modifier>
       </modifiers>
       <categoryLinks>
         <categoryLink id="c349-08aa-bd8e-c51b" name="BATTLELINE" hidden="false" targetId="a42d-220e-6a88-7bf6" primary="false"/>
@@ -844,6 +1049,11 @@
             </conditionGroup>
           </conditionGroups>
         </modifier>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="7013-04e8-205d-36c3" type="greaterThan"/>
+          </conditions>
+        </modifier>
       </modifiers>
       <categoryLinks>
         <categoryLink id="c910-2b80-6379-5be5" name="BATTLELINE" hidden="false" targetId="a42d-220e-6a88-7bf6" primary="false"/>
@@ -852,8 +1062,23 @@
         <entryLink id="023c-3311-e004-30c5" name="Battalion Formation" hidden="false" collective="false" import="true" targetId="97bc-9442-939d-c1cf" type="selectionEntryGroup"/>
       </entryLinks>
     </entryLink>
-    <entryLink id="b024-2a07-5670-b378" name="Kragnos, The End of Empires" hidden="false" collective="false" import="true" targetId="52c3-aded-0a1a-6c1e" type="selectionEntry"/>
+    <entryLink id="b024-2a07-5670-b378" name="Kragnos, The End of Empires" hidden="false" collective="false" import="true" targetId="52c3-aded-0a1a-6c1e" type="selectionEntry">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="7013-04e8-205d-36c3" type="greaterThan"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+    </entryLink>
     <entryLink id="64f6-5e1c-7112-3877" name="Blackpowder&apos;s Buccaneers" hidden="false" collective="false" import="true" targetId="b8ca-ae1c-bb45-f64d" type="selectionEntry">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="7013-04e8-205d-36c3" type="greaterThan"/>
+          </conditions>
+        </modifier>
+      </modifiers>
       <entryLinks>
         <entryLink id="d20b-8619-7004-cc48" name="General" hidden="false" collective="false" import="true" targetId="98a4-3d6d-a7b9-399f" type="selectionEntry">
           <categoryLinks>
@@ -876,6 +1101,12 @@
         <entryLink id="16d4-3300-1e78-2a7b" name="Battalion Formation" hidden="false" collective="false" import="true" targetId="97bc-9442-939d-c1cf" type="selectionEntryGroup"/>
       </entryLinks>
     </entryLink>
+    <entryLink id="524b-c566-e21f-c79a" name="Gorger Mawpack" hidden="false" collective="false" import="true" targetId="c23e-2c73-1eef-2c46" type="selectionEntry">
+      <entryLinks>
+        <entryLink id="5a11-c0f8-7928-f85f" name="Battalion Formation" hidden="false" collective="false" import="true" targetId="97bc-9442-939d-c1cf" type="selectionEntryGroup"/>
+      </entryLinks>
+    </entryLink>
+    <entryLink id="94ba-6c9c-7ad7-9e33" name="Terrain Feature - Mawpit" hidden="false" collective="false" import="true" targetId="4be1-8c96-af66-db38" type="selectionEntry"/>
   </entryLinks>
   <sharedSelectionEntries>
     <selectionEntry id="74e8-bb1f-4c34-7b52" name="Allegiance" hidden="false" collective="false" import="true" type="upgrade">
@@ -908,31 +1139,73 @@
           </constraints>
           <profiles>
             <profile id="1b12-038c-41d2-280e" name="Trampling Charge" hidden="false" typeId="c0c2-177b-e761-ec41" typeName="Allegiance Abilities">
+              <modifiers>
+                <modifier type="set" field="hidden" value="true">
+                  <conditions>
+                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="7013-04e8-205d-36c3" type="greaterThan"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
               <characteristics>
                 <characteristic name="Allegiance Ability" typeId="0506-f62d-68b3-5499">After a friendly OGOR or RHINOX unit makes a charge move, you can pick 1 enemy unit within 1&quot; of that unit and roll a number of dice equal to the unmodified charge roll for that charge move. Add 1 to each roll if the charging unit is an OGOR unit that has 3 or more models. Add 2 to each roll if it is a MONSTER. For each 6+, that enemy unit suffers 1 mortal wound.</characteristic>
               </characteristics>
             </profile>
             <profile id="4335-f06b-0fc2-09ec" name="Grasp of the Everwinter" hidden="false" typeId="c0c2-177b-e761-ec41" typeName="Allegiance Abilities">
+              <modifiers>
+                <modifier type="set" field="hidden" value="true">
+                  <conditions>
+                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="7013-04e8-205d-36c3" type="greaterThan"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
               <characteristics>
                 <characteristic name="Allegiance Ability" typeId="0506-f62d-68b3-5499">At the start of your hero phase, roll a dice for each enemy unit within 3&quot; of any friendly BEASTCLAW RAIDERS units. If the roll is equal to or less than the number of the current battle round, that unit suffers D3 mortal wounds.</characteristic>
               </characteristics>
             </profile>
             <profile id="21a5-e80f-22e7-ab2f" name="Might Makes Right" hidden="false" typeId="c0c2-177b-e761-ec41" typeName="Allegiance Abilities">
+              <modifiers>
+                <modifier type="set" field="hidden" value="true">
+                  <conditions>
+                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="7013-04e8-205d-36c3" type="greaterThan"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
               <characteristics>
                 <characteristic name="Allegiance Ability" typeId="0506-f62d-68b3-5499">For the purposes of contesting objectives, each friendly OGOR MAWTRIBES OGOR counts as 2 models, each friendly OGOR MAWTRIBES HERO that is not a MONSTER counts as 5 models, and each friendly OGOR MAWTRIBES MONSTER counts as 10 models.</characteristic>
               </characteristics>
             </profile>
             <profile id="2c6e-8538-40b6-adf7" name="Ravenous Brutes" hidden="false" typeId="c0c2-177b-e761-ec41" typeName="Allegiance Abilities">
+              <modifiers>
+                <modifier type="set" field="hidden" value="true">
+                  <conditions>
+                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="7013-04e8-205d-36c3" type="greaterThan"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
               <characteristics>
                 <characteristic name="Allegiance Ability" typeId="0506-f62d-68b3-5499">If a friendly OGOR MAWTRIBES OGOR unit is more than 3&quot; from all enemy units, it is hungry. If a friendly OGOR MAWTRIBES OGOR unit is within 3&quot; of any enemy units, it is eating. Add 2&quot; to the Move characteristic of a unit that is hungry. Add 2 to the Bravery characteristic of a unit that is eating.</characteristic>
               </characteristics>
             </profile>
             <profile id="62ac-6772-6dc4-db61" name="Gulping Bites" hidden="false" typeId="c0c2-177b-e761-ec41" typeName="Allegiance Abilities">
+              <modifiers>
+                <modifier type="set" field="hidden" value="true">
+                  <conditions>
+                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="7013-04e8-205d-36c3" type="greaterThan"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
               <characteristics>
                 <characteristic name="Allegiance Ability" typeId="0506-f62d-68b3-5499">At the end of the combat phase, roll a dice for each enemy unit within 3&quot; of any friendly GUTBUSTERS OGOR units. On a 4+, that unit suffers D3 mortal wounds.</characteristic>
               </characteristics>
             </profile>
             <profile id="5f2e-4eaa-241a-7c68" name="Mawtribes" hidden="false" typeId="c0c2-177b-e761-ec41" typeName="Allegiance Abilities">
+              <modifiers>
+                <modifier type="set" field="hidden" value="true">
+                  <conditions>
+                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="7013-04e8-205d-36c3" type="greaterThan"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
               <characteristics>
                 <characteristic name="Allegiance Ability" typeId="0506-f62d-68b3-5499">You can pick 1 of the following subfactions for your army. All OGOR MAWTRIBES units in your army gain the keyword of the subfaction you picked, and you can use the allegiance abilities for that subfaction. If a unit already has a different subfaction keyword on its warscroll, it cannot gain another one. This does not preclude you from including the unit in your army, but you cannot use the allegiance abilities for its subfaction.
 
@@ -945,6 +1218,13 @@
               </characteristics>
             </profile>
             <profile id="34f5-e337-114b-ada0" name="The Beasts of Winter" hidden="false" typeId="c0c2-177b-e761-ec41" typeName="Allegiance Abilities">
+              <modifiers>
+                <modifier type="set" field="hidden" value="true">
+                  <conditions>
+                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="7013-04e8-205d-36c3" type="greaterThan"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
               <characteristics>
                 <characteristic name="Allegiance Ability" typeId="0506-f62d-68b3-5499">When you carry out a monstrous rampage with a friendly BEASTCLAW RAIDERS MONSTER, you can carry out 1 of the monstrous rampages below instead of any other monstrous rampage you can carry out with that unit.
 
@@ -954,8 +1234,68 @@ Chill of the Everwinter: Only a THUNDERTUSK unit that has made a charge move in 
               </characteristics>
             </profile>
           </profiles>
+          <selectionEntries>
+            <selectionEntry id="7013-04e8-205d-36c3" name="The Roving Maw" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="cb1a-4192-0602-89e3" type="max"/>
+              </constraints>
+              <profiles>
+                <profile id="7384-2523-b87e-5f0d" name="Mawpits of Ghur" hidden="false" typeId="c0c2-177b-e761-ec41" typeName="Allegiance Abilities">
+                  <characteristics>
+                    <characteristic name="Allegiance Ability" typeId="0506-f62d-68b3-5499">At the start of each battle round, after determining which player will take the first turn, you must determine the hunger status of the Mawpits on the battlefield by rolling 2D6. If you included a Mawpit in your army, add the number of models slain by its Head Butcher ability during the battle to the roll. If the Mawpit is garrisoned by a Head Butcher, add 1 to the roll. Then, pick 1 result from the Mawpit Table that has a score equal to or less than your modified dice roll to apply for that battle round.
+
+A unit is vulnerable to Mawpits if it is on the battlefield unless it is wholly within 1&quot; of a terrain feature that is not a Mawpit or it can fly. This ability has no effect on ROVING MAW units.
+
+Score  --  Effect
+
+2-3  --  Subdued: No effect.
+
+4-5  --  Peckish: Subtract 1 from the Bravery characteristic of units that are vulnerable to Mawpits.
+
+6-8  --  Rumbling: Roll a dice for each unit that is vulnerable to Mawpits. On a 5+, that unit suffers 1 mortal wound.
+
+9-11  --  Famished: Units that are vulnerable to Mawpits and that do not have the HERO keyword cannot issue commands.
+
+12+  --  Ravenous: Roll a dice for each unit that is vulnerable to Mawpits. On a 4+, that unit suffers D3 mortal wounds.</characteristic>
+                  </characteristics>
+                </profile>
+                <profile id="f327-a8b1-b5c1-b168" name="Driven by Starvation" hidden="false" typeId="c0c2-177b-e761-ec41" typeName="Allegiance Abilities">
+                  <characteristics>
+                    <characteristic name="Allegiance Ability" typeId="0506-f62d-68b3-5499">Friendly GORGERS units that are not wholly within 1&quot; of a terrain feature at the start of your charge phase can attempt a charge even if they ran in the same turn.</characteristic>
+                  </characteristics>
+                </profile>
+                <profile id="5954-d52e-1ca3-45e9" name="The Butcher&apos;s Kitchen" hidden="false" typeId="c0c2-177b-e761-ec41" typeName="Allegiance Abilities">
+                  <characteristics>
+                    <characteristic name="Allegiance Ability" typeId="0506-f62d-68b3-5499">For each BUTCHER included in your army, you can include 1 GORGERS unit as a Battleline unit.</characteristic>
+                  </characteristics>
+                </profile>
+                <profile id="5b5f-bca3-96c9-67d8" name="Ravenous Brutes" hidden="false" typeId="c0c2-177b-e761-ec41" typeName="Allegiance Abilities">
+                  <characteristics>
+                    <characteristic name="Allegiance Ability" typeId="0506-f62d-68b3-5499">If a friendly OGOR unit is more than 3&quot; from all enemy units, it is hungry. If a friendly OGOR unit is within 3&quot; of any enemy units, it is eating. Add 2&quot; to the Move characteristic of a unit that is hungry. Add 2 to the Bravery characteristic of a unit that is eating.</characteristic>
+                  </characteristics>
+                </profile>
+                <profile id="c5fe-c33c-bec3-4313" name="Might Makes Right" hidden="false" typeId="c0c2-177b-e761-ec41" typeName="Allegiance Abilities">
+                  <characteristics>
+                    <characteristic name="Allegiance Ability" typeId="0506-f62d-68b3-5499">For the purposes of contesting objectives, each friendly OGOR counts as 2 models and each friendly HERO that is not a MONSTER counts as 5 models.</characteristic>
+                  </characteristics>
+                </profile>
+                <profile id="01c1-db12-4d92-9626" name="Gobbling Bites" hidden="false" typeId="c0c2-177b-e761-ec41" typeName="Allegiance Abilities">
+                  <characteristics>
+                    <characteristic name="Allegiance Ability" typeId="0506-f62d-68b3-5499">At the end of the combat phase, roll a dice for each enemy unit within 3&quot; of any friendly GUTBUSTERS units. On a 2+, that enemy unit suffers D3+1 mortal wounds.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+            </selectionEntry>
+          </selectionEntries>
           <selectionEntryGroups>
             <selectionEntryGroup id="9c6e-3f96-3cfd-0cb9" name="Mawtribe" hidden="false" collective="false" import="true">
+              <modifiers>
+                <modifier type="set" field="hidden" value="true">
+                  <conditions>
+                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="7013-04e8-205d-36c3" type="greaterThan"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
               <constraints>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="9209-3427-c858-1d3a" type="max"/>
               </constraints>
@@ -1048,6 +1388,13 @@ Chill of the Everwinter: Only a THUNDERTUSK unit that has made a charge move in 
       </costs>
     </selectionEntry>
     <selectionEntry id="e95a-ae31-acaf-106f" name="Terrain Feature - Great Mawpot" publicationId="ca59-f8ac-3938-b963" hidden="false" collective="false" import="true" type="model">
+      <modifiers>
+        <modifier type="set" field="21f7-190c-fba1-7d0f" value="0.0">
+          <conditions>
+            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="94ba-6c9c-7ad7-9e33" type="greaterThan"/>
+          </conditions>
+        </modifier>
+      </modifiers>
       <constraints>
         <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="21f7-190c-fba1-7d0f" type="max"/>
       </constraints>
@@ -1085,6 +1432,52 @@ Chill of the Everwinter: Only a THUNDERTUSK unit that has made a charge move in 
         <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
       </costs>
     </selectionEntry>
+    <selectionEntry id="4be1-8c96-af66-db38" name="Terrain Feature - Mawpit" hidden="false" collective="false" import="true" type="upgrade">
+      <modifiers>
+        <modifier type="set" field="1864-332a-e34d-1ec9" value="0.0">
+          <conditions>
+            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="6fae-e799-6e73-c03c" type="greaterThan"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <constraints>
+        <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="1864-332a-e34d-1ec9" type="max"/>
+      </constraints>
+      <profiles>
+        <profile id="64f3-8d7d-1c56-2b43" name="Terrain Feature - Mawpit" hidden="false" typeId="d508-c1d5-a06f-0103" typeName="Scenery Set-Up">
+          <characteristics>
+            <characteristic name="Set-Up Rules" typeId="fb13-8187-bb28-76fe">After territories are determined, you can set up this faction terrain feature wholly outside enemy territory and more than 3&quot; from all objectives and other terrain features. If both players can set up faction terrain features at the same time, they must roll off and the winner chooses who sets up their faction terrain feature first.</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="e3ac-8b01-cde6-5ae0" name="Defensible" hidden="false" typeId="1c58-2b3d-482e-2a35" typeName="Scenery Rules">
+          <characteristics>
+            <characteristic name="Scenery Rule" typeId="a333-0c4a-7f67-677c">This terrain feature is a defensible terrain feature that can be garrisoned by 1 BUTCHER. The garrison is referred to as the terrain feature’s ‘Head Butcher’ in the rules on this warscroll.</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="182b-7756-6693-6475" name="The Throat of Ghur" hidden="false" typeId="1c58-2b3d-482e-2a35" typeName="Scenery Rules">
+          <characteristics>
+            <characteristic name="Scenery Rule" typeId="a333-0c4a-7f67-677c">At the end of the charge phase, the player whose turn is taking place must roll a dice for each unit in their army that is within 12&quot; of this terrain feature and within 12&quot; of any units in their opponent’s army and more than 3&quot; from all units in their opponent’s army. On a 3+, that unit suffers D3 mortal wounds.
+
+If this terrain feature has a Head Butcher, this ability affects units within 18&quot; of this terrain feature instead of 12&quot;. This ability has no effect on GUTBUSTERS units.</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="7bb4-09ca-e255-1458" name="Head Butcher" hidden="false" typeId="1c58-2b3d-482e-2a35" typeName="Scenery Rules">
+          <characteristics>
+            <characteristic name="Scenery Rule" typeId="a333-0c4a-7f67-677c">If this terrain feature has a Head Butcher, in your hero phase, you can say that an offering will be made to the Mawpit. If you do so, pick 1 enemy unit within 18&quot; of this terrain feature and roll D6. If the roll is more than twice that enemy unit’s Wounds characteristic, 1 model in that unit is slain. If the roll is more than three times that enemy unit’s Wounds characteristic, 3 models in that unit are slain.</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="ae19-a30e-41b7-fa12" name="It Fights Back" hidden="false" typeId="1c58-2b3d-482e-2a35" typeName="Scenery Rules">
+          <characteristics>
+            <characteristic name="Scenery Rule" typeId="a333-0c4a-7f67-677c">If this terrain feature is picked as the target of the Smash To Rubble monstrous rampage, and that monstrous rampage is unsuccessful, the MONSTER that carried out that monstrous rampage suffers 3D6 mortal wounds.
+
+Designer’s Note: A Smash To Rubble monstrous rampage is unsuccessful if the roll was not a 3+.</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <categoryLinks>
+        <categoryLink id="d6f1-ff23-b36d-4e89" name="New CategoryLink" hidden="false" targetId="29f4-e63d-fa5b-1611" primary="true"/>
+      </categoryLinks>
+    </selectionEntry>
   </sharedSelectionEntries>
   <sharedSelectionEntryGroups>
     <selectionEntryGroup id="66e4-2d14-7751-2cdf" name="Ogor Mawtribes Mount Traits" publicationId="ca59-f8ac-3938-b963" hidden="false" collective="false" import="true">
@@ -1113,6 +1506,11 @@ Chill of the Everwinter: Only a THUNDERTUSK unit that has made a charge move in 
           </repeats>
           <conditions>
             <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="99e1-bf54-e3ec-ab80" type="greaterThan"/>
+          </conditions>
+        </modifier>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="7013-04e8-205d-36c3" type="greaterThan"/>
           </conditions>
         </modifier>
       </modifiers>
@@ -1297,6 +1695,11 @@ Chill of the Everwinter: Only a THUNDERTUSK unit that has made a charge move in 
                 <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="9e49-bd7f-45ee-1a96" type="greaterThan"/>
               </conditions>
             </modifier>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="7013-04e8-205d-36c3" type="greaterThan"/>
+              </conditions>
+            </modifier>
           </modifiers>
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="f45d-950c-cb83-9e64" type="max"/>
@@ -1379,6 +1782,11 @@ Chill of the Everwinter: Only a THUNDERTUSK unit that has made a charge move in 
                 <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="9e49-bd7f-45ee-1a96" type="greaterThan"/>
               </conditions>
             </modifier>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="7013-04e8-205d-36c3" type="greaterThan"/>
+              </conditions>
+            </modifier>
           </modifiers>
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="0a0e-6a6d-9e43-c70b" type="max"/>
@@ -1431,9 +1839,77 @@ Chill of the Everwinter: Only a THUNDERTUSK unit that has made a charge move in 
             </selectionEntry>
           </selectionEntries>
         </selectionEntryGroup>
+        <selectionEntryGroup id="5cc6-6620-54e9-c083" name="Lore of the Great Maw" hidden="false" collective="false" import="true">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="7013-04e8-205d-36c3" type="equalTo"/>
+              </conditions>
+            </modifier>
+            <modifier type="increment" field="bfca-0246-13f3-9f7b" value="1.0">
+              <repeats>
+                <repeat field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="9e49-bd7f-45ee-1a96" repeats="1" roundUp="false"/>
+              </repeats>
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="9e49-bd7f-45ee-1a96" type="greaterThan"/>
+                    <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="73f4-8f5b-64fc-a1ba" type="equalTo"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+            <modifier type="set" field="bfca-0246-13f3-9f7b" value="3.0">
+              <conditions>
+                <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="73f4-8f5b-64fc-a1ba" type="greaterThan"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="bfca-0246-13f3-9f7b" type="max"/>
+          </constraints>
+          <selectionEntries>
+            <selectionEntry id="a165-a395-65e6-0792" name="3 - Offal Bringer" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="e6f8-fca1-d3aa-9217" type="max"/>
+              </constraints>
+              <profiles>
+                <profile id="4c60-99fe-e783-8f5a" name="Offal Bringer" hidden="false" typeId="13da-11a8-b7d1-77a7" typeName="Spell">
+                  <characteristics>
+                    <characteristic name="Spell" typeId="1170-c916-1b73-ae34">Offal Bringer is a spell that has a casting value of 6 and a range of 12&quot;. If successfully cast, pick 1 enemy unit within range and visible to the caster. Your opponent must make a move of up to 6&quot; with that unit. All of the models in that unit must finish that move as close as possible to the caster and can finish that move within 3&quot; of the caster. If it is impossible for that unit to make the move, it suffers D3 mortal wounds instead. After that unit has moved, if that unit is within 3&quot; of the caster and the caster is within 6&quot; of a Mawpit in your army, you can immediately use the Mawpit’s Head Butcher ability, but you must pick that enemy unit to be the target.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+            </selectionEntry>
+            <selectionEntry id="1f44-c85c-6054-2c4a" name="2 - Retcher" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="4764-4ec0-07f4-d475" type="max"/>
+              </constraints>
+              <profiles>
+                <profile id="5b1b-3e5e-23ba-0dea" name="Retcher" hidden="false" typeId="13da-11a8-b7d1-77a7" typeName="Spell">
+                  <characteristics>
+                    <characteristic name="Spell" typeId="1170-c916-1b73-ae34">Retcher is a spell that has a casting value of 7. If successfully cast, until your next hero phase, improve the Rend characteristic of melee weapons used by the caster by 2.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+            </selectionEntry>
+            <selectionEntry id="62d2-410c-2b6a-4727" name="1 - Mawmeat" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="857c-903f-dc5b-08fa" type="max"/>
+              </constraints>
+              <profiles>
+                <profile id="77c1-c8c0-2ee2-818e" name="Mawmeat" hidden="false" typeId="13da-11a8-b7d1-77a7" typeName="Spell">
+                  <characteristics>
+                    <characteristic name="Spell" typeId="1170-c916-1b73-ae34">Mawmeat is a spell that has a casting value of 6 and a range of 18&quot;. If successfully cast, pick 1 terrain feature within range and visible to the caster. For the rest of the battle, units on or within 1&quot; of that terrain feature are vulnerable to Mawpits.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
       </selectionEntryGroups>
       <entryLinks>
-        <entryLink id="a9bd-b092-740c-1eb8" name="Universal Spell Lore" hidden="false" collective="false" import="true" targetId="93f7-7e2a-3308-d150" type="selectionEntryGroup"/>
+        <entryLink id="a9bd-b092-740c-1eb8" name="Rulebook Spell Lores" hidden="false" collective="false" import="true" targetId="8aee-7492-ee73-6d07" type="selectionEntryGroup"/>
       </entryLinks>
     </selectionEntryGroup>
     <selectionEntryGroup id="622e-a2e6-7a6c-4fb5" name="Artefacts of Power" publicationId="ca59-f8ac-3938-b963" hidden="false" collective="false" import="true">
@@ -1458,12 +1934,38 @@ Chill of the Everwinter: Only a THUNDERTUSK unit that has made a charge move in 
       <categoryLinks>
         <categoryLink id="f9d8-e0b1-4be1-5275" name="Artefacts" hidden="false" targetId="ba14-5553-456e-33ad" primary="false"/>
       </categoryLinks>
+      <selectionEntries>
+        <selectionEntry id="f567-5e37-ce5e-84e0" name="0 -- Flask of Congealed Maw-juices" hidden="false" collective="false" import="true" type="upgrade">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="7013-04e8-205d-36c3" type="equalTo"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="9959-3473-dff0-c7fa" type="max"/>
+          </constraints>
+          <profiles>
+            <profile id="cb6e-10e4-bffa-5f93" name="Flask of Congealed Maw-juices" hidden="false" typeId="0c9d-7abe-a53c-6a37" typeName="Artefacts">
+              <characteristics>
+                <characteristic name="Artefact" typeId="44b6-de26-0b54-1318">Once per battle, at the start of the hero phase, you can pick 1 Mawpit in your army that is within 9&quot; of the bearer and that has been affected by a rule that says you cannot use the scenery rules on its warscroll (such as Smash To Rubble) and roll a dice. On a 2+, that Mawpit is no longer affected by that rule and you can use the scenery rules on its warscroll once more.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+        </selectionEntry>
+      </selectionEntries>
       <selectionEntryGroups>
         <selectionEntryGroup id="1b3d-0062-3197-e917" name="Trophies of the Everwinter" hidden="false" collective="false" import="true">
           <modifiers>
             <modifier type="set" field="hidden" value="true">
               <conditions>
                 <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="c8fa-060e-690f-75c9" type="notInstanceOf"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="7013-04e8-205d-36c3" type="greaterThan"/>
               </conditions>
             </modifier>
           </modifiers>
@@ -1559,6 +2061,11 @@ Chill of the Everwinter: Only a THUNDERTUSK unit that has made a charge move in 
                 <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="f221-6c2e-d1a0-0adb" type="notInstanceOf"/>
               </conditions>
             </modifier>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="7013-04e8-205d-36c3" type="greaterThan"/>
+              </conditions>
+            </modifier>
           </modifiers>
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="a7d1-5565-9b1c-5e5a" type="max"/>
@@ -1635,7 +2142,7 @@ Chill of the Everwinter: Only a THUNDERTUSK unit that has made a charge move in 
         </selectionEntryGroup>
       </selectionEntryGroups>
       <entryLinks>
-        <entryLink id="3f0c-e834-5c4e-3c67" name="Universal Artefacts of Power" hidden="false" collective="false" import="true" targetId="dbd8-8f6f-f44a-884a" type="selectionEntryGroup"/>
+        <entryLink id="3f0c-e834-5c4e-3c67" name="Rulebook Artefacts of Power" hidden="false" collective="false" import="true" targetId="836b-19a4-b5b4-570d" type="selectionEntryGroup"/>
       </entryLinks>
     </selectionEntryGroup>
     <selectionEntryGroup id="ec87-0b07-c4d9-268e" name="Command Traits" publicationId="ca59-f8ac-3938-b963" hidden="false" collective="false" import="true">
@@ -1649,12 +2156,35 @@ Chill of the Everwinter: Only a THUNDERTUSK unit that has made a charge move in 
       <constraints>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="a56c-c936-b04f-8018" type="max"/>
       </constraints>
+      <selectionEntries>
+        <selectionEntry id="73f4-8f5b-64fc-a1ba" name="0. Prime Gutserver" hidden="false" collective="false" import="true" type="upgrade">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="7013-04e8-205d-36c3" type="equalTo"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <profiles>
+            <profile id="de6a-58b1-564f-d562" name="Prime Gutserver" hidden="false" typeId="1504-23bf-8850-4f65" typeName="Command Traits">
+              <characteristics>
+                <characteristic name="Command Trait" typeId="0145-9acf-f5dc-d543">This general knows all of the spells from the Lore of the Great Maw in addition to any other spells they know.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+        </selectionEntry>
+      </selectionEntries>
       <selectionEntryGroups>
         <selectionEntryGroup id="cebf-65e3-cc26-4fef" name="Traits of the Gutbusters" hidden="false" collective="false" import="true">
           <modifiers>
             <modifier type="set" field="hidden" value="true">
               <conditions>
                 <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="f221-6c2e-d1a0-0adb" type="notInstanceOf"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="7013-04e8-205d-36c3" type="greaterThan"/>
               </conditions>
             </modifier>
           </modifiers>
@@ -1773,6 +2303,11 @@ Chill of the Everwinter: Only a THUNDERTUSK unit that has made a charge move in 
             <modifier type="set" field="hidden" value="true">
               <conditions>
                 <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="c8fa-060e-690f-75c9" type="notInstanceOf"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="7013-04e8-205d-36c3" type="greaterThan"/>
               </conditions>
             </modifier>
           </modifiers>
@@ -1894,7 +2429,7 @@ Chill of the Everwinter: Only a THUNDERTUSK unit that has made a charge move in 
                     </selectionEntryGroup>
                   </selectionEntryGroups>
                   <entryLinks>
-                    <entryLink id="11a8-f7c4-120a-6924" name="Universal Prayer Scripture" hidden="false" collective="false" import="true" targetId="7104-ab27-d136-1df0" type="selectionEntryGroup"/>
+                    <entryLink id="11a8-f7c4-120a-6924" name="Rulebook Prayer Scriptures" hidden="false" collective="false" import="true" targetId="42b2-cfa5-744f-8062" type="selectionEntryGroup"/>
                   </entryLinks>
                 </selectionEntryGroup>
               </selectionEntryGroups>
@@ -1961,7 +2496,7 @@ Chill of the Everwinter: Only a THUNDERTUSK unit that has made a charge move in 
         </selectionEntryGroup>
       </selectionEntryGroups>
       <entryLinks>
-        <entryLink id="e3e0-f9a2-6d76-efa2" name="Universal Command Traits" hidden="false" collective="false" import="true" targetId="20f0-6df9-b464-3789" type="selectionEntryGroup"/>
+        <entryLink id="e3e0-f9a2-6d76-efa2" name="Rulebook Command Traits" hidden="false" collective="false" import="true" targetId="6978-81a2-4c55-65f3" type="selectionEntryGroup"/>
       </entryLinks>
     </selectionEntryGroup>
     <selectionEntryGroup id="a362-d338-3a8e-de04" name="Prayer Scriptures" hidden="false" collective="false" import="true">
@@ -2027,6 +2562,11 @@ Chill of the Everwinter: Only a THUNDERTUSK unit that has made a charge move in 
                 </conditionGroup>
               </conditionGroups>
             </modifier>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="7013-04e8-205d-36c3" type="greaterThan"/>
+              </conditions>
+            </modifier>
           </modifiers>
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="5868-efae-c52f-6b44" type="max"/>
@@ -2081,7 +2621,7 @@ Chill of the Everwinter: Only a THUNDERTUSK unit that has made a charge move in 
         </selectionEntryGroup>
       </selectionEntryGroups>
       <entryLinks>
-        <entryLink id="5786-ce26-385c-9d9f" name="Universal Prayer Scripture" hidden="false" collective="false" import="true" targetId="7104-ab27-d136-1df0" type="selectionEntryGroup"/>
+        <entryLink id="5786-ce26-385c-9d9f" name="Rulebook Prayer Scriptures" hidden="false" collective="false" import="true" targetId="42b2-cfa5-744f-8062" type="selectionEntryGroup"/>
       </entryLinks>
     </selectionEntryGroup>
     <selectionEntryGroup id="97bc-9442-939d-c1cf" name="Battalion Formation" hidden="false" collective="false" import="true">

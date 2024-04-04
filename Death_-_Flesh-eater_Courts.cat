@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="74da-a478-1b66-c4d6" name="Death - Flesh-eater Courts" revision="15" battleScribeVersion="2.03" authorName="Thulram" library="false" gameSystemId="e832-3291-06be-cab1" gameSystemRevision="15" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="74da-a478-1b66-c4d6" name="Death - Flesh-eater Courts" revision="16" battleScribeVersion="2.03" authorName="Thulram" library="false" gameSystemId="e832-3291-06be-cab1" gameSystemRevision="15" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <profileTypes>
     <profileType id="03e9-6de7-c98a-cd1d" name="Delusion">
       <characteristicTypes>
@@ -13,8 +13,7 @@
     </profileType>
   </profileTypes>
   <categoryEntries>
-    <categoryEntry id="1a63-aa81-76af-fbb4" name="General - Infernal Courtier" hidden="false"/>
-    <categoryEntry id="ce73-9354-da28-0465" name="General - Haunter Courtier" hidden="false"/>
+    <categoryEntry id="00a4-8568-6e45-b2c6" name="General - Abhorrent Gorewarden" hidden="false"/>
   </categoryEntries>
   <selectionEntries>
     <selectionEntry id="0903-1326-23a1-4db4" name="Grand Strategy" hidden="false" collective="false" import="true" type="upgrade">
@@ -61,6 +60,42 @@
           <categoryLinks>
             <categoryLink id="3a64-6aa6-2d13-5255" name="Grand Strategy" hidden="false" targetId="318c-fa55-0855-47ef" primary="false"/>
           </categoryLinks>
+          <selectionEntryGroups>
+            <selectionEntryGroup id="dab8-ac47-ab3a-7854" name="Royal Delusions" hidden="false" collective="false" import="true">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="62a6-90ba-eca3-bfde" type="max"/>
+              </constraints>
+              <selectionEntries>
+                <selectionEntry id="e293-a629-a687-4f97" name="Defend the Throne" hidden="false" collective="false" import="true" type="upgrade">
+                  <profiles>
+                    <profile id="18de-f4da-7721-ace6" name="Defend the Throne" hidden="false" typeId="7dc6-98f0-f5ba-fc16" typeName="Grand Strategy">
+                      <characteristics>
+                        <characteristic name="Grand Strategy" typeId="22d6-b382-f824-6381">When the battle ends, you complete this grand strategy if a friendly Charnel Throne is on the battlefield, it is garrisoned by a friendly FLESH-EATER COURTS HERO, and there are no enemy units within 6&quot; of it.</characteristic>
+                      </characteristics>
+                    </profile>
+                  </profiles>
+                </selectionEntry>
+                <selectionEntry id="c546-b238-8c9c-4a17" name="Expand the Kingdom" hidden="false" collective="false" import="true" type="upgrade">
+                  <profiles>
+                    <profile id="4f80-9b50-6aef-1a92" name="Expand the Kingdom" hidden="false" typeId="7dc6-98f0-f5ba-fc16" typeName="Grand Strategy">
+                      <characteristics>
+                        <characteristic name="Grand Strategy" typeId="22d6-b382-f824-6381">When the battle ends, you complete this grand strategy if a friendly ABHORRANT is wholly within enemy territory and the enemy general is not wholly within enemy territory.</characteristic>
+                      </characteristics>
+                    </profile>
+                  </profiles>
+                </selectionEntry>
+                <selectionEntry id="e791-9819-9075-174a" name="Legendary Exploits" hidden="false" collective="false" import="true" type="upgrade">
+                  <profiles>
+                    <profile id="cb8e-a737-d66e-e5fb" name="Legendary Exploits" hidden="false" typeId="7dc6-98f0-f5ba-fc16" typeName="Grand Strategy">
+                      <characteristics>
+                        <characteristic name="Grand Strategy" typeId="22d6-b382-f824-6381">When the battle ends, you complete this grand strategy if there are at least 3 friendly FLESH-EATER COURTS HEROES on the battlefield that each have 6 noble deeds points.</characteristic>
+                      </characteristics>
+                    </profile>
+                  </profiles>
+                </selectionEntry>
+              </selectionEntries>
+            </selectionEntryGroup>
+          </selectionEntryGroups>
           <entryLinks>
             <entryLink id="8ad3-3aef-aead-bc40" name="Rulebook Grand Strategies" hidden="false" collective="false" import="true" targetId="daaa-4fe4-c2fa-6a7f" type="selectionEntryGroup"/>
           </entryLinks>
@@ -89,6 +124,38 @@
       <constraints>
         <constraint field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="cc62-f837-31a2-c035" type="max"/>
       </constraints>
+      <profiles>
+        <profile id="dbd0-cf68-5bd0-0cbc" name="Screamed to Death" hidden="false" typeId="4bb2-448c-446c-f522" typeName="Battle Tactic">
+          <characteristics>
+            <characteristic name="Battle Tactic" typeId="8c0f-be41-a70e-c699">Pick 1 enemy unit on the battlefield. You complete this battle tactic if that unit is destroyed this turn by an attack made with a missile weapon used by a friendly CRYPT FLAYERS unit, CRYPT INFERNAL COURTIER or ROYAL TERRORGHEIST.</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="c9b8-d7c5-b861-7085" name="Valiant Slaying" hidden="false" typeId="4bb2-448c-446c-f522" typeName="Battle Tactic">
+          <characteristics>
+            <characteristic name="Battle Tactic" typeId="8c0f-be41-a70e-c699">Pick 1 enemy MONSTER on the battlefield. You complete this battle tactic if that unit is destroyed during this turn by an attack made by a friendly ABHORRANT.</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="1f3c-539d-9481-875b" name="Overrun" hidden="false" typeId="4bb2-448c-446c-f522" typeName="Battle Tactic">
+          <characteristics>
+            <characteristic name="Battle Tactic" typeId="8c0f-be41-a70e-c699">You complete this battle tactic if every enemy unit on the battlefield is within 3&quot; of a friendly FLESH-EATER COURTS unit at the end of the turn.</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="8cbb-d412-0812-baf3" name="Glorious Feast" hidden="false" typeId="4bb2-448c-446c-f522" typeName="Battle Tactic">
+          <characteristics>
+            <characteristic name="Battle Tactic" typeId="8c0f-be41-a70e-c699">You complete this battle tactic if every friendly unit on the battlefield is wholly within 12&quot; of a friendly FLESH-EATER COURTS HERO that has 6 noble deeds points at the end of the turn.</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="f947-9ade-3f91-5849" name="Lance Formation" hidden="false" typeId="4bb2-448c-446c-f522" typeName="Battle Tactic">
+          <characteristics>
+            <characteristic name="Battle Tactic" typeId="8c0f-be41-a70e-c699">You complete this battle tactic if 2 or more friendly KNIGHTS units made a charge move this turn and the charge roll for each of those units was 7 or more.</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="0da2-a3bb-998f-0940" name="The Ties of Chivalry" hidden="false" typeId="4bb2-448c-446c-f522" typeName="Battle Tactic">
+          <characteristics>
+            <characteristic name="Battle Tactic" typeId="8c0f-be41-a70e-c699">Pick 1 objective on the battlefield that your opponent controls. You complete this battle tactic if you control that objective at the end of your turn and it is contested by at least 1 friendly SERFS model, 1 friendly KNIGHTS model and 1 friendly COURTIER model.</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
       <categoryLinks>
         <categoryLink id="794b-b68d-b5a9-2c3d" name="New CategoryLink" hidden="false" targetId="29f4-e63d-fa5b-1611" primary="true"/>
       </categoryLinks>
@@ -125,6 +192,7 @@
         <entryLink id="45c6-14b1-8f2a-b80e" name="Artefacts of Power" hidden="false" collective="false" import="true" targetId="6cce-adab-c267-1084" type="selectionEntryGroup"/>
         <entryLink id="0fc3-ef56-4461-eae9" name="Command Traits" hidden="false" collective="false" import="true" targetId="9cb2-4c90-dd3d-7bfd" type="selectionEntryGroup"/>
         <entryLink id="93c1-713c-dd8a-c7c5" name="Flesh-eater Courts Spell Lores" hidden="false" collective="false" import="true" targetId="df52-9588-4d0d-a36a" type="selectionEntryGroup"/>
+        <entryLink id="727a-d254-f192-dd41" name="Core Battalions" hidden="false" collective="false" import="true" targetId="8c04-393d-d72d-c2a8" type="selectionEntryGroup"/>
       </entryLinks>
     </entryLink>
     <entryLink id="1ab5-3477-d8f9-c4ee" name="Abhorrant Ghoul King" hidden="false" collective="false" import="true" targetId="c746-1109-1f9e-b8b1" type="selectionEntry">
@@ -133,6 +201,7 @@
         <entryLink id="5f06-bed1-30d9-4d2e" name="Artefacts of Power" hidden="false" collective="false" import="true" targetId="6cce-adab-c267-1084" type="selectionEntryGroup"/>
         <entryLink id="6b7b-8fcd-4f73-149b" name="Command Traits" hidden="false" collective="false" import="true" targetId="9cb2-4c90-dd3d-7bfd" type="selectionEntryGroup"/>
         <entryLink id="307b-80ca-7f1c-be72" name="Flesh-eater Courts Spell Lores" hidden="false" collective="false" import="true" targetId="df52-9588-4d0d-a36a" type="selectionEntryGroup"/>
+        <entryLink id="3f6e-7467-cf70-ce5d" name="Core Battalions" hidden="false" collective="false" import="true" targetId="8c04-393d-d72d-c2a8" type="selectionEntryGroup"/>
       </entryLinks>
     </entryLink>
     <entryLink id="cd15-d767-f85d-da01" name="Abhorrant Ghoul King on Royal Terrorgheist" hidden="false" collective="false" import="true" targetId="606f-0c50-8ae0-a8fa" type="selectionEntry">
@@ -142,6 +211,7 @@
         <entryLink id="ae89-fb4a-e2c5-5d73" name="Command Traits" hidden="false" collective="false" import="true" targetId="9cb2-4c90-dd3d-7bfd" type="selectionEntryGroup"/>
         <entryLink id="c3ec-060f-ca66-be53" name="Mount Traits" hidden="false" collective="false" import="true" targetId="fa83-c120-9f4a-dd7a" type="selectionEntryGroup"/>
         <entryLink id="90dc-9d5a-c8a1-e567" name="Flesh-eater Courts Spell Lores" hidden="false" collective="false" import="true" targetId="df52-9588-4d0d-a36a" type="selectionEntryGroup"/>
+        <entryLink id="7812-5ebe-cc90-9f44" name="Core Battalions" hidden="false" collective="false" import="true" targetId="8c04-393d-d72d-c2a8" type="selectionEntryGroup"/>
       </entryLinks>
     </entryLink>
     <entryLink id="6139-3c52-93ad-e165" name="Abhorrant Ghoul King on Royal Zombie Dragon" hidden="false" collective="false" import="true" targetId="0615-3575-379c-b268" type="selectionEntry">
@@ -151,15 +221,20 @@
         <entryLink id="c83f-c161-82ea-2cab" name="Command Traits" hidden="false" collective="false" import="true" targetId="9cb2-4c90-dd3d-7bfd" type="selectionEntryGroup"/>
         <entryLink id="6cdd-e146-70de-b428" name="Mount Traits" hidden="false" collective="false" import="true" targetId="fa83-c120-9f4a-dd7a" type="selectionEntryGroup"/>
         <entryLink id="8ce0-6dba-2d23-edb4" name="Flesh-eater Courts Spell Lores" hidden="false" collective="false" import="true" targetId="df52-9588-4d0d-a36a" type="selectionEntryGroup"/>
+        <entryLink id="5375-0263-7538-3b2e" name="Core Battalions" hidden="false" collective="false" import="true" targetId="8c04-393d-d72d-c2a8" type="selectionEntryGroup"/>
       </entryLinks>
     </entryLink>
     <entryLink id="07ac-e1a2-c397-1f4d" name="Crypt Flayers" hidden="false" collective="false" import="true" targetId="6862-fb3f-a8d7-4417" type="selectionEntry">
       <modifiers>
         <modifier type="remove" field="category" value="a42d-220e-6a88-7bf6">
           <conditionGroups>
-            <conditionGroup type="and">
+            <conditionGroup type="or">
               <conditions>
-                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="1a63-aa81-76af-fbb4" type="equalTo"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4373-740f-1bf3-b0aa" type="instanceOf"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="e3a6-45ca-4974-b489" type="instanceOf"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="996a-613c-4006-25e3" type="instanceOf"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="6cd6-b22e-bfcb-9589" type="instanceOf"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="b543-cb16-0c79-fbc6" type="instanceOf"/>
                 <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2435-2008-e04b-e91a" type="equalTo"/>
               </conditions>
             </conditionGroup>
@@ -169,6 +244,9 @@
       <categoryLinks>
         <categoryLink id="ac86-d5e9-95e7-3b30" name="BATTLELINE" hidden="false" targetId="a42d-220e-6a88-7bf6" primary="false"/>
       </categoryLinks>
+      <entryLinks>
+        <entryLink id="f390-995e-5930-452b" name="Core Battalions" hidden="false" collective="false" import="true" targetId="8c04-393d-d72d-c2a8" type="selectionEntryGroup"/>
+      </entryLinks>
     </entryLink>
     <entryLink id="6c31-6800-d42d-b319" name="Crypt Ghast Courtier" hidden="false" collective="false" import="true" targetId="490c-1b07-1ec2-73bd" type="selectionEntry">
       <entryLinks>
@@ -176,28 +254,36 @@
         <entryLink id="6ddd-bcbe-ca2b-8969" name="Artefacts of Power" hidden="false" collective="false" import="true" targetId="6cce-adab-c267-1084" type="selectionEntryGroup"/>
         <entryLink id="4019-271e-b0c1-3c14" name="Command Traits" hidden="false" collective="false" import="true" targetId="9cb2-4c90-dd3d-7bfd" type="selectionEntryGroup"/>
         <entryLink id="8d96-9ff6-c5aa-5abd" name="Flesh-eater Courts Spell Lores" hidden="false" collective="false" import="true" targetId="df52-9588-4d0d-a36a" type="selectionEntryGroup"/>
+        <entryLink id="e664-2e3e-0cfc-4f35" name="Core Battalions" hidden="false" collective="false" import="true" targetId="8c04-393d-d72d-c2a8" type="selectionEntryGroup"/>
+        <entryLink id="bcbc-af85-da5d-162f" name="Prayer Scriptures" hidden="false" collective="false" import="true" targetId="e5e4-6d4a-952a-de24" type="selectionEntryGroup"/>
       </entryLinks>
     </entryLink>
-    <entryLink id="358d-3846-3e82-104e" name="Crypt Ghouls" hidden="false" collective="false" import="true" targetId="f50b-6cf9-900b-e06a" type="selectionEntry"/>
+    <entryLink id="358d-3846-3e82-104e" name="Crypt Ghouls" hidden="false" collective="false" import="true" targetId="f50b-6cf9-900b-e06a" type="selectionEntry">
+      <entryLinks>
+        <entryLink id="8808-e5d0-6b6a-49c2" name="Core Battalions" hidden="false" collective="false" import="true" targetId="8c04-393d-d72d-c2a8" type="selectionEntryGroup"/>
+      </entryLinks>
+    </entryLink>
     <entryLink id="6c41-810b-1715-6cdd" name="Crypt Haunter Courtier" hidden="false" collective="false" import="true" targetId="b82b-995d-83fd-a08e" type="selectionEntry">
       <entryLinks>
-        <entryLink id="db08-3ee6-0e94-e2cf" name="General" hidden="false" collective="false" import="true" targetId="98a4-3d6d-a7b9-399f" type="selectionEntry">
-          <categoryLinks>
-            <categoryLink id="096d-db5c-34e9-f782" name="General - Haunter Courtier" hidden="false" targetId="ce73-9354-da28-0465" primary="false"/>
-          </categoryLinks>
-        </entryLink>
+        <entryLink id="db08-3ee6-0e94-e2cf" name="General" hidden="false" collective="false" import="true" targetId="98a4-3d6d-a7b9-399f" type="selectionEntry"/>
         <entryLink id="8783-59dc-91ca-116c" name="Artefacts of Power" hidden="false" collective="false" import="true" targetId="6cce-adab-c267-1084" type="selectionEntryGroup"/>
         <entryLink id="786b-4d1c-eef2-ff9f" name="Command Traits" hidden="false" collective="false" import="true" targetId="9cb2-4c90-dd3d-7bfd" type="selectionEntryGroup"/>
         <entryLink id="805b-a922-4b26-4faf" name="Flesh-eater Courts Spell Lores" hidden="false" collective="false" import="true" targetId="df52-9588-4d0d-a36a" type="selectionEntryGroup"/>
+        <entryLink id="f922-b07d-5259-afc6" name="Core Battalions" hidden="false" collective="false" import="true" targetId="8c04-393d-d72d-c2a8" type="selectionEntryGroup"/>
+        <entryLink id="3c63-bbee-9321-77e1" name="Prayer Scriptures" hidden="false" collective="false" import="true" targetId="e5e4-6d4a-952a-de24" type="selectionEntryGroup"/>
       </entryLinks>
     </entryLink>
     <entryLink id="4232-7761-dc64-59f6" name="Crypt Horrors" hidden="false" collective="false" import="true" targetId="715b-9bdf-d8dc-69c1" type="selectionEntry">
       <modifiers>
         <modifier type="remove" field="category" value="a42d-220e-6a88-7bf6">
           <conditionGroups>
-            <conditionGroup type="and">
+            <conditionGroup type="or">
               <conditions>
-                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="ce73-9354-da28-0465" type="equalTo"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4373-740f-1bf3-b0aa" type="instanceOf"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="e3a6-45ca-4974-b489" type="instanceOf"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="996a-613c-4006-25e3" type="instanceOf"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="6cd6-b22e-bfcb-9589" type="instanceOf"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="b543-cb16-0c79-fbc6" type="instanceOf"/>
                 <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="99a9-81fd-7f39-bd28" type="equalTo"/>
               </conditions>
             </conditionGroup>
@@ -207,34 +293,35 @@
       <categoryLinks>
         <categoryLink id="7962-bf85-c56e-e02a" name="BATTLELINE" hidden="false" targetId="a42d-220e-6a88-7bf6" primary="false"/>
       </categoryLinks>
+      <entryLinks>
+        <entryLink id="a990-ce9a-b4e4-f486" name="Core Battalions" hidden="false" collective="false" import="true" targetId="8c04-393d-d72d-c2a8" type="selectionEntryGroup"/>
+      </entryLinks>
     </entryLink>
     <entryLink id="5cee-201c-34b4-2e43" name="Crypt Infernal Courtier" hidden="false" collective="false" import="true" targetId="4595-cc2e-cca7-fcf3" type="selectionEntry">
       <entryLinks>
-        <entryLink id="4985-d1a1-1678-95d6" name="General" hidden="false" collective="false" import="true" targetId="98a4-3d6d-a7b9-399f" type="selectionEntry">
-          <categoryLinks>
-            <categoryLink id="d671-5022-8b37-726f" name="General - Infernal Courtier" hidden="false" targetId="1a63-aa81-76af-fbb4" primary="false"/>
-          </categoryLinks>
-        </entryLink>
+        <entryLink id="4985-d1a1-1678-95d6" name="General" hidden="false" collective="false" import="true" targetId="98a4-3d6d-a7b9-399f" type="selectionEntry"/>
         <entryLink id="b715-0765-50fd-36da" name="Artefacts of Power" hidden="false" collective="false" import="true" targetId="6cce-adab-c267-1084" type="selectionEntryGroup"/>
         <entryLink id="6d8f-c864-6320-7628" name="Command Traits" hidden="false" collective="false" import="true" targetId="9cb2-4c90-dd3d-7bfd" type="selectionEntryGroup"/>
         <entryLink id="0feb-248e-86ed-9a9f" name="Flesh-eater Courts Spell Lores" hidden="false" collective="false" import="true" targetId="df52-9588-4d0d-a36a" type="selectionEntryGroup"/>
-      </entryLinks>
-    </entryLink>
-    <entryLink id="3855-51c3-3da1-d628" name="Duke Crakmarrow &amp; The Grymwatch (separate units)" hidden="false" collective="false" import="true" targetId="dd7b-859c-2558-afbd" type="selectionEntry">
-      <entryLinks>
-        <entryLink id="358a-5a51-909f-208d" name="General" hidden="false" collective="false" import="true" targetId="98a4-3d6d-a7b9-399f" type="selectionEntry">
-          <categoryLinks>
-            <categoryLink id="77a6-1b4b-3842-e506" name="Named General" hidden="false" targetId="8b3d-7f03-e1f9-eaf5" primary="false"/>
-          </categoryLinks>
-        </entryLink>
+        <entryLink id="fe73-fd8b-ebea-b39d" name="Core Battalions" hidden="false" collective="false" import="true" targetId="8c04-393d-d72d-c2a8" type="selectionEntryGroup"/>
+        <entryLink id="5e27-081a-4d43-49f1" name="Prayer Scriptures" hidden="false" collective="false" import="true" targetId="e5e4-6d4a-952a-de24" type="selectionEntryGroup"/>
       </entryLinks>
     </entryLink>
     <entryLink id="7801-b624-2db4-357a" name="Royal Terrorgheist" hidden="false" collective="false" import="true" targetId="dd42-4233-8238-c67f" type="selectionEntry">
       <modifierGroups>
         <modifierGroup>
-          <conditions>
-            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="db1c-f17c-4ec4-b7bc" type="greaterThan"/>
-          </conditions>
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4373-740f-1bf3-b0aa" type="notInstanceOf"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="e3a6-45ca-4974-b489" type="notInstanceOf"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="996a-613c-4006-25e3" type="notInstanceOf"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="6cd6-b22e-bfcb-9589" type="notInstanceOf"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="b543-cb16-0c79-fbc6" type="notInstanceOf"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="db1c-f17c-4ec4-b7bc" type="greaterThan"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
           <modifiers>
             <modifier type="add" field="category" value="a42d-220e-6a88-7bf6"/>
             <modifier type="remove" field="category" value="7f62-b7f5-32d5-e13b"/>
@@ -242,13 +329,25 @@
           </modifiers>
         </modifierGroup>
       </modifierGroups>
+      <entryLinks>
+        <entryLink id="6c26-b40d-a0c9-6aa6" name="Core Battalions" hidden="false" collective="false" import="true" targetId="8c04-393d-d72d-c2a8" type="selectionEntryGroup"/>
+      </entryLinks>
     </entryLink>
     <entryLink id="cf10-64f3-2e41-47cc" name="Royal Zombie Dragon" hidden="false" collective="false" import="true" targetId="cdb9-8c82-35b2-cabe" type="selectionEntry">
       <modifierGroups>
         <modifierGroup>
-          <conditions>
-            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="db1c-f17c-4ec4-b7bc" type="greaterThan"/>
-          </conditions>
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4373-740f-1bf3-b0aa" type="notInstanceOf"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="e3a6-45ca-4974-b489" type="notInstanceOf"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="996a-613c-4006-25e3" type="notInstanceOf"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="6cd6-b22e-bfcb-9589" type="notInstanceOf"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="b543-cb16-0c79-fbc6" type="notInstanceOf"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="db1c-f17c-4ec4-b7bc" type="greaterThan"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
           <modifiers>
             <modifier type="add" field="category" value="a42d-220e-6a88-7bf6"/>
             <modifier type="remove" field="category" value="7f62-b7f5-32d5-e13b"/>
@@ -256,6 +355,9 @@
           </modifiers>
         </modifierGroup>
       </modifierGroups>
+      <entryLinks>
+        <entryLink id="da3f-f7a7-67c0-17b0" name="Core Battalions" hidden="false" collective="false" import="true" targetId="8c04-393d-d72d-c2a8" type="selectionEntryGroup"/>
+      </entryLinks>
     </entryLink>
     <entryLink id="5059-01df-248f-2dd5" name="Varghulf Courtier" hidden="false" collective="false" import="true" targetId="c1a2-3281-419b-d8f2" type="selectionEntry">
       <entryLinks>
@@ -263,84 +365,150 @@
         <entryLink id="c3e5-c5c6-9a4a-1fef" name="Artefacts of Power" hidden="false" collective="false" import="true" targetId="6cce-adab-c267-1084" type="selectionEntryGroup"/>
         <entryLink id="9734-cbf2-ebce-1218" name="Command Traits" hidden="false" collective="false" import="true" targetId="9cb2-4c90-dd3d-7bfd" type="selectionEntryGroup"/>
         <entryLink id="2c34-7826-b778-9afe" name="Flesh-eater Courts Spell Lores" hidden="false" collective="false" import="true" targetId="df52-9588-4d0d-a36a" type="selectionEntryGroup"/>
+        <entryLink id="0e5c-b99f-3009-7a47" name="Core Battalions" hidden="false" collective="false" import="true" targetId="8c04-393d-d72d-c2a8" type="selectionEntryGroup"/>
+        <entryLink id="3bdc-f276-e241-c498" name="Prayer Scriptures" hidden="false" collective="false" import="true" targetId="e5e4-6d4a-952a-de24" type="selectionEntryGroup"/>
       </entryLinks>
     </entryLink>
     <entryLink id="1d36-f50b-1fe0-f02c" name="Nagash, Supreme Lord of the Undead" hidden="false" collective="false" import="true" targetId="4976-9a2a-2df9-6328" type="selectionEntry">
-      <selectionEntries>
-        <selectionEntry id="257c-e7fe-4883-3d72" name="Lore of Madness - All spells" hidden="false" collective="false" import="true" type="upgrade">
-          <modifiers>
-            <modifier type="set" field="hidden" value="true">
-              <conditionGroups>
-                <conditionGroup type="or">
-                  <conditions>
-                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4373-740f-1bf3-b0aa" type="instanceOf"/>
-                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="e3a6-45ca-4974-b489" type="instanceOf"/>
-                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="996a-613c-4006-25e3" type="instanceOf"/>
-                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="6cd6-b22e-bfcb-9589" type="instanceOf"/>
-                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="b543-cb16-0c79-fbc6" type="instanceOf"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
-            </modifier>
-            <modifier type="set" field="a947-90de-070c-457d" value="0">
-              <conditionGroups>
-                <conditionGroup type="or">
-                  <conditions>
-                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4373-740f-1bf3-b0aa" type="instanceOf"/>
-                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="e3a6-45ca-4974-b489" type="instanceOf"/>
-                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="996a-613c-4006-25e3" type="instanceOf"/>
-                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="6cd6-b22e-bfcb-9589" type="instanceOf"/>
-                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="b543-cb16-0c79-fbc6" type="instanceOf"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
-            </modifier>
-          </modifiers>
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="5fe5-d57d-454e-d9f3" type="max"/>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="a947-90de-070c-457d" type="min"/>
-          </constraints>
-          <profiles>
-            <profile id="ccd0-b7cf-d221-9306" name="Bonestorm" hidden="false" typeId="13da-11a8-b7d1-77a7" typeName="Spell">
-              <characteristics>
-                <characteristic name="Spell" typeId="1170-c916-1b73-ae34">Bonestorm has a casting value of 5. If successfully cast, roll a dice for each enemy unit within 12&quot; of the caster. On a 2+ that unit suffers 1 mortal wound.</characteristic>
-              </characteristics>
-            </profile>
-            <profile id="8373-9fb0-5daa-3c6c" name="Spectral Host" hidden="false" typeId="13da-11a8-b7d1-77a7" typeName="Spell">
-              <characteristics>
-                <characteristic name="Spell" typeId="1170-c916-1b73-ae34">Spectral Host has a casting value of 6. If successfully cast, pick 1 friendly unit wholly within 12&quot; of the caster that is visible to them. That unit can fly until your next hero phase. If that unit can already fly, until your next hero phase it can run and still charge in the same turn. If the casting roll was 10 or more, you can pick up to 3 friendly units to be affected by the spell instead of 1.</characteristic>
-              </characteristics>
-            </profile>
-            <profile id="70bb-16bb-8593-87a7" name="Monstrous Vigour" hidden="false" typeId="13da-11a8-b7d1-77a7" typeName="Spell">
-              <characteristics>
-                <characteristic name="Spell" typeId="1170-c916-1b73-ae34">Monstrous Vigour has a casting value of 5. If successfully cast, pick 1 friendly FLESH-EATER COURTS MONSTER within 24&quot; of the caster that is visible to them. Until your next hero phase, when you look up a value on that MONSTER’s damage table, that MONSTER is treated as if it has suffered 0 wounds.</characteristic>
-              </characteristics>
-            </profile>
-            <profile id="b168-7a90-5a14-b030" name="Miasmal Sword" hidden="false" typeId="13da-11a8-b7d1-77a7" typeName="Spell">
-              <characteristics>
-                <characteristic name="Spell" typeId="1170-c916-1b73-ae34">Miasmal Shroud has a casting value of 5. If successfully cast, pick 1 enemy unit within 18&quot; of the caster that is visible to them and roll 3 dice. For each 5+ that unit suffers 1 mortal wound. In addition, if you rolled a triple, subtract 1 from hit and wound rolls for that unit until your next hero phase. If you rolled a double, subtract 1 from hit rolls only for that unit until your next hero phase.</characteristic>
-              </characteristics>
-            </profile>
-            <profile id="ad0c-6867-e5e8-f0df" name="Deranged Transformation" hidden="false" typeId="13da-11a8-b7d1-77a7" typeName="Spell">
-              <characteristics>
-                <characteristic name="Spell" typeId="1170-c916-1b73-ae34">Deranged Transformation has a casting value of 6. If successfully cast, pick 1 friendly unit with a Wounds characteristic of up to 6 that is wholly within 24&quot; of the caster and visible to them. Add that unit’s Wounds characteristic to its Move characteristic until your next hero phase. For example, if the unit had a Wounds characteristic of 6, you would add 6&quot; to its Move characteristic. If the casting roll was 10 or more, you can pick up to 3 friendly units to be affected by the spell instead of 1.</characteristic>
-              </characteristics>
-            </profile>
-            <profile id="8c9d-91f8-de27-7a17" name="Blood Feast" hidden="false" typeId="13da-11a8-b7d1-77a7" typeName="Spell">
-              <characteristics>
-                <characteristic name="Spell" typeId="1170-c916-1b73-ae34">Blood Feast has a casting value of 7. If successfully cast, pick 1 enemy unit within 12&quot; of the caster that is visible to them, and a friendly FLESH-EATER COURTS unit within 6&quot; of that enemy unit. The enemy unit suffers D3 mortal wounds. If the casting roll was 10 or more, the enemy unit suffers D6 mortal wounds instead of D3 mortal wounds.
+      <profiles>
+        <profile id="09a9-c68c-f16c-0338" name="Miasmal Shroud" hidden="false" typeId="13da-11a8-b7d1-77a7" typeName="Spell">
+          <characteristics>
+            <characteristic name="Spell" typeId="1170-c916-1b73-ae34">Miasmal Shroud is a spell that has a casting value of 6 and a range of 18&quot;. If successfully cast, pick 1 enemy unit within range and visible to the caster, and roll 6 dice. If 2 or more dice share the same value, that unit suffers 1 mortal wound. If 3 or more dice share the same value, subtract 1 from hit rolls for attacks made by that unit until your next hero phase (in addition to the previous effect). If 4 or more dice share the same value, subtract 1 from wound rolls for attacks made by that unit until your next hero phase (in addition to the previous effects).
 
-Then, for each mortal wound that was inflicted on the enemy unit, you can heal 1 wound allocated to the friendly unit. If the friendly unit has a Wounds characteristic of 1, for each mortal wound that was inflicted on the enemy unit, you can return 1 slain model to the friendly unit instead.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <costs>
-            <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
-          </costs>
-        </selectionEntry>
-      </selectionEntries>
+If the casting roll was 10 or more, roll 8 dice instead of 6. Each effect can only be triggered once, even if there is more than one set of dice with the same value.</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="6e76-c07a-aebd-69f6" name="Deranged Transformation" hidden="false" typeId="13da-11a8-b7d1-77a7" typeName="Spell">
+          <characteristics>
+            <characteristic name="Spell" typeId="1170-c916-1b73-ae34">Deranged Transformation is a spell that has a casting value of 6 and a range of 24&quot;. If successfully cast, pick 1 friendly FLESH-EATER COURTS unit wholly within range and visible to the caster that has a Wounds characteristic of 7 or less. Until your next hero phase, add 2&quot; to that unit’s Move characteristic and add 1 to wound rolls for attacks made by that unit.
+
+If the casting roll was 10 or more, you can pick up to 3 different friendly units to be affected by the spell instead of 1.</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="8ace-4ad3-450a-4362" name="Crimson Victuals" hidden="false" typeId="13da-11a8-b7d1-77a7" typeName="Spell">
+          <characteristics>
+            <characteristic name="Spell" typeId="1170-c916-1b73-ae34">Crimson Victuals is a spell that has a casting value of 6 and a range of 18&quot;. If successfully cast, pick 1 enemy unit within range of the caster, and a friendly FLESH-EATER COURTS unit that has a Wounds characteristic of 1 and is within 6&quot; of that enemy unit. The enemy unit suffers D3 mortal wounds. Then, for each mortal wound that was caused to the enemy unit and not negated, you can return 1 slain model to the friendly unit.
+
+If the casting roll was 10 or more, the enemy unit suffers 2D3 mortal wounds instead of D3 mortal wounds.</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
       <entryLinks>
         <entryLink id="aa8a-1d00-d748-c32c" name="Bonus General" hidden="false" collective="false" import="true" targetId="c608-7a89-b2b4-124d" type="selectionEntry"/>
+        <entryLink id="eaab-ec65-99f4-1f4c" name="Core Battalions" hidden="false" collective="false" import="true" targetId="8c04-393d-d72d-c2a8" type="selectionEntryGroup"/>
+      </entryLinks>
+    </entryLink>
+    <entryLink id="fc00-56de-34cc-a22f" name="Abhorrent Cardinal" hidden="false" collective="false" import="true" targetId="b135-25a8-5a74-817c" type="selectionEntry">
+      <entryLinks>
+        <entryLink id="d22f-9ec6-349b-7af4" name="Core Battalions" hidden="false" collective="false" import="true" targetId="8c04-393d-d72d-c2a8" type="selectionEntryGroup"/>
+        <entryLink id="7eb0-02ae-37ea-c8ff" name="General" hidden="false" collective="false" import="true" targetId="98a4-3d6d-a7b9-399f" type="selectionEntry"/>
+        <entryLink id="695b-ac00-b9ea-6809" name="Artefacts of Power" hidden="false" collective="false" import="true" targetId="6cce-adab-c267-1084" type="selectionEntryGroup"/>
+        <entryLink id="2f04-fcae-facf-1edb" name="Flesh-eater Courts Spell Lores" hidden="false" collective="false" import="true" targetId="df52-9588-4d0d-a36a" type="selectionEntryGroup"/>
+        <entryLink id="710e-5810-6c5d-421f" name="Command Traits" hidden="false" collective="false" import="true" targetId="9cb2-4c90-dd3d-7bfd" type="selectionEntryGroup"/>
+        <entryLink id="3236-223f-a6c6-b946" name="Prayer Scriptures" hidden="false" collective="false" import="true" targetId="e5e4-6d4a-952a-de24" type="selectionEntryGroup"/>
+      </entryLinks>
+    </entryLink>
+    <entryLink id="d1a1-2db4-6452-ba2a" name="Abhorrent Gorewarden" hidden="false" collective="false" import="true" targetId="a204-bf93-1601-9e6d" type="selectionEntry">
+      <entryLinks>
+        <entryLink id="a663-dd21-0825-1c43" name="Core Battalions" hidden="false" collective="false" import="true" targetId="8c04-393d-d72d-c2a8" type="selectionEntryGroup"/>
+        <entryLink id="6dd5-1aca-f30b-389a" name="Flesh-eater Courts Spell Lores" hidden="false" collective="false" import="true" targetId="df52-9588-4d0d-a36a" type="selectionEntryGroup"/>
+        <entryLink id="89d4-e740-9962-4617" name="General" hidden="false" collective="false" import="true" targetId="98a4-3d6d-a7b9-399f" type="selectionEntry">
+          <categoryLinks>
+            <categoryLink id="270e-1ec9-18cd-2195" name="General - Abhorrent Gorewarden" hidden="false" targetId="00a4-8568-6e45-b2c6" primary="false"/>
+          </categoryLinks>
+        </entryLink>
+        <entryLink id="50ef-81fc-2814-787e" name="Artefacts of Power" hidden="false" collective="false" import="true" targetId="6cce-adab-c267-1084" type="selectionEntryGroup"/>
+        <entryLink id="c8d9-0bde-56d3-08b8" name="Command Traits" hidden="false" collective="false" import="true" targetId="9cb2-4c90-dd3d-7bfd" type="selectionEntryGroup"/>
+      </entryLinks>
+    </entryLink>
+    <entryLink id="6dc7-5b99-eac5-bc3c" name="Cryptguard" hidden="false" collective="false" import="true" targetId="12bf-3b4b-2d8a-3b7d" type="selectionEntry">
+      <modifiers>
+        <modifier type="remove" field="category" value="a42d-220e-6a88-7bf6">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4373-740f-1bf3-b0aa" type="instanceOf"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="e3a6-45ca-4974-b489" type="instanceOf"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="996a-613c-4006-25e3" type="instanceOf"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="6cd6-b22e-bfcb-9589" type="instanceOf"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="b543-cb16-0c79-fbc6" type="instanceOf"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="4981-0265-a5fd-a9cb" type="equalTo"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+      <categoryLinks>
+        <categoryLink id="bd43-7228-cf19-ce0e" name="Battleline" hidden="false" targetId="a42d-220e-6a88-7bf6" primary="false"/>
+      </categoryLinks>
+      <entryLinks>
+        <entryLink id="5769-b111-d145-4f5d" name="Core Battalions" hidden="false" collective="false" import="true" targetId="8c04-393d-d72d-c2a8" type="selectionEntryGroup"/>
+      </entryLinks>
+    </entryLink>
+    <entryLink id="e4ec-6609-89d0-3c38" name="Grand Justice Gormayne" hidden="false" collective="false" import="true" targetId="b81b-dd18-78fb-8d47" type="selectionEntry">
+      <entryLinks>
+        <entryLink id="3c9e-e511-d8de-179c" name="Core Battalions" hidden="false" collective="false" import="true" targetId="8c04-393d-d72d-c2a8" type="selectionEntryGroup"/>
+        <entryLink id="d168-8003-20a8-4706" name="General" hidden="false" collective="false" import="true" targetId="98a4-3d6d-a7b9-399f" type="selectionEntry">
+          <categoryLinks>
+            <categoryLink id="a549-4233-4f9e-185f" name="Named General" hidden="false" targetId="8b3d-7f03-e1f9-eaf5" primary="false"/>
+          </categoryLinks>
+        </entryLink>
+      </entryLinks>
+    </entryLink>
+    <entryLink id="700e-2e99-8ccb-95d3" name="Marrowscroll Herald" hidden="false" collective="false" import="true" targetId="0f0f-a53c-373b-bbe3" type="selectionEntry">
+      <entryLinks>
+        <entryLink id="4f81-44c0-53b4-1f9c" name="Core Battalions" hidden="false" collective="false" import="true" targetId="8c04-393d-d72d-c2a8" type="selectionEntryGroup"/>
+        <entryLink id="7c64-eb0a-8119-141d" name="Artefacts of Power" hidden="false" collective="false" import="true" targetId="6cce-adab-c267-1084" type="selectionEntryGroup"/>
+        <entryLink id="8fd8-3cfc-1759-24fb" name="General" hidden="false" collective="false" import="true" targetId="98a4-3d6d-a7b9-399f" type="selectionEntry"/>
+        <entryLink id="1776-ac4c-027b-1bf4" name="Flesh-eater Courts Spell Lores" hidden="false" collective="false" import="true" targetId="df52-9588-4d0d-a36a" type="selectionEntryGroup"/>
+        <entryLink id="4dc4-2b9a-76b4-eae9" name="Command Traits" hidden="false" collective="false" import="true" targetId="9cb2-4c90-dd3d-7bfd" type="selectionEntryGroup"/>
+        <entryLink id="62e0-af4e-bd26-6503" name="Prayer Scriptures" hidden="false" collective="false" import="true" targetId="e5e4-6d4a-952a-de24" type="selectionEntryGroup"/>
+      </entryLinks>
+    </entryLink>
+    <entryLink id="6210-e322-92f8-71eb" name="Morbheg Knights" hidden="false" collective="false" import="true" targetId="9002-9789-9d86-0ffc" type="selectionEntry">
+      <modifiers>
+        <modifier type="remove" field="category" value="a42d-220e-6a88-7bf6">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4373-740f-1bf3-b0aa" type="instanceOf"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="e3a6-45ca-4974-b489" type="instanceOf"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="996a-613c-4006-25e3" type="instanceOf"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="6cd6-b22e-bfcb-9589" type="instanceOf"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="b543-cb16-0c79-fbc6" type="instanceOf"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="00a4-8568-6e45-b2c6" type="equalTo"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+      <categoryLinks>
+        <categoryLink id="3c67-cb52-9ccf-e0e3" name="Battleline" hidden="false" targetId="a42d-220e-6a88-7bf6" primary="false"/>
+      </categoryLinks>
+      <entryLinks>
+        <entryLink id="a365-5029-402a-f4cd" name="Core Battalions" hidden="false" collective="false" import="true" targetId="8c04-393d-d72d-c2a8" type="selectionEntryGroup"/>
+      </entryLinks>
+    </entryLink>
+    <entryLink id="89bd-a45f-13c9-c3f8" name="Royal Beastflayers" hidden="false" collective="false" import="true" targetId="f432-ded7-55fb-d90f" type="selectionEntry">
+      <entryLinks>
+        <entryLink id="644a-4c5c-f980-113a" name="Core Battalions" hidden="false" collective="false" import="true" targetId="8c04-393d-d72d-c2a8" type="selectionEntryGroup"/>
+      </entryLinks>
+    </entryLink>
+    <entryLink id="2762-781d-4dcb-23f6" name="Royal Decapitator" hidden="false" collective="false" import="true" targetId="f969-be4b-a570-2aee" type="selectionEntry">
+      <entryLinks>
+        <entryLink id="6518-5305-90d3-30b6" name="Core Battalions" hidden="false" collective="false" import="true" targetId="8c04-393d-d72d-c2a8" type="selectionEntryGroup"/>
+        <entryLink id="b230-6c79-c78f-cd8c" name="General" hidden="false" collective="false" import="true" targetId="98a4-3d6d-a7b9-399f" type="selectionEntry"/>
+        <entryLink id="bf6f-8287-c95f-14c5" name="Artefacts of Power" hidden="false" collective="false" import="true" targetId="6cce-adab-c267-1084" type="selectionEntryGroup"/>
+        <entryLink id="830f-bb04-016b-2618" name="Flesh-eater Courts Spell Lores" hidden="false" collective="false" import="true" targetId="df52-9588-4d0d-a36a" type="selectionEntryGroup"/>
+        <entryLink id="1e8d-19cd-d5d5-a96c" name="Command Traits" hidden="false" collective="false" import="true" targetId="9cb2-4c90-dd3d-7bfd" type="selectionEntryGroup"/>
+        <entryLink id="6a2c-88b8-e585-027b" name="Prayer Scriptures" hidden="false" collective="false" import="true" targetId="e5e4-6d4a-952a-de24" type="selectionEntryGroup"/>
+      </entryLinks>
+    </entryLink>
+    <entryLink id="8221-0a17-93b7-292c" name="Ushoran, Mortarch of Delusion" hidden="false" collective="false" import="true" targetId="4ce1-d410-9fff-68ca" type="selectionEntry">
+      <entryLinks>
+        <entryLink id="6e3d-c1aa-51f6-49e0" name="Bonus General" hidden="false" collective="false" import="true" targetId="c608-7a89-b2b4-124d" type="selectionEntry"/>
+        <entryLink id="fba3-a590-8bb2-317b" name="Core Battalions" hidden="false" collective="false" import="true" targetId="8c04-393d-d72d-c2a8" type="selectionEntryGroup"/>
+        <entryLink id="a2e3-402c-d0b1-ad9e" name="Flesh-eater Courts Spell Lores" hidden="false" collective="false" import="true" targetId="df52-9588-4d0d-a36a" type="selectionEntryGroup"/>
       </entryLinks>
     </entryLink>
   </entryLinks>
@@ -352,22 +520,22 @@ Then, for each mortal wound that was inflicted on the enemy unit, you can heal 1
       <profiles>
         <profile id="93c7-78f4-8657-5d28" name="Terrain Feature - Charnel Throne" hidden="false" typeId="d508-c1d5-a06f-0103" typeName="Scenery Set-Up">
           <characteristics>
-            <characteristic name="Set-Up Rules" typeId="fb13-8187-bb28-76fe">After territories are determined, you can set up this faction terrain feature wholly within your territory and more than 3&quot; from all objectives and other terrain features. If both players can set up faction terrain features at the same time, they must roll off and the winner chooses who sets up their faction terrain features first.</characteristic>
+            <characteristic name="Set-Up Rules" typeId="fb13-8187-bb28-76fe">After territories are determined, you can set up this faction terrain feature wholly within your territory and more than 3&quot; from all objectives and other terrain features. If both players can set up faction terrain features at the same time, they must roll off and the winner chooses who sets up their faction terrain features first</characteristic>
           </characteristics>
         </profile>
         <profile id="1be2-260e-ae38-22e7" name="Defensible" hidden="false" typeId="1c58-2b3d-482e-2a35" typeName="Scenery Rules">
           <characteristics>
-            <characteristic name="Scenery Rule" typeId="a333-0c4a-7f67-677c">This terrain feature is a defensible terrain feature that can be garrisoned by 1 Hero with a Wounds characteristic of 8 or less.</characteristic>
+            <characteristic name="Scenery Rule" typeId="a333-0c4a-7f67-677c">This terrain feature is a defensible terrain feature that can be garrisoned by 1 FLESH-EATER COURTS HERO that has a Wounds characteristic of up to 7.</characteristic>
           </characteristics>
         </profile>
         <profile id="2b8c-f5b9-457c-5016" name="Ghoulish Landmark" hidden="false" typeId="1c58-2b3d-482e-2a35" typeName="Scenery Rules">
           <characteristics>
-            <characteristic name="Scenery Rule" typeId="a333-0c4a-7f67-677c">Add 1 to the Bravery characteristic of Flesh-eater Courts units that are within 1&quot; of any Charnel Thrones. Subtract 1 from the Bravery characteristic of other units that are within 1&quot; of any Charnel Thrones.</characteristic>
+            <characteristic name="Scenery Rule" typeId="a333-0c4a-7f67-677c">While an enemy unit is within 12&quot; of this terrain feature, it cannot be affected by any abilities that allow units to ignore battleshock tests.</characteristic>
           </characteristics>
         </profile>
-        <profile id="4908-329f-22b0-4a5e" name="Ruler of All He Surveys" hidden="false" typeId="1c58-2b3d-482e-2a35" typeName="Scenery Rules">
+        <profile id="4908-329f-22b0-4a5e" name="Ruler of All They Survey" hidden="false" typeId="1c58-2b3d-482e-2a35" typeName="Scenery Rules">
           <characteristics>
-            <characteristic name="Scenery Rule" typeId="a333-0c4a-7f67-677c">If you use the Summon Men-at-arms or Summon Imperial Guard command ability and the model you pick to issue the command is within 1&quot; of this terrain feature, you can do so without a command point being spent.</characteristic>
+            <characteristic name="Scenery Rule" typeId="a333-0c4a-7f67-677c">At the start of your hero phase, add D3 noble deeds points to any friendly FLESH-EATER COURTS HERO that is garrisoning this terrain feature.</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -416,108 +584,77 @@ Then, for each mortal wound that was inflicted on the enemy unit, you can heal 1
             </profile>
             <profile id="0b9d-a5f1-6296-21db" name="Grand Courts" hidden="false" typeId="c0c2-177b-e761-ec41" typeName="Allegiance Abilities">
               <characteristics>
-                <characteristic name="Allegiance Ability" typeId="0506-f62d-68b3-5499">After you have chosen the Flesh-eater Courts allegiance for your army, you can choose one of the following Grand Court keywords. All FLESH-EATER COURTS units in your army gain that keyword. You cannot pick or roll a delusion (see below) for a Grand Court, but all units with that keyword benefit from the extra abilities detailed for that Grand Court.
+                <characteristic name="Allegiance Ability" typeId="0506-f62d-68b3-5499">You can pick 1 of the following subfactions for your army. All FLESH-EATER COURTS units in your army gain the keyword of the subfaction you picked, and you can use the allegiance abilities for that subfaction. If a unit already has a different subfaction keyword on its warscroll, it can not gain another one. This does not preclude you from including the unit in your army, but you cannot use the allegiance abilities for its subfaction.
 
 • MORGAUNT
 • HOLLOWMOURNE
 • BLISTERSKIN
-• GRISTLEGORE
-
-If a model already has a Grand Court keyword on its warscroll, it cannot gain another one. This does not preclude you from including the unit in your army, but you cannot use the allegiance abilities for its Grand Court.</characteristic>
+• GRISTLEGORE</characteristic>
               </characteristics>
             </profile>
             <profile id="2adf-f6c7-b1dc-e148" name="Courts of Delusion" hidden="false" typeId="c0c2-177b-e761-ec41" typeName="Allegiance Abilities">
               <characteristics>
-                <characteristic name="Allegiance Ability" typeId="0506-f62d-68b3-5499">Before you select your general’s command trait, pick one of the delusions for the army to have. Alternatively, you can roll a dice to randomly determine the delusion the army has. The delusion applies to all friendly FLESH-EATER COURTS units for the duration of the battle, even if the general is slain (if you must select a new general during the battle, do not generate a new delusion for the army).</characteristic>
+                <characteristic name="Allegiance Ability" typeId="0506-f62d-68b3-5499">In the first battle round, after the players have received their starting command points but before the start of the first turn, you can pick 1 of the following delusions to apply during the battle:
+
+• The Royal Hunt: Add 1 to wound rolls for attacks made by friendly FLESH-EATER COURTS units that target a MONSTER.
+
+• Crusading Army: Add 1 to run rolls and charge rolls for friendly FLESH-EATER COURTS units.
+
+• Defenders of the Realm: Add 1 to save rolls for friendly FLESH-EATER COURTS units while they are contesting an objective that you control.
+
+• The Grand Tournament: Add 1 to hit rolls for attacks made by friendly FLESH-EATER COURTS HEROES that are not a general if they made a charge move in the same turn.
+
+• The Feast Day: The Feeding Frenzy ability applies to friendly FLESH-EATER COURTS units while they are wholly within 12&quot; of any friendly HEROES that have 4 or more noble deeds points instead of 6 noble deeds points.</characteristic>
               </characteristics>
             </profile>
             <profile id="e68f-6c6c-5fc2-96f1" name="Feeding Frenzy" hidden="false" typeId="6364-f76d-fc0c-80bc" typeName="Command Abilities">
               <characteristics>
-                <characteristic name="Command Ability" typeId="36cb-f8a4-d94b-8aa8">You can use this command ability in the combat phase after a friendly FLESH-EATER COURTS unit has fought for the first time in that phase and is wholly within 12&quot; of a friendly FLESH-EATER COURTS HERO or wholly within 18&quot; of a friendly FLESH-EATER COURTS HERO that is a general. If you do so, that unit can immediately make a pile-in move and then attack with all of the melee weapons it is armed with for a second time. You cannot pick the same unit to benefit from this ability more than once per phase.</characteristic>
+                <characteristic name="Command Ability" typeId="36cb-f8a4-d94b-8aa8">Add 1 to the Attacks characteristic of melee weapons used by friendly FLESH-EATER COURTS units while they are wholly within 12&quot; of any friendly HEROES that have 6 noble deeds points.</characteristic>
+              </characteristics>
+            </profile>
+            <profile id="661f-42b8-c2f7-e985" name="Noble Deeds" hidden="false" typeId="c0c2-177b-e761-ec41" typeName="Allegiance Abilities">
+              <characteristics>
+                <characteristic name="Allegiance Ability" typeId="0506-f62d-68b3-5499">• Each time a friendly FLESH-EATER COURTS HERO successfully casts a spell that is not unbound, give 1 noble deeds point to that HERO.
+
+• Each time a prayer chanted by a friendly FLESHEATER COURTS HERO is answered, give 1 noble deeds point to that Hero.
+
+• Each time a friendly FLESH-EATER COURTS HERO fights, after all of its attacks have been resolved, give that HERO a number of noble deeds points equal to the number of wounds and/or mortal wounds caused by that HERO in that phase that were allocated to enemy units. Do not count wounds and/or mortal wounds caused by that HERO’s mount. Each time a friendly ABHORRANT fights, if that unit is mounted, any wounds caused by attacks made by the rider must be allocated first, followed by wounds allocated by attacks made by its mount.
+
+Each FLESH-EATER COURTS HERO can have a maximum of 6 noble deeds points at any one time (it cannot be given any more until the number of noble deeds points it has is reduced to less than 6).</characteristic>
+              </characteristics>
+            </profile>
+            <profile id="bb02-f564-9487-7b6e" name="Muster Guard" hidden="false" typeId="c0c2-177b-e761-ec41" typeName="Allegiance Abilities">
+              <characteristics>
+                <characteristic name="Allegiance Ability" typeId="0506-f62d-68b3-5499">At the end of your movement phase, each friendly COURTIER can spend 1 of their noble deeds points to return 1 slain model to a friendly SERFS unit that is within 10&quot; of them, or 2 of their noble deeds points to return 1 slain model to a friendly KNIGHTS unit that is within 10&quot; of them. You can use this ability multiple times each turn as long as the required noble deeds points are available.</characteristic>
+              </characteristics>
+            </profile>
+            <profile id="071b-036e-98e8-ce03" name="Summon Loyal Subjects" hidden="false" typeId="c0c2-177b-e761-ec41" typeName="Allegiance Abilities">
+              <characteristics>
+                <characteristic name="Allegiance Ability" typeId="0506-f62d-68b3-5499">At the end of your movement phase, each friendly ABHORRANT can spend 6 of their noble deeds points to summon loyal subjects. If they do so, pick 1 friendly SERFS or KNIGHTS unit that has been destroyed and add a new replacement unit identical to that unit to your army with half of the models from the unit that was destroyed (rounding up). Replacement units must be set up wholly within 6&quot; of the edge of the battlefield and more than 9&quot; from all enemy units. Each destroyed unit can only be replaced once - replacement units cannot themselves Ee replaced. Remaining models which are not set up as part of the replacement unit count as having been slain and can be returned to the replacement unit using, for example, the Muster Guard ability or Rally command ability.</characteristic>
+              </characteristics>
+            </profile>
+            <profile id="e581-1fb0-fc16-97e9" name="Rousing Oration" hidden="false" typeId="1193-4081-af87-68cd" typeName="Heroic Action/Monstrous Rampage">
+              <characteristics>
+                <characteristic name="Effect" typeId="faec-beac-0874-3c6e">Pick 1 friendly FLESH-EATER COURTS HERO and roll a dice for each other friendly FLESH-EATER COURTS unit wholly within 12&quot; of that HERO. For each 5+, give 1 noble deeds point to that HERO.</characteristic>
+              </characteristics>
+            </profile>
+            <profile id="9619-1d40-db86-6ff6" name="Scent of Blood" hidden="false" typeId="1193-4081-af87-68cd" typeName="Heroic Action/Monstrous Rampage">
+              <characteristics>
+                <characteristic name="Effect" typeId="faec-beac-0874-3c6e">Pick 1 friendly FLESH-EATER COURTS HERO and roll a dice. On a 3+, you can make a D6&quot; move with that HERO, but it must finish that move more than 3&quot; from all enemy units and closer to an enemy unit that has any wounds allocated to it.</characteristic>
+              </characteristics>
+            </profile>
+            <profile id="4821-18ae-e02c-9c6a" name="Delectable Appetisers" hidden="false" typeId="1193-4081-af87-68cd" typeName="Heroic Action/Monstrous Rampage">
+              <characteristics>
+                <characteristic name="Effect" typeId="faec-beac-0874-3c6e">Pick 1 enemy unit that has a Wounds characteristic of 2 or less and is within 3&quot; of this unit and roll a dice. On a 3+, that enemy unit suffers D3 mortal wounds. Then, for each mortal wound that was caused to that enemy unit and not negated, this unit heals 1 wound.</characteristic>
+              </characteristics>
+            </profile>
+            <profile id="dbab-05f3-cc87-52e0" name="Bloodcurdling Shriek" hidden="false" typeId="1193-4081-af87-68cd" typeName="Heroic Action/Monstrous Rampage">
+              <characteristics>
+                <characteristic name="Effect" typeId="faec-beac-0874-3c6e">Pick 1 enemy unit within 3&quot; of this unit and roll a dice. On a 3+, subtract 2 from the Bravery characteristic of that enemy unit until the end of the turn.</characteristic>
               </characteristics>
             </profile>
           </profiles>
           <selectionEntryGroups>
-            <selectionEntryGroup id="43b0-2176-a8f6-9231" name="Delusion" hidden="false" collective="false" import="true">
-              <constraints>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="619c-2ce4-4891-b1de" type="max"/>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="3330-a194-370d-bbc2" type="min"/>
-              </constraints>
-              <selectionEntries>
-                <selectionEntry id="28ae-1293-a928-a036" name="6 ~ Defenders of the Realm" hidden="false" collective="false" import="true" type="upgrade">
-                  <profiles>
-                    <profile id="625e-57a6-9d44-8606" name="Defenders of the Realm" hidden="false" typeId="03e9-6de7-c98a-cd1d" typeName="Delusion">
-                      <characteristics>
-                        <characteristic name="Delusion" typeId="8268-4880-8285-1491">You can re-roll save rolls of 1 for friendly FLESH-EATER COURTS units that have at least half their models wholly within their own territory.</characteristic>
-                      </characteristics>
-                    </profile>
-                  </profiles>
-                  <costs>
-                    <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
-                  </costs>
-                </selectionEntry>
-                <selectionEntry id="d186-5f25-2c86-84f5" name="5 ~ The Grand Tournament" hidden="false" collective="false" import="true" type="upgrade">
-                  <profiles>
-                    <profile id="7e4c-58fb-4a1f-da23" name="The Grand Tournament" hidden="false" typeId="03e9-6de7-c98a-cd1d" typeName="Delusion">
-                      <characteristics>
-                        <characteristic name="Delusion" typeId="8268-4880-8285-1491">You can re-roll hit rolls of 1 for attacks made by friendly FLESH-EATER COURTS HEROES other than your general.</characteristic>
-                      </characteristics>
-                    </profile>
-                  </profiles>
-                  <costs>
-                    <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
-                  </costs>
-                </selectionEntry>
-                <selectionEntry id="442c-b138-b4ad-fc02" name="3 ~ The Feast Day" hidden="false" collective="false" import="true" type="upgrade">
-                  <profiles>
-                    <profile id="adcd-2934-c09f-2e86" name="The Feast Day" hidden="false" typeId="03e9-6de7-c98a-cd1d" typeName="Delusion">
-                      <characteristics>
-                        <characteristic name="Delusion" typeId="8268-4880-8285-1491">Once per turn, you can use the Feeding Frenzy command ability without a command point being spent.</characteristic>
-                      </characteristics>
-                    </profile>
-                  </profiles>
-                  <costs>
-                    <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
-                  </costs>
-                </selectionEntry>
-                <selectionEntry id="6178-75f7-a3bb-1579" name="4 ~ A Matter of Honour" hidden="false" collective="false" import="true" type="upgrade">
-                  <profiles>
-                    <profile id="e68f-caf4-d05b-67cc" name="A Matter of Honour" hidden="false" typeId="03e9-6de7-c98a-cd1d" typeName="Delusion">
-                      <characteristics>
-                        <characteristic name="Delusion" typeId="8268-4880-8285-1491">You can re-roll hit rolls of 1 for attacks made by friendly FLESH-EATER COURTS units that target a HERO. If the target is a general, you can re-roll wound rolls of 1 as well.</characteristic>
-                      </characteristics>
-                    </profile>
-                  </profiles>
-                  <costs>
-                    <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
-                  </costs>
-                </selectionEntry>
-                <selectionEntry id="10d8-8570-3128-7244" name="2 ~ The Royal Hunt" hidden="false" collective="false" import="true" type="upgrade">
-                  <profiles>
-                    <profile id="d667-abbf-3195-106f" name="The Royal Hunt" hidden="false" typeId="03e9-6de7-c98a-cd1d" typeName="Delusion">
-                      <characteristics>
-                        <characteristic name="Delusion" typeId="8268-4880-8285-1491">You can re-roll hit rolls of 1 and wound rolls of 1 for attacks made by friendly FLESH-EATER COURTS units that target a MONSTER.</characteristic>
-                      </characteristics>
-                    </profile>
-                  </profiles>
-                  <costs>
-                    <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
-                  </costs>
-                </selectionEntry>
-                <selectionEntry id="5f31-facb-4434-23ab" name="1 ~ Crusading Army" hidden="false" collective="false" import="true" type="upgrade">
-                  <profiles>
-                    <profile id="bac2-ff76-3273-2ea2" name="Crusading Army" hidden="false" typeId="03e9-6de7-c98a-cd1d" typeName="Delusion">
-                      <characteristics>
-                        <characteristic name="Delusion" typeId="8268-4880-8285-1491">Add 1 to run and charge rolls for friendly FLESH-EATER COURTS units.</characteristic>
-                      </characteristics>
-                    </profile>
-                  </profiles>
-                  <costs>
-                    <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
-                  </costs>
-                </selectionEntry>
-              </selectionEntries>
-            </selectionEntryGroup>
             <selectionEntryGroup id="3f38-33ff-6db5-4b91" name="Grand Courts" hidden="false" collective="false" import="true">
               <constraints>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="481c-6d66-9ed6-77cf" type="max"/>
@@ -525,14 +662,9 @@ If a model already has a Grand Court keyword on its warscroll, it cannot gain an
               <selectionEntries>
                 <selectionEntry id="4981-0265-a5fd-a9cb" name="Morgaunt" hidden="false" collective="false" import="true" type="upgrade">
                   <profiles>
-                    <profile id="c96c-1fc9-a94b-9044" name="Bloody Loyalty" hidden="false" typeId="c0c2-177b-e761-ec41" typeName="Allegiance Abilities">
+                    <profile id="c96c-1fc9-a94b-9044" name="Morgaunt Kingdoms" hidden="false" typeId="c0c2-177b-e761-ec41" typeName="Allegiance Abilities">
                       <characteristics>
-                        <characteristic name="Allegiance Ability" typeId="0506-f62d-68b3-5499">You can re-roll hit rolls of 1 for friendly MORGAUNT COURTIER units that are wholly within 12&quot; of a friendly MORGAUNT SERFS unit. In addition, while a friendly MORGAUNT SERFS unit is wholly within 12&quot; of a friendly MORGAUNT COURTIER, its Boundless Ferocity ability activates if the SERFS unit has 10 or more models.</characteristic>
-                      </characteristics>
-                    </profile>
-                    <profile id="1f1e-0061-ffba-87a9" name="Heaving Masses" hidden="false" typeId="6364-f76d-fc0c-80bc" typeName="Command Abilities">
-                      <characteristics>
-                        <characteristic name="Command Ability" typeId="36cb-f8a4-d94b-8aa8">You can use this command ability when a friendly MORGAUNT SERFS unit is destroyed. If you do so, roll a dice. On a 4+ a new unit identical to the one that was destroyed is added to your army. Set up the new unit wholly within 6&quot; of the edge of the battlefield and more than 9&quot; from any enemy models.</characteristic>
+                        <characteristic name="Allegiance Ability" typeId="0506-f62d-68b3-5499">Give 1 noble deeds point to each friendly MORGAUNT FLESH-EATER COURTS HERO at the end of the turn if that HERO is contesting an objective.</characteristic>
                       </characteristics>
                     </profile>
                   </profiles>
@@ -542,14 +674,9 @@ If a model already has a Grand Court keyword on its warscroll, it cannot gain an
                 </selectionEntry>
                 <selectionEntry id="99a9-81fd-7f39-bd28" name="Hollowmourne" hidden="false" collective="false" import="true" type="upgrade">
                   <profiles>
-                    <profile id="1909-d228-63df-1c2a" name="Shattering Charge" hidden="false" typeId="c0c2-177b-e761-ec41" typeName="Allegiance Abilities">
+                    <profile id="1909-d228-63df-1c2a" name="Grisly Cavaliers" hidden="false" typeId="c0c2-177b-e761-ec41" typeName="Allegiance Abilities">
                       <characteristics>
-                        <characteristic name="Allegiance Ability" typeId="0506-f62d-68b3-5499">You can re-roll wound rolls of 1 for attacks made with melee weapons by friendly HOLLOWMOURNE COURTIER units and friendly HOLLOWMOURNE KNIGHTS units that have made a charge move in the same turn.</characteristic>
-                      </characteristics>
-                    </profile>
-                    <profile id="3141-a4f3-b3c9-9222" name="Ravenous Crusaders" hidden="false" typeId="6364-f76d-fc0c-80bc" typeName="Command Abilities">
-                      <characteristics>
-                        <characteristic name="Command Ability" typeId="36cb-f8a4-d94b-8aa8">You can use this command ability at the start of your hero phase. If you do so, pick 1 friendly HOLLOWMOURNE unit wholly within 9&quot; of a friendly HOLLOWMOURNE HERO, or wholly within 18&quot; of a friendly HOLLOWMOURNE HERO that is a general. Add 1 to run and charge rolls for that unit until your next hero phase. In addition, until your next hero phase, that unit can run and still charge later in the same turn.</characteristic>
+                        <characteristic name="Allegiance Ability" typeId="0506-f62d-68b3-5499">Add 1 to the Damage characteristic of melee weapons used by friendly HOLLOWMOURNE KNIGHTS units that have made a charge move in the same turn. This ability has no effect on attacks made by mounts.</characteristic>
                       </characteristics>
                     </profile>
                   </profiles>
@@ -559,14 +686,9 @@ If a model already has a Grand Court keyword on its warscroll, it cannot gain an
                 </selectionEntry>
                 <selectionEntry id="2435-2008-e04b-e91a" name="Blisterskin" hidden="false" collective="false" import="true" type="upgrade">
                   <profiles>
-                    <profile id="9a9e-0afd-68cc-58ed" name="Blistering Speed" hidden="false" typeId="c0c2-177b-e761-ec41" typeName="Allegiance Abilities">
+                    <profile id="9a9e-0afd-68cc-58ed" name="Pious Nobility" hidden="false" typeId="c0c2-177b-e761-ec41" typeName="Allegiance Abilities">
                       <characteristics>
-                        <characteristic name="Allegiance Ability" typeId="0506-f62d-68b3-5499">Add 2&quot; to the Move characteristic of BLISTERSKIN units.</characteristic>
-                      </characteristics>
-                    </profile>
-                    <profile id="82ba-8885-c1fb-3e72" name="Lords of the Burning Skies" hidden="false" typeId="6364-f76d-fc0c-80bc" typeName="Command Abilities">
-                      <characteristics>
-                        <characteristic name="Command Ability" typeId="36cb-f8a4-d94b-8aa8">You can use this command ability at the start of your movement phase. If you do so, pick 1 friendly BLISTERSKIN unit that can fly and which is wholly within 12&quot; of a friendly BLISTERSKIN HERO, or wholly within 18&quot; of a friendly BLISTERSKIN HERO that is a general. Remove that unit from the battlefield and then set it up again anywhere on the battlefield more than 9&quot; from any enemy units. It may not move later in that movement phase.</characteristic>
+                        <characteristic name="Allegiance Ability" typeId="0506-f62d-68b3-5499">Friendly ABHORRANTS gain the PRIEST keyword but they cannot cast spells and chant prayers in the same hero phase.</characteristic>
                       </characteristics>
                     </profile>
                   </profiles>
@@ -576,14 +698,9 @@ If a model already has a Grand Court keyword on its warscroll, it cannot gain an
                 </selectionEntry>
                 <selectionEntry id="db1c-f17c-4ec4-b7bc" name="Gristlegore" hidden="false" collective="false" import="true" type="upgrade">
                   <profiles>
-                    <profile id="c804-d581-6019-2cab" name="Peerless Ferocity" hidden="false" typeId="c0c2-177b-e761-ec41" typeName="Allegiance Abilities">
+                    <profile id="c804-d581-6019-2cab" name="Savage Strike" hidden="false" typeId="c0c2-177b-e761-ec41" typeName="Allegiance Abilities">
                       <characteristics>
-                        <characteristic name="Allegiance Ability" typeId="0506-f62d-68b3-5499">If the unmodified hit roll for an attack made by a GRISTLEGORE HERO or GRISTLEGORE MONSTER is 6, that attack inflicts 2 hits on that target instead of 1. Make a wound and save roll for each hit.</characteristic>
-                      </characteristics>
-                    </profile>
-                    <profile id="da2e-784b-b231-af43" name="Call to War" hidden="false" typeId="6364-f76d-fc0c-80bc" typeName="Command Abilities">
-                      <characteristics>
-                        <characteristic name="Command Ability" typeId="36cb-f8a4-d94b-8aa8">You can use this command ability in the combat phase if a friendly GRISTLEGORE HERO or GRISTLEGORE MONSTER that has not fought in that phase is slain while it is wholly within 12&quot; of a friendly GRISTLEGORE HERO, or wholly within 18&quot; of a friendly GRISTLEGORE HERO that is a general. If you do so, before that model is removed from play, it can make a pile-in move and then attack with all of the melee weapons it is armed with. You cannot pick the same unit to benefit from this ability more than once per phase.</characteristic>
+                        <characteristic name="Allegiance Ability" typeId="0506-f62d-68b3-5499">At the start of your combat phase, you can pick 1 friendly GRISTLEGORE MONSTER on the battlefield. The strike-first effect applies to that MONSTER until the end of the phase.</characteristic>
                       </characteristics>
                     </profile>
                   </profiles>
@@ -634,7 +751,7 @@ If a model already has a Grand Court keyword on its warscroll, it cannot gain an
         <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="bc91-149d-d9d6-d132" type="max"/>
       </constraints>
       <selectionEntryGroups>
-        <selectionEntryGroup id="e93e-66b6-27dc-91a3" name="Terrorgheist Traits" hidden="false" collective="false" import="true">
+        <selectionEntryGroup id="e93e-66b6-27dc-91a3" name="Royal Terrorgheist Traits" hidden="false" collective="false" import="true">
           <modifiers>
             <modifier type="set" field="hidden" value="true">
               <conditions>
@@ -646,23 +763,11 @@ If a model already has a Grand Court keyword on its warscroll, it cannot gain an
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="580d-4411-c5cc-a070" type="max"/>
           </constraints>
           <selectionEntries>
-            <selectionEntry id="b27c-0097-fb73-2324" name="6 ~ Devastating Scream" hidden="false" collective="false" import="true" type="upgrade">
-              <profiles>
-                <profile id="919a-5d33-0264-c717" name="Devastating Scream" hidden="false" typeId="1106-4ffe-461f-3738" typeName="Mount Traits">
-                  <characteristics>
-                    <characteristic name="Mount Trait" typeId="b537-bbd6-f068-4655">Add 1 to each of the Death Shriek values on this model’s damage table.</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-              <costs>
-                <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
-              </costs>
-            </selectionEntry>
-            <selectionEntry id="53bb-1d0c-6a33-777e" name="5 ~ Gruesome Bite" hidden="false" collective="false" import="true" type="upgrade">
+            <selectionEntry id="53bb-1d0c-6a33-777e" name="1 ~ Gruesome Bite" hidden="false" collective="false" import="true" type="upgrade">
               <profiles>
                 <profile id="975b-3993-794c-d90f" name="Gruesome Bite" hidden="false" typeId="1106-4ffe-461f-3738" typeName="Mount Traits">
                   <characteristics>
-                    <characteristic name="Mount Trait" typeId="b537-bbd6-f068-4655">You can re-roll failed hit rolls for attacks made with this mount’s Fanged Maw.</characteristic>
+                    <characteristic name="Mount Trait" typeId="b537-bbd6-f068-4655">Add 1 to the Attacks characteristic of this unit’s Fanged Maw.</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
@@ -670,23 +775,11 @@ If a model already has a Grand Court keyword on its warscroll, it cannot gain an
                 <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
               </costs>
             </selectionEntry>
-            <selectionEntry id="8496-5d81-9622-30db" name="2 ~ Razor-clawed" hidden="false" collective="false" import="true" type="upgrade">
-              <profiles>
-                <profile id="39ed-b502-f8a9-d8e9" name="Razor-clawed" hidden="false" typeId="1106-4ffe-461f-3738" typeName="Mount Traits">
-                  <characteristics>
-                    <characteristic name="Mount Trait" typeId="b537-bbd6-f068-4655">Improve the Rend characteristic of this mount’s melee weapons by 1.</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-              <costs>
-                <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
-              </costs>
-            </selectionEntry>
-            <selectionEntry id="c9de-e428-3153-c5fb" name="4 ~ Horribly Resilient" hidden="false" collective="false" import="true" type="upgrade">
+            <selectionEntry id="c9de-e428-3153-c5fb" name="2 ~ Horribly Resilient" hidden="false" collective="false" import="true" type="upgrade">
               <profiles>
                 <profile id="c518-2a6e-477b-2efa" name="Horribly Resilient" hidden="false" typeId="1106-4ffe-461f-3738" typeName="Mount Traits">
                   <characteristics>
-                    <characteristic name="Mount Trait" typeId="b537-bbd6-f068-4655">This model’s Royal Blood ability heals up to 3 wounds instead of up to D3 wounds.</characteristic>
+                    <characteristic name="Mount Trait" typeId="b537-bbd6-f068-4655">This unit’s Royal Blood ability heals up to 2D3 wounds instead of up to D3 wounds.</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
@@ -694,23 +787,11 @@ If a model already has a Grand Court keyword on its warscroll, it cannot gain an
                 <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
               </costs>
             </selectionEntry>
-            <selectionEntry id="35b4-1c7b-e81e-6c75" name="3 ~ Horribly Infested" hidden="false" collective="false" import="true" type="upgrade">
+            <selectionEntry id="35b4-1c7b-e81e-6c75" name="3 ~ Morbheg&apos;s Swiftness" hidden="false" collective="false" import="true" type="upgrade">
               <profiles>
-                <profile id="cecc-ebf8-5469-0b16" name="Horribly Infested" hidden="false" typeId="1106-4ffe-461f-3738" typeName="Mount Traits">
+                <profile id="cecc-ebf8-5469-0b16" name="Morbheg&apos;s Swiftness" hidden="false" typeId="1106-4ffe-461f-3738" typeName="Mount Traits">
                   <characteristics>
-                    <characteristic name="Mount Trait" typeId="b537-bbd6-f068-4655">This model’s Infested ability inflicts 3 mortal wounds instead of D3 mortal wounds.</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-              <costs>
-                <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
-              </costs>
-            </selectionEntry>
-            <selectionEntry id="5f48-3edc-f787-384c" name="1 ~ Deathly Fast" hidden="false" collective="false" import="true" type="upgrade">
-              <profiles>
-                <profile id="1171-292c-1dea-f416" name="Deathly Fast" hidden="false" typeId="1106-4ffe-461f-3738" typeName="Mount Traits">
-                  <characteristics>
-                    <characteristic name="Mount Trait" typeId="b537-bbd6-f068-4655">This model can run and still shoot in the same turn.</characteristic>
+                    <characteristic name="Mount Trait" typeId="b537-bbd6-f068-4655">This unit can retreat and still charge later in the turn.</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
@@ -732,11 +813,11 @@ If a model already has a Grand Court keyword on its warscroll, it cannot gain an
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="bac1-2ccc-b0af-ce43" type="max"/>
           </constraints>
           <selectionEntries>
-            <selectionEntry id="0b5c-46ae-1c03-2372" name="6 ~ Death From The Skies" hidden="false" collective="false" import="true" type="upgrade">
+            <selectionEntry id="0b5c-46ae-1c03-2372" name="2 ~ Death From The Skies" hidden="false" collective="false" import="true" type="upgrade">
               <profiles>
                 <profile id="62ea-fd2e-9925-f209" name="Death From The Skies" hidden="false" typeId="1106-4ffe-461f-3738" typeName="Mount Traits">
                   <characteristics>
-                    <characteristic name="Mount Trait" typeId="b537-bbd6-f068-4655">Instead of setting up this model on the battlefield, you can place it to one side and say that it is soaring in the skies in reserve. If you do so, at the end of your first movement phase, you must set up this unit on the battlefield more than 9&quot; from any enemy units.</characteristic>
+                    <characteristic name="Mount Trait" typeId="b537-bbd6-f068-4655">Instead of setting up this unit on the battlefield, you can place it to one side and say that it is soaring in the skies in reserve. If you do so, at the end of your first movement phase, you must set up this unit on the battlefield more than 9&quot; from all enemy units.</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
@@ -744,23 +825,11 @@ If a model already has a Grand Court keyword on its warscroll, it cannot gain an
                 <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
               </costs>
             </selectionEntry>
-            <selectionEntry id="2ac3-ca7b-2ff5-8ca1" name="5 ~ Necrotic Fangs" hidden="false" collective="false" import="true" type="upgrade">
-              <profiles>
-                <profile id="ebdc-b3c5-5018-d209" name="Necrotic Fangs" hidden="false" typeId="1106-4ffe-461f-3738" typeName="Mount Traits">
-                  <characteristics>
-                    <characteristic name="Mount Trait" typeId="b537-bbd6-f068-4655">You can re-roll the Damage characteristic roll for this model’s Snapping Maw.</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-              <costs>
-                <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
-              </costs>
-            </selectionEntry>
-            <selectionEntry id="1736-7522-1e06-d236" name="3 ~ Baneful Breath" hidden="false" collective="false" import="true" type="upgrade">
+            <selectionEntry id="1736-7522-1e06-d236" name="1 ~ Baneful Breath" hidden="false" collective="false" import="true" type="upgrade">
               <profiles>
                 <profile id="3a32-f3a6-5231-724f" name="Baneful Breath" hidden="false" typeId="1106-4ffe-461f-3738" typeName="Mount Traits">
                   <characteristics>
-                    <characteristic name="Mount Trait" typeId="b537-bbd6-f068-4655">You can re-roll wound rolls for attacks made with this model’s Pestilential Breath.</characteristic>
+                    <characteristic name="Mount Trait" typeId="b537-bbd6-f068-4655">Improve the Rend characteristic of this unit’s Pestilential Breath by 1.</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
@@ -768,35 +837,11 @@ If a model already has a Grand Court keyword on its warscroll, it cannot gain an
                 <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
               </costs>
             </selectionEntry>
-            <selectionEntry id="37d4-6b32-8d98-00f8" name="1 ~ Deathly Fast" hidden="false" collective="false" import="true" type="upgrade">
+            <selectionEntry id="d277-078a-2724-07ea" name="3 ~ Venerated Zombie Dragon" hidden="false" collective="false" import="true" type="upgrade">
               <profiles>
-                <profile id="5f09-ac3b-401e-0a98" name="Deathly Fast" hidden="false" typeId="1106-4ffe-461f-3738" typeName="Mount Traits">
+                <profile id="0820-ce7b-36b1-22dc" name="Venerated Zombie Dragon" hidden="false" typeId="1106-4ffe-461f-3738" typeName="Mount Traits">
                   <characteristics>
-                    <characteristic name="Mount Trait" typeId="b537-bbd6-f068-4655">This model can run and still shoot in the same turn.</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-              <costs>
-                <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
-              </costs>
-            </selectionEntry>
-            <selectionEntry id="d277-078a-2724-07ea" name="2 ~ Razor-clawed" hidden="false" collective="false" import="true" type="upgrade">
-              <profiles>
-                <profile id="0820-ce7b-36b1-22dc" name="Razor-clawed" hidden="false" typeId="1106-4ffe-461f-3738" typeName="Mount Traits">
-                  <characteristics>
-                    <characteristic name="Mount Trait" typeId="b537-bbd6-f068-4655">Improve the Rend characteristic of this mount’s melee weapons by 1.</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-              <costs>
-                <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
-              </costs>
-            </selectionEntry>
-            <selectionEntry id="3174-507d-27d0-1ec9" name="4 ~ Horribly Resilient" hidden="false" collective="false" import="true" type="upgrade">
-              <profiles>
-                <profile id="77e8-32a9-5240-953c" name="Horribly Resilient" hidden="false" typeId="1106-4ffe-461f-3738" typeName="Mount Traits">
-                  <characteristics>
-                    <characteristic name="Mount Trait" typeId="b537-bbd6-f068-4655">This model’s Royal Blood ability heals up to 3 wounds instead of up to D3 wounds.</characteristic>
+                    <characteristic name="Mount Trait" typeId="b537-bbd6-f068-4655">Add 1 to hit rolls for friendly FLESH-EATER COURTS MONSTERs while they are wholly within 12&quot; of this unit.</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
@@ -859,31 +904,16 @@ If a model already has a Grand Court keyword on its warscroll, it cannot gain an
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="af9f-13c4-98de-7d21" type="max"/>
           </constraints>
           <selectionEntries>
-            <selectionEntry id="0b36-ffe4-814f-208d" name="5 - Deranged Transformation" hidden="false" collective="false" import="true" type="upgrade">
+            <selectionEntry id="0b36-ffe4-814f-208d" name="2 - Deranged Transformation" hidden="false" collective="false" import="true" type="upgrade">
               <constraints>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="03f4-7763-3340-7542" type="max"/>
               </constraints>
               <profiles>
                 <profile id="6765-443e-228c-c8e2" name="Deranged Transformation" hidden="false" typeId="13da-11a8-b7d1-77a7" typeName="Spell">
                   <characteristics>
-                    <characteristic name="Spell" typeId="1170-c916-1b73-ae34">Deranged Transformation has a casting value of 6. If successfully cast, pick 1 friendly unit with a Wounds characteristic of up to 6 that is wholly within 24&quot; of the caster and visible to them. Add that unit’s Wounds characteristic to its Move characteristic until your next hero phase. For example, if the unit had a Wounds characteristic of 6, you would add 6&quot; to its Move characteristic. If the casting roll was 10 or more, you can pick up to 3 friendly units to be affected by the spell instead of 1.</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-              <costs>
-                <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
-              </costs>
-            </selectionEntry>
-            <selectionEntry id="ec6f-9946-4e15-d048" name="6 - Blood Feast" hidden="false" collective="false" import="true" type="upgrade">
-              <constraints>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="aa65-11a1-ef21-51bc" type="max"/>
-              </constraints>
-              <profiles>
-                <profile id="1e49-e01b-f280-7b82" name="Blood Feast" hidden="false" typeId="13da-11a8-b7d1-77a7" typeName="Spell">
-                  <characteristics>
-                    <characteristic name="Spell" typeId="1170-c916-1b73-ae34">Blood Feast has a casting value of 7. If successfully cast, pick 1 enemy unit within 12&quot; of the caster that is visible to them, and a friendly FLESH-EATER COURTS unit within 6&quot; of that enemy unit. The enemy unit suffers D3 mortal wounds. If the casting roll was 10 or more, the enemy unit suffers D6 mortal wounds instead of D3 mortal wounds.
+                    <characteristic name="Spell" typeId="1170-c916-1b73-ae34">Deranged Transformation is a spell that has a casting value of 6 and a range of 24&quot;. If successfully cast, pick 1 friendly FLESH-EATER COURTS unit wholly within range and visible to the caster that has a Wounds characteristic of 7 or less. Until your next hero phase, add 2&quot; to that unit’s Move characteristic and add 1 to wound rolls for attacks made by that unit.
 
-Then, for each mortal wound that was inflicted on the enemy unit, you can heal 1 wound allocated to the friendly unit. If the friendly unit has a Wounds characteristic of 1, for each mortal wound that was inflicted on the enemy unit, you can return 1 slain model to the friendly unit instead.</characteristic>
+If the casting roll was 10 or more, you can pick up to 3 different friendly units to be affected by the spell instead of 1.</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
@@ -891,14 +921,16 @@ Then, for each mortal wound that was inflicted on the enemy unit, you can heal 1
                 <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
               </costs>
             </selectionEntry>
-            <selectionEntry id="f06a-29eb-8bfa-7630" name="4 - Miasmal Sword" hidden="false" collective="false" import="true" type="upgrade">
+            <selectionEntry id="f06a-29eb-8bfa-7630" name="1 - Miasmal Shroud" hidden="false" collective="false" import="true" type="upgrade">
               <constraints>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="7403-7b43-92be-19d0" type="max"/>
               </constraints>
               <profiles>
-                <profile id="724f-cc9a-adf2-e07d" name="Miasmal Sword" hidden="false" typeId="13da-11a8-b7d1-77a7" typeName="Spell">
+                <profile id="724f-cc9a-adf2-e07d" name="Miasmal Shroud" hidden="false" typeId="13da-11a8-b7d1-77a7" typeName="Spell">
                   <characteristics>
-                    <characteristic name="Spell" typeId="1170-c916-1b73-ae34">Miasmal Shroud has a casting value of 5. If successfully cast, pick 1 enemy unit within 18&quot; of the caster that is visible to them and roll 3 dice. For each 5+ that unit suffers 1 mortal wound. In addition, if you rolled a triple, subtract 1 from hit and wound rolls for that unit until your next hero phase. If you rolled a double, subtract 1 from hit rolls only for that unit until your next hero phase.</characteristic>
+                    <characteristic name="Spell" typeId="1170-c916-1b73-ae34">Miasmal Shroud is a spell that has a casting value of 6 and a range of 18&quot;. If successfully cast, pick 1 enemy unit within range and visible to the caster, and roll 6 dice. If 2 or more dice share the same value, that unit suffers 1 mortal wound. If 3 or more dice share the same value, subtract 1 from hit rolls for attacks made by that unit until your next hero phase (in addition to the previous effect). If 4 or more dice share the same value, subtract 1 from wound rolls for attacks made by that unit until your next hero phase (in addition to the previous effects).
+
+If the casting roll was 10 or more, roll 8 dice instead of 6. Each effect can only be triggered once, even if there is more than one set of dice with the same value.</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
@@ -906,44 +938,16 @@ Then, for each mortal wound that was inflicted on the enemy unit, you can heal 1
                 <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
               </costs>
             </selectionEntry>
-            <selectionEntry id="e634-d0a8-2460-6cbb" name="3 - Monstrous Vigour" hidden="false" collective="false" import="true" type="upgrade">
+            <selectionEntry id="e634-d0a8-2460-6cbb" name="3 - Crimson Victuals" hidden="false" collective="false" import="true" type="upgrade">
               <constraints>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="4051-bb8b-caed-fc36" type="max"/>
               </constraints>
               <profiles>
-                <profile id="dbf0-eb94-9c33-88ab" name="Monstrous Vigour" hidden="false" typeId="13da-11a8-b7d1-77a7" typeName="Spell">
+                <profile id="dbf0-eb94-9c33-88ab" name="Crimson Victuals" hidden="false" typeId="13da-11a8-b7d1-77a7" typeName="Spell">
                   <characteristics>
-                    <characteristic name="Spell" typeId="1170-c916-1b73-ae34">Monstrous Vigour has a casting value of 5. If successfully cast, pick 1 friendly FLESH-EATER COURTS MONSTER within 24&quot; of the caster that is visible to them. Until your next hero phase, when you look up a value on that MONSTER’s damage table, that MONSTER is treated as if it has suffered 0 wounds.</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-              <costs>
-                <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
-              </costs>
-            </selectionEntry>
-            <selectionEntry id="f1f2-dd20-7a14-c5e2" name="2 - Spectral Host" hidden="false" collective="false" import="true" type="upgrade">
-              <constraints>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="9e12-2e5c-544c-0cb2" type="max"/>
-              </constraints>
-              <profiles>
-                <profile id="5ef8-419f-1af7-1808" name="Spectral Host" hidden="false" typeId="13da-11a8-b7d1-77a7" typeName="Spell">
-                  <characteristics>
-                    <characteristic name="Spell" typeId="1170-c916-1b73-ae34">Spectral Host has a casting value of 6. If successfully cast, pick 1 friendly unit wholly within 12&quot; of the caster that is visible to them. That unit can fly until your next hero phase. If that unit can already fly, until your next hero phase, it can run and still charge in the same turn. If the casting roll was 10 or more, you can pick up to 3 different friendly units to be affected by the spell instead of 1.</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-              <costs>
-                <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
-              </costs>
-            </selectionEntry>
-            <selectionEntry id="38e3-e746-70c2-13c5" name="1 - Bonestorm" hidden="false" collective="false" import="true" type="upgrade">
-              <constraints>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="ddb3-86e4-305a-0753" type="max"/>
-              </constraints>
-              <profiles>
-                <profile id="c110-d77c-f069-d815" name="Bonestorm" hidden="false" typeId="13da-11a8-b7d1-77a7" typeName="Spell">
-                  <characteristics>
-                    <characteristic name="Spell" typeId="1170-c916-1b73-ae34">Bonestorm has a casting value of 5. If successfully cast, roll a dice for each enemy unit within 12&quot; of the caster. On a 2+ that unit suffers 1 mortal wound.</characteristic>
+                    <characteristic name="Spell" typeId="1170-c916-1b73-ae34">Crimson Victuals is a spell that has a casting value of 6 and a range of 18&quot;. If successfully cast, pick 1 enemy unit within range of the caster, and a friendly FLESH-EATER COURTS unit that has a Wounds characteristic of 1 and is within 6&quot; of that enemy unit. The enemy unit suffers D3 mortal wounds. Then, for each mortal wound that was caused to the enemy unit and not negated, you can return 1 slain model to the friendly unit.
+
+If the casting roll was 10 or more, the enemy unit suffers 2D3 mortal wounds instead of D3 mortal wounds.</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
@@ -955,7 +959,7 @@ Then, for each mortal wound that was inflicted on the enemy unit, you can heal 1
         </selectionEntryGroup>
       </selectionEntryGroups>
       <entryLinks>
-        <entryLink id="8d54-b98a-3f75-63a5" name="Universal Spell Lore" hidden="false" collective="false" import="true" targetId="93f7-7e2a-3308-d150" type="selectionEntryGroup"/>
+        <entryLink id="8d54-b98a-3f75-63a5" name="Rulebook Spell Lores" hidden="false" collective="false" import="true" targetId="8aee-7492-ee73-6d07" type="selectionEntryGroup"/>
       </entryLinks>
     </selectionEntryGroup>
     <selectionEntryGroup id="6cce-adab-c267-1084" name="Artefacts of Power" hidden="false" collective="false" import="true">
@@ -980,144 +984,6 @@ Then, for each mortal wound that was inflicted on the enemy unit, you can heal 1
       <categoryLinks>
         <categoryLink id="d622-8a77-7fdc-ae3d" name="Artefacts" hidden="false" targetId="ba14-5553-456e-33ad" primary="false"/>
       </categoryLinks>
-      <selectionEntries>
-        <selectionEntry id="1dfe-2453-50b2-1ff0" name="0 -- Ghurish Mawshard" hidden="false" collective="false" import="true" type="upgrade">
-          <modifiers>
-            <modifier type="set" field="hidden" value="true">
-              <conditions>
-                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="db1c-f17c-4ec4-b7bc" type="equalTo"/>
-              </conditions>
-            </modifier>
-            <modifier type="set" field="b0e2-4733-f7ed-7753" value="1.0">
-              <conditionGroups>
-                <conditionGroup type="and">
-                  <conditions>
-                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="ba14-5553-456e-33ad" type="greaterThan"/>
-                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="db1c-f17c-4ec4-b7bc" type="greaterThan"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
-            </modifier>
-          </modifiers>
-          <constraints>
-            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="fc13-fefd-2e6d-73d5" type="max"/>
-            <constraint field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="b0e2-4733-f7ed-7753" type="min"/>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="a672-2aaa-e640-849b" type="max"/>
-          </constraints>
-          <profiles>
-            <profile id="49a1-3531-7f85-903c" name="Ghurish Mawshard" hidden="false" typeId="0c9d-7abe-a53c-6a37" typeName="Artefacts">
-              <characteristics>
-                <characteristic name="Artefact" typeId="44b6-de26-0b54-1318">Once per battle, at the start of the combat phase, you can pick 1 enemy model within 1&quot; of the bearer and roll a dice. If the roll is greater than that model’s Wounds characteristic, that model is slain.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <costs>
-            <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="12b2-5ae4-d0a5-b8d0" name="0 -- Eye of Hysh" hidden="false" collective="false" import="true" type="upgrade">
-          <modifiers>
-            <modifier type="set" field="hidden" value="true">
-              <conditions>
-                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2435-2008-e04b-e91a" type="equalTo"/>
-              </conditions>
-            </modifier>
-            <modifier type="set" field="4d10-ed3f-e830-def5" value="1.0">
-              <conditionGroups>
-                <conditionGroup type="and">
-                  <conditions>
-                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="ba14-5553-456e-33ad" type="greaterThan"/>
-                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2435-2008-e04b-e91a" type="greaterThan"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
-            </modifier>
-          </modifiers>
-          <constraints>
-            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="036b-c49d-3918-f9e8" type="max"/>
-            <constraint field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="4d10-ed3f-e830-def5" type="min"/>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="15c7-f93a-c7e9-421e" type="max"/>
-          </constraints>
-          <profiles>
-            <profile id="de40-a9b4-07b2-2fce" name="Eye of Hysh" hidden="false" typeId="0c9d-7abe-a53c-6a37" typeName="Artefacts">
-              <characteristics>
-                <characteristic name="Artefact" typeId="44b6-de26-0b54-1318">Subtract 1 from hit rolls for attacks made with missile weapons that target a friendly BLISTERSKIN unit wholly within 6&quot; of the bearer.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <costs>
-            <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="e755-397f-795d-36e4" name="0 -- Corpsefane Gauntlet" hidden="false" collective="false" import="true" type="upgrade">
-          <modifiers>
-            <modifier type="set" field="hidden" value="true">
-              <conditions>
-                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="99a9-81fd-7f39-bd28" type="equalTo"/>
-              </conditions>
-            </modifier>
-            <modifier type="set" field="4998-2e2b-4d01-2810" value="1.0">
-              <conditionGroups>
-                <conditionGroup type="and">
-                  <conditions>
-                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="ba14-5553-456e-33ad" type="greaterThan"/>
-                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="99a9-81fd-7f39-bd28" type="greaterThan"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
-            </modifier>
-          </modifiers>
-          <constraints>
-            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="c2ea-76af-1f33-0021" type="max"/>
-            <constraint field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="4998-2e2b-4d01-2810" type="min"/>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="927f-d100-0984-10e2" type="max"/>
-          </constraints>
-          <profiles>
-            <profile id="d6ef-671e-98ca-1acf" name="Corpsefane Gauntlet" hidden="false" typeId="0c9d-7abe-a53c-6a37" typeName="Artefacts">
-              <characteristics>
-                <characteristic name="Artefact" typeId="44b6-de26-0b54-1318">After this model makes a charge move, you can pick 1 enemy unit within 1&quot; of this model and roll a dice. On a 2+ that enemy unit suffers D3 mortal wounds.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <costs>
-            <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="10d5-5048-d231-59cc" name="0 -- Decrepit Coronet" hidden="false" collective="false" import="true" type="upgrade">
-          <modifiers>
-            <modifier type="set" field="hidden" value="true">
-              <conditions>
-                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="4981-0265-a5fd-a9cb" type="equalTo"/>
-              </conditions>
-            </modifier>
-            <modifier type="set" field="44cd-87c7-8103-14e7" value="1.0">
-              <conditionGroups>
-                <conditionGroup type="and">
-                  <conditions>
-                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="ba14-5553-456e-33ad" type="greaterThan"/>
-                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="4981-0265-a5fd-a9cb" type="greaterThan"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
-            </modifier>
-          </modifiers>
-          <constraints>
-            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="0341-ce0e-668f-a04f" type="max"/>
-            <constraint field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="44cd-87c7-8103-14e7" type="min"/>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="fa95-01d8-0bd3-37c0" type="max"/>
-          </constraints>
-          <profiles>
-            <profile id="d161-3c75-410c-ce2d" name="Decrepit Coronet" hidden="false" typeId="0c9d-7abe-a53c-6a37" typeName="Artefacts">
-              <characteristics>
-                <characteristic name="Artefact" typeId="44b6-de26-0b54-1318">Do not take battleshock tests for friendly MORGAUNT units while they are wholly within 12&quot; of the bearer, or wholly within 18&quot; of the bearer if the bearer is your general.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <costs>
-            <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
-          </costs>
-        </selectionEntry>
-      </selectionEntries>
       <selectionEntryGroups>
         <selectionEntryGroup id="5cf8-1703-c9b4-de6a" name="Royal Treasury" hidden="false" collective="false" import="true">
           <modifiers>
@@ -1131,14 +997,14 @@ Then, for each mortal wound that was inflicted on the enemy unit, you can heal 1
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="bbf7-33e4-eaca-0b6f" type="max"/>
           </constraints>
           <selectionEntries>
-            <selectionEntry id="bcf0-6728-9b3a-aa44" name="6 -- Heart of the Gargant" hidden="false" collective="false" import="true" type="upgrade">
+            <selectionEntry id="bcf0-6728-9b3a-aa44" name="3 -- Heart of the Gargant" hidden="false" collective="false" import="true" type="upgrade">
               <constraints>
                 <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="e73d-035c-a1a1-9cbf" type="max"/>
               </constraints>
               <profiles>
                 <profile id="5f9f-714c-14b5-718d" name="Heart of the Gargant" hidden="false" typeId="0c9d-7abe-a53c-6a37" typeName="Artefacts">
                   <characteristics>
-                    <characteristic name="Artefact" typeId="44b6-de26-0b54-1318">Once per battle, at the start of the combat phase, the bearer can use this artefact. If they do so, you can re-roll failed wound rolls for the bearer and their mount in that phase.</characteristic>
+                    <characteristic name="Artefact" typeId="44b6-de26-0b54-1318">Once per battle, at the start of the combat phase, the bearer can use this artefact. If they do so, add 1 to the Attacks characteristic of melee weapons used by the bearer and their mount in that phase.</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
@@ -1146,29 +1012,14 @@ Then, for each mortal wound that was inflicted on the enemy unit, you can heal 1
                 <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
               </costs>
             </selectionEntry>
-            <selectionEntry id="ec78-2e6b-851d-28fb" name="5 -- The Dermal Robe" hidden="false" collective="false" import="true" type="upgrade">
-              <constraints>
-                <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="f965-65d2-eb89-e650" type="max"/>
-              </constraints>
-              <profiles>
-                <profile id="9fe0-d4ab-7c09-45cf" name="The Dermal Robe" hidden="false" typeId="0c9d-7abe-a53c-6a37" typeName="Artefacts">
-                  <characteristics>
-                    <characteristic name="Artefact" typeId="44b6-de26-0b54-1318">Add 1 to casting, dispelling and unbinding rolls for the bearer.</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-              <costs>
-                <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
-              </costs>
-            </selectionEntry>
-            <selectionEntry id="ce98-7160-9ad5-0618" name="4 -- The Grim Garland" hidden="false" collective="false" import="true" type="upgrade">
+            <selectionEntry id="ce98-7160-9ad5-0618" name="1 -- The Grim Garland" hidden="false" collective="false" import="true" type="upgrade">
               <constraints>
                 <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="5241-71db-415a-8ffd" type="max"/>
               </constraints>
               <profiles>
                 <profile id="5926-91f1-ea5e-a36c" name="The Grim Garland" hidden="false" typeId="0c9d-7abe-a53c-6a37" typeName="Artefacts">
                   <characteristics>
-                    <characteristic name="Artefact" typeId="44b6-de26-0b54-1318">Subtract 2 from the Bravery characteristic of enemy units while they are within 6&quot; of the bearer.</characteristic>
+                    <characteristic name="Artefact" typeId="44b6-de26-0b54-1318">Subtract 2 from the Bravery characteristic of enemy units while they are within 9&quot; of the bearer.</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
@@ -1176,44 +1027,14 @@ Then, for each mortal wound that was inflicted on the enemy unit, you can heal 1
                 <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
               </costs>
             </selectionEntry>
-            <selectionEntry id="19f3-3d28-b184-e631" name="2 -- Splintervane Brooch" hidden="false" collective="false" import="true" type="upgrade">
-              <constraints>
-                <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="67be-90d2-6a4f-4ac3" type="max"/>
-              </constraints>
-              <profiles>
-                <profile id="3e1a-53ad-2841-3167" name="Splintervane Brooch" hidden="false" typeId="0c9d-7abe-a53c-6a37" typeName="Artefacts">
-                  <characteristics>
-                    <characteristic name="Artefact" typeId="44b6-de26-0b54-1318">Subtract 1 from casting rolls for enemy WIZARDS while they are within 18&quot; of the bearer.</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-              <costs>
-                <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
-              </costs>
-            </selectionEntry>
-            <selectionEntry id="36b8-4daa-c6fc-ddf0" name="3 -- Blood-river Chalice" hidden="false" collective="false" import="true" type="upgrade">
+            <selectionEntry id="36b8-4daa-c6fc-ddf0" name="2 -- Blood-river Chalice" hidden="false" collective="false" import="true" type="upgrade">
               <constraints>
                 <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="2f60-1ebd-56b2-2a7b" type="max"/>
               </constraints>
               <profiles>
                 <profile id="80b3-e6fc-b006-f909" name="Blood-river Chalice" hidden="false" typeId="0c9d-7abe-a53c-6a37" typeName="Artefacts">
                   <characteristics>
-                    <characteristic name="Artefact" typeId="44b6-de26-0b54-1318">Once per battle, at the start of your hero phase, the bearer can use this artefact. If they do so, heal up to D6 wounds allocated to the bearer.</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-              <costs>
-                <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
-              </costs>
-            </selectionEntry>
-            <selectionEntry id="f13f-ca56-deff-6a8c" name="1 -- Signet of the First Court" hidden="false" collective="false" import="true" type="upgrade">
-              <constraints>
-                <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="cc58-5055-c4ac-2a71" type="max"/>
-              </constraints>
-              <profiles>
-                <profile id="55d4-4e66-7f5f-0ac5" name="Signet of the First Court" hidden="false" typeId="0c9d-7abe-a53c-6a37" typeName="Artefacts">
-                  <characteristics>
-                    <characteristic name="Artefact" typeId="44b6-de26-0b54-1318">If the unmodified wound roll for an attack made by the bearer with a melee weapon is 6, add 1 to the damage inflicted by that attack.</characteristic>
+                    <characteristic name="Artefact" typeId="44b6-de26-0b54-1318">Once per battle, in the hero phase, the bearer can use this artefact. If they do so, heal up to 2D3 wounds allocated to the bearer.</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
@@ -1235,29 +1056,14 @@ Then, for each mortal wound that was inflicted on the enemy unit, you can heal 1
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="7d2e-71d3-5d91-287a" type="max"/>
           </constraints>
           <selectionEntries>
-            <selectionEntry id="e176-6172-974c-6892" name="5 -- The Fleshform Raiment" hidden="false" collective="false" import="true" type="upgrade">
-              <constraints>
-                <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="546a-7c82-a45a-9f95" type="max"/>
-              </constraints>
-              <profiles>
-                <profile id="2307-829e-a401-db49" name="The Fleshform Raiment" hidden="false" typeId="0c9d-7abe-a53c-6a37" typeName="Artefacts">
-                  <characteristics>
-                    <characteristic name="Artefact" typeId="44b6-de26-0b54-1318">Subtract 1 from the Bravery characteristic of enemy units while they are within 3&quot; of the bearer.</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-              <costs>
-                <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
-              </costs>
-            </selectionEntry>
-            <selectionEntry id="4158-9e35-4511-09d6" name="3 -- The Flayed Pennant" hidden="false" collective="false" import="true" type="upgrade">
+            <selectionEntry id="4158-9e35-4511-09d6" name="2 -- The Flayed Pennant" hidden="false" collective="false" import="true" type="upgrade">
               <constraints>
                 <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="9fc5-142b-c015-d044" type="max"/>
               </constraints>
               <profiles>
                 <profile id="8062-2bc6-ad81-44be" name="The Flayed Pennant" hidden="false" typeId="0c9d-7abe-a53c-6a37" typeName="Artefacts">
                   <characteristics>
-                    <characteristic name="Artefact" typeId="44b6-de26-0b54-1318">You can re-roll charge rolls for friendly FLESH-EATER COURTS units wholly within 12&quot; of the bearer.</characteristic>
+                    <characteristic name="Artefact" typeId="44b6-de26-0b54-1318">You can re-roll charge rolls for friendly FLESH-EATER COURTS units while they are wholly within 12&quot; of the bearer.</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
@@ -1265,59 +1071,32 @@ Then, for each mortal wound that was inflicted on the enemy unit, you can heal 1
                 <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
               </costs>
             </selectionEntry>
-            <selectionEntry id="0390-591e-5271-0da1" name="4 -- Carrion Wind" hidden="false" collective="false" import="true" type="upgrade">
+            <selectionEntry id="0390-591e-5271-0da1" name="3 -- Charnel Vestments" hidden="false" collective="false" import="true" type="upgrade">
               <constraints>
                 <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="01a8-38cb-e78e-d227" type="max"/>
               </constraints>
               <profiles>
-                <profile id="6592-b672-f9ed-867f" name="Carrion Wind" hidden="false" typeId="0c9d-7abe-a53c-6a37" typeName="Artefacts">
+                <profile id="6592-b672-f9ed-867f" name="Charnel Vestments" hidden="false" typeId="0c9d-7abe-a53c-6a37" typeName="Artefacts">
                   <characteristics>
-                    <characteristic name="Artefact" typeId="44b6-de26-0b54-1318">In your hero phase, the bearer can attempt to cast the Arcane Bolt spell as if they were a WIZARD. If the bearer is a WIZARD, add 1 to the casting roll when they attempt to cast Arcane Bolt instead.</characteristic>
+                    <characteristic name="Artefact" typeId="44b6-de26-0b54-1318">The bearer gains the PRIEST keyword.</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
+              <categoryLinks>
+                <categoryLink id="8e27-5f2a-38a9-6fba" name="PRIEST" hidden="false" targetId="f0a9-dd66-8662-61ce" primary="false"/>
+              </categoryLinks>
               <costs>
                 <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
               </costs>
             </selectionEntry>
-            <selectionEntry id="502c-17e5-dbb6-0174" name="2 -- Medal of Madness" hidden="false" collective="false" import="true" type="upgrade">
+            <selectionEntry id="502c-17e5-dbb6-0174" name="1 -- Medal of Madness" hidden="false" collective="false" import="true" type="upgrade">
               <constraints>
                 <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="2927-5c48-f571-3f7f" type="max"/>
               </constraints>
               <profiles>
                 <profile id="ca9b-0cd3-a80e-1b89" name="Medal of Madness" hidden="false" typeId="0c9d-7abe-a53c-6a37" typeName="Artefacts">
                   <characteristics>
-                    <characteristic name="Artefact" typeId="44b6-de26-0b54-1318">Once per battle round, the bearer can issue the At the Double, Forward to Victory or Inspiring Presence command from the core rules as if they were a general and without a command point being spent.</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-              <costs>
-                <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
-              </costs>
-            </selectionEntry>
-            <selectionEntry id="7a7f-0f19-0a7b-3915" name="6 -- The Bilious Decanter" hidden="false" collective="false" import="true" type="upgrade">
-              <constraints>
-                <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="c4aa-16fa-76a6-c8a5" type="max"/>
-              </constraints>
-              <profiles>
-                <profile id="da31-f637-f4d0-582f" name="The Bilious Decanter" hidden="false" typeId="0c9d-7abe-a53c-6a37" typeName="Artefacts">
-                  <characteristics>
-                    <characteristic name="Artefact" typeId="44b6-de26-0b54-1318">Once per battle, at the start of the combat phase, the bearer can use this artefact. If they do so, add 2 to the Attacks characteristic of the bearer&apos;s melee weapons in that phase.</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-              <costs>
-                <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
-              </costs>
-            </selectionEntry>
-            <selectionEntry id="6897-93b1-9416-b9c7" name="1 -- Keening Bone" hidden="false" collective="false" import="true" type="upgrade">
-              <constraints>
-                <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="c3ec-6946-56b1-02a0" type="max"/>
-              </constraints>
-              <profiles>
-                <profile id="8f12-a041-de0b-0853" name="Keening Bone" hidden="false" typeId="0c9d-7abe-a53c-6a37" typeName="Artefacts">
-                  <characteristics>
-                    <characteristic name="Artefact" typeId="44b6-de26-0b54-1318">Pick one of the bearer’s melee weapons. Increase the Range characteristic of that weapon to 3&quot;.</characteristic>
+                    <characteristic name="Artefact" typeId="44b6-de26-0b54-1318">Once per battle round, the bearer can issue a command without a command point being spent, and they are treated as if they were a general when they do so.</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
@@ -1329,7 +1108,7 @@ Then, for each mortal wound that was inflicted on the enemy unit, you can heal 1
         </selectionEntryGroup>
       </selectionEntryGroups>
       <entryLinks>
-        <entryLink id="2a16-2572-6007-7a76" name="Universal Artefacts of Power" hidden="false" collective="false" import="true" targetId="dbd8-8f6f-f44a-884a" type="selectionEntryGroup"/>
+        <entryLink id="2a16-2572-6007-7a76" name="Rulebook Artefacts of Power" hidden="false" collective="false" import="true" targetId="836b-19a4-b5b4-570d" type="selectionEntryGroup"/>
       </entryLinks>
     </selectionEntryGroup>
     <selectionEntryGroup id="9cb2-4c90-dd3d-7bfd" name="Command Traits" hidden="false" collective="false" import="true">
@@ -1343,144 +1122,6 @@ Then, for each mortal wound that was inflicted on the enemy unit, you can heal 1
       <constraints>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="e274-54c4-90ac-86fe" type="max"/>
       </constraints>
-      <selectionEntries>
-        <selectionEntry id="9a44-ab29-4bfd-e6d1" name="0. Savage Strike" hidden="false" collective="false" import="true" type="upgrade">
-          <modifiers>
-            <modifier type="set" field="hidden" value="true">
-              <conditions>
-                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="db1c-f17c-4ec4-b7bc" type="equalTo"/>
-              </conditions>
-            </modifier>
-            <modifier type="set" field="64c4-10f6-7c2f-f474" value="1.0">
-              <conditionGroups>
-                <conditionGroup type="and">
-                  <conditions>
-                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="db1c-f17c-4ec4-b7bc" type="greaterThan"/>
-                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="8b3d-7f03-e1f9-eaf5" type="equalTo"/>
-                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="c661-44d6-0f5b-11ff" type="greaterThan"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
-            </modifier>
-          </modifiers>
-          <constraints>
-            <constraint field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="64c4-10f6-7c2f-f474" type="min"/>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="f84e-6029-7c50-63c1" type="max"/>
-          </constraints>
-          <profiles>
-            <profile id="a2b4-2a19-ba7e-1b5f" name="Savage Strike" hidden="false" typeId="1504-23bf-8850-4f65" typeName="Command Traits">
-              <characteristics>
-                <characteristic name="Command Trait" typeId="0145-9acf-f5dc-d543">The strike-first effect applies to this general and their mount if they made a charge move in the same turn.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <costs>
-            <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="3f3e-5ff4-b0ff-d40e" name="0. Hellish Orator" hidden="false" collective="false" import="true" type="upgrade">
-          <modifiers>
-            <modifier type="set" field="hidden" value="true">
-              <conditions>
-                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2435-2008-e04b-e91a" type="equalTo"/>
-              </conditions>
-            </modifier>
-            <modifier type="set" field="1fbf-0365-d085-b033" value="1.0">
-              <conditionGroups>
-                <conditionGroup type="and">
-                  <conditions>
-                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2435-2008-e04b-e91a" type="greaterThan"/>
-                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="8b3d-7f03-e1f9-eaf5" type="equalTo"/>
-                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="c661-44d6-0f5b-11ff" type="greaterThan"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
-            </modifier>
-          </modifiers>
-          <constraints>
-            <constraint field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="1fbf-0365-d085-b033" type="min"/>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="6c58-fac0-3b5d-9161" type="max"/>
-          </constraints>
-          <profiles>
-            <profile id="b7a7-4cb7-aac7-32fc" name="Hellish Orator" hidden="false" typeId="1504-23bf-8850-4f65" typeName="Command Traits">
-              <characteristics>
-                <characteristic name="Command Trait" typeId="0145-9acf-f5dc-d543">If this general is on the battlefield at the start of your hero phase, roll a dice. On a 4+ you receive 1 additional command point.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <costs>
-            <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="3d1b-9b68-d14d-4439" name="0. Grave Robber" hidden="false" collective="false" import="true" type="upgrade">
-          <modifiers>
-            <modifier type="set" field="hidden" value="true">
-              <conditions>
-                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="99a9-81fd-7f39-bd28" type="equalTo"/>
-              </conditions>
-            </modifier>
-            <modifier type="set" field="3674-c7dd-1bcd-1509" value="1.0">
-              <conditionGroups>
-                <conditionGroup type="and">
-                  <conditions>
-                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="99a9-81fd-7f39-bd28" type="greaterThan"/>
-                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="c661-44d6-0f5b-11ff" type="greaterThan"/>
-                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="8b3d-7f03-e1f9-eaf5" type="equalTo"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
-            </modifier>
-          </modifiers>
-          <constraints>
-            <constraint field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="3674-c7dd-1bcd-1509" type="min"/>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="a51a-2bdf-e778-950e" type="max"/>
-          </constraints>
-          <profiles>
-            <profile id="4203-ea65-1789-b0a2" name="Grave Robber" hidden="false" typeId="1504-23bf-8850-4f65" typeName="Command Traits">
-              <characteristics>
-                <characteristic name="Command Trait" typeId="0145-9acf-f5dc-d543">Add 1 to the Attacks characteristic and Damage characteristic of this general’s melee weapons while this general is within 3&quot; of any enemy HEROES with an artefact of power.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <costs>
-            <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="fb14-a578-4af7-3fd5" name="0. Savage Chivalry" hidden="false" collective="false" import="true" type="upgrade">
-          <modifiers>
-            <modifier type="set" field="hidden" value="true">
-              <conditions>
-                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="4981-0265-a5fd-a9cb" type="equalTo"/>
-              </conditions>
-            </modifier>
-            <modifier type="set" field="1575-55df-e85a-6b1d" value="1.0">
-              <conditionGroups>
-                <conditionGroup type="and">
-                  <conditions>
-                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="4981-0265-a5fd-a9cb" type="greaterThan"/>
-                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="8b3d-7f03-e1f9-eaf5" type="equalTo"/>
-                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="c661-44d6-0f5b-11ff" type="greaterThan"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
-            </modifier>
-          </modifiers>
-          <constraints>
-            <constraint field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="1575-55df-e85a-6b1d" type="min"/>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="ab16-adb3-8e22-503a" type="max"/>
-          </constraints>
-          <profiles>
-            <profile id="cce2-20b9-0b5a-c1ff" name="Savage Chivalry" hidden="false" typeId="1504-23bf-8850-4f65" typeName="Command Traits">
-              <characteristics>
-                <characteristic name="Command Trait" typeId="0145-9acf-f5dc-d543">You can re-roll hit rolls of 1 for this general while this general is within 12&quot; of a friendly MORGAUNT SERFS unit.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <costs>
-            <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
-          </costs>
-        </selectionEntry>
-      </selectionEntries>
       <selectionEntryGroups>
         <selectionEntryGroup id="17ac-191e-597f-3be2" name="Royalty" hidden="false" collective="false" import="true">
           <modifiers>
@@ -1494,11 +1135,11 @@ Then, for each mortal wound that was inflicted on the enemy unit, you can heal 1
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="1e74-bfd9-9f99-c7a6" type="max"/>
           </constraints>
           <selectionEntries>
-            <selectionEntry id="d528-3d42-f42f-d0cf" name="6. Completely Delusional" hidden="false" collective="false" import="true" type="upgrade">
+            <selectionEntry id="edaa-2026-b3fa-cb42" name="2. Feverish Scholar" hidden="false" collective="false" import="true" type="upgrade">
               <profiles>
-                <profile id="7563-60b6-efc4-5662" name="Completely Delusional" hidden="false" typeId="1504-23bf-8850-4f65" typeName="Command Traits">
+                <profile id="5267-b5fe-868d-d351" name="Feverish Scholar" hidden="false" typeId="1504-23bf-8850-4f65" typeName="Command Traits">
                   <characteristics>
-                    <characteristic name="Command Trait" typeId="0145-9acf-f5dc-d543">Once per battle, if this general has not been slain, you can pick a new delusion in your hero phase to replace the original delusion you chose for your army.</characteristic>
+                    <characteristic name="Command Trait" typeId="0145-9acf-f5dc-d543">Add 1 to casting rolls, dispelling rolls and unbinding rolls for this general. If this general has 6 noble deeds points, add 2 to casting rolls, dispelling rolls and unbinding rolls for this general instead of 1.</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
@@ -1506,11 +1147,11 @@ Then, for each mortal wound that was inflicted on the enemy unit, you can heal 1
                 <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
               </costs>
             </selectionEntry>
-            <selectionEntry id="95ad-b277-edf0-5c66" name="5. Dark Wizardry" hidden="false" collective="false" import="true" type="upgrade">
+            <selectionEntry id="09cc-3297-c76a-019f" name="3. Master of the Menagerie" hidden="false" collective="false" import="true" type="upgrade">
               <profiles>
-                <profile id="7474-bb8d-91cb-5b9f" name="Dark Wizardry" hidden="false" typeId="1504-23bf-8850-4f65" typeName="Command Traits">
+                <profile id="318f-f534-b02d-fe0c" name="Master of the Menagerie" hidden="false" typeId="1504-23bf-8850-4f65" typeName="Command Traits">
                   <characteristics>
-                    <characteristic name="Command Trait" typeId="0145-9acf-f5dc-d543">Add 1 to casting, dispelling and unbinding rolls for this general.</characteristic>
+                    <characteristic name="Command Trait" typeId="0145-9acf-f5dc-d543">When using the Summon Loyal Subjects battle trait, you can pick 1 friendly FLESH-EATER COURTS MONSTER that is not a HERO and that has been destroyed, instead of a unit of SERFS or KNIGHTS. Set up a replacement unit as described in the battle trait and allocate 6 wounds to that replacement MONSTER that cannot be negated. In addition, when that unit is set up, it can be set up wholly within 7&quot; of the edge of the battlefield instead of 6&quot;.</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
@@ -1518,47 +1159,11 @@ Then, for each mortal wound that was inflicted on the enemy unit, you can heal 1
                 <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
               </costs>
             </selectionEntry>
-            <selectionEntry id="edaa-2026-b3fa-cb42" name="2. Frenzied Flesh-eater" hidden="false" collective="false" import="true" type="upgrade">
+            <selectionEntry id="2bb1-6723-cabf-5d3f" name="1. Shadowy Obfuscation" hidden="false" collective="false" import="true" type="upgrade">
               <profiles>
-                <profile id="5267-b5fe-868d-d351" name="Frenzied Flesh-eater" hidden="false" typeId="1504-23bf-8850-4f65" typeName="Command Traits">
+                <profile id="3fb4-2858-0a8d-a4ed" name="Shadowy Obfuscation" hidden="false" typeId="1504-23bf-8850-4f65" typeName="Command Traits">
                   <characteristics>
-                    <characteristic name="Command Trait" typeId="0145-9acf-f5dc-d543">You can re-roll hit and wound rolls for attacks made by this general if there are any enemy models that have suffered any wounds within 3&quot; of this general.</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-              <costs>
-                <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
-              </costs>
-            </selectionEntry>
-            <selectionEntry id="09cc-3297-c76a-019f" name="3. Savage Beyond Reason" hidden="false" collective="false" import="true" type="upgrade">
-              <profiles>
-                <profile id="318f-f534-b02d-fe0c" name="Savage Beyond Reason" hidden="false" typeId="1504-23bf-8850-4f65" typeName="Command Traits">
-                  <characteristics>
-                    <characteristic name="Command Trait" typeId="0145-9acf-f5dc-d543">If the unmodified hit roll for an attack made with a melee weapon by this general is 6, that attack inflicts 2 hits on the target instead of 1. Make a wound and save roll for each hit.</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-              <costs>
-                <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
-              </costs>
-            </selectionEntry>
-            <selectionEntry id="02f0-e70e-7d39-2ff6" name="4. Majestic Horror" hidden="false" collective="false" import="true" type="upgrade">
-              <profiles>
-                <profile id="8c39-73c3-7b99-0cbc" name="Majestic Horror" hidden="false" typeId="1504-23bf-8850-4f65" typeName="Command Traits">
-                  <characteristics>
-                    <characteristic name="Command Trait" typeId="0145-9acf-f5dc-d543">If this general is chosen as the model that uses a command ability that summons FLESH-EATER COURTS models to the battlefield, they can use it without a command point having to be spent.</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-              <costs>
-                <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
-              </costs>
-            </selectionEntry>
-            <selectionEntry id="2bb1-6723-cabf-5d3f" name="1. Bringer of Death" hidden="false" collective="false" import="true" type="upgrade">
-              <profiles>
-                <profile id="3fb4-2858-0a8d-a4ed" name="Bringer of Death" hidden="false" typeId="1504-23bf-8850-4f65" typeName="Command Traits">
-                  <characteristics>
-                    <characteristic name="Command Trait" typeId="0145-9acf-f5dc-d543">You can re-roll wound rolls for attacks made by this general.</characteristic>
+                    <characteristic name="Command Trait" typeId="0145-9acf-f5dc-d543">This general is not visible to enemy models that are more than 12&quot; away from them.</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
@@ -1580,30 +1185,11 @@ Then, for each mortal wound that was inflicted on the enemy unit, you can heal 1
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="cc17-b247-2fbc-9d09" type="max"/>
           </constraints>
           <selectionEntries>
-            <selectionEntry id="0e34-8d9c-b17e-8c84" name="6. Dark Acolyte" hidden="false" collective="false" import="true" type="upgrade">
-              <profiles>
-                <profile id="bb51-f881-a9d1-9a77" name="Dark Acolyte" hidden="false" typeId="1504-23bf-8850-4f65" typeName="Command Traits">
-                  <characteristics>
-                    <characteristic name="Command Trait" typeId="0145-9acf-f5dc-d543">This general gains the WIZARD keyword and can cast and unbind spells in the same manner as an ABHORRANT GHOUL KING from the Abhorrant Ghoul King warscroll.</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-              <infoLinks>
-                <infoLink id="c81b-ecbb-4426-f716" name="Arcane Bolt" hidden="false" targetId="2dfe-38cb-0d5e-e85e" type="profile"/>
-                <infoLink id="0413-deda-a925-03fa" name="Mystic Shield" hidden="false" targetId="3b74-6720-61fa-1f0c" type="profile"/>
-              </infoLinks>
-              <entryLinks>
-                <entryLink id="9f52-f4f8-d0be-4431" name="Flesh-eater Courts Spell Lores" hidden="false" collective="false" import="true" targetId="df52-9588-4d0d-a36a" type="selectionEntryGroup"/>
-              </entryLinks>
-              <costs>
-                <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
-              </costs>
-            </selectionEntry>
-            <selectionEntry id="5da3-e949-b8e1-bd4f" name="5. Cruel Taskmaster" hidden="false" collective="false" import="true" type="upgrade">
+            <selectionEntry id="5da3-e949-b8e1-bd4f" name="2. Cruel Taskmaster" hidden="false" collective="false" import="true" type="upgrade">
               <profiles>
                 <profile id="94a4-eef4-6df3-c26a" name="Cruel Taskmaster" hidden="false" typeId="1504-23bf-8850-4f65" typeName="Command Traits">
                   <characteristics>
-                    <characteristic name="Command Trait" typeId="0145-9acf-f5dc-d543">If this general uses a Muster ability you can re-roll the dice for this general that determine if slain models are returned to units (you must re-roll all of the dice).</characteristic>
+                    <characteristic name="Command Trait" typeId="0145-9acf-f5dc-d543">If this general uses the Muster Guard ability to return models to a unit, reduce the noble deeds cost of each returned model by 1, or if the cost was already 1, you can bring back 1 additional model instead.</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
@@ -1611,35 +1197,11 @@ Then, for each mortal wound that was inflicted on the enemy unit, you can heal 1
                 <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
               </costs>
             </selectionEntry>
-            <selectionEntry id="84a6-4852-3666-8c9f" name="4. Hulking Brute" hidden="false" collective="false" import="true" type="upgrade">
+            <selectionEntry id="38b5-91c4-9e29-5f27" name="1. Stronger in Madness" hidden="false" collective="false" import="true" type="upgrade">
               <profiles>
-                <profile id="b30c-3cd3-2cba-0e6b" name="Hulking Brute" hidden="false" typeId="1504-23bf-8850-4f65" typeName="Command Traits">
+                <profile id="7a29-e552-05df-c54c" name="Stronger in Madness" hidden="false" typeId="1504-23bf-8850-4f65" typeName="Command Traits">
                   <characteristics>
-                    <characteristic name="Command Trait" typeId="0145-9acf-f5dc-d543">Add 1 to this general’s Wounds characteristic.</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-              <costs>
-                <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
-              </costs>
-            </selectionEntry>
-            <selectionEntry id="38b5-91c4-9e29-5f27" name="1. Bringer of Death" hidden="false" collective="false" import="true" type="upgrade">
-              <profiles>
-                <profile id="7a29-e552-05df-c54c" name="Bringer of Death" hidden="false" typeId="1504-23bf-8850-4f65" typeName="Command Traits">
-                  <characteristics>
-                    <characteristic name="Command Trait" typeId="0145-9acf-f5dc-d543">You can re-roll wound rolls for attacks made by this general.</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-              <costs>
-                <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
-              </costs>
-            </selectionEntry>
-            <selectionEntry id="650c-f146-2f81-642c" name="2. Frenzied Flesh-eater" hidden="false" collective="false" import="true" type="upgrade">
-              <profiles>
-                <profile id="b0d6-ea92-92aa-6229" name="Frenzied Flesh-eater" hidden="false" typeId="1504-23bf-8850-4f65" typeName="Command Traits">
-                  <characteristics>
-                    <characteristic name="Command Trait" typeId="0145-9acf-f5dc-d543">You can re-roll hit and wound rolls for attacks made by this general if there are any enemy models that have suffered any wounds within 3&quot; of this general.</characteristic>
+                    <characteristic name="Command Trait" typeId="0145-9acf-f5dc-d543">Add 2 to this general’s Wounds characteristic. While this general has 6 noble deeds points, they have a ward of 5+.</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
@@ -1651,7 +1213,7 @@ Then, for each mortal wound that was inflicted on the enemy unit, you can heal 1
               <profiles>
                 <profile id="cace-5bdf-6eb9-df89" name="Savage Beyond Reason" hidden="false" typeId="1504-23bf-8850-4f65" typeName="Command Traits">
                   <characteristics>
-                    <characteristic name="Command Trait" typeId="0145-9acf-f5dc-d543">If the unmodified hit roll for an attack made with a melee weapon by this general is 6, that attack inflicts 2 hits on the target instead of 1. Make a wound and save roll for each hit.</characteristic>
+                    <characteristic name="Command Trait" typeId="0145-9acf-f5dc-d543">If the unmodified hit roll for an attack made with a melee weapon by this general is 6, that attack scores 2 hits on the target instead of 1. If this general has 6 noble deeds points, that attack scores 3 hits on the target instead of 2.</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
@@ -1663,7 +1225,101 @@ Then, for each mortal wound that was inflicted on the enemy unit, you can heal 1
         </selectionEntryGroup>
       </selectionEntryGroups>
       <entryLinks>
-        <entryLink id="e6f7-3d13-ed55-bc9e" name="Universal Command Traits" hidden="false" collective="false" import="true" targetId="20f0-6df9-b464-3789" type="selectionEntryGroup"/>
+        <entryLink id="e6f7-3d13-ed55-bc9e" name="Rulebook Command Traits" hidden="false" collective="false" import="true" targetId="6978-81a2-4c55-65f3" type="selectionEntryGroup"/>
+      </entryLinks>
+    </selectionEntryGroup>
+    <selectionEntryGroup id="e5e4-6d4a-952a-de24" name="Prayer Scriptures" hidden="false" collective="false" import="true">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="6cd6-b22e-bfcb-9589" type="instanceOf"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4373-740f-1bf3-b0aa" type="instanceOf"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="996a-613c-4006-25e3" type="instanceOf"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="e3a6-45ca-4974-b489" type="instanceOf"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="b543-cb16-0c79-fbc6" type="instanceOf"/>
+              </conditions>
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="f0a9-dd66-8662-61ce" type="notInstanceOf"/>
+                    <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="f0a9-dd66-8662-61ce" type="equalTo"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+        <modifier type="increment" field="9f56-303d-7299-11ef" value="1.0">
+          <repeats>
+            <repeat field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="c7bd-c872-ef57-2468" repeats="1" roundUp="false"/>
+          </repeats>
+          <conditions>
+            <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="c7bd-c872-ef57-2468" type="greaterThan"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <constraints>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="9f56-303d-7299-11ef" type="max"/>
+      </constraints>
+      <selectionEntryGroups>
+        <selectionEntryGroup id="d42f-061a-3593-7152" name="Rites of Delusion" hidden="false" collective="false" import="true">
+          <modifiers>
+            <modifier type="increment" field="da28-c24c-c50d-0726" value="1.0">
+              <repeats>
+                <repeat field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="c7bd-c872-ef57-2468" repeats="1" roundUp="false"/>
+              </repeats>
+              <conditions>
+                <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="c7bd-c872-ef57-2468" type="greaterThan"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="da28-c24c-c50d-0726" type="max"/>
+          </constraints>
+          <selectionEntries>
+            <selectionEntry id="2b91-7e75-d295-340d" name="3 - Charnel Conviction" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="6f7b-af6d-87c6-d46f" type="max"/>
+              </constraints>
+              <profiles>
+                <profile id="262a-e058-3c1b-4d89" name="Charnel Conviction" hidden="false" typeId="161a-85bd-f19e-a5a7" typeName="Prayer">
+                  <characteristics>
+                    <characteristic name="Prayer" typeId="19bc-965a-768d-defa">Charnel Conviction is a prayer that has an answer value of 3 and a range of 18&quot;. If answered, pick 1 friendly FLESH-EATER COURTS unit wholly within range and visible to the chanter. That unit has a ward of 5+ until your next hero phase.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+            </selectionEntry>
+            <selectionEntry id="6684-1bc7-7134-86cc" name="2 - The Summerking&apos;s Favour" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="73d5-2752-ae94-5540" type="max"/>
+              </constraints>
+              <profiles>
+                <profile id="31ef-208c-3a56-cb5f" name="The Summerking&apos;s Favour" hidden="false" typeId="161a-85bd-f19e-a5a7" typeName="Prayer">
+                  <characteristics>
+                    <characteristic name="Prayer" typeId="19bc-965a-768d-defa">The Summerking’s Favour is a prayer that has an answer value of 3 and a range of 18&quot;. If answered, pick 1 friendly FLESH-EATER COURTS HERO wholly within range and visible to the chanter. Until your next hero phase, that Hero gains 1 additional noble deeds point each time they slay an enemy model.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+            </selectionEntry>
+            <selectionEntry id="be4c-1a93-25fe-832c" name="1 - Bless This Meal" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8653-6ce6-6901-fe17" type="max"/>
+              </constraints>
+              <profiles>
+                <profile id="c98a-e231-3ae8-27bf" name="Bless This Meal" hidden="false" typeId="161a-85bd-f19e-a5a7" typeName="Prayer">
+                  <characteristics>
+                    <characteristic name="Prayer" typeId="19bc-965a-768d-defa">Bless This Meal is a prayer that has an answer value of 3 and a range of 18&quot;. If answered, pick 1 enemy unit within range that is visible to the chanter. Each time a model from that enemy unit is slain, you can heal 1 wound allocated to 1 friendly FLESH-EATER COURTS unit within 6&quot; of that enemy unit.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
+      <entryLinks>
+        <entryLink id="8c0b-f0dc-cd49-2b1b" name="Rulebook Prayer Scriptures" hidden="false" collective="false" import="true" targetId="42b2-cfa5-744f-8062" type="selectionEntryGroup"/>
       </entryLinks>
     </selectionEntryGroup>
   </sharedSelectionEntryGroups>

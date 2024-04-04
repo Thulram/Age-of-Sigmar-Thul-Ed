@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="d0f5-3583-d7c8-28a4" name="Order - Stormcast Eternals" revision="15" battleScribeVersion="2.03" authorName="Thulram" library="false" gameSystemId="e832-3291-06be-cab1" gameSystemRevision="14" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="d0f5-3583-d7c8-28a4" name="Order - Stormcast Eternals" revision="16" battleScribeVersion="2.03" authorName="Thulram" library="false" gameSystemId="e832-3291-06be-cab1" gameSystemRevision="16" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <categoryEntries>
     <categoryEntry id="7427-eb31-81d6-d218" name="General - Keiser Ven Brecht" hidden="false"/>
     <categoryEntry id="0046-6be2-ce3d-7696" name="Allegiant - Cities of Sigmar" hidden="false">
@@ -47,6 +47,7 @@
       <categoryLinks>
         <categoryLink id="0f2f-79b7-5235-d439" name="Allegiance" hidden="false" targetId="af41-ae78-5063-3d36" primary="false"/>
         <categoryLink id="c976-5ed6-4e7d-cc10" name="New CategoryLink" hidden="false" targetId="29f4-e63d-fa5b-1611" primary="true"/>
+        <categoryLink id="d259-349e-92da-1d9e" name="RoR - Stormcast Eternals" hidden="false" targetId="19c9-4095-f5ad-5774" primary="false"/>
       </categoryLinks>
       <selectionEntries>
         <selectionEntry id="61b8-47b3-c0aa-0b2a" name="Stormcast Eternals" publicationId="0624-d006-ae10-12c0" hidden="false" collective="false" import="true" type="upgrade">
@@ -56,11 +57,25 @@
           </constraints>
           <profiles>
             <profile id="b06b-c607-1502-5c13" name="Blaze of Glory" hidden="false" typeId="c0c2-177b-e761-ec41" typeName="Allegiance Abilities">
+              <modifiers>
+                <modifier type="set" field="hidden" value="true">
+                  <conditions>
+                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="88ee-6355-96e4-6a34" type="greaterThan"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
               <characteristics>
                 <characteristic name="Allegiance Ability" typeId="0506-f62d-68b3-5499">If a friendly STORMCAST ETERNALS model is slain within 1&quot; of an enemy unit, before removing that model from play, pick 1 enemy unit within 1&quot; of that model and roll a number of dice equal to the Wounds characteristic of that slain model. Add 1 to the number of dice you roll if the slain model has the THUNDERSTRIKE keyword. For each 6+, the target suffers 1 mortal wound at the end of that phase.</characteristic>
               </characteristics>
             </profile>
             <profile id="d728-4bc7-22fe-e5a1" name="Stormhosts" hidden="false" typeId="c0c2-177b-e761-ec41" typeName="Allegiance Abilities">
+              <modifiers>
+                <modifier type="set" field="hidden" value="true">
+                  <conditions>
+                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="88ee-6355-96e4-6a34" type="greaterThan"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
               <characteristics>
                 <characteristic name="Allegiance Ability" typeId="0506-f62d-68b3-5499">You can pick 1 of the following subfactions for your army. All STORMCAST ETERNALS units in your army gain the keyword of the subfaction you picked, and you can use the allegiance abilities for that subfaction. If a unit already has a different subfaction keyword on its warscroll, it cannot gain another one. This does not preclude you from including the unit in your army, but you cannot use the allegiance abilities for its subfaction.
 
@@ -77,11 +92,25 @@
           </profiles>
           <rules>
             <rule id="922f-991a-2699-df59" name="Guardians of the Heavens and Shield of the Mortal Realms" hidden="false">
+              <modifiers>
+                <modifier type="set" field="hidden" value="true">
+                  <conditions>
+                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="88ee-6355-96e4-6a34" type="greaterThan"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
               <description>You must decide if your army will be a Scions of the Storm army or a Stormkeep army. Record your choice on your army roster. All STORMCAST ETERNALS units in a Scions of the Storm army gain the SCIONS OF THE STORM keyword. All Stormcast Eternals units in a Stormkeep army gain the STORMKEEP keyword.</description>
             </rule>
           </rules>
           <selectionEntryGroups>
             <selectionEntryGroup id="b3b4-e635-a8e8-6932" name="Stormhost" hidden="false" collective="false" import="true">
+              <modifiers>
+                <modifier type="set" field="hidden" value="true">
+                  <conditions>
+                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="88ee-6355-96e4-6a34" type="greaterThan"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
               <constraints>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="68fa-bdbe-f3c6-e013" type="max"/>
               </constraints>
@@ -230,6 +259,54 @@ Designer’s Note: Coalition units are units from another faction that can be in
                     <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
                   </costs>
                 </selectionEntry>
+                <selectionEntry id="88ee-6355-96e4-6a34" name="Draconith Skywing" hidden="false" collective="false" import="true" type="upgrade">
+                  <profiles>
+                    <profile id="3b2a-4208-21b8-9def" name="Draconith Echelon" hidden="false" typeId="c0c2-177b-e761-ec41" typeName="Allegiance Abilities">
+                      <characteristics>
+                        <characteristic name="Allegiance Ability" typeId="0506-f62d-68b3-5499">Friendly KRONDYS, KARAZAI, and STORMDRAKE GUARD units that have 2 models have the Battleline battlefield role.</characteristic>
+                      </characteristics>
+                    </profile>
+                    <profile id="5fb8-3331-9586-e90d" name="Draconith Guardians" hidden="false" typeId="c0c2-177b-e761-ec41" typeName="Allegiance Abilities">
+                      <characteristics>
+                        <characteristic name="Allegiance Ability" typeId="0506-f62d-68b3-5499">If a friendly IONUS CRYPTBORN is within 3&quot; of any friendly STORMDRAKE GUARD units, before you allocate a wound or mortal wound to that HERO, or instead of making a ward roll for a wound or mortal wound that would be allocated to that HERO, roll a dice. On a 4+, that wound or mortal wound is allocated to 1 of those friendly units instead of IONUS CRYPTBORN and cannot be negated.</characteristic>
+                      </characteristics>
+                    </profile>
+                    <profile id="8112-981c-2e95-0137" name="Exemplars of Fury" hidden="false" typeId="c0c2-177b-e761-ec41" typeName="Allegiance Abilities">
+                      <characteristics>
+                        <characteristic name="Allegiance Ability" typeId="0506-f62d-68b3-5499">At the start of the combat phase, if there are 2 or more other friendly DRACONITH SKYWING units within 6&quot; of a friendly HERO, add 1 to the Attacks characteristic of melee weapons used by that HERO’s mount until the end of that phase.</characteristic>
+                      </characteristics>
+                    </profile>
+                    <profile id="0210-dfba-c4e7-a0f7" name="Stormdrake Champions" hidden="false" typeId="c0c2-177b-e761-ec41" typeName="Allegiance Abilities">
+                      <characteristics>
+                        <characteristic name="Allegiance Ability" typeId="0506-f62d-68b3-5499">For each DRACONITH SKYWING HERO you include in your army, you can include 1 STORMDRAKE GUARD unit that has 1 model. That STORMDRAKE GUARD unit cannot have the Battleline battlefield role.</characteristic>
+                      </characteristics>
+                    </profile>
+                    <profile id="53f6-521a-e505-453d" name="Thunderous Roars" hidden="false" typeId="c0c2-177b-e761-ec41" typeName="Allegiance Abilities">
+                      <characteristics>
+                        <characteristic name="Allegiance Ability" typeId="0506-f62d-68b3-5499">At the start of the hero phase, you can carry out this heroic action with a friendly DRACONITH SKYWING HERO instead of any other heroic action you can carry out with that HERO.
+
+Thunderous Roars: Pick 1 friendly DRACONITH SKYWING HERO and roll a dice. On a 2+, until the end of that turn, enemy units within 3&quot; of that HERO cannot receive the Inspiring Presence command.</characteristic>
+                      </characteristics>
+                    </profile>
+                    <profile id="79a3-9348-fe9a-3aad" name="The Storm Unleashed" hidden="false" typeId="c0c2-177b-e761-ec41" typeName="Allegiance Abilities">
+                      <characteristics>
+                        <characteristic name="Allegiance Ability" typeId="0506-f62d-68b3-5499">When you carry out a monstrous rampage with a friendly DRACONITH, you can carry out 1 of the monstrous rampages below instead of any other monstrous rampage you can carry out with that unit.
+
+Stun: Pick 1 enemy unit within 3&quot; of this unit and roll a dice. On a 3+, subtract 1 from wound rolls for attacks made by that unit in the following combat phase.
+
+Impact Tremors: Pick 1 enemy unit within 3&quot; of this unit and roll a dice. On a 3+, in the following combat phase, models in that unit can only move up to 1&quot; when they make a pile-in move instead of up to 3&quot;.</characteristic>
+                      </characteristics>
+                    </profile>
+                    <profile id="a9ec-3c9d-8541-893d" name="Draconith Skywing" hidden="false" typeId="ce32-0c40-1990-4c8a" typeName="Restriction">
+                      <characteristics>
+                        <characteristic name="Restriction" typeId="edbe-5fe5-1142-afa6">When you pick the Stormcast Eternals faction for your army, you can say that it will be a Draconith Skywing army of renown. If you do so, use the rules in this section. Every unit in your army must have the STORMCAST ETERNALS keyword and the DRACONITH keyword. All units in your army gain the DRACONITH SKYWING keyword.</characteristic>
+                      </characteristics>
+                    </profile>
+                  </profiles>
+                  <costs>
+                    <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
+                  </costs>
+                </selectionEntry>
               </selectionEntries>
             </selectionEntryGroup>
           </selectionEntryGroups>
@@ -243,6 +320,13 @@ Designer’s Note: Coalition units are units from another faction that can be in
       </costs>
     </selectionEntry>
     <selectionEntry id="9941-4e23-0a28-7ef8" name="Averon Stormsire and Cursebreakers (separate units)" publicationId="0624-d006-ae10-12c0" hidden="false" collective="false" import="true" type="upgrade">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="88ee-6355-96e4-6a34" type="greaterThan"/>
+          </conditions>
+        </modifier>
+      </modifiers>
       <constraints>
         <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="ea8d-0417-4b6b-cfe7" type="max"/>
       </constraints>
@@ -324,8 +408,36 @@ Designer’s Note: Coalition units are units from another faction that can be in
           <categoryLinks>
             <categoryLink id="4018-c5d8-daf9-daa2" name="Grand Strategy" hidden="false" targetId="318c-fa55-0855-47ef" primary="false"/>
           </categoryLinks>
+          <selectionEntries>
+            <selectionEntry id="1386-cdf9-c960-82ab" name="On Wings of Death" hidden="false" collective="false" import="true" type="upgrade">
+              <modifiers>
+                <modifier type="set" field="hidden" value="true">
+                  <conditions>
+                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="88ee-6355-96e4-6a34" type="equalTo"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+              <profiles>
+                <profile id="673a-8929-8b28-f2dd" name="On Wings of Death" hidden="false" typeId="7dc6-98f0-f5ba-fc16" typeName="Grand Strategy">
+                  <characteristics>
+                    <characteristic name="Grand Strategy" typeId="22d6-b382-f824-6381">When the battle ends, you complete this grand strategy if 3 friendly DRACONITH units are wholly within 9&quot; of each other.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <costs>
+                <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
+              </costs>
+            </selectionEntry>
+          </selectionEntries>
           <selectionEntryGroups>
             <selectionEntryGroup id="a158-df14-4ce8-b13d" name="Stormcast Eternals" hidden="false" collective="false" import="true">
+              <modifiers>
+                <modifier type="set" field="hidden" value="true">
+                  <conditions>
+                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="88ee-6355-96e4-6a34" type="greaterThan"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
               <constraints>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="f584-2590-b8cb-1327" type="max"/>
               </constraints>
@@ -399,33 +511,123 @@ Designer’s Note: Coalition units are units from another faction that can be in
       </constraints>
       <profiles>
         <profile id="7869-4d84-cddf-2e48" name="Pioneers of the Realms" hidden="false" typeId="4bb2-448c-446c-f522" typeName="Battle Tactic">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="88ee-6355-96e4-6a34" type="greaterThan"/>
+              </conditions>
+            </modifier>
+          </modifiers>
           <characteristics>
             <characteristic name="Battle Tactic" typeId="8c0f-be41-a70e-c699">You complete this tactic if all of the objectives wholly within your opponent’s territory are contested by friendly CITIES OF SIGMAR units at the end of this turn.</characteristic>
           </characteristics>
         </profile>
         <profile id="e8ae-e2cf-b40e-3485" name="No Challenge Too Great" hidden="false" typeId="4bb2-448c-446c-f522" typeName="Battle Tactic">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="88ee-6355-96e4-6a34" type="greaterThan"/>
+              </conditions>
+            </modifier>
+          </modifiers>
           <characteristics>
             <characteristic name="Battle Tactic" typeId="8c0f-be41-a70e-c699">You complete this tactic if an enemy HERO is slain by wounds caused by an attack made with a melee weapon by a friendly REDEEMER unit during this turn.</characteristic>
           </characteristics>
         </profile>
         <profile id="7fb1-31d5-1589-7ada" name="Hammerstrike Assault" hidden="false" typeId="4bb2-448c-446c-f522" typeName="Battle Tactic">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="88ee-6355-96e4-6a34" type="greaterThan"/>
+              </conditions>
+            </modifier>
+          </modifiers>
           <characteristics>
             <characteristic name="Battle Tactic" typeId="8c0f-be41-a70e-c699">Pick 1 HERO in your opponent’s starting army that is on the battlefield, that has a Wounds characteristic of 10 or more and that has 0 wounds allocated to it. You complete this tactic if that HERO is slain during this turn.</characteristic>
           </characteristics>
         </profile>
         <profile id="178e-0726-72ca-83e8" name="Lightning-shattered Morale" hidden="false" typeId="4bb2-448c-446c-f522" typeName="Battle Tactic">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="88ee-6355-96e4-6a34" type="greaterThan"/>
+              </conditions>
+            </modifier>
+          </modifiers>
           <characteristics>
             <characteristic name="Battle Tactic" typeId="8c0f-be41-a70e-c699">Pick 1 unit in your opponent’s starting army that is on the battlefield and that has a Bravery characteristic of 10 or more. You complete this tactic if any models in that unit flee during this turn.</characteristic>
           </characteristics>
         </profile>
         <profile id="aaad-83f4-c558-a80c" name="Draconith Destruction" hidden="false" typeId="4bb2-448c-446c-f522" typeName="Battle Tactic">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="88ee-6355-96e4-6a34" type="greaterThan"/>
+              </conditions>
+            </modifier>
+          </modifiers>
           <characteristics>
             <characteristic name="Battle Tactic" typeId="8c0f-be41-a70e-c699">Pick 1 unit in your opponent’s starting army that is on the battlefield and that has 10 or more models. You complete this tactic if that unit is destroyed by wounds caused by attacks made by friendly DRACONITH, STARDRAKE or DRACOTH units during this turn.</characteristic>
           </characteristics>
         </profile>
         <profile id="01b4-d32b-ea6b-3f41" name="A Matter of Honour" hidden="false" typeId="4bb2-448c-446c-f522" typeName="Battle Tactic">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="88ee-6355-96e4-6a34" type="greaterThan"/>
+              </conditions>
+            </modifier>
+          </modifiers>
           <characteristics>
             <characteristic name="Battle Tactic" typeId="8c0f-be41-a70e-c699">Pick 1 MONSTER in your opponent’s starting army that is on the battlefield. You complete this tactic if that unit is destroyed by wounds caused by attacks made by friendly DRACONITH or STARDRAKE units during this turn.</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="390a-9dd6-742a-2c72" name="Secure the Battlefield" hidden="false" typeId="4bb2-448c-446c-f522" typeName="Battle Tactic">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="88ee-6355-96e4-6a34" type="greaterThan"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <characteristics>
+            <characteristic name="Battle Tactic" typeId="8c0f-be41-a70e-c699">You complete this battle tactic at the end of your turn if there are any friendly STORMCAST ETERNALS units wholly within each large quarter of the battlefield and more than 6&quot; from all enemy units.</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="d291-53d0-ad56-db8c" name="Concentrated Force" hidden="false" typeId="4bb2-448c-446c-f522" typeName="Battle Tactic">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="88ee-6355-96e4-6a34" type="equalTo"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <characteristics>
+            <characteristic name="Battle Tactic" typeId="8c0f-be41-a70e-c699">You complete this tactic if the same enemy unit was targeted by attacks made with melee weapons by 3 or more friendly DRACONITH SKYWING units in the combat phase of this turn.</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="0fcc-0aef-e0a1-0d42" name="Focused Destruction" hidden="false" typeId="4bb2-448c-446c-f522" typeName="Battle Tactic">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="88ee-6355-96e4-6a34" type="equalTo"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <characteristics>
+            <characteristic name="Battle Tactic" typeId="8c0f-be41-a70e-c699">You complete this tactic if the same enemy unit was picked as the target of 3 different monstrous rampages carried out by friendly DRACONITH SKYWING units in this turn.</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="835c-3a74-9b19-c533" name="Cleansing Strike" hidden="false" typeId="4bb2-448c-446c-f522" typeName="Battle Tactic">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="88ee-6355-96e4-6a34" type="equalTo"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <characteristics>
+            <characteristic name="Battle Tactic" typeId="8c0f-be41-a70e-c699">Pick 2 objectives that are contested by enemy units. You complete this tactic if there are no enemy units contesting either objective at the end of this turn.</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -453,6 +655,11 @@ Designer’s Note: Coalition units are units from another faction that can be in
               </conditions>
             </conditionGroup>
           </conditionGroups>
+        </modifier>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="88ee-6355-96e4-6a34" type="greaterThan"/>
+          </conditions>
         </modifier>
       </modifiers>
       <profiles>
@@ -498,6 +705,11 @@ Designer’s Note: Coalition units are units from another faction that can be in
               </conditions>
             </conditionGroup>
           </conditionGroups>
+        </modifier>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="88ee-6355-96e4-6a34" type="greaterThan"/>
+          </conditions>
         </modifier>
       </modifiers>
       <profiles>
@@ -557,6 +769,11 @@ Designer’s Note: Coalition units are units from another faction that can be in
             </conditionGroup>
           </conditionGroups>
         </modifier>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="88ee-6355-96e4-6a34" type="greaterThan"/>
+          </conditions>
+        </modifier>
       </modifiers>
       <profiles>
         <profile id="7bda-ad0a-92d3-9db5" name="Slayers" hidden="false" typeId="66c5-932e-004a-574c" typeName="Battalion Abilities">
@@ -615,6 +832,11 @@ Designer’s Note: Coalition units are units from another faction that can be in
             </conditionGroup>
           </conditionGroups>
         </modifier>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="88ee-6355-96e4-6a34" type="greaterThan"/>
+          </conditions>
+        </modifier>
       </modifiers>
       <constraints>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d6ec-6263-ad96-1b37" type="max"/>
@@ -629,9 +851,162 @@ Designer’s Note: Coalition units are units from another faction that can be in
         <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
       </costs>
     </selectionEntry>
+    <selectionEntry id="c860-d3b5-4596-c23e" name="The Blacktalons (separate units)" hidden="false" collective="false" import="true" type="upgrade">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="88ee-6355-96e4-6a34" type="greaterThan"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <constraints>
+        <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="3278-5372-ffe1-845d" type="max"/>
+      </constraints>
+      <categoryLinks>
+        <categoryLink id="9767-2c22-512a-486b" name="New CategoryLink" hidden="false" targetId="93cb-21d9-e1d5-6161" primary="true"/>
+      </categoryLinks>
+      <entryLinks>
+        <entryLink id="88f3-db21-9dff-5030" name="Neave Blacktalon" hidden="false" collective="false" import="true" targetId="48a0-4c37-2f18-79c2" type="selectionEntry">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="5853-f87d-e383-1f56" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d610-3f0e-2cd8-5ff6" type="min"/>
+          </constraints>
+          <entryLinks>
+            <entryLink id="f6d8-04b1-dc58-eee9" name="General" hidden="false" collective="false" import="true" targetId="98a4-3d6d-a7b9-399f" type="selectionEntry">
+              <categoryLinks>
+                <categoryLink id="25ec-5b26-f0f8-ef2d" name="Named General" hidden="false" targetId="8b3d-7f03-e1f9-eaf5" primary="false"/>
+              </categoryLinks>
+            </entryLink>
+            <entryLink id="9220-07e5-207f-95b9" name="Battalion Formation" hidden="false" collective="false" import="true" targetId="ab2e-bbbc-12f2-6c1b" type="selectionEntryGroup"/>
+          </entryLinks>
+        </entryLink>
+        <entryLink id="707a-2bd0-0656-dbc0" name="Lorai, Child of the Abyss" hidden="false" collective="false" import="true" targetId="ba1e-fb8b-0bfb-1820" type="selectionEntry">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="b6a1-4141-0cbe-7d20" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="4435-7f3e-fe0c-a7b4" type="min"/>
+          </constraints>
+          <entryLinks>
+            <entryLink id="fc0e-82e4-0b4e-7ef0" name="General" hidden="false" collective="false" import="true" targetId="98a4-3d6d-a7b9-399f" type="selectionEntry">
+              <categoryLinks>
+                <categoryLink id="a9f0-bdca-a3bd-50d9" name="Named General" hidden="false" targetId="8b3d-7f03-e1f9-eaf5" primary="false"/>
+              </categoryLinks>
+            </entryLink>
+            <entryLink id="e226-d08c-9528-3749" name="Battalion Formation" hidden="false" collective="false" import="true" targetId="ab2e-bbbc-12f2-6c1b" type="selectionEntryGroup"/>
+            <entryLink id="9f1f-a28f-a437-e7dc" name="Stormcast Eternals Spell Lores" hidden="false" collective="false" import="true" targetId="251b-7012-cb2d-a80d" type="selectionEntryGroup"/>
+          </entryLinks>
+        </entryLink>
+        <entryLink id="91f4-6f90-4369-5b22" name="Neave&apos;s Companions" hidden="false" collective="false" import="true" targetId="81e3-7a81-069d-9ae4" type="selectionEntry">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="5344-54a7-6759-ee52" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="482f-b023-3a96-7024" type="min"/>
+          </constraints>
+          <entryLinks>
+            <entryLink id="a2b3-2c0c-3811-30bf" name="Battalion Formation" hidden="false" collective="false" import="true" targetId="ab2e-bbbc-12f2-6c1b" type="selectionEntryGroup"/>
+          </entryLinks>
+        </entryLink>
+      </entryLinks>
+      <costs>
+        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="64e7-724a-da47-ed46" name="Callis and Toll &amp; Companions (separate units)" hidden="false" collective="false" import="true" type="upgrade">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="d950-bce3-6ed2-8b86" type="equalTo"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <constraints>
+        <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="f9ea-a415-1a41-6828" type="max"/>
+      </constraints>
+      <categoryLinks>
+        <categoryLink id="594f-bf0a-5df6-8f98" name="New CategoryLink" hidden="false" targetId="93cb-21d9-e1d5-6161" primary="true"/>
+      </categoryLinks>
+      <entryLinks>
+        <entryLink id="aa1b-fdc3-fccd-49e5" name="Callis and Toll" hidden="false" collective="false" import="true" targetId="5dc5-270f-823f-7bdf" type="selectionEntry">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="9466-18a2-6f83-24fe" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="7ad7-994a-7de2-6aa6" type="min"/>
+          </constraints>
+          <categoryLinks>
+            <categoryLink id="45da-46b5-cd80-2ff8" name="Allegiant - Cities of Sigmar" hidden="false" targetId="0046-6be2-ce3d-7696" primary="false"/>
+          </categoryLinks>
+          <entryLinks>
+            <entryLink id="0ea5-4c12-469d-65b1" name="Battalion Formation" hidden="false" collective="false" import="true" targetId="ab2e-bbbc-12f2-6c1b" type="selectionEntryGroup"/>
+          </entryLinks>
+        </entryLink>
+        <entryLink id="a5a5-1529-c844-e813" name="Toll&apos;s Companions" hidden="false" collective="false" import="true" targetId="9899-6d0d-d328-824e" type="selectionEntry">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="c3fd-5e79-7955-78b3" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="052d-bbbb-99cb-c110" type="min"/>
+          </constraints>
+          <categoryLinks>
+            <categoryLink id="e6b6-0019-094b-0d31" name="Allegiant - Cities of Sigmar" hidden="false" targetId="0046-6be2-ce3d-7696" primary="false"/>
+          </categoryLinks>
+          <entryLinks>
+            <entryLink id="2ef4-8a0c-fc2e-59ef" name="Battalion Formation" hidden="false" collective="false" import="true" targetId="ab2e-bbbc-12f2-6c1b" type="selectionEntryGroup"/>
+          </entryLinks>
+        </entryLink>
+      </entryLinks>
+      <costs>
+        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="350.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="29d7-7430-21b7-50b4" name="Haskel Hexbane &amp; Hunters (separate units)" hidden="false" collective="false" import="true" type="upgrade">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="d950-bce3-6ed2-8b86" type="equalTo"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <constraints>
+        <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="85fc-9203-3f8b-5bb1" type="max"/>
+      </constraints>
+      <categoryLinks>
+        <categoryLink id="e290-c434-ce00-ace8" name="New CategoryLink" hidden="false" targetId="93cb-21d9-e1d5-6161" primary="true"/>
+      </categoryLinks>
+      <entryLinks>
+        <entryLink id="112a-2fef-069c-793c" name="Haskel Hexbane" hidden="false" collective="false" import="true" targetId="c340-39ce-ef59-8802" type="selectionEntry">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="e465-45ac-5984-e0a0" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="aa39-05e5-445a-d22d" type="min"/>
+          </constraints>
+          <categoryLinks>
+            <categoryLink id="1222-2e25-d372-482c" name="Allegiant - Cities of Sigmar" hidden="false" targetId="0046-6be2-ce3d-7696" primary="false"/>
+          </categoryLinks>
+          <entryLinks>
+            <entryLink id="2d71-1c0b-ad7c-835f" name="Battalion Formation" hidden="false" collective="false" import="true" targetId="ab2e-bbbc-12f2-6c1b" type="selectionEntryGroup"/>
+          </entryLinks>
+        </entryLink>
+        <entryLink id="3765-ac91-0193-caea" name="Hexbane&apos;s Hunters" hidden="false" collective="false" import="true" targetId="437f-c1d8-7cfc-2989" type="selectionEntry">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="2148-7b52-e52d-60f7" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="52c9-ce2c-3fdf-0bf8" type="min"/>
+          </constraints>
+          <categoryLinks>
+            <categoryLink id="af91-97ba-872e-6454" name="Allegiant - Cities of Sigmar" hidden="false" targetId="0046-6be2-ce3d-7696" primary="false"/>
+          </categoryLinks>
+          <entryLinks>
+            <entryLink id="1718-4f50-d8a4-76fd" name="Battalion Formation" hidden="false" collective="false" import="true" targetId="ab2e-bbbc-12f2-6c1b" type="selectionEntryGroup"/>
+          </entryLinks>
+        </entryLink>
+      </entryLinks>
+      <costs>
+        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="180.0"/>
+      </costs>
+    </selectionEntry>
   </selectionEntries>
   <entryLinks>
     <entryLink id="fd3d-932b-f003-cc1d" name="Astreia Solbright" hidden="false" collective="false" import="true" targetId="db6f-2932-06be-f0e2" type="selectionEntry">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="88ee-6355-96e4-6a34" type="greaterThan"/>
+          </conditions>
+        </modifier>
+      </modifiers>
       <entryLinks>
         <entryLink id="a44a-ddb1-8fad-d25f" name="General" hidden="false" collective="false" import="true" targetId="98a4-3d6d-a7b9-399f" type="selectionEntry">
           <categoryLinks>
@@ -644,6 +1019,13 @@ Designer’s Note: Coalition units are units from another faction that can be in
       </entryLinks>
     </entryLink>
     <entryLink id="9101-5a50-2bf7-d953" name="Aventis Firestrike, Magister of Hammerhal" hidden="false" collective="false" import="true" targetId="2b4f-c3c0-c455-5d04" type="selectionEntry">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="88ee-6355-96e4-6a34" type="greaterThan"/>
+          </conditions>
+        </modifier>
+      </modifiers>
       <entryLinks>
         <entryLink id="3c1a-e819-cbb6-5885" name="General" hidden="false" collective="false" import="true" targetId="98a4-3d6d-a7b9-399f" type="selectionEntry">
           <categoryLinks>
@@ -656,6 +1038,13 @@ Designer’s Note: Coalition units are units from another faction that can be in
       </entryLinks>
     </entryLink>
     <entryLink id="f985-d299-bec8-b253" name="Celestant-Prime, Hammer of Sigmar" hidden="false" collective="false" import="true" targetId="3167-e3f7-2405-0c83" type="selectionEntry">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="88ee-6355-96e4-6a34" type="greaterThan"/>
+          </conditions>
+        </modifier>
+      </modifiers>
       <entryLinks>
         <entryLink id="e897-9df3-e6a1-9eb7" name="General" hidden="false" collective="false" import="true" targetId="98a4-3d6d-a7b9-399f" type="selectionEntry">
           <categoryLinks>
@@ -666,6 +1055,13 @@ Designer’s Note: Coalition units are units from another faction that can be in
       </entryLinks>
     </entryLink>
     <entryLink id="bd5d-ae2d-8a77-169d" name="Vandus Hammerhand" hidden="false" collective="false" import="true" targetId="5175-d818-9355-a435" type="selectionEntry">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="88ee-6355-96e4-6a34" type="greaterThan"/>
+          </conditions>
+        </modifier>
+      </modifiers>
       <entryLinks>
         <entryLink id="0671-fda9-0f13-ec1c" name="General" hidden="false" collective="false" import="true" targetId="98a4-3d6d-a7b9-399f" type="selectionEntry">
           <categoryLinks>
@@ -677,6 +1073,13 @@ Designer’s Note: Coalition units are units from another faction that can be in
       </entryLinks>
     </entryLink>
     <entryLink id="145f-4003-540d-3c46" name="Gavriel Sureheart" hidden="false" collective="false" import="true" targetId="a0ad-775c-5c5f-66ba" type="selectionEntry">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="88ee-6355-96e4-6a34" type="greaterThan"/>
+          </conditions>
+        </modifier>
+      </modifiers>
       <entryLinks>
         <entryLink id="2d78-9cf0-b755-a548" name="General" hidden="false" collective="false" import="true" targetId="98a4-3d6d-a7b9-399f" type="selectionEntry">
           <categoryLinks>
@@ -686,23 +1089,38 @@ Designer’s Note: Coalition units are units from another faction that can be in
         <entryLink id="5a21-e233-506d-e345" name="Battalion Formation" hidden="false" collective="false" import="true" targetId="ab2e-bbbc-12f2-6c1b" type="selectionEntryGroup"/>
       </entryLinks>
     </entryLink>
-    <entryLink id="960d-0e31-7a74-37f3" name="Neave Blacktalon" hidden="false" collective="false" import="true" targetId="48a0-4c37-2f18-79c2" type="selectionEntry">
-      <entryLinks>
-        <entryLink id="a3e9-90e3-7ac9-5c62" name="General" hidden="false" collective="false" import="true" targetId="98a4-3d6d-a7b9-399f" type="selectionEntry">
-          <categoryLinks>
-            <categoryLink id="a7a3-6453-b517-850a" name="Named General" hidden="false" targetId="8b3d-7f03-e1f9-eaf5" primary="false"/>
-          </categoryLinks>
-        </entryLink>
-        <entryLink id="61b3-43a6-2726-60e5" name="Battalion Formation" hidden="false" collective="false" import="true" targetId="ab2e-bbbc-12f2-6c1b" type="selectionEntryGroup"/>
-      </entryLinks>
-    </entryLink>
     <entryLink id="6824-be5a-71ad-f675" name="The Farstriders" hidden="false" collective="false" import="true" targetId="eddf-f44f-d484-132d" type="selectionEntry">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="88ee-6355-96e4-6a34" type="greaterThan"/>
+          </conditions>
+        </modifier>
+      </modifiers>
       <entryLinks>
         <entryLink id="e4f0-9fd9-f541-218e" name="Battalion Formation" hidden="false" collective="false" import="true" targetId="ab2e-bbbc-12f2-6c1b" type="selectionEntryGroup"/>
       </entryLinks>
     </entryLink>
-    <entryLink id="e615-7eae-bff8-af4a" name="Steelheart&apos;s Champions" hidden="false" collective="false" import="true" targetId="e658-a744-032d-2d3b" type="selectionEntry"/>
+    <entryLink id="e615-7eae-bff8-af4a" name="Steelheart&apos;s Champions" hidden="false" collective="false" import="true" targetId="e658-a744-032d-2d3b" type="selectionEntry">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="88ee-6355-96e4-6a34" type="greaterThan"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <entryLinks>
+        <entryLink id="a216-847b-a415-ac49" name="Battalion Formation" hidden="false" collective="false" import="true" targetId="ab2e-bbbc-12f2-6c1b" type="selectionEntryGroup"/>
+      </entryLinks>
+    </entryLink>
     <entryLink id="1280-6fb0-ac14-e75d" name="Lord-Arcanum" hidden="false" collective="false" import="true" targetId="7a6f-11cb-5205-7736" type="selectionEntry">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="88ee-6355-96e4-6a34" type="greaterThan"/>
+          </conditions>
+        </modifier>
+      </modifiers>
       <entryLinks>
         <entryLink id="fa67-0349-691d-f943" name="General" hidden="false" collective="false" import="true" targetId="98a4-3d6d-a7b9-399f" type="selectionEntry"/>
         <entryLink id="9456-0e1b-c0dc-6641" name="Artefacts of Power" hidden="false" collective="false" import="true" targetId="745a-2a21-e84d-fbe7" type="selectionEntryGroup"/>
@@ -712,6 +1130,13 @@ Designer’s Note: Coalition units are units from another faction that can be in
       </entryLinks>
     </entryLink>
     <entryLink id="21ae-60cc-887e-e6ce" name="Lord-Arcanum on Celestial Dracoline" hidden="false" collective="false" import="true" targetId="f089-eb70-e6ec-a175" type="selectionEntry">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="88ee-6355-96e4-6a34" type="greaterThan"/>
+          </conditions>
+        </modifier>
+      </modifiers>
       <entryLinks>
         <entryLink id="2ebb-68ae-43f9-6b1d" name="Stormcast Eternals Spell Lores" hidden="false" collective="false" import="true" targetId="251b-7012-cb2d-a80d" type="selectionEntryGroup"/>
         <entryLink id="2b97-67b8-6d06-3bfb" name="Command Traits" hidden="false" collective="false" import="true" targetId="c09e-e941-f12f-cfa0" type="selectionEntryGroup"/>
@@ -722,6 +1147,13 @@ Designer’s Note: Coalition units are units from another faction that can be in
       </entryLinks>
     </entryLink>
     <entryLink id="2cd8-b8f7-dbad-4ebd" name="Lord-Arcanum on Gryph-Charger" hidden="false" collective="false" import="true" targetId="1b51-a280-a1c5-5d28" type="selectionEntry">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="88ee-6355-96e4-6a34" type="greaterThan"/>
+          </conditions>
+        </modifier>
+      </modifiers>
       <entryLinks>
         <entryLink id="94a8-72aa-f44a-90ec" name="Stormcast Eternals Spell Lores" hidden="false" collective="false" import="true" targetId="251b-7012-cb2d-a80d" type="selectionEntryGroup"/>
         <entryLink id="48ed-28bb-9739-66e0" name="Command Traits" hidden="false" collective="false" import="true" targetId="c09e-e941-f12f-cfa0" type="selectionEntryGroup"/>
@@ -732,6 +1164,13 @@ Designer’s Note: Coalition units are units from another faction that can be in
       </entryLinks>
     </entryLink>
     <entryLink id="2992-09b6-db9f-3ca3" name="Lord-Arcanum on Tauralon" hidden="false" collective="false" import="true" targetId="a46b-de5f-14a1-aa13" type="selectionEntry">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="88ee-6355-96e4-6a34" type="greaterThan"/>
+          </conditions>
+        </modifier>
+      </modifiers>
       <entryLinks>
         <entryLink id="099b-27cf-7d5e-fe6c" name="Stormcast Eternals Spell Lores" hidden="false" collective="false" import="true" targetId="251b-7012-cb2d-a80d" type="selectionEntryGroup"/>
         <entryLink id="48d0-ec1f-0500-3a8f" name="Command Traits" hidden="false" collective="false" import="true" targetId="c09e-e941-f12f-cfa0" type="selectionEntryGroup"/>
@@ -742,6 +1181,13 @@ Designer’s Note: Coalition units are units from another faction that can be in
       </entryLinks>
     </entryLink>
     <entryLink id="fc78-a27e-139e-40c2" name="Lord-Celestant on Dracoth" hidden="false" collective="false" import="true" targetId="3433-3a08-8088-8855" type="selectionEntry">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="88ee-6355-96e4-6a34" type="greaterThan"/>
+          </conditions>
+        </modifier>
+      </modifiers>
       <entryLinks>
         <entryLink id="c48e-d8de-e156-14e0" name="General" hidden="false" collective="false" import="true" targetId="98a4-3d6d-a7b9-399f" type="selectionEntry"/>
         <entryLink id="18d9-5ab6-f33e-a734" name="Command Traits" hidden="false" collective="false" import="true" targetId="c09e-e941-f12f-cfa0" type="selectionEntryGroup"/>
@@ -751,6 +1197,13 @@ Designer’s Note: Coalition units are units from another faction that can be in
       </entryLinks>
     </entryLink>
     <entryLink id="f35e-9404-a98d-344e" name="Lord-Aquilor" hidden="false" collective="false" import="true" targetId="de27-61c7-dfeb-cfa3" type="selectionEntry">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="88ee-6355-96e4-6a34" type="greaterThan"/>
+          </conditions>
+        </modifier>
+      </modifiers>
       <entryLinks>
         <entryLink id="8bc4-ece9-53a8-bc84" name="General" hidden="false" collective="false" import="true" targetId="98a4-3d6d-a7b9-399f" type="selectionEntry"/>
         <entryLink id="0e90-0fbd-a5b5-79a4" name="Command Traits" hidden="false" collective="false" import="true" targetId="c09e-e941-f12f-cfa0" type="selectionEntryGroup"/>
@@ -760,6 +1213,13 @@ Designer’s Note: Coalition units are units from another faction that can be in
       </entryLinks>
     </entryLink>
     <entryLink id="cd9b-0aaa-26fc-eb31" name="Lord-Castellant" hidden="false" collective="false" import="true" targetId="d5de-e1bb-52de-812b" type="selectionEntry">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="88ee-6355-96e4-6a34" type="greaterThan"/>
+          </conditions>
+        </modifier>
+      </modifiers>
       <entryLinks>
         <entryLink id="5a39-deeb-eb38-dc94" name="General" hidden="false" collective="false" import="true" targetId="98a4-3d6d-a7b9-399f" type="selectionEntry"/>
         <entryLink id="48a8-9a42-3ec6-fc35" name="Artefacts of Power" hidden="false" collective="false" import="true" targetId="745a-2a21-e84d-fbe7" type="selectionEntryGroup"/>
@@ -768,6 +1228,13 @@ Designer’s Note: Coalition units are units from another faction that can be in
       </entryLinks>
     </entryLink>
     <entryLink id="b141-a826-283c-204d" name="Lord-Celestant" hidden="false" collective="false" import="true" targetId="81a3-db91-57bd-9d88" type="selectionEntry">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="88ee-6355-96e4-6a34" type="greaterThan"/>
+          </conditions>
+        </modifier>
+      </modifiers>
       <entryLinks>
         <entryLink id="4aaf-332b-637a-7606" name="General" hidden="false" collective="false" import="true" targetId="98a4-3d6d-a7b9-399f" type="selectionEntry"/>
         <entryLink id="e1c0-4651-4f94-17d1" name="Artefacts of Power" hidden="false" collective="false" import="true" targetId="745a-2a21-e84d-fbe7" type="selectionEntryGroup"/>
@@ -776,6 +1243,13 @@ Designer’s Note: Coalition units are units from another faction that can be in
       </entryLinks>
     </entryLink>
     <entryLink id="5245-4766-dd82-9f0f" name="Lord-Celestant on Stardrake" hidden="false" collective="false" import="true" targetId="0654-13e8-97fc-c01b" type="selectionEntry">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="88ee-6355-96e4-6a34" type="greaterThan"/>
+          </conditions>
+        </modifier>
+      </modifiers>
       <entryLinks>
         <entryLink id="a77a-1b1b-eaca-b259" name="General" hidden="false" collective="false" import="true" targetId="98a4-3d6d-a7b9-399f" type="selectionEntry">
           <categoryLinks>
@@ -789,6 +1263,13 @@ Designer’s Note: Coalition units are units from another faction that can be in
       </entryLinks>
     </entryLink>
     <entryLink id="aeff-f660-94f6-bd67" name="Lord-Exorcist" hidden="false" collective="false" import="true" targetId="910c-1cf2-c5f1-3d5e" type="selectionEntry">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="88ee-6355-96e4-6a34" type="greaterThan"/>
+          </conditions>
+        </modifier>
+      </modifiers>
       <entryLinks>
         <entryLink id="cc1c-d6b8-34bb-b96e" name="General" hidden="false" collective="false" import="true" targetId="98a4-3d6d-a7b9-399f" type="selectionEntry"/>
         <entryLink id="fe0c-41f4-8ebd-5d8d" name="Artefacts of Power" hidden="false" collective="false" import="true" targetId="745a-2a21-e84d-fbe7" type="selectionEntryGroup"/>
@@ -798,6 +1279,13 @@ Designer’s Note: Coalition units are units from another faction that can be in
       </entryLinks>
     </entryLink>
     <entryLink id="11a3-8475-99c2-15b8" name="Lord-Ordinator" hidden="false" collective="false" import="true" targetId="9743-a445-9f1f-3e7b" type="selectionEntry">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="88ee-6355-96e4-6a34" type="greaterThan"/>
+          </conditions>
+        </modifier>
+      </modifiers>
       <entryLinks>
         <entryLink id="bbdc-7eba-3aae-df75" name="General" hidden="false" collective="false" import="true" targetId="98a4-3d6d-a7b9-399f" type="selectionEntry"/>
         <entryLink id="7f38-8b1f-0d56-53c0" name="Artefacts of Power" hidden="false" collective="false" import="true" targetId="745a-2a21-e84d-fbe7" type="selectionEntryGroup"/>
@@ -806,6 +1294,13 @@ Designer’s Note: Coalition units are units from another faction that can be in
       </entryLinks>
     </entryLink>
     <entryLink id="e815-bc18-a57b-a56c" name="Lord-Relictor" hidden="false" collective="false" import="true" targetId="9535-ef25-84ae-1537" type="selectionEntry">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="88ee-6355-96e4-6a34" type="greaterThan"/>
+          </conditions>
+        </modifier>
+      </modifiers>
       <entryLinks>
         <entryLink id="03a6-04e6-44f5-9e90" name="General" hidden="false" collective="false" import="true" targetId="98a4-3d6d-a7b9-399f" type="selectionEntry"/>
         <entryLink id="2c49-2f03-4fec-5bad" name="Artefacts of Power" hidden="false" collective="false" import="true" targetId="745a-2a21-e84d-fbe7" type="selectionEntryGroup"/>
@@ -815,6 +1310,13 @@ Designer’s Note: Coalition units are units from another faction that can be in
       </entryLinks>
     </entryLink>
     <entryLink id="58fc-fc9f-c15d-cd71" name="Lord-Veritant" hidden="false" collective="false" import="true" targetId="c180-6bc6-709e-b6d2" type="selectionEntry">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="88ee-6355-96e4-6a34" type="greaterThan"/>
+          </conditions>
+        </modifier>
+      </modifiers>
       <entryLinks>
         <entryLink id="9726-8ead-d8e8-889a" name="General" hidden="false" collective="false" import="true" targetId="98a4-3d6d-a7b9-399f" type="selectionEntry"/>
         <entryLink id="e074-f226-7ee3-8e65" name="Artefacts of Power" hidden="false" collective="false" import="true" targetId="745a-2a21-e84d-fbe7" type="selectionEntryGroup"/>
@@ -824,11 +1326,25 @@ Designer’s Note: Coalition units are units from another faction that can be in
       </entryLinks>
     </entryLink>
     <entryLink id="474b-c88a-3fe3-1db9" name="Gryph-hounds" hidden="false" collective="false" import="true" targetId="8acc-634a-dfc4-9c0b" type="selectionEntry">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="88ee-6355-96e4-6a34" type="greaterThan"/>
+          </conditions>
+        </modifier>
+      </modifiers>
       <entryLinks>
         <entryLink id="935a-7e4c-36d0-1e9a" name="Battalion Formation" hidden="false" collective="false" import="true" targetId="ab2e-bbbc-12f2-6c1b" type="selectionEntryGroup"/>
       </entryLinks>
     </entryLink>
     <entryLink id="6f5f-f974-0f1e-25ed" name="Drakesworn Templar" hidden="false" collective="false" import="true" targetId="2e41-b8aa-9c1c-d336" type="selectionEntry">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="88ee-6355-96e4-6a34" type="greaterThan"/>
+          </conditions>
+        </modifier>
+      </modifiers>
       <entryLinks>
         <entryLink id="60c6-ca6a-3749-7e89" name="General" hidden="false" collective="false" import="true" targetId="98a4-3d6d-a7b9-399f" type="selectionEntry">
           <categoryLinks>
@@ -842,6 +1358,13 @@ Designer’s Note: Coalition units are units from another faction that can be in
       </entryLinks>
     </entryLink>
     <entryLink id="8628-1871-7146-53ec" name="Knight-Azyros" hidden="false" collective="false" import="true" targetId="fce4-8544-069b-c779" type="selectionEntry">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="88ee-6355-96e4-6a34" type="greaterThan"/>
+          </conditions>
+        </modifier>
+      </modifiers>
       <entryLinks>
         <entryLink id="81a8-919d-d080-f4c1" name="General" hidden="false" collective="false" import="true" targetId="98a4-3d6d-a7b9-399f" type="selectionEntry"/>
         <entryLink id="9079-c769-b34a-5d28" name="Artefacts of Power" hidden="false" collective="false" import="true" targetId="745a-2a21-e84d-fbe7" type="selectionEntryGroup"/>
@@ -850,6 +1373,13 @@ Designer’s Note: Coalition units are units from another faction that can be in
       </entryLinks>
     </entryLink>
     <entryLink id="4583-4514-6812-36ce" name="Knight-Heraldor" hidden="false" collective="false" import="true" targetId="3d1a-41c5-5165-51f7" type="selectionEntry">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="88ee-6355-96e4-6a34" type="greaterThan"/>
+          </conditions>
+        </modifier>
+      </modifiers>
       <entryLinks>
         <entryLink id="5c94-a3c8-ff37-6624" name="General" hidden="false" collective="false" import="true" targetId="98a4-3d6d-a7b9-399f" type="selectionEntry"/>
         <entryLink id="5367-8e6e-646d-5efd" name="Artefacts of Power" hidden="false" collective="false" import="true" targetId="745a-2a21-e84d-fbe7" type="selectionEntryGroup"/>
@@ -858,6 +1388,13 @@ Designer’s Note: Coalition units are units from another faction that can be in
       </entryLinks>
     </entryLink>
     <entryLink id="aa88-0d52-8892-9cb8" name="Knight-Incantor" hidden="false" collective="false" import="true" targetId="1819-4a1a-1aca-a3c4" type="selectionEntry">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="88ee-6355-96e4-6a34" type="greaterThan"/>
+          </conditions>
+        </modifier>
+      </modifiers>
       <entryLinks>
         <entryLink id="c376-31c8-c46b-36bc" name="General" hidden="false" collective="false" import="true" targetId="98a4-3d6d-a7b9-399f" type="selectionEntry"/>
         <entryLink id="6b6e-1ae9-7030-99fd" name="Stormcast Eternals Spell Lores" hidden="false" collective="false" import="true" targetId="251b-7012-cb2d-a80d" type="selectionEntryGroup"/>
@@ -867,6 +1404,13 @@ Designer’s Note: Coalition units are units from another faction that can be in
       </entryLinks>
     </entryLink>
     <entryLink id="3735-a73d-a9c6-cb66" name="Knight-Questor" hidden="false" collective="false" import="true" targetId="98a5-5083-e689-579c" type="selectionEntry">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="88ee-6355-96e4-6a34" type="greaterThan"/>
+          </conditions>
+        </modifier>
+      </modifiers>
       <entryLinks>
         <entryLink id="fca9-df5d-0aba-9050" name="General" hidden="false" collective="false" import="true" targetId="98a4-3d6d-a7b9-399f" type="selectionEntry"/>
         <entryLink id="7633-2835-b25d-46c7" name="Artefacts of Power" hidden="false" collective="false" import="true" targetId="745a-2a21-e84d-fbe7" type="selectionEntryGroup"/>
@@ -875,6 +1419,13 @@ Designer’s Note: Coalition units are units from another faction that can be in
       </entryLinks>
     </entryLink>
     <entryLink id="47b9-d727-9abe-8851" name="Knight-Venator" hidden="false" collective="false" import="true" targetId="559c-5704-ffa3-442e" type="selectionEntry">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="88ee-6355-96e4-6a34" type="greaterThan"/>
+          </conditions>
+        </modifier>
+      </modifiers>
       <entryLinks>
         <entryLink id="9a30-c701-fd00-a21c" name="General" hidden="false" collective="false" import="true" targetId="98a4-3d6d-a7b9-399f" type="selectionEntry"/>
         <entryLink id="02b0-afe5-022c-93ad" name="Artefacts of Power" hidden="false" collective="false" import="true" targetId="745a-2a21-e84d-fbe7" type="selectionEntryGroup"/>
@@ -883,6 +1434,13 @@ Designer’s Note: Coalition units are units from another faction that can be in
       </entryLinks>
     </entryLink>
     <entryLink id="efdb-c324-921c-55d0" name="Knight-Vexillor" hidden="false" collective="false" import="true" targetId="5eb7-a3be-16ca-d7b3" type="selectionEntry">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="88ee-6355-96e4-6a34" type="greaterThan"/>
+          </conditions>
+        </modifier>
+      </modifiers>
       <entryLinks>
         <entryLink id="d5f1-20d6-9449-2f85" name="General" hidden="false" collective="false" import="true" targetId="98a4-3d6d-a7b9-399f" type="selectionEntry"/>
         <entryLink id="f510-f6d2-232d-f109" name="Artefacts of Power" hidden="false" collective="false" import="true" targetId="745a-2a21-e84d-fbe7" type="selectionEntryGroup"/>
@@ -891,6 +1449,13 @@ Designer’s Note: Coalition units are units from another faction that can be in
       </entryLinks>
     </entryLink>
     <entryLink id="ebf8-f9fa-4a67-9ccb" name="Knight-Zephyros" hidden="false" collective="false" import="true" targetId="7e36-49f8-78b3-2b05" type="selectionEntry">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="88ee-6355-96e4-6a34" type="greaterThan"/>
+          </conditions>
+        </modifier>
+      </modifiers>
       <entryLinks>
         <entryLink id="3d36-e34f-a72f-18ce" name="General" hidden="false" collective="false" import="true" targetId="98a4-3d6d-a7b9-399f" type="selectionEntry"/>
         <entryLink id="a028-075e-502f-c692" name="Artefacts of Power" hidden="false" collective="false" import="true" targetId="745a-2a21-e84d-fbe7" type="selectionEntryGroup"/>
@@ -913,6 +1478,11 @@ Designer’s Note: Coalition units are units from another faction that can be in
               </conditions>
             </conditionGroup>
           </conditionGroups>
+        </modifier>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="88ee-6355-96e4-6a34" type="greaterThan"/>
+          </conditions>
         </modifier>
       </modifiers>
       <categoryLinks>
@@ -938,6 +1508,11 @@ Designer’s Note: Coalition units are units from another faction that can be in
             </conditionGroup>
           </conditionGroups>
         </modifier>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="88ee-6355-96e4-6a34" type="greaterThan"/>
+          </conditions>
+        </modifier>
       </modifiers>
       <categoryLinks>
         <categoryLink id="ea46-8d1c-0a8a-3536" name="Battleline" hidden="false" targetId="a42d-220e-6a88-7bf6" primary="false"/>
@@ -961,6 +1536,11 @@ Designer’s Note: Coalition units are units from another faction that can be in
               </conditions>
             </conditionGroup>
           </conditionGroups>
+        </modifier>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="88ee-6355-96e4-6a34" type="greaterThan"/>
+          </conditions>
         </modifier>
       </modifiers>
       <categoryLinks>
@@ -986,6 +1566,11 @@ Designer’s Note: Coalition units are units from another faction that can be in
             </conditionGroup>
           </conditionGroups>
         </modifier>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="88ee-6355-96e4-6a34" type="greaterThan"/>
+          </conditions>
+        </modifier>
       </modifiers>
       <categoryLinks>
         <categoryLink id="ac7e-caa4-9a0e-048b" name="Battleline" hidden="false" targetId="a42d-220e-6a88-7bf6" primary="false"/>
@@ -1010,6 +1595,11 @@ Designer’s Note: Coalition units are units from another faction that can be in
             </conditionGroup>
           </conditionGroups>
         </modifier>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="88ee-6355-96e4-6a34" type="greaterThan"/>
+          </conditions>
+        </modifier>
       </modifiers>
       <categoryLinks>
         <categoryLink id="5db2-46d4-bbfa-efe9" name="Battleline" hidden="false" targetId="a42d-220e-6a88-7bf6" primary="false"/>
@@ -1019,6 +1609,13 @@ Designer’s Note: Coalition units are units from another faction that can be in
       </entryLinks>
     </entryLink>
     <entryLink id="188a-a9f2-679d-b5b2" name="Decimators" hidden="false" collective="false" import="true" targetId="d387-6c4b-dcbb-7be5" type="selectionEntry">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="88ee-6355-96e4-6a34" type="greaterThan"/>
+          </conditions>
+        </modifier>
+      </modifiers>
       <entryLinks>
         <entryLink id="61d9-dbc3-141f-9c0c" name="Battalion Formation" hidden="false" collective="false" import="true" targetId="ab2e-bbbc-12f2-6c1b" type="selectionEntryGroup"/>
       </entryLinks>
@@ -1038,6 +1635,11 @@ Designer’s Note: Coalition units are units from another faction that can be in
               </conditions>
             </conditionGroup>
           </conditionGroups>
+        </modifier>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="88ee-6355-96e4-6a34" type="greaterThan"/>
+          </conditions>
         </modifier>
       </modifiers>
       <categoryLinks>
@@ -1063,6 +1665,11 @@ Designer’s Note: Coalition units are units from another faction that can be in
             </conditionGroup>
           </conditionGroups>
         </modifier>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="88ee-6355-96e4-6a34" type="greaterThan"/>
+          </conditions>
+        </modifier>
       </modifiers>
       <categoryLinks>
         <categoryLink id="1a6d-ea24-cd1f-2500" name="Battleline" hidden="false" targetId="a42d-220e-6a88-7bf6" primary="false"/>
@@ -1072,6 +1679,13 @@ Designer’s Note: Coalition units are units from another faction that can be in
       </entryLinks>
     </entryLink>
     <entryLink id="fac4-59e5-bd6d-2ba4" name="Liberators" hidden="false" collective="false" import="true" targetId="43cc-71a1-f6c0-b647" type="selectionEntry">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="88ee-6355-96e4-6a34" type="greaterThan"/>
+          </conditions>
+        </modifier>
+      </modifiers>
       <entryLinks>
         <entryLink id="4066-d46a-924b-82fd" name="Battalion Formation" hidden="false" collective="false" import="true" targetId="ab2e-bbbc-12f2-6c1b" type="selectionEntryGroup"/>
       </entryLinks>
@@ -1089,6 +1703,11 @@ Designer’s Note: Coalition units are units from another faction that can be in
               </conditions>
             </conditionGroup>
           </conditionGroups>
+        </modifier>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="88ee-6355-96e4-6a34" type="greaterThan"/>
+          </conditions>
         </modifier>
       </modifiers>
       <categoryLinks>
@@ -1124,6 +1743,13 @@ Designer’s Note: Coalition units are units from another faction that can be in
       </entryLinks>
     </entryLink>
     <entryLink id="86de-c0aa-cbb1-51a2" name="Aetherwings" hidden="false" collective="false" import="true" targetId="c2a3-3097-3d51-41b8" type="selectionEntry">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="88ee-6355-96e4-6a34" type="greaterThan"/>
+          </conditions>
+        </modifier>
+      </modifiers>
       <entryLinks>
         <entryLink id="1c39-2ed9-f5a9-c0a9" name="Battalion Formation" hidden="false" collective="false" import="true" targetId="ab2e-bbbc-12f2-6c1b" type="selectionEntryGroup"/>
       </entryLinks>
@@ -1144,6 +1770,11 @@ Designer’s Note: Coalition units are units from another faction that can be in
             </conditionGroup>
           </conditionGroups>
         </modifier>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="88ee-6355-96e4-6a34" type="greaterThan"/>
+          </conditions>
+        </modifier>
       </modifiers>
       <categoryLinks>
         <categoryLink id="cc6b-6922-7878-ad2b" name="BATTLELINE" hidden="false" targetId="a42d-220e-6a88-7bf6" primary="false"/>
@@ -1153,11 +1784,25 @@ Designer’s Note: Coalition units are units from another faction that can be in
       </entryLinks>
     </entryLink>
     <entryLink id="fe9e-deb4-d9fe-ce20" name="Vanguard-Raptors (with Longstrike Crossbows)" hidden="false" collective="false" import="true" targetId="8620-5d8e-dc14-4665" type="selectionEntry">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="88ee-6355-96e4-6a34" type="greaterThan"/>
+          </conditions>
+        </modifier>
+      </modifiers>
       <entryLinks>
         <entryLink id="e823-815d-6e27-ffce" name="Battalion Formation" hidden="false" collective="false" import="true" targetId="ab2e-bbbc-12f2-6c1b" type="selectionEntryGroup"/>
       </entryLinks>
     </entryLink>
     <entryLink id="cb63-90e6-cd40-352e" name="Vanguard-Raptors (with Hurricane Raptors)" hidden="false" collective="false" import="true" targetId="b275-7f20-cf80-7f32" type="selectionEntry">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="88ee-6355-96e4-6a34" type="greaterThan"/>
+          </conditions>
+        </modifier>
+      </modifiers>
       <entryLinks>
         <entryLink id="d180-d230-7e4d-1601" name="Battalion Formation" hidden="false" collective="false" import="true" targetId="ab2e-bbbc-12f2-6c1b" type="selectionEntryGroup"/>
       </entryLinks>
@@ -1178,6 +1823,11 @@ Designer’s Note: Coalition units are units from another faction that can be in
             </conditionGroup>
           </conditionGroups>
         </modifier>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="88ee-6355-96e4-6a34" type="greaterThan"/>
+          </conditions>
+        </modifier>
       </modifiers>
       <categoryLinks>
         <categoryLink id="974a-ba52-6a14-3cff" name="Battleline" hidden="false" targetId="a42d-220e-6a88-7bf6" primary="false"/>
@@ -1187,27 +1837,62 @@ Designer’s Note: Coalition units are units from another faction that can be in
       </entryLinks>
     </entryLink>
     <entryLink id="e80d-5db0-533b-4014" name="Celestar Ballista" hidden="false" collective="false" import="true" targetId="7c31-17df-1423-3022" type="selectionEntry">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="88ee-6355-96e4-6a34" type="greaterThan"/>
+          </conditions>
+        </modifier>
+      </modifiers>
       <entryLinks>
         <entryLink id="d0eb-6683-d993-5606" name="Battalion Formation" hidden="false" collective="false" import="true" targetId="ab2e-bbbc-12f2-6c1b" type="selectionEntryGroup"/>
       </entryLinks>
     </entryLink>
     <entryLink id="be23-39f2-09c0-65d3" name="Castigators" hidden="false" collective="false" import="true" targetId="6e68-663b-459d-de78" type="selectionEntry">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="88ee-6355-96e4-6a34" type="greaterThan"/>
+          </conditions>
+        </modifier>
+      </modifiers>
       <entryLinks>
         <entryLink id="322f-88ad-30a6-0e33" name="Battalion Formation" hidden="false" collective="false" import="true" targetId="ab2e-bbbc-12f2-6c1b" type="selectionEntryGroup"/>
       </entryLinks>
     </entryLink>
     <entryLink id="b928-086e-0079-568f" name="Sequitors" hidden="false" collective="false" import="true" targetId="4cce-83f5-96a2-6586" type="selectionEntry">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="88ee-6355-96e4-6a34" type="greaterThan"/>
+          </conditions>
+        </modifier>
+      </modifiers>
       <entryLinks>
         <entryLink id="a989-6f8d-6aa8-1e0b" name="Battalion Formation" hidden="false" collective="false" import="true" targetId="ab2e-bbbc-12f2-6c1b" type="selectionEntryGroup"/>
       </entryLinks>
     </entryLink>
     <entryLink id="3890-03e3-3c63-2e8e" name="Evocators" hidden="false" collective="false" import="true" targetId="ba9f-a9e1-db2a-b0a5" type="selectionEntry">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="88ee-6355-96e4-6a34" type="greaterThan"/>
+          </conditions>
+        </modifier>
+      </modifiers>
       <entryLinks>
         <entryLink id="03b9-e2aa-d899-0620" name="Stormcast Eternals Spell Lores" hidden="false" collective="false" import="true" targetId="251b-7012-cb2d-a80d" type="selectionEntryGroup"/>
         <entryLink id="f534-103d-6013-f845" name="Battalion Formation" hidden="false" collective="false" import="true" targetId="ab2e-bbbc-12f2-6c1b" type="selectionEntryGroup"/>
       </entryLinks>
     </entryLink>
     <entryLink id="89dd-426d-32c0-e675" name="Evocators on Celestial Evocators" hidden="false" collective="false" import="true" targetId="5365-eb30-b510-7254" type="selectionEntry">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="88ee-6355-96e4-6a34" type="greaterThan"/>
+          </conditions>
+        </modifier>
+      </modifiers>
       <entryLinks>
         <entryLink id="bdd6-3a8a-b76a-5091" name="Stormcast Eternals Spell Lores" hidden="false" collective="false" import="true" targetId="251b-7012-cb2d-a80d" type="selectionEntryGroup"/>
         <entryLink id="0863-3aaa-4630-a57a" name="Battalion Formation" hidden="false" collective="false" import="true" targetId="ab2e-bbbc-12f2-6c1b" type="selectionEntryGroup"/>
@@ -1353,54 +2038,6 @@ Designer’s Note: Coalition units are units from another faction that can be in
         <entryLink id="44bc-dade-c014-0c63" name="Battalion Formation" hidden="false" collective="false" import="true" targetId="ab2e-bbbc-12f2-6c1b" type="selectionEntryGroup"/>
       </entryLinks>
     </entryLink>
-    <entryLink id="bc96-b350-bb46-ad88" name="Anointed" hidden="false" collective="false" import="true" targetId="43f7-3ee0-c45e-6dd9" type="selectionEntry">
-      <modifiers>
-        <modifier type="set" field="hidden" value="true">
-          <conditions>
-            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="d950-bce3-6ed2-8b86" type="equalTo"/>
-          </conditions>
-        </modifier>
-      </modifiers>
-      <categoryLinks>
-        <categoryLink id="e134-5104-e595-299d" name="Allegiant - Cities of Sigmar" hidden="false" targetId="0046-6be2-ce3d-7696" primary="false"/>
-      </categoryLinks>
-      <entryLinks>
-        <entryLink id="f5c9-97c7-527e-bc21" name="Artefacts of Power" hidden="false" collective="false" import="true" targetId="745a-2a21-e84d-fbe7" type="selectionEntryGroup"/>
-        <entryLink id="65e5-02bd-3b7a-5599" name="Battalion Formation" hidden="false" collective="false" import="true" targetId="ab2e-bbbc-12f2-6c1b" type="selectionEntryGroup"/>
-      </entryLinks>
-    </entryLink>
-    <entryLink id="dd98-0e99-bf26-39e7" name="Anointed on Flamespyre Phoenix" hidden="false" collective="false" import="true" targetId="1bbb-3361-4c4f-f567" type="selectionEntry">
-      <modifiers>
-        <modifier type="set" field="hidden" value="true">
-          <conditions>
-            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="d950-bce3-6ed2-8b86" type="equalTo"/>
-          </conditions>
-        </modifier>
-      </modifiers>
-      <categoryLinks>
-        <categoryLink id="607f-f41c-bb50-57cb" name="Allegiant - Cities of Sigmar" hidden="false" targetId="0046-6be2-ce3d-7696" primary="false"/>
-      </categoryLinks>
-      <entryLinks>
-        <entryLink id="417f-9d13-f061-6ece" name="Artefacts of Power" hidden="false" collective="false" import="true" targetId="745a-2a21-e84d-fbe7" type="selectionEntryGroup"/>
-        <entryLink id="2a64-a69d-a20e-617d" name="Battalion Formation" hidden="false" collective="false" import="true" targetId="ab2e-bbbc-12f2-6c1b" type="selectionEntryGroup"/>
-      </entryLinks>
-    </entryLink>
-    <entryLink id="37da-cfd2-fa06-9b5e" name="Anointed on Frostheart Phoenix" hidden="false" collective="false" import="true" targetId="e498-c624-195b-3df2" type="selectionEntry">
-      <modifiers>
-        <modifier type="set" field="hidden" value="true">
-          <conditions>
-            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="d950-bce3-6ed2-8b86" type="equalTo"/>
-          </conditions>
-        </modifier>
-      </modifiers>
-      <categoryLinks>
-        <categoryLink id="5c63-b78a-b99b-c1e8" name="Allegiant - Cities of Sigmar" hidden="false" targetId="0046-6be2-ce3d-7696" primary="false"/>
-      </categoryLinks>
-      <entryLinks>
-        <entryLink id="8724-aeb8-ff3c-c8cf" name="Artefacts of Power" hidden="false" collective="false" import="true" targetId="745a-2a21-e84d-fbe7" type="selectionEntryGroup"/>
-        <entryLink id="970d-4a38-e4ac-7b0b" name="Battalion Formation" hidden="false" collective="false" import="true" targetId="ab2e-bbbc-12f2-6c1b" type="selectionEntryGroup"/>
-      </entryLinks>
-    </entryLink>
     <entryLink id="f37c-1f62-b2ce-0e09" name="Assassin" hidden="false" collective="false" import="true" targetId="1a1c-cc03-aded-38b4" type="selectionEntry">
       <modifiers>
         <modifier type="set" field="hidden" value="true">
@@ -1497,38 +2134,6 @@ Designer’s Note: Coalition units are units from another faction that can be in
         <entryLink id="6834-755e-b55f-1d48" name="Battalion Formation" hidden="false" collective="false" import="true" targetId="ab2e-bbbc-12f2-6c1b" type="selectionEntryGroup"/>
       </entryLinks>
     </entryLink>
-    <entryLink id="b110-822b-c2c0-a0e0" name="Freeguild General" hidden="false" collective="false" import="true" targetId="93ab-e9db-b9d0-2435" type="selectionEntry">
-      <modifiers>
-        <modifier type="set" field="hidden" value="true">
-          <conditions>
-            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="d950-bce3-6ed2-8b86" type="equalTo"/>
-          </conditions>
-        </modifier>
-      </modifiers>
-      <categoryLinks>
-        <categoryLink id="dca7-d6b0-e508-8f9d" name="Allegiant - Cities of Sigmar" hidden="false" targetId="0046-6be2-ce3d-7696" primary="false"/>
-      </categoryLinks>
-      <entryLinks>
-        <entryLink id="4a31-b62e-5c03-81fb" name="Artefacts of Power" hidden="false" collective="false" import="true" targetId="745a-2a21-e84d-fbe7" type="selectionEntryGroup"/>
-        <entryLink id="a3d4-4191-c862-b8b1" name="Battalion Formation" hidden="false" collective="false" import="true" targetId="ab2e-bbbc-12f2-6c1b" type="selectionEntryGroup"/>
-      </entryLinks>
-    </entryLink>
-    <entryLink id="0cd1-81d4-2363-ac51" name="Freeguild General on Griffon" hidden="false" collective="false" import="true" targetId="4224-182d-231c-99ac" type="selectionEntry">
-      <modifiers>
-        <modifier type="set" field="hidden" value="true">
-          <conditions>
-            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="d950-bce3-6ed2-8b86" type="equalTo"/>
-          </conditions>
-        </modifier>
-      </modifiers>
-      <categoryLinks>
-        <categoryLink id="ac1b-4820-c323-4aa4" name="Allegiant - Cities of Sigmar" hidden="false" targetId="0046-6be2-ce3d-7696" primary="false"/>
-      </categoryLinks>
-      <entryLinks>
-        <entryLink id="d57d-7651-924e-52f4" name="Artefacts of Power" hidden="false" collective="false" import="true" targetId="745a-2a21-e84d-fbe7" type="selectionEntryGroup"/>
-        <entryLink id="22e6-f481-a265-5f3c" name="Battalion Formation" hidden="false" collective="false" import="true" targetId="ab2e-bbbc-12f2-6c1b" type="selectionEntryGroup"/>
-      </entryLinks>
-    </entryLink>
     <entryLink id="21e8-1322-d4ea-f015" name="Luminark of Hysh with White Battlemage" hidden="false" collective="false" import="true" targetId="f03e-2524-a084-77e5" type="selectionEntry">
       <modifiers>
         <modifier type="set" field="hidden" value="true">
@@ -1543,22 +2148,6 @@ Designer’s Note: Coalition units are units from another faction that can be in
       <entryLinks>
         <entryLink id="7a26-4d0f-6420-8304" name="Artefacts of Power" hidden="false" collective="false" import="true" targetId="745a-2a21-e84d-fbe7" type="selectionEntryGroup"/>
         <entryLink id="1a81-2840-9993-de95" name="Battalion Formation" hidden="false" collective="false" import="true" targetId="ab2e-bbbc-12f2-6c1b" type="selectionEntryGroup"/>
-      </entryLinks>
-    </entryLink>
-    <entryLink id="3956-558e-f26f-de99" name="Nomad Prince" hidden="false" collective="false" import="true" targetId="6551-60d4-be7f-bb58" type="selectionEntry">
-      <modifiers>
-        <modifier type="set" field="hidden" value="true">
-          <conditions>
-            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="d950-bce3-6ed2-8b86" type="equalTo"/>
-          </conditions>
-        </modifier>
-      </modifiers>
-      <categoryLinks>
-        <categoryLink id="62e9-aadd-c30f-12ea" name="Allegiant - Cities of Sigmar" hidden="false" targetId="0046-6be2-ce3d-7696" primary="false"/>
-      </categoryLinks>
-      <entryLinks>
-        <entryLink id="f892-dcf7-e92e-f806" name="Artefacts of Power" hidden="false" collective="false" import="true" targetId="745a-2a21-e84d-fbe7" type="selectionEntryGroup"/>
-        <entryLink id="2804-ccbf-6b89-569d" name="Battalion Formation" hidden="false" collective="false" import="true" targetId="ab2e-bbbc-12f2-6c1b" type="selectionEntryGroup"/>
       </entryLinks>
     </entryLink>
     <entryLink id="71cc-0136-c2d5-03ad" name="Sorceress" hidden="false" collective="false" import="true" targetId="ca0d-8bfa-981e-a44c" type="selectionEntry">
@@ -1656,6 +2245,16 @@ Designer’s Note: Coalition units are units from another faction that can be in
       </entryLinks>
     </entryLink>
     <entryLink id="66a9-3e83-e679-1b18" name="Celestial Hurricanum" hidden="false" collective="false" import="true" targetId="9cc9-f2c1-ee38-6b6e" type="selectionEntry">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="d950-bce3-6ed2-8b86" type="equalTo"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <categoryLinks>
+        <categoryLink id="db9c-a021-1b24-095e" name="Allegiant - Cities of Sigmar" hidden="false" targetId="0046-6be2-ce3d-7696" primary="false"/>
+      </categoryLinks>
       <entryLinks>
         <entryLink id="a440-cdea-8a41-3c18" name="Battalion Formation" hidden="false" collective="false" import="true" targetId="ab2e-bbbc-12f2-6c1b" type="selectionEntryGroup"/>
       </entryLinks>
@@ -1689,21 +2288,6 @@ Designer’s Note: Coalition units are units from another faction that can be in
       </categoryLinks>
       <entryLinks>
         <entryLink id="04c9-8662-a876-fd9a" name="Battalion Formation" hidden="false" collective="false" import="true" targetId="ab2e-bbbc-12f2-6c1b" type="selectionEntryGroup"/>
-      </entryLinks>
-    </entryLink>
-    <entryLink id="92b5-ae5a-cfc3-0f36" name="Demigryph Knights" hidden="false" collective="false" import="true" targetId="aa56-bb6e-b77c-f820" type="selectionEntry">
-      <modifiers>
-        <modifier type="set" field="hidden" value="true">
-          <conditions>
-            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="d950-bce3-6ed2-8b86" type="equalTo"/>
-          </conditions>
-        </modifier>
-      </modifiers>
-      <categoryLinks>
-        <categoryLink id="e2d9-a17c-37da-13b1" name="Allegiant - Cities of Sigmar" hidden="false" targetId="0046-6be2-ce3d-7696" primary="false"/>
-      </categoryLinks>
-      <entryLinks>
-        <entryLink id="8ee4-2af3-2dda-85b3" name="Battalion Formation" hidden="false" collective="false" import="true" targetId="ab2e-bbbc-12f2-6c1b" type="selectionEntryGroup"/>
       </entryLinks>
     </entryLink>
     <entryLink id="5015-e7d6-c806-d7cf" name="Drakespawn Chariots" hidden="false" collective="false" import="true" targetId="45f9-21c6-b485-6de1" type="selectionEntry">
@@ -1752,22 +2336,6 @@ Designer’s Note: Coalition units are units from another faction that can be in
         <entryLink id="1a2b-51d1-9735-caf0" name="Battalion Formation" hidden="false" collective="false" import="true" targetId="ab2e-bbbc-12f2-6c1b" type="selectionEntryGroup"/>
       </entryLinks>
     </entryLink>
-    <entryLink id="bb4c-aad6-313d-ba3a" name="Eternal Guard" hidden="false" collective="false" import="true" targetId="ae8a-2d2b-bb8e-6b40" type="selectionEntry">
-      <modifiers>
-        <modifier type="set" field="hidden" value="true">
-          <conditions>
-            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="d950-bce3-6ed2-8b86" type="equalTo"/>
-          </conditions>
-        </modifier>
-        <modifier type="remove" field="category" value="a42d-220e-6a88-7bf6"/>
-      </modifiers>
-      <categoryLinks>
-        <categoryLink id="487b-35ce-9c38-a24e" name="Allegiant - Cities of Sigmar" hidden="false" targetId="0046-6be2-ce3d-7696" primary="false"/>
-      </categoryLinks>
-      <entryLinks>
-        <entryLink id="007b-404d-47c6-4406" name="Battalion Formation" hidden="false" collective="false" import="true" targetId="ab2e-bbbc-12f2-6c1b" type="selectionEntryGroup"/>
-      </entryLinks>
-    </entryLink>
     <entryLink id="043c-e2cf-1742-1e7d" name="Executioners" hidden="false" collective="false" import="true" targetId="c8b2-f93a-46f0-6e84" type="selectionEntry">
       <modifiers>
         <modifier type="set" field="hidden" value="true">
@@ -1796,159 +2364,6 @@ Designer’s Note: Coalition units are units from another faction that can be in
       </categoryLinks>
       <entryLinks>
         <entryLink id="8389-e46c-a125-dd35" name="Battalion Formation" hidden="false" collective="false" import="true" targetId="ab2e-bbbc-12f2-6c1b" type="selectionEntryGroup"/>
-      </entryLinks>
-    </entryLink>
-    <entryLink id="d3df-59bf-1344-b1cc" name="Flamespyre Phoenix" hidden="false" collective="false" import="true" targetId="4d7c-6bc6-6f4a-f41b" type="selectionEntry">
-      <modifiers>
-        <modifier type="set" field="hidden" value="true">
-          <conditions>
-            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="d950-bce3-6ed2-8b86" type="equalTo"/>
-          </conditions>
-        </modifier>
-      </modifiers>
-      <categoryLinks>
-        <categoryLink id="a51d-2f74-1749-a952" name="Allegiant - Cities of Sigmar" hidden="false" targetId="0046-6be2-ce3d-7696" primary="false"/>
-      </categoryLinks>
-      <entryLinks>
-        <entryLink id="2267-e465-5e5c-b485" name="Battalion Formation" hidden="false" collective="false" import="true" targetId="ab2e-bbbc-12f2-6c1b" type="selectionEntryGroup"/>
-      </entryLinks>
-    </entryLink>
-    <entryLink id="55a8-b830-bee5-5638" name="Freeguild Crossbowmen" hidden="false" collective="false" import="true" targetId="81ed-3b8e-2591-f06d" type="selectionEntry">
-      <modifiers>
-        <modifier type="set" field="hidden" value="true">
-          <conditions>
-            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="d950-bce3-6ed2-8b86" type="equalTo"/>
-          </conditions>
-        </modifier>
-        <modifier type="remove" field="category" value="a42d-220e-6a88-7bf6"/>
-      </modifiers>
-      <categoryLinks>
-        <categoryLink id="e877-0590-c42f-e605" name="Allegiant - Cities of Sigmar" hidden="false" targetId="0046-6be2-ce3d-7696" primary="false"/>
-      </categoryLinks>
-      <entryLinks>
-        <entryLink id="811b-2e57-57fa-5efb" name="Battalion Formation" hidden="false" collective="false" import="true" targetId="ab2e-bbbc-12f2-6c1b" type="selectionEntryGroup"/>
-      </entryLinks>
-    </entryLink>
-    <entryLink id="5b35-7de0-83ae-a504" name="Freeguild Greatswords" hidden="false" collective="false" import="true" targetId="8f55-789d-d376-4f6d" type="selectionEntry">
-      <modifiers>
-        <modifier type="set" field="hidden" value="true">
-          <conditions>
-            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="d950-bce3-6ed2-8b86" type="equalTo"/>
-          </conditions>
-        </modifier>
-      </modifiers>
-      <categoryLinks>
-        <categoryLink id="288f-1b0c-212c-5746" name="Allegiant - Cities of Sigmar" hidden="false" targetId="0046-6be2-ce3d-7696" primary="false"/>
-      </categoryLinks>
-      <entryLinks>
-        <entryLink id="da0f-8bfc-72f4-344c" name="Battalion Formation" hidden="false" collective="false" import="true" targetId="ab2e-bbbc-12f2-6c1b" type="selectionEntryGroup"/>
-      </entryLinks>
-    </entryLink>
-    <entryLink id="d7cc-5be4-1e5b-0ecd" name="Freeguild Guard" hidden="false" collective="false" import="true" targetId="5cc0-c946-ed9f-a335" type="selectionEntry">
-      <modifiers>
-        <modifier type="set" field="hidden" value="true">
-          <conditions>
-            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="d950-bce3-6ed2-8b86" type="equalTo"/>
-          </conditions>
-        </modifier>
-        <modifier type="remove" field="category" value="a42d-220e-6a88-7bf6"/>
-      </modifiers>
-      <categoryLinks>
-        <categoryLink id="984f-0267-60b3-4446" name="Allegiant - Cities of Sigmar" hidden="false" targetId="0046-6be2-ce3d-7696" primary="false"/>
-      </categoryLinks>
-      <entryLinks>
-        <entryLink id="970e-adf6-5ebb-f2cf" name="Battalion Formation" hidden="false" collective="false" import="true" targetId="ab2e-bbbc-12f2-6c1b" type="selectionEntryGroup"/>
-      </entryLinks>
-    </entryLink>
-    <entryLink id="73b7-ada5-bc53-e5bd" name="Freeguild Handgunners" hidden="false" collective="false" import="true" targetId="27b7-f2b3-b5f9-7dc3" type="selectionEntry">
-      <modifiers>
-        <modifier type="set" field="hidden" value="true">
-          <conditions>
-            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="d950-bce3-6ed2-8b86" type="equalTo"/>
-          </conditions>
-        </modifier>
-        <modifier type="remove" field="category" value="a42d-220e-6a88-7bf6"/>
-      </modifiers>
-      <categoryLinks>
-        <categoryLink id="d5aa-bb8e-1e9f-2406" name="Allegiant - Cities of Sigmar" hidden="false" targetId="0046-6be2-ce3d-7696" primary="false"/>
-      </categoryLinks>
-      <entryLinks>
-        <entryLink id="1eac-e47f-1c04-f148" name="Battalion Formation" hidden="false" collective="false" import="true" targetId="ab2e-bbbc-12f2-6c1b" type="selectionEntryGroup"/>
-      </entryLinks>
-    </entryLink>
-    <entryLink id="9f36-21e6-295c-7aaf" name="Freeguild Outriders" hidden="false" collective="false" import="true" targetId="93c0-fcaf-8d4c-5430" type="selectionEntry">
-      <modifiers>
-        <modifier type="set" field="hidden" value="true">
-          <conditions>
-            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="d950-bce3-6ed2-8b86" type="equalTo"/>
-          </conditions>
-        </modifier>
-      </modifiers>
-      <categoryLinks>
-        <categoryLink id="b97c-5915-a4da-3e0e" name="Allegiant - Cities of Sigmar" hidden="false" targetId="0046-6be2-ce3d-7696" primary="false"/>
-      </categoryLinks>
-      <entryLinks>
-        <entryLink id="277e-6d55-8aee-0f27" name="Battalion Formation" hidden="false" collective="false" import="true" targetId="ab2e-bbbc-12f2-6c1b" type="selectionEntryGroup"/>
-      </entryLinks>
-    </entryLink>
-    <entryLink id="7575-d486-ea8d-8fbe" name="Freeguild Pistoliers" hidden="false" collective="false" import="true" targetId="7693-c724-f844-fb77" type="selectionEntry">
-      <modifiers>
-        <modifier type="set" field="hidden" value="true">
-          <conditions>
-            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="d950-bce3-6ed2-8b86" type="equalTo"/>
-          </conditions>
-        </modifier>
-      </modifiers>
-      <categoryLinks>
-        <categoryLink id="9c6f-3b2c-b7b0-b048" name="Allegiant - Cities of Sigmar" hidden="false" targetId="0046-6be2-ce3d-7696" primary="false"/>
-      </categoryLinks>
-      <entryLinks>
-        <entryLink id="0753-07db-4268-e444" name="Battalion Formation" hidden="false" collective="false" import="true" targetId="ab2e-bbbc-12f2-6c1b" type="selectionEntryGroup"/>
-      </entryLinks>
-    </entryLink>
-    <entryLink id="dbb2-d2b3-ebf3-7181" name="Frostheart Phoenix" hidden="false" collective="false" import="true" targetId="cc45-50cc-c8c4-933d" type="selectionEntry">
-      <modifiers>
-        <modifier type="set" field="hidden" value="true">
-          <conditions>
-            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="d950-bce3-6ed2-8b86" type="equalTo"/>
-          </conditions>
-        </modifier>
-      </modifiers>
-      <categoryLinks>
-        <categoryLink id="a48c-d824-a4ec-f8fe" name="Allegiant - Cities of Sigmar" hidden="false" targetId="0046-6be2-ce3d-7696" primary="false"/>
-      </categoryLinks>
-      <entryLinks>
-        <entryLink id="79fc-0d3c-b469-1251" name="Battalion Formation" hidden="false" collective="false" import="true" targetId="ab2e-bbbc-12f2-6c1b" type="selectionEntryGroup"/>
-      </entryLinks>
-    </entryLink>
-    <entryLink id="fa85-398e-85fa-abed" name="Helblaster Volley Gun" hidden="false" collective="false" import="true" targetId="0257-cdbe-00e5-42b0" type="selectionEntry">
-      <modifiers>
-        <modifier type="set" field="hidden" value="true">
-          <conditions>
-            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="d950-bce3-6ed2-8b86" type="equalTo"/>
-          </conditions>
-        </modifier>
-      </modifiers>
-      <categoryLinks>
-        <categoryLink id="ddfb-4599-91ce-a4e9" name="Allegiant - Cities of Sigmar" hidden="false" targetId="0046-6be2-ce3d-7696" primary="false"/>
-      </categoryLinks>
-      <entryLinks>
-        <entryLink id="684d-74c3-ff53-762c" name="Battalion Formation" hidden="false" collective="false" import="true" targetId="ab2e-bbbc-12f2-6c1b" type="selectionEntryGroup"/>
-      </entryLinks>
-    </entryLink>
-    <entryLink id="eda1-7405-bc43-462c" name="Helstorm Rocket Battery" hidden="false" collective="false" import="true" targetId="33de-3e93-581c-94b3" type="selectionEntry">
-      <modifiers>
-        <modifier type="set" field="hidden" value="true">
-          <conditions>
-            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="d950-bce3-6ed2-8b86" type="equalTo"/>
-          </conditions>
-        </modifier>
-      </modifiers>
-      <categoryLinks>
-        <categoryLink id="fbc7-6a2b-003b-474f" name="Allegiant - Cities of Sigmar" hidden="false" targetId="0046-6be2-ce3d-7696" primary="false"/>
-      </categoryLinks>
-      <entryLinks>
-        <entryLink id="6d63-1dfc-4224-8b06" name="Battalion Formation" hidden="false" collective="false" import="true" targetId="ab2e-bbbc-12f2-6c1b" type="selectionEntryGroup"/>
       </entryLinks>
     </entryLink>
     <entryLink id="3347-6559-fd5d-b0f1" name="Kharibdyss" hidden="false" collective="false" import="true" targetId="d037-4415-f9f5-0214" type="selectionEntry">
@@ -1981,21 +2396,6 @@ Designer’s Note: Coalition units are units from another faction that can be in
         <entryLink id="9e6b-9a72-b6f5-1c37" name="Battalion Formation" hidden="false" collective="false" import="true" targetId="ab2e-bbbc-12f2-6c1b" type="selectionEntryGroup"/>
       </entryLinks>
     </entryLink>
-    <entryLink id="d037-a46a-da11-141f" name="Phoenix Guard" hidden="false" collective="false" import="true" targetId="943c-30ad-737d-9108" type="selectionEntry">
-      <modifiers>
-        <modifier type="set" field="hidden" value="true">
-          <conditions>
-            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="d950-bce3-6ed2-8b86" type="equalTo"/>
-          </conditions>
-        </modifier>
-      </modifiers>
-      <categoryLinks>
-        <categoryLink id="9652-fec4-5ebe-429e" name="Allegiant - Cities of Sigmar" hidden="false" targetId="0046-6be2-ce3d-7696" primary="false"/>
-      </categoryLinks>
-      <entryLinks>
-        <entryLink id="e743-3ce3-5537-f90b" name="Battalion Formation" hidden="false" collective="false" import="true" targetId="ab2e-bbbc-12f2-6c1b" type="selectionEntryGroup"/>
-      </entryLinks>
-    </entryLink>
     <entryLink id="c997-2d92-3fc0-a373" name="Scourgerunner Chariots" hidden="false" collective="false" import="true" targetId="76a2-5b04-6d05-5e93" type="selectionEntry">
       <modifiers>
         <modifier type="set" field="hidden" value="true">
@@ -2009,51 +2409,6 @@ Designer’s Note: Coalition units are units from another faction that can be in
       </categoryLinks>
       <entryLinks>
         <entryLink id="475a-d743-40ef-bef1" name="Battalion Formation" hidden="false" collective="false" import="true" targetId="ab2e-bbbc-12f2-6c1b" type="selectionEntryGroup"/>
-      </entryLinks>
-    </entryLink>
-    <entryLink id="b822-9031-b0cf-c070" name="Shadow Warriors" hidden="false" collective="false" import="true" targetId="e881-4ee0-eacc-81f8" type="selectionEntry">
-      <modifiers>
-        <modifier type="set" field="hidden" value="true">
-          <conditions>
-            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="d950-bce3-6ed2-8b86" type="equalTo"/>
-          </conditions>
-        </modifier>
-      </modifiers>
-      <categoryLinks>
-        <categoryLink id="1f8b-6adb-1a19-d9c3" name="Allegiant - Cities of Sigmar" hidden="false" targetId="0046-6be2-ce3d-7696" primary="false"/>
-      </categoryLinks>
-      <entryLinks>
-        <entryLink id="1e05-d20a-50a7-9413" name="Battalion Formation" hidden="false" collective="false" import="true" targetId="ab2e-bbbc-12f2-6c1b" type="selectionEntryGroup"/>
-      </entryLinks>
-    </entryLink>
-    <entryLink id="afdb-64ed-df20-c469" name="Sisters of the Thorn" hidden="false" collective="false" import="true" targetId="2417-6bad-cab6-7400" type="selectionEntry">
-      <modifiers>
-        <modifier type="set" field="hidden" value="true">
-          <conditions>
-            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="d950-bce3-6ed2-8b86" type="equalTo"/>
-          </conditions>
-        </modifier>
-      </modifiers>
-      <categoryLinks>
-        <categoryLink id="bae8-ed69-1aca-9020" name="Allegiant - Cities of Sigmar" hidden="false" targetId="0046-6be2-ce3d-7696" primary="false"/>
-      </categoryLinks>
-      <entryLinks>
-        <entryLink id="adba-101c-6f3d-3e36" name="Battalion Formation" hidden="false" collective="false" import="true" targetId="ab2e-bbbc-12f2-6c1b" type="selectionEntryGroup"/>
-      </entryLinks>
-    </entryLink>
-    <entryLink id="fbde-5615-9aa0-7896" name="Sisters of the Watch" hidden="false" collective="false" import="true" targetId="cc9c-c95d-c455-10f3" type="selectionEntry">
-      <modifiers>
-        <modifier type="set" field="hidden" value="true">
-          <conditions>
-            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="d950-bce3-6ed2-8b86" type="equalTo"/>
-          </conditions>
-        </modifier>
-      </modifiers>
-      <categoryLinks>
-        <categoryLink id="b76a-8f45-b5d0-9278" name="Allegiant - Cities of Sigmar" hidden="false" targetId="0046-6be2-ce3d-7696" primary="false"/>
-      </categoryLinks>
-      <entryLinks>
-        <entryLink id="8fc4-fcd7-caa5-398f" name="Battalion Formation" hidden="false" collective="false" import="true" targetId="ab2e-bbbc-12f2-6c1b" type="selectionEntryGroup"/>
       </entryLinks>
     </entryLink>
     <entryLink id="903b-1ec5-7b3f-5085" name="Steam Tank" hidden="false" collective="false" import="true" targetId="89ac-badb-d71a-836f" type="selectionEntry">
@@ -2086,37 +2441,14 @@ Designer’s Note: Coalition units are units from another faction that can be in
         <entryLink id="2b5b-b14a-c8e7-dbcc" name="Battalion Formation" hidden="false" collective="false" import="true" targetId="ab2e-bbbc-12f2-6c1b" type="selectionEntryGroup"/>
       </entryLinks>
     </entryLink>
-    <entryLink id="53e4-231a-8e6d-c591" name="Wild Riders" hidden="false" collective="false" import="true" targetId="d7c5-c814-1ee1-49ee" type="selectionEntry">
-      <modifiers>
-        <modifier type="set" field="hidden" value="true">
-          <conditions>
-            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="d950-bce3-6ed2-8b86" type="equalTo"/>
-          </conditions>
-        </modifier>
-      </modifiers>
-      <categoryLinks>
-        <categoryLink id="a42c-8f08-b9d5-0490" name="Allegiant - Cities of Sigmar" hidden="false" targetId="0046-6be2-ce3d-7696" primary="false"/>
-      </categoryLinks>
-      <entryLinks>
-        <entryLink id="e868-1724-b60c-8491" name="Battalion Formation" hidden="false" collective="false" import="true" targetId="ab2e-bbbc-12f2-6c1b" type="selectionEntryGroup"/>
-      </entryLinks>
-    </entryLink>
-    <entryLink id="f6bf-69f8-5e7e-6967" name="Wildwood Rangers" hidden="false" collective="false" import="true" targetId="9794-1788-248d-24d2" type="selectionEntry">
-      <modifiers>
-        <modifier type="set" field="hidden" value="true">
-          <conditions>
-            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="d950-bce3-6ed2-8b86" type="equalTo"/>
-          </conditions>
-        </modifier>
-      </modifiers>
-      <categoryLinks>
-        <categoryLink id="8c35-101e-327c-0cae" name="Allegiant - Cities of Sigmar" hidden="false" targetId="0046-6be2-ce3d-7696" primary="false"/>
-      </categoryLinks>
-      <entryLinks>
-        <entryLink id="9e0f-4ca7-39ee-3d92" name="Battalion Formation" hidden="false" collective="false" import="true" targetId="ab2e-bbbc-12f2-6c1b" type="selectionEntryGroup"/>
-      </entryLinks>
-    </entryLink>
     <entryLink id="f994-7677-3ffd-5aaa" name="Lord-Celestant Gardus Steel Soul" hidden="false" collective="false" import="true" targetId="faa9-abbc-9dbc-7a16" type="selectionEntry">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="88ee-6355-96e4-6a34" type="greaterThan"/>
+          </conditions>
+        </modifier>
+      </modifiers>
       <entryLinks>
         <entryLink id="65d0-60fb-e734-e3e2" name="General" hidden="false" collective="false" import="true" targetId="98a4-3d6d-a7b9-399f" type="selectionEntry">
           <categoryLinks>
@@ -2142,6 +2474,11 @@ Designer’s Note: Coalition units are units from another faction that can be in
             </conditionGroup>
           </conditionGroups>
         </modifier>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="88ee-6355-96e4-6a34" type="greaterThan"/>
+          </conditions>
+        </modifier>
       </modifiers>
       <categoryLinks>
         <categoryLink id="554a-450c-31e7-33dd" name="Battleline" hidden="false" targetId="a42d-220e-6a88-7bf6" primary="false"/>
@@ -2151,16 +2488,37 @@ Designer’s Note: Coalition units are units from another faction that can be in
       </entryLinks>
     </entryLink>
     <entryLink id="a6db-1c5d-6266-9bd2" name="Vindictors" hidden="false" collective="false" import="true" targetId="dc91-1ef2-a910-8d95" type="selectionEntry">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="88ee-6355-96e4-6a34" type="greaterThan"/>
+          </conditions>
+        </modifier>
+      </modifiers>
       <entryLinks>
         <entryLink id="ced7-a5d4-7b4e-9469" name="Battalion Formation" hidden="false" collective="false" import="true" targetId="ab2e-bbbc-12f2-6c1b" type="selectionEntryGroup"/>
       </entryLinks>
     </entryLink>
     <entryLink id="97dd-0f4c-035b-8999" name="Praetors" hidden="false" collective="false" import="true" targetId="e9b3-c523-1e13-b2a9" type="selectionEntry">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="88ee-6355-96e4-6a34" type="greaterThan"/>
+          </conditions>
+        </modifier>
+      </modifiers>
       <entryLinks>
         <entryLink id="1c52-7de8-9fe3-243d" name="Battalion Formation" hidden="false" collective="false" import="true" targetId="ab2e-bbbc-12f2-6c1b" type="selectionEntryGroup"/>
       </entryLinks>
     </entryLink>
     <entryLink id="9b7e-9ffe-a252-2af1" name="Lord-Imperatant" hidden="false" collective="false" import="true" targetId="ff10-6d9a-b549-738d" type="selectionEntry">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="88ee-6355-96e4-6a34" type="greaterThan"/>
+          </conditions>
+        </modifier>
+      </modifiers>
       <entryLinks>
         <entryLink id="3481-f856-b52e-a44a" name="General" hidden="false" collective="false" import="true" targetId="98a4-3d6d-a7b9-399f" type="selectionEntry"/>
         <entryLink id="81f9-757c-49a0-6b68" name="Artefacts of Power" hidden="false" collective="false" import="true" targetId="745a-2a21-e84d-fbe7" type="selectionEntryGroup"/>
@@ -2169,6 +2527,13 @@ Designer’s Note: Coalition units are units from another faction that can be in
       </entryLinks>
     </entryLink>
     <entryLink id="0e6a-4efa-32f7-6af7" name="Yndrasta, The Celestial Spear" hidden="false" collective="false" import="true" targetId="df30-a3d8-6f49-2067" type="selectionEntry">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="88ee-6355-96e4-6a34" type="greaterThan"/>
+          </conditions>
+        </modifier>
+      </modifiers>
       <entryLinks>
         <entryLink id="a834-e688-fd33-7f6a" name="General" hidden="false" collective="false" import="true" targetId="98a4-3d6d-a7b9-399f" type="selectionEntry">
           <categoryLinks>
@@ -2179,6 +2544,13 @@ Designer’s Note: Coalition units are units from another faction that can be in
       </entryLinks>
     </entryLink>
     <entryLink id="5d78-bf3c-99b3-f006" name="Knight-Arcanum" hidden="false" collective="false" import="true" targetId="1c54-87d2-2f0a-86a7" type="selectionEntry">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="88ee-6355-96e4-6a34" type="greaterThan"/>
+          </conditions>
+        </modifier>
+      </modifiers>
       <entryLinks>
         <entryLink id="5179-7ec4-95b0-dab2" name="General" hidden="false" collective="false" import="true" targetId="98a4-3d6d-a7b9-399f" type="selectionEntry"/>
         <entryLink id="4e91-5a9c-2989-47b0" name="Artefacts of Power" hidden="false" collective="false" import="true" targetId="745a-2a21-e84d-fbe7" type="selectionEntryGroup"/>
@@ -2188,6 +2560,13 @@ Designer’s Note: Coalition units are units from another faction that can be in
       </entryLinks>
     </entryLink>
     <entryLink id="c918-079b-4a16-a124" name="Knight-Vexillor with Banner of Apotheosis" hidden="false" collective="false" import="true" targetId="5bea-1338-e6ee-3d5c" type="selectionEntry">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="88ee-6355-96e4-6a34" type="greaterThan"/>
+          </conditions>
+        </modifier>
+      </modifiers>
       <entryLinks>
         <entryLink id="2d41-6e28-261a-d914" name="General" hidden="false" collective="false" import="true" targetId="98a4-3d6d-a7b9-399f" type="selectionEntry"/>
         <entryLink id="ad66-0ef2-cfb7-0adf" name="Artefacts of Power" hidden="false" collective="false" import="true" targetId="745a-2a21-e84d-fbe7" type="selectionEntryGroup"/>
@@ -2196,6 +2575,13 @@ Designer’s Note: Coalition units are units from another faction that can be in
       </entryLinks>
     </entryLink>
     <entryLink id="f6d3-c476-d2fd-19b5" name="Xandire&apos;s Truthseekers" hidden="false" collective="false" import="true" targetId="f6ad-fbc7-6c7e-f628" type="selectionEntry">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="88ee-6355-96e4-6a34" type="greaterThan"/>
+          </conditions>
+        </modifier>
+      </modifiers>
       <entryLinks>
         <entryLink id="d5b8-31d1-7b57-72df" name="Battalion Formation" hidden="false" collective="false" import="true" targetId="ab2e-bbbc-12f2-6c1b" type="selectionEntryGroup"/>
       </entryLinks>
@@ -2217,6 +2603,11 @@ Designer’s Note: Coalition units are units from another faction that can be in
             </conditionGroup>
           </conditionGroups>
         </modifier>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="88ee-6355-96e4-6a34" type="greaterThan"/>
+          </conditions>
+        </modifier>
       </modifiers>
       <categoryLinks>
         <categoryLink id="f2de-b248-7d6f-65a3" name="Battleline" hidden="false" targetId="a42d-220e-6a88-7bf6" primary="false"/>
@@ -2226,11 +2617,25 @@ Designer’s Note: Coalition units are units from another faction that can be in
       </entryLinks>
     </entryLink>
     <entryLink id="3667-5c87-cccf-f377" name="Vanquishers" hidden="false" collective="false" import="true" targetId="1608-d5b3-7e11-6710" type="selectionEntry">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="88ee-6355-96e4-6a34" type="greaterThan"/>
+          </conditions>
+        </modifier>
+      </modifiers>
       <entryLinks>
         <entryLink id="de2f-b108-9e6d-1104" name="Battalion Formation" hidden="false" collective="false" import="true" targetId="ab2e-bbbc-12f2-6c1b" type="selectionEntryGroup"/>
       </entryLinks>
     </entryLink>
     <entryLink id="ea78-096c-3068-32c6" name="Judicators with Skybolt Bows" hidden="false" collective="false" import="true" targetId="415e-c729-17f1-21b8" type="selectionEntry">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="88ee-6355-96e4-6a34" type="greaterThan"/>
+          </conditions>
+        </modifier>
+      </modifiers>
       <entryLinks>
         <entryLink id="21c1-f16e-1bbb-0195" name="Battalion Formation" hidden="false" collective="false" import="true" targetId="ab2e-bbbc-12f2-6c1b" type="selectionEntryGroup"/>
       </entryLinks>
@@ -2250,6 +2655,11 @@ Designer’s Note: Coalition units are units from another faction that can be in
               </conditions>
             </conditionGroup>
           </conditionGroups>
+        </modifier>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="88ee-6355-96e4-6a34" type="greaterThan"/>
+          </conditions>
         </modifier>
       </modifiers>
       <categoryLinks>
@@ -2302,6 +2712,13 @@ Designer’s Note: Coalition units are units from another faction that can be in
       </entryLinks>
     </entryLink>
     <entryLink id="163c-b121-ca7f-11cb" name="Dracothian Guard Fulminators (single)" hidden="false" collective="false" import="true" targetId="c88d-d97d-77c3-f6bf" type="selectionEntry">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="88ee-6355-96e4-6a34" type="greaterThan"/>
+          </conditions>
+        </modifier>
+      </modifiers>
       <entryLinks>
         <entryLink id="97dc-599c-277d-a3a4" name="Battalion Formation" hidden="false" collective="false" import="true" targetId="ab2e-bbbc-12f2-6c1b" type="selectionEntryGroup"/>
       </entryLinks>
@@ -2328,6 +2745,13 @@ Designer’s Note: Coalition units are units from another faction that can be in
       </entryLinks>
     </entryLink>
     <entryLink id="abc0-32e2-4e5d-d3cc" name="Lord-Commander Bastian Carthalos" hidden="false" collective="false" import="true" targetId="ca0c-059d-74d4-6913" type="selectionEntry">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="88ee-6355-96e4-6a34" type="greaterThan"/>
+          </conditions>
+        </modifier>
+      </modifiers>
       <entryLinks>
         <entryLink id="5d68-5754-c2cf-fdf6" name="Battalion Formation" hidden="false" collective="false" import="true" targetId="ab2e-bbbc-12f2-6c1b" type="selectionEntryGroup"/>
         <entryLink id="ea44-df90-1bbd-74c0" name="General" hidden="false" collective="false" import="true" targetId="98a4-3d6d-a7b9-399f" type="selectionEntry">
@@ -2353,6 +2777,11 @@ Designer’s Note: Coalition units are units from another faction that can be in
             </conditionGroup>
           </conditionGroups>
         </modifier>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="88ee-6355-96e4-6a34" type="greaterThan"/>
+          </conditions>
+        </modifier>
       </modifiers>
       <categoryLinks>
         <categoryLink id="0efa-5419-f808-b0cf" name="Battleline" hidden="false" targetId="a42d-220e-6a88-7bf6" primary="false"/>
@@ -2362,11 +2791,25 @@ Designer’s Note: Coalition units are units from another faction that can be in
       </entryLinks>
     </entryLink>
     <entryLink id="1c0e-6a43-ba3e-5a09" name="Stormstrike Chariot" hidden="false" collective="false" import="true" targetId="d75c-2f65-dee9-f225" type="selectionEntry">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="88ee-6355-96e4-6a34" type="greaterThan"/>
+          </conditions>
+        </modifier>
+      </modifiers>
       <entryLinks>
         <entryLink id="1845-ef8d-9479-21ee" name="Battalion Formation" hidden="false" collective="false" import="true" targetId="ab2e-bbbc-12f2-6c1b" type="selectionEntryGroup"/>
       </entryLinks>
     </entryLink>
     <entryLink id="3334-b4ec-1e5d-f189" name="Knight-Relictor" hidden="false" collective="false" import="true" targetId="17b9-c940-ebba-945d" type="selectionEntry">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="88ee-6355-96e4-6a34" type="greaterThan"/>
+          </conditions>
+        </modifier>
+      </modifiers>
       <entryLinks>
         <entryLink id="fb2c-77f4-af35-c939" name="General" hidden="false" collective="false" import="true" targetId="98a4-3d6d-a7b9-399f" type="selectionEntry"/>
         <entryLink id="34a7-8d32-033e-5086" name="Battalion Formation" hidden="false" collective="false" import="true" targetId="ab2e-bbbc-12f2-6c1b" type="selectionEntryGroup"/>
@@ -2375,6 +2818,13 @@ Designer’s Note: Coalition units are units from another faction that can be in
       </entryLinks>
     </entryLink>
     <entryLink id="c171-929c-b4bf-3778" name="Knight-Judicator with Gryph-hounds" hidden="false" collective="false" import="true" targetId="f412-ae72-ee53-4dd4" type="selectionEntry">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="88ee-6355-96e4-6a34" type="greaterThan"/>
+          </conditions>
+        </modifier>
+      </modifiers>
       <entryLinks>
         <entryLink id="a0f9-2740-91d9-a9cc" name="General" hidden="false" collective="false" import="true" targetId="98a4-3d6d-a7b9-399f" type="selectionEntry">
           <categoryLinks>
@@ -2383,6 +2833,253 @@ Designer’s Note: Coalition units are units from another faction that can be in
         </entryLink>
         <entryLink id="7391-950b-311c-e1e5" name="Battalion Formation" hidden="false" collective="false" import="true" targetId="ab2e-bbbc-12f2-6c1b" type="selectionEntryGroup"/>
         <entryLink id="00e4-06a0-bd87-097b" name="Command Traits" hidden="false" collective="false" import="true" targetId="c09e-e941-f12f-cfa0" type="selectionEntryGroup"/>
+      </entryLinks>
+    </entryLink>
+    <entryLink id="860d-57b5-aff3-1c06" name="Domitan&apos;s Stormcoven" hidden="false" collective="false" import="true" targetId="c54d-4ad5-eac6-b12c" type="selectionEntry">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="88ee-6355-96e4-6a34" type="greaterThan"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <entryLinks>
+        <entryLink id="c257-f374-3a4f-6559" name="Battalion Formation" hidden="false" collective="false" import="true" targetId="ab2e-bbbc-12f2-6c1b" type="selectionEntryGroup"/>
+      </entryLinks>
+    </entryLink>
+    <entryLink id="e365-cb69-63db-b739" name="Ionys Cryptborn" hidden="false" collective="false" import="true" targetId="3a62-8309-cac9-90c4" type="selectionEntry">
+      <entryLinks>
+        <entryLink id="41d5-9d06-f9d8-e26c" name="General" hidden="false" collective="false" import="true" targetId="98a4-3d6d-a7b9-399f" type="selectionEntry">
+          <categoryLinks>
+            <categoryLink id="5a02-b39e-0314-66e7" name="Named General" hidden="false" targetId="8b3d-7f03-e1f9-eaf5" primary="false"/>
+            <categoryLink id="af61-8b68-36a5-e837" name="General - Draconith/Stardrake" hidden="false" targetId="8ec8-8833-f211-2bd4" primary="false"/>
+          </categoryLinks>
+        </entryLink>
+        <entryLink id="3938-3dc3-c375-f70f" name="Battalion Formation" hidden="false" collective="false" import="true" targetId="ab2e-bbbc-12f2-6c1b" type="selectionEntryGroup"/>
+        <entryLink id="4208-f76d-764b-37a2" name="Prayer Scriptures" hidden="false" collective="false" import="true" targetId="0a70-7e29-209a-a975" type="selectionEntryGroup"/>
+      </entryLinks>
+    </entryLink>
+    <entryLink id="5644-15a5-c44e-3a8a" name="Alchemite Warforger" hidden="false" collective="false" import="true" targetId="c132-c96f-520b-ba7a" type="selectionEntry">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="d950-bce3-6ed2-8b86" type="equalTo"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <categoryLinks>
+        <categoryLink id="5cb3-fa47-b3ec-8615" name="Allegiant - Cities of Sigmar" hidden="false" targetId="0046-6be2-ce3d-7696" primary="false"/>
+      </categoryLinks>
+      <entryLinks>
+        <entryLink id="8a4c-f080-88ce-ef66" name="Battalion Formation" hidden="false" collective="false" import="true" targetId="ab2e-bbbc-12f2-6c1b" type="selectionEntryGroup"/>
+        <entryLink id="32f2-a7ca-3930-1c63" name="Stormcast Eternals Spell Lores" hidden="false" collective="false" import="true" targetId="251b-7012-cb2d-a80d" type="selectionEntryGroup"/>
+        <entryLink id="c4aa-d4b5-af6e-11e5" name="Artefacts of Power" hidden="false" collective="false" import="true" targetId="745a-2a21-e84d-fbe7" type="selectionEntryGroup"/>
+      </entryLinks>
+    </entryLink>
+    <entryLink id="e337-b10f-3d62-2d5b" name="Fusil-Major on Ogor Warhulk" hidden="false" collective="false" import="true" targetId="7b50-a3a6-38fc-bb12" type="selectionEntry">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="d950-bce3-6ed2-8b86" type="equalTo"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <categoryLinks>
+        <categoryLink id="b4d8-c3f5-3c2d-ff0f" name="Allegiant - Cities of Sigmar" hidden="false" targetId="0046-6be2-ce3d-7696" primary="false"/>
+      </categoryLinks>
+      <entryLinks>
+        <entryLink id="131c-e61c-8865-2481" name="Battalion Formation" hidden="false" collective="false" import="true" targetId="ab2e-bbbc-12f2-6c1b" type="selectionEntryGroup"/>
+        <entryLink id="0eaf-65af-08eb-0edc" name="Artefacts of Power" hidden="false" collective="false" import="true" targetId="745a-2a21-e84d-fbe7" type="selectionEntryGroup"/>
+        <entryLink id="1c90-4bed-0abb-3b25" name="Stormcast Eternals Spell Lores" hidden="false" collective="false" import="true" targetId="251b-7012-cb2d-a80d" type="selectionEntryGroup"/>
+      </entryLinks>
+    </entryLink>
+    <entryLink id="11e5-19b6-4dbd-3f7b" name="Freeguild Cavalier-Marshal" hidden="false" collective="false" import="true" targetId="5a20-bd31-921a-7b07" type="selectionEntry">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="d950-bce3-6ed2-8b86" type="equalTo"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <categoryLinks>
+        <categoryLink id="e8a6-5690-b753-9a68" name="Allegiant - Cities of Sigmar" hidden="false" targetId="0046-6be2-ce3d-7696" primary="false"/>
+      </categoryLinks>
+      <entryLinks>
+        <entryLink id="4a23-e668-8868-d15a" name="Battalion Formation" hidden="false" collective="false" import="true" targetId="ab2e-bbbc-12f2-6c1b" type="selectionEntryGroup"/>
+        <entryLink id="ed8e-9b25-6171-963e" name="Artefacts of Power" hidden="false" collective="false" import="true" targetId="745a-2a21-e84d-fbe7" type="selectionEntryGroup"/>
+        <entryLink id="982c-2bba-096a-611e" name="Stormcast Eternals Spell Lores" hidden="false" collective="false" import="true" targetId="251b-7012-cb2d-a80d" type="selectionEntryGroup"/>
+      </entryLinks>
+    </entryLink>
+    <entryLink id="8c7e-6e4d-3a70-e663" name="Freeguild Cavaliers" hidden="false" collective="false" import="true" targetId="10d0-253b-c996-52b5" type="selectionEntry">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="d950-bce3-6ed2-8b86" type="equalTo"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <categoryLinks>
+        <categoryLink id="ff52-cff0-5069-cdcf" name="Allegiant - Cities of Sigmar" hidden="false" targetId="0046-6be2-ce3d-7696" primary="false"/>
+      </categoryLinks>
+      <entryLinks>
+        <entryLink id="6e3c-5854-41c1-6d86" name="Battalion Formation" hidden="false" collective="false" import="true" targetId="ab2e-bbbc-12f2-6c1b" type="selectionEntryGroup"/>
+      </entryLinks>
+    </entryLink>
+    <entryLink id="87d5-07be-2d75-1587" name="Freeguild Command Corps" hidden="false" collective="false" import="true" targetId="6b20-013d-ec61-59e0" type="selectionEntry">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="d950-bce3-6ed2-8b86" type="equalTo"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <categoryLinks>
+        <categoryLink id="2599-215b-8a2f-88b9" name="Allegiant - Cities of Sigmar" hidden="false" targetId="0046-6be2-ce3d-7696" primary="false"/>
+      </categoryLinks>
+      <entryLinks>
+        <entryLink id="22aa-c0b0-53da-493c" name="Battalion Formation" hidden="false" collective="false" import="true" targetId="ab2e-bbbc-12f2-6c1b" type="selectionEntryGroup"/>
+      </entryLinks>
+    </entryLink>
+    <entryLink id="5984-3c02-d449-d2d2" name="Freeguild Fusiliers" hidden="false" collective="false" import="true" targetId="e724-b536-5314-0dad" type="selectionEntry">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="d950-bce3-6ed2-8b86" type="equalTo"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <categoryLinks>
+        <categoryLink id="b3aa-7e21-407b-d795" name="Allegiant - Cities of Sigmar" hidden="false" targetId="0046-6be2-ce3d-7696" primary="false"/>
+      </categoryLinks>
+      <entryLinks>
+        <entryLink id="c0ce-9f1c-87f0-09ae" name="Battalion Formation" hidden="false" collective="false" import="true" targetId="ab2e-bbbc-12f2-6c1b" type="selectionEntryGroup"/>
+      </entryLinks>
+    </entryLink>
+    <entryLink id="564b-4881-6be0-8d58" name="Freeguild Marshal and Relic Envoy" hidden="false" collective="false" import="true" targetId="523f-2da5-0b7d-451e" type="selectionEntry">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="d950-bce3-6ed2-8b86" type="equalTo"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <categoryLinks>
+        <categoryLink id="3adb-cafe-6a57-38e8" name="Allegiant - Cities of Sigmar" hidden="false" targetId="0046-6be2-ce3d-7696" primary="false"/>
+      </categoryLinks>
+      <entryLinks>
+        <entryLink id="97ff-fadf-321f-2915" name="Battalion Formation" hidden="false" collective="false" import="true" targetId="ab2e-bbbc-12f2-6c1b" type="selectionEntryGroup"/>
+        <entryLink id="3518-09a4-2e18-196f" name="Artefacts of Power" hidden="false" collective="false" import="true" targetId="745a-2a21-e84d-fbe7" type="selectionEntryGroup"/>
+        <entryLink id="e8fc-0214-0e74-e84c" name="Stormcast Eternals Spell Lores" hidden="false" collective="false" import="true" targetId="251b-7012-cb2d-a80d" type="selectionEntryGroup"/>
+      </entryLinks>
+    </entryLink>
+    <entryLink id="192b-e157-47ce-959a" name="Freeguild Marshal on Griffon" hidden="false" collective="false" import="true" targetId="c080-3d92-6c83-0a1d" type="selectionEntry">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="d950-bce3-6ed2-8b86" type="equalTo"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <categoryLinks>
+        <categoryLink id="93a6-ac86-621c-5bad" name="Allegiant - Cities of Sigmar" hidden="false" targetId="0046-6be2-ce3d-7696" primary="false"/>
+      </categoryLinks>
+      <entryLinks>
+        <entryLink id="ac8c-b2e3-9f10-d895" name="Battalion Formation" hidden="false" collective="false" import="true" targetId="ab2e-bbbc-12f2-6c1b" type="selectionEntryGroup"/>
+        <entryLink id="6d4c-8c37-034d-2faa" name="Artefacts of Power" hidden="false" collective="false" import="true" targetId="745a-2a21-e84d-fbe7" type="selectionEntryGroup"/>
+        <entryLink id="85ff-945e-8ad4-fcf3" name="Stormcast Eternals Spell Lores" hidden="false" collective="false" import="true" targetId="251b-7012-cb2d-a80d" type="selectionEntryGroup"/>
+      </entryLinks>
+    </entryLink>
+    <entryLink id="981e-ac5c-33ad-6776" name="Freeguild Steelhelms" hidden="false" collective="false" import="true" targetId="4207-022d-c624-e9bf" type="selectionEntry">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="d950-bce3-6ed2-8b86" type="equalTo"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <categoryLinks>
+        <categoryLink id="0d0b-b1c3-83d9-66a7" name="Allegiant - Cities of Sigmar" hidden="false" targetId="0046-6be2-ce3d-7696" primary="false"/>
+      </categoryLinks>
+      <entryLinks>
+        <entryLink id="a857-229a-e012-fdc1" name="Battalion Formation" hidden="false" collective="false" import="true" targetId="ab2e-bbbc-12f2-6c1b" type="selectionEntryGroup"/>
+      </entryLinks>
+    </entryLink>
+    <entryLink id="3890-a6c9-b965-b625" name="Pontifex Zenestra, Matriarch of the Great Wheel" hidden="false" collective="false" import="true" targetId="cb4d-3452-191b-309c" type="selectionEntry">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="d950-bce3-6ed2-8b86" type="equalTo"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <categoryLinks>
+        <categoryLink id="3072-71fc-dc01-13c8" name="Allegiant - Cities of Sigmar" hidden="false" targetId="0046-6be2-ce3d-7696" primary="false"/>
+      </categoryLinks>
+      <entryLinks>
+        <entryLink id="fcf7-1622-589f-4d87" name="Battalion Formation" hidden="false" collective="false" import="true" targetId="ab2e-bbbc-12f2-6c1b" type="selectionEntryGroup"/>
+        <entryLink id="6f14-62c7-6750-c713" name="Prayer Scriptures" hidden="false" collective="false" import="true" targetId="0a70-7e29-209a-a975" type="selectionEntryGroup"/>
+      </entryLinks>
+    </entryLink>
+    <entryLink id="787b-d26d-e399-0436" name="Tahlia Vedra, Lioness of the Parch" hidden="false" collective="false" import="true" targetId="2637-4f27-0859-fa97" type="selectionEntry">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="d950-bce3-6ed2-8b86" type="equalTo"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <categoryLinks>
+        <categoryLink id="7fc3-d754-ecdb-ff8f" name="Allegiant - Cities of Sigmar" hidden="false" targetId="0046-6be2-ce3d-7696" primary="false"/>
+      </categoryLinks>
+      <entryLinks>
+        <entryLink id="69cb-c2a1-909d-49a7" name="Battalion Formation" hidden="false" collective="false" import="true" targetId="ab2e-bbbc-12f2-6c1b" type="selectionEntryGroup"/>
+      </entryLinks>
+    </entryLink>
+    <entryLink id="48fc-7693-2b2f-0132" name="Wildercorps Hunters" hidden="false" collective="false" import="true" targetId="e3ad-98e2-afe4-8ee9" type="selectionEntry">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="d950-bce3-6ed2-8b86" type="equalTo"/>
+          </conditions>
+        </modifier>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="88ee-6355-96e4-6a34" type="greaterThan"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <categoryLinks>
+        <categoryLink id="ecd4-5ea4-7915-843d" name="Allegiant - Cities of Sigmar" hidden="false" targetId="0046-6be2-ce3d-7696" primary="false"/>
+      </categoryLinks>
+      <entryLinks>
+        <entryLink id="18e8-21db-cd00-d9ce" name="Battalion Formation" hidden="false" collective="false" import="true" targetId="ab2e-bbbc-12f2-6c1b" type="selectionEntryGroup"/>
+      </entryLinks>
+    </entryLink>
+    <entryLink id="3954-206e-f01d-7dfc" name="Ironweld Great Cannon" hidden="false" collective="false" import="true" targetId="02fc-c7db-48e0-f13d" type="selectionEntry">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="d950-bce3-6ed2-8b86" type="equalTo"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <categoryLinks>
+        <categoryLink id="48fb-9266-36e6-57e3" name="Allegiant - Cities of Sigmar" hidden="false" targetId="0046-6be2-ce3d-7696" primary="false"/>
+      </categoryLinks>
+      <entryLinks>
+        <entryLink id="0501-4b7f-1887-bf5a" name="Battalion Formation" hidden="false" collective="false" import="true" targetId="ab2e-bbbc-12f2-6c1b" type="selectionEntryGroup"/>
+      </entryLinks>
+    </entryLink>
+    <entryLink id="119c-2876-4a69-6796" name="Questor Soulsworn" hidden="false" collective="false" import="true" targetId="e6fb-c121-676a-dfd5" type="selectionEntry">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="88ee-6355-96e4-6a34" type="greaterThan"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <entryLinks>
+        <entryLink id="d4eb-9c1f-1344-3de5" name="Battalion Formation" hidden="false" collective="false" import="true" targetId="ab2e-bbbc-12f2-6c1b" type="selectionEntryGroup"/>
       </entryLinks>
     </entryLink>
   </entryLinks>
@@ -2399,8 +3096,36 @@ Designer’s Note: Coalition units are units from another faction that can be in
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="7bd9-cc6d-1f40-8522" type="max"/>
         <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="c0d2-1d37-16f4-d3b8" type="max"/>
       </constraints>
+      <selectionEntries>
+        <selectionEntry id="07e6-539f-b9b4-72c6" name="0. Commander of the Skies" hidden="false" collective="false" import="true" type="upgrade">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="88ee-6355-96e4-6a34" type="equalTo"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <profiles>
+            <profile id="f444-92be-b916-3240" name="Favour the Bold" hidden="false" typeId="1504-23bf-8850-4f65" typeName="Command Traits">
+              <characteristics>
+                <characteristic name="Command Trait" typeId="0145-9acf-f5dc-d543">After this general has fought for the first time in the combat phase and slain models (if any) have been removed from play (core rules, 14.2), if there are no enemy units within 3&quot; of this general, roll a dice. On a 2+, this general can immediately make a D6&quot; move and can finish that move within 3&quot; of any enemy units.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <costs>
+            <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
+          </costs>
+        </selectionEntry>
+      </selectionEntries>
       <selectionEntryGroups>
         <selectionEntryGroup id="14d3-411f-cf24-ae02" name="Aspects of Azyr" hidden="false" collective="false" import="true">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="88ee-6355-96e4-6a34" type="greaterThan"/>
+              </conditions>
+            </modifier>
+          </modifiers>
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="1086-064e-b068-6196" type="max"/>
           </constraints>
@@ -2471,7 +3196,7 @@ Designer’s Note: Coalition units are units from another faction that can be in
         </selectionEntryGroup>
       </selectionEntryGroups>
       <entryLinks>
-        <entryLink id="df3b-7f2c-f96e-4436" name="Universal Command Traits" hidden="false" collective="false" import="true" targetId="20f0-6df9-b464-3789" type="selectionEntryGroup"/>
+        <entryLink id="df3b-7f2c-f96e-4436" name="Rulebook Command Traits" hidden="false" collective="false" import="true" targetId="6978-81a2-4c55-65f3" type="selectionEntryGroup"/>
       </entryLinks>
     </selectionEntryGroup>
     <selectionEntryGroup id="0267-8c18-bf86-7ae3" name="Mount Traits" hidden="false" collective="false" import="true">
@@ -2496,6 +3221,11 @@ Designer’s Note: Coalition units are units from another faction that can be in
               </conditions>
             </conditionGroup>
           </conditionGroups>
+        </modifier>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="88ee-6355-96e4-6a34" type="greaterThan"/>
+          </conditions>
         </modifier>
       </modifiers>
       <constraints>
@@ -2641,6 +3371,14 @@ Designer’s Note: Coalition units are units from another faction that can be in
                 <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="6cd6-b22e-bfcb-9589" type="instanceOf"/>
                 <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="b543-cb16-0c79-fbc6" type="instanceOf"/>
               </conditions>
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="7ee2-0d81-544f-5d7e" type="equalTo"/>
+                    <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="7ee2-0d81-544f-5d7e" type="notInstanceOf"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
             </conditionGroup>
           </conditionGroups>
         </modifier>
@@ -2656,6 +3394,30 @@ Designer’s Note: Coalition units are units from another faction that can be in
       <constraints>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="30de-f021-48c3-4adb" type="max"/>
       </constraints>
+      <selectionEntries>
+        <selectionEntry id="0c4d-030d-5f94-26c5" name="0 - Regal Authority" hidden="false" collective="false" import="true" type="upgrade">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="88ee-6355-96e4-6a34" type="equalTo"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="2e50-943d-6e7b-e490" type="max"/>
+          </constraints>
+          <profiles>
+            <profile id="92d1-6997-415f-fd86" name="Regal Authority" hidden="false" typeId="13da-11a8-b7d1-77a7" typeName="Spell">
+              <characteristics>
+                <characteristic name="Spell" typeId="1170-c916-1b73-ae34">Regal Authority is a spell that has a casting value of 7 and a range of 18&quot;. If successfully cast, pick 1 friendly DRACONITH unit wholly within range and visible to the caster. Until the start of your next hero phase, each time that unit issues a command, roll a dice. On a 5+, the command point used to issue that command is not spent.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <costs>
+            <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
+          </costs>
+        </selectionEntry>
+      </selectionEntries>
       <selectionEntryGroups>
         <selectionEntryGroup id="d645-a7ff-669f-79c3" name="Lore of the Storm" hidden="false" collective="false" import="true">
           <modifiers>
@@ -2670,6 +3432,11 @@ Designer’s Note: Coalition units are units from another faction that can be in
               </repeats>
               <conditions>
                 <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="9e49-bd7f-45ee-1a96" type="greaterThan"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="88ee-6355-96e4-6a34" type="greaterThan"/>
               </conditions>
             </modifier>
           </modifiers>
@@ -2771,7 +3538,7 @@ Designer’s Note: Coalition units are units from another faction that can be in
         </selectionEntryGroup>
       </selectionEntryGroups>
       <entryLinks>
-        <entryLink id="44dc-6d8b-de4a-4486" name="Universal Spell Lore" hidden="false" collective="false" import="true" targetId="93f7-7e2a-3308-d150" type="selectionEntryGroup"/>
+        <entryLink id="44dc-6d8b-de4a-4486" name="Rulebook Spell Lores" hidden="false" collective="false" import="true" targetId="8aee-7492-ee73-6d07" type="selectionEntryGroup"/>
       </entryLinks>
     </selectionEntryGroup>
     <selectionEntryGroup id="745a-2a21-e84d-fbe7" name="Artefacts of Power" hidden="false" collective="false" import="true">
@@ -2796,12 +3563,41 @@ Designer’s Note: Coalition units are units from another faction that can be in
       <categoryLinks>
         <categoryLink id="f9a2-f48f-edf9-6c86" name="Artefacts" hidden="false" targetId="ba14-5553-456e-33ad" primary="false"/>
       </categoryLinks>
+      <selectionEntries>
+        <selectionEntry id="d236-2526-c818-ce4b" name="0 -- Celestium Ensign" hidden="false" collective="false" import="true" type="upgrade">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="88ee-6355-96e4-6a34" type="equalTo"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="f230-1e6c-63ac-dc5c" type="max"/>
+          </constraints>
+          <profiles>
+            <profile id="f074-068f-2412-04c1" name="Celestium Ensign" hidden="false" typeId="0c9d-7abe-a53c-6a37" typeName="Artefacts">
+              <characteristics>
+                <characteristic name="Artefact" typeId="44b6-de26-0b54-1318">Once per battle, at the start of any phase, the bearer can say that they will raise their Celestium Ensign. If they do so, you can heal up to D3 wounds allocated to each friendly DRACONITH unit wholly within 9&quot; of the bearer.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <costs>
+            <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
+          </costs>
+        </selectionEntry>
+      </selectionEntries>
       <selectionEntryGroups>
         <selectionEntryGroup id="dec2-fa1c-e20b-761d" name="Storm-forged Weapons" hidden="false" collective="false" import="true">
           <modifiers>
             <modifier type="set" field="hidden" value="true">
               <conditions>
                 <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="f7e5-f667-4647-e141" type="notInstanceOf"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="88ee-6355-96e4-6a34" type="greaterThan"/>
               </conditions>
             </modifier>
           </modifiers>
@@ -2863,6 +3659,11 @@ Designer’s Note: Coalition units are units from another faction that can be in
                 <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="f7e5-f667-4647-e141" type="notInstanceOf"/>
               </conditions>
             </modifier>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="88ee-6355-96e4-6a34" type="greaterThan"/>
+              </conditions>
+            </modifier>
           </modifiers>
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="b124-3247-d1c9-b459" type="max"/>
@@ -2922,6 +3723,11 @@ Designer’s Note: Coalition units are units from another faction that can be in
                 <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="f7e5-f667-4647-e141" type="notInstanceOf"/>
               </conditions>
             </modifier>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="88ee-6355-96e4-6a34" type="greaterThan"/>
+              </conditions>
+            </modifier>
           </modifiers>
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="b6ad-bbe6-5d48-2469" type="max"/>
@@ -2976,7 +3782,7 @@ Designer’s Note: Coalition units are units from another faction that can be in
         </selectionEntryGroup>
       </selectionEntryGroups>
       <entryLinks>
-        <entryLink id="0f0d-1e81-9bb3-4d96" name="Universal Artefacts of Power" hidden="false" collective="false" import="true" targetId="dbd8-8f6f-f44a-884a" type="selectionEntryGroup"/>
+        <entryLink id="0f0d-1e81-9bb3-4d96" name="Rulebook Artefacts of Power" hidden="false" collective="false" import="true" targetId="836b-19a4-b5b4-570d" type="selectionEntryGroup"/>
       </entryLinks>
     </selectionEntryGroup>
     <selectionEntryGroup id="0a70-7e29-209a-a975" name="Prayer Scriptures" hidden="false" collective="false" import="true">
@@ -3015,6 +3821,11 @@ Designer’s Note: Coalition units are units from another faction that can be in
               </repeats>
               <conditions>
                 <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="c7bd-c872-ef57-2468" type="greaterThan"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="88ee-6355-96e4-6a34" type="greaterThan"/>
               </conditions>
             </modifier>
           </modifiers>
@@ -3069,9 +3880,76 @@ Designer’s Note: Coalition units are units from another faction that can be in
             </selectionEntry>
           </selectionEntries>
         </selectionEntryGroup>
+        <selectionEntryGroup id="d770-b89a-8e10-5a6a" name="Prayers of the Draconith" hidden="false" collective="false" import="true">
+          <modifiers>
+            <modifier type="increment" field="f125-64b4-e7bd-f108" value="1.0">
+              <repeats>
+                <repeat field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="c7bd-c872-ef57-2468" repeats="1" roundUp="false"/>
+              </repeats>
+              <conditions>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="c7bd-c872-ef57-2468" type="greaterThan"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="88ee-6355-96e4-6a34" type="equalTo"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="f125-64b4-e7bd-f108" type="max"/>
+          </constraints>
+          <selectionEntries>
+            <selectionEntry id="b205-346c-b2b0-23ac" name="3 - Sovereignty" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="b10b-8868-d470-057f" type="max"/>
+              </constraints>
+              <profiles>
+                <profile id="4c03-ec22-10d0-17b5" name="Sovereignty" hidden="false" typeId="161a-85bd-f19e-a5a7" typeName="Prayer">
+                  <characteristics>
+                    <characteristic name="Prayer" typeId="19bc-965a-768d-defa">Sovereignty is a prayer that has an answer value of 4 and a range of 12&quot;. If answered, pick 1 enemy unit within range. Until the start of your next hero phase, that unit counts as a maximum of 5 models for the purposes of contesting objectives.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <costs>
+                <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="2ae0-49f7-d522-9263" name="2 - Sanctification" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="2b7a-24f2-654c-1364" type="max"/>
+              </constraints>
+              <profiles>
+                <profile id="0a3d-ea40-c586-548f" name="Sanctification" hidden="false" typeId="161a-85bd-f19e-a5a7" typeName="Prayer">
+                  <characteristics>
+                    <characteristic name="Prayer" typeId="19bc-965a-768d-defa">Sanctification is a prayer that has an answer value of 4. If answered, until the start of your next hero phase, subtract 1 from casting rolls for enemy WIZARDS and subtract 1 from chanting rolls for enemy PRIESTS.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <costs>
+                <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="f337-c823-01f3-549e" name="1 - Sigmar&apos;s Grace" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="80ea-9363-f5c1-f713" type="max"/>
+              </constraints>
+              <profiles>
+                <profile id="6f23-98e7-3ec8-2e5b" name="Sigmar&apos;s Grace" hidden="false" typeId="161a-85bd-f19e-a5a7" typeName="Prayer">
+                  <characteristics>
+                    <characteristic name="Prayer" typeId="19bc-965a-768d-defa">Sigmar’s Grace is a prayer that has an answer value of 3 and a range of 12&quot;. If answered, pick 1 friendly unit wholly within range and visible to the chanter. You can heal up to 3 wounds allocated to that unit.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <costs>
+                <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
+              </costs>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
       </selectionEntryGroups>
       <entryLinks>
-        <entryLink id="7e82-074b-0ec0-849c" name="Universal Prayer Scripture" hidden="false" collective="false" import="true" targetId="7104-ab27-d136-1df0" type="selectionEntryGroup"/>
+        <entryLink id="7e82-074b-0ec0-849c" name="Rulebook Prayer Scriptures" hidden="false" collective="false" import="true" targetId="42b2-cfa5-744f-8062" type="selectionEntryGroup"/>
       </entryLinks>
     </selectionEntryGroup>
     <selectionEntryGroup id="f1cd-5231-39ba-99c7" name="Holy Commands" hidden="false" collective="false" import="true">
@@ -3206,6 +4084,11 @@ Designer’s Note: Coalition units are units from another faction that can be in
                   </conditionGroups>
                 </conditionGroup>
               </conditionGroups>
+            </modifier>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="88ee-6355-96e4-6a34" type="greaterThan"/>
+              </conditions>
             </modifier>
           </modifiers>
           <constraints>

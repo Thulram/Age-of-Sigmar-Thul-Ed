@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="fabc-7c1b-cdd3-78a5" name="Order - Fyreslayers" revision="10" battleScribeVersion="2.03" authorName="Thulram" library="false" gameSystemId="e832-3291-06be-cab1" gameSystemRevision="9" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="fabc-7c1b-cdd3-78a5" name="Order - Fyreslayers" revision="11" battleScribeVersion="2.03" authorName="Thulram" library="false" gameSystemId="e832-3291-06be-cab1" gameSystemRevision="11" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <profileTypes>
     <profileType id="0144-faed-1cbe-bd82" name="Mount Trait">
       <characteristicTypes>
@@ -47,6 +47,7 @@
       <categoryLinks>
         <categoryLink id="8b61-9a9b-e4e6-bf4f" name="Allegiance" hidden="false" targetId="af41-ae78-5063-3d36" primary="false"/>
         <categoryLink id="c418-d1a8-2941-6550" name="New CategoryLink" hidden="false" targetId="29f4-e63d-fa5b-1611" primary="true"/>
+        <categoryLink id="9f29-910a-42c8-06f3" name="RoR - Fyreslayers" hidden="false" targetId="7c98-7d74-5469-ce45" primary="false"/>
       </categoryLinks>
       <selectionEntries>
         <selectionEntry id="5249-a3ae-66a7-66ea" name="Fyreslayers" hidden="false" collective="false" import="true" type="upgrade">
@@ -56,6 +57,13 @@
           </constraints>
           <profiles>
             <profile id="9680-67d9-2220-db01" name="Ur-gold Runes" hidden="false" typeId="c0c2-177b-e761-ec41" typeName="Allegiance Abilities">
+              <modifiers>
+                <modifier type="set" field="hidden" value="true">
+                  <conditions>
+                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="5a48-8313-3170-d5b3" type="greaterThan"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
               <characteristics>
                 <characteristic name="Allegiance Ability" typeId="0506-f62d-68b3-5499">At the start of your hero phase, you can activate 1 of the following 6 types of ur-gold rune. To do so, state which rune will be activated and make an activation roll by rolling a dice. On a 1-5, the standard effect applies. On a 6, the enhanced effect also applies. The effects last until the start of your next hero phase.
 
@@ -93,6 +101,13 @@ Enhanced effect: Add 2 to charge rolls for friendly FYRESLAYERS units.</characte
               </characteristics>
             </profile>
             <profile id="f20a-7011-5edc-856f" name="Lodges" hidden="false" typeId="c0c2-177b-e761-ec41" typeName="Allegiance Abilities">
+              <modifiers>
+                <modifier type="set" field="hidden" value="true">
+                  <conditions>
+                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="5a48-8313-3170-d5b3" type="greaterThan"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
               <characteristics>
                 <characteristic name="Allegiance Ability" typeId="0506-f62d-68b3-5499">You can pick 1 of the following subfactions for your army. All FYRESLAYERS units in your army gain the keyword of the subfaction you picked, and you can use the allegiance abilities for that subfaction. If a unit already has a different subfaction keyword on its warscroll, it cannot gain another one. This does not preclude you from including the unit in your army, but you cannot use the allegiance abilities for its subfaction.
 
@@ -103,6 +118,13 @@ Enhanced effect: Add 2 to charge rolls for friendly FYRESLAYERS units.</characte
               </characteristics>
             </profile>
             <profile id="fffe-5d53-e439-62a0" name="Grimwrath Oaths" hidden="false" typeId="c0c2-177b-e761-ec41" typeName="Allegiance Abilities">
+              <modifiers>
+                <modifier type="set" field="hidden" value="true">
+                  <conditions>
+                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="5a48-8313-3170-d5b3" type="greaterThan"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
               <characteristics>
                 <characteristic name="Allegiance Ability" typeId="0506-f62d-68b3-5499">At the start of the first battle round, you can pick 1 of the following oaths for each friendly GRIMWRATH BERZERKER to swear. The rule for that oath applies until the end of the battle. If your army includes more than 1 GRIMWRATH BERZERKER, you cannot pick the same oath more than once.
 
@@ -120,11 +142,25 @@ Enhanced effect: Add 2 to charge rolls for friendly FYRESLAYERS units.</characte
               </characteristics>
             </profile>
             <profile id="7594-2e7d-809b-cc56" name="Fierce Counter-attack" hidden="false" typeId="6364-f76d-fc0c-80bc" typeName="Command Abilities">
+              <modifiers>
+                <modifier type="set" field="hidden" value="true">
+                  <conditions>
+                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="5a48-8313-3170-d5b3" type="greaterThan"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
               <characteristics>
-                <characteristic name="Command Ability" typeId="36cb-f8a4-d94b-8aa8">You can use this command ability at the start of the enemy combat phase. The unit that receives the command must be an AURIC HEARTHGUARD, HEARTHGUARD BERZERKERS or VULKITE BERZERKERS unit that is within 3&quot; of an enemy unit that made a charge move in the same turn and not within 3&quot; of any enemy units that have not made a charge move in the same turn. The strike-first effect applies to that unit until the end of that phase. A unit cannot receive this command more than once per battle.</characteristic>
+                <characteristic name="Command Ability" typeId="36cb-f8a4-d94b-8aa8">You can use this command ability at the start of the enemy combat phase. The unit that receives the command must be an AURIC HEARTHGUARD, HEARTHGUARD BERZERKERS, VULKITE BERZERKERS or VULKYN FLAMESEEKERS unit that is within 3&quot; of an enemy unit that made a charge move in the same turn and not within 3&quot; of any enemy units that have not made a charge move in the same turn. The strike-first effect applies to that unit until the end of that phase. A unit cannot receive this command more than once per battle.</characteristic>
               </characteristics>
             </profile>
             <profile id="3861-3deb-3745-6940" name="Blaze of Fury" hidden="false" typeId="1193-4081-af87-68cd" typeName="Heroic Action/Monstrous Rampage">
+              <modifiers>
+                <modifier type="set" field="hidden" value="true">
+                  <conditions>
+                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="5a48-8313-3170-d5b3" type="greaterThan"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
               <characteristics>
                 <characteristic name="Effect" typeId="faec-beac-0874-3c6e">At the start of your hero phase, you can carry out this heroic action with a friendly FYRESLAYERS HERO instead of any other heroic action you can carry out with that HERO;
 
@@ -132,8 +168,68 @@ Blaze of Fury: Pick 1 friendly FYRESLAYERS HERO. Until the end of your turn, the
               </characteristics>
             </profile>
           </profiles>
+          <selectionEntries>
+            <selectionEntry id="5a48-8313-3170-d5b3" name="Lofnir Drothkeepers" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="beea-c545-5030-0239" type="max"/>
+              </constraints>
+              <profiles>
+                <profile id="6a6f-09de-d1b4-1914" name="Lofnir Drothkeepers" hidden="false" typeId="ce32-0c40-1990-4c8a" typeName="Restriction">
+                  <characteristics>
+                    <characteristic name="Restriction" typeId="edbe-5fe5-1142-afa6">When you pick the Fyreslayers faction for your army, you can say that it will be a Lofnir Drothkeepers army of renown. If you do so, use the rules in this section. Every unit in your army must have the FYRESLAYERS keyword, and Unique units can only be included if they have the LOFNIR keyword. All of the units in your army gain the LOFNIR DROTHKEEPERS keyword.</characteristic>
+                  </characteristics>
+                </profile>
+                <profile id="264d-1c17-cd4e-aa14" name="Daring Tamers" hidden="false" typeId="c0c2-177b-e761-ec41" typeName="Allegiance Abilities">
+                  <characteristics>
+                    <characteristic name="Allegiance Ability" typeId="0506-f62d-68b3-5499">The strike-last effect applies to enemy MONSTER units while they are within 3&quot; of 2 or more friendly VULKYN FLAMESEEKERS units.</characteristic>
+                  </characteristics>
+                </profile>
+                <profile id="2a17-d49c-45e2-0a47" name="Honourbound Drothmasters" hidden="false" typeId="c0c2-177b-e761-ec41" typeName="Allegiance Abilities">
+                  <characteristics>
+                    <characteristic name="Allegiance Ability" typeId="0506-f62d-68b3-5499">Friendly VULKYN FLAMESEEKERS units have the Battleline battlefield role. In addition, for each VULKYN FLAMESEEKERS unit included in your army, you can include 1 Auric Runeson on Magmadroth as a Battleline unit.</characteristic>
+                  </characteristics>
+                </profile>
+                <profile id="9fbc-e9fd-3f5a-20e7" name="Flame-filled Beasts" hidden="false" typeId="c0c2-177b-e761-ec41" typeName="Allegiance Abilities">
+                  <characteristics>
+                    <characteristic name="Allegiance Ability" typeId="0506-f62d-68b3-5499">You can pick up to 3 LOFNIR DROTHKEEPERS units in your army to have different mount traits instead of 1.</characteristic>
+                  </characteristics>
+                </profile>
+                <profile id="5c36-8d8f-c534-3430" name="Skilled Drothwranglers" hidden="false" typeId="c0c2-177b-e761-ec41" typeName="Allegiance Abilities">
+                  <characteristics>
+                    <characteristic name="Allegiance Ability" typeId="0506-f62d-68b3-5499">Once per turn, in your movement phase, you can pick 1 friendly VULKYN FLAMESEEKERS unit wholly within 6&quot; of a friendly MAGMADROTH that has not yet moved in that phase and say that it will hitch a lift on that MAGMADROTH. If you do so, after you have moved that MAGMADROTH, instead of making a move with that unit, remove it from the battlefield and set it up again on the battlefield wholly within 6&quot; of that MAGMADROTH and more than 3&quot; from all enemy units.</characteristic>
+                  </characteristics>
+                </profile>
+                <profile id="fe8b-0b4b-aebf-df29" name="Protective Family" hidden="false" typeId="c0c2-177b-e761-ec41" typeName="Allegiance Abilities">
+                  <characteristics>
+                    <characteristic name="Allegiance Ability" typeId="0506-f62d-68b3-5499">While a friendly VULKYN FLAMESEEKERS Kyndledroth is within 1&quot; of a friendly MAGMADROTH, that VULKYN FLAMESEEKERS unit has a ward of 5+.</characteristic>
+                  </characteristics>
+                </profile>
+                <profile id="6c5f-2672-a45d-1778" name="Spawn of Vulcatrix" hidden="false" typeId="c0c2-177b-e761-ec41" typeName="Allegiance Abilities">
+                  <characteristics>
+                    <characteristic name="Allegiance Ability" typeId="0506-f62d-68b3-5499">When you carry out a monstrous rampage with a friendly MAGMADROTH, you can carry out 1 of the monstrous rampages below instead of any other monstrous rampage you can carry out with that unit.
+
+Rearing Punches: Pick 1 enemy unit within 3&quot; of this unit and roll 2 dice. Add 2 to each roll if that unit is a MONSTER. For each 5+, that unit suffers D3 mortal wounds.
+
+Magma-fuelled Grasp: Pick 1 enemy MONSTER within 3&quot; of this unit and roll a dice. On a 3+, improve the Rend characteristic of melee weapons used by other friendly LOFNIR DROTHKEEPERS units that target that MONSTER by 1 in the following combat phase.
+
+Eruption of Ferocity: Pick 1 enemy unit within 3&quot; of this unit and roll a dice. On a 2+, ward rolls cannot be made for models in that unit in the following combat phase.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <costs>
+                <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
+              </costs>
+            </selectionEntry>
+          </selectionEntries>
           <selectionEntryGroups>
             <selectionEntryGroup id="ab07-4e87-ad61-af04" name="Lodges" hidden="false" collective="false" import="true">
+              <modifiers>
+                <modifier type="set" field="hidden" value="true">
+                  <conditions>
+                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="5a48-8313-3170-d5b3" type="greaterThan"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
               <constraints>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d416-f05c-1080-59cb" type="max"/>
               </constraints>
@@ -269,6 +365,13 @@ Blaze of Fury: Pick 1 friendly FYRESLAYERS HERO. Until the end of your turn, the
       </costs>
     </selectionEntry>
     <selectionEntry id="0781-0c70-c2f3-9b14" name="Fjul-Grimnir and The Chosen Axes (separate units)" publicationId="486b-93d3-3587-5477" hidden="false" collective="false" import="true" type="upgrade">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="5a48-8313-3170-d5b3" type="greaterThan"/>
+          </conditions>
+        </modifier>
+      </modifiers>
       <constraints>
         <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="37ea-5649-6352-3751" type="max"/>
       </constraints>
@@ -348,8 +451,36 @@ Blaze of Fury: Pick 1 friendly FYRESLAYERS HERO. Until the end of your turn, the
           <categoryLinks>
             <categoryLink id="30ca-70bc-694b-bbf5" name="Grand Strategy" hidden="false" targetId="318c-fa55-0855-47ef" primary="false"/>
           </categoryLinks>
+          <selectionEntries>
+            <selectionEntry id="478d-a48d-a3f5-2ada" name="Clear the Corral" hidden="false" collective="false" import="true" type="upgrade">
+              <modifiers>
+                <modifier type="set" field="hidden" value="true">
+                  <conditions>
+                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="5a48-8313-3170-d5b3" type="equalTo"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+              <profiles>
+                <profile id="2a5d-fa5e-0c82-c6ca" name="Clear the Corral" hidden="false" typeId="7dc6-98f0-f5ba-fc16" typeName="Grand Strategy">
+                  <characteristics>
+                    <characteristic name="Grand Strategy" typeId="22d6-b382-f824-6381">When the battle ends, you complete this grand strategy if there are no enemy MONSTERS in your territory.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <costs>
+                <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
+              </costs>
+            </selectionEntry>
+          </selectionEntries>
           <selectionEntryGroups>
             <selectionEntryGroup id="bea4-2c4c-813a-7e0d" name="The Path of Grimnir" hidden="false" collective="false" import="true">
+              <modifiers>
+                <modifier type="set" field="hidden" value="true">
+                  <conditions>
+                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="5a48-8313-3170-d5b3" type="greaterThan"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
               <constraints>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="28cd-f289-1998-97dd" type="max"/>
               </constraints>
@@ -435,33 +566,111 @@ Blaze of Fury: Pick 1 friendly FYRESLAYERS HERO. Until the end of your turn, the
       </constraints>
       <profiles>
         <profile id="39bb-5da8-fda9-0abb" name="Settle a Grudge" hidden="false" typeId="4bb2-448c-446c-f522" typeName="Battle Tactic">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="5a48-8313-3170-d5b3" type="greaterThan"/>
+              </conditions>
+            </modifier>
+          </modifiers>
           <characteristics>
             <characteristic name="Battle Tactic" typeId="8c0f-be41-a70e-c699">Each time a friendly unit is destroyed by wounds caused by an attack, make a note of the enemy unit that made that attack (in a ‘Book of Grudges’, if you wish). When you pick this battle tactic, pick 1 of those enemy units that is still on the battlefield. You complete this tactic if that unit is destroyed during this turn.</characteristic>
           </characteristics>
         </profile>
         <profile id="feca-1778-d36e-5675" name="Beastslayer" hidden="false" typeId="4bb2-448c-446c-f522" typeName="Battle Tactic">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="5a48-8313-3170-d5b3" type="greaterThan"/>
+              </conditions>
+            </modifier>
+          </modifiers>
           <characteristics>
             <characteristic name="Battle Tactic" typeId="8c0f-be41-a70e-c699">Pick 1 enemy MONSTER and 1 friendly HERO. You complete this tactic if that MONSTER is slain by wounds caused by attacks made by that HERO during this turn.</characteristic>
           </characteristics>
         </profile>
         <profile id="f609-b86d-ca1a-b86c" name="Grimnir Knows" hidden="false" typeId="4bb2-448c-446c-f522" typeName="Battle Tactic">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="5a48-8313-3170-d5b3" type="greaterThan"/>
+              </conditions>
+            </modifier>
+          </modifiers>
           <characteristics>
             <characteristic name="Battle Tactic" typeId="8c0f-be41-a70e-c699">You complete this tactic at the end of this turn if there are any friendly VULKITE BERZERKERS units on the battlefield and all of them are within 3&quot; of any enemy units.</characteristic>
           </characteristics>
         </profile>
         <profile id="cf36-8e13-8f8a-05a0" name="An Honourable Death" hidden="false" typeId="4bb2-448c-446c-f522" typeName="Battle Tactic">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="5a48-8313-3170-d5b3" type="greaterThan"/>
+              </conditions>
+            </modifier>
+          </modifiers>
           <characteristics>
             <characteristic name="Battle Tactic" typeId="8c0f-be41-a70e-c699">Pick 1 friendly HERO. You complete this tactic if that friendly HERO is slain during this turn and any enemy models were also slain by wounds caused by attacks made by that HERO during this turn</characteristic>
           </characteristics>
         </profile>
         <profile id="56e5-0da6-671a-b38e" name="Seize by Force" hidden="false" typeId="4bb2-448c-446c-f522" typeName="Battle Tactic">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="5a48-8313-3170-d5b3" type="greaterThan"/>
+              </conditions>
+            </modifier>
+          </modifiers>
           <characteristics>
             <characteristic name="Battle Tactic" typeId="8c0f-be41-a70e-c699">You can pick this tactic only if you control fewer objectives than your opponent. You complete this tactic if you control more objectives than your opponent at the end of this turn.</characteristic>
           </characteristics>
         </profile>
         <profile id="5515-2ef5-cfb4-9fc5" name="An Ignominious Death" hidden="false" typeId="4bb2-448c-446c-f522" typeName="Battle Tactic">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="5a48-8313-3170-d5b3" type="greaterThan"/>
+              </conditions>
+            </modifier>
+          </modifiers>
           <characteristics>
             <characteristic name="Battle Tactic" typeId="8c0f-be41-a70e-c699">Pick 1 enemy HERO. You complete this tactic if that enemy HERO is slain by wounds caused by an attack made with a Fyresteel Throwing Axe during this turn.</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="7688-64f0-edaa-b3f2" name="Circle the Magmadroths" hidden="false" typeId="4bb2-448c-446c-f522" typeName="Battle Tactic">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="5a48-8313-3170-d5b3" type="equalTo"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <characteristics>
+            <characteristic name="Battle Tactic" typeId="8c0f-be41-a70e-c699">You complete this tactic if, at the end of this turn, any friendly LOFNIR DROTHKEEPERS units are within 6&quot; of the centre of the battlefield and there are 1 or more friendly LOFNIR DROTHKEEPERS units wholly within each large quarter of the battlefield.</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="e91f-3ae5-d44d-df28" name="Sulphur Seam" hidden="false" typeId="4bb2-448c-446c-f522" typeName="Battle Tactic">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="5a48-8313-3170-d5b3" type="equalTo"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <characteristics>
+            <characteristic name="Battle Tactic" typeId="8c0f-be41-a70e-c699">Pick 1 objective that is partially or wholly within enemy territory and 1 terrain feature or faction terrain feature that is partially or wholly within enemy territory and more than 6&quot; from that objective. You complete this tactic if you control both that objective and that terrain feature at the end of this turn.</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="4624-566d-c135-058b" name="Igneous Wranglers" hidden="false" typeId="4bb2-448c-446c-f522" typeName="Battle Tactic">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="5a48-8313-3170-d5b3" type="equalTo"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <characteristics>
+            <characteristic name="Battle Tactic" typeId="8c0f-be41-a70e-c699">Pick 1 objective partially or wholly in enemy territory and 1 other objective anywhere on the battlefield. You complete this tactic if you control both objectives at the end of this turn and both are contested by friendly VULKYN FLAMESEEKERS units.</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -487,7 +696,7 @@ Blaze of Fury: Pick 1 friendly FYRESLAYERS HERO. Until the end of your turn, the
         <entryLink id="f1c7-291b-1304-7e64" name="Artefacts of Power" hidden="false" collective="false" import="true" targetId="a1f0-850a-8b0c-e0f0" type="selectionEntryGroup"/>
         <entryLink id="be04-05f4-9066-b027" name="Command Traits" hidden="false" collective="false" import="true" targetId="837e-972d-ec57-dd91" type="selectionEntryGroup"/>
         <entryLink id="54cb-4803-2fb3-9ef3" name="Prayer Scriptures" hidden="false" collective="false" import="true" targetId="ed70-2b17-7173-22bf" type="selectionEntryGroup"/>
-        <entryLink id="6f9f-6479-ccb8-45ac" name="Universal Spell Lore" hidden="false" collective="false" import="true" targetId="93f7-7e2a-3308-d150" type="selectionEntryGroup">
+        <entryLink id="6f9f-6479-ccb8-45ac" name="Rulebook Spell Lores" hidden="false" collective="false" import="true" targetId="8aee-7492-ee73-6d07" type="selectionEntryGroup">
           <modifiers>
             <modifier type="set" field="hidden" value="true">
               <conditionGroups>
@@ -515,7 +724,7 @@ Blaze of Fury: Pick 1 friendly FYRESLAYERS HERO. Until the end of your turn, the
         <entryLink id="8186-b4b0-1a9e-a057" name="Command Traits" hidden="false" collective="false" import="true" targetId="837e-972d-ec57-dd91" type="selectionEntryGroup"/>
         <entryLink id="6760-ae5d-05d7-ed36" name="Artefacts of Power" hidden="false" collective="false" import="true" targetId="a1f0-850a-8b0c-e0f0" type="selectionEntryGroup"/>
         <entryLink id="a9f0-9e3f-6186-8f8e" name="Magmadroth Traits" hidden="false" collective="false" import="true" targetId="6b56-6b4e-009c-903f" type="selectionEntryGroup"/>
-        <entryLink id="7ae5-cbce-a3f1-e2d7" name="Universal Spell Lore" hidden="false" collective="false" import="true" targetId="93f7-7e2a-3308-d150" type="selectionEntryGroup">
+        <entryLink id="7ae5-cbce-a3f1-e2d7" name="Rulebook Spell Lores" hidden="false" collective="false" import="true" targetId="8aee-7492-ee73-6d07" type="selectionEntryGroup">
           <modifiers>
             <modifier type="set" field="hidden" value="true">
               <conditionGroups>
@@ -566,7 +775,7 @@ Blaze of Fury: Pick 1 friendly FYRESLAYERS HERO. Until the end of your turn, the
         <entryLink id="1e4b-f58c-515f-e5cc" name="General" hidden="false" collective="false" import="true" targetId="98a4-3d6d-a7b9-399f" type="selectionEntry"/>
         <entryLink id="7302-6085-1b50-4225" name="Artefacts of Power" hidden="false" collective="false" import="true" targetId="a1f0-850a-8b0c-e0f0" type="selectionEntryGroup"/>
         <entryLink id="a32d-09fc-1a3d-247e" name="Command Traits" hidden="false" collective="false" import="true" targetId="837e-972d-ec57-dd91" type="selectionEntryGroup"/>
-        <entryLink id="fc0c-11ca-1d94-2f60" name="Universal Spell Lore" hidden="false" collective="false" import="true" targetId="93f7-7e2a-3308-d150" type="selectionEntryGroup">
+        <entryLink id="fc0c-11ca-1d94-2f60" name="Rulebook Spell Lores" hidden="false" collective="false" import="true" targetId="8aee-7492-ee73-6d07" type="selectionEntryGroup">
           <modifiers>
             <modifier type="set" field="hidden" value="true">
               <conditionGroups>
@@ -588,7 +797,7 @@ Blaze of Fury: Pick 1 friendly FYRESLAYERS HERO. Until the end of your turn, the
         <entryLink id="f53b-d24b-4f58-6218" name="General" hidden="false" collective="false" import="true" targetId="98a4-3d6d-a7b9-399f" type="selectionEntry"/>
         <entryLink id="c178-bdcd-6afa-b1ca" name="Artefacts of Power" hidden="false" collective="false" import="true" targetId="a1f0-850a-8b0c-e0f0" type="selectionEntryGroup"/>
         <entryLink id="7181-a52a-e528-588b" name="Command Traits" hidden="false" collective="false" import="true" targetId="837e-972d-ec57-dd91" type="selectionEntryGroup"/>
-        <entryLink id="27e2-d849-b1d4-5810" name="Universal Spell Lore" hidden="false" collective="false" import="true" targetId="93f7-7e2a-3308-d150" type="selectionEntryGroup">
+        <entryLink id="27e2-d849-b1d4-5810" name="Rulebook Spell Lores" hidden="false" collective="false" import="true" targetId="8aee-7492-ee73-6d07" type="selectionEntryGroup">
           <modifiers>
             <modifier type="set" field="hidden" value="true">
               <conditionGroups>
@@ -614,7 +823,7 @@ Blaze of Fury: Pick 1 friendly FYRESLAYERS HERO. Until the end of your turn, the
         </entryLink>
         <entryLink id="ed85-a166-308e-8e2a" name="Artefacts of Power" hidden="false" collective="false" import="true" targetId="a1f0-850a-8b0c-e0f0" type="selectionEntryGroup"/>
         <entryLink id="f3aa-e693-3843-08e9" name="Command Traits" hidden="false" collective="false" import="true" targetId="837e-972d-ec57-dd91" type="selectionEntryGroup"/>
-        <entryLink id="b592-d97f-a83a-56b3" name="Universal Spell Lore" hidden="false" collective="false" import="true" targetId="93f7-7e2a-3308-d150" type="selectionEntryGroup">
+        <entryLink id="b592-d97f-a83a-56b3" name="Rulebook Spell Lores" hidden="false" collective="false" import="true" targetId="8aee-7492-ee73-6d07" type="selectionEntryGroup">
           <modifiers>
             <modifier type="set" field="hidden" value="true">
               <conditionGroups>
@@ -641,7 +850,7 @@ Blaze of Fury: Pick 1 friendly FYRESLAYERS HERO. Until the end of your turn, the
             <categoryLink id="1826-211a-f9a0-d4c3" name="Runefather General" hidden="false" targetId="d97a-a5e3-16e6-5603" primary="false"/>
           </categoryLinks>
         </entryLink>
-        <entryLink id="d061-5332-e388-3b1d" name="Universal Spell Lore" hidden="false" collective="false" import="true" targetId="93f7-7e2a-3308-d150" type="selectionEntryGroup">
+        <entryLink id="d061-5332-e388-3b1d" name="Rulebook Spell Lores" hidden="false" collective="false" import="true" targetId="8aee-7492-ee73-6d07" type="selectionEntryGroup">
           <modifiers>
             <modifier type="set" field="hidden" value="true">
               <conditionGroups>
@@ -713,7 +922,7 @@ Blaze of Fury: Pick 1 friendly FYRESLAYERS HERO. Until the end of your turn, the
         <entryLink id="2fcb-a00d-cdab-dfe6" name="Artefacts of Power" hidden="false" collective="false" import="true" targetId="a1f0-850a-8b0c-e0f0" type="selectionEntryGroup"/>
         <entryLink id="23d7-5213-459d-c576" name="Command Traits" hidden="false" collective="false" import="true" targetId="837e-972d-ec57-dd91" type="selectionEntryGroup"/>
         <entryLink id="2a90-d178-3168-44ff" name="Prayer Scriptures" hidden="false" collective="false" import="true" targetId="ed70-2b17-7173-22bf" type="selectionEntryGroup"/>
-        <entryLink id="c5ba-ec50-f0e3-22a6" name="Universal Spell Lore" hidden="false" collective="false" import="true" targetId="93f7-7e2a-3308-d150" type="selectionEntryGroup">
+        <entryLink id="c5ba-ec50-f0e3-22a6" name="Rulebook Spell Lores" hidden="false" collective="false" import="true" targetId="8aee-7492-ee73-6d07" type="selectionEntryGroup">
           <modifiers>
             <modifier type="set" field="hidden" value="true">
               <conditionGroups>
@@ -735,7 +944,7 @@ Blaze of Fury: Pick 1 friendly FYRESLAYERS HERO. Until the end of your turn, the
         <entryLink id="9843-ff03-8952-08a4" name="General" hidden="false" collective="false" import="true" targetId="98a4-3d6d-a7b9-399f" type="selectionEntry"/>
         <entryLink id="5307-7c73-5b19-f2d3" name="Artefacts of Power" hidden="false" collective="false" import="true" targetId="a1f0-850a-8b0c-e0f0" type="selectionEntryGroup"/>
         <entryLink id="73f2-3822-13e4-61e9" name="Command Traits" hidden="false" collective="false" import="true" targetId="837e-972d-ec57-dd91" type="selectionEntryGroup"/>
-        <entryLink id="04ba-f28f-fa25-2df0" name="Universal Spell Lore" hidden="false" collective="false" import="true" targetId="93f7-7e2a-3308-d150" type="selectionEntryGroup">
+        <entryLink id="04ba-f28f-fa25-2df0" name="Rulebook Spell Lores" hidden="false" collective="false" import="true" targetId="8aee-7492-ee73-6d07" type="selectionEntryGroup">
           <modifiers>
             <modifier type="set" field="hidden" value="true">
               <conditionGroups>
@@ -781,7 +990,7 @@ Blaze of Fury: Pick 1 friendly FYRESLAYERS HERO. Until the end of your turn, the
         <entryLink id="f6aa-cd27-8347-b736" name="General" hidden="false" collective="false" import="true" targetId="98a4-3d6d-a7b9-399f" type="selectionEntry"/>
         <entryLink id="6ba7-4dbe-ef2c-fe39" name="Artefacts of Power" hidden="false" collective="false" import="true" targetId="a1f0-850a-8b0c-e0f0" type="selectionEntryGroup"/>
         <entryLink id="940a-e7fb-49fb-5c91" name="Command Traits" hidden="false" collective="false" import="true" targetId="837e-972d-ec57-dd91" type="selectionEntryGroup"/>
-        <entryLink id="0cc3-6352-3ac3-d958" name="Universal Spell Lore" hidden="false" collective="false" import="true" targetId="93f7-7e2a-3308-d150" type="selectionEntryGroup">
+        <entryLink id="0cc3-6352-3ac3-d958" name="Rulebook Spell Lores" hidden="false" collective="false" import="true" targetId="8aee-7492-ee73-6d07" type="selectionEntryGroup">
           <modifiers>
             <modifier type="set" field="hidden" value="true">
               <conditionGroups>
@@ -816,7 +1025,7 @@ Blaze of Fury: Pick 1 friendly FYRESLAYERS HERO. Until the end of your turn, the
         <entryLink id="0463-663f-845e-ce40" name="Command Traits" hidden="false" collective="false" import="true" targetId="837e-972d-ec57-dd91" type="selectionEntryGroup"/>
         <entryLink id="c9ac-63c6-f990-fbe2" name="Artefacts of Power" hidden="false" collective="false" import="true" targetId="a1f0-850a-8b0c-e0f0" type="selectionEntryGroup"/>
         <entryLink id="5a2c-a023-dc65-bb30" name="Magmadroth Traits" hidden="false" collective="false" import="true" targetId="6b56-6b4e-009c-903f" type="selectionEntryGroup"/>
-        <entryLink id="5b9d-8ed2-8e45-1131" name="Universal Spell Lore" hidden="false" collective="false" import="true" targetId="93f7-7e2a-3308-d150" type="selectionEntryGroup">
+        <entryLink id="5b9d-8ed2-8e45-1131" name="Rulebook Spell Lores" hidden="false" collective="false" import="true" targetId="8aee-7492-ee73-6d07" type="selectionEntryGroup">
           <modifiers>
             <modifier type="set" field="hidden" value="true">
               <conditionGroups>
@@ -838,7 +1047,7 @@ Blaze of Fury: Pick 1 friendly FYRESLAYERS HERO. Until the end of your turn, the
         <entryLink id="e9c5-b81a-7c1b-e1ad" name="General" hidden="false" collective="false" import="true" targetId="98a4-3d6d-a7b9-399f" type="selectionEntry"/>
         <entryLink id="13b1-224a-a5d5-17a4" name="Artefacts of Power" hidden="false" collective="false" import="true" targetId="a1f0-850a-8b0c-e0f0" type="selectionEntryGroup"/>
         <entryLink id="1e2d-05df-b741-2590" name="Command Traits" hidden="false" collective="false" import="true" targetId="837e-972d-ec57-dd91" type="selectionEntryGroup"/>
-        <entryLink id="2128-50c0-3720-40c0" name="Universal Spell Lore" hidden="false" collective="false" import="true" targetId="93f7-7e2a-3308-d150" type="selectionEntryGroup">
+        <entryLink id="2128-50c0-3720-40c0" name="Rulebook Spell Lores" hidden="false" collective="false" import="true" targetId="8aee-7492-ee73-6d07" type="selectionEntryGroup">
           <modifiers>
             <modifier type="set" field="hidden" value="true">
               <conditionGroups>
@@ -858,6 +1067,52 @@ Blaze of Fury: Pick 1 friendly FYRESLAYERS HERO. Until the end of your turn, the
     <entryLink id="09d3-dff5-2f60-7451" name="Vulkite Berzerkers with Bladed Slingshields" hidden="false" collective="false" import="true" targetId="c539-2124-b84b-7db8" type="selectionEntry">
       <entryLinks>
         <entryLink id="5367-90d5-73f8-7398" name="Core Battalions" hidden="false" collective="false" import="true" targetId="8c04-393d-d72d-c2a8" type="selectionEntryGroup"/>
+      </entryLinks>
+    </entryLink>
+    <entryLink id="0ea2-c207-ae9c-5009" name="Grimhold Exile" hidden="false" collective="false" import="true" targetId="74df-d8d7-44d2-b549" type="selectionEntry">
+      <entryLinks>
+        <entryLink id="486f-6bbb-2e20-c648" name="Core Battalions" hidden="false" collective="false" import="true" targetId="8c04-393d-d72d-c2a8" type="selectionEntryGroup"/>
+        <entryLink id="a7f1-3690-00df-7ce2" name="General" hidden="false" collective="false" import="true" targetId="98a4-3d6d-a7b9-399f" type="selectionEntry"/>
+        <entryLink id="0819-0385-fe49-8201" name="Artefacts of Power" hidden="false" collective="false" import="true" targetId="a1f0-850a-8b0c-e0f0" type="selectionEntryGroup"/>
+        <entryLink id="ed71-b57b-e13d-6877" name="Command Traits" hidden="false" collective="false" import="true" targetId="837e-972d-ec57-dd91" type="selectionEntryGroup"/>
+        <entryLink id="8ec3-ef4b-86aa-c3c0" name="Rulebook Spell Lores" hidden="false" collective="false" import="true" targetId="8aee-7492-ee73-6d07" type="selectionEntryGroup">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="7ee2-0d81-544f-5d7e" type="equalTo"/>
+                    <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="7ee2-0d81-544f-5d7e" type="notInstanceOf"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
+        </entryLink>
+      </entryLinks>
+    </entryLink>
+    <entryLink id="bf95-ea1b-ae8f-c5bf" name="Vulkyn Flameseekers" hidden="false" collective="false" import="true" targetId="6a96-d2f2-a201-7d80" type="selectionEntry">
+      <modifiers>
+        <modifier type="remove" field="category" value="a42d-220e-6a88-7bf6">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4373-740f-1bf3-b0aa" type="instanceOf"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="e3a6-45ca-4974-b489" type="instanceOf"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="996a-613c-4006-25e3" type="instanceOf"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="6cd6-b22e-bfcb-9589" type="instanceOf"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="b543-cb16-0c79-fbc6" type="instanceOf"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="0913-8bf2-cfe6-24bd" type="equalTo"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+      <categoryLinks>
+        <categoryLink id="f52b-6e84-dd73-e334" name="Battleline" hidden="false" targetId="a42d-220e-6a88-7bf6" primary="false"/>
+      </categoryLinks>
+      <entryLinks>
+        <entryLink id="a2bf-9f77-49bb-12ed" name="Core Battalions" hidden="false" collective="false" import="true" targetId="8c04-393d-d72d-c2a8" type="selectionEntryGroup"/>
       </entryLinks>
     </entryLink>
   </entryLinks>
@@ -890,6 +1145,11 @@ Blaze of Fury: Pick 1 friendly FYRESLAYERS HERO. Until the end of your turn, the
             </conditionGroup>
           </conditionGroups>
         </modifier>
+        <modifier type="increment" field="b83a-282d-11e0-c317" value="2.0">
+          <conditions>
+            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="5a48-8313-3170-d5b3" type="greaterThan"/>
+          </conditions>
+        </modifier>
       </modifiers>
       <constraints>
         <constraint field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="b83a-282d-11e0-c317" type="max"/>
@@ -897,6 +1157,13 @@ Blaze of Fury: Pick 1 friendly FYRESLAYERS HERO. Until the end of your turn, the
       </constraints>
       <selectionEntries>
         <selectionEntry id="70ba-220a-f43a-dd80" name="3 ~ Coal-heart Ancient" hidden="false" collective="false" import="true" type="upgrade">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="5a48-8313-3170-d5b3" type="greaterThan"/>
+              </conditions>
+            </modifier>
+          </modifiers>
           <profiles>
             <profile id="7d4e-5684-23f5-bc6a" name="Coal-heart Ancient" hidden="false" typeId="0144-faed-1cbe-bd82" typeName="Mount Trait">
               <characteristics>
@@ -909,6 +1176,13 @@ Blaze of Fury: Pick 1 friendly FYRESLAYERS HERO. Until the end of your turn, the
           </costs>
         </selectionEntry>
         <selectionEntry id="cc87-cb0c-bad4-5c7f" name="2 ~ Lava-tongue Adult" hidden="false" collective="false" import="true" type="upgrade">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="5a48-8313-3170-d5b3" type="greaterThan"/>
+              </conditions>
+            </modifier>
+          </modifiers>
           <profiles>
             <profile id="05dc-4dfd-0f2d-0993" name="Lava-tongue Adult" hidden="false" typeId="0144-faed-1cbe-bd82" typeName="Mount Trait">
               <characteristics>
@@ -921,10 +1195,86 @@ Blaze of Fury: Pick 1 friendly FYRESLAYERS HERO. Until the end of your turn, the
           </costs>
         </selectionEntry>
         <selectionEntry id="bbc1-8b4f-fb28-cf83" name="1 ~ Flamescale Youndblood" hidden="false" collective="false" import="true" type="upgrade">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="5a48-8313-3170-d5b3" type="greaterThan"/>
+              </conditions>
+            </modifier>
+          </modifiers>
           <profiles>
             <profile id="f1c0-ece7-e0fd-5d51" name="Flame-scale Youngblood" hidden="false" typeId="0144-faed-1cbe-bd82" typeName="Mount Trait">
               <characteristics>
                 <characteristic name="Mount Trait" typeId="77e5-029b-d450-db5f">If you carry out a Stomp monstrous rampage with this unit and the enemy unit you picked suffers any mortal wounds, that enemy unit suffers 3 additional mortal wounds.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <costs>
+            <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="d832-3c84-a879-cb3a" name="3 ~ Scalding Steam-breath" hidden="false" collective="false" import="true" type="upgrade">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="5a48-8313-3170-d5b3" type="equalTo"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="b387-01f2-7549-cf9a" type="max"/>
+            <constraint field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="0584-d10b-f96c-6ad4" type="max"/>
+          </constraints>
+          <profiles>
+            <profile id="9593-23c3-3130-a529" name="Scalding Steam-breath" hidden="false" typeId="0144-faed-1cbe-bd82" typeName="Mount Trait">
+              <characteristics>
+                <characteristic name="Mount Trait" typeId="77e5-029b-d450-db5f">If the target is a MONSTER, the Damage characteristic of this unit’s Blazing Maw is 3 instead of D3.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <costs>
+            <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="8681-76c3-a79e-f842" name="2 ~ Red-hot Fury" hidden="false" collective="false" import="true" type="upgrade">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="5a48-8313-3170-d5b3" type="equalTo"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="ec8f-89a6-40f8-a26a" type="max"/>
+            <constraint field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="d1f5-d5eb-94e6-f042" type="max"/>
+          </constraints>
+          <profiles>
+            <profile id="e8bd-640a-c662-dbff" name="Red-hot Fury" hidden="false" typeId="0144-faed-1cbe-bd82" typeName="Mount Trait">
+              <characteristics>
+                <characteristic name="Mount Trait" typeId="77e5-029b-d450-db5f">At the end of the enemy charge phase, before carrying out monstrous rampages, if this unit is more than 3&quot; from all enemy units, it can attempt a charge. It must finish the charge move within 1/2&quot; of an enemy unit that is itself within 3&quot; of a friendly VULKYN FLAMESEEKERS Kyndledroth.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <costs>
+            <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="20ab-4f0d-7a1e-e54d" name="1 ~ Packdroth" hidden="false" collective="false" import="true" type="upgrade">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="5a48-8313-3170-d5b3" type="equalTo"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="c395-c65e-c84d-4af4" type="max"/>
+            <constraint field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="f336-4f95-9959-0766" type="max"/>
+          </constraints>
+          <profiles>
+            <profile id="e0bb-366d-9249-187e" name="Packdroth" hidden="false" typeId="0144-faed-1cbe-bd82" typeName="Mount Trait">
+              <characteristics>
+                <characteristic name="Mount Trait" typeId="77e5-029b-d450-db5f">In your movement phase, before this unit makes a move, you can pick 1 friendly VULKYN FLAMESEEKERS unit to hitch a lift on this MAGMADROTH (see the Skilled Drothwranglers battle trait) even if another unit has already hitched a lift on a MAGMADROTH in the same phase. The same unit cannot hitch a lift on a MAGMADROTH more than once per phase, and multiple units cannot hitch a lift on the same MAGMADROTH in the same phase.</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -950,6 +1300,27 @@ Blaze of Fury: Pick 1 friendly FYRESLAYERS HERO. Until the end of your turn, the
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="680c-f1fd-b72d-499e" type="max"/>
         <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="d217-419c-29ab-463a" type="max"/>
       </constraints>
+      <selectionEntries>
+        <selectionEntry id="1d19-ec15-3fe4-9177" name="0. Raised Around Beasts" hidden="false" collective="false" import="true" type="upgrade">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="5a48-8313-3170-d5b3" type="equalTo"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <profiles>
+            <profile id="d5c4-b515-8b37-8488" name="Raised Around Beasts" hidden="false" typeId="1504-23bf-8850-4f65" typeName="Command Traits">
+              <characteristics>
+                <characteristic name="Command Trait" typeId="0145-9acf-f5dc-d543">Improve the Rend characteristic of melee weapons used by friendly LOFNIR DROTHKEEPERS units that do not have the MAGMADROTH keyword and are wholly within 9&quot; of this general by 2 if the target is a MONSTER.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <costs>
+            <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
+          </costs>
+        </selectionEntry>
+      </selectionEntries>
       <selectionEntryGroups>
         <selectionEntryGroup id="9519-3599-3436-6ddb" name="Inheritance of Grimnir" hidden="false" collective="false" import="true">
           <modifiers>
@@ -962,6 +1333,11 @@ Blaze of Fury: Pick 1 friendly FYRESLAYERS HERO. Until the end of your turn, the
                   </conditions>
                 </conditionGroup>
               </conditionGroups>
+            </modifier>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="5a48-8313-3170-d5b3" type="greaterThan"/>
+              </conditions>
             </modifier>
           </modifiers>
           <constraints>
@@ -1030,6 +1406,11 @@ Blaze of Fury: Pick 1 friendly FYRESLAYERS HERO. Until the end of your turn, the
                 </conditionGroup>
               </conditionGroups>
             </modifier>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="5a48-8313-3170-d5b3" type="greaterThan"/>
+              </conditions>
+            </modifier>
           </modifiers>
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="35d0-debc-d12c-c0e7" type="max"/>
@@ -1080,7 +1461,7 @@ If this general is slain and there is a Molten Infernoth invocation under your c
         </selectionEntryGroup>
       </selectionEntryGroups>
       <entryLinks>
-        <entryLink id="e1b3-e3e3-7c77-bf47" name="Universal Command Traits" hidden="false" collective="false" import="true" targetId="20f0-6df9-b464-3789" type="selectionEntryGroup"/>
+        <entryLink id="e1b3-e3e3-7c77-bf47" name="Rulebook Command Traits" hidden="false" collective="false" import="true" targetId="6978-81a2-4c55-65f3" type="selectionEntryGroup"/>
       </entryLinks>
     </selectionEntryGroup>
     <selectionEntryGroup id="a1f0-850a-8b0c-e0f0" name="Artefacts of Power" hidden="false" collective="false" import="true">
@@ -1105,6 +1486,30 @@ If this general is slain and there is a Molten Infernoth invocation under your c
       <categoryLinks>
         <categoryLink id="f291-0636-d579-9dfa" name="Artefacts" hidden="false" targetId="ba14-5553-456e-33ad" primary="false"/>
       </categoryLinks>
+      <selectionEntries>
+        <selectionEntry id="3bea-b82f-1a94-6a2f" name="0 -- Mastery Over Monsters" hidden="false" collective="false" import="true" type="upgrade">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="5a48-8313-3170-d5b3" type="equalTo"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="3857-b49b-7c44-fb56" type="max"/>
+          </constraints>
+          <profiles>
+            <profile id="3e75-9dc9-9cec-f191" name="Mastery Over Monsters" hidden="false" typeId="0c9d-7abe-a53c-6a37" typeName="Artefacts">
+              <characteristics>
+                <characteristic name="Artefact" typeId="44b6-de26-0b54-1318">While the bearer is contesting an objective, each enemy MONSTER contesting that objective counts as 2 models regardless of any other abilities that would allow that enemy MONSTER to count as more models (such as Mightier Makes Rightier).</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <costs>
+            <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
+          </costs>
+        </selectionEntry>
+      </selectionEntries>
       <selectionEntryGroups>
         <selectionEntryGroup id="cca1-35e4-c028-1780" name="Heirlooms of the Lodge" hidden="false" collective="false" import="true">
           <modifiers>
@@ -1117,6 +1522,11 @@ If this general is slain and there is a Molten Infernoth invocation under your c
                   </conditions>
                 </conditionGroup>
               </conditionGroups>
+            </modifier>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="5a48-8313-3170-d5b3" type="greaterThan"/>
+              </conditions>
             </modifier>
           </modifiers>
           <constraints>
@@ -1192,6 +1602,11 @@ If this general is slain and there is a Molten Infernoth invocation under your c
                 <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="804e-5726-7202-6944" type="notInstanceOf"/>
               </conditions>
             </modifier>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="5a48-8313-3170-d5b3" type="greaterThan"/>
+              </conditions>
+            </modifier>
           </modifiers>
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="4490-aad3-db1e-bc69" type="max"/>
@@ -1263,6 +1678,11 @@ If this general is slain and there is a Molten Infernoth invocation under your c
                 </conditionGroup>
               </conditionGroups>
             </modifier>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="5a48-8313-3170-d5b3" type="greaterThan"/>
+              </conditions>
+            </modifier>
           </modifiers>
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="c248-0d8f-e1e3-ad09" type="max"/>
@@ -1317,7 +1737,7 @@ If this general is slain and there is a Molten Infernoth invocation under your c
         </selectionEntryGroup>
       </selectionEntryGroups>
       <entryLinks>
-        <entryLink id="c265-f5ec-759b-fa93" name="Universal Artefacts of Power" hidden="false" collective="false" import="true" targetId="dbd8-8f6f-f44a-884a" type="selectionEntryGroup"/>
+        <entryLink id="c265-f5ec-759b-fa93" name="Rulebook Artefacts of Power" hidden="false" collective="false" import="true" targetId="836b-19a4-b5b4-570d" type="selectionEntryGroup"/>
       </entryLinks>
     </selectionEntryGroup>
     <selectionEntryGroup id="ed70-2b17-7173-22bf" name="Prayer Scriptures" hidden="false" collective="false" import="true">
@@ -1368,6 +1788,11 @@ If this general is slain and there is a Molten Infernoth invocation under your c
                 </conditionGroup>
               </conditionGroups>
             </modifier>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="5a48-8313-3170-d5b3" type="greaterThan"/>
+              </conditions>
+            </modifier>
           </modifiers>
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="c46f-c55a-cc0c-e68f" type="max"/>
@@ -1410,7 +1835,7 @@ If this general is slain and there is a Molten Infernoth invocation under your c
               <profiles>
                 <profile id="5569-c5fe-e75a-7c2d" name="Ember Storm" hidden="false" typeId="161a-85bd-f19e-a5a7" typeName="Prayer">
                   <characteristics>
-                    <characteristic name="Prayer" typeId="19bc-965a-768d-defa">Ember Storm is a prayer that has an answer value of 3 and a range of 18&quot;. If answered, pick 1 friendly HEARTHGUARD BERZERKERS or VULKITE BERZERKERS unit wholly within range and visible to the chanter. That unit can run and still charge later in this turn.</characteristic>
+                    <characteristic name="Prayer" typeId="19bc-965a-768d-defa">Ember Storm is a prayer that has an answer value of 3 and a range of 18&quot;. If answered, pick 1 friendly HEARTHGUARD BERZERKERS, VULKITE BERZERKERS or VULKYN FLAMESEEKERS unit wholly within range and visible to the chanter. That unit can run and still charge later in this turn</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
@@ -1437,7 +1862,7 @@ If this general is slain and there is a Molten Infernoth invocation under your c
         </selectionEntryGroup>
       </selectionEntryGroups>
       <entryLinks>
-        <entryLink id="a6ea-958e-d7ed-fade" name="Universal Prayer Scripture" hidden="false" collective="false" import="true" targetId="7104-ab27-d136-1df0" type="selectionEntryGroup"/>
+        <entryLink id="a6ea-958e-d7ed-fade" name="Rulebook Prayer Scriptures" hidden="false" collective="false" import="true" targetId="42b2-cfa5-744f-8062" type="selectionEntryGroup"/>
       </entryLinks>
     </selectionEntryGroup>
   </sharedSelectionEntryGroups>

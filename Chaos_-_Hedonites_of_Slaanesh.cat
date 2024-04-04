@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="97f7-d3e9-f2f4-f0c6" name="Chaos - Hedonites of Slaanesh" revision="20" battleScribeVersion="2.03" authorName="Thulram" library="false" gameSystemId="e832-3291-06be-cab1" gameSystemRevision="19" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="97f7-d3e9-f2f4-f0c6" name="Chaos - Hedonites of Slaanesh" revision="21" battleScribeVersion="2.03" authorName="Thulram" library="false" gameSystemId="e832-3291-06be-cab1" gameSystemRevision="21" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <profileTypes>
     <profileType id="3f2f-edd9-f66c-bb96" name="Keeper of Secrets Wounds">
       <characteristicTypes>
@@ -36,7 +36,7 @@
     <categoryEntry id="fb28-8ee4-6d49-de9d" name="Seekers" hidden="false"/>
     <categoryEntry id="1b96-daff-d5f8-97fb" name="Hellstriders" hidden="false"/>
     <categoryEntry id="def7-e9f9-0ebb-61ef" name="Soulfeaster" hidden="false"/>
-    <categoryEntry id="0088-a682-195b-9c0d" name="General - Lord of Pain" hidden="false"/>
+    <categoryEntry id="0088-a682-195b-9c0d" name="General - Lord of Hubris/Pain" hidden="false"/>
     <categoryEntry id="d121-941f-b5b7-ed73" name="Allegiant - Beasts of Chaos" hidden="false">
       <modifiers>
         <modifier type="increment" field="8cc3-5020-38b9-717f" value="1.0">
@@ -67,6 +67,10 @@
         <constraint field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="533e-f5a9-6570-7bd6" type="max"/>
       </constraints>
     </categoryEntry>
+    <categoryEntry id="b825-0764-b0b6-4023" name="General - Bladebringer, Exalted" hidden="false"/>
+    <categoryEntry id="86cb-46cc-32f5-bd93" name="General - Bladebringer, Seeker" hidden="false"/>
+    <categoryEntry id="f500-a3e4-0f1f-e6db" name="General - Bladebringer, Hellflayer" hidden="false"/>
+    <categoryEntry id="711b-99d3-361f-4804" name="General - HoS MORTAL" hidden="false"/>
   </categoryEntries>
   <selectionEntries>
     <selectionEntry id="63cc-744c-dfb1-3f33" name="Grand Strategy" hidden="false" collective="false" import="true" type="upgrade">
@@ -113,23 +117,63 @@
           <categoryLinks>
             <categoryLink id="01b1-430a-89c6-a83f" name="Grand Strategy" hidden="false" targetId="318c-fa55-0855-47ef" primary="false"/>
           </categoryLinks>
-          <selectionEntries>
-            <selectionEntry id="479c-55c7-ad65-9caa" name="Coveted Riches" hidden="false" collective="false" import="true" type="upgrade">
+          <selectionEntryGroups>
+            <selectionEntryGroup id="46f8-10e7-a42b-bcc9" name="Grand Vanities" hidden="false" collective="false" import="true">
               <constraints>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="1dbb-59cf-88c2-f1e9" type="max"/>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="a03d-6a57-4916-f8bc" type="max"/>
               </constraints>
-              <profiles>
-                <profile id="fc22-101e-0875-4275" name="Coveted Riches" hidden="false" typeId="7dc6-98f0-f5ba-fc16" typeName="Grand Strategy">
-                  <characteristics>
-                    <characteristic name="Grand Strategy" typeId="22d6-b382-f824-6381">When the battle ends, you complete this grand strategy if there are no enemy units with artefacts of power on the battlefield and there are 1 or more friendly units with artefacts of power on the battlefield.</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-              <costs>
-                <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
-              </costs>
-            </selectionEntry>
-          </selectionEntries>
+              <selectionEntries>
+                <selectionEntry id="0f50-a151-1e7e-6476" name="Coveted Riches" hidden="false" collective="false" import="true" type="upgrade">
+                  <profiles>
+                    <profile id="5c78-29c5-3a43-224a" name="Coveted Riches" hidden="false" typeId="7dc6-98f0-f5ba-fc16" typeName="Grand Strategy">
+                      <characteristics>
+                        <characteristic name="Grand Strategy" typeId="22d6-b382-f824-6381">When the battle ends, you complete this grand strategy if there are no enemy units with artefacts of power on the battlefield and there are 1 or more friendly units with artefacts of power on the battlefield.</characteristic>
+                      </characteristics>
+                    </profile>
+                  </profiles>
+                  <costs>
+                    <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
+                  </costs>
+                </selectionEntry>
+                <selectionEntry id="1246-b93c-fa8c-20fb" name="Arch-tempter" hidden="false" collective="false" import="true" type="upgrade">
+                  <profiles>
+                    <profile id="a582-40b6-e3de-4a8c" name="Arch-tempter" hidden="false" typeId="7dc6-98f0-f5ba-fc16" typeName="Grand Strategy">
+                      <characteristics>
+                        <characteristic name="Grand Strategy" typeId="22d6-b382-f824-6381">When the battle ends, you complete this grand strategy if you offered a Temptation Dice to your opponent for the same enemy unit 6 or more times during the battle.</characteristic>
+                      </characteristics>
+                    </profile>
+                  </profiles>
+                  <costs>
+                    <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
+                  </costs>
+                </selectionEntry>
+                <selectionEntry id="0800-8356-5ece-cb93" name="Selfish Desire" hidden="false" collective="false" import="true" type="upgrade">
+                  <profiles>
+                    <profile id="2266-6c9e-1a3d-6e11" name="Selfish Desire" hidden="false" typeId="7dc6-98f0-f5ba-fc16" typeName="Grand Strategy">
+                      <characteristics>
+                        <characteristic name="Grand Strategy" typeId="22d6-b382-f824-6381">When the battle ends, you complete this grand strategy if you did not summon any units using the Summon Slaaneshi Daemons battle trait during the battle.</characteristic>
+                      </characteristics>
+                    </profile>
+                  </profiles>
+                  <costs>
+                    <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
+                  </costs>
+                </selectionEntry>
+                <selectionEntry id="dfcf-9bab-ce9a-0f8d" name="Glutton for Depravity" hidden="false" collective="false" import="true" type="upgrade">
+                  <profiles>
+                    <profile id="8fb4-3955-fa55-fd0c" name="Glutton for Depravity" hidden="false" typeId="7dc6-98f0-f5ba-fc16" typeName="Grand Strategy">
+                      <characteristics>
+                        <characteristic name="Grand Strategy" typeId="22d6-b382-f824-6381">When the battle ends, you complete this grand strategy if you have 36 or more unspent depravity points.</characteristic>
+                      </characteristics>
+                    </profile>
+                  </profiles>
+                  <costs>
+                    <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
+                  </costs>
+                </selectionEntry>
+              </selectionEntries>
+            </selectionEntryGroup>
+          </selectionEntryGroups>
           <entryLinks>
             <entryLink id="70d9-ea70-5459-ef08" name="Rulebook Grand Strategies" hidden="false" collective="false" import="true" targetId="daaa-4fe4-c2fa-6a7f" type="selectionEntryGroup"/>
           </entryLinks>
@@ -161,17 +205,32 @@
       <profiles>
         <profile id="3fbe-b0d9-83ec-3eb2" name="Death by a Thousand Cuts" hidden="false" typeId="4bb2-448c-446c-f522" typeName="Battle Tactic">
           <characteristics>
-            <characteristic name="Battle Tactic" typeId="8c0f-be41-a70e-c699">Pick 1 enemy unit. You complete this tactic if wounds caused by attacks made by 3 or more different friendly units are allocated to that unit in this turn.</characteristic>
+            <characteristic name="Battle Tactic" typeId="8c0f-be41-a70e-c699">Pick 1 enemy unit. You complete this tactic if wounds caused by attacks made by 3 or more different friendly units were allocated to that unit during this turn.</characteristic>
           </characteristics>
         </profile>
         <profile id="4191-97de-6a12-cda1" name="An Enrapturing Blur" hidden="false" typeId="4bb2-448c-446c-f522" typeName="Battle Tactic">
           <characteristics>
-            <characteristic name="Battle Tactic" typeId="8c0f-be41-a70e-c699">Pick 1 enemy HERO that has no wounds allocated to them. You complete this tactic if that unit is destroyed in the combat phase of this turn before it is picked to fight.</characteristic>
+            <characteristic name="Battle Tactic" typeId="8c0f-be41-a70e-c699">Pick 1 enemy HERO that has 0 wounds allocated to it. You complete this tactic if that unit is destroyed in the combat phase of this turn before it is picked to fight.</characteristic>
           </characteristics>
         </profile>
         <profile id="9e32-5bed-c4cc-a15a" name="The Grand Feast" hidden="false" typeId="4bb2-448c-446c-f522" typeName="Battle Tactic">
           <characteristics>
-            <characteristic name="Battle Tactic" typeId="8c0f-be41-a70e-c699">You complete this tactic if you receive 12 or more depravity points this turn.</characteristic>
+            <characteristic name="Battle Tactic" typeId="8c0f-be41-a70e-c699">You complete this tactic if you gain 12 or more depravity points from the Euphoric Killers battle trait during this turn.</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="f0b4-3c8e-2bb6-3930" name="Excessive Carnage" hidden="false" typeId="4bb2-448c-446c-f522" typeName="Battle Tactic">
+          <characteristics>
+            <characteristic name="Battle Tactic" typeId="8c0f-be41-a70e-c699">Pick 1 enemy unit that is contesting an objective. You complete this tactic if you pick that unit using the Euphoric Killers battle trait and that unit is destroyed during this turn.</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="eea1-1f9e-cded-0d50" name="Realm-racers" hidden="false" typeId="4bb2-448c-446c-f522" typeName="Battle Tactic">
+          <characteristics>
+            <characteristic name="Battle Tactic" typeId="8c0f-be41-a70e-c699">You complete this tactic if 3 or more different friendly HEDONITES OF SLAANESH units make a charge move of 7&quot; or more during this turn.</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="271f-64f7-32d2-30f0" name="Depraved Unity" hidden="false" typeId="4bb2-448c-446c-f522" typeName="Battle Tactic">
+          <characteristics>
+            <characteristic name="Battle Tactic" typeId="8c0f-be41-a70e-c699">Pick 1 objective that you do not control. You complete this tactic if you control that objective at the end of this turn and at least 1 friendly HEDONITES OF SLAANESH MORTAL unit and 1 friendly HEDONITES OF SLAANESH DAEMON unit are contesting that objective.</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -181,140 +240,6 @@
       <entryLinks>
         <entryLink id="db3c-edce-c99e-f5df" name="Rulebook Battle Tactics" hidden="false" collective="false" import="true" targetId="e22d-0e63-82f1-7001" type="selectionEntry"/>
       </entryLinks>
-      <costs>
-        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
-      </costs>
-    </selectionEntry>
-    <selectionEntry id="3b2a-7a13-d929-283f" name="Epicurean Revellers" hidden="false" collective="false" import="true" type="upgrade">
-      <modifiers>
-        <modifier type="set" field="hidden" value="true">
-          <conditionGroups>
-            <conditionGroup type="or">
-              <conditions>
-                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4373-740f-1bf3-b0aa" type="instanceOf"/>
-                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="e3a6-45ca-4974-b489" type="instanceOf"/>
-                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="996a-613c-4006-25e3" type="instanceOf"/>
-                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="6cd6-b22e-bfcb-9589" type="instanceOf"/>
-                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="b543-cb16-0c79-fbc6" type="instanceOf"/>
-              </conditions>
-            </conditionGroup>
-          </conditionGroups>
-        </modifier>
-      </modifiers>
-      <profiles>
-        <profile id="5cbb-abbc-3888-65a4" name="Unified" hidden="false" typeId="66c5-932e-004a-574c" typeName="Battalion Abilities">
-          <characteristics>
-            <characteristic name="Battalion Ability" typeId="23f7-32c0-e059-29b2">One-drop Deployment.</characteristic>
-          </characteristics>
-        </profile>
-        <profile id="0180-421c-f1fb-9135" name="Slayers" hidden="false" typeId="66c5-932e-004a-574c" typeName="Battalion Abilities">
-          <characteristics>
-            <characteristic name="Battalion Ability" typeId="23f7-32c0-e059-29b2">Once per battle, 1 unit from this battalion can receive the All-out Attack or Unleash Hell command without the command being issued and without a command point being spent.</characteristic>
-          </characteristics>
-        </profile>
-      </profiles>
-      <categoryLinks>
-        <categoryLink id="fd9f-793e-2b98-f8f0" name="New CategoryLink" hidden="false" targetId="c03a-b1a8-66c6-3637" primary="true"/>
-      </categoryLinks>
-      <selectionEntries>
-        <selectionEntry id="3d53-b895-faee-a3d6" name="Fiends unit" hidden="false" collective="false" import="true" type="upgrade">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="b4ed-79f3-ccf5-2d17" type="max"/>
-          </constraints>
-          <costs>
-            <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="e74a-6e25-e0a6-c4b6" name="Exalted Chariot unit" hidden="false" collective="false" import="true" type="upgrade">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="6fd6-2f15-ea64-7ce6" type="max"/>
-          </constraints>
-          <costs>
-            <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="dc31-848a-0924-5418" name="Hellflyaer unit" hidden="false" collective="false" import="true" type="upgrade">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="eaae-5182-0166-907c" type="max"/>
-          </constraints>
-          <costs>
-            <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
-          </costs>
-        </selectionEntry>
-      </selectionEntries>
-      <selectionEntryGroups>
-        <selectionEntryGroup id="cfc5-ce7d-f405-1edc" name="Daemonettes" hidden="false" collective="false" import="true">
-          <constraints>
-            <constraint field="selections" scope="parent" value="6.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="5318-dfd7-7b44-9e6d" type="max"/>
-            <constraint field="selections" scope="parent" value="2.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="66d2-665a-a030-4bcc" type="min"/>
-          </constraints>
-          <selectionEntries>
-            <selectionEntry id="80be-5f9a-ea42-9140" name="Daemonettes unit" hidden="false" collective="false" import="true" type="upgrade">
-              <costs>
-                <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
-              </costs>
-            </selectionEntry>
-          </selectionEntries>
-        </selectionEntryGroup>
-      </selectionEntryGroups>
-      <costs>
-        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
-      </costs>
-    </selectionEntry>
-    <selectionEntry id="df48-9f95-bf56-4b8d" name="Nobles of Excess" hidden="false" collective="false" import="true" type="upgrade">
-      <modifiers>
-        <modifier type="set" field="hidden" value="true">
-          <conditionGroups>
-            <conditionGroup type="or">
-              <conditions>
-                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4373-740f-1bf3-b0aa" type="instanceOf"/>
-                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="e3a6-45ca-4974-b489" type="instanceOf"/>
-                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="996a-613c-4006-25e3" type="instanceOf"/>
-                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="6cd6-b22e-bfcb-9589" type="instanceOf"/>
-                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="b543-cb16-0c79-fbc6" type="instanceOf"/>
-              </conditions>
-            </conditionGroup>
-          </conditionGroups>
-        </modifier>
-      </modifiers>
-      <profiles>
-        <profile id="7cd4-ef33-37a2-0bdc" name="Expert" hidden="false" typeId="66c5-932e-004a-574c" typeName="Battalion Abilities">
-          <characteristics>
-            <characteristic name="Battalion Ability" typeId="23f7-32c0-e059-29b2">Once per battle, 1 unit from this battalion can receive the All-out Attack or All-out Defence command without the command being issued and without a command point being spent.</characteristic>
-          </characteristics>
-        </profile>
-      </profiles>
-      <categoryLinks>
-        <categoryLink id="e93f-adfc-65ab-1199" name="New CategoryLink" hidden="false" targetId="c03a-b1a8-66c6-3637" primary="true"/>
-      </categoryLinks>
-      <selectionEntryGroups>
-        <selectionEntryGroup id="5173-10ee-be1d-ee1a" name="Myrmidesh Painbringers" hidden="false" collective="false" import="true">
-          <constraints>
-            <constraint field="selections" scope="parent" value="3.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="9868-c823-795e-f156" type="max"/>
-            <constraint field="selections" scope="parent" value="2.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="51d9-f313-0553-c21f" type="min"/>
-          </constraints>
-          <selectionEntries>
-            <selectionEntry id="99e7-6637-bb66-7bb9" name="Myrmidesh Painbringers unit" hidden="false" collective="false" import="true" type="upgrade">
-              <costs>
-                <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
-              </costs>
-            </selectionEntry>
-          </selectionEntries>
-        </selectionEntryGroup>
-        <selectionEntryGroup id="52d2-bb6f-602d-d289" name="Symbaresh Twinsouls" hidden="false" collective="false" import="true">
-          <constraints>
-            <constraint field="selections" scope="parent" value="3.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="14a5-ded6-a8b8-26c1" type="max"/>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="919b-2272-b71c-d673" type="min"/>
-          </constraints>
-          <selectionEntries>
-            <selectionEntry id="8a1c-7802-1718-6a8a" name="Symbaresh Twinsouls unit" hidden="false" collective="false" import="true" type="upgrade">
-              <costs>
-                <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
-              </costs>
-            </selectionEntry>
-          </selectionEntries>
-        </selectionEntryGroup>
-      </selectionEntryGroups>
       <costs>
         <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
       </costs>
@@ -343,7 +268,6 @@
         <entryLink id="b367-31c7-9e61-1e64" name="Artefacts of Power" hidden="false" collective="false" import="true" targetId="a520-01ab-3cef-a486" type="selectionEntryGroup"/>
         <entryLink id="e4f8-b771-872f-642c" name="Command Traits" hidden="false" collective="false" import="true" targetId="548e-e11c-aeda-8d1b" type="selectionEntryGroup"/>
         <entryLink id="667d-9368-d1ed-d8bf" name="Hedonites Spell Lores" hidden="false" collective="false" import="true" targetId="87c2-3bb8-b59b-6d11" type="selectionEntryGroup"/>
-        <entryLink id="f91a-6560-7372-2f6d" name="Invaders Host Extra General" hidden="false" collective="false" import="true" targetId="511a-c718-0d06-1bc5" type="selectionEntry"/>
         <entryLink id="88f2-e6ec-a355-d30d" name="Battalion Formation" hidden="false" collective="false" import="true" targetId="d07d-93de-3bf7-d401" type="selectionEntryGroup"/>
       </entryLinks>
     </entryLink>
@@ -355,20 +279,14 @@
           </categoryLinks>
         </entryLink>
         <entryLink id="90b7-ebe2-e78e-4104" name="Hedonites Spell Lores" hidden="false" collective="false" import="true" targetId="87c2-3bb8-b59b-6d11" type="selectionEntryGroup"/>
-        <entryLink id="fd0d-21f7-3330-86bc" name="Invaders Host Extra General" hidden="false" collective="false" import="true" targetId="511a-c718-0d06-1bc5" type="selectionEntry"/>
         <entryLink id="ba33-dafe-0487-f11f" name="Battalion Formation" hidden="false" collective="false" import="true" targetId="d07d-93de-3bf7-d401" type="selectionEntryGroup"/>
       </entryLinks>
     </entryLink>
     <entryLink id="596f-af1d-86cb-878e" name="Syll&apos;esske, The Vengeful Allegiance" hidden="false" collective="false" import="true" targetId="2c44-67c6-cb68-5df8" type="selectionEntry">
       <entryLinks>
-        <entryLink id="6c85-09ea-b93f-979c" name="General" hidden="false" collective="false" import="true" targetId="98a4-3d6d-a7b9-399f" type="selectionEntry">
-          <categoryLinks>
-            <categoryLink id="1a9a-ce20-a67d-f560" name="Named General" hidden="false" targetId="8b3d-7f03-e1f9-eaf5" primary="false"/>
-          </categoryLinks>
-        </entryLink>
         <entryLink id="5860-2556-15e8-dcdb" name="Hedonites Spell Lores" hidden="false" collective="false" import="true" targetId="87c2-3bb8-b59b-6d11" type="selectionEntryGroup"/>
-        <entryLink id="8517-7cc4-0043-8ab3" name="Invaders Host Extra General" hidden="false" collective="false" import="true" targetId="511a-c718-0d06-1bc5" type="selectionEntry"/>
         <entryLink id="f131-69f0-74bd-ba2f" name="Battalion Formation" hidden="false" collective="false" import="true" targetId="d07d-93de-3bf7-d401" type="selectionEntryGroup"/>
+        <entryLink id="4b6d-781d-5c44-e632" name="Bonus General" hidden="false" collective="false" import="true" targetId="c608-7a89-b2b4-124d" type="selectionEntry"/>
       </entryLinks>
     </entryLink>
     <entryLink id="b136-5587-eac2-24ce" name="The Contorted Epitome" hidden="false" collective="false" import="true" targetId="98d7-c82a-5c0a-0d98" type="selectionEntry">
@@ -377,7 +295,6 @@
         <entryLink id="6de9-c36c-867a-152e" name="Artefacts of Power" hidden="false" collective="false" import="true" targetId="a520-01ab-3cef-a486" type="selectionEntryGroup"/>
         <entryLink id="156f-370a-cbdb-85af" name="Command Traits" hidden="false" collective="false" import="true" targetId="548e-e11c-aeda-8d1b" type="selectionEntryGroup"/>
         <entryLink id="2e4d-419c-272d-59c6" name="Hedonites Spell Lores" hidden="false" collective="false" import="true" targetId="87c2-3bb8-b59b-6d11" type="selectionEntryGroup"/>
-        <entryLink id="3021-9b90-345c-dfcf" name="Invaders Host Extra General" hidden="false" collective="false" import="true" targetId="511a-c718-0d06-1bc5" type="selectionEntry"/>
         <entryLink id="77f4-0b6f-a46c-1121" name="Battalion Formation" hidden="false" collective="false" import="true" targetId="d07d-93de-3bf7-d401" type="selectionEntryGroup"/>
       </entryLinks>
     </entryLink>
@@ -388,7 +305,6 @@
             <categoryLink id="c9e9-caaf-fd4b-3947" name="Named General" hidden="false" targetId="8b3d-7f03-e1f9-eaf5" primary="false"/>
           </categoryLinks>
         </entryLink>
-        <entryLink id="7a96-49c5-e9f0-883c" name="Invaders Host Extra General" hidden="false" collective="false" import="true" targetId="511a-c718-0d06-1bc5" type="selectionEntry"/>
         <entryLink id="efdf-58c4-f07e-72ad" name="Battalion Formation" hidden="false" collective="false" import="true" targetId="d07d-93de-3bf7-d401" type="selectionEntryGroup"/>
       </entryLinks>
     </entryLink>
@@ -397,7 +313,6 @@
         <entryLink id="4991-632d-e1d8-8c83" name="General" hidden="false" collective="false" import="true" targetId="98a4-3d6d-a7b9-399f" type="selectionEntry"/>
         <entryLink id="0b67-0c4b-9f07-76ca" name="Artefacts of Power" hidden="false" collective="false" import="true" targetId="a520-01ab-3cef-a486" type="selectionEntryGroup"/>
         <entryLink id="19a3-7f2f-0343-1ad5" name="Command Traits" hidden="false" collective="false" import="true" targetId="548e-e11c-aeda-8d1b" type="selectionEntryGroup"/>
-        <entryLink id="9ca4-fcc7-1d2f-7b66" name="Invaders Host Extra General" hidden="false" collective="false" import="true" targetId="511a-c718-0d06-1bc5" type="selectionEntry"/>
         <entryLink id="ea8e-642b-b79b-b088" name="Hedonites Spell Lores" hidden="false" collective="false" import="true" targetId="87c2-3bb8-b59b-6d11" type="selectionEntryGroup"/>
         <entryLink id="3762-3b07-602d-abec" name="Battalion Formation" hidden="false" collective="false" import="true" targetId="d07d-93de-3bf7-d401" type="selectionEntryGroup"/>
       </entryLinks>
@@ -408,32 +323,56 @@
         <entryLink id="8080-1b8f-cfe5-a834" name="Artefacts of Power" hidden="false" collective="false" import="true" targetId="a520-01ab-3cef-a486" type="selectionEntryGroup"/>
         <entryLink id="8b61-1f20-997c-f44b" name="Command Traits" hidden="false" collective="false" import="true" targetId="548e-e11c-aeda-8d1b" type="selectionEntryGroup"/>
         <entryLink id="706a-3d19-1639-8819" name="Hedonites Spell Lores" hidden="false" collective="false" import="true" targetId="87c2-3bb8-b59b-6d11" type="selectionEntryGroup"/>
-        <entryLink id="c872-7676-1417-50db" name="Invaders Host Extra General" hidden="false" collective="false" import="true" targetId="511a-c718-0d06-1bc5" type="selectionEntry"/>
         <entryLink id="562d-c7b4-6523-4dc1" name="Battalion Formation" hidden="false" collective="false" import="true" targetId="d07d-93de-3bf7-d401" type="selectionEntryGroup"/>
       </entryLinks>
     </entryLink>
     <entryLink id="7585-c0f5-9f77-ad33" name="Bladebringer, Herald on Hellflayer" hidden="false" collective="false" import="true" targetId="63f9-8750-1d37-c96e" type="selectionEntry">
       <entryLinks>
-        <entryLink id="5196-f725-446b-4d92" name="General" hidden="false" collective="false" import="true" targetId="98a4-3d6d-a7b9-399f" type="selectionEntry"/>
+        <entryLink id="5196-f725-446b-4d92" name="General" hidden="false" collective="false" import="true" targetId="98a4-3d6d-a7b9-399f" type="selectionEntry">
+          <categoryLinks>
+            <categoryLink id="d4d7-93ca-7c48-a86d" name="General - Bladebringer, Hellflayer" hidden="false" targetId="f500-a3e4-0f1f-e6db" primary="false"/>
+          </categoryLinks>
+        </entryLink>
         <entryLink id="1a0b-30fd-fa04-7c1b" name="Artefacts of Power" hidden="false" collective="false" import="true" targetId="a520-01ab-3cef-a486" type="selectionEntryGroup"/>
         <entryLink id="548b-6118-afd7-520b" name="Command Traits" hidden="false" collective="false" import="true" targetId="548e-e11c-aeda-8d1b" type="selectionEntryGroup"/>
         <entryLink id="5938-cba1-56b2-0f7f" name="Hedonites Spell Lores" hidden="false" collective="false" import="true" targetId="87c2-3bb8-b59b-6d11" type="selectionEntryGroup"/>
-        <entryLink id="c302-d69c-629b-e4f7" name="Invaders Host Extra General" hidden="false" collective="false" import="true" targetId="511a-c718-0d06-1bc5" type="selectionEntry"/>
         <entryLink id="d19a-2c39-a105-baa0" name="Battalion Formation" hidden="false" collective="false" import="true" targetId="d07d-93de-3bf7-d401" type="selectionEntryGroup"/>
       </entryLinks>
     </entryLink>
     <entryLink id="d088-46fb-3c14-3933" name="Hellflayer" hidden="false" collective="false" import="true" targetId="4e37-e703-ab95-0533" type="selectionEntry">
+      <modifiers>
+        <modifier type="remove" field="category" value="a42d-220e-6a88-7bf6">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4373-740f-1bf3-b0aa" type="instanceOf"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="e3a6-45ca-4974-b489" type="instanceOf"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="6cd6-b22e-bfcb-9589" type="instanceOf"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="996a-613c-4006-25e3" type="instanceOf"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="b543-cb16-0c79-fbc6" type="instanceOf"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="f500-a3e4-0f1f-e6db" type="equalTo"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+      <categoryLinks>
+        <categoryLink id="d43a-f6da-b7bf-5146" name="Battleline" hidden="false" targetId="a42d-220e-6a88-7bf6" primary="false"/>
+      </categoryLinks>
       <entryLinks>
         <entryLink id="25be-b8b1-036f-1d2a" name="Battalion Formation" hidden="false" collective="false" import="true" targetId="d07d-93de-3bf7-d401" type="selectionEntryGroup"/>
       </entryLinks>
     </entryLink>
     <entryLink id="398e-4c14-6c95-40bf" name="Bladebringer, Herald on Seeker Chariot" hidden="false" collective="false" import="true" targetId="4f96-1e8c-44dc-cc9b" type="selectionEntry">
       <entryLinks>
-        <entryLink id="fc7b-8d59-8468-4f45" name="General" hidden="false" collective="false" import="true" targetId="98a4-3d6d-a7b9-399f" type="selectionEntry"/>
+        <entryLink id="fc7b-8d59-8468-4f45" name="General" hidden="false" collective="false" import="true" targetId="98a4-3d6d-a7b9-399f" type="selectionEntry">
+          <categoryLinks>
+            <categoryLink id="7d0e-3e9d-4c6c-fe4e" name="General - Bladebringer, Seeker" hidden="false" targetId="86cb-46cc-32f5-bd93" primary="false"/>
+          </categoryLinks>
+        </entryLink>
         <entryLink id="b60e-5a5a-a58a-0db7" name="Artefacts of Power" hidden="false" collective="false" import="true" targetId="a520-01ab-3cef-a486" type="selectionEntryGroup"/>
         <entryLink id="3e71-8f29-acfd-770e" name="Command Traits" hidden="false" collective="false" import="true" targetId="548e-e11c-aeda-8d1b" type="selectionEntryGroup"/>
         <entryLink id="3ce7-46ad-9188-7bc9" name="Hedonites Spell Lores" hidden="false" collective="false" import="true" targetId="87c2-3bb8-b59b-6d11" type="selectionEntryGroup"/>
-        <entryLink id="1a94-8fb8-4ad5-f55d" name="Invaders Host Extra General" hidden="false" collective="false" import="true" targetId="511a-c718-0d06-1bc5" type="selectionEntry"/>
         <entryLink id="cf25-0000-3230-db6f" name="Battalion Formation" hidden="false" collective="false" import="true" targetId="d07d-93de-3bf7-d401" type="selectionEntryGroup"/>
       </entryLinks>
     </entryLink>
@@ -446,27 +385,54 @@
                 <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4373-740f-1bf3-b0aa" type="instanceOf"/>
                 <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="e3a6-45ca-4974-b489" type="instanceOf"/>
                 <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="6cd6-b22e-bfcb-9589" type="instanceOf"/>
-                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="a15a-dd81-d8ca-0db2" type="equalTo"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="996a-613c-4006-25e3" type="instanceOf"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="b543-cb16-0c79-fbc6" type="instanceOf"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="86cb-46cc-32f5-bd93" type="equalTo"/>
               </conditions>
             </conditionGroup>
           </conditionGroups>
         </modifier>
       </modifiers>
+      <categoryLinks>
+        <categoryLink id="d2ab-4ac5-999d-5285" name="Battleline" hidden="false" targetId="a42d-220e-6a88-7bf6" primary="false"/>
+      </categoryLinks>
       <entryLinks>
         <entryLink id="a521-b134-ca4e-b87a" name="Battalion Formation" hidden="false" collective="false" import="true" targetId="d07d-93de-3bf7-d401" type="selectionEntryGroup"/>
       </entryLinks>
     </entryLink>
     <entryLink id="3f26-c330-b97e-7255" name="Bladebringer, Herald on Exalted Chariot" hidden="false" collective="false" import="true" targetId="8471-c5e8-69d9-a046" type="selectionEntry">
       <entryLinks>
-        <entryLink id="10e1-aef1-7b2b-28e3" name="General" hidden="false" collective="false" import="true" targetId="98a4-3d6d-a7b9-399f" type="selectionEntry"/>
+        <entryLink id="10e1-aef1-7b2b-28e3" name="General" hidden="false" collective="false" import="true" targetId="98a4-3d6d-a7b9-399f" type="selectionEntry">
+          <categoryLinks>
+            <categoryLink id="ab80-039b-a10c-96b9" name="General - Bladebringer" hidden="false" targetId="b825-0764-b0b6-4023" primary="false"/>
+          </categoryLinks>
+        </entryLink>
         <entryLink id="4096-d01c-7a58-a974" name="Artefacts of Power" hidden="false" collective="false" import="true" targetId="a520-01ab-3cef-a486" type="selectionEntryGroup"/>
         <entryLink id="d053-73c7-94da-00fd" name="Command Traits" hidden="false" collective="false" import="true" targetId="548e-e11c-aeda-8d1b" type="selectionEntryGroup"/>
         <entryLink id="ebae-71f1-f91b-acd5" name="Hedonites Spell Lores" hidden="false" collective="false" import="true" targetId="87c2-3bb8-b59b-6d11" type="selectionEntryGroup"/>
-        <entryLink id="5278-bbc5-6019-4d71" name="Invaders Host Extra General" hidden="false" collective="false" import="true" targetId="511a-c718-0d06-1bc5" type="selectionEntry"/>
         <entryLink id="057c-f23c-3bd8-f9bf" name="Battalion Formation" hidden="false" collective="false" import="true" targetId="d07d-93de-3bf7-d401" type="selectionEntryGroup"/>
       </entryLinks>
     </entryLink>
     <entryLink id="0fb9-409f-8aa1-9619" name="Exalted Chariot" hidden="false" collective="false" import="true" targetId="b424-d9c3-3fe2-9257" type="selectionEntry">
+      <modifiers>
+        <modifier type="remove" field="category" value="a42d-220e-6a88-7bf6">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4373-740f-1bf3-b0aa" type="instanceOf"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="e3a6-45ca-4974-b489" type="instanceOf"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="6cd6-b22e-bfcb-9589" type="instanceOf"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="996a-613c-4006-25e3" type="instanceOf"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="b543-cb16-0c79-fbc6" type="instanceOf"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="b825-0764-b0b6-4023" type="equalTo"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+      <categoryLinks>
+        <categoryLink id="931a-2010-ad6e-b49d" name="Battleline" hidden="false" targetId="a42d-220e-6a88-7bf6" primary="false"/>
+      </categoryLinks>
       <entryLinks>
         <entryLink id="aafc-c711-b24d-4942" name="Battalion Formation" hidden="false" collective="false" import="true" targetId="d07d-93de-3bf7-d401" type="selectionEntryGroup"/>
       </entryLinks>
@@ -490,6 +456,9 @@
                 <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4373-740f-1bf3-b0aa" type="instanceOf"/>
                 <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="e3a6-45ca-4974-b489" type="instanceOf"/>
                 <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="6cd6-b22e-bfcb-9589" type="instanceOf"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="996a-613c-4006-25e3" type="instanceOf"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="b543-cb16-0c79-fbc6" type="instanceOf"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="711b-99d3-361f-4804" type="equalTo"/>
               </conditions>
             </conditionGroup>
           </conditionGroups>
@@ -590,16 +559,6 @@
     </entryLink>
     <entryLink id="5b83-487c-7b0c-f2f7" name="Soul Grinder" hidden="false" collective="false" import="true" targetId="d97a-886d-a857-5e6e" type="selectionEntry"/>
     <entryLink id="b38d-a021-9fd4-cfe2" name="Varanguard" hidden="false" collective="false" import="true" targetId="6b24-be40-5821-6573" type="selectionEntry"/>
-    <entryLink id="f20e-3fa5-2300-f5dc" name="Soulfeaster Keeper of Secrets" hidden="false" collective="false" import="true" targetId="978c-59bb-a63f-91c5" type="selectionEntry">
-      <entryLinks>
-        <entryLink id="a5d3-dcc3-bc62-1153" name="General" hidden="false" collective="false" import="true" targetId="98a4-3d6d-a7b9-399f" type="selectionEntry"/>
-        <entryLink id="e8aa-eead-9928-94a8" name="Artefacts of Power" hidden="false" collective="false" import="true" targetId="a520-01ab-3cef-a486" type="selectionEntryGroup"/>
-        <entryLink id="3f4c-dcb0-2633-2823" name="Command Traits" hidden="false" collective="false" import="true" targetId="548e-e11c-aeda-8d1b" type="selectionEntryGroup"/>
-        <entryLink id="cf39-d7b1-082e-9313" name="Hedonites Spell Lores" hidden="false" collective="false" import="true" targetId="87c2-3bb8-b59b-6d11" type="selectionEntryGroup"/>
-        <entryLink id="11ba-bda1-4a4a-9021" name="Invaders Host Extra General" hidden="false" collective="false" import="true" targetId="511a-c718-0d06-1bc5" type="selectionEntry"/>
-        <entryLink id="f99b-474e-1811-6f83" name="Battalion Formation" hidden="false" collective="false" import="true" targetId="d07d-93de-3bf7-d401" type="selectionEntryGroup"/>
-      </entryLinks>
-    </entryLink>
     <entryLink id="27cd-44d0-87c3-67ec" name="Fiends" hidden="false" collective="false" import="true" targetId="b07f-0154-0c3b-91a7" type="selectionEntry">
       <entryLinks>
         <entryLink id="e871-f0bb-c36c-2b68" name="Battalion Formation" hidden="false" collective="false" import="true" targetId="d07d-93de-3bf7-d401" type="selectionEntryGroup"/>
@@ -610,11 +569,7 @@
         <entryLink id="8ec0-6e61-6e72-f82b" name="General" hidden="false" collective="false" import="true" targetId="98a4-3d6d-a7b9-399f" type="selectionEntry">
           <categoryLinks>
             <categoryLink id="b877-0fa4-780d-146d" name="General - Lord of Pain" hidden="false" targetId="0088-a682-195b-9c0d" primary="false"/>
-          </categoryLinks>
-        </entryLink>
-        <entryLink id="92f1-257f-ef24-76cd" name="Invaders Host Extra General" hidden="false" collective="false" import="true" targetId="511a-c718-0d06-1bc5" type="selectionEntry">
-          <categoryLinks>
-            <categoryLink id="f8d7-fb79-0f4f-ea77" name="General - Lord of Pain" hidden="false" targetId="0088-a682-195b-9c0d" primary="false"/>
+            <categoryLink id="6025-8b28-097f-33ca" name="General - HoS MORTAL" hidden="false" targetId="711b-99d3-361f-4804" primary="false"/>
           </categoryLinks>
         </entryLink>
         <entryLink id="ebea-98f6-1dae-58a8" name="Artefacts of Power" hidden="false" collective="false" import="true" targetId="a520-01ab-3cef-a486" type="selectionEntryGroup"/>
@@ -631,9 +586,18 @@
     <entryLink id="8b48-11e7-ecd5-3e6b" name="Symbaresh Twinsouls" hidden="false" collective="false" import="true" targetId="27c7-4eb8-6783-73e6" type="selectionEntry">
       <modifiers>
         <modifier type="remove" field="category" value="a42d-220e-6a88-7bf6">
-          <conditions>
-            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="0088-a682-195b-9c0d" type="equalTo"/>
-          </conditions>
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4373-740f-1bf3-b0aa" type="instanceOf"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="e3a6-45ca-4974-b489" type="instanceOf"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="6cd6-b22e-bfcb-9589" type="instanceOf"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="996a-613c-4006-25e3" type="instanceOf"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="b543-cb16-0c79-fbc6" type="instanceOf"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="0088-a682-195b-9c0d" type="equalTo"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
         </modifier>
       </modifiers>
       <categoryLinks>
@@ -661,18 +625,21 @@
         <entryLink id="5909-2863-c430-cbcd" name="General" hidden="false" collective="false" import="true" targetId="98a4-3d6d-a7b9-399f" type="selectionEntry">
           <categoryLinks>
             <categoryLink id="dc77-14c9-f808-5f97" name="Named General" hidden="false" targetId="8b3d-7f03-e1f9-eaf5" primary="false"/>
+            <categoryLink id="f256-c06f-3921-e2c5" name="General - HoS MORTAL" hidden="false" targetId="711b-99d3-361f-4804" primary="false"/>
           </categoryLinks>
         </entryLink>
-        <entryLink id="4604-37dd-7784-481f" name="Invaders Host Extra General" hidden="false" collective="false" import="true" targetId="511a-c718-0d06-1bc5" type="selectionEntry"/>
         <entryLink id="b2a0-74c0-a556-f346" name="Battalion Formation" hidden="false" collective="false" import="true" targetId="d07d-93de-3bf7-d401" type="selectionEntryGroup"/>
       </entryLinks>
     </entryLink>
     <entryLink id="0bc6-4070-3781-8429" name="Shardspeaker of Slaanesh" hidden="false" collective="false" import="true" targetId="9802-e51c-f34a-1953" type="selectionEntry">
       <entryLinks>
-        <entryLink id="a9da-eb84-01e1-cd0d" name="General" hidden="false" collective="false" import="true" targetId="98a4-3d6d-a7b9-399f" type="selectionEntry"/>
+        <entryLink id="a9da-eb84-01e1-cd0d" name="General" hidden="false" collective="false" import="true" targetId="98a4-3d6d-a7b9-399f" type="selectionEntry">
+          <categoryLinks>
+            <categoryLink id="9e2e-ebb0-96fb-0bab" name="General - HoS MORTAL" hidden="false" targetId="711b-99d3-361f-4804" primary="false"/>
+          </categoryLinks>
+        </entryLink>
         <entryLink id="057f-36cb-be2c-bde6" name="Command Traits" hidden="false" collective="false" import="true" targetId="548e-e11c-aeda-8d1b" type="selectionEntryGroup"/>
         <entryLink id="86a9-b1c9-c051-e347" name="Artefacts of Power" hidden="false" collective="false" import="true" targetId="a520-01ab-3cef-a486" type="selectionEntryGroup"/>
-        <entryLink id="702a-a57b-a5ff-d153" name="Invaders Host Extra General" hidden="false" collective="false" import="true" targetId="511a-c718-0d06-1bc5" type="selectionEntry"/>
         <entryLink id="6ca8-7157-b496-f7e6" name="Hedonites Spell Lores" hidden="false" collective="false" import="true" targetId="87c2-3bb8-b59b-6d11" type="selectionEntryGroup"/>
         <entryLink id="03b1-b93b-f6f5-c868" name="Battalion Formation" hidden="false" collective="false" import="true" targetId="d07d-93de-3bf7-d401" type="selectionEntryGroup"/>
       </entryLinks>
@@ -680,9 +647,18 @@
     <entryLink id="39cd-5ffa-240d-eb36" name="Myrmidesh Painbringers" hidden="false" collective="false" import="true" targetId="1326-840f-9c0d-cb87" type="selectionEntry">
       <modifiers>
         <modifier type="remove" field="category" value="a42d-220e-6a88-7bf6">
-          <conditions>
-            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="0088-a682-195b-9c0d" type="equalTo"/>
-          </conditions>
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4373-740f-1bf3-b0aa" type="instanceOf"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="e3a6-45ca-4974-b489" type="instanceOf"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="6cd6-b22e-bfcb-9589" type="instanceOf"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="996a-613c-4006-25e3" type="instanceOf"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="b543-cb16-0c79-fbc6" type="instanceOf"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="0088-a682-195b-9c0d" type="equalTo"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
         </modifier>
       </modifiers>
       <categoryLinks>
@@ -697,30 +673,14 @@
         <entryLink id="0c62-0d40-c056-0e84" name="General" hidden="false" collective="false" import="true" targetId="98a4-3d6d-a7b9-399f" type="selectionEntry">
           <categoryLinks>
             <categoryLink id="2d19-db05-4fd9-be61" name="Named General" hidden="false" targetId="8b3d-7f03-e1f9-eaf5" primary="false"/>
+            <categoryLink id="9ecf-a4b8-e126-91fa" name="General - HoS MORTAL" hidden="false" targetId="711b-99d3-361f-4804" primary="false"/>
           </categoryLinks>
         </entryLink>
         <entryLink id="e148-82b8-191b-81c8" name="Hedonites Spell Lores" hidden="false" collective="false" import="true" targetId="87c2-3bb8-b59b-6d11" type="selectionEntryGroup"/>
-        <entryLink id="d04c-97ce-98ea-5af7" name="Invaders Host Extra General" hidden="false" collective="false" import="true" targetId="511a-c718-0d06-1bc5" type="selectionEntry"/>
         <entryLink id="4f1b-fbce-895f-79c4" name="Battalion Formation" hidden="false" collective="false" import="true" targetId="d07d-93de-3bf7-d401" type="selectionEntryGroup"/>
       </entryLinks>
     </entryLink>
     <entryLink id="5d0e-33f4-1395-52d8" name="Blissbarb Archers" hidden="false" collective="false" import="true" targetId="b309-c000-e0c8-b592" type="selectionEntry">
-      <modifiers>
-        <modifier type="remove" field="category" value="a42d-220e-6a88-7bf6">
-          <conditionGroups>
-            <conditionGroup type="or">
-              <conditions>
-                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4373-740f-1bf3-b0aa" type="instanceOf"/>
-                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="e3a6-45ca-4974-b489" type="instanceOf"/>
-                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="6cd6-b22e-bfcb-9589" type="instanceOf"/>
-              </conditions>
-            </conditionGroup>
-          </conditionGroups>
-        </modifier>
-      </modifiers>
-      <categoryLinks>
-        <categoryLink id="0a91-fd14-aec5-07f7" name="BATTLELINE" hidden="false" targetId="a42d-220e-6a88-7bf6" primary="false"/>
-      </categoryLinks>
       <entryLinks>
         <entryLink id="b8a5-cd91-7379-0371" name="Battalion Formation" hidden="false" collective="false" import="true" targetId="d07d-93de-3bf7-d401" type="selectionEntryGroup"/>
       </entryLinks>
@@ -732,22 +692,14 @@
     </entryLink>
     <entryLink id="26e1-90e0-ffd5-f8cb" name="Dexcessa, The Talon of Slaanesh" hidden="false" collective="false" import="true" targetId="84a8-6768-1da9-5016" type="selectionEntry">
       <entryLinks>
-        <entryLink id="90da-5815-8b28-b63f" name="General" hidden="false" collective="false" import="true" targetId="98a4-3d6d-a7b9-399f" type="selectionEntry">
-          <categoryLinks>
-            <categoryLink id="2d6e-24c2-eb37-4acc" name="Named General" hidden="false" targetId="8b3d-7f03-e1f9-eaf5" primary="false"/>
-          </categoryLinks>
-        </entryLink>
         <entryLink id="d4b1-4e8a-fb2a-8802" name="Battalion Formation" hidden="false" collective="false" import="true" targetId="d07d-93de-3bf7-d401" type="selectionEntryGroup"/>
+        <entryLink id="cb58-79c6-0ac7-dc19" name="Bonus General" hidden="false" collective="false" import="true" targetId="c608-7a89-b2b4-124d" type="selectionEntry"/>
       </entryLinks>
     </entryLink>
     <entryLink id="c539-72bf-0ab7-53dd" name="Synessa, The Voice of Slaanesh" hidden="false" collective="false" import="true" targetId="077d-8b8f-3cfc-84db" type="selectionEntry">
       <entryLinks>
-        <entryLink id="9ba0-a195-3184-e30b" name="General" hidden="false" collective="false" import="true" targetId="98a4-3d6d-a7b9-399f" type="selectionEntry">
-          <categoryLinks>
-            <categoryLink id="1818-8295-a240-78db" name="Named General" hidden="false" targetId="8b3d-7f03-e1f9-eaf5" primary="false"/>
-          </categoryLinks>
-        </entryLink>
         <entryLink id="6aa5-8554-832c-e446" name="Battalion Formation" hidden="false" collective="false" import="true" targetId="d07d-93de-3bf7-d401" type="selectionEntryGroup"/>
+        <entryLink id="637b-6b21-a0bc-d650" name="Bonus General" hidden="false" collective="false" import="true" targetId="c608-7a89-b2b4-124d" type="selectionEntry"/>
       </entryLinks>
     </entryLink>
     <entryLink id="604a-1918-3b08-c818" name="Beastlord" hidden="false" collective="false" import="true" targetId="9e0e-4909-17ad-0438" type="selectionEntry">
@@ -900,12 +852,17 @@
     <entryLink id="e839-3728-8be5-f34e" name="Hellstriders with Hellscourges" hidden="false" collective="false" import="true" targetId="4c47-6ca4-e3e7-f2f0" type="selectionEntry">
       <modifiers>
         <modifier type="remove" field="category" value="a42d-220e-6a88-7bf6">
+          <conditions>
+            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="711b-99d3-361f-4804" type="equalTo"/>
+          </conditions>
           <conditionGroups>
             <conditionGroup type="or">
               <conditions>
                 <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4373-740f-1bf3-b0aa" type="instanceOf"/>
                 <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="e3a6-45ca-4974-b489" type="instanceOf"/>
                 <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="6cd6-b22e-bfcb-9589" type="instanceOf"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="996a-613c-4006-25e3" type="instanceOf"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="b543-cb16-0c79-fbc6" type="instanceOf"/>
               </conditions>
             </conditionGroup>
           </conditionGroups>
@@ -916,6 +873,25 @@
       </categoryLinks>
       <entryLinks>
         <entryLink id="617f-d1c1-03fb-2e92" name="Battalion Formation" hidden="false" collective="false" import="true" targetId="d07d-93de-3bf7-d401" type="selectionEntryGroup"/>
+      </entryLinks>
+    </entryLink>
+    <entryLink id="3731-966b-751f-9401" name="The Thricefold Discord" hidden="false" collective="false" import="true" targetId="d255-3e6e-ec83-6165" type="selectionEntry">
+      <entryLinks>
+        <entryLink id="2ae9-ab42-559c-c015" name="Battalion Formation" hidden="false" collective="false" import="true" targetId="d07d-93de-3bf7-d401" type="selectionEntryGroup"/>
+      </entryLinks>
+    </entryLink>
+    <entryLink id="5ef4-afbd-7b4e-19b7" name="Lord of Hubris" hidden="false" collective="false" import="true" targetId="dc4b-db89-eed3-0812" type="selectionEntry">
+      <entryLinks>
+        <entryLink id="ebb7-a523-05ba-90d3" name="General" hidden="false" collective="false" import="true" targetId="98a4-3d6d-a7b9-399f" type="selectionEntry">
+          <categoryLinks>
+            <categoryLink id="e6ae-f954-415d-a228" name="General - Lord of Pain" hidden="false" targetId="0088-a682-195b-9c0d" primary="false"/>
+            <categoryLink id="42bb-cfd8-75cd-324f" name="General - HoS MORTAL" hidden="false" targetId="711b-99d3-361f-4804" primary="false"/>
+          </categoryLinks>
+        </entryLink>
+        <entryLink id="8963-0047-b6fb-ac05" name="Artefacts of Power" hidden="false" collective="false" import="true" targetId="a520-01ab-3cef-a486" type="selectionEntryGroup"/>
+        <entryLink id="d83b-cb98-f284-3524" name="Battalion Formation" hidden="false" collective="false" import="true" targetId="d07d-93de-3bf7-d401" type="selectionEntryGroup"/>
+        <entryLink id="ffa4-9dd3-159d-56e0" name="Command Traits" hidden="false" collective="false" import="true" targetId="548e-e11c-aeda-8d1b" type="selectionEntryGroup"/>
+        <entryLink id="1cc3-1152-e5b5-f9cf" name="Hedonites Spell Lores" hidden="false" collective="false" import="true" targetId="87c2-3bb8-b59b-6d11" type="selectionEntryGroup"/>
       </entryLinks>
     </entryLink>
   </entryLinks>
@@ -961,56 +937,33 @@
       <profiles>
         <profile id="7dc0-0bad-0379-92a7" name="Fane of Slaanesh Set-Up" hidden="false" typeId="d508-c1d5-a06f-0103" typeName="Scenery Set-Up">
           <characteristics>
-            <characteristic name="Set-Up Rules" typeId="fb13-8187-bb28-76fe">A Slaanesh army can include 1 FANE OF SLAANESH terrain feature.
-
-After territories have been chosen but before armies are set up, you can set up the FANE OF SLAANESH wholly within your territory and more than 3&quot; from any other terrain features or objectives.
-
-If both players can set up a terrain feature before armies are set up, they must roll off, and the winner can choose the order in which the terrain features are set up.
-
-A Fane of Slaanesh is a single terrain feature. It is an obstacle.</characteristic>
+            <characteristic name="Set-Up Rules" typeId="fb13-8187-bb28-76fe">After territories are determined, you can set up this faction terrain feature wholly within your territory and more than 3&quot; from all objectives and other terrain features. If both players can set up faction terrain features at the same time, they must roll off and the winner chooses who sets up their faction terrain features first.</characteristic>
           </characteristics>
         </profile>
         <profile id="934b-0f65-5f8a-232a" name="Power of Slaanesh" hidden="false" typeId="1c58-2b3d-482e-2a35" typeName="Scenery Rules">
           <characteristics>
-            <characteristic name="Scenery Rule" typeId="a333-0c4a-7f67-677c">If you spend depravity points to summon a SLAANESH DAEMON unit to the battlefield, you can set up that unit wholly within 12&quot; of this terrain and more than 9&quot; away from any enemy units.</characteristic>
+            <characteristic name="Scenery Rule" typeId="a333-0c4a-7f67-677c">If you spend depravity points to summon a HEDONITES OF SLAANESH DAEMON unit to the battlefield, you can set up that unit wholly within 12&quot; of this terrain feature and more than 9&quot; from all enemy units instead of wholly within 12&quot; of a HEDONITES OF SLAANESH HERO and more than 9&quot; from all enemy units.</characteristic>
           </characteristics>
         </profile>
         <profile id="9d57-9e35-aa74-fb12" name="Damned Conduit" hidden="false" typeId="1c58-2b3d-482e-2a35" typeName="Scenery Rules">
           <characteristics>
-            <characteristic name="Scenery Rule" typeId="a333-0c4a-7f67-677c">At the start of your hero phase, you can pick 1 friendly SLAANESH HERO within 6&quot; of this terrain feature to make a sacrifice. If you do so, that HERO suffers 1 mortal wound, and you must roll a dice. On a 1, nothing happens. On a 2+, add 1 to hit rolls for attacks made by that HERO unitl your next hero phase.
+            <characteristic name="Scenery Rule" typeId="a333-0c4a-7f67-677c">At the start of your hero phase, you can pick 1 friendly HEDONITES OF SLAANESH HERO within 6&quot; of this terrain feature to make a sacrifice. If you do so, that HERO suffers 1 mortal wound and you must roll a dice. On a 2+, add 1 to wound rolls for attacks made by that HERO until your next hero phase.
 
-If that HERO you picked has an artefact of power, instead of suffering 1 mortal wound they can sacrifice that artefact of power. If they do so, that artefact of power can no longer be used and you must roll a dice (if a weapon was picked when the artefact of power was selected, that weapon reverts to normal). On a 2+, add 1 to hit rolls for attacks made by that HERO for the rest of the battle.</characteristic>
+If the HERO you picked has an artefact of power, instead of suffering 1 mortal wound, they can sacrifice that artefact of power. If they do so, that artefact of power can no longer be used and you must roll a dice. On a 2+, add 1 to wound rolls for attacks made by that HERO for the rest of the battle.
+
+Designer’s Note: You can sacrifice any artefacts of power, including those that can only be used a limited number of times during a battle and those that have already been used. If the artefact of power was used to enhance a weapon, that weapon reverts to its normal form.</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="6964-2591-dcb3-3ae1" name="Impassable" hidden="false" typeId="ce32-0c40-1990-4c8a" typeName="Restriction">
+          <characteristics>
+            <characteristic name="Restriction" typeId="edbe-5fe5-1142-afa6">You cannot move a model over this terrain feature unless it can fly, and you cannot move a model onto this terrain feature or set up a model on this terrain feature (even if it can fly).</characteristic>
           </characteristics>
         </profile>
       </profiles>
       <categoryLinks>
-        <categoryLink id="fb5e-471a-e85a-4f7c" name="Fane of Slaanesh" hidden="false" targetId="9414-ca78-bc34-0cc4" primary="false"/>
         <categoryLink id="b3d8-e963-7178-6af8" name="Scenery" hidden="false" targetId="bab2-426b-5501-5fe8" primary="false"/>
-        <categoryLink id="bf88-d8da-1367-5688" name="SLAANESH" hidden="false" targetId="58b2-6793-0b10-a246" primary="false"/>
         <categoryLink id="9ff5-7d01-60e2-f7b2" name="New CategoryLink" hidden="false" targetId="29f4-e63d-fa5b-1611" primary="true"/>
       </categoryLinks>
-      <costs>
-        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
-      </costs>
-    </selectionEntry>
-    <selectionEntry id="511a-c718-0d06-1bc5" name="Invaders Host Extra General" hidden="false" collective="false" import="true" type="upgrade">
-      <modifiers>
-        <modifier type="set" field="hidden" value="true">
-          <conditionGroups>
-            <conditionGroup type="or">
-              <conditions>
-                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="441c-7740-77af-9ddc" type="equalTo"/>
-                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="c661-44d6-0f5b-11ff" type="equalTo"/>
-                <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="c661-44d6-0f5b-11ff" type="greaterThan"/>
-              </conditions>
-            </conditionGroup>
-          </conditionGroups>
-        </modifier>
-      </modifiers>
-      <constraints>
-        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="698c-0f40-d46b-b812" type="max"/>
-        <constraint field="selections" scope="roster" value="2.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="fa81-66a5-d04e-d9ed" type="max"/>
-      </constraints>
       <costs>
         <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
       </costs>
@@ -1053,11 +1006,11 @@ If that HERO you picked has an artefact of power, instead of suffering 1 mortal 
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="55d0-2ff7-fdd1-7577" type="max"/>
       </constraints>
       <selectionEntryGroups>
-        <selectionEntryGroup id="42ea-40e8-b34b-f448" name="Lore of Slaanesh" hidden="false" collective="false" import="true">
+        <selectionEntryGroup id="42ea-40e8-b34b-f448" name="Lore of the Despoiler" hidden="false" collective="false" import="true">
           <modifiers>
             <modifier type="set" field="hidden" value="true">
               <conditions>
-                <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="128a-35fa-6f1f-a15d" type="notInstanceOf"/>
+                <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="441c-7740-77af-9ddc" type="equalTo"/>
               </conditions>
             </modifier>
             <modifier type="increment" field="58ea-0406-8136-85a2" value="1.0">
@@ -1073,51 +1026,6 @@ If that HERO you picked has an artefact of power, instead of suffering 1 mortal 
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="58ea-0406-8136-85a2" type="max"/>
           </constraints>
           <selectionEntries>
-            <selectionEntry id="da92-618e-09aa-8526" name="6 - Born of Damnation" hidden="false" collective="false" import="true" type="upgrade">
-              <constraints>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="9d4e-9a79-272a-5275" type="max"/>
-              </constraints>
-              <profiles>
-                <profile id="db36-2e0d-d5b3-793c" name="Born of Damnation" hidden="false" typeId="13da-11a8-b7d1-77a7" typeName="Spell">
-                  <characteristics>
-                    <characteristic name="Spell" typeId="1170-c916-1b73-ae34">Born of Damnation has a casting value of 4. If successfully cast, pick 1 friendly HEDONITE HERO within 6&quot; of the caster that is visible to them. You can heal up to D3 wounds allocated to that HERO.</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-              <costs>
-                <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
-              </costs>
-            </selectionEntry>
-            <selectionEntry id="69ca-6f49-7df0-3a65" name="5 - Phantasmagoria" hidden="false" collective="false" import="true" type="upgrade">
-              <constraints>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="6778-78d6-605e-1cf2" type="max"/>
-              </constraints>
-              <profiles>
-                <profile id="1d63-14e5-915c-da8f" name="Phantasmagoria" hidden="false" typeId="13da-11a8-b7d1-77a7" typeName="Spell">
-                  <characteristics>
-                    <characteristic name="Spell" typeId="1170-c916-1b73-ae34">Phantasmagoria has a casting value of 7. If successfully cast, pick 1 enemy unit within 18&quot; of the caster that is visible to them, and roll 6 dice. For each 5+, subtract 1 from that unit’s Bravery characteristic (to a minimum of 1) until your next hero phase.</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-              <costs>
-                <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
-              </costs>
-            </selectionEntry>
-            <selectionEntry id="1ff6-6554-4190-8263" name="4 - Soulslice Shards" hidden="false" collective="false" import="true" type="upgrade">
-              <constraints>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="de53-5495-b1fe-0749" type="max"/>
-              </constraints>
-              <profiles>
-                <profile id="4f45-ec0a-ccf0-a59d" name="Soulslice Shards" hidden="false" typeId="13da-11a8-b7d1-77a7" typeName="Spell">
-                  <characteristics>
-                    <characteristic name="Spell" typeId="1170-c916-1b73-ae34">Soulslice Shards has a casting value of 5. If successfully cast, pick 1 enemy unit within 18&quot; of the caster that is visible to them, and roll 2D6. If the roll is higher than that unit’s Bravery characteristic, that unit suffers a number of mortal wounds equal to the difference between its Bravery characteristic and the roll.</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-              <costs>
-                <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
-              </costs>
-            </selectionEntry>
             <selectionEntry id="a6fd-3680-f75c-4ac5" name="3 - Hysterical Frenzy" hidden="false" collective="false" import="true" type="upgrade">
               <constraints>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="08ae-495f-6ad8-bd3c" type="max"/>
@@ -1125,7 +1033,7 @@ If that HERO you picked has an artefact of power, instead of suffering 1 mortal 
               <profiles>
                 <profile id="9642-a739-63f2-a242" name="Hysterical Frenzy" hidden="false" typeId="13da-11a8-b7d1-77a7" typeName="Spell">
                   <characteristics>
-                    <characteristic name="Spell" typeId="1170-c916-1b73-ae34">Hysterical Frenzy has a casting value of 7. If successfully cast, pick 1 enemy unit wholly within 18&quot; of the caster that is visible to them and roll 1 dice for each model in that unit. For each 6, that unit suffers D3 mortal wounds.</characteristic>
+                    <characteristic name="Spell" typeId="1170-c916-1b73-ae34">Hysterical Frenzy is a spell that has a casting value of 7 and a range of 18&quot;. If successfully cast, pick 1 enemy unit within range and visible to the caster, and roll a number of dice equal to that unit’s Bravery characteristic. For each 6, that unit suffers D3 mortal wounds.</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
@@ -1140,7 +1048,7 @@ If that HERO you picked has an artefact of power, instead of suffering 1 mortal 
               <profiles>
                 <profile id="2f16-afe2-99ef-a60b" name="Pavane of Slaanesh" hidden="false" typeId="13da-11a8-b7d1-77a7" typeName="Spell">
                   <characteristics>
-                    <characteristic name="Spell" typeId="1170-c916-1b73-ae34">vane of Slaanesh has a casting value of 7. If successfully cast, pick 1 enemy HERO within 6&quot; of the caster that is visible to them, and roll a number of dice equal to that HERO’s Move characteristic. For each 5+, that HERO suffers 1 mortal wound.</characteristic>
+                    <characteristic name="Spell" typeId="1170-c916-1b73-ae34">Pavane of Slaanesh is a spell that has a casting value of 6 and a range of 12&quot;. If successfully cast, pick 1 enemy unit within range and visible to the caster, and roll a number of dice equal to that unit’s Move characteristic. For each 5+, subtract 1&quot; from that unit’s Move characteristic (to a minimum of 1&quot;) for the rest of the battle. The same unit cannot be affected by this ability more than once per battle.</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
@@ -1155,7 +1063,7 @@ If that HERO you picked has an artefact of power, instead of suffering 1 mortal 
               <profiles>
                 <profile id="1636-783b-6b9a-84c1" name="Lash of Slaanesh" hidden="false" typeId="13da-11a8-b7d1-77a7" typeName="Spell">
                   <characteristics>
-                    <characteristic name="Spell" typeId="1170-c916-1b73-ae34">Lash of Slaanesh has a casting value of 5. If successfully cast, pick 1 point on the battlefield within 12&quot; of the caster that is visible to them and draw an imaginary straight line 1mm wide between that point and the closest part of the caster’s base. Roll a dice for each enemy model passed across by this line. On a 4+ that model’s unit suffers 1 mortal wound. SLAANESH units are unaffected by this spell.</characteristic>
+                    <characteristic name="Spell" typeId="1170-c916-1b73-ae34">Lash of Slaanesh is a spell that has a casting value of 6 and a range of 12&quot;. If successfully cast, pick 1 enemy unit within range and visible to the caster, and roll a number of dice equal to the number of models in that unit. For each 5+, subtract 1 from the Attacks characteristic of that unit’s melee weapons (to a minimum of 1) until your next hero phase.</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
@@ -1165,11 +1073,11 @@ If that HERO you picked has an artefact of power, instead of suffering 1 mortal 
             </selectionEntry>
           </selectionEntries>
         </selectionEntryGroup>
-        <selectionEntryGroup id="e49d-327a-f732-5d25" name="Lore of Pain and Pleasure" hidden="false" collective="false" import="true">
+        <selectionEntryGroup id="e49d-327a-f732-5d25" name="Lore of the Magnificent" hidden="false" collective="false" import="true">
           <modifiers>
             <modifier type="set" field="hidden" value="true">
               <conditions>
-                <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="ca90-b9b0-010b-72d0" type="notInstanceOf"/>
+                <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="02b3-0743-81d2-87d5" type="equalTo"/>
               </conditions>
             </modifier>
             <modifier type="increment" field="0d88-99a4-2a11-10a3" value="1.0">
@@ -1185,14 +1093,14 @@ If that HERO you picked has an artefact of power, instead of suffering 1 mortal 
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="0d88-99a4-2a11-10a3" type="max"/>
           </constraints>
           <selectionEntries>
-            <selectionEntry id="159a-fad4-6b46-b688" name="3 - Dark Delusions" hidden="false" collective="false" import="true" type="upgrade">
+            <selectionEntry id="6198-90bc-8a10-7846" name="1 - Soulslice Shards" hidden="false" collective="false" import="true" type="upgrade">
               <constraints>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="bf25-af21-9dff-37c1" type="max"/>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="977f-4f60-6227-f4f3" type="max"/>
               </constraints>
               <profiles>
-                <profile id="8296-c7f0-2e56-b331" name="Dark Delusions" hidden="false" typeId="13da-11a8-b7d1-77a7" typeName="Spell">
+                <profile id="f6d6-3d6d-bb09-9264" name="Soulslice Shards" hidden="false" typeId="13da-11a8-b7d1-77a7" typeName="Spell">
                   <characteristics>
-                    <characteristic name="Spell" typeId="1170-c916-1b73-ae34">Dark Delusions has a casting value of 4. If successfully cast, pick 1 enemy unit wholly within 18&quot; of the caster that is visible to them and roll 2D6. If the roll is equal to or greater than that unit&apos;s Bravery characteristic add 1 to hit rolls for attacks that target that unit until your next hero phase.</characteristic>
+                    <characteristic name="Spell" typeId="1170-c916-1b73-ae34">Soulslice Shards is a spell that has a casting value of 5 and a range of 12&quot;. If successfully cast, pick 1 enemy unit within range and visible to the caster, and roll 2D6. If the roll is greater than that unit’s Bravery characteristic, that unit cannot issue or receive commands until your next hero phase.</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
@@ -1200,14 +1108,14 @@ If that HERO you picked has an artefact of power, instead of suffering 1 mortal 
                 <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
               </costs>
             </selectionEntry>
-            <selectionEntry id="4ebc-d0ad-e401-840c" name="2 - Judgement of Excess" hidden="false" collective="false" import="true" type="upgrade">
+            <selectionEntry id="c1c9-39a3-9a8e-44e6" name="2 - Phantasmagoria" hidden="false" collective="false" import="true" type="upgrade">
               <constraints>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="22ec-291f-5067-20bc" type="max"/>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="fb69-79f4-d000-046c" type="max"/>
               </constraints>
               <profiles>
-                <profile id="2213-b342-b6dd-999f" name="Judgement of Excess" hidden="false" typeId="13da-11a8-b7d1-77a7" typeName="Spell">
+                <profile id="f8ee-391c-fc75-2ba8" name="Phantasmagoria" hidden="false" typeId="13da-11a8-b7d1-77a7" typeName="Spell">
                   <characteristics>
-                    <characteristic name="Spell" typeId="1170-c916-1b73-ae34">Judgement of Excess has a casting value of 5. If successfully cast, pick 1 enemy unit within 12&quot; of the caster that is visible to them. That unit suffers 1 mortal wound for every 5 models in that unit. If that unit has fewer than 5 models, it suffers 1 mortal wound instead.</characteristic>
+                    <characteristic name="Spell" typeId="1170-c916-1b73-ae34">Phastasmagoria is a spell that has a casting value of 5 and a range of 12&quot;. If successfully cast, pick 1 enemy unit within range and visible to the caster. Until your next hero phase, each time that unit is picked to fight, roll a dice. On a 3+, you can pick 1 friendly HEDONITES OF SLAANESH unit within 3&quot; of that unit. That friendly unit can retreat before that enemy unit piles in.</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
@@ -1215,14 +1123,14 @@ If that HERO you picked has an artefact of power, instead of suffering 1 mortal 
                 <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
               </costs>
             </selectionEntry>
-            <selectionEntry id="9e08-bb52-4025-1d35" name="1 - Battle Rapture" hidden="false" collective="false" import="true" type="upgrade">
+            <selectionEntry id="44ac-f3fa-8fd9-e007" name="3 - Born of Damnation" hidden="false" collective="false" import="true" type="upgrade">
               <constraints>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="ecb7-494e-f037-9c8e" type="max"/>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8fac-41bc-c706-b5e0" type="max"/>
               </constraints>
               <profiles>
-                <profile id="06b1-c7cc-8bc2-d840" name="Battle Rapture" hidden="false" typeId="13da-11a8-b7d1-77a7" typeName="Spell">
+                <profile id="71d4-eafd-49fe-1357" name="Born of Damnation" hidden="false" typeId="13da-11a8-b7d1-77a7" typeName="Spell">
                   <characteristics>
-                    <characteristic name="Spell" typeId="1170-c916-1b73-ae34">Battle Rapture has a casting value of 5. If successfully cast, pick 1 friendly MORTAL SLAANESH unit wholly within 18&quot; of the caster that is visible to them. Do not take battleshock tests for that unit until your next hero phase. If the casting roll is 10+, you can pick up to 3 friendly MORTAL SLAANESH units that are wholly within 18&quot; of the caster and visible to them instead of 1.</characteristic>
+                    <characteristic name="Spell" typeId="1170-c916-1b73-ae34">Born of Damnation is a spell that has a casting value of 6. If successfully cast, roll 6 dice. For each 4+, you receive 1 depravity point.</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
@@ -1232,7 +1140,7 @@ If that HERO you picked has an artefact of power, instead of suffering 1 mortal 
             </selectionEntry>
           </selectionEntries>
         </selectionEntryGroup>
-        <selectionEntryGroup id="cc83-ca55-b341-67cc" name="Forbidden Sorceries of Slaanesh" hidden="false" collective="false" import="true">
+        <selectionEntryGroup id="cc83-ca55-b341-67cc" name="Lore of the Pursuer" hidden="false" collective="false" import="true">
           <modifiers>
             <modifier type="set" field="hidden" value="true">
               <conditions>
@@ -1259,7 +1167,7 @@ If that HERO you picked has an artefact of power, instead of suffering 1 mortal 
               <profiles>
                 <profile id="097b-5a51-0abe-6ad6" name="Slothful Stupor" hidden="false" typeId="13da-11a8-b7d1-77a7" typeName="Spell">
                   <characteristics>
-                    <characteristic name="Spell" typeId="1170-c916-1b73-ae34">Slothful Stupor has a casting value of 7. If successfully cast, pick 1 enemy HERO within 12&quot; of the caster that is visible to them. Until your next hero phase, that HERO cannot issue or recieve commands and cannot run or attempt to charge.</characteristic>
+                    <characteristic name="Spell" typeId="1170-c916-1b73-ae34">Slothful Stupor is a spell that has a casting value of 7 and a range of 12&quot;. If successfully cast, pick 1 enemy unit within range and visible to the caster. Until your next hero phase, the Move characteristic of that unit is 3&quot; and all run rolls and charge rolls for that unit are treated as being 3.</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
@@ -1274,7 +1182,7 @@ If that HERO you picked has an artefact of power, instead of suffering 1 mortal 
               <profiles>
                 <profile id="d2b6-9fcf-508b-05e4" name="Progeny of Damnation" hidden="false" typeId="13da-11a8-b7d1-77a7" typeName="Spell">
                   <characteristics>
-                    <characteristic name="Spell" typeId="1170-c916-1b73-ae34">Progeny of Damnation has a casting value of 5. If successfully cast, pick 1 friendly DAEMON HEDONITE HERO within 6&quot; of the caster that is visible to them. You can heal up to D3 wounds allocated to that HERO. If the casting roll was 10+, you can heal D6 wounds allocated to that HERO instead.</characteristic>
+                    <characteristic name="Spell" typeId="1170-c916-1b73-ae34">Progeny of Damnation is a spell that has a casting value of 5 and a range of 12&quot;. If successfully cast, pick 1 friendly HEDONITES OF SLAANESH unit wholly within range and visible to the caster. Until your next hero phase, if that unit finishes a normal move, run or retreat within 9&quot; of any enemy units, those units cannot receive the Redeploy command.</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
@@ -1289,7 +1197,7 @@ If that HERO you picked has an artefact of power, instead of suffering 1 mortal 
               <profiles>
                 <profile id="c899-d8ca-b6f6-0850" name="Paths of the Dark Prince" hidden="false" typeId="13da-11a8-b7d1-77a7" typeName="Spell">
                   <characteristics>
-                    <characteristic name="Spell" typeId="1170-c916-1b73-ae34">Paths of the Dark Prince has a casting value of 7. If successfully cast, the caster can fly until your next hero phase.</characteristic>
+                    <characteristic name="Spell" typeId="1170-c916-1b73-ae34">Paths of the Dark Prince is a spell that has a casting value of 5. If successfully cast, roll 3D6 instead of 2D6 when making a charge roll for the caster until your next hero phase.</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
@@ -1301,7 +1209,7 @@ If that HERO you picked has an artefact of power, instead of suffering 1 mortal 
         </selectionEntryGroup>
       </selectionEntryGroups>
       <entryLinks>
-        <entryLink id="ac60-a56e-03a8-904a" name="Universal Spell Lore" hidden="false" collective="false" import="true" targetId="93f7-7e2a-3308-d150" type="selectionEntryGroup"/>
+        <entryLink id="ac60-a56e-03a8-904a" name="Rulebook Spell Lores" hidden="false" collective="false" import="true" targetId="8aee-7492-ee73-6d07" type="selectionEntryGroup"/>
       </entryLinks>
     </selectionEntryGroup>
     <selectionEntryGroup id="548e-e11c-aeda-8d1b" name="Command Traits" publicationId="29d6-453f-ecc0-3e4b" hidden="false" collective="false" import="true">
@@ -1325,7 +1233,7 @@ If that HERO you picked has an artefact of power, instead of suffering 1 mortal 
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="0f41-6a66-221f-255b" type="max"/>
       </constraints>
       <selectionEntryGroups>
-        <selectionEntryGroup id="748b-7e19-4093-aaa7" name="Invaders Command Traits" hidden="false" collective="false" import="true">
+        <selectionEntryGroup id="748b-7e19-4093-aaa7" name="Obsessions of the Invader" hidden="false" collective="false" import="true">
           <modifiers>
             <modifier type="set" field="hidden" value="true">
               <conditions>
@@ -1341,7 +1249,7 @@ If that HERO you picked has an artefact of power, instead of suffering 1 mortal 
               <profiles>
                 <profile id="c50d-1837-0278-cf5e" name="Best of the Best" hidden="false" typeId="1504-23bf-8850-4f65" typeName="Command Traits">
                   <characteristics>
-                    <characteristic name="Command Trait" typeId="0145-9acf-f5dc-d543">You can re-roll wound rolls for attacks made by this general while this general is within 6&quot; of another HERO.</characteristic>
+                    <characteristic name="Command Trait" typeId="0145-9acf-f5dc-d543">Add 1 to the Attacks characteristic of this general’s melee weapons while they are within 6&quot; of a different HERO.</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
@@ -1353,7 +1261,7 @@ If that HERO you picked has an artefact of power, instead of suffering 1 mortal 
               <profiles>
                 <profile id="151e-bdb9-8233-4cc4" name="Glory Hog" hidden="false" typeId="1504-23bf-8850-4f65" typeName="Command Traits">
                   <characteristics>
-                    <characteristic name="Command Trait" typeId="0145-9acf-f5dc-d543">At the end of the combat phase, if any enemy units were destroyed in that combat phase and this general is on the battlefield, you receive 1 command point.</characteristic>
+                    <characteristic name="Command Trait" typeId="0145-9acf-f5dc-d543">At the end of the combat phase, if any enemy units were destroyed in that phase and this general is on the battlefield, you receive 1 command point.</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
@@ -1365,43 +1273,7 @@ If that HERO you picked has an artefact of power, instead of suffering 1 mortal 
               <profiles>
                 <profile id="b86b-1923-86b7-ab36" name="Hurler of Obscenities" hidden="false" typeId="1504-23bf-8850-4f65" typeName="Command Traits">
                   <characteristics>
-                    <characteristic name="Command Trait" typeId="0145-9acf-f5dc-d543">At the start of the combat phase, you can pick 1 enemy HERO within 6&quot; of this general. Until the end of that combat phase, add 1 to hit rolls for attacks made by that HERO that target this general, but subtract 1 from save rolls for attacks that target that HERO.</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-              <costs>
-                <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
-              </costs>
-            </selectionEntry>
-            <selectionEntry id="8c77-fe57-985e-7b31" name="4. Territorial" hidden="false" collective="false" import="true" type="upgrade">
-              <profiles>
-                <profile id="61c0-165a-22cd-928b" name="Territorial" hidden="false" typeId="1504-23bf-8850-4f65" typeName="Command Traits">
-                  <characteristics>
-                    <characteristic name="Command Trait" typeId="0145-9acf-f5dc-d543">You can re-roll hit rolls for attacks made with melee weapons by this general if they are wholly within your territory.</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-              <costs>
-                <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
-              </costs>
-            </selectionEntry>
-            <selectionEntry id="8ee8-86a2-4e85-e454" name="5. Skin-taker" hidden="false" collective="false" import="true" type="upgrade">
-              <profiles>
-                <profile id="ae65-fab3-f5c5-5ff1" name="Skin-taker" hidden="false" typeId="1504-23bf-8850-4f65" typeName="Command Traits">
-                  <characteristics>
-                    <characteristic name="Command Trait" typeId="0145-9acf-f5dc-d543">At the end of the combat phase, if any enemy models were slain by wounds inflicted by this general’s attacks in that phase, you can heal up to D3 wounds allocated to this general.</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-              <costs>
-                <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
-              </costs>
-            </selectionEntry>
-            <selectionEntry id="b4db-34e2-a917-8c0e" name="6. Delusions of Infallibility" hidden="false" collective="false" import="true" type="upgrade">
-              <profiles>
-                <profile id="b62f-91a0-4902-3a99" name="Delusions of Infallibility" hidden="false" typeId="1504-23bf-8850-4f65" typeName="Command Traits">
-                  <characteristics>
-                    <characteristic name="Command Trait" typeId="0145-9acf-f5dc-d543">Add 2 to the Wounds characteristic of this general.</characteristic>
+                    <characteristic name="Command Trait" typeId="0145-9acf-f5dc-d543">At the start of the combat phase, you can pick 1 enemy unit within 6&quot; of this general. Until the end of that phase, add 1 to hit rolls for attacks made by that unit, but subtract 1 from save rolls for attacks that target that unit.</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
@@ -1411,16 +1283,11 @@ If that HERO you picked has an artefact of power, instead of suffering 1 mortal 
             </selectionEntry>
           </selectionEntries>
         </selectionEntryGroup>
-        <selectionEntryGroup id="8c29-e0f0-b859-f711" name="Pretenders Command Traits" hidden="false" collective="false" import="true">
+        <selectionEntryGroup id="8c29-e0f0-b859-f711" name="Aspects of the Perfect Liege" hidden="false" collective="false" import="true">
           <modifiers>
             <modifier type="set" field="hidden" value="true">
               <conditions>
                 <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="02b3-0743-81d2-87d5" type="equalTo"/>
-              </conditions>
-            </modifier>
-            <modifier type="set" field="b4b1-d5c9-82a5-7d50" value="2.0">
-              <conditions>
-                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="02b3-0743-81d2-87d5" type="greaterThan"/>
               </conditions>
             </modifier>
           </modifiers>
@@ -1428,59 +1295,14 @@ If that HERO you picked has an artefact of power, instead of suffering 1 mortal 
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="b4b1-d5c9-82a5-7d50" type="max"/>
           </constraints>
           <selectionEntries>
-            <selectionEntry id="2ff8-aebc-8f5b-d5f8" name="6. Inspirer" hidden="false" collective="false" import="true" type="upgrade">
-              <constraints>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="eed3-f969-35aa-8f47" type="max"/>
-              </constraints>
-              <profiles>
-                <profile id="f0ea-824e-1219-0177" name="Inspirer" hidden="false" typeId="1504-23bf-8850-4f65" typeName="Command Traits">
-                  <characteristics>
-                    <characteristic name="Command Trait" typeId="0145-9acf-f5dc-d543">You can re-roll battleshock tests for friendly PRETENDERS units while they are wholly within 9&quot; of this general.</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-              <costs>
-                <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
-              </costs>
-            </selectionEntry>
-            <selectionEntry id="db6b-3dc5-8d94-3a83" name="3. Craving Stare" hidden="false" collective="false" import="true" type="upgrade">
-              <constraints>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="a94a-664a-05dd-6146" type="max"/>
-              </constraints>
-              <profiles>
-                <profile id="ba0e-7a1f-f7e7-46a7" name="Craving Stare" hidden="false" typeId="1504-23bf-8850-4f65" typeName="Command Traits">
-                  <characteristics>
-                    <characteristic name="Command Trait" typeId="0145-9acf-f5dc-d543">If an enemy unit fails a battleshock test within 6&quot; of this general, add D3 to the number of models that flee.</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-              <costs>
-                <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
-              </costs>
-            </selectionEntry>
-            <selectionEntry id="7fe2-0520-78e6-fca9" name="4. Strongest Alone" hidden="false" collective="false" import="true" type="upgrade">
+            <selectionEntry id="7fe2-0520-78e6-fca9" name="1. Strongest Alone" hidden="false" collective="false" import="true" type="upgrade">
               <constraints>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="20ef-dd7e-5aab-4374" type="max"/>
               </constraints>
               <profiles>
                 <profile id="8ad4-7389-43fe-b69d" name="Strongest Alone" hidden="false" typeId="1504-23bf-8850-4f65" typeName="Command Traits">
                   <characteristics>
-                    <characteristic name="Command Trait" typeId="0145-9acf-f5dc-d543">You can re-roll hit rolls for attacks made by this general while there are no other friendly models within 6&quot; of them.</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-              <costs>
-                <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
-              </costs>
-            </selectionEntry>
-            <selectionEntry id="23de-cce6-3280-a5db" name="5. Hunter of Godbeasts" hidden="false" collective="false" import="true" type="upgrade">
-              <constraints>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d1f6-dff9-83da-0a8b" type="max"/>
-              </constraints>
-              <profiles>
-                <profile id="1bc0-fd17-cfa2-5660" name="Hunter of Godbeasts" hidden="false" typeId="1504-23bf-8850-4f65" typeName="Command Traits">
-                  <characteristics>
-                    <characteristic name="Command Trait" typeId="0145-9acf-f5dc-d543">Add 1 to the damage inflicted by successful attacks made by this general that target a MONSTER.</characteristic>
+                    <characteristic name="Command Trait" typeId="0145-9acf-f5dc-d543">Add 1 to hit rolls and wound rolls for this general while they are more than 6&quot; from all other friendly units.</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
@@ -1495,7 +1317,7 @@ If that HERO you picked has an artefact of power, instead of suffering 1 mortal 
               <profiles>
                 <profile id="d496-a43c-616a-3565" name="Monarch of Lies" hidden="false" typeId="1504-23bf-8850-4f65" typeName="Command Traits">
                   <characteristics>
-                    <characteristic name="Command Trait" typeId="0145-9acf-f5dc-d543">At the start of the combat phase, pick 1 enemy HERO within 3&quot; of this general. Subtract 1 from hit rolls for attacks made by that HERO in that phase.</characteristic>
+                    <characteristic name="Command Trait" typeId="0145-9acf-f5dc-d543">Roll a dice each time an enemy unit receives a command within 6&quot; of this general. On a 5+, that command is not received (it still counts as having been used) and the command point that was spent to issue that command is lost.</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
@@ -1503,14 +1325,14 @@ If that HERO you picked has an artefact of power, instead of suffering 1 mortal 
                 <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
               </costs>
             </selectionEntry>
-            <selectionEntry id="7f04-fd7d-6fd0-d218" name="1. Strength of Godhood" hidden="false" collective="false" import="true" type="upgrade">
+            <selectionEntry id="7f04-fd7d-6fd0-d218" name="3. Strength of Godhood" hidden="false" collective="false" import="true" type="upgrade">
               <constraints>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="795b-033b-1be0-8d3e" type="max"/>
               </constraints>
               <profiles>
                 <profile id="b44d-80ad-42a6-4408" name="Strength of Godhood" hidden="false" typeId="1504-23bf-8850-4f65" typeName="Command Traits">
                   <characteristics>
-                    <characteristic name="Command Trait" typeId="0145-9acf-f5dc-d543">Once per combat phase, in step 4 of the attack sequence, you can add 1 to the damage inflicted by 1 successful attack made by this general.</characteristic>
+                    <characteristic name="Command Trait" typeId="0145-9acf-f5dc-d543">Once per turn, if this general issues a command to a different friendly HEDONITES OF SLAANESH unit, until the end of that turn, improve the Rend characteristic of this general’s melee weapons by 1 and add 1 to the Damage characteristic of this general’s melee weapons.</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
@@ -1520,7 +1342,7 @@ If that HERO you picked has an artefact of power, instead of suffering 1 mortal 
             </selectionEntry>
           </selectionEntries>
         </selectionEntryGroup>
-        <selectionEntryGroup id="91a3-b958-778c-0b4c" name="Godseekers Command Traits" hidden="false" collective="false" import="true">
+        <selectionEntryGroup id="91a3-b958-778c-0b4c" name="Traits of the Seeker Supreme" hidden="false" collective="false" import="true">
           <modifiers>
             <modifier type="set" field="hidden" value="true">
               <conditions>
@@ -1532,11 +1354,11 @@ If that HERO you picked has an artefact of power, instead of suffering 1 mortal 
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="01c8-c4cf-4940-6563" type="max"/>
           </constraints>
           <selectionEntries>
-            <selectionEntry id="347d-9ab0-6282-0abe" name="6. Speed-chaser" hidden="false" collective="false" import="true" type="upgrade">
+            <selectionEntry id="347d-9ab0-6282-0abe" name="2. Speed-chaser" hidden="false" collective="false" import="true" type="upgrade">
               <profiles>
                 <profile id="a6d7-e873-cadc-701d" name="Speed-chaser" hidden="false" typeId="1504-23bf-8850-4f65" typeName="Command Traits">
                   <characteristics>
-                    <characteristic name="Command Trait" typeId="0145-9acf-f5dc-d543">This general can retreat and still charge later in the same turn.</characteristic>
+                    <characteristic name="Command Trait" typeId="0145-9acf-f5dc-d543">After this general makes a charge move, you can pick 1 enemy unit within 1&quot; of this general and roll a number of dice equal to the charge roll for that charge move. For each 4+, that enemy unit suffers 1 mortal wound.</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
@@ -1544,11 +1366,11 @@ If that HERO you picked has an artefact of power, instead of suffering 1 mortal 
                 <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
               </costs>
             </selectionEntry>
-            <selectionEntry id="87bb-f45b-fdf9-e6a0" name="3. Into the Fray" hidden="false" collective="false" import="true" type="upgrade">
+            <selectionEntry id="87bb-f45b-fdf9-e6a0" name="1. Into the Fray" hidden="false" collective="false" import="true" type="upgrade">
               <profiles>
                 <profile id="3c4d-265f-0c33-4bc5" name="Into the Fray" hidden="false" typeId="1504-23bf-8850-4f65" typeName="Command Traits">
                   <characteristics>
-                    <characteristic name="Command Trait" typeId="0145-9acf-f5dc-d543">The hit roll for the first attack made by this general during the battle is automatically a 6 (do not roll the dice).</characteristic>
+                    <characteristic name="Command Trait" typeId="0145-9acf-f5dc-d543">The strike-first effect applies to this general if they made a charge move in the same turn.</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
@@ -1556,47 +1378,11 @@ If that HERO you picked has an artefact of power, instead of suffering 1 mortal 
                 <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
               </costs>
             </selectionEntry>
-            <selectionEntry id="ba91-3f4e-c965-68fc" name="5. Symphoniac" hidden="false" collective="false" import="true" type="upgrade">
-              <profiles>
-                <profile id="785e-4cec-afc5-fd5e" name="Symphoniac" hidden="false" typeId="1504-23bf-8850-4f65" typeName="Command Traits">
-                  <characteristics>
-                    <characteristic name="Command Trait" typeId="0145-9acf-f5dc-d543">At the start of the combat phase, roll 1 dice for each enemy unit within 3&quot; of this general. On a 3+, that enemy unit suffers 1 mortal wound.</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-              <costs>
-                <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
-              </costs>
-            </selectionEntry>
-            <selectionEntry id="8c23-2696-357a-7555" name="4. Trail-sniffer" hidden="false" collective="false" import="true" type="upgrade">
-              <profiles>
-                <profile id="a156-f462-8e7b-8c58" name="Trail-sniffer" hidden="false" typeId="1504-23bf-8850-4f65" typeName="Command Traits">
-                  <characteristics>
-                    <characteristic name="Command Trait" typeId="0145-9acf-f5dc-d543">At the start of your hero phase, roll a dice if this general is wholly within enemy territory. On a 3+, add 1 to the Attacks characteristic of this general’s melee weapons until your next hero phase.</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-              <costs>
-                <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
-              </costs>
-            </selectionEntry>
-            <selectionEntry id="d274-199f-5617-f70d" name="2. Sweeping Slash" hidden="false" collective="false" import="true" type="upgrade">
-              <profiles>
-                <profile id="e8a2-506a-3bc2-c707" name="Sweeping Slash" hidden="false" typeId="1504-23bf-8850-4f65" typeName="Command Traits">
-                  <characteristics>
-                    <characteristic name="Command Trait" typeId="0145-9acf-f5dc-d543">After this general makes a charge move, roll a dice for each enemy unit within 1&quot; of them. On a 2+, that unit suffers D3 mortal wounds.</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-              <costs>
-                <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
-              </costs>
-            </selectionEntry>
-            <selectionEntry id="bb66-374f-588b-6aa0" name="1. Hunter Supreme" hidden="false" collective="false" import="true" type="upgrade">
+            <selectionEntry id="bb66-374f-588b-6aa0" name="3. Hunter Supreme" hidden="false" collective="false" import="true" type="upgrade">
               <profiles>
                 <profile id="f3c8-48d2-ad83-b5fb" name="Hunter Supreme" hidden="false" typeId="1504-23bf-8850-4f65" typeName="Command Traits">
                   <characteristics>
-                    <characteristic name="Command Trait" typeId="0145-9acf-f5dc-d543">Re-roll hit and wound rolls of 1 for attacks made with melee weapons by this general if it made a charge move in the same turn.</characteristic>
+                    <characteristic name="Command Trait" typeId="0145-9acf-f5dc-d543">MONSTER only. Enemy units within 3&quot; of this general cannot make pile-in moves if this general made a charge move in the same turn. In addition, add 1 to the Attacks characteristic of this general’s melee weapons if they made a charge move in the same turn.</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
@@ -1608,7 +1394,7 @@ If that HERO you picked has an artefact of power, instead of suffering 1 mortal 
         </selectionEntryGroup>
       </selectionEntryGroups>
       <entryLinks>
-        <entryLink id="c656-e7d2-6834-aea7" name="Universal Command Traits" hidden="false" collective="false" import="true" targetId="20f0-6df9-b464-3789" type="selectionEntryGroup"/>
+        <entryLink id="c656-e7d2-6834-aea7" name="Rulebook Command Traits" hidden="false" collective="false" import="true" targetId="6978-81a2-4c55-65f3" type="selectionEntryGroup"/>
       </entryLinks>
     </selectionEntryGroup>
     <selectionEntryGroup id="a520-01ab-3cef-a486" name="Artefacts of Power" publicationId="29d6-453f-ecc0-3e4b" hidden="false" collective="false" import="true">
@@ -1634,7 +1420,7 @@ If that HERO you picked has an artefact of power, instead of suffering 1 mortal 
         <categoryLink id="3b4f-f587-ee77-cc21" name="Artefacts" hidden="false" targetId="ba14-5553-456e-33ad" primary="false"/>
       </categoryLinks>
       <selectionEntryGroups>
-        <selectionEntryGroup id="56ec-d94d-c296-0a58" name="Invaders Artefacts" hidden="false" collective="false" import="true">
+        <selectionEntryGroup id="56ec-d94d-c296-0a58" name="Sacred Spoils of War" hidden="false" collective="false" import="true">
           <modifiers>
             <modifier type="set" field="hidden" value="true">
               <conditions>
@@ -1646,14 +1432,14 @@ If that HERO you picked has an artefact of power, instead of suffering 1 mortal 
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="2451-feee-0c00-6bb9" type="max"/>
           </constraints>
           <selectionEntries>
-            <selectionEntry id="a483-40e9-f82f-93be" name="6 -- The Beguiling Gem" hidden="false" collective="false" import="true" type="upgrade">
+            <selectionEntry id="a483-40e9-f82f-93be" name="3 -- The Beguiling Gem" hidden="false" collective="false" import="true" type="upgrade">
               <constraints>
                 <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="ab34-5cf1-1611-b935" type="max"/>
               </constraints>
               <profiles>
                 <profile id="837c-452e-ceeb-361c" name="The Beguiling Gem" hidden="false" typeId="0c9d-7abe-a53c-6a37" typeName="Artefacts">
                   <characteristics>
-                    <characteristic name="Artefact" typeId="44b6-de26-0b54-1318">At the start of the combat phase, pick 1 enemy HERO within 3&quot; of the bearer and roll 3D6. If the roll is greater than that HERO’s Bravery characteristic, subtract 1 from the Attacks characteristic of all of that HERO’s melee weapons (to a minimum of 0) until the end of that phase.</characteristic>
+                    <characteristic name="Artefact" typeId="44b6-de26-0b54-1318">At the start of the combat phase, pick 1 enemy HERO within 3&quot; of the bearer and roll 3D6. If the roll is greater than that HERO’s Bravery characteristic, subtract 1 from the Attacks characteristic of that HERO’s melee weapons (to a minimum of 1) until the end of that phase.</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
@@ -1661,59 +1447,14 @@ If that HERO you picked has an artefact of power, instead of suffering 1 mortal 
                 <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
               </costs>
             </selectionEntry>
-            <selectionEntry id="ff60-26ea-5e1c-1277" name="3 -- Whip of Subversion" hidden="false" collective="false" import="true" type="upgrade">
-              <constraints>
-                <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="bc43-9a40-f96e-8896" type="max"/>
-              </constraints>
-              <profiles>
-                <profile id="fa9e-b0bf-4b58-8a95" name="Whip of Subversion" hidden="false" typeId="0c9d-7abe-a53c-6a37" typeName="Artefacts">
-                  <characteristics>
-                    <characteristic name="Artefact" typeId="44b6-de26-0b54-1318">At the end of the combat phase, you can pick 1 enemy HERO within 6&quot; of the bearer. Pick 1 melee weapon that HERO is armed with, then pick 1 other enemy unit within 3&quot; of that HERO. That unit suffers a number of mortal wounds equal to the unmodified Attacks characteristic of the melee weapon you picked.</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-              <costs>
-                <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
-              </costs>
-            </selectionEntry>
-            <selectionEntry id="1abd-a11a-eaff-18dc" name="5 -- Fallacious Gift" hidden="false" collective="false" import="true" type="upgrade">
-              <constraints>
-                <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="b369-c7b8-6579-a41a" type="max"/>
-              </constraints>
-              <profiles>
-                <profile id="63c4-82ca-977f-dcaa" name="Fallacious Gift" hidden="false" typeId="0c9d-7abe-a53c-6a37" typeName="Artefacts">
-                  <characteristics>
-                    <characteristic name="Artefact" typeId="44b6-de26-0b54-1318">After set-up is complete, but before the battle begins, pick 1 enemy HERO on the battlefield, then pick one of their weapons. At the end of each battle round in which that HERO has attacked with that weapon, that HERO suffers 1 mortal wound.</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-              <costs>
-                <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
-              </costs>
-            </selectionEntry>
-            <selectionEntry id="b27f-8ab4-ed2a-c120" name="2 -- Rapier of Ecstatic Conquest" hidden="false" collective="false" import="true" type="upgrade">
-              <constraints>
-                <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="4ebf-3306-735b-742a" type="max"/>
-              </constraints>
-              <profiles>
-                <profile id="bfa5-f7fd-0900-ad1f" name="Rapier of Ecstatic Conquest" hidden="false" typeId="0c9d-7abe-a53c-6a37" typeName="Artefacts">
-                  <characteristics>
-                    <characteristic name="Artefact" typeId="44b6-de26-0b54-1318">Pick 1 of the bearer’s melee weapons. If the unmodified wound roll for an attack made with that weapon is 6, that attack inflicts 1 mortal wound on the target in addition to any normal damage.</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-              <costs>
-                <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
-              </costs>
-            </selectionEntry>
-            <selectionEntry id="83a8-b36a-e318-d618" name="4 -- Icon of Infinite Excess" hidden="false" collective="false" import="true" type="upgrade">
+            <selectionEntry id="83a8-b36a-e318-d618" name="2 -- Icon of Infinite Excess" hidden="false" collective="false" import="true" type="upgrade">
               <constraints>
                 <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="4c61-a7d1-e6e1-9b49" type="max"/>
               </constraints>
               <profiles>
                 <profile id="8393-1be1-ebd3-1d9d" name="Icon of Infinite Excess" hidden="false" typeId="0c9d-7abe-a53c-6a37" typeName="Artefacts">
                   <characteristics>
-                    <characteristic name="Artefact" typeId="44b6-de26-0b54-1318">Once per battle, at the start of the combat phase, the bearer can use this artefact. If they do so, until the end of that phase, add 1 to hit rolls for attacks made with melee weapons by friendly HEDONITE units while they are wholly within 12&quot; of the bearer.</characteristic>
+                    <characteristic name="Artefact" typeId="44b6-de26-0b54-1318">Once per battle, at the start of the combat phase, you can say that the bearer will plant the Icon of Infinite Excess. If you do so, add 1 to the Attacks characteristic of weapons used by friendly HEDONITES OF SLAANESH units on the battlefield until the end of that phase.</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
@@ -1728,7 +1469,7 @@ If that HERO you picked has an artefact of power, instead of suffering 1 mortal 
               <profiles>
                 <profile id="abfc-9285-6615-5c14" name="The Rod of Misrule" hidden="false" typeId="0c9d-7abe-a53c-6a37" typeName="Artefacts">
                   <characteristics>
-                    <characteristic name="Artefact" typeId="44b6-de26-0b54-1318">At the start of your hero phase, roll a dice. On a 1, your opponent receives 1 command point. On a 2-5 you receive 1 command point. On a 6, you receive D3 command points.</characteristic>
+                    <characteristic name="Artefact" typeId="44b6-de26-0b54-1318">Keep track of the number of unmodified hit rolls of 6 and unmodified wound rolls of 6 for attacks made by the bearer in each turn. At the end of the battleshock phase, if the total is 6 or more and the bearer is on the battlefield, you gain 1 depravity point.</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
@@ -1738,7 +1479,7 @@ If that HERO you picked has an artefact of power, instead of suffering 1 mortal 
             </selectionEntry>
           </selectionEntries>
         </selectionEntryGroup>
-        <selectionEntryGroup id="28a5-5193-7184-ebcb" name="Pretenders Artefacts" hidden="false" collective="false" import="true">
+        <selectionEntryGroup id="28a5-5193-7184-ebcb" name="Regalia of the Rightful Heir" hidden="false" collective="false" import="true">
           <modifiers>
             <modifier type="set" field="hidden" value="true">
               <conditions>
@@ -1750,59 +1491,14 @@ If that HERO you picked has an artefact of power, instead of suffering 1 mortal 
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="46eb-1e3f-a771-70a2" type="max"/>
           </constraints>
           <selectionEntries>
-            <selectionEntry id="809a-9888-dc95-aed7" name="6 -- Mask of Spiteful Beauty" hidden="false" collective="false" import="true" type="upgrade">
-              <constraints>
-                <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="f121-ffdc-4e0b-35b0" type="max"/>
-              </constraints>
-              <profiles>
-                <profile id="4a07-1161-f514-baba" name="Mask of Spiteful Beauty" hidden="false" typeId="0c9d-7abe-a53c-6a37" typeName="Artefacts">
-                  <characteristics>
-                    <characteristic name="Artefact" typeId="44b6-de26-0b54-1318">At the start of your hero phase, pick 1 enemy unit within 6&quot; of the bearer. Subtract 2 from that unit’s Bravery characteristic until your next hero phase.</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-              <costs>
-                <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
-              </costs>
-            </selectionEntry>
-            <selectionEntry id="a267-1f5f-c14c-d99e" name="4 -- Sceptre of Domination" hidden="false" collective="false" import="true" type="upgrade">
+            <selectionEntry id="a267-1f5f-c14c-d99e" name="2 -- Sceptre of Domination" hidden="false" collective="false" import="true" type="upgrade">
               <constraints>
                 <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="77ba-f235-ee63-8b57" type="max"/>
               </constraints>
               <profiles>
                 <profile id="4920-718a-0b54-d99a" name="Sceptre of Domination" hidden="false" typeId="0c9d-7abe-a53c-6a37" typeName="Artefacts">
                   <characteristics>
-                    <characteristic name="Artefact" typeId="44b6-de26-0b54-1318">At the start of the hero phase, if the bearer is within 12&quot; of any enemy HEROES, and your opponent has any command points, roll a dice. On a 4+, your opponent loses 1 command point and you receive 1 command point.</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-              <costs>
-                <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
-              </costs>
-            </selectionEntry>
-            <selectionEntry id="682c-597e-4d6f-9a9f" name="2 -- Pendant of Slaanesh" hidden="false" collective="false" import="true" type="upgrade">
-              <constraints>
-                <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="81ef-4124-5f17-de69" type="max"/>
-              </constraints>
-              <profiles>
-                <profile id="60e9-e489-5a32-93b0" name="Pendant of Slaanesh" hidden="false" typeId="0c9d-7abe-a53c-6a37" typeName="Artefacts">
-                  <characteristics>
-                    <characteristic name="Artefact" typeId="44b6-de26-0b54-1318">At the start of your hero phase, you can heal up to D3 wounds allocated to the bearer.</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-              <costs>
-                <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
-              </costs>
-            </selectionEntry>
-            <selectionEntry id="a81a-1973-f8da-fd36" name="3 -- Sliverslash" hidden="false" collective="false" import="true" type="upgrade">
-              <constraints>
-                <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="c232-a7d8-781a-60dd" type="max"/>
-              </constraints>
-              <profiles>
-                <profile id="713c-3bee-35ba-3c98" name="Sliverslash" hidden="false" typeId="0c9d-7abe-a53c-6a37" typeName="Artefacts">
-                  <characteristics>
-                    <characteristic name="Artefact" typeId="44b6-de26-0b54-1318">Pick 1 of the bearer’s melee weapons. Add 1 to the Attacks characteristic of that weapon.</characteristic>
+                    <characteristic name="Artefact" typeId="44b6-de26-0b54-1318">At the start of the combat phase, roll a dice for each enemy unit within 3&quot; of the bearer. On a 5+, the strike-last effect applies to that unit until the end of that phase.</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
@@ -1817,7 +1513,7 @@ If that HERO you picked has an artefact of power, instead of suffering 1 mortal 
               <profiles>
                 <profile id="19ed-b095-287a-f259" name="The Crown of Dark Secrets" hidden="false" typeId="0c9d-7abe-a53c-6a37" typeName="Artefacts">
                   <characteristics>
-                    <characteristic name="Artefact" typeId="44b6-de26-0b54-1318">At the start of the first battle round, pick 1 enemy HERO. You can re-roll hit rolls for attacks made by the bearer that target that HERO, and you can re-roll unbinding rolls for the bearer for spells cast by that HERO.</characteristic>
+                    <characteristic name="Artefact" typeId="44b6-de26-0b54-1318">At the start of your first hero phase, pick 1 enemy unit on the battlefield. For the rest of the battle, while that unit is within 6&quot; of the bearer, the Attacks characteristic of that unit’s melee weapons is 1.</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
@@ -1825,14 +1521,14 @@ If that HERO you picked has an artefact of power, instead of suffering 1 mortal 
                 <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
               </costs>
             </selectionEntry>
-            <selectionEntry id="62e5-54b1-fd15-3d8d" name="5 -- Breathtaker" hidden="false" collective="false" import="true" type="upgrade">
+            <selectionEntry id="62e5-54b1-fd15-3d8d" name="3 -- Breathtaker" hidden="false" collective="false" import="true" type="upgrade">
               <constraints>
                 <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="b333-dd67-550d-965f" type="max"/>
               </constraints>
               <profiles>
                 <profile id="2d2c-0132-1179-11dc" name="Breathtaker" hidden="false" typeId="0c9d-7abe-a53c-6a37" typeName="Artefacts">
                   <characteristics>
-                    <characteristic name="Artefact" typeId="44b6-de26-0b54-1318">You can re-roll the dice roll that determines if an enemy HERO within 6&quot; of the bearer is affected by the Locus of Diversion battle trait.</characteristic>
+                    <characteristic name="Artefact" typeId="44b6-de26-0b54-1318">Pick 1 of the bearer’s melee weapons. If an enemy model is slain by an attack made with that weapon, all effects that would be triggered when that model is slain are ignored.</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
@@ -1842,7 +1538,7 @@ If that HERO you picked has an artefact of power, instead of suffering 1 mortal 
             </selectionEntry>
           </selectionEntries>
         </selectionEntryGroup>
-        <selectionEntryGroup id="37fe-c03e-5dae-c56d" name="Godseekers Artefacts" hidden="false" collective="false" import="true">
+        <selectionEntryGroup id="37fe-c03e-5dae-c56d" name="Treasures of the Hunt" hidden="false" collective="false" import="true">
           <modifiers>
             <modifier type="set" field="hidden" value="true">
               <conditions>
@@ -1854,44 +1550,14 @@ If that HERO you picked has an artefact of power, instead of suffering 1 mortal 
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="c79b-ab88-c8d8-bbed" type="max"/>
           </constraints>
           <selectionEntries>
-            <selectionEntry id="e4b8-f32c-8e24-2e8d" name="6 -- Bindings of Slaanesh" hidden="false" collective="false" import="true" type="upgrade">
-              <constraints>
-                <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="b8c6-461d-1f32-45e2" type="max"/>
-              </constraints>
-              <profiles>
-                <profile id="0ff5-b529-10b4-ba89" name="Bindings of Slaanesh" hidden="false" typeId="0c9d-7abe-a53c-6a37" typeName="Artefacts">
-                  <characteristics>
-                    <characteristic name="Artefact" typeId="44b6-de26-0b54-1318">At the start of the combat phase, you can pick 1 enemy HERO within 3&quot; of the bearer and roll 2D6. If the roll is greater than that HERO’s Move characteristic, subtract 1 from hit rolls for attacks made by that HERO until the end of that phase.</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-              <costs>
-                <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
-              </costs>
-            </selectionEntry>
-            <selectionEntry id="50fa-7bc7-4f4c-ff11" name="5 -- Enrapturing Circlet" hidden="false" collective="false" import="true" type="upgrade">
-              <constraints>
-                <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="fc81-97a9-ecdd-12b1" type="max"/>
-              </constraints>
-              <profiles>
-                <profile id="c5ed-b42f-9e13-7a9e" name="Enrapturing Circlet" hidden="false" typeId="0c9d-7abe-a53c-6a37" typeName="Artefacts">
-                  <characteristics>
-                    <characteristic name="Artefact" typeId="44b6-de26-0b54-1318">Enemy units within 3&quot; of the bearer cannot retreat. In addition, at the start of your hero phase, roll a dice for each enemy unit within 3&quot; of the bearer. On a 3+, that enemy unit suffers 1 mortal wound.</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-              <costs>
-                <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
-              </costs>
-            </selectionEntry>
-            <selectionEntry id="1fe0-5ced-cc7e-da07" name="2 -- Girdle of the Realm-racer" hidden="false" collective="false" import="true" type="upgrade">
+            <selectionEntry id="1fe0-5ced-cc7e-da07" name="3 -- Girdle of the Realm-racer" hidden="false" collective="false" import="true" type="upgrade">
               <constraints>
                 <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="082e-c0d1-616f-76c3" type="max"/>
               </constraints>
               <profiles>
                 <profile id="bfd1-1133-ff09-3f47" name="Girdle of the Realm-racer" hidden="false" typeId="0c9d-7abe-a53c-6a37" typeName="Artefacts">
                   <characteristics>
-                    <characteristic name="Artefact" typeId="44b6-de26-0b54-1318">Subtract 1 from the bearer’s Wounds characteristic. In addition, the bearer can fly.</characteristic>
+                    <characteristic name="Artefact" typeId="44b6-de26-0b54-1318">The bearer can fly. In addition, the bearer is eligible to fight in the combat phase if they are within 6&quot; of any enemy units instead of 3&quot;, and they can move an extra 3&quot; when they pile in.</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
@@ -1899,29 +1565,14 @@ If that HERO you picked has an artefact of power, instead of suffering 1 mortal 
                 <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
               </costs>
             </selectionEntry>
-            <selectionEntry id="56d1-39f2-2402-9203" name="3 -- Threnody Voicebox" hidden="false" collective="false" import="true" type="upgrade">
+            <selectionEntry id="56d1-39f2-2402-9203" name="2 -- Threnody Voicebox" hidden="false" collective="false" import="true" type="upgrade">
               <constraints>
                 <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="120e-6d0c-36b4-66c2" type="max"/>
               </constraints>
               <profiles>
                 <profile id="e478-7875-abc6-a108" name="Threnody Voicebox" hidden="false" typeId="0c9d-7abe-a53c-6a37" typeName="Artefacts">
                   <characteristics>
-                    <characteristic name="Artefact" typeId="44b6-de26-0b54-1318">At the start of the combat phase, you can pick 1 enemy HERO that is within 3&quot; of the bearer. Subtract 1 from the Attacks characteristic of melee weapons used by that HERO (to a minimum of 1) until the end of that phase.</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-              <costs>
-                <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
-              </costs>
-            </selectionEntry>
-            <selectionEntry id="49bd-7db5-4270-0486" name="4 -- Lash of Despair" hidden="false" collective="false" import="true" type="upgrade">
-              <constraints>
-                <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="ee7a-8760-206c-b707" type="max"/>
-              </constraints>
-              <profiles>
-                <profile id="df21-237e-2505-cd68" name="Lash of Despair" hidden="false" typeId="0c9d-7abe-a53c-6a37" typeName="Artefacts">
-                  <characteristics>
-                    <characteristic name="Artefact" typeId="44b6-de26-0b54-1318">At the start of your shooting phase, you can roll a dice for each enemy unit within 6&quot; of the bearer. On a 4+ that unit suffers 1 mortal wound.</characteristic>
+                    <characteristic name="Artefact" typeId="44b6-de26-0b54-1318">Once per battle, at the start of the combat phase, you can say that the bearer will play their melody. If you do so, until the end of that phase, subtract 1 from the Attacks characteristic of melee weapons used by enemy units within 6&quot; of the bearer (to a minimum of 1).</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
@@ -1936,7 +1587,7 @@ If that HERO you picked has an artefact of power, instead of suffering 1 mortal 
               <profiles>
                 <profile id="5cde-5960-9bf7-84f8" name="Cameo of the Dark Prince" hidden="false" typeId="0c9d-7abe-a53c-6a37" typeName="Artefacts">
                   <characteristics>
-                    <characteristic name="Artefact" typeId="44b6-de26-0b54-1318">Once per battle, at the start of your hero phase, the bearer can use this artefact. If they do so, you receive 1 command point.</characteristic>
+                    <characteristic name="Artefact" typeId="44b6-de26-0b54-1318">Once per battle, at the start of your hero phase, you can say that the bearer will gaze upon the cameo. If you do so, until the end of that turn, the bearer can issue commands to friendly HEDONITES OF SLAANESH units without any command points being spent.</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
@@ -1948,7 +1599,7 @@ If that HERO you picked has an artefact of power, instead of suffering 1 mortal 
         </selectionEntryGroup>
       </selectionEntryGroups>
       <entryLinks>
-        <entryLink id="475b-b381-d510-8e13" name="Universal Artefacts of Power" hidden="false" collective="false" import="true" targetId="dbd8-8f6f-f44a-884a" type="selectionEntryGroup"/>
+        <entryLink id="475b-b381-d510-8e13" name="Rulebook Artefacts of Power" hidden="false" collective="false" import="true" targetId="836b-19a4-b5b4-570d" type="selectionEntryGroup"/>
       </entryLinks>
     </selectionEntryGroup>
     <selectionEntryGroup id="b8bc-66a0-c35b-a31e" name="Hedonites Prayer Scriptures" hidden="false" collective="false" import="true">
@@ -1979,7 +1630,7 @@ If that HERO you picked has an artefact of power, instead of suffering 1 mortal 
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="eb97-d067-216c-7b16" type="max"/>
       </constraints>
       <entryLinks>
-        <entryLink id="1c5d-effe-7eba-828f" name="Universal Prayer Scripture" hidden="false" collective="false" import="true" targetId="7104-ab27-d136-1df0" type="selectionEntryGroup"/>
+        <entryLink id="1c5d-effe-7eba-828f" name="Rulebook Prayer Scriptures" hidden="false" collective="false" import="true" targetId="42b2-cfa5-744f-8062" type="selectionEntryGroup"/>
       </entryLinks>
     </selectionEntryGroup>
     <selectionEntryGroup id="d07d-93de-3bf7-d401" name="Battalion Formation" hidden="false" collective="false" import="true">
@@ -1993,88 +1644,6 @@ If that HERO you picked has an artefact of power, instead of suffering 1 mortal 
       <constraints>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="a586-2251-0f52-37b9" type="max"/>
       </constraints>
-      <selectionEntryGroups>
-        <selectionEntryGroup id="35e7-a008-8b4b-f280" name="Hedonites of Slaanesh Battalions" hidden="false" collective="false" import="true">
-          <modifiers>
-            <modifier type="set" field="hidden" value="true">
-              <conditionGroups>
-                <conditionGroup type="or">
-                  <conditions>
-                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4373-740f-1bf3-b0aa" type="instanceOf"/>
-                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="e3a6-45ca-4974-b489" type="instanceOf"/>
-                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="996a-613c-4006-25e3" type="instanceOf"/>
-                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="6cd6-b22e-bfcb-9589" type="instanceOf"/>
-                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="b543-cb16-0c79-fbc6" type="instanceOf"/>
-                  </conditions>
-                  <conditionGroups>
-                    <conditionGroup type="and">
-                      <conditions>
-                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="df48-9f95-bf56-4b8d" type="equalTo"/>
-                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="3b2a-7a13-d929-283f" type="equalTo"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
-                </conditionGroup>
-              </conditionGroups>
-            </modifier>
-          </modifiers>
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="42d9-fe5f-efdc-8c34" type="max"/>
-          </constraints>
-          <selectionEntries>
-            <selectionEntry id="ee80-cf26-f0e8-9b75" name="Nobles of Excess" hidden="false" collective="false" import="true" type="upgrade">
-              <modifiers>
-                <modifier type="set" field="hidden" value="true">
-                  <conditionGroups>
-                    <conditionGroup type="or">
-                      <conditions>
-                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="df48-9f95-bf56-4b8d" type="equalTo"/>
-                      </conditions>
-                      <conditionGroups>
-                        <conditionGroup type="and">
-                          <conditions>
-                            <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="ba50-dcd8-d40c-3fd3" type="notInstanceOf"/>
-                            <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="d81b-3aa7-a34a-fa45" type="notInstanceOf"/>
-                          </conditions>
-                        </conditionGroup>
-                      </conditionGroups>
-                    </conditionGroup>
-                  </conditionGroups>
-                </modifier>
-              </modifiers>
-              <costs>
-                <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
-              </costs>
-            </selectionEntry>
-            <selectionEntry id="c737-c091-bcb0-5fd5" name="Epicurean Revellers" hidden="false" collective="false" import="true" type="upgrade">
-              <modifiers>
-                <modifier type="set" field="hidden" value="true">
-                  <conditionGroups>
-                    <conditionGroup type="or">
-                      <conditions>
-                        <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="3b2a-7a13-d929-283f" type="equalTo"/>
-                      </conditions>
-                      <conditionGroups>
-                        <conditionGroup type="and">
-                          <conditions>
-                            <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="0fb9-409f-8aa1-9619" type="notInstanceOf"/>
-                            <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="7618-2ff6-1bcf-4a74" type="notInstanceOf"/>
-                            <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="27cd-44d0-87c3-67ec" type="notInstanceOf"/>
-                            <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="d088-46fb-3c14-3933" type="notInstanceOf"/>
-                          </conditions>
-                        </conditionGroup>
-                      </conditionGroups>
-                    </conditionGroup>
-                  </conditionGroups>
-                </modifier>
-              </modifiers>
-              <costs>
-                <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
-              </costs>
-            </selectionEntry>
-          </selectionEntries>
-        </selectionEntryGroup>
-      </selectionEntryGroups>
       <entryLinks>
         <entryLink id="e5bd-453b-643e-ba7d" name="Core Battalions" hidden="false" collective="false" import="true" targetId="8c04-393d-d72d-c2a8" type="selectionEntryGroup"/>
       </entryLinks>

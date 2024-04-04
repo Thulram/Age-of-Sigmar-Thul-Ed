@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="66a6-81a6-dff2-a47d" name="Chaos - Skaven" revision="14" battleScribeVersion="2.03" authorName="Thulram" library="false" gameSystemId="e832-3291-06be-cab1" gameSystemRevision="13" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="66a6-81a6-dff2-a47d" name="Chaos - Skaven" revision="15" battleScribeVersion="2.03" authorName="Thulram" library="false" gameSystemId="e832-3291-06be-cab1" gameSystemRevision="14" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <profileTypes>
     <profileType id="c77c-8730-3d02-026d" name="Thanquol Wounds">
       <characteristicTypes>
@@ -344,6 +344,11 @@
             <characteristic name="Battle Tactic" typeId="8c0f-be41-a70e-c699">Pick 1 enemy HERO on the battlefield that has a Wounds characteristic of 10 or more and that has 0 wounds allocated to it. You complete this tactic if that HERO is slain in this turn by attacks made by friendly CLANS ESHIN units.</characteristic>
           </characteristics>
         </profile>
+        <profile id="0a73-bebe-f2d2-e3d7" name="Flee-flee!" hidden="false" typeId="4bb2-448c-446c-f522" typeName="Battle Tactic">
+          <characteristics>
+            <characteristic name="Battle Tactic" typeId="8c0f-be41-a70e-c699">ou complete this battle tactic at the end of the turn if 2 or more friendly SKAVEN units retreated this turn.</characteristic>
+          </characteristics>
+        </profile>
       </profiles>
       <categoryLinks>
         <categoryLink id="2e8a-30c5-9051-811d" name="New CategoryLink" hidden="false" targetId="29f4-e63d-fa5b-1611" primary="true"/>
@@ -353,6 +358,44 @@
       </entryLinks>
       <costs>
         <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="5bd6-bca0-f71a-19a0" name="Skabbik Plagueseeker &amp; Plaguepack (separate units)" hidden="false" collective="false" import="true" type="upgrade">
+      <constraints>
+        <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="a666-c871-0f16-a2f7" type="max"/>
+      </constraints>
+      <categoryLinks>
+        <categoryLink id="66d4-9275-4d5a-4365" name="New CategoryLink" hidden="false" targetId="93cb-21d9-e1d5-6161" primary="true"/>
+      </categoryLinks>
+      <entryLinks>
+        <entryLink id="a8b0-18fe-9223-9e38" name="Skabbik Plagueseeker" hidden="false" collective="false" import="true" targetId="f523-f563-22a3-b33f" type="selectionEntry">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="e1b3-0939-47db-9712" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="77fd-9525-8f3f-a10d" type="min"/>
+          </constraints>
+          <entryLinks>
+            <entryLink id="f697-eba2-26aa-844f" name="General" hidden="false" collective="false" import="true" targetId="98a4-3d6d-a7b9-399f" type="selectionEntry">
+              <categoryLinks>
+                <categoryLink id="2716-aa5a-be52-6351" name="General - Clans Pestilens" hidden="false" targetId="6f9f-86cb-de0f-e1d3" primary="false"/>
+                <categoryLink id="f987-e090-6a46-a54c" name="Named General" hidden="false" targetId="8b3d-7f03-e1f9-eaf5" primary="false"/>
+              </categoryLinks>
+            </entryLink>
+            <entryLink id="f3bf-53d8-66cd-9333" name="Skaven Prayer Scriptures" hidden="false" collective="false" import="true" targetId="2a51-31df-da6a-39a1" type="selectionEntryGroup"/>
+            <entryLink id="ddf8-d0fa-0dce-3cb1" name="Core Battalions" hidden="false" collective="false" import="true" targetId="8c04-393d-d72d-c2a8" type="selectionEntryGroup"/>
+          </entryLinks>
+        </entryLink>
+        <entryLink id="558a-f771-e9d0-0cde" name="Skabbik&apos;s Plaguepack" hidden="false" collective="false" import="true" targetId="aab8-8d3a-a9ad-7958" type="selectionEntry">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="b6df-72e6-82cf-6e98" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="9e30-407a-f105-74c7" type="min"/>
+          </constraints>
+          <entryLinks>
+            <entryLink id="9163-bce0-4914-9dff" name="Core Battalions" hidden="false" collective="false" import="true" targetId="8c04-393d-d72d-c2a8" type="selectionEntryGroup"/>
+          </entryLinks>
+        </entryLink>
+      </entryLinks>
+      <costs>
+        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="140.0"/>
       </costs>
     </selectionEntry>
   </selectionEntries>
@@ -830,19 +873,6 @@
       <entryLinks>
         <entryLink id="291b-bac4-1d32-7bcf" name="Clans Eshin Battleline" hidden="false" collective="false" import="true" targetId="0181-1d09-997f-c33d" type="selectionEntry"/>
         <entryLink id="a2eb-b610-5dfe-fe4d" name="Core Battalions" hidden="false" collective="false" import="true" targetId="8c04-393d-d72d-c2a8" type="selectionEntryGroup"/>
-      </entryLinks>
-    </entryLink>
-    <entryLink id="3224-3edd-0818-8501" name="Warpgnaw Verminlord" hidden="false" collective="false" import="true" targetId="21d9-5bf0-7ef4-a2d0" type="selectionEntry">
-      <entryLinks>
-        <entryLink id="ac87-7f16-4ae4-4ff6" name="General" hidden="false" collective="false" import="true" targetId="98a4-3d6d-a7b9-399f" type="selectionEntry">
-          <categoryLinks>
-            <categoryLink id="ddbe-25f5-a512-624a" name="General - Masterclan" hidden="false" targetId="919c-6d43-b39b-f8bf" primary="false"/>
-          </categoryLinks>
-        </entryLink>
-        <entryLink id="2ff6-50f9-daf4-ddb4" name="Artefacts of Power" hidden="false" collective="false" import="true" targetId="5243-a5a2-153c-c2b6" type="selectionEntryGroup"/>
-        <entryLink id="d731-919a-0560-369e" name="Command Traits" hidden="false" collective="false" import="true" targetId="92cc-d426-c551-59a5" type="selectionEntryGroup"/>
-        <entryLink id="4bf3-27c6-50bb-165d" name="Skaventide Spell Lores" hidden="false" collective="false" import="true" targetId="e7ca-7618-0f02-00ef" type="selectionEntryGroup"/>
-        <entryLink id="2f17-607a-0ee8-14fa" name="Core Battalions" hidden="false" collective="false" import="true" targetId="8c04-393d-d72d-c2a8" type="selectionEntryGroup"/>
       </entryLinks>
     </entryLink>
   </entryLinks>
@@ -1596,7 +1626,7 @@ Designer’s Note: You can use this ability once per turn with each Gnawhole fac
         </selectionEntryGroup>
       </selectionEntryGroups>
       <entryLinks>
-        <entryLink id="f028-e227-ec09-e8b7" name="Universal Command Traits" hidden="false" collective="false" import="true" targetId="20f0-6df9-b464-3789" type="selectionEntryGroup"/>
+        <entryLink id="f028-e227-ec09-e8b7" name="Rulebook Command Traits" hidden="false" collective="false" import="true" targetId="6978-81a2-4c55-65f3" type="selectionEntryGroup"/>
       </entryLinks>
     </selectionEntryGroup>
     <selectionEntryGroup id="5243-a5a2-153c-c2b6" name="Artefacts of Power" publicationId="0a58-70a3-faa8-4b4c" hidden="false" collective="false" import="true">
@@ -2024,7 +2054,7 @@ Designer’s Note: You can use this ability once per turn with each Gnawhole fac
         </selectionEntryGroup>
       </selectionEntryGroups>
       <entryLinks>
-        <entryLink id="75f1-2bdc-b714-b586" name="Universal Artefacts of Power" hidden="false" collective="false" import="true" targetId="dbd8-8f6f-f44a-884a" type="selectionEntryGroup"/>
+        <entryLink id="75f1-2bdc-b714-b586" name="Rulebook Artefacts of Power" hidden="false" collective="false" import="true" targetId="836b-19a4-b5b4-570d" type="selectionEntryGroup"/>
       </entryLinks>
     </selectionEntryGroup>
     <selectionEntryGroup id="e7ca-7618-0f02-00ef" name="Skaven Spell Lores" hidden="false" collective="false" import="true">
@@ -2199,7 +2229,7 @@ Designer’s Note: You can use this ability once per turn with each Gnawhole fac
         </selectionEntryGroup>
       </selectionEntryGroups>
       <entryLinks>
-        <entryLink id="300d-e45c-794a-e813" name="Universal Spell Lore" hidden="false" collective="false" import="true" targetId="93f7-7e2a-3308-d150" type="selectionEntryGroup"/>
+        <entryLink id="300d-e45c-794a-e813" name="Rulebook Spell Lores" hidden="false" collective="false" import="true" targetId="8aee-7492-ee73-6d07" type="selectionEntryGroup"/>
       </entryLinks>
     </selectionEntryGroup>
     <selectionEntryGroup id="2a51-31df-da6a-39a1" name="Skaven Prayer Scriptures" hidden="false" collective="false" import="true">
@@ -2238,6 +2268,11 @@ Designer’s Note: You can use this ability once per turn with each Gnawhole fac
               </repeats>
               <conditions>
                 <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="9e49-bd7f-45ee-1a96" type="greaterThan"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="1679-25ac-d182-a514" type="notInstanceOf"/>
               </conditions>
             </modifier>
           </modifiers>
@@ -2285,7 +2320,7 @@ Designer’s Note: You can use this ability once per turn with each Gnawhole fac
         </selectionEntryGroup>
       </selectionEntryGroups>
       <entryLinks>
-        <entryLink id="17f1-e7a6-59fc-402b" name="Universal Prayer Scripture" hidden="false" collective="false" import="true" targetId="7104-ab27-d136-1df0" type="selectionEntryGroup"/>
+        <entryLink id="17f1-e7a6-59fc-402b" name="Rulebook Prayer Scriptures" hidden="false" collective="false" import="true" targetId="42b2-cfa5-744f-8062" type="selectionEntryGroup"/>
       </entryLinks>
     </selectionEntryGroup>
   </sharedSelectionEntryGroups>

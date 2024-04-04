@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="af77-d512-8a1c-bb4d" name="Order - Sylvaneth" revision="16" battleScribeVersion="2.03" authorName="Thulram" library="false" gameSystemId="e832-3291-06be-cab1" gameSystemRevision="15" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="af77-d512-8a1c-bb4d" name="Order - Sylvaneth" revision="17" battleScribeVersion="2.03" authorName="Thulram" library="false" gameSystemId="e832-3291-06be-cab1" gameSystemRevision="17" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <categoryEntries>
     <categoryEntry id="6bc7-51c4-43a5-9b1b" name="Gnarlroot" hidden="false"/>
     <categoryEntry id="5953-aa46-e26e-7dc2" name="Heartwood" hidden="false"/>
@@ -31,6 +31,7 @@
       <categoryLinks>
         <categoryLink id="1d68-4aaa-8fb0-bd6b" name="Allegiance" hidden="false" targetId="af41-ae78-5063-3d36" primary="false"/>
         <categoryLink id="0b10-f726-07b3-05ed" name="New CategoryLink" hidden="false" targetId="29f4-e63d-fa5b-1611" primary="true"/>
+        <categoryLink id="b02d-d721-45e5-8114" name="RoR - Sylvaneth" hidden="false" targetId="297a-bb37-2ce4-4af4" primary="false"/>
       </categoryLinks>
       <selectionEntries>
         <selectionEntry id="20f7-b54c-f3f2-7064" name="Sylvaneth" publicationId="41a4-7d44-770a-c56b" hidden="false" collective="false" import="true" type="upgrade">
@@ -40,13 +41,30 @@
           </constraints>
           <profiles>
             <profile id="419b-149c-3c38-d1ad" name="From the Woodland Depths" hidden="false" typeId="c0c2-177b-e761-ec41" typeName="Allegiance Abilities">
+              <modifiers>
+                <modifier type="set" field="hidden" value="true">
+                  <conditions>
+                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="53b2-70d6-4643-66c0" type="greaterThan"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
               <characteristics>
-                <characteristic name="Allegiance Ability" typeId="0506-f62d-68b3-5499">Once per turn, in your combat phase, immediately after a friendly SYLVANETH unit that is wholly within 9&quot; of an overgrown terrain feature or friendly Awakened Wyldwood has fought and slain models (if any) have been removed from play, you can remove that unit from the battlefield and set it up again more than 9&quot; from all enemy units and wholly within 9&quot; of either a different overgrown terrain feature that is more than 3&quot; from all enemy units or a different friendly Awakened Wyldwood that is more than 3&quot; from all enemy units.
+                <characteristic name="Allegiance Ability" typeId="0506-f62d-68b3-5499">Walk the Hidden Paths:
+Once per turn, at the end of your movement phase, you can pick 1 friendly SYLVANETH unit that is wholly within 9&quot; of an overgrown terrain feature or friendly Awakened Wyldwood. If you do so, remove that unit from the battlefield and set it up again more than 9&quot; from all enemy units and wholly within 9&quot; of either a different overgrown terrain feature that is more than 3&quot; from all enemy units or a different friendly Awakened Wyldwood that is more than 3&quot; from all enemy units.
 
-Designer’s Note: This means that any abilities or effects that come into play when a model is slain but before it is removed from play (such as the ‘Blaze of Glory’ battle trait for the Stormcast Eternals) are resolved before the ‘Strike and Fade’ effect regardless of whose turn is taking place.</characteristic>
+
+Strike and Fade:
+Once per turn, in your combat phase, immediately after a friendly SYLVANETH unit that is wholly within 9&quot; of an overgrown terrain feature or friendly Awakened Wyldwood has fought and slain models (if any) have been removed from play, you can remove that unit from the battlefield and set it up again more than 9&quot; from all enemy units and wholly within 9&quot; of either a different overgrown terrain feature that is more than 3&quot; from all enemy units or a different friendly Awakened Wyldwood that is more than 3&quot; from all enemy units.</characteristic>
               </characteristics>
             </profile>
             <profile id="f565-6be6-e54b-21d7" name="Places of Power" hidden="false" typeId="c0c2-177b-e761-ec41" typeName="Allegiance Abilities">
+              <modifiers>
+                <modifier type="set" field="hidden" value="true">
+                  <conditions>
+                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="53b2-70d6-4643-66c0" type="greaterThan"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
               <characteristics>
                 <characteristic name="Allegiance Ability" typeId="0506-f62d-68b3-5499">After territories are determined, before faction terrain features are set up, you can pick up to 3 terrain features on the battlefield that are wholly outside enemy territory. Those terrain features are considered by you to be overgrown terrain features.
 
@@ -54,6 +72,13 @@ At the start of your hero phase, you can heal 1 wound allocated to each friendly
               </characteristics>
             </profile>
             <profile id="6141-3538-9b75-7fe1" name="Glades" hidden="false" typeId="c0c2-177b-e761-ec41" typeName="Allegiance Abilities">
+              <modifiers>
+                <modifier type="set" field="hidden" value="true">
+                  <conditions>
+                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="53b2-70d6-4643-66c0" type="greaterThan"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
               <characteristics>
                 <characteristic name="Allegiance Ability" typeId="0506-f62d-68b3-5499">You can pick 1 of the following subfactions for your army. All SYLVANETH units in your army gain the keyword of the subfaction you picked, and you can use the allegiance abilities for that subfaction. If a unit already has a different subfaction keyword on its warscroll, it cannot gain another one. This does not preclude you from including the unit in your army, but you cannot use the allegiance abilities for its subfaction.
 
@@ -70,8 +95,84 @@ At the start of your hero phase, you can heal 1 wound allocated to each friendly
           <categoryLinks>
             <categoryLink id="7209-ffa9-8cb7-3f23" name="SYLVANETH" hidden="false" targetId="b827-97c4-10f4-0d4e" primary="false"/>
           </categoryLinks>
+          <selectionEntries>
+            <selectionEntry id="53b2-70d6-4643-66c0" name="The Evergreen Hunt" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8659-5c97-2070-c9f6" type="max"/>
+              </constraints>
+              <profiles>
+                <profile id="24e6-b653-369a-7977" name="The Evergreen Hunt" hidden="false" typeId="ce32-0c40-1990-4c8a" typeName="Restriction">
+                  <characteristics>
+                    <characteristic name="Restriction" typeId="edbe-5fe5-1142-afa6">When you pick the Sylvaneth faction for your army, you can say that it will be an Evergreen Hunt army of renown. If you do so, use the rules in this section. Every unit in your army must have the SYLVANETH keyword and either the ARCH-REVENANT, KURNOTH HUNTERS, REVENANT SEEKERS or SPITERIDER LANCERS keyword. All units in your army gain the EVERGREEN HUNT keyword.</characteristic>
+                  </characteristics>
+                </profile>
+                <profile id="4a5a-26b0-82fa-84d9" name="To Honour Kurnoth" hidden="false" typeId="c0c2-177b-e761-ec41" typeName="Allegiance Abilities">
+                  <characteristics>
+                    <characteristic name="Allegiance Ability" typeId="0506-f62d-68b3-5499">Friendly EVERGREEN HUNT units that do not have the HERO keyword have the Battleline battlefield role.</characteristic>
+                  </characteristics>
+                </profile>
+                <profile id="8de8-5947-5de2-fbd2" name="Rhythm of the Chase" hidden="false" typeId="c0c2-177b-e761-ec41" typeName="Allegiance Abilities">
+                  <characteristics>
+                    <characteristic name="Allegiance Ability" typeId="0506-f62d-68b3-5499">After deployment, before the players have determined who will take the first turn, you can pick 1 enemy unit on the battlefield to be the quarry. If the quarry is destroyed, at the start of your next hero phase, you can pick 1 enemy unit on the battlefield to be the new quarry.</characteristic>
+                  </characteristics>
+                </profile>
+                <profile id="0679-051b-fabd-53c2" name="Harmonies of the Hunt" hidden="false" typeId="c0c2-177b-e761-ec41" typeName="Allegiance Abilities">
+                  <characteristics>
+                    <characteristic name="Allegiance Ability" typeId="0506-f62d-68b3-5499">At the start of each battle round, after the priority roll has been made, each player commanding an Evergreen Hunt army must determine their Hunting Harmony for that battle round, starting with the player taking the first turn. A Hunting Harmony is made up of a number of chords. You start with 0 chords and receive 1 chord for the following:
+
+• If a friendly BELTHANOS is on the battlefield.
+• For each friendly EVERGREEN HUNT unit wholly within the same large quarter of the battlefield as the quarry.
+• For each quarry destroyed during the battle.
+
+Add up the number of chords you received and consult the Hunting Harmony Table to see which effects will apply to your army for that battle round. These effects are cumulative: if you have 6 chords, all of the effects in the table will apply. Hunting Harmony chords are lost at the end of each battle round.
+
+Chords  --  Effect
+
+0  --  Discordant: No effect
+
+1  --  Simple: Add 1 to run rolls and charge rolls for friendly units wholly within the same large quarter of the battlefield as the quarry.
+
+2  --  Tuneful: Add 1 to hit rolls and wound rolls for attacks made with melee weapons that target an enemy unit wholly within the same large quarter of the battlefield as the quarry.
+
+3-5  --  Melodic: Add 1 to the Attacks characteristic of melee weapons used by friendly units while they are within 3&quot; of the quarry.
+
+6  --  Mellifluous: While a friendly unit is wholly within the same large quarter of the battlefield as the quarry, it is eligible to fight in the combat phase if it is within 6&quot; of the quarry instead of 3&quot;, and it can move an extra 3&quot; when it piles in.</characteristic>
+                  </characteristics>
+                </profile>
+                <profile id="bf20-c895-37f8-4965" name="Abundant Growth" hidden="false" typeId="c0c2-177b-e761-ec41" typeName="Allegiance Abilities">
+                  <characteristics>
+                    <characteristic name="Allegiance Ability" typeId="0506-f62d-68b3-5499">After territories are determined, before faction terrain features are set up, you can pick up to 3 terrain features on the battlefield that are wholly outside enemy territory. These terrain features are considered by you to be overgrown terrain features.
+
+At the start of your hero phase, you can heal 1 wound allocated to each friendly EVERGREEN HUNT unit that is wholly within 9&quot; of an overgrown terrain feature.</characteristic>
+                  </characteristics>
+                </profile>
+                <profile id="3e49-f89a-a843-dfe2" name="A Prize Quarry is Sighted" hidden="false" typeId="1193-4081-af87-68cd" typeName="Heroic Action/Monstrous Rampage">
+                  <characteristics>
+                    <characteristic name="Effect" typeId="faec-beac-0874-3c6e">-Heroic Action-
+Pick 1 friendly EVERGREEN HUNT HERO and 1 enemy unit within 9&quot; of that HERO. That enemy unit becomes the quarry instead of the enemy unit that was picked to be the quarry.</characteristic>
+                  </characteristics>
+                </profile>
+                <profile id="e6c4-4e66-b3c4-3ae1" name="Merciful Strike" hidden="false" typeId="1193-4081-af87-68cd" typeName="Heroic Action/Monstrous Rampage">
+                  <characteristics>
+                    <characteristic name="Effect" typeId="faec-beac-0874-3c6e">-Monstrous Rampage-
+If the quarry has any wounds allocated to it and is within 3&quot; of this unit, roll a dice and add the number of wounds allocated to the quarry to the roll. If the result is greater than the quarry’s Wounds characteristic, 1 model in that unit is slain.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <costs>
+                <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
+              </costs>
+            </selectionEntry>
+          </selectionEntries>
           <selectionEntryGroups>
             <selectionEntryGroup id="89de-b797-cfdb-4d30" name="Glades" hidden="false" collective="false" import="true">
+              <modifiers>
+                <modifier type="set" field="hidden" value="true">
+                  <conditions>
+                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="53b2-70d6-4643-66c0" type="greaterThan"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
               <constraints>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="40aa-8a78-1995-dcbe" type="max"/>
               </constraints>
@@ -187,6 +288,18 @@ At the start of your hero phase, you can heal 1 wound allocated to each friendly
               </selectionEntries>
             </selectionEntryGroup>
             <selectionEntryGroup id="6ea3-fea1-de6a-efab" name="Seasons of War" hidden="false" collective="false" import="true">
+              <modifiers>
+                <modifier type="set" field="hidden" value="true">
+                  <conditions>
+                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="53b2-70d6-4643-66c0" type="greaterThan"/>
+                  </conditions>
+                </modifier>
+                <modifier type="set" field="604b-2743-8c83-09cc" value="0">
+                  <conditions>
+                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="53b2-70d6-4643-66c0" type="greaterThan"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
               <constraints>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="fd74-2d79-dd0e-b50b" type="max"/>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="604b-2743-8c83-09cc" type="min"/>
@@ -287,6 +400,13 @@ Abilities that allow you to add an Awakened Wyldwood to your army during the bat
       </costs>
     </selectionEntry>
     <selectionEntry id="689e-2285-74ec-d556" name="Ylthari and Guardians (separate units)" publicationId="41a4-7d44-770a-c56b" hidden="false" collective="false" import="true" type="upgrade">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="53b2-70d6-4643-66c0" type="greaterThan"/>
+          </conditions>
+        </modifier>
+      </modifiers>
       <constraints>
         <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="cfb7-4c19-c9b4-9177" type="max"/>
       </constraints>
@@ -370,8 +490,36 @@ Abilities that allow you to add an Awakened Wyldwood to your army during the bat
           <categoryLinks>
             <categoryLink id="4a4b-a571-1da8-9a97" name="Grand Strategy" hidden="false" targetId="318c-fa55-0855-47ef" primary="false"/>
           </categoryLinks>
+          <selectionEntries>
+            <selectionEntry id="7ea0-fb09-aab1-0844" name="The Grand Hunt" hidden="false" collective="false" import="true" type="upgrade">
+              <modifiers>
+                <modifier type="set" field="hidden" value="true">
+                  <conditions>
+                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="53b2-70d6-4643-66c0" type="equalTo"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+              <profiles>
+                <profile id="a8aa-79c1-424b-28d1" name="The Grand Hunt" hidden="false" typeId="7dc6-98f0-f5ba-fc16" typeName="Grand Strategy">
+                  <characteristics>
+                    <characteristic name="Grand Strategy" typeId="22d6-b382-f824-6381">When the battle ends, you complete this grand strategy if you have destroyed 4 or more quarries.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <costs>
+                <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
+              </costs>
+            </selectionEntry>
+          </selectionEntries>
           <selectionEntryGroups>
             <selectionEntryGroup id="64bc-f740-eaeb-9b15" name="Seeds of Triumph" hidden="false" collective="false" import="true">
+              <modifiers>
+                <modifier type="set" field="hidden" value="true">
+                  <conditions>
+                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="53b2-70d6-4643-66c0" type="greaterThan"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
               <constraints>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="ebcd-31bd-fe24-5fdf" type="max"/>
               </constraints>
@@ -445,28 +593,99 @@ Abilities that allow you to add an Awakened Wyldwood to your army during the bat
       </constraints>
       <profiles>
         <profile id="e705-98e7-af6f-c21e" name="Unleash Ghyran&apos;s Wrath" hidden="false" typeId="4bb2-448c-446c-f522" typeName="Battle Tactic">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="53b2-70d6-4643-66c0" type="greaterThan"/>
+              </conditions>
+            </modifier>
+          </modifiers>
           <characteristics>
             <characteristic name="Battle Tactic" typeId="8c0f-be41-a70e-c699">Pick 1 friendly SYLVANETH WIZARD on the battlefield. You complete this battle tactic if a spell successfully cast by that WIZARD, or an endless spell summoned by that WIZARD, destroys an enemy unit this turn.</characteristic>
           </characteristics>
         </profile>
         <profile id="2304-248d-bb13-bd67" name="March of the Forest Lords" hidden="false" typeId="4bb2-448c-446c-f522" typeName="Battle Tactic">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="53b2-70d6-4643-66c0" type="greaterThan"/>
+              </conditions>
+            </modifier>
+          </modifiers>
           <characteristics>
             <characteristic name="Battle Tactic" typeId="8c0f-be41-a70e-c699">Pick 1 enemy MONSTER on the battlefield. You complete this battle tactic if that MONSTER is slain by an attack made by a friendly SPIRIT OF DURTHU, TREELORD ANCIENT or TREELORD during this turn.</characteristic>
           </characteristics>
         </profile>
         <profile id="01c4-71bc-ff83-3584" name="Balance the Cycle" hidden="false" typeId="4bb2-448c-446c-f522" typeName="Battle Tactic">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="53b2-70d6-4643-66c0" type="greaterThan"/>
+              </conditions>
+            </modifier>
+          </modifiers>
           <characteristics>
             <characteristic name="Battle Tactic" typeId="8c0f-be41-a70e-c699">Pick 1 enemy unit within 12&quot; of an overgrown terrain feature or friendly Awakened Wyldwood. You complete this battle tactic if that unit is destroyed by an attack made by a friendly SYLVANETH unit that was added to your army this turn.</characteristic>
           </characteristics>
         </profile>
         <profile id="d829-519d-ec37-74a2" name="Harness the Spirit Paths" hidden="false" typeId="4bb2-448c-446c-f522" typeName="Battle Tactic">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="53b2-70d6-4643-66c0" type="greaterThan"/>
+              </conditions>
+            </modifier>
+          </modifiers>
           <characteristics>
             <characteristic name="Battle Tactic" typeId="8c0f-be41-a70e-c699">You complete this battle tactic if any models in a friendly SYLVANETH unit that was set up using the From the Woodland Depths battle trait this turn make a charge move this turn.</characteristic>
           </characteristics>
         </profile>
         <profile id="3816-6975-fad2-b6ce" name="Eradicate Trespassers" hidden="false" typeId="4bb2-448c-446c-f522" typeName="Battle Tactic">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="53b2-70d6-4643-66c0" type="greaterThan"/>
+              </conditions>
+            </modifier>
+          </modifiers>
           <characteristics>
             <characteristic name="Battle Tactic" typeId="8c0f-be41-a70e-c699">Pick 1 enemy unit within 6&quot; of a friendly Awakened Wyldwood. You complete this battle tactic if that unit is destroyed during this turn.</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="33f2-41a3-60e9-18cc" name="Trophy Kill" hidden="false" typeId="4bb2-448c-446c-f522" typeName="Battle Tactic">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="53b2-70d6-4643-66c0" type="equalTo"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <characteristics>
+            <characteristic name="Battle Tactic" typeId="8c0f-be41-a70e-c699">You complete this tactic if the quarry was destroyed by an attack made with a melee weapon in this turn.</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="f90c-f6d9-68fe-9b61" name="Encircled" hidden="false" typeId="4bb2-448c-446c-f522" typeName="Battle Tactic">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="53b2-70d6-4643-66c0" type="equalTo"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <characteristics>
+            <characteristic name="Battle Tactic" typeId="8c0f-be41-a70e-c699">You complete this tactic if, at the end of this turn, all friendly units are in the same large quarter of the battlefield as the quarry.</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="7d76-ec70-8980-cab1" name="Spring the Trap" hidden="false" typeId="4bb2-448c-446c-f522" typeName="Battle Tactic">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="53b2-70d6-4643-66c0" type="equalTo"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <characteristics>
+            <characteristic name="Battle Tactic" typeId="8c0f-be41-a70e-c699">You complete this tactic if 4 or more friendly units made a charge move in this turn and 1 or more of those units made an attack with a melee weapon that targeted the quarry in this turn.</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -494,6 +713,11 @@ Abilities that allow you to add an Awakened Wyldwood to your army during the bat
               </conditions>
             </conditionGroup>
           </conditionGroups>
+        </modifier>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="53b2-70d6-4643-66c0" type="greaterThan"/>
+          </conditions>
         </modifier>
       </modifiers>
       <profiles>
@@ -556,6 +780,13 @@ Abilities that allow you to add an Awakened Wyldwood to your army during the bat
       </entryLinks>
     </entryLink>
     <entryLink id="5275-7275-90cc-8573" name="Branchwych" hidden="false" collective="false" import="true" targetId="fcbf-911a-5836-bf94" type="selectionEntry">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="53b2-70d6-4643-66c0" type="greaterThan"/>
+          </conditions>
+        </modifier>
+      </modifiers>
       <infoLinks>
         <infoLink id="93ae-8038-11af-ad93" name="Verdant Blessing" hidden="false" targetId="6c8d-5483-d206-ba8e" type="profile"/>
       </infoLinks>
@@ -568,11 +799,25 @@ Abilities that allow you to add an Awakened Wyldwood to your army during the bat
       </entryLinks>
     </entryLink>
     <entryLink id="c1ab-3e02-3506-ff71" name="Dryads" hidden="false" collective="false" import="true" targetId="3692-5cec-4019-d6db" type="selectionEntry">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="53b2-70d6-4643-66c0" type="greaterThan"/>
+          </conditions>
+        </modifier>
+      </modifiers>
       <entryLinks>
         <entryLink id="d3fd-91e0-dc47-1f22" name="Battalion Formation" hidden="false" collective="false" import="true" targetId="bb4c-8d89-1fb3-4d92" type="selectionEntryGroup"/>
       </entryLinks>
     </entryLink>
     <entryLink id="c300-4f93-f756-5be4" name="Drycha Hamadreth" hidden="false" collective="false" import="true" targetId="da0e-1bb4-10ec-bd79" type="selectionEntry">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="53b2-70d6-4643-66c0" type="greaterThan"/>
+          </conditions>
+        </modifier>
+      </modifiers>
       <infoLinks>
         <infoLink id="d608-c713-8afb-65e9" name="Verdant Blessing" hidden="false" targetId="6c8d-5483-d206-ba8e" type="profile"/>
       </infoLinks>
@@ -588,6 +833,13 @@ Abilities that allow you to add an Awakened Wyldwood to your army during the bat
       </entryLinks>
     </entryLink>
     <entryLink id="9de0-2510-b021-03c9" name="Spirit of Durthu" hidden="false" collective="false" import="true" targetId="fb95-a697-2cdc-ef80" type="selectionEntry">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="53b2-70d6-4643-66c0" type="greaterThan"/>
+          </conditions>
+        </modifier>
+      </modifiers>
       <entryLinks>
         <entryLink id="c070-2dba-8003-eb44" name="General" hidden="false" collective="false" import="true" targetId="98a4-3d6d-a7b9-399f" type="selectionEntry"/>
         <entryLink id="850c-1d76-4cb1-40f9" name="Artefacts of Power" hidden="false" collective="false" import="true" targetId="9d04-898d-3277-6818" type="selectionEntryGroup"/>
@@ -612,6 +864,11 @@ Abilities that allow you to add an Awakened Wyldwood to your army during the bat
             </conditionGroup>
           </conditionGroups>
         </modifier>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="53b2-70d6-4643-66c0" type="greaterThan"/>
+          </conditions>
+        </modifier>
       </modifiers>
       <categoryLinks>
         <categoryLink id="d306-4a7e-e10f-ae72" name="Battleline" hidden="false" targetId="a42d-220e-6a88-7bf6" primary="false"/>
@@ -621,11 +878,25 @@ Abilities that allow you to add an Awakened Wyldwood to your army during the bat
       </entryLinks>
     </entryLink>
     <entryLink id="3052-b8fb-d6ca-d0a5" name="Tree-Revenants" hidden="false" collective="false" import="true" targetId="6fbc-82d9-3c7e-61e3" type="selectionEntry">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="53b2-70d6-4643-66c0" type="greaterThan"/>
+          </conditions>
+        </modifier>
+      </modifiers>
       <entryLinks>
         <entryLink id="5969-e72a-64cd-3f16" name="Battalion Formation" hidden="false" collective="false" import="true" targetId="bb4c-8d89-1fb3-4d92" type="selectionEntryGroup"/>
       </entryLinks>
     </entryLink>
     <entryLink id="2174-b3aa-c91c-83ef" name="Treelord" hidden="false" collective="false" import="true" targetId="587b-a51c-7470-1902" type="selectionEntry">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="53b2-70d6-4643-66c0" type="greaterThan"/>
+          </conditions>
+        </modifier>
+      </modifiers>
       <modifierGroups>
         <modifierGroup>
           <conditions>
@@ -643,6 +914,13 @@ Abilities that allow you to add an Awakened Wyldwood to your army during the bat
       </entryLinks>
     </entryLink>
     <entryLink id="faf8-c5c6-f76b-ec90" name="Treelord Ancient" hidden="false" collective="false" import="true" targetId="c9a3-a47a-cbaa-1314" type="selectionEntry">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="53b2-70d6-4643-66c0" type="greaterThan"/>
+          </conditions>
+        </modifier>
+      </modifiers>
       <infoLinks>
         <infoLink id="6bb4-845c-4260-de99" name="Verdant Blessing" hidden="false" targetId="6c8d-5483-d206-ba8e" type="profile"/>
       </infoLinks>
@@ -665,8 +943,15 @@ Abilities that allow you to add an Awakened Wyldwood to your army during the bat
                 <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="996a-613c-4006-25e3" type="instanceOf"/>
                 <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="6cd6-b22e-bfcb-9589" type="instanceOf"/>
                 <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="b543-cb16-0c79-fbc6" type="instanceOf"/>
-                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="4cf2-4ad9-f691-228e" type="equalTo"/>
               </conditions>
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="4cf2-4ad9-f691-228e" type="equalTo"/>
+                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="53b2-70d6-4643-66c0" type="equalTo"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
             </conditionGroup>
           </conditionGroups>
         </modifier>
@@ -679,6 +964,13 @@ Abilities that allow you to add an Awakened Wyldwood to your army during the bat
       </entryLinks>
     </entryLink>
     <entryLink id="5a32-971c-5f9f-078a" name="Warsong Revenant" hidden="false" collective="false" import="true" targetId="0887-65bf-11c5-92bb" type="selectionEntry">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="53b2-70d6-4643-66c0" type="greaterThan"/>
+          </conditions>
+        </modifier>
+      </modifiers>
       <infoLinks>
         <infoLink id="3eaa-b4e5-72db-fa5c" name="Verdant Blessing" hidden="false" targetId="6c8d-5483-d206-ba8e" type="profile"/>
       </infoLinks>
@@ -691,11 +983,25 @@ Abilities that allow you to add an Awakened Wyldwood to your army during the bat
       </entryLinks>
     </entryLink>
     <entryLink id="34b6-9043-86d7-bb8a" name="Skaeth&apos;s Wild Hunt" hidden="false" collective="false" import="true" targetId="b2ab-0c5f-104f-f8ba" type="selectionEntry">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="53b2-70d6-4643-66c0" type="greaterThan"/>
+          </conditions>
+        </modifier>
+      </modifiers>
       <entryLinks>
         <entryLink id="b7f0-d957-0964-abec" name="Battalion Formation" hidden="false" collective="false" import="true" targetId="bb4c-8d89-1fb3-4d92" type="selectionEntryGroup"/>
       </entryLinks>
     </entryLink>
     <entryLink id="850c-a208-195c-2ce0" name="Gossamid Archers" hidden="false" collective="false" import="true" targetId="968e-1180-d00a-b159" type="selectionEntry">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="53b2-70d6-4643-66c0" type="greaterThan"/>
+          </conditions>
+        </modifier>
+      </modifiers>
       <entryLinks>
         <entryLink id="adcc-1640-120a-f95a" name="Battalion Formation" hidden="false" collective="false" import="true" targetId="bb4c-8d89-1fb3-4d92" type="selectionEntryGroup"/>
       </entryLinks>
@@ -711,8 +1017,15 @@ Abilities that allow you to add an Awakened Wyldwood to your army during the bat
                 <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="996a-613c-4006-25e3" type="instanceOf"/>
                 <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="6cd6-b22e-bfcb-9589" type="instanceOf"/>
                 <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="b543-cb16-0c79-fbc6" type="instanceOf"/>
-                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="7b73-418e-0b4e-c3ed" type="equalTo"/>
               </conditions>
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="53b2-70d6-4643-66c0" type="equalTo"/>
+                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="7b73-418e-0b4e-c3ed" type="equalTo"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
             </conditionGroup>
           </conditionGroups>
         </modifier>
@@ -735,17 +1048,34 @@ Abilities that allow you to add an Awakened Wyldwood to your army during the bat
                 <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="996a-613c-4006-25e3" type="instanceOf"/>
                 <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="6cd6-b22e-bfcb-9589" type="instanceOf"/>
                 <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="b543-cb16-0c79-fbc6" type="instanceOf"/>
-                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="7b73-418e-0b4e-c3ed" type="equalTo"/>
               </conditions>
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="7b73-418e-0b4e-c3ed" type="equalTo"/>
+                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="53b2-70d6-4643-66c0" type="equalTo"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
             </conditionGroup>
           </conditionGroups>
         </modifier>
       </modifiers>
+      <categoryLinks>
+        <categoryLink id="2ece-7bfd-1a97-144f" name="Battleline" hidden="false" targetId="a42d-220e-6a88-7bf6" primary="false"/>
+      </categoryLinks>
       <entryLinks>
         <entryLink id="740e-1634-7b72-9489" name="Battalion Formation" hidden="false" collective="false" import="true" targetId="bb4c-8d89-1fb3-4d92" type="selectionEntryGroup"/>
       </entryLinks>
     </entryLink>
     <entryLink id="c7db-d5d5-7d1b-1e7e" name="The Lady of Vines" hidden="false" collective="false" import="true" targetId="3830-8fbd-8f64-2dc7" type="selectionEntry">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="53b2-70d6-4643-66c0" type="greaterThan"/>
+          </conditions>
+        </modifier>
+      </modifiers>
       <infoLinks>
         <infoLink id="d188-2abc-e82f-a06f" name="Verdant Blessing" hidden="false" targetId="6c8d-5483-d206-ba8e" type="profile"/>
       </infoLinks>
@@ -771,8 +1101,15 @@ Abilities that allow you to add an Awakened Wyldwood to your army during the bat
                 <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="996a-613c-4006-25e3" type="instanceOf"/>
                 <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="6cd6-b22e-bfcb-9589" type="instanceOf"/>
                 <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="b543-cb16-0c79-fbc6" type="instanceOf"/>
-                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="4cf2-4ad9-f691-228e" type="equalTo"/>
               </conditions>
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="4cf2-4ad9-f691-228e" type="equalTo"/>
+                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="53b2-70d6-4643-66c0" type="equalTo"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
             </conditionGroup>
           </conditionGroups>
         </modifier>
@@ -795,8 +1132,15 @@ Abilities that allow you to add an Awakened Wyldwood to your army during the bat
                 <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="996a-613c-4006-25e3" type="instanceOf"/>
                 <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="6cd6-b22e-bfcb-9589" type="instanceOf"/>
                 <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="b543-cb16-0c79-fbc6" type="instanceOf"/>
-                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="4cf2-4ad9-f691-228e" type="equalTo"/>
               </conditions>
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="4cf2-4ad9-f691-228e" type="equalTo"/>
+                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="53b2-70d6-4643-66c0" type="equalTo"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
             </conditionGroup>
           </conditionGroups>
         </modifier>
@@ -806,6 +1150,16 @@ Abilities that allow you to add an Awakened Wyldwood to your army during the bat
       </categoryLinks>
       <entryLinks>
         <entryLink id="34ac-50a0-7d7f-5b4e" name="Battalion Formation" hidden="false" collective="false" import="true" targetId="bb4c-8d89-1fb3-4d92" type="selectionEntryGroup"/>
+      </entryLinks>
+    </entryLink>
+    <entryLink id="de28-bf43-636e-6607" name="Belthanos, First Thorn of Kurnoth" hidden="false" collective="false" import="true" targetId="2fa2-7e9d-f9b3-9bea" type="selectionEntry">
+      <entryLinks>
+        <entryLink id="2df6-fe1b-2db7-648e" name="General" hidden="false" collective="false" import="true" targetId="98a4-3d6d-a7b9-399f" type="selectionEntry">
+          <categoryLinks>
+            <categoryLink id="e39b-a8ed-135d-9aa0" name="Named General" hidden="false" targetId="8b3d-7f03-e1f9-eaf5" primary="false"/>
+          </categoryLinks>
+        </entryLink>
+        <entryLink id="85d0-340e-2025-d4bd" name="Battalion Formation" hidden="false" collective="false" import="true" targetId="bb4c-8d89-1fb3-4d92" type="selectionEntryGroup"/>
       </entryLinks>
     </entryLink>
   </entryLinks>
@@ -821,8 +1175,36 @@ Abilities that allow you to add an Awakened Wyldwood to your army during the bat
       <constraints>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="be45-0bf1-4c7b-a9ad" type="max"/>
       </constraints>
+      <selectionEntries>
+        <selectionEntry id="5365-1f81-bb5d-5a65" name="Sapwood Leader" hidden="false" collective="false" import="true" type="upgrade">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="53b2-70d6-4643-66c0" type="equalTo"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <profiles>
+            <profile id="0f55-81a1-61d1-7497" name="Sapwood Leader" hidden="false" typeId="1504-23bf-8850-4f65" typeName="Command Traits">
+              <characteristics>
+                <characteristic name="Command Trait" typeId="0145-9acf-f5dc-d543">When you use the Abundant Growth battle trait to heal this general, you can heal up to D3 wounds allocated to this general instead of 1.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <costs>
+            <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
+          </costs>
+        </selectionEntry>
+      </selectionEntries>
       <selectionEntryGroups>
         <selectionEntryGroup id="177a-9a31-150e-c790" name="Aspects of War" hidden="false" collective="false" import="true">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="53b2-70d6-4643-66c0" type="greaterThan"/>
+              </conditions>
+            </modifier>
+          </modifiers>
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="7ef6-7f20-6ac0-fd95" type="max"/>
           </constraints>
@@ -872,6 +1254,11 @@ Abilities that allow you to add an Awakened Wyldwood to your army during the bat
                 <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="7ee2-0d81-544f-5d7e" type="notInstanceOf"/>
               </conditions>
             </modifier>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="53b2-70d6-4643-66c0" type="greaterThan"/>
+              </conditions>
+            </modifier>
           </modifiers>
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="bd1f-9f4e-516d-83cd" type="max"/>
@@ -917,7 +1304,7 @@ Abilities that allow you to add an Awakened Wyldwood to your army during the bat
         </selectionEntryGroup>
       </selectionEntryGroups>
       <entryLinks>
-        <entryLink id="a956-6098-d24e-e37d" name="Universal Command Traits" hidden="false" collective="false" import="true" targetId="20f0-6df9-b464-3789" type="selectionEntryGroup"/>
+        <entryLink id="a956-6098-d24e-e37d" name="Rulebook Command Traits" hidden="false" collective="false" import="true" targetId="6978-81a2-4c55-65f3" type="selectionEntryGroup"/>
       </entryLinks>
     </selectionEntryGroup>
     <selectionEntryGroup id="9d04-898d-3277-6818" name="Artefacts of Power" hidden="false" collective="false" import="true">
@@ -942,12 +1329,41 @@ Abilities that allow you to add an Awakened Wyldwood to your army during the bat
       <categoryLinks>
         <categoryLink id="b994-52cd-7236-b461" name="Artefacts" hidden="false" targetId="ba14-5553-456e-33ad" primary="false"/>
       </categoryLinks>
+      <selectionEntries>
+        <selectionEntry id="0d6d-c3d1-3e68-4fad" name="Heartwood Hunting Horn" hidden="false" collective="false" import="true" type="upgrade">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="53b2-70d6-4643-66c0" type="equalTo"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="ae72-a75f-8918-373e" type="max"/>
+          </constraints>
+          <profiles>
+            <profile id="a831-22e1-c542-89ba" name="Heartwood Hunting Horn" hidden="false" typeId="0c9d-7abe-a53c-6a37" typeName="Artefacts">
+              <characteristics>
+                <characteristic name="Artefact" typeId="44b6-de26-0b54-1318">Once per battle, at the start of any battle round, the bearer can say that they will blow their Heartwood Hunting Horn. If they do so, you receive 1 additional Hunting Harmony chord for that battle round.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <costs>
+            <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
+          </costs>
+        </selectionEntry>
+      </selectionEntries>
       <selectionEntryGroups>
         <selectionEntryGroup id="86e1-57e2-fb1c-b7aa" name="Relics of Nature" hidden="false" collective="false" import="true">
           <modifiers>
             <modifier type="set" field="hidden" value="true">
               <conditions>
                 <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="7ee2-0d81-544f-5d7e" type="notInstanceOf"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="53b2-70d6-4643-66c0" type="greaterThan"/>
               </conditions>
             </modifier>
           </modifiers>
@@ -1003,6 +1419,13 @@ Abilities that allow you to add an Awakened Wyldwood to your army during the bat
           </selectionEntries>
         </selectionEntryGroup>
         <selectionEntryGroup id="3f94-e7e1-67df-f1ff" name="Boons of the Everqueen" hidden="false" collective="false" import="true">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="53b2-70d6-4643-66c0" type="greaterThan"/>
+              </conditions>
+            </modifier>
+          </modifiers>
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="b7d2-38c2-1267-2309" type="max"/>
           </constraints>
@@ -1056,7 +1479,7 @@ Abilities that allow you to add an Awakened Wyldwood to your army during the bat
         </selectionEntryGroup>
       </selectionEntryGroups>
       <entryLinks>
-        <entryLink id="4eef-70c9-3840-4c59" name="Universal Artefacts of Power" hidden="false" collective="false" import="true" targetId="dbd8-8f6f-f44a-884a" type="selectionEntryGroup"/>
+        <entryLink id="4eef-70c9-3840-4c59" name="Rulebook Artefacts of Power" hidden="false" collective="false" import="true" targetId="836b-19a4-b5b4-570d" type="selectionEntryGroup"/>
       </entryLinks>
     </selectionEntryGroup>
     <selectionEntryGroup id="b3b8-66ca-b330-95fc" name="Sylvaneth Spell Lores" hidden="false" collective="false" import="true">
@@ -1103,6 +1526,11 @@ Abilities that allow you to add an Awakened Wyldwood to your army during the bat
               </repeats>
               <conditions>
                 <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="9e49-bd7f-45ee-1a96" type="greaterThan"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="53b2-70d6-4643-66c0" type="greaterThan"/>
               </conditions>
             </modifier>
           </modifiers>
@@ -1204,7 +1632,7 @@ Abilities that allow you to add an Awakened Wyldwood to your army during the bat
         </selectionEntryGroup>
       </selectionEntryGroups>
       <entryLinks>
-        <entryLink id="9e85-f8bb-acad-50f0" name="Universal Spell Lore" hidden="false" collective="false" import="true" targetId="93f7-7e2a-3308-d150" type="selectionEntryGroup"/>
+        <entryLink id="9e85-f8bb-acad-50f0" name="Rulebook Spell Lores" hidden="false" collective="false" import="true" targetId="8aee-7492-ee73-6d07" type="selectionEntryGroup"/>
       </entryLinks>
     </selectionEntryGroup>
     <selectionEntryGroup id="bb4c-8d89-1fb3-4d92" name="Battalion Formation" hidden="false" collective="false" import="true">

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="a1aa-05da-a418-a6d4" name="Destruction - Gloomspite Gitz" revision="19" battleScribeVersion="2.03" authorName="Thulram" library="false" gameSystemId="e832-3291-06be-cab1" gameSystemRevision="19" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="a1aa-05da-a418-a6d4" name="Destruction - Gloomspite Gitz" revision="20" battleScribeVersion="2.03" authorName="Thulram" library="false" gameSystemId="e832-3291-06be-cab1" gameSystemRevision="19" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <profileTypes>
     <profileType id="3b00-f2f8-10bc-6b74" name="Gargant Wounds">
       <characteristicTypes>
@@ -99,6 +99,13 @@
   </categoryEntries>
   <selectionEntries>
     <selectionEntry id="2bd8-2696-8c1f-01e8" name="Zarbag and Gitz (separate units)" publicationId="b26b-402e-2023-e85b" hidden="false" collective="false" import="true" type="upgrade">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="76a1-f7d9-ffe4-7c8f" type="greaterThan"/>
+          </conditions>
+        </modifier>
+      </modifiers>
       <constraints>
         <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="4a40-7aed-42cb-5500" type="max"/>
       </constraints>
@@ -180,8 +187,33 @@
           <categoryLinks>
             <categoryLink id="383d-93ec-8e82-fa60" name="Grand Strategy" hidden="false" targetId="318c-fa55-0855-47ef" primary="false"/>
           </categoryLinks>
+          <selectionEntries>
+            <selectionEntry id="defb-7b1b-76c3-d10c" name="Leave Me Alone!" hidden="false" collective="false" import="true" type="upgrade">
+              <modifiers>
+                <modifier type="set" field="hidden" value="true">
+                  <conditions>
+                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="76a1-f7d9-ffe4-7c8f" type="equalTo"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+              <profiles>
+                <profile id="3f56-6c79-1c85-47f9" name="Leave Me Alone!" hidden="false" typeId="7dc6-98f0-f5ba-fc16" typeName="Grand Strategy">
+                  <characteristics>
+                    <characteristic name="Grand Strategy" typeId="22d6-b382-f824-6381">When the battle ends, you complete this grand strategy if a friendly TRUGG is on the battlefield and no enemy HEROES are on the battlefield.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+            </selectionEntry>
+          </selectionEntries>
           <selectionEntryGroups>
             <selectionEntryGroup id="b6f8-ecab-fab4-b013" name="Loony Plans" hidden="false" collective="false" import="true">
+              <modifiers>
+                <modifier type="set" field="hidden" value="true">
+                  <conditions>
+                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="76a1-f7d9-ffe4-7c8f" type="greaterThan"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
               <constraints>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="457d-7c3f-66ef-661e" type="max"/>
               </constraints>
@@ -247,6 +279,13 @@
       </costs>
     </selectionEntry>
     <selectionEntry id="d433-4d8b-f768-641b" name="Grinkrak &amp; Looncourt (separate units)" hidden="false" collective="false" import="true" type="upgrade">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="76a1-f7d9-ffe4-7c8f" type="greaterThan"/>
+          </conditions>
+        </modifier>
+      </modifiers>
       <constraints>
         <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="ce97-59ad-da15-79fc" type="max"/>
       </constraints>
@@ -280,7 +319,7 @@
         </entryLink>
       </entryLinks>
       <costs>
-        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="190.0"/>
+        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="220.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="da37-c443-cf2d-522c" name="Gloomspite Gitz Battle Tactics" hidden="false" collective="false" import="true" type="upgrade">
@@ -301,33 +340,111 @@
       </modifiers>
       <profiles>
         <profile id="1604-3da5-7156-fc41" name="Follow da Moon" hidden="false" typeId="4bb2-448c-446c-f522" typeName="Battle Tactic">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="76a1-f7d9-ffe4-7c8f" type="greaterThan"/>
+              </conditions>
+            </modifier>
+          </modifiers>
           <characteristics>
             <characteristic name="Battle Tactic" typeId="8c0f-be41-a70e-c699">You cannot pick this tactic in the first battle round. You complete this tactic if at the end of this turn every friendly GLOOMSPITE GITZ unit on the battlefield is affected by the Light of the Bad Moon and you control more objectives than your opponent.</characteristic>
           </characteristics>
         </profile>
         <profile id="8721-d55b-abcc-0976" name="Glory Grabbers" hidden="false" typeId="4bb2-448c-446c-f522" typeName="Battle Tactic">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="76a1-f7d9-ffe4-7c8f" type="greaterThan"/>
+              </conditions>
+            </modifier>
+          </modifiers>
           <characteristics>
             <characteristic name="Battle Tactic" typeId="8c0f-be41-a70e-c699">Pick 1 objective controlled by your opponent. You complete this tactic if at the end of this turn you control that objective and a friendly GLOOMSPITE GITZ unit that was added to your army as a replacement unit using the Bad Moon Loonshrine’s Moonclan Lairs ability is contesting it.</characteristic>
           </characteristics>
         </profile>
         <profile id="a349-c890-a4a5-3461" name="Venomous Assault" hidden="false" typeId="4bb2-448c-446c-f522" typeName="Battle Tactic">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="76a1-f7d9-ffe4-7c8f" type="greaterThan"/>
+              </conditions>
+            </modifier>
+          </modifiers>
           <characteristics>
             <characteristic name="Battle Tactic" typeId="8c0f-be41-a70e-c699">You complete this tactic if at least 8 mortal wounds were caused by the Spider Venom ability of friendly SPIDERFANG units during this turn and not negated.</characteristic>
           </characteristics>
         </profile>
         <profile id="a557-26de-cd09-f4bc" name="Stab &apos;Em in the Dark" hidden="false" typeId="4bb2-448c-446c-f522" typeName="Battle Tactic">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="76a1-f7d9-ffe4-7c8f" type="greaterThan"/>
+              </conditions>
+            </modifier>
+          </modifiers>
           <characteristics>
             <characteristic name="Battle Tactic" typeId="8c0f-be41-a70e-c699">Pick 1 enemy unit on the battlefield. You complete this tactic if that unit was destroyed by an attack made by a friendly GLOOMSPITE GITZ unit during this turn while it was not affected by the Light of the Bad Moon.</characteristic>
           </characteristics>
         </profile>
         <profile id="819d-2ad8-b298-eb02" name="Moonlight Raid" hidden="false" typeId="4bb2-448c-446c-f522" typeName="Battle Tactic">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="76a1-f7d9-ffe4-7c8f" type="greaterThan"/>
+              </conditions>
+            </modifier>
+          </modifiers>
           <characteristics>
             <characteristic name="Battle Tactic" typeId="8c0f-be41-a70e-c699">Pick 1 objective controlled by your opponent. You complete this tactic if at the end of this turn you control that objective and every friendly GLOOMSPITE GITZ unit that is contesting it is affected by the Light of the Bad Moon.</characteristic>
           </characteristics>
         </profile>
         <profile id="8062-3247-309f-5f09" name="You Ain&apos;t So Big" hidden="false" typeId="4bb2-448c-446c-f522" typeName="Battle Tactic">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="76a1-f7d9-ffe4-7c8f" type="greaterThan"/>
+              </conditions>
+            </modifier>
+          </modifiers>
           <characteristics>
             <characteristic name="Battle Tactic" typeId="8c0f-be41-a70e-c699">Pick 1 enemy MONSTER on the battlefield. You complete this tactic if that MONSTER was slain by an attack made by a friendly GLOOMSPITE GITZ TROGGOTH unit during this turn.</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="511c-216f-808c-b3a9" name="Don&apos;t Like Dat One!" hidden="false" typeId="4bb2-448c-446c-f522" typeName="Battle Tactic">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="76a1-f7d9-ffe4-7c8f" type="equalTo"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <characteristics>
+            <characteristic name="Battle Tactic" typeId="8c0f-be41-a70e-c699">Pick 1 enemy HERO. You complete this battle tactic if that HERO was destroyed during this turn by an attack made by a friendly TRUGG.</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="42dc-656d-a965-1f6a" name="Feels Funny..." hidden="false" typeId="4bb2-448c-446c-f522" typeName="Battle Tactic">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="76a1-f7d9-ffe4-7c8f" type="equalTo"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <characteristics>
+            <characteristic name="Battle Tactic" typeId="8c0f-be41-a70e-c699">You complete this battle tactic if a friendly TRUGG’S TROGGHERD unit destroyed an enemy unit during this turn while it was affected by the Aura of Haywire Magic battle trait.</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="6e97-5e7f-88ab-9507" name="Wut&apos;s Dat Glowy Fing?" hidden="false" typeId="4bb2-448c-446c-f522" typeName="Battle Tactic">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="76a1-f7d9-ffe4-7c8f" type="equalTo"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <characteristics>
+            <characteristic name="Battle Tactic" typeId="8c0f-be41-a70e-c699">Pick 1 objective you do not control. You complete this battle tactic if you control that objective at the end of this turn and 2 or more friendly TRUGG’S TROGGHERD units that are affected by the Light of the Bad Moon are contesting that objective.</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -342,6 +459,13 @@
       </costs>
     </selectionEntry>
     <selectionEntry id="ebc5-c437-1438-49c2" name="Troggherd Heavies" hidden="false" collective="false" import="true" type="upgrade">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="76a1-f7d9-ffe4-7c8f" type="greaterThan"/>
+          </conditions>
+        </modifier>
+      </modifiers>
       <profiles>
         <profile id="14df-fd18-2b3b-84b7" name="Magnificent" hidden="false" typeId="66c5-932e-004a-574c" typeName="Battalion Abilities">
           <characteristics>
@@ -380,26 +504,14 @@
   </selectionEntries>
   <entryLinks>
     <entryLink id="99c0-dfd6-c5c2-2279" name="Terrain Feature - Bad Moon Loonshrine" hidden="false" collective="false" import="true" targetId="dfc9-a611-3c25-09f2" type="selectionEntry"/>
-    <entryLink id="c6b8-15be-b037-3cfa" name="Colossal Squig" hidden="false" collective="false" import="true" targetId="cf53-1e3d-a059-8bb3" type="selectionEntry">
-      <entryLinks>
-        <entryLink id="1f0b-2092-0c35-fab2" name="Battalion Formation" hidden="false" collective="false" import="true" targetId="cedb-10b7-01e6-ec85" type="selectionEntryGroup"/>
-      </entryLinks>
-    </entryLink>
-    <entryLink id="e44e-4975-caf5-d172" name="Troggoth Hag" hidden="false" collective="false" import="true" targetId="467f-fac7-437f-0a9c" type="selectionEntry">
-      <entryLinks>
-        <entryLink id="c677-7180-6929-5bb3" name="Artefacts of Power" hidden="false" collective="false" import="true" targetId="2c48-e172-44a8-ace5" type="selectionEntryGroup"/>
-        <entryLink id="735d-734f-852d-26d6" name="General" hidden="false" collective="false" import="true" targetId="98a4-3d6d-a7b9-399f" type="selectionEntry"/>
-        <entryLink id="ca38-168b-ca99-4d06" name="Command Traits" hidden="false" collective="false" import="true" targetId="b51d-226e-d522-e923" type="selectionEntryGroup"/>
-        <entryLink id="762f-6f69-a3b5-b702" name="Gloomspite Gitz Spell Lores" hidden="false" collective="false" import="true" targetId="c53f-23ad-1c16-5631" type="selectionEntryGroup"/>
-        <entryLink id="1e1f-193b-b9a2-5580" name="Battalion Formation" hidden="false" collective="false" import="true" targetId="cedb-10b7-01e6-ec85" type="selectionEntryGroup"/>
-      </entryLinks>
-    </entryLink>
-    <entryLink id="0114-6a7f-149e-b563" name="Squig Gobba" hidden="false" collective="false" import="true" targetId="4bdc-7ec3-eb2b-0fdf" type="selectionEntry">
-      <entryLinks>
-        <entryLink id="48e6-a0b6-8e2c-d848" name="Battalion Formation" hidden="false" collective="false" import="true" targetId="cedb-10b7-01e6-ec85" type="selectionEntryGroup"/>
-      </entryLinks>
-    </entryLink>
     <entryLink id="4605-2093-4905-ba0e" name="Skragrott, The Loonking" hidden="false" collective="false" import="true" targetId="29a3-9b9e-a047-a3b2" type="selectionEntry">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="76a1-f7d9-ffe4-7c8f" type="greaterThan"/>
+          </conditions>
+        </modifier>
+      </modifiers>
       <entryLinks>
         <entryLink id="15b4-0f62-199d-9217" name="Gloomspite Gitz Spell Lores" hidden="false" collective="false" import="true" targetId="c53f-23ad-1c16-5631" type="selectionEntryGroup"/>
         <entryLink id="18e5-8d89-8609-7319" name="Battalion Formation" hidden="false" collective="false" import="true" targetId="cedb-10b7-01e6-ec85" type="selectionEntryGroup"/>
@@ -411,6 +523,13 @@
       </entryLinks>
     </entryLink>
     <entryLink id="e07e-cb9a-0ec1-9da4" name="Fungoid Cave-Shaman" hidden="false" collective="false" import="true" targetId="2744-31c9-4616-4b51" type="selectionEntry">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="76a1-f7d9-ffe4-7c8f" type="greaterThan"/>
+          </conditions>
+        </modifier>
+      </modifiers>
       <entryLinks>
         <entryLink id="bbd7-ce56-96ac-03aa" name="Artefacts of Power" hidden="false" collective="false" import="true" targetId="2c48-e172-44a8-ace5" type="selectionEntryGroup"/>
         <entryLink id="08ac-ff92-9882-df16" name="Command Traits" hidden="false" collective="false" import="true" targetId="b51d-226e-d522-e923" type="selectionEntryGroup"/>
@@ -439,6 +558,13 @@
       </modifiers>
     </entryLink>
     <entryLink id="68b1-14be-2320-2b74" name="Loonboss on Mangler Squigs" hidden="false" collective="false" import="true" targetId="c0ff-6da0-968d-d5ea" type="selectionEntry">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="76a1-f7d9-ffe4-7c8f" type="greaterThan"/>
+          </conditions>
+        </modifier>
+      </modifiers>
       <entryLinks>
         <entryLink id="3560-19e1-29b7-8feb" name="Artefacts of Power" hidden="false" collective="false" import="true" targetId="2c48-e172-44a8-ace5" type="selectionEntryGroup"/>
         <entryLink id="f2a3-575b-b05d-8bfe" name="Command Traits" hidden="false" collective="false" import="true" targetId="b51d-226e-d522-e923" type="selectionEntryGroup"/>
@@ -453,6 +579,13 @@
       </entryLinks>
     </entryLink>
     <entryLink id="d761-4775-c2f7-e398" name="Loonboss" hidden="false" collective="false" import="true" targetId="d342-db1d-1a84-b51d" type="selectionEntry">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="76a1-f7d9-ffe4-7c8f" type="greaterThan"/>
+          </conditions>
+        </modifier>
+      </modifiers>
       <entryLinks>
         <entryLink id="be4e-14f3-74a5-d3a1" name="Artefacts of Power" hidden="false" collective="false" import="true" targetId="2c48-e172-44a8-ace5" type="selectionEntryGroup"/>
         <entryLink id="c97f-1801-7752-8cdb" name="Command Traits" hidden="false" collective="false" import="true" targetId="b51d-226e-d522-e923" type="selectionEntryGroup"/>
@@ -466,6 +599,13 @@
       </entryLinks>
     </entryLink>
     <entryLink id="aad6-deb0-a565-e02e" name="Loonboss on Giant Cave Squig" hidden="false" collective="false" import="true" targetId="a53b-7809-c3d7-e4f0" type="selectionEntry">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="76a1-f7d9-ffe4-7c8f" type="greaterThan"/>
+          </conditions>
+        </modifier>
+      </modifiers>
       <entryLinks>
         <entryLink id="f6db-aefa-9cd1-617a" name="Artefacts of Power" hidden="false" collective="false" import="true" targetId="2c48-e172-44a8-ace5" type="selectionEntryGroup"/>
         <entryLink id="75c4-1eac-e0d2-892a" name="Command Traits" hidden="false" collective="false" import="true" targetId="b51d-226e-d522-e923" type="selectionEntryGroup"/>
@@ -480,6 +620,13 @@
       </entryLinks>
     </entryLink>
     <entryLink id="d93a-9038-f6b0-6db5" name="Loonboss with Giant Cave Squig" hidden="false" collective="false" import="true" targetId="31b3-35de-c361-2317" type="selectionEntry">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="76a1-f7d9-ffe4-7c8f" type="greaterThan"/>
+          </conditions>
+        </modifier>
+      </modifiers>
       <entryLinks>
         <entryLink id="a51b-4404-c970-2f7e" name="Artefacts of Power" hidden="false" collective="false" import="true" targetId="2c48-e172-44a8-ace5" type="selectionEntryGroup"/>
         <entryLink id="8023-c956-dff3-7854" name="Command Traits" hidden="false" collective="false" import="true" targetId="b51d-226e-d522-e923" type="selectionEntryGroup"/>
@@ -493,6 +640,13 @@
       </entryLinks>
     </entryLink>
     <entryLink id="e8ae-ebca-107b-8f8b" name="Sneaky Snufflers" hidden="false" collective="false" import="true" targetId="3a60-8f27-bda9-08be" type="selectionEntry">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="76a1-f7d9-ffe4-7c8f" type="greaterThan"/>
+          </conditions>
+        </modifier>
+      </modifiers>
       <entryLinks>
         <entryLink id="42af-f4ff-1da4-456f" name="Battalion Formation" hidden="false" collective="false" import="true" targetId="cedb-10b7-01e6-ec85" type="selectionEntryGroup"/>
       </entryLinks>
@@ -513,6 +667,11 @@
             </conditionGroup>
           </conditionGroups>
         </modifier>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="76a1-f7d9-ffe4-7c8f" type="greaterThan"/>
+          </conditions>
+        </modifier>
       </modifiers>
       <categoryLinks>
         <categoryLink id="43e7-c921-3572-bc18" name="BATTLELINE" hidden="false" targetId="a42d-220e-6a88-7bf6" primary="false"/>
@@ -522,6 +681,13 @@
       </entryLinks>
     </entryLink>
     <entryLink id="7c58-8d31-ced8-3dfa" name="Loonsmasha Fanatics" hidden="false" collective="false" import="true" targetId="2b8d-9828-a039-3350" type="selectionEntry">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="76a1-f7d9-ffe4-7c8f" type="greaterThan"/>
+          </conditions>
+        </modifier>
+      </modifiers>
       <entryLinks>
         <entryLink id="dbd5-e8ed-8abc-6d1c" name="Battalion Formation" hidden="false" collective="false" import="true" targetId="cedb-10b7-01e6-ec85" type="selectionEntryGroup"/>
       </entryLinks>
@@ -541,6 +707,11 @@
             </conditionGroup>
           </conditionGroups>
         </modifier>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="76a1-f7d9-ffe4-7c8f" type="greaterThan"/>
+          </conditions>
+        </modifier>
       </modifiers>
       <categoryLinks>
         <categoryLink id="3421-cd5b-2127-e33c" name="BATTLELINE" hidden="false" targetId="a42d-220e-6a88-7bf6" primary="false"/>
@@ -550,16 +721,37 @@
       </entryLinks>
     </entryLink>
     <entryLink id="5e15-1440-1ba6-5a9c" name="Stabbas" hidden="false" collective="false" import="true" targetId="c796-e61c-3f9e-0197" type="selectionEntry">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="76a1-f7d9-ffe4-7c8f" type="greaterThan"/>
+          </conditions>
+        </modifier>
+      </modifiers>
       <entryLinks>
         <entryLink id="16dc-b31e-08b2-bf13" name="Battalion Formation" hidden="false" collective="false" import="true" targetId="cedb-10b7-01e6-ec85" type="selectionEntryGroup"/>
       </entryLinks>
     </entryLink>
     <entryLink id="10f5-4eb7-520a-8aab" name="Shootas" hidden="false" collective="false" import="true" targetId="b214-3bc6-1bb4-3e41" type="selectionEntry">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="76a1-f7d9-ffe4-7c8f" type="greaterThan"/>
+          </conditions>
+        </modifier>
+      </modifiers>
       <entryLinks>
         <entryLink id="8816-a58d-6a0e-44bc" name="Battalion Formation" hidden="false" collective="false" import="true" targetId="cedb-10b7-01e6-ec85" type="selectionEntryGroup"/>
       </entryLinks>
     </entryLink>
     <entryLink id="c32d-6b7e-883a-a0b4" name="Squig Hoppers" hidden="false" collective="false" import="true" targetId="f903-6b16-79bf-a259" type="selectionEntry">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="76a1-f7d9-ffe4-7c8f" type="greaterThan"/>
+          </conditions>
+        </modifier>
+      </modifiers>
       <entryLinks>
         <entryLink id="35de-b972-7043-124f" name="Battalion Formation" hidden="false" collective="false" import="true" targetId="cedb-10b7-01e6-ec85" type="selectionEntryGroup"/>
       </entryLinks>
@@ -580,6 +772,11 @@
             </conditionGroup>
           </conditionGroups>
         </modifier>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="76a1-f7d9-ffe4-7c8f" type="greaterThan"/>
+          </conditions>
+        </modifier>
       </modifiers>
       <categoryLinks>
         <categoryLink id="7b5a-f4b5-829f-4456" name="Battleline" hidden="false" targetId="a42d-220e-6a88-7bf6" primary="false"/>
@@ -589,6 +786,13 @@
       </entryLinks>
     </entryLink>
     <entryLink id="248d-62d8-36b0-d4fd" name="Mangler Squigs" hidden="false" collective="false" import="true" targetId="473f-871d-3e90-250e" type="selectionEntry">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="76a1-f7d9-ffe4-7c8f" type="greaterThan"/>
+          </conditions>
+        </modifier>
+      </modifiers>
       <entryLinks>
         <entryLink id="fa5f-5e1c-16be-3f39" name="Battalion Formation" hidden="false" collective="false" import="true" targetId="cedb-10b7-01e6-ec85" type="selectionEntryGroup"/>
       </entryLinks>
@@ -670,6 +874,13 @@
       </entryLinks>
     </entryLink>
     <entryLink id="60d7-642b-9b87-e2f6" name="Webspinner Shaman on Arachnarok Spider" hidden="false" collective="false" import="true" targetId="d260-2575-2681-4943" type="selectionEntry">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="76a1-f7d9-ffe4-7c8f" type="greaterThan"/>
+          </conditions>
+        </modifier>
+      </modifiers>
       <categoryLinks>
         <categoryLink id="0341-e2ef-c4c6-00d4" name="General - SPIDERFANG" hidden="false" targetId="fc27-5757-103b-75fb" primary="false"/>
       </categoryLinks>
@@ -691,6 +902,13 @@
       </entryLinks>
     </entryLink>
     <entryLink id="b184-a74b-6660-de4b" name="Webspinner Shaman" hidden="false" collective="false" import="true" targetId="4c70-b532-bbef-d914" type="selectionEntry">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="76a1-f7d9-ffe4-7c8f" type="greaterThan"/>
+          </conditions>
+        </modifier>
+      </modifiers>
       <categoryLinks>
         <categoryLink id="042e-ca9f-6e0d-c641" name="General - SPIDERFANG" hidden="false" targetId="fc27-5757-103b-75fb" primary="false"/>
       </categoryLinks>
@@ -712,6 +930,13 @@
       </entryLinks>
     </entryLink>
     <entryLink id="c7a0-134c-baf1-5596" name="Scuttleboss on Gigantic Spider" hidden="false" collective="false" import="true" targetId="529e-f564-cced-ac99" type="selectionEntry">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="76a1-f7d9-ffe4-7c8f" type="greaterThan"/>
+          </conditions>
+        </modifier>
+      </modifiers>
       <categoryLinks>
         <categoryLink id="19fe-fff3-f76b-8201" name="General - SPIDERFANG" hidden="false" targetId="fc27-5757-103b-75fb" primary="false"/>
       </categoryLinks>
@@ -732,11 +957,25 @@
       </entryLinks>
     </entryLink>
     <entryLink id="cac1-6a76-5530-0b31" name="Arachnarok Spider with Flinger" hidden="false" collective="false" import="true" targetId="8341-27d8-3b15-54e7" type="selectionEntry">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="76a1-f7d9-ffe4-7c8f" type="greaterThan"/>
+          </conditions>
+        </modifier>
+      </modifiers>
       <entryLinks>
         <entryLink id="0b83-d02f-64c2-f014" name="Battalion Formation" hidden="false" collective="false" import="true" targetId="cedb-10b7-01e6-ec85" type="selectionEntryGroup"/>
       </entryLinks>
     </entryLink>
     <entryLink id="897d-47e2-60a9-2cd6" name="Arachnarok Spider with Spiderfang Warparty" hidden="false" collective="false" import="true" targetId="8a0e-8cce-fa1b-ef0f" type="selectionEntry">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="76a1-f7d9-ffe4-7c8f" type="greaterThan"/>
+          </conditions>
+        </modifier>
+      </modifiers>
       <modifierGroups>
         <modifierGroup>
           <conditionGroups>
@@ -766,6 +1005,13 @@
       </entryLinks>
     </entryLink>
     <entryLink id="8581-36c2-0adb-a73d" name="Aleguzzler Gargant" hidden="false" collective="false" import="true" targetId="4c5a-99b8-606c-0158" type="selectionEntry">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="76a1-f7d9-ffe4-7c8f" type="greaterThan"/>
+          </conditions>
+        </modifier>
+      </modifiers>
       <entryLinks>
         <entryLink id="5d3a-8ea0-8be7-d5ee" name="Battalion Formation" hidden="false" collective="false" import="true" targetId="cedb-10b7-01e6-ec85" type="selectionEntryGroup"/>
       </entryLinks>
@@ -786,6 +1032,11 @@
             </conditionGroup>
           </conditionGroups>
         </modifier>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="76a1-f7d9-ffe4-7c8f" type="greaterThan"/>
+          </conditions>
+        </modifier>
       </modifiers>
       <categoryLinks>
         <categoryLink id="c1ff-a384-15dc-74b8" name="BATTLELINE" hidden="false" targetId="a42d-220e-6a88-7bf6" primary="false"/>
@@ -795,11 +1046,25 @@
       </entryLinks>
     </entryLink>
     <entryLink id="d3c9-5570-0d8e-357e" name="Skitterstrand Arachnarok" hidden="false" collective="false" import="true" targetId="bbc1-f04c-f2d4-0412" type="selectionEntry">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="76a1-f7d9-ffe4-7c8f" type="greaterThan"/>
+          </conditions>
+        </modifier>
+      </modifiers>
       <entryLinks>
         <entryLink id="3264-7525-e4e2-45ca" name="Battalion Formation" hidden="false" collective="false" import="true" targetId="cedb-10b7-01e6-ec85" type="selectionEntryGroup"/>
       </entryLinks>
     </entryLink>
     <entryLink id="38bd-db45-755b-bf66" name="Madcap Shaman" hidden="false" collective="false" import="true" targetId="a2cb-0e33-daa9-6b5a" type="selectionEntry">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="76a1-f7d9-ffe4-7c8f" type="greaterThan"/>
+          </conditions>
+        </modifier>
+      </modifiers>
       <entryLinks>
         <entryLink id="cfbe-4045-d01b-a637" name="Artefacts of Power" hidden="false" collective="false" import="true" targetId="2c48-e172-44a8-ace5" type="selectionEntryGroup"/>
         <entryLink id="ca1b-4a1b-717b-7b2f" name="Command Traits" hidden="false" collective="false" import="true" targetId="b51d-226e-d522-e923" type="selectionEntryGroup"/>
@@ -813,20 +1078,34 @@
       </entryLinks>
     </entryLink>
     <entryLink id="8104-f6c9-b967-7606" name="Rippa&apos;s Snarlfangs" hidden="false" collective="false" import="true" targetId="58fc-2a34-c705-9862" type="selectionEntry">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="76a1-f7d9-ffe4-7c8f" type="greaterThan"/>
+          </conditions>
+        </modifier>
+      </modifiers>
       <entryLinks>
         <entryLink id="357d-5e27-0a52-3b20" name="Battalion Formation" hidden="false" collective="false" import="true" targetId="cedb-10b7-01e6-ec85" type="selectionEntryGroup"/>
       </entryLinks>
     </entryLink>
-    <entryLink id="2e58-4d20-95c7-f265" name="Bonegrinder Mega-Gargant" hidden="false" collective="false" import="true" targetId="b885-9816-a954-eab5" type="selectionEntry">
-      <entryLinks>
-        <entryLink id="d5a1-c2ae-276a-f885" name="Battalion Formation" hidden="false" collective="false" import="true" targetId="cedb-10b7-01e6-ec85" type="selectionEntryGroup"/>
-      </entryLinks>
-      <costs>
-        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="535.0"/>
-      </costs>
+    <entryLink id="4df9-f003-ec3c-f0a4" name="Kragnos, The End of Empires" hidden="false" collective="false" import="true" targetId="52c3-aded-0a1a-6c1e" type="selectionEntry">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="76a1-f7d9-ffe4-7c8f" type="greaterThan"/>
+          </conditions>
+        </modifier>
+      </modifiers>
     </entryLink>
-    <entryLink id="4df9-f003-ec3c-f0a4" name="Kragnos, The End of Empires" hidden="false" collective="false" import="true" targetId="52c3-aded-0a1a-6c1e" type="selectionEntry"/>
     <entryLink id="3916-6f1b-46be-a96c" name="Squigboss with Gnasha-squig" hidden="false" collective="false" import="true" targetId="234e-a8fd-6084-004d" type="selectionEntry">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="76a1-f7d9-ffe4-7c8f" type="greaterThan"/>
+          </conditions>
+        </modifier>
+      </modifiers>
       <entryLinks>
         <entryLink id="91df-bccc-d22b-e844" name="Battalion Formation" hidden="false" collective="false" import="true" targetId="cedb-10b7-01e6-ec85" type="selectionEntryGroup"/>
         <entryLink id="07a7-cd42-455e-0fcd" name="General" hidden="false" collective="false" import="true" targetId="98a4-3d6d-a7b9-399f" type="selectionEntry">
@@ -844,13 +1123,53 @@
       </entryLinks>
     </entryLink>
     <entryLink id="5e6f-1e95-9f94-bcd1" name="Snarlfang Riders" hidden="false" collective="false" import="true" targetId="d6ea-9116-768d-2f68" type="selectionEntry">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="76a1-f7d9-ffe4-7c8f" type="greaterThan"/>
+          </conditions>
+        </modifier>
+      </modifiers>
       <entryLinks>
         <entryLink id="cb4a-5268-fcb9-47ed" name="Battalion Formation" hidden="false" collective="false" import="true" targetId="cedb-10b7-01e6-ec85" type="selectionEntryGroup"/>
       </entryLinks>
     </entryLink>
     <entryLink id="e76f-6985-d9ba-3597" name="Gobbapalooza" hidden="false" collective="false" import="true" targetId="736d-d769-614e-cffb" type="selectionEntry">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="76a1-f7d9-ffe4-7c8f" type="greaterThan"/>
+          </conditions>
+        </modifier>
+      </modifiers>
       <entryLinks>
         <entryLink id="174b-9957-4336-6891" name="Battalion Formation" hidden="false" collective="false" import="true" targetId="cedb-10b7-01e6-ec85" type="selectionEntryGroup"/>
+      </entryLinks>
+    </entryLink>
+    <entryLink id="d49c-ad70-0c64-fff9" name="Trugg the Troggoth King" hidden="false" collective="false" import="true" targetId="390a-3f7f-4645-627d" type="selectionEntry">
+      <entryLinks>
+        <entryLink id="bb52-aef7-0bec-bcfc" name="General" hidden="false" collective="false" import="true" targetId="98a4-3d6d-a7b9-399f" type="selectionEntry">
+          <categoryLinks>
+            <categoryLink id="131c-f21f-c00a-5fe3" name="Named General" hidden="false" targetId="8b3d-7f03-e1f9-eaf5" primary="false"/>
+          </categoryLinks>
+        </entryLink>
+        <entryLink id="9a61-5b10-2c36-27e1" name="Battalion Formation" hidden="false" collective="false" import="true" targetId="cedb-10b7-01e6-ec85" type="selectionEntryGroup"/>
+      </entryLinks>
+    </entryLink>
+    <entryLink id="8579-5825-6a88-bbc5" name="Rabble-Rowza" hidden="false" collective="false" import="true" targetId="98c0-f4bc-ce34-9083" type="selectionEntry">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="76a1-f7d9-ffe4-7c8f" type="greaterThan"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <entryLinks>
+        <entryLink id="7070-c91b-852b-9947" name="General" hidden="false" collective="false" import="true" targetId="98a4-3d6d-a7b9-399f" type="selectionEntry"/>
+        <entryLink id="fa0b-a5f3-8f0b-1295" name="Battalion Formation" hidden="false" collective="false" import="true" targetId="cedb-10b7-01e6-ec85" type="selectionEntryGroup"/>
+        <entryLink id="0e42-d14e-0891-b007" name="Artefacts of Power" hidden="false" collective="false" import="true" targetId="2c48-e172-44a8-ace5" type="selectionEntryGroup"/>
+        <entryLink id="a94a-3462-e7d1-d662" name="Command Traits" hidden="false" collective="false" import="true" targetId="b51d-226e-d522-e923" type="selectionEntryGroup"/>
+        <entryLink id="9fcc-960a-bc0c-ee44" name="Gloomspite Gitz Spell Lores" hidden="false" collective="false" import="true" targetId="c53f-23ad-1c16-5631" type="selectionEntryGroup"/>
       </entryLinks>
     </entryLink>
   </entryLinks>
@@ -885,6 +1204,13 @@
           </constraints>
           <profiles>
             <profile id="2c9c-0c99-0a65-1cfb" name="The Bad Moon&apos;s Orbit" hidden="false" typeId="c0c2-177b-e761-ec41" typeName="Allegiance Abilities">
+              <modifiers>
+                <modifier type="set" field="hidden" value="true">
+                  <conditions>
+                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="76a1-f7d9-ffe4-7c8f" type="greaterThan"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
               <characteristics>
                 <characteristic name="Allegiance Ability" typeId="0506-f62d-68b3-5499">If any of the armies in a battle are Gloomspite Gitz armies, in the first battle round, after players have received their starting command points but before the start of the first turn, the player commanding the Gloomspite Gitz army picks 1 large quarter of the battlefield as the Bad Moon’s starting location. If more than 1 player in the battle is commanding a Gloomspite Gitz army, then those players roll off and the winner picks which large quarter is the Bad Moon’s starting location.
 
@@ -896,6 +1222,13 @@ The location of the Bad Moon determines which GLOOMSPITE GITZ units are affected
               </characteristics>
             </profile>
             <profile id="aadf-0cf9-61e9-85f2" name="Under the Light of the Bad Moon" hidden="false" typeId="7861-da01-01c0-88d9" typeName="Ability">
+              <modifiers>
+                <modifier type="set" field="hidden" value="true">
+                  <conditions>
+                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="76a1-f7d9-ffe4-7c8f" type="greaterThan"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
               <characteristics>
                 <characteristic name="Ability" typeId="9bce-4deb-8b79-eaec">The Light of the Bad Moon affects units in the following ways:
 
@@ -909,6 +1242,13 @@ Spiderfang Venom: While SPIDERFANG units are affected by the Light of the Bad Mo
               </characteristics>
             </profile>
             <profile id="acd4-db55-a13b-7b32" name="Gittish Hordes" hidden="false" typeId="c0c2-177b-e761-ec41" typeName="Allegiance Abilities">
+              <modifiers>
+                <modifier type="set" field="hidden" value="true">
+                  <conditions>
+                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="76a1-f7d9-ffe4-7c8f" type="greaterThan"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
               <characteristics>
                 <characteristic name="Allegiance Ability" typeId="0506-f62d-68b3-5499">You can pick 1 of the following subfactions for your army. All GLOOMSPITE GITZ units in your army gain the keyword of the subfaction you picked, and you can use the allegiance abilities for that subfaction. If a unit already has a different subfaction keyword on its warscroll, it cannot gain another one. This does not preclude you from including the unit in your army, but you cannot use the allegiance abilities for its subfaction.
 
@@ -920,6 +1260,13 @@ Spiderfang Venom: While SPIDERFANG units are affected by the Light of the Bad Mo
               </characteristics>
             </profile>
             <profile id="ec59-ca2b-83e0-4d44" name="Bosses of the Everdank" hidden="false" typeId="c0c2-177b-e761-ec41" typeName="Allegiance Abilities">
+              <modifiers>
+                <modifier type="set" field="hidden" value="true">
+                  <conditions>
+                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="76a1-f7d9-ffe4-7c8f" type="greaterThan"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
               <characteristics>
                 <characteristic name="Allegiance Ability" typeId="0506-f62d-68b3-5499">When you carry out a heroic action with a GLOOMSPITE GITZ HERO, you can carry out one from the table below instead of any other heroic action you can carry out with that HERO.
 
@@ -931,6 +1278,13 @@ Wade and Smash: Only a DANKHOLD TROGGBOSS within 3&quot; of any enemy units can 
               </characteristics>
             </profile>
             <profile id="0b98-ea30-152d-7eb9" name="Beasts of the Loonlairs" hidden="false" typeId="c0c2-177b-e761-ec41" typeName="Allegiance Abilities">
+              <modifiers>
+                <modifier type="set" field="hidden" value="true">
+                  <conditions>
+                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="76a1-f7d9-ffe4-7c8f" type="greaterThan"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
               <characteristics>
                 <characteristic name="Allegiance Ability" typeId="0506-f62d-68b3-5499">When you carry out a monstrous rampage with a GLOOMSPITE GITZ MONSTER, you can carry out one from the table below instead of any other monstrous rampage you can carry out with that MONSTER.
 
@@ -942,8 +1296,53 @@ Giant Boing!: Only a MANGLER SQUIGS unit that has made a charge move this turn c
               </characteristics>
             </profile>
           </profiles>
+          <selectionEntries>
+            <selectionEntry id="76a1-f7d9-ffe4-7c8f" name="Trugg&apos;s Troggherd" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="a446-fde3-fb04-3263" type="max"/>
+              </constraints>
+              <profiles>
+                <profile id="50c6-a6f4-06f4-2f08" name="The Bad Moon&apos;s Orbit" hidden="false" typeId="c0c2-177b-e761-ec41" typeName="Allegiance Abilities">
+                  <characteristics>
+                    <characteristic name="Allegiance Ability" typeId="0506-f62d-68b3-5499">If any of the armies in a battle are Gloomspite Gitz armies, in the first battle round, after players have received their starting command points but before the start of the first turn, the player commanding the Gloomspite Gitz army picks 1 large quarter of the battlefield as the Bad Moon’s starting location. If more than 1 player in the battle is commanding a Gloomspite Gitz army, then those players roll off and the winner picks which large quarter is the Bad Moon’s starting location.
+
+During the battle, the Bad Moon will move and its location will change. The Bad Moon starts in a large quarter of the battlefield. The first time it moves, it moves to the centre of the battlefield. Then it moves to the large quarter diagonally opposite the large quarter in which it started. Finally, it moves off the battlefield. At the start of the second and each subsequent battle round, before the priority roll, the player commanding the Gloomspite Gitz army rolls a dice. If more than 1 player in the battle is commanding a Gloomspite Gitz army, then those players roll off and the winner rolls the dice. On a 1-3, the Bad Moon does not move and instead stays at its current location. On a 4+, it moves to the next location.
+
+When the Bad Moon moves off the battlefield, it has no further effect on the battle. The location of the Bad Moon determines which GLOOMSPITE GITZ units are affected by the Light of the Bad Moon. While the Bad Moon is located in a large quarter of the battlefield, all GLOOMSPITE GITZ units wholly within the same large quarter are affected. While it is located in the centre of the battlefield, all GLOOMSPITE GITZ units on the battlefield are affected.</characteristic>
+                  </characteristics>
+                </profile>
+                <profile id="b8bd-2932-3544-776c" name="Moonlit Hide" hidden="false" typeId="c0c2-177b-e761-ec41" typeName="Allegiance Abilities">
+                  <characteristics>
+                    <characteristic name="Allegiance Ability" typeId="0506-f62d-68b3-5499">Add 1 to save rolls for attacks that target friendly TRUGG’S TROGGHERD units while they are affected by the Light of the Bad Moon.</characteristic>
+                  </characteristics>
+                </profile>
+                <profile id="21de-219c-fddb-8d9a" name="Aura of Haywire Magic" hidden="false" typeId="c0c2-177b-e761-ec41" typeName="Allegiance Abilities">
+                  <characteristics>
+                    <characteristic name="Allegiance Ability" typeId="0506-f62d-68b3-5499">At the start of your hero phase, if you use a friendly TRUGG’s Malfunctioning Leystone ability, the effect you pick applies to all other friendly TRUGG’S TROGGHERD units until the start of your next hero phase.</characteristic>
+                  </characteristics>
+                </profile>
+                <profile id="147f-373a-de21-6658" name="The King&apos;s Wreckerz" hidden="false" typeId="c0c2-177b-e761-ec41" typeName="Allegiance Abilities">
+                  <characteristics>
+                    <characteristic name="Allegiance Ability" typeId="0506-f62d-68b3-5499">Friendly TRUGG’S TROGGHERD units that do not have the HERO keyword gain the Battleline battlefield role.</characteristic>
+                  </characteristics>
+                </profile>
+                <profile id="6b42-8585-913c-d8ea" name="Trugg&apos;s Troggherd" hidden="false" typeId="ce32-0c40-1990-4c8a" typeName="Restriction">
+                  <characteristics>
+                    <characteristic name="Restriction" typeId="edbe-5fe5-1142-afa6">When you pick the Gloomspite Gitz faction for your army, you can say that it will be a Trugg’s Troggherd army of renown. If you do so, use the rules on these pages. Every unit in your army must have both the GLOOMSPITE GITZ keyword and the TROGGOTH keyword. All units in your army gain the TRUGG’S TROGGHERD keyword.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+            </selectionEntry>
+          </selectionEntries>
           <selectionEntryGroups>
             <selectionEntryGroup id="eac7-184d-1ff6-4766" name="Sub-Allegiance" hidden="false" collective="false" import="true">
+              <modifiers>
+                <modifier type="set" field="hidden" value="true">
+                  <conditions>
+                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="76a1-f7d9-ffe4-7c8f" type="greaterThan"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
               <constraints>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="085c-d183-caff-5490" type="max"/>
               </constraints>
@@ -1123,6 +1522,11 @@ Only Gloomspite Gitz armies can include this faction terrain feature.</character
                 <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="9e49-bd7f-45ee-1a96" type="greaterThan"/>
               </conditions>
             </modifier>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="76a1-f7d9-ffe4-7c8f" type="greaterThan"/>
+              </conditions>
+            </modifier>
           </modifiers>
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="aba4-0e56-9f5c-dca9" type="max"/>
@@ -1200,6 +1604,11 @@ Only Gloomspite Gitz armies can include this faction terrain feature.</character
                 <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="f9bf-2f62-46ac-f7d3" type="greaterThan"/>
               </conditions>
             </modifier>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="76a1-f7d9-ffe4-7c8f" type="greaterThan"/>
+              </conditions>
+            </modifier>
           </modifiers>
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="487b-3132-f7e7-12e0" type="max"/>
@@ -1227,7 +1636,7 @@ Only Gloomspite Gitz armies can include this faction terrain feature.</character
               <profiles>
                 <profile id="93fb-411c-178a-a837" name="Nikkit! Nikkit!" hidden="false" typeId="13da-11a8-b7d1-77a7" typeName="Spell">
                   <characteristics>
-                    <characteristic name="Spell" typeId="1170-c916-1b73-ae34">Nikkit! Nikkit! is a spell that has a casting value of 8 and a range of 12&quot;. If successfully cast, pick 1 enemy model within range and visible to the caster. That model’s unit suffers D3 mortal wounds. In addition, if that model bears an artefact of power and the casting roll was 10+, that model’s artefact of power can no longer be used (if it was used to enhance a weapon, that weapon reverts to its normal form).</characteristic>
+                    <characteristic name="Spell" typeId="1170-c916-1b73-ae34">Nikkit! Nikkit! is a spell that has a casting value of 8 and a range of 12&quot;. If successfully cast, pick 1 enemy model within range and visible to the caster. That model’s unit suffers D3 mortal wounds. In addition, if that model bears an artefact of power and the unmodified casting roll was 10+, that model’s artefact of power can no longer be used (if it was used to enhance a weapon, that weapon reverts to its normal form).</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
@@ -1269,7 +1678,7 @@ Only Gloomspite Gitz armies can include this faction terrain feature.</character
         </selectionEntryGroup>
       </selectionEntryGroups>
       <entryLinks>
-        <entryLink id="382b-437c-88ea-2313" name="Universal Spell Lore" hidden="false" collective="false" import="true" targetId="93f7-7e2a-3308-d150" type="selectionEntryGroup"/>
+        <entryLink id="382b-437c-88ea-2313" name="Rulebook Spell Lores" hidden="false" collective="false" import="true" targetId="8aee-7492-ee73-6d07" type="selectionEntryGroup"/>
       </entryLinks>
     </selectionEntryGroup>
     <selectionEntryGroup id="b51d-226e-d522-e923" name="Command Traits" publicationId="b26b-402e-2023-e85b" hidden="false" collective="false" import="true">
@@ -1293,6 +1702,11 @@ Only Gloomspite Gitz armies can include this faction terrain feature.</character
             <modifier type="set" field="hidden" value="true">
               <conditions>
                 <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="136a-adac-f0f3-e167" type="notInstanceOf"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="76a1-f7d9-ffe4-7c8f" type="greaterThan"/>
               </conditions>
             </modifier>
           </modifiers>
@@ -1402,6 +1816,11 @@ Only Gloomspite Gitz armies can include this faction terrain feature.</character
                 <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="bc04-9fe9-cd63-bd89" type="notInstanceOf"/>
               </conditions>
             </modifier>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="76a1-f7d9-ffe4-7c8f" type="greaterThan"/>
+              </conditions>
+            </modifier>
           </modifiers>
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="5510-6666-8643-7bab" type="max"/>
@@ -1445,9 +1864,50 @@ Only Gloomspite Gitz armies can include this faction terrain feature.</character
             </selectionEntry>
           </selectionEntries>
         </selectionEntryGroup>
+        <selectionEntryGroup id="6da7-56f3-c081-33b7" name="Traits of Trugg&apos;s Troggs" hidden="false" collective="false" import="true">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="76a1-f7d9-ffe4-7c8f" type="equalTo"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="21ea-bd2e-25cd-1737" type="max"/>
+          </constraints>
+          <selectionEntries>
+            <selectionEntry id="d4f5-c63b-5138-64df" name="3. Living Landmark" hidden="false" collective="false" import="true" type="upgrade">
+              <profiles>
+                <profile id="d959-03ef-44ff-d456" name="Living Landmark" hidden="false" typeId="1504-23bf-8850-4f65" typeName="Command Traits">
+                  <characteristics>
+                    <characteristic name="Command Trait" typeId="0145-9acf-f5dc-d543">During deployment, instead of setting up this general on the battlefield, you can place them to one side and say that they are set up in ambush as a reserve unit. At the end of your first movement phase, you can set them up on the battlefield, within 3&quot; of a terrain feature and more than 9&quot; from all enemy units.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+            </selectionEntry>
+            <selectionEntry id="dfb5-ddac-7701-f20f" name="2. Prized Trogglet" hidden="false" collective="false" import="true" type="upgrade">
+              <profiles>
+                <profile id="14a8-f09d-5414-96fc" name="Prized Trogglet" hidden="false" typeId="1504-23bf-8850-4f65" typeName="Command Traits">
+                  <characteristics>
+                    <characteristic name="Command Trait" typeId="0145-9acf-f5dc-d543">Roll a dice each time an enemy model within 12&quot; of this general issues a command. On a 5+, that command is not received (it still counts as having been used) and the command point that was spent to issue that command is lost.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+            </selectionEntry>
+            <selectionEntry id="abdb-18fa-053f-b442" name="1. Ceaseless Growth" hidden="false" collective="false" import="true" type="upgrade">
+              <profiles>
+                <profile id="5f19-4a33-caa4-ca70" name="Ceaseless Growth" hidden="false" typeId="1504-23bf-8850-4f65" typeName="Command Traits">
+                  <characteristics>
+                    <characteristic name="Command Trait" typeId="0145-9acf-f5dc-d543">When you roll the dice that determines the number of wounds you can heal with a friendly TRUGG’S TROGGHERD unit’s Regeneration or Greater Regeneration ability, add 1 to the number of wounds you can heal.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
       </selectionEntryGroups>
       <entryLinks>
-        <entryLink id="7188-1ddc-904b-3895" name="Universal Command Traits" hidden="false" collective="false" import="true" targetId="20f0-6df9-b464-3789" type="selectionEntryGroup"/>
+        <entryLink id="7188-1ddc-904b-3895" name="Rulebook Command Traits" hidden="false" collective="false" import="true" targetId="6978-81a2-4c55-65f3" type="selectionEntryGroup"/>
       </entryLinks>
     </selectionEntryGroup>
     <selectionEntryGroup id="2c48-e172-44a8-ace5" name="Artefacts of Power" publicationId="b26b-402e-2023-e85b" hidden="false" collective="false" import="true">
@@ -1478,6 +1938,11 @@ Only Gloomspite Gitz armies can include this faction terrain feature.</character
             <modifier type="set" field="hidden" value="true">
               <conditions>
                 <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="d204-ae0c-c18f-f10e" type="notInstanceOf"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="76a1-f7d9-ffe4-7c8f" type="greaterThan"/>
               </conditions>
             </modifier>
           </modifiers>
@@ -1605,6 +2070,11 @@ Only Gloomspite Gitz armies can include this faction terrain feature.</character
                 <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="bc04-9fe9-cd63-bd89" type="notInstanceOf"/>
               </conditions>
             </modifier>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="76a1-f7d9-ffe4-7c8f" type="greaterThan"/>
+              </conditions>
+            </modifier>
           </modifiers>
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="b34e-7395-2517-d2d4" type="max"/>
@@ -1662,6 +2132,11 @@ Only Gloomspite Gitz armies can include this faction terrain feature.</character
             <modifier type="set" field="hidden" value="true">
               <conditions>
                 <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="42ec-e7aa-855e-4030" type="notInstanceOf"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="76a1-f7d9-ffe4-7c8f" type="greaterThan"/>
               </conditions>
             </modifier>
           </modifiers>
@@ -1732,9 +2207,59 @@ Designer’s Note: If a unit is affected by the Light of the Bad Moon, this arte
             </selectionEntry>
           </selectionEntries>
         </selectionEntryGroup>
+        <selectionEntryGroup id="e774-6e89-0b97-5cc9" name="Dankhold Detritus" hidden="false" collective="false" import="true">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="76a1-f7d9-ffe4-7c8f" type="equalTo"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="5cc8-014a-10cd-52b8" type="max"/>
+          </constraints>
+          <selectionEntries>
+            <selectionEntry id="682f-022a-ec29-5e2d" name="Crunchy Shinies" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="4fa1-d53b-578d-3493" type="max"/>
+              </constraints>
+              <profiles>
+                <profile id="a02c-716e-9e34-7bcd" name="Crunchy Shinies" hidden="false" typeId="0c9d-7abe-a53c-6a37" typeName="Artefacts">
+                  <characteristics>
+                    <characteristic name="Artefact" typeId="44b6-de26-0b54-1318">The bearer has a Move characteristic of D6+5&quot;.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+            </selectionEntry>
+            <selectionEntry id="e429-f8ea-5b6c-4860" name="Loonstone Teeth" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="e9e0-982e-57f3-4805" type="max"/>
+              </constraints>
+              <profiles>
+                <profile id="e1e6-2586-e0f6-d068" name="Loonstone Teeth" hidden="false" typeId="0c9d-7abe-a53c-6a37" typeName="Artefacts">
+                  <characteristics>
+                    <characteristic name="Artefact" typeId="44b6-de26-0b54-1318">The bearer gains the MONSTER keyword. If the bearer already has the MONSTER keyword, you can carry out 2 different monstrous rampages with it in the same phase instead of 1.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+            </selectionEntry>
+            <selectionEntry id="405f-5f57-07d8-9dad" name="Thwackwheezer Club" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="3c85-db06-f5a0-666f" type="max"/>
+              </constraints>
+              <profiles>
+                <profile id="2aa8-999a-4231-d612" name="Thwackwheezer Club" hidden="false" typeId="0c9d-7abe-a53c-6a37" typeName="Artefacts">
+                  <characteristics>
+                    <characteristic name="Artefact" typeId="44b6-de26-0b54-1318">Subtract 1 from hit rolls and wound rolls for attacks that target the bearer if they have been picked to fight in the same phase.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
       </selectionEntryGroups>
       <entryLinks>
-        <entryLink id="3f11-5dfb-b3e9-0430" name="Universal Artefacts of Power" hidden="false" collective="false" import="true" targetId="dbd8-8f6f-f44a-884a" type="selectionEntryGroup"/>
+        <entryLink id="3f11-5dfb-b3e9-0430" name="Rulebook Artefacts of Power" hidden="false" collective="false" import="true" targetId="836b-19a4-b5b4-570d" type="selectionEntryGroup"/>
       </entryLinks>
     </selectionEntryGroup>
     <selectionEntryGroup id="cedb-10b7-01e6-ec85" name="Battalion Formation" hidden="false" collective="false" import="true">

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="c840-7021-e207-4ff0" name="Death - Nighthaunt" revision="11" battleScribeVersion="2.03" authorName="Thulram" library="false" gameSystemId="e832-3291-06be-cab1" gameSystemRevision="11" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="c840-7021-e207-4ff0" name="Death - Nighthaunt" revision="12" battleScribeVersion="2.03" authorName="Thulram" library="false" gameSystemId="e832-3291-06be-cab1" gameSystemRevision="11" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <categoryEntries>
     <categoryEntry id="5fe7-f805-8eb8-56ce" name="General - Kurdoss Valentian" hidden="false"/>
   </categoryEntries>
@@ -121,7 +121,7 @@ Designer’s Note: You cannot complete this grand strategy if all of the units i
                   <profiles>
                     <profile id="11a9-9567-e01c-33b1" name="Fright or Flight" hidden="false" typeId="7dc6-98f0-f5ba-fc16" typeName="Grand Strategy">
                       <characteristics>
-                        <characteristic name="Grand Strategy" typeId="22d6-b382-f824-6381">When the battle ends, you complete this grand strategy if there are no enemy units within 6&quot; of any friendly NIGHTHAUNT units that are contesting an objective.</characteristic>
+                        <characteristic name="Grand Strategy" typeId="22d6-b382-f824-6381">When the battle ends, you complete this grand strategy if 1 or more objectives are being contesting by friendly NIGHTHAUNT units and there are no enemy units within 6&quot; of any friendly NIGHTHAUNT units that are contesting an objective.</characteristic>
                       </characteristics>
                     </profile>
                   </profiles>
@@ -212,6 +212,42 @@ Designer’s Note: You cannot complete this grand strategy if all of the units i
       </entryLinks>
       <costs>
         <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="c68c-050d-1b87-b54d" name="Wielder of the Blade &amp; Headsmen&apos;s Curse (separate units)" hidden="false" collective="false" import="true" type="upgrade">
+      <constraints>
+        <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="e7bd-9f2f-93cd-6e90" type="max"/>
+      </constraints>
+      <categoryLinks>
+        <categoryLink id="8e2b-3e11-6020-a608" name="New CategoryLink" hidden="false" targetId="93cb-21d9-e1d5-6161" primary="true"/>
+      </categoryLinks>
+      <entryLinks>
+        <entryLink id="c57a-e624-1dbd-90c6" name="The Wielder of the Blade" hidden="false" collective="false" import="true" targetId="7282-dd4c-ebcb-02f4" type="selectionEntry">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="e26e-82c8-a7f4-7a9d" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8a34-0532-c3cd-5272" type="min"/>
+          </constraints>
+          <entryLinks>
+            <entryLink id="24d1-ce42-aea5-e9d8" name="General" hidden="false" collective="false" import="true" targetId="98a4-3d6d-a7b9-399f" type="selectionEntry">
+              <categoryLinks>
+                <categoryLink id="1887-e9c8-dca2-5232" name="Named General" hidden="false" targetId="8b3d-7f03-e1f9-eaf5" primary="false"/>
+              </categoryLinks>
+            </entryLink>
+            <entryLink id="6364-b2f0-abf4-8a1f" name="Core Battalions" hidden="false" collective="false" import="true" targetId="8c04-393d-d72d-c2a8" type="selectionEntryGroup"/>
+          </entryLinks>
+        </entryLink>
+        <entryLink id="76e3-ff77-190a-43d7" name="Headsmen&apos;s Curse" hidden="false" collective="false" import="true" targetId="0f53-387e-7b35-b4e2" type="selectionEntry">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="b12b-0245-b893-5144" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="bdcf-b96f-2d5c-f7b5" type="min"/>
+          </constraints>
+          <entryLinks>
+            <entryLink id="08aa-e8bb-80cc-1476" name="Core Battalions" hidden="false" collective="false" import="true" targetId="8c04-393d-d72d-c2a8" type="selectionEntryGroup"/>
+          </entryLinks>
+        </entryLink>
+      </entryLinks>
+      <costs>
+        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="200.0"/>
       </costs>
     </selectionEntry>
   </selectionEntries>
@@ -393,11 +429,6 @@ Designer’s Note: You cannot complete this grand strategy if all of the units i
         <entryLink id="a6d9-db6d-7767-f3cc" name="Shades of Death - Command Traits" hidden="false" collective="false" import="true" targetId="2955-c8e7-ad41-d127" type="selectionEntryGroup"/>
         <entryLink id="15ae-d0c9-87f9-1b07" name="Nighthaunt Spell Lores" hidden="false" collective="false" import="true" targetId="0c59-8702-ed13-b50e" type="selectionEntryGroup"/>
         <entryLink id="0639-37ff-98bd-c4c7" name="Core Battalions" hidden="false" collective="false" import="true" targetId="8c04-393d-d72d-c2a8" type="selectionEntryGroup"/>
-      </entryLinks>
-    </entryLink>
-    <entryLink id="5360-f7f7-2e8f-764b" name="Mourngul" hidden="false" collective="false" import="true" targetId="255c-8d92-5ded-d970" type="selectionEntry">
-      <entryLinks>
-        <entryLink id="e43d-dec9-342b-055c" name="Core Battalions" hidden="false" collective="false" import="true" targetId="8c04-393d-d72d-c2a8" type="selectionEntryGroup"/>
       </entryLinks>
     </entryLink>
     <entryLink id="fe32-df8a-c082-64f6" name="Krulghast Cruciator" hidden="false" collective="false" import="true" targetId="e20c-af6f-4f62-9bb2" type="selectionEntry">
@@ -759,7 +790,7 @@ Designer’s Note: An enemy unit can be affected multiple times by Wave of Terro
         </selectionEntryGroup>
       </selectionEntryGroups>
       <entryLinks>
-        <entryLink id="e51b-f5b4-48fc-5ab2" name="Universal Command Traits" hidden="false" collective="false" import="true" targetId="20f0-6df9-b464-3789" type="selectionEntryGroup"/>
+        <entryLink id="e51b-f5b4-48fc-5ab2" name="Rulebook Command Traits" hidden="false" collective="false" import="true" targetId="6978-81a2-4c55-65f3" type="selectionEntryGroup"/>
       </entryLinks>
     </selectionEntryGroup>
     <selectionEntryGroup id="3140-9935-2a09-1f19" name="Artefacts of Power" publicationId="6918-4599-9a4b-12c8" hidden="false" collective="false" import="true">
@@ -972,7 +1003,7 @@ Designer’s Note: An enemy unit can be affected multiple times by Wave of Terro
               <profiles>
                 <profile id="eab1-3923-a7e8-21b7" name="Cloak of the Waxing Moon" hidden="false" typeId="0c9d-7abe-a53c-6a37" typeName="Artefacts">
                   <characteristics>
-                    <characteristic name="Artefact" typeId="44b6-de26-0b54-1318">Subtract 1 from the Attacks characteristic of melee weapons that target the bearer (to a minimum of 1).</characteristic>
+                    <characteristic name="Artefact" typeId="44b6-de26-0b54-1318">At the start of the combat phase, you can pick 1 enemy unit within 1&quot; of this unit and subtract 1 from the Attacks characteristic of that unit’s melee weapons (to a minimum of 1) until the end of the phase.</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
@@ -984,7 +1015,7 @@ Designer’s Note: An enemy unit can be affected multiple times by Wave of Terro
         </selectionEntryGroup>
       </selectionEntryGroups>
       <entryLinks>
-        <entryLink id="bd2c-1124-e314-edb3" name="Universal Artefacts of Power" hidden="false" collective="false" import="true" targetId="dbd8-8f6f-f44a-884a" type="selectionEntryGroup"/>
+        <entryLink id="bd2c-1124-e314-edb3" name="Rulebook Artefacts of Power" hidden="false" collective="false" import="true" targetId="836b-19a4-b5b4-570d" type="selectionEntryGroup"/>
       </entryLinks>
     </selectionEntryGroup>
     <selectionEntryGroup id="0c59-8702-ed13-b50e" name="Nighthaunt Spell Lores" hidden="false" collective="false" import="true">
@@ -1132,7 +1163,7 @@ Designer’s Note: An enemy unit can be affected multiple times by Wave of Terro
         </selectionEntryGroup>
       </selectionEntryGroups>
       <entryLinks>
-        <entryLink id="7545-f2fc-b4e4-7d66" name="Universal Spell Lore" hidden="false" collective="false" import="true" targetId="93f7-7e2a-3308-d150" type="selectionEntryGroup"/>
+        <entryLink id="7545-f2fc-b4e4-7d66" name="Rulebook Spell Lores" hidden="false" collective="false" import="true" targetId="8aee-7492-ee73-6d07" type="selectionEntryGroup"/>
       </entryLinks>
     </selectionEntryGroup>
   </sharedSelectionEntryGroups>

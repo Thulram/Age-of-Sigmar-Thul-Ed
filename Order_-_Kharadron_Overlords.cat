@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="66d5-d50d-1930-a53d" name="Order - Kharadron Overlords" revision="20" battleScribeVersion="2.03" authorName="Thulram" library="false" gameSystemId="e832-3291-06be-cab1" gameSystemRevision="19" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="66d5-d50d-1930-a53d" name="Order - Kharadron Overlords" revision="21" battleScribeVersion="2.03" authorName="Thulram" library="false" gameSystemId="e832-3291-06be-cab1" gameSystemRevision="21" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <profileTypes>
     <profileType id="6870-98be-4a6c-24e1" name="Great Endrinwork">
       <characteristicTypes>
@@ -60,6 +60,13 @@
           </constraints>
           <profiles>
             <profile id="e5c3-8cfa-9c5b-5240" name="Sky Ports" hidden="false" typeId="c0c2-177b-e761-ec41" typeName="Allegiance Abilities">
+              <modifiers>
+                <modifier type="set" field="hidden" value="true">
+                  <conditions>
+                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="bf48-1a2f-fffd-0f33" type="greaterThan"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
               <characteristics>
                 <characteristic name="Allegiance Ability" typeId="0506-f62d-68b3-5499">You can pick 1 of the following subfactions for your army. All KHARADRON OVERLORDS units in your army gain the keyword of the subfaction you picked, and you can use the allegiance abilities for that subfaction. If a unit already has a different subfaction keyword on its warscroll, it cannot gain another one. This does not preclude you from including the unit in your army, but you cannot use the allegiance abilities for its subfaction.
 
@@ -72,6 +79,13 @@
               </characteristics>
             </profile>
             <profile id="9762-7658-8810-d6e7" name="Sky-fleets" hidden="false" typeId="c0c2-177b-e761-ec41" typeName="Allegiance Abilities">
+              <modifiers>
+                <modifier type="set" field="hidden" value="true">
+                  <conditions>
+                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="bf48-1a2f-fffd-0f33" type="greaterThan"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
               <characteristics>
                 <characteristic name="Allegiance Ability" typeId="0506-f62d-68b3-5499">In a Kharadron Overlords army, TRANSPORT VESSELS can embark units as described below.
 
@@ -99,11 +113,25 @@ When a unit disembarks, if a model cannot be set up wholly within 3&quot; of the
               </characteristics>
             </profile>
             <profile id="5380-c9bb-10ff-98cc" name="Stick to the Code" hidden="false" typeId="c0c2-177b-e761-ec41" typeName="Allegiance Abilities">
+              <modifiers>
+                <modifier type="set" field="hidden" value="true">
+                  <conditions>
+                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="bf48-1a2f-fffd-0f33" type="greaterThan"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
               <characteristics>
                 <characteristic name="Allegiance Ability" typeId="0506-f62d-68b3-5499">When you choose a Kharadron Overlords army, you can pick 1 artycle, 1 amendment and 1 footnote for your army from the lists.</characteristic>
               </characteristics>
             </profile>
             <profile id="dafc-d54b-db76-ccbd" name="Iron Sky Command Abilities" hidden="false" typeId="c0c2-177b-e761-ec41" typeName="Allegiance Abilities">
+              <modifiers>
+                <modifier type="set" field="hidden" value="true">
+                  <conditions>
+                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="bf48-1a2f-fffd-0f33" type="greaterThan"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
               <characteristics>
                 <characteristic name="Allegiance Ability" typeId="0506-f62d-68b3-5499">The following commands can be issued by friendly ARKANAUT ADMIRALS. In addition, friendly SKYVESSELS can issue these commands to themselves.
 
@@ -115,8 +143,46 @@ Disengage: You can use this command ability in your movement phase. The unit tha
               </characteristics>
             </profile>
           </profiles>
+          <selectionEntries>
+            <selectionEntry id="bf48-1a2f-fffd-0f33" name="Grundstok Expeditionary Force" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="19ff-f306-1279-caaa" type="max"/>
+              </constraints>
+              <profiles>
+                <profile id="913c-3760-d8e2-d32a" name="Grundstok Expeditionary Force" hidden="false" typeId="ce32-0c40-1990-4c8a" typeName="Restriction">
+                  <characteristics>
+                    <characteristic name="Restriction" typeId="edbe-5fe5-1142-afa6">When you pick the Kharadron Overlords faction for your army, you can say that it will be a Grundstok Expeditionary Force army of renown. If you do so, use the rules in this section. Every unit in your army must have the KHARADRON OVERLORDS keyword and either be a HERO that is not Unique or have the GRUNDSTOK keyword. All units in your army gain the GRUNDSTOK EXPEDITIONARY FORCE keyword.</characteristic>
+                  </characteristics>
+                </profile>
+                <profile id="586a-b700-1531-d5e4" name="Only the Best" hidden="false" typeId="c0c2-177b-e761-ec41" typeName="Allegiance Abilities">
+                  <characteristics>
+                    <characteristic name="Allegiance Ability" typeId="0506-f62d-68b3-5499">Friendly GRUNDSTOK EXPEDITIONARY FORCE units that do not have the Leader battlefield role gain the Battleline battlefield role.</characteristic>
+                  </characteristics>
+                </profile>
+                <profile id="1842-a8eb-6432-896f" name="Grudgesettler Protocols" hidden="false" typeId="c0c2-177b-e761-ec41" typeName="Allegiance Abilities">
+                  <characteristics>
+                    <characteristic name="Allegiance Ability" typeId="0506-f62d-68b3-5499">In any phase, after a friendly GRUNDSTOK EXPEDITIONARY FORCE unit has shot or fought for the first time in that phase, you can roll a dice. On a 4+, that unit immediately shoots or fights for a second time in that phase. However, you must subtract 1 from hit rolls for attacks made in this way.
+
+Designer’s Note: This ability can be used in your opponent’s turn after a GRUNDSTOK EXPEDITIONARY FORCE unit shoots with the Unleash Hell command. The second time it shoots, those attacks are part of that Unleash Hell command and must target the same enemy unit.</characteristic>
+                  </characteristics>
+                </profile>
+                <profile id="282e-9335-8d1e-2419" name="Rapid Redeployment" hidden="false" typeId="c0c2-177b-e761-ec41" typeName="Allegiance Abilities">
+                  <characteristics>
+                    <characteristic name="Allegiance Ability" typeId="0506-f62d-68b3-5499">Each time a friendly GRUNDSTOK GUNHAULER makes a normal move or runs, you can say that it will transport a friendly unit. If you do so, before the move is made, you can pick up to 2 other friendly GRUNDSTOK EXPEDITIONARY FORCE units with a combined model count of 6 or less. Each unit must have a Wounds characteristic of 6 or less and must be within 3&quot; of the GRUNDSTOK GUNHAULER and more than 3&quot; from all enemy units (you can pick a unit that has already moved in that phase). Remove that unit from the battlefield. Then, when the GRUNDSTOK GUNHAULER finishes its move, set up the transported unit on the battlefield again, wholly within 3&quot; of the GRUNDSTOK GUNHAULER and more than 3&quot; from all enemy units. Units transported in this manner cannot make a charge move in the same turn.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+            </selectionEntry>
+          </selectionEntries>
           <selectionEntryGroups>
             <selectionEntryGroup id="e3c3-b279-a1eb-8728" name="Sky-Ports" hidden="false" collective="false" import="true">
+              <modifiers>
+                <modifier type="set" field="hidden" value="true">
+                  <conditions>
+                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="bf48-1a2f-fffd-0f33" type="greaterThan"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
               <constraints>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="aa9d-b34c-3eca-b285" type="max"/>
               </constraints>
@@ -216,6 +282,13 @@ Rune of Ancestral Guidance: Rune of Ancestral Guidance is a prayer that has an a
               </selectionEntries>
             </selectionEntryGroup>
             <selectionEntryGroup id="92a3-0795-eda1-34a0" name="Stick to the Code" hidden="false" collective="false" import="true">
+              <modifiers>
+                <modifier type="set" field="hidden" value="true">
+                  <conditions>
+                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="bf48-1a2f-fffd-0f33" type="greaterThan"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
               <selectionEntryGroups>
                 <selectionEntryGroup id="11d0-b8da-5538-0a9b" name="Artycles" hidden="false" collective="false" import="true">
                   <constraints>
@@ -366,6 +439,13 @@ Rune of Ancestral Guidance: Rune of Ancestral Guidance is a prayer that has an a
       </costs>
     </selectionEntry>
     <selectionEntry id="e3de-6b49-9c21-ffac" name="Bjorgen Thundrik and Profiteers (separate units)" publicationId="e97a-4837-a772-7406" hidden="false" collective="false" import="true" type="upgrade">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="bf48-1a2f-fffd-0f33" type="greaterThan"/>
+          </conditions>
+        </modifier>
+      </modifiers>
       <constraints>
         <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="8863-2507-acf3-df89" type="max"/>
       </constraints>
@@ -445,8 +525,33 @@ Rune of Ancestral Guidance: Rune of Ancestral Guidance is a prayer that has an a
           <categoryLinks>
             <categoryLink id="f0b8-d64c-41c8-74e5" name="Grand Strategy" hidden="false" targetId="318c-fa55-0855-47ef" primary="false"/>
           </categoryLinks>
+          <selectionEntries>
+            <selectionEntry id="4544-091c-0534-1f5b" name="Acceptable Profit Margin" hidden="false" collective="false" import="true" type="upgrade">
+              <modifiers>
+                <modifier type="set" field="hidden" value="true">
+                  <conditions>
+                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="bf48-1a2f-fffd-0f33" type="equalTo"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+              <profiles>
+                <profile id="c8b1-e36d-866a-b0dd" name="Acceptable Profit Margin" hidden="false" typeId="7dc6-98f0-f5ba-fc16" typeName="Grand Strategy">
+                  <characteristics>
+                    <characteristic name="Grand Strategy" typeId="22d6-b382-f824-6381">When the battle ends, you complete this grand strategy if there is at least 1 friendly GRUNDSTOK THUNDERERS unit and at least 1 friendly GRUNDSTOK GUNHAULER on the battlefield.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+            </selectionEntry>
+          </selectionEntries>
           <selectionEntryGroups>
             <selectionEntryGroup id="0425-7f81-e842-cc8b" name="Masters of the High Airs" hidden="false" collective="false" import="true">
+              <modifiers>
+                <modifier type="set" field="hidden" value="true">
+                  <conditions>
+                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="bf48-1a2f-fffd-0f33" type="greaterThan"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
               <constraints>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="ce2d-8c06-0c63-c68e" type="max"/>
               </constraints>
@@ -532,33 +637,111 @@ Rune of Ancestral Guidance: Rune of Ancestral Guidance is a prayer that has an a
       </constraints>
       <profiles>
         <profile id="c791-e4a2-49ca-7a52" name="Bombing Run" hidden="false" typeId="4bb2-448c-446c-f522" typeName="Battle Tactic">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="bf48-1a2f-fffd-0f33" type="greaterThan"/>
+              </conditions>
+            </modifier>
+          </modifiers>
           <characteristics>
             <characteristic name="Battle Tactic" typeId="8c0f-be41-a70e-c699">Pick 1 enemy unit. You complete this battle tactic if that unit is destroyed during this turn by the Bomb Racks ability of a friendly unit.</characteristic>
           </characteristics>
         </profile>
         <profile id="8cc8-e342-e692-3653" name="Mobilise the Fleet" hidden="false" typeId="4bb2-448c-446c-f522" typeName="Battle Tactic">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="bf48-1a2f-fffd-0f33" type="greaterThan"/>
+              </conditions>
+            </modifier>
+          </modifiers>
           <characteristics>
             <characteristic name="Battle Tactic" typeId="8c0f-be41-a70e-c699">You cannot pick this battle tactic in the first battle round. Pick 3 friendly units on the battlefield that are not embarked in SKYVESSELS You complete this battle tactic at the end of the turn if those units are all embarked in SKYVESSELS.</characteristic>
           </characteristics>
         </profile>
         <profile id="f0b7-79e0-91e3-24a9" name="Boots on the Ground" hidden="false" typeId="4bb2-448c-446c-f522" typeName="Battle Tactic">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="bf48-1a2f-fffd-0f33" type="greaterThan"/>
+              </conditions>
+            </modifier>
+          </modifiers>
           <characteristics>
             <characteristic name="Battle Tactic" typeId="8c0f-be41-a70e-c699">Pick 3 friendly units embarked in SKYVESSELS. You complete this battle tactic at the end of the turn if those units are not embarked and are wholly within enemy territory.</characteristic>
           </characteristics>
         </profile>
         <profile id="d791-e4d2-3fa0-ecbe" name="Opening Salvo" hidden="false" typeId="4bb2-448c-446c-f522" typeName="Battle Tactic">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="bf48-1a2f-fffd-0f33" type="greaterThan"/>
+              </conditions>
+            </modifier>
+          </modifiers>
           <characteristics>
             <characteristic name="Battle Tactic" typeId="8c0f-be41-a70e-c699">You can only pick this battle tactic if no units have been destroyed in the battle. You complete this battle tactic if an enemy unit is destroyed in your shooting phase this turn.</characteristic>
           </characteristics>
         </profile>
         <profile id="18de-d28b-665f-b50c" name="Blast &apos;em to Smithereens" hidden="false" typeId="4bb2-448c-446c-f522" typeName="Battle Tactic">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="bf48-1a2f-fffd-0f33" type="greaterThan"/>
+              </conditions>
+            </modifier>
+          </modifiers>
           <characteristics>
             <characteristic name="Battle Tactic" typeId="8c0f-be41-a70e-c699">Pick 1 objective on the battlefield within 12&quot; of any enemy units. You complete this battle tactic if there are no enemy units within 12&quot; of that objective at the end of this turn.</characteristic>
           </characteristics>
         </profile>
         <profile id="8ab3-ff3e-4f6e-b358" name="Stake a Claim" hidden="false" typeId="4bb2-448c-446c-f522" typeName="Battle Tactic">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="bf48-1a2f-fffd-0f33" type="greaterThan"/>
+              </conditions>
+            </modifier>
+          </modifiers>
           <characteristics>
             <characteristic name="Battle Tactic" typeId="8c0f-be41-a70e-c699">You can pick this tactic only if you control fewer objectives than your opponent. You complete this tactic if you control more objectives than your opponent at the end of this turn.</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="0850-0e9f-aa99-8afd" name="Blow Them Away" hidden="false" typeId="4bb2-448c-446c-f522" typeName="Battle Tactic">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="bf48-1a2f-fffd-0f33" type="equalTo"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <characteristics>
+            <characteristic name="Battle Tactic" typeId="8c0f-be41-a70e-c699">You complete this battle tactic if an enemy unit was destroyed during this turn by an attack made using the Grudgesettler Protocols battle trait.</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="5059-463e-d4b8-e4a0" name="No Safe Haven" hidden="false" typeId="4bb2-448c-446c-f522" typeName="Battle Tactic">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="bf48-1a2f-fffd-0f33" type="equalTo"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <characteristics>
+            <characteristic name="Battle Tactic" typeId="8c0f-be41-a70e-c699">Pick 1 objective on the battlefield that is controlled by your opponent. You complete this battle tactic if, at the end of this turn, you control that objective and a friendly unit that was set up this turn with the Rapid Redeployment battle trait is contesting that objective.</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="839c-8ede-2aa0-2acb" name="Thunderous Claim" hidden="false" typeId="4bb2-448c-446c-f522" typeName="Battle Tactic">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="bf48-1a2f-fffd-0f33" type="equalTo"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <characteristics>
+            <characteristic name="Battle Tactic" typeId="8c0f-be41-a70e-c699">Pick 1 objective on the battlefield that you do not control. You complete this battle tactic if, at the end of this turn, you control that objective and that objective is contested by 2 different friendly GRUNDSTOK THUNDERERS units.</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -573,6 +756,13 @@ Rune of Ancestral Guidance: Rune of Ancestral Guidance is a prayer that has an a
       </costs>
     </selectionEntry>
     <selectionEntry id="06bb-ad17-5866-ee1d" name="Attack Squadron" hidden="false" collective="false" import="true" type="upgrade">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="bf48-1a2f-fffd-0f33" type="greaterThan"/>
+          </conditions>
+        </modifier>
+      </modifiers>
       <profiles>
         <profile id="02ea-c52e-1ed0-b989" name="Expert" hidden="false" typeId="66c5-932e-004a-574c" typeName="Battalion Abilities">
           <characteristics>
@@ -613,6 +803,13 @@ Rune of Ancestral Guidance: Rune of Ancestral Guidance is a prayer that has an a
       </costs>
     </selectionEntry>
     <selectionEntry id="858e-32c7-e268-78fe" name="Escort Wing" hidden="false" collective="false" import="true" type="upgrade">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="bf48-1a2f-fffd-0f33" type="greaterThan"/>
+          </conditions>
+        </modifier>
+      </modifiers>
       <profiles>
         <profile id="ed17-6920-8fd3-040d" name="Slayers" hidden="false" typeId="66c5-932e-004a-574c" typeName="Battalion Abilities">
           <characteristics>
@@ -678,7 +875,7 @@ Rune of Ancestral Guidance: Rune of Ancestral Guidance is a prayer that has an a
         <entryLink id="42ae-4b0d-f7aa-02db" name="General" hidden="false" collective="false" import="true" targetId="98a4-3d6d-a7b9-399f" type="selectionEntry"/>
         <entryLink id="2f00-073b-686b-73a1" name="Artefacts of Power" hidden="false" collective="false" import="true" targetId="378b-ae2b-2325-f51d" type="selectionEntryGroup"/>
         <entryLink id="5531-fe0c-2b49-fca4" name="Command Traits" hidden="false" collective="false" import="true" targetId="cf3c-23c5-7ba7-9fdf" type="selectionEntryGroup"/>
-        <entryLink id="acca-edbf-28b8-9cce" name="Universal Spell Lore" hidden="false" collective="false" import="true" targetId="93f7-7e2a-3308-d150" type="selectionEntryGroup">
+        <entryLink id="acca-edbf-28b8-9cce" name="Rulebook Spell Lores" hidden="false" collective="false" import="true" targetId="8aee-7492-ee73-6d07" type="selectionEntryGroup">
           <modifiers>
             <modifier type="set" field="hidden" value="true">
               <conditionGroups>
@@ -700,7 +897,7 @@ Rune of Ancestral Guidance: Rune of Ancestral Guidance is a prayer that has an a
         <entryLink id="54dd-cdb4-49b8-b0c6" name="General" hidden="false" collective="false" import="true" targetId="98a4-3d6d-a7b9-399f" type="selectionEntry"/>
         <entryLink id="5155-95e9-dda0-6a0d" name="Command Traits" hidden="false" collective="false" import="true" targetId="cf3c-23c5-7ba7-9fdf" type="selectionEntryGroup"/>
         <entryLink id="5043-f1d4-2c37-51c2" name="Artefacts of Power" hidden="false" collective="false" import="true" targetId="378b-ae2b-2325-f51d" type="selectionEntryGroup"/>
-        <entryLink id="5ea0-35ce-17e5-3115" name="Universal Spell Lore" hidden="false" collective="false" import="true" targetId="93f7-7e2a-3308-d150" type="selectionEntryGroup">
+        <entryLink id="5ea0-35ce-17e5-3115" name="Rulebook Spell Lores" hidden="false" collective="false" import="true" targetId="8aee-7492-ee73-6d07" type="selectionEntryGroup">
           <modifiers>
             <modifier type="set" field="hidden" value="true">
               <conditionGroups>
@@ -722,7 +919,7 @@ Rune of Ancestral Guidance: Rune of Ancestral Guidance is a prayer that has an a
         <entryLink id="a417-3592-6f36-8d7d" name="General" hidden="false" collective="false" import="true" targetId="98a4-3d6d-a7b9-399f" type="selectionEntry"/>
         <entryLink id="3ad7-06ad-0ba9-cad0" name="Command Traits" hidden="false" collective="false" import="true" targetId="cf3c-23c5-7ba7-9fdf" type="selectionEntryGroup"/>
         <entryLink id="c37f-97f5-691c-cbfd" name="Artefacts of Power" hidden="false" collective="false" import="true" targetId="378b-ae2b-2325-f51d" type="selectionEntryGroup"/>
-        <entryLink id="d0d7-bf67-e2e3-5b7f" name="Universal Spell Lore" hidden="false" collective="false" import="true" targetId="93f7-7e2a-3308-d150" type="selectionEntryGroup">
+        <entryLink id="d0d7-bf67-e2e3-5b7f" name="Rulebook Spell Lores" hidden="false" collective="false" import="true" targetId="8aee-7492-ee73-6d07" type="selectionEntryGroup">
           <modifiers>
             <modifier type="set" field="hidden" value="true">
               <conditionGroups>
@@ -740,11 +937,25 @@ Rune of Ancestral Guidance: Rune of Ancestral Guidance is a prayer that has an a
       </entryLinks>
     </entryLink>
     <entryLink id="fef8-abb9-aa25-4605" name="Arkanaut Company" hidden="false" collective="false" import="true" targetId="4716-8815-4d3c-a9e2" type="selectionEntry">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="bf48-1a2f-fffd-0f33" type="greaterThan"/>
+          </conditions>
+        </modifier>
+      </modifiers>
       <entryLinks>
         <entryLink id="5eeb-156c-748a-55a2" name="Battalion Formation" hidden="false" collective="false" import="true" targetId="2f0a-3e07-0d1c-e8e3" type="selectionEntryGroup"/>
       </entryLinks>
     </entryLink>
     <entryLink id="bd07-88ab-1099-c7e8" name="Arkanaut Frigate" hidden="false" collective="false" import="true" targetId="da52-fd0a-a8bc-a122" type="selectionEntry">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="bf48-1a2f-fffd-0f33" type="greaterThan"/>
+          </conditions>
+        </modifier>
+      </modifiers>
       <modifierGroups>
         <modifierGroup>
           <conditionGroups>
@@ -772,12 +983,26 @@ Rune of Ancestral Guidance: Rune of Ancestral Guidance is a prayer that has an a
       </entryLinks>
     </entryLink>
     <entryLink id="8642-03cd-4e66-6500" name="Arkanaut Ironclad" hidden="false" collective="false" import="true" targetId="55c1-6c08-9b45-cee1" type="selectionEntry">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="bf48-1a2f-fffd-0f33" type="greaterThan"/>
+          </conditions>
+        </modifier>
+      </modifiers>
       <entryLinks>
         <entryLink id="67c9-0c93-801b-9086" name="Great Endrinworks" hidden="false" collective="false" import="true" targetId="b16e-9583-bc66-37d9" type="selectionEntryGroup"/>
         <entryLink id="fa69-2cd1-ac32-9b49" name="Battalion Formation" hidden="false" collective="false" import="true" targetId="2f0a-3e07-0d1c-e8e3" type="selectionEntryGroup"/>
       </entryLinks>
     </entryLink>
     <entryLink id="554f-7c20-4a2c-74af" name="Brokk Grungsson, Lord Magnate of Barak-Nar" hidden="false" collective="false" import="true" targetId="88d2-f354-a49c-2030" type="selectionEntry">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="bf48-1a2f-fffd-0f33" type="greaterThan"/>
+          </conditions>
+        </modifier>
+      </modifiers>
       <entryLinks>
         <entryLink id="2fc4-366c-0780-49fd" name="Battalion Formation" hidden="false" collective="false" import="true" targetId="2f0a-3e07-0d1c-e8e3" type="selectionEntryGroup"/>
         <entryLink id="4eea-1762-4911-2999" name="Bonus General" hidden="false" collective="false" import="true" targetId="c608-7a89-b2b4-124d" type="selectionEntry"/>
@@ -788,7 +1013,7 @@ Rune of Ancestral Guidance: Rune of Ancestral Guidance is a prayer that has an a
         <entryLink id="7a75-c870-89af-4585" name="General" hidden="false" collective="false" import="true" targetId="98a4-3d6d-a7b9-399f" type="selectionEntry"/>
         <entryLink id="913c-5991-1e88-6381" name="Command Traits" hidden="false" collective="false" import="true" targetId="cf3c-23c5-7ba7-9fdf" type="selectionEntryGroup"/>
         <entryLink id="4dca-d5a6-e422-7ef0" name="Artefacts of Power" hidden="false" collective="false" import="true" targetId="378b-ae2b-2325-f51d" type="selectionEntryGroup"/>
-        <entryLink id="83a8-0716-cb50-a9a7" name="Universal Spell Lore" hidden="false" collective="false" import="true" targetId="93f7-7e2a-3308-d150" type="selectionEntryGroup">
+        <entryLink id="83a8-0716-cb50-a9a7" name="Rulebook Spell Lores" hidden="false" collective="false" import="true" targetId="8aee-7492-ee73-6d07" type="selectionEntryGroup">
           <modifiers>
             <modifier type="set" field="hidden" value="true">
               <conditionGroups>
@@ -810,7 +1035,7 @@ Rune of Ancestral Guidance: Rune of Ancestral Guidance is a prayer that has an a
         <entryLink id="17ac-07a0-6ff7-2de1" name="General" hidden="false" collective="false" import="true" targetId="98a4-3d6d-a7b9-399f" type="selectionEntry"/>
         <entryLink id="e643-7626-8cef-6c35" name="Command Traits" hidden="false" collective="false" import="true" targetId="cf3c-23c5-7ba7-9fdf" type="selectionEntryGroup"/>
         <entryLink id="1e8a-e897-1cca-fcdb" name="Artefacts of Power" hidden="false" collective="false" import="true" targetId="378b-ae2b-2325-f51d" type="selectionEntryGroup"/>
-        <entryLink id="1a46-2c0f-aa10-3480" name="Universal Spell Lore" hidden="false" collective="false" import="true" targetId="93f7-7e2a-3308-d150" type="selectionEntryGroup">
+        <entryLink id="1a46-2c0f-aa10-3480" name="Rulebook Spell Lores" hidden="false" collective="false" import="true" targetId="8aee-7492-ee73-6d07" type="selectionEntryGroup">
           <modifiers>
             <modifier type="set" field="hidden" value="true">
               <conditionGroups>
@@ -842,6 +1067,11 @@ Rune of Ancestral Guidance: Rune of Ancestral Guidance is a prayer that has an a
               </conditions>
             </conditionGroup>
           </conditionGroups>
+        </modifier>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="bf48-1a2f-fffd-0f33" type="greaterThan"/>
+          </conditions>
         </modifier>
       </modifiers>
       <categoryLinks>
@@ -892,6 +1122,11 @@ Rune of Ancestral Guidance: Rune of Ancestral Guidance is a prayer that has an a
             </conditionGroup>
           </conditionGroups>
         </modifier>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="bf48-1a2f-fffd-0f33" type="greaterThan"/>
+          </conditions>
+        </modifier>
       </modifiers>
       <categoryLinks>
         <categoryLink id="7103-e9b9-9e91-2407" name="BATTLELINE" hidden="false" targetId="a42d-220e-6a88-7bf6" primary="false"/>
@@ -901,6 +1136,13 @@ Rune of Ancestral Guidance: Rune of Ancestral Guidance is a prayer that has an a
       </entryLinks>
     </entryLink>
     <entryLink id="d047-bacf-fda4-792c" name="Drekki Flynt" hidden="false" collective="false" import="true" targetId="f46d-2361-6c0f-a857" type="selectionEntry">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="bf48-1a2f-fffd-0f33" type="greaterThan"/>
+          </conditions>
+        </modifier>
+      </modifiers>
       <entryLinks>
         <entryLink id="0844-199c-a0ce-bfce" name="General" hidden="false" collective="false" import="true" targetId="98a4-3d6d-a7b9-399f" type="selectionEntry">
           <categoryLinks>
@@ -916,7 +1158,7 @@ Rune of Ancestral Guidance: Rune of Ancestral Guidance is a prayer that has an a
         <entryLink id="47db-7d82-816d-f211" name="Artefacts of Power" hidden="false" collective="false" import="true" targetId="378b-ae2b-2325-f51d" type="selectionEntryGroup"/>
         <entryLink id="488d-4cf0-a3df-cd4e" name="Battalion Formation" hidden="false" collective="false" import="true" targetId="2f0a-3e07-0d1c-e8e3" type="selectionEntryGroup"/>
         <entryLink id="f477-79ae-7191-0662" name="Command Traits" hidden="false" collective="false" import="true" targetId="cf3c-23c5-7ba7-9fdf" type="selectionEntryGroup"/>
-        <entryLink id="92dc-ccde-d4fb-8c30" name="Universal Spell Lore" hidden="false" collective="false" import="true" targetId="93f7-7e2a-3308-d150" type="selectionEntryGroup">
+        <entryLink id="92dc-ccde-d4fb-8c30" name="Rulebook Spell Lores" hidden="false" collective="false" import="true" targetId="8aee-7492-ee73-6d07" type="selectionEntryGroup">
           <modifiers>
             <modifier type="set" field="hidden" value="true">
               <conditionGroups>
@@ -981,6 +1223,11 @@ Rune of Ancestral Guidance: Rune of Ancestral Guidance is a prayer that has an a
         <modifier type="increment" field="0909-7afb-fe7b-ddb8" value="1.0">
           <conditions>
             <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="1e9f-b64d-f107-6fea" type="greaterThan"/>
+          </conditions>
+        </modifier>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="bf48-1a2f-fffd-0f33" type="greaterThan"/>
           </conditions>
         </modifier>
       </modifiers>
@@ -1190,6 +1437,9 @@ Rune of Ancestral Guidance: Rune of Ancestral Guidance is a prayer that has an a
                   </characteristics>
                 </profile>
               </profiles>
+              <costs>
+                <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
+              </costs>
             </selectionEntry>
           </selectionEntries>
         </selectionEntryGroup>
@@ -1290,6 +1540,11 @@ Rune of Ancestral Guidance: Rune of Ancestral Guidance is a prayer that has an a
                 <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="d0a6-e8f0-88c1-3f72" type="notInstanceOf"/>
               </conditions>
             </modifier>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="bf48-1a2f-fffd-0f33" type="greaterThan"/>
+              </conditions>
+            </modifier>
           </modifiers>
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="78f3-bf48-9472-18e7" type="max"/>
@@ -1369,9 +1624,52 @@ Rune of Ancestral Guidance: Rune of Ancestral Guidance is a prayer that has an a
             </selectionEntry>
           </selectionEntries>
         </selectionEntryGroup>
+        <selectionEntryGroup id="eff1-33ba-e16d-d445" name="Grizzled Officers" hidden="false" collective="false" import="true">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="bf48-1a2f-fffd-0f33" type="equalTo"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="c545-3a72-91e2-3336" type="max"/>
+          </constraints>
+          <selectionEntries>
+            <selectionEntry id="694d-c3bf-eaf4-215d" name="3. Grundcorps Technician" hidden="false" collective="false" import="true" type="upgrade">
+              <profiles>
+                <profile id="0481-afab-616c-1829" name="Grundcorps Technician" hidden="false" typeId="1504-23bf-8850-4f65" typeName="Command Traits">
+                  <characteristics>
+                    <characteristic name="Command Trait" typeId="0145-9acf-f5dc-d543">Once per battle, at the end of your hero phase, if a friendly GRUNDSTOK GUNHAULER has been destroyed, you can roll a dice and add the number of the current battle round to the roll. On a 6+, you can set up that GRUNDSTOK GUNHAULER again on the battlefield more than 9&quot; from all enemy units and with 5 wounds allocated to it.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+            </selectionEntry>
+            <selectionEntry id="01f9-105b-26ea-e593" name="2. Entrenchment Expert" hidden="false" collective="false" import="true" type="upgrade">
+              <profiles>
+                <profile id="10df-c102-27b9-2905" name="Entrenchment Expert" hidden="false" typeId="1504-23bf-8850-4f65" typeName="Command Traits">
+                  <characteristics>
+                    <characteristic name="Command Trait" typeId="0145-9acf-f5dc-d543">When this general issues the All-out Defence command to a friendly GRUNDSTOK EXPEDITIONARY FORCE unit, until the end of the phase, that unit has a ward of 5+.
+
+Designer’s Note: This effect is in addition to the normal effect of All-out Defence.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+            </selectionEntry>
+            <selectionEntry id="311b-94c7-9120-1b04" name="1. Back On Your Feet!" hidden="false" collective="false" import="true" type="upgrade">
+              <profiles>
+                <profile id="1747-870b-8190-cde3" name="Back On Your Feet!" hidden="false" typeId="1504-23bf-8850-4f65" typeName="Command Traits">
+                  <characteristics>
+                    <characteristic name="Command Trait" typeId="0145-9acf-f5dc-d543">When a friendly GRUNDSTOK EXPEDITIONARY FORCE unit receives the Rally command, you can return 1 slain model to the unit for each 4+ instead of each 6.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
       </selectionEntryGroups>
       <entryLinks>
-        <entryLink id="3946-955f-df0f-eae4" name="Universal Command Traits" hidden="false" collective="false" import="true" targetId="20f0-6df9-b464-3789" type="selectionEntryGroup"/>
+        <entryLink id="3946-955f-df0f-eae4" name="Rulebook Command Traits" hidden="false" collective="false" import="true" targetId="6978-81a2-4c55-65f3" type="selectionEntryGroup"/>
       </entryLinks>
     </selectionEntryGroup>
     <selectionEntryGroup id="378b-ae2b-2325-f51d" name="Artefacts of Power" publicationId="e97a-4837-a772-7406" hidden="false" collective="false" import="true">
@@ -1398,6 +1696,13 @@ Rune of Ancestral Guidance: Rune of Ancestral Guidance is a prayer that has an a
       </categoryLinks>
       <selectionEntryGroups>
         <selectionEntryGroup id="2810-5d5e-b16d-232b" name="Inventions of the Sky-ports" hidden="false" collective="false" import="true">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="bf48-1a2f-fffd-0f33" type="greaterThan"/>
+              </conditions>
+            </modifier>
+          </modifiers>
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="a750-a227-82fe-4a18" type="max"/>
           </constraints>
@@ -1518,9 +1823,59 @@ Rune of Ancestral Guidance: Rune of Ancestral Guidance is a prayer that has an a
             </selectionEntry>
           </selectionEntries>
         </selectionEntryGroup>
+        <selectionEntryGroup id="22f2-2f77-2c0e-c043" name="Special-issue Kit" hidden="false" collective="false" import="true">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="bf48-1a2f-fffd-0f33" type="equalTo"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="c6aa-fc70-96bb-66e9" type="max"/>
+          </constraints>
+          <selectionEntries>
+            <selectionEntry id="0bc7-e5dd-55f3-6643" name="3 -- Grudgefire Bombs" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="35d9-76ee-0753-71e7" type="max"/>
+              </constraints>
+              <profiles>
+                <profile id="13d5-34fe-3475-d02f" name="Grudgefire Bombs" hidden="false" typeId="0c9d-7abe-a53c-6a37" typeName="Artefacts">
+                  <characteristics>
+                    <characteristic name="Artefact" typeId="44b6-de26-0b54-1318">Pick 1 of the bearer’s missile weapons. If the unmodified hit roll for an attack made with that weapon is 6, that attack causes a number of mortal wounds to the target equal to its Damage characteristic and the attack sequence ends (do not make a wound roll or save roll).</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+            </selectionEntry>
+            <selectionEntry id="4654-78cf-96d7-4a6e" name="2 -- &apos;Gimlet Gaze&apos; Scope" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="82bb-9b20-7644-f5ef" type="max"/>
+              </constraints>
+              <profiles>
+                <profile id="ff78-20c2-c4c6-f1c2" name="&apos;Gimlet Gaze&apos; Scope" hidden="false" typeId="0c9d-7abe-a53c-6a37" typeName="Artefacts">
+                  <characteristics>
+                    <characteristic name="Artefact" typeId="44b6-de26-0b54-1318">Add 9&quot; to the Range characteristic of missile weapons used by the bearer.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+            </selectionEntry>
+            <selectionEntry id="922d-4de6-0348-e840" name="1 -- Aetheric Nullifier" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="efcd-af69-2211-a090" type="max"/>
+              </constraints>
+              <profiles>
+                <profile id="9504-5937-d5b9-a3fb" name="Aetheric Nullifier" hidden="false" typeId="0c9d-7abe-a53c-6a37" typeName="Artefacts">
+                  <characteristics>
+                    <characteristic name="Artefact" typeId="44b6-de26-0b54-1318">Each time a friendly GRUNDSTOK EXPEDITIONARY FORCE unit wholly within 12&quot; of the bearer is affected by a spell or the abilities of an endless spell, you can roll a dice. On a 4+, ignore the effect of that spell or the effects of that endless spell’s abilities on that unit.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
       </selectionEntryGroups>
       <entryLinks>
-        <entryLink id="3346-3696-00e6-bf9a" name="Universal Artefacts of Power" hidden="false" collective="false" import="true" targetId="dbd8-8f6f-f44a-884a" type="selectionEntryGroup"/>
+        <entryLink id="3346-3696-00e6-bf9a" name="Rulebook Artefacts of Power" hidden="false" collective="false" import="true" targetId="836b-19a4-b5b4-570d" type="selectionEntryGroup"/>
       </entryLinks>
     </selectionEntryGroup>
     <selectionEntryGroup id="4529-ff6c-aa23-9f28" name="Prayer Scriptures" hidden="false" collective="false" import="true">
@@ -1551,7 +1906,7 @@ Rune of Ancestral Guidance: Rune of Ancestral Guidance is a prayer that has an a
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="7507-782b-5dff-9b37" type="max"/>
       </constraints>
       <entryLinks>
-        <entryLink id="542e-86d1-81d9-edb3" name="Universal Prayer Scripture" hidden="false" collective="false" import="true" targetId="7104-ab27-d136-1df0" type="selectionEntryGroup"/>
+        <entryLink id="542e-86d1-81d9-edb3" name="Rulebook Prayer Scriptures" hidden="false" collective="false" import="true" targetId="42b2-cfa5-744f-8062" type="selectionEntryGroup"/>
       </entryLinks>
     </selectionEntryGroup>
     <selectionEntryGroup id="2f0a-3e07-0d1c-e8e3" name="Battalion Formation" hidden="false" collective="false" import="true">
