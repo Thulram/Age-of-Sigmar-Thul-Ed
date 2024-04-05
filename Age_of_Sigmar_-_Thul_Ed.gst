@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<gameSystem id="e832-3291-06be-cab1" name="Age of Sigmar - Thul Ed" revision="37" battleScribeVersion="2.03" authorName="Thulram" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
+<gameSystem id="e832-3291-06be-cab1" name="Age of Sigmar - Thul Ed" revision="38" battleScribeVersion="2.03" authorName="Thulram" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
   <publications>
     <publication id="bf0c-0cbf-1f5d-5885" name="Chaos Battletome - Blades of Khorne"/>
     <publication id="6ce4-e8a3-f18f-be55" name="Order Battletome - Daughters of Khaine"/>
@@ -402,6 +402,11 @@
                 <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="6f50-e069-0aac-3300" type="greaterThan"/>
               </conditions>
             </modifier>
+            <modifier type="set" field="9d2d-b9c8-e120-0b50" value="-1.0">
+              <conditions>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="a73e-41f7-f3c6-0a5e" type="greaterThan"/>
+              </conditions>
+            </modifier>
           </modifiers>
           <constraints>
             <constraint field="b0b4-6aec-82c2-02ae" scope="6cd6-b22e-bfcb-9589" value="400.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="9d2d-b9c8-e120-0b50" type="max"/>
@@ -560,6 +565,11 @@
                 </conditionGroup>
               </conditionGroups>
             </modifier>
+            <modifier type="set" field="513d-7061-f74d-082e" value="-1.0">
+              <conditions>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="a73e-41f7-f3c6-0a5e" type="greaterThan"/>
+              </conditions>
+            </modifier>
           </modifiers>
           <constraints>
             <constraint field="b0b4-6aec-82c2-02ae" scope="4373-740f-1bf3-b0aa" value="600.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="513d-7061-f74d-082e" type="max"/>
@@ -714,6 +724,11 @@
               </conditions>
             </modifier>
             <modifier type="set" field="6538-1438-f500-589a" value="1.0">
+              <conditions>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="a73e-41f7-f3c6-0a5e" type="greaterThan"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="d0a1-67be-783c-8616" value="-1.0">
               <conditions>
                 <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="a73e-41f7-f3c6-0a5e" type="greaterThan"/>
               </conditions>
@@ -906,6 +921,11 @@
                 <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="a73e-41f7-f3c6-0a5e" type="greaterThan"/>
               </conditions>
             </modifier>
+            <modifier type="set" field="ff6c-ce72-c356-93c1" value="-1.0">
+              <conditions>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="a73e-41f7-f3c6-0a5e" type="greaterThan"/>
+              </conditions>
+            </modifier>
           </modifiers>
           <constraints>
             <constraint field="b0b4-6aec-82c2-02ae" scope="b543-cb16-0c79-fbc6" value="300.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="ff6c-ce72-c356-93c1" type="max"/>
@@ -1056,6 +1076,11 @@
               </conditions>
             </modifier>
             <modifier type="set" field="68bf-11cd-a10d-d1fb" value="1.0">
+              <conditions>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="a73e-41f7-f3c6-0a5e" type="greaterThan"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="4168-656c-2415-d682" value="-1.0">
               <conditions>
                 <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="a73e-41f7-f3c6-0a5e" type="greaterThan"/>
               </conditions>
