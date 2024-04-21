@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<gameSystem id="e832-3291-06be-cab1" name="Age of Sigmar - Thul Ed" revision="38" battleScribeVersion="2.03" authorName="Thulram" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
+<gameSystem id="e832-3291-06be-cab1" name="Age of Sigmar - Thul Ed" revision="39" battleScribeVersion="2.03" authorName="Thulram" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
   <publications>
     <publication id="bf0c-0cbf-1f5d-5885" name="Chaos Battletome - Blades of Khorne"/>
     <publication id="6ce4-e8a3-f18f-be55" name="Order Battletome - Daughters of Khaine"/>
@@ -3012,7 +3012,7 @@ This endless spell has 2 parts.</characteristic>
         <categoryLink id="f94a-cc96-9aed-ac51" name="Lauchon the Soulseeker" hidden="false" targetId="d58e-b376-52ea-a019" primary="false"/>
       </categoryLinks>
       <costs>
-        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="50.0"/>
+        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="40.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="7e0a-6ffe-4578-3577" name="Endless Spell - Horrorghast" hidden="false" collective="false" import="true" type="model">
@@ -4314,7 +4314,7 @@ Designer’s Note: Remember that an incarnate in its wild form treats other unit
               <profiles>
                 <profile id="3166-6041-aad0-0bf9" name="Spellcasting Savant" hidden="false" typeId="7dc6-98f0-f5ba-fc16" typeName="Grand Strategy">
                   <characteristics>
-                    <characteristic name="Grand Strategy" typeId="22d6-b382-f824-6381">When the battle ends, you complete this grand strategy if the model picked to be your general is an ANDTORIAN LOCUS and that unit has not been slain.</characteristic>
+                    <characteristic name="Grand Strategy" typeId="22d6-b382-f824-6381">When the battle ends, you complete this grand strategy if the model picked to be your general is an ANDTORIAN LOCUS and that model is on the battlefield and has not been slain.</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
