@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<gameSystem id="e832-3291-06be-cab1" name="Age of Sigmar - Thul Ed" revision="39" battleScribeVersion="2.03" authorName="Thulram" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
+<gameSystem id="e832-3291-06be-cab1" name="Age of Sigmar - Thul Ed" revision="40" battleScribeVersion="2.03" authorName="Thulram" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
   <publications>
     <publication id="bf0c-0cbf-1f5d-5885" name="Chaos Battletome - Blades of Khorne"/>
     <publication id="6ce4-e8a3-f18f-be55" name="Order Battletome - Daughters of Khaine"/>
@@ -4700,43 +4700,11 @@ Designer’s Note: While characteristics can’t be further changed or modified,
       </selectionEntryGroups>
     </selectionEntryGroup>
     <selectionEntryGroup id="836b-19a4-b5b4-570d" name="Rulebook Artefacts of Power" hidden="false" collective="false" import="true">
-      <modifiers>
-        <modifier type="increment" field="e620-cd8a-c16a-258c" value="1.0">
-          <repeats>
-            <repeat field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="606f-9b75-948c-bf2c" repeats="1" roundUp="false"/>
-            <repeat field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="6af4-da37-ff6c-84cb" repeats="1" roundUp="false"/>
-          </repeats>
-          <conditionGroups>
-            <conditionGroup type="or">
-              <conditions>
-                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="606f-9b75-948c-bf2c" type="greaterThan"/>
-                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="6af4-da37-ff6c-84cb" type="greaterThan"/>
-              </conditions>
-            </conditionGroup>
-          </conditionGroups>
-        </modifier>
-      </modifiers>
       <constraints>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="e620-cd8a-c16a-258c" type="max"/>
       </constraints>
       <selectionEntryGroups>
         <selectionEntryGroup id="85df-7aac-8f95-b3e3" name="Universal Artefacts of Power" hidden="false" collective="false" import="true">
-          <modifiers>
-            <modifier type="increment" field="5a0a-8077-c025-b8e0" value="1.0">
-              <repeats>
-                <repeat field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="606f-9b75-948c-bf2c" repeats="1" roundUp="false"/>
-                <repeat field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="6af4-da37-ff6c-84cb" repeats="1" roundUp="false"/>
-              </repeats>
-              <conditionGroups>
-                <conditionGroup type="or">
-                  <conditions>
-                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="606f-9b75-948c-bf2c" type="greaterThan"/>
-                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="6af4-da37-ff6c-84cb" type="greaterThan"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
-            </modifier>
-          </modifiers>
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="5a0a-8077-c025-b8e0" type="max"/>
           </constraints>
@@ -4744,7 +4712,6 @@ Designer’s Note: While characteristics can’t be further changed or modified,
             <selectionEntry id="d4b1-fb61-6c9b-17e1" name="4 -- Seed of Rebirth" hidden="false" collective="false" import="true" type="upgrade">
               <constraints>
                 <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="2919-10a5-a8db-65a5" type="max"/>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="403d-d865-b95c-4224" type="max"/>
               </constraints>
               <profiles>
                 <profile id="8b84-d098-c5b3-be2a" name="Seed of Rebirth" hidden="false" typeId="0c9d-7abe-a53c-6a37" typeName="Artefacts">
@@ -4773,7 +4740,6 @@ Designer’s Note: While characteristics can’t be further changed or modified,
               </modifiers>
               <constraints>
                 <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="4c98-e1a9-2d6b-63b5" type="max"/>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="7fbb-8937-649a-e486" type="max"/>
               </constraints>
               <profiles>
                 <profile id="ea87-7894-90c0-5221" name="Arcane Tome" hidden="false" typeId="0c9d-7abe-a53c-6a37" typeName="Artefacts">
@@ -4796,7 +4762,6 @@ Designer’s Note: While characteristics can’t be further changed or modified,
             <selectionEntry id="0ddc-0b81-a8d5-0fc9" name="2 -- Vial of Manticore Venom" hidden="false" collective="false" import="true" type="upgrade">
               <constraints>
                 <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="5126-4582-eed9-d915" type="max"/>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="84e4-9827-0a70-3414" type="max"/>
               </constraints>
               <profiles>
                 <profile id="d851-3807-ab9d-2fc7" name="Vial of Manticore Venom" hidden="false" typeId="0c9d-7abe-a53c-6a37" typeName="Artefacts">
@@ -4812,7 +4777,6 @@ Designer’s Note: While characteristics can’t be further changed or modified,
             <selectionEntry id="b1c9-e5a5-8014-4366" name="1 -- Amulet of Destiny" hidden="false" collective="false" import="true" type="upgrade">
               <constraints>
                 <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="55f1-48e4-731c-8586" type="max"/>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="ef1b-4c85-2eec-544b" type="max"/>
               </constraints>
               <profiles>
                 <profile id="2059-5e10-61f6-f418" name="Amulet of Destiny" hidden="false" typeId="0c9d-7abe-a53c-6a37" typeName="Artefacts">
