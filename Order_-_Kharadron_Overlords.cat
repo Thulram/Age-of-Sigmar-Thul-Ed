@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="66d5-d50d-1930-a53d" name="Order - Kharadron Overlords" revision="22" battleScribeVersion="2.03" authorName="Thulram" library="false" gameSystemId="e832-3291-06be-cab1" gameSystemRevision="21" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="66d5-d50d-1930-a53d" name="Order - Kharadron Overlords" revision="23" battleScribeVersion="2.03" authorName="Thulram" library="false" gameSystemId="e832-3291-06be-cab1" gameSystemRevision="22" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <profileTypes>
     <profileType id="6870-98be-4a6c-24e1" name="Great Endrinwork">
       <characteristicTypes>
@@ -14,6 +14,16 @@
   </profileTypes>
   <categoryEntries>
     <categoryEntry id="b55a-e2ff-183d-1870" name="Skyvessel Endrinwork" hidden="true"/>
+    <categoryEntry id="e7d7-d178-733f-57e7" name="Prudency Chutes" hidden="false">
+      <constraints>
+        <constraint field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="6a75-662d-f327-8723" type="max"/>
+      </constraints>
+    </categoryEntry>
+    <categoryEntry id="51e9-1f76-ab9c-b439" name="Magnificent Omniscope" hidden="false">
+      <constraints>
+        <constraint field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="63c6-de67-a12a-aef4" type="max"/>
+      </constraints>
+    </categoryEntry>
   </categoryEntries>
   <selectionEntries>
     <selectionEntry id="4748-0bbf-527c-99c0" name="Allegiance" hidden="false" collective="false" import="true" type="upgrade">
@@ -345,7 +355,7 @@ Rune of Ancestral Guidance: Rune of Ancestral Guidance is a prayer that has an a
                       <profiles>
                         <profile id="b5e1-2a8e-575a-e875" name="Trust to Your Guns" hidden="false" typeId="c0c2-177b-e761-ec41" typeName="Allegiance Abilities">
                           <characteristics>
-                            <characteristic name="Allegiance Ability" typeId="0506-f62d-68b3-5499">Once per turn in your movement phase, when you make a run roll for a KHARADRON OVERLORDS unit, you can roll 2D6 instead of a single dice.</characteristic>
+                            <characteristic name="Allegiance Ability" typeId="0506-f62d-68b3-5499">Once per turn, in your shooting phase, you can re-roll 1 hit roll of 1 for an attack made by a friendly KHARADRON OVERLORDS unit.</characteristic>
                           </characteristics>
                         </profile>
                       </profiles>
@@ -1098,8 +1108,14 @@ Rune of Ancestral Guidance: Rune of Ancestral Guidance is a prayer that has an a
                 <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="996a-613c-4006-25e3" type="instanceOf"/>
                 <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="6cd6-b22e-bfcb-9589" type="instanceOf"/>
                 <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="b543-cb16-0c79-fbc6" type="instanceOf"/>
-                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="f8dd-22b1-99c9-306b" type="equalTo"/>
               </conditions>
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="f8dd-22b1-99c9-306b" type="equalTo"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
             </conditionGroup>
           </conditionGroups>
         </modifier>
@@ -1191,8 +1207,15 @@ Rune of Ancestral Guidance: Rune of Ancestral Guidance is a prayer that has an a
                 <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="996a-613c-4006-25e3" type="instanceOf"/>
                 <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="6cd6-b22e-bfcb-9589" type="instanceOf"/>
                 <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="b543-cb16-0c79-fbc6" type="instanceOf"/>
-                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="144b-7a40-ce14-b15c" type="equalTo"/>
               </conditions>
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="144b-7a40-ce14-b15c" type="equalTo"/>
+                    <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="b57f-c224-c5b7-8ef4" type="equalTo"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
             </conditionGroup>
           </conditionGroups>
         </modifier>
@@ -1296,6 +1319,9 @@ Rune of Ancestral Guidance: Rune of Ancestral Guidance is a prayer that has an a
                   </characteristics>
                 </profile>
               </profiles>
+              <categoryLinks>
+                <categoryLink id="8d9c-0779-025c-e0d6" name="Magnificent Omniscope" hidden="false" targetId="51e9-1f76-ab9c-b439" primary="false"/>
+              </categoryLinks>
               <costs>
                 <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
               </costs>
@@ -1311,6 +1337,9 @@ Rune of Ancestral Guidance: Rune of Ancestral Guidance is a prayer that has an a
                   </characteristics>
                 </profile>
               </profiles>
+              <categoryLinks>
+                <categoryLink id="d3d8-65c8-1dd9-d1a3" name="Prudency Chutes" hidden="false" targetId="e7d7-d178-733f-57e7" primary="false"/>
+              </categoryLinks>
               <costs>
                 <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
               </costs>
@@ -1413,6 +1442,9 @@ Rune of Ancestral Guidance: Rune of Ancestral Guidance is a prayer that has an a
                   </characteristics>
                 </profile>
               </profiles>
+              <categoryLinks>
+                <categoryLink id="09b6-196a-cbf9-1c0a" name="Prudency Chutes" hidden="false" targetId="e7d7-d178-733f-57e7" primary="false"/>
+              </categoryLinks>
               <costs>
                 <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
               </costs>
@@ -1428,6 +1460,9 @@ Rune of Ancestral Guidance: Rune of Ancestral Guidance is a prayer that has an a
                   </characteristics>
                 </profile>
               </profiles>
+              <categoryLinks>
+                <categoryLink id="cc1e-bbf7-33a3-f2e5" name="Magnificent Omniscope" hidden="false" targetId="51e9-1f76-ab9c-b439" primary="false"/>
+              </categoryLinks>
               <costs>
                 <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
               </costs>

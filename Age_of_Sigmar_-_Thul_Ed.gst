@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<gameSystem id="e832-3291-06be-cab1" name="Age of Sigmar - Thul Ed" revision="40" battleScribeVersion="2.03" authorName="Thulram" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
+<gameSystem id="e832-3291-06be-cab1" name="Age of Sigmar - Thul Ed" revision="41" battleScribeVersion="2.03" authorName="Thulram" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
   <publications>
     <publication id="bf0c-0cbf-1f5d-5885" name="Chaos Battletome - Blades of Khorne"/>
     <publication id="6ce4-e8a3-f18f-be55" name="Order Battletome - Daughters of Khaine"/>
@@ -4992,7 +4992,7 @@ Designer’s Note: While characteristics can’t be further changed or modified,
     </profile>
     <profile id="7b66-5f0a-449f-f31a" name="Smite" hidden="false" typeId="161a-85bd-f19e-a5a7" typeName="Prayer">
       <characteristics>
-        <characteristic name="Prayer" typeId="19bc-965a-768d-defa">Smite is a prayer that has an answer value of 2 and a range of 48&quot;. If answered, pick 1 enemy Priest within range and visible to the chanter. That enemy Priest suffers 1 mortal wound. If the chanting roll was 6 or more, that enemy Priest suffers D3 mortal wounds instead of 1.</characteristic>
+        <characteristic name="Prayer" typeId="19bc-965a-768d-defa">Smite is a prayer that has an answer value of 2 and a range of 48&quot;. If answered, pick 1 enemy PRIEST within range and visible to the chanter. That enemy PRIEST suffers 1 mortal wound. If the chanting roll was 6 or more, that enemy PRIEST suffers D3 mortal wounds instead of 1.</characteristic>
       </characteristics>
     </profile>
     <profile id="63bb-20bf-782c-c8c0" name="Elite" hidden="false" typeId="ce32-0c40-1990-4c8a" typeName="Restriction">
