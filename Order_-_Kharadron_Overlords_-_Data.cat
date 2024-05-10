@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="8b6f-df16-b345-222b" name="Order - Kharadron Overlords - Data" revision="18" battleScribeVersion="2.03" authorName="Thulram" library="true" gameSystemId="e832-3291-06be-cab1" gameSystemRevision="17" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="8b6f-df16-b345-222b" name="Order - Kharadron Overlords - Data" revision="19" battleScribeVersion="2.03" authorName="Thulram" library="true" gameSystemId="e832-3291-06be-cab1" gameSystemRevision="19" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <profileTypes>
     <profileType id="5bd0-50e9-b771-b170" name="Ironclad Wounds">
       <characteristicTypes>
@@ -584,19 +584,6 @@ Favourable Conditions: For each roll of 6, pick 1 different friendly SKYVESSEL w
     </selectionEntry>
     <selectionEntry id="4716-8815-4d3c-a9e2" name="Arkanaut Company" publicationId="e97a-4837-a772-7406" hidden="false" collective="false" import="true" type="unit">
       <modifiers>
-        <modifier type="remove" field="category" value="a42d-220e-6a88-7bf6">
-          <conditionGroups>
-            <conditionGroup type="or">
-              <conditions>
-                <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="b543-cb16-0c79-fbc6" type="instanceOf"/>
-                <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="6cd6-b22e-bfcb-9589" type="instanceOf"/>
-                <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="e3a6-45ca-4974-b489" type="instanceOf"/>
-                <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="996a-613c-4006-25e3" type="instanceOf"/>
-                <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4373-740f-1bf3-b0aa" type="instanceOf"/>
-              </conditions>
-            </conditionGroup>
-          </conditionGroups>
-        </modifier>
         <modifier type="increment" field="b0b4-6aec-82c2-02ae" value="90.0">
           <repeats>
             <repeat field="selections" scope="4716-8815-4d3c-a9e2" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e20c-48d8-e5e3-1a36" repeats="1" roundUp="false"/>
@@ -606,6 +593,25 @@ Favourable Conditions: For each roll of 6, pick 1 different friendly SKYVESSEL w
           </conditions>
         </modifier>
       </modifiers>
+      <modifierGroups>
+        <modifierGroup>
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="b543-cb16-0c79-fbc6" type="instanceOf"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="6cd6-b22e-bfcb-9589" type="instanceOf"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="e3a6-45ca-4974-b489" type="instanceOf"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="996a-613c-4006-25e3" type="instanceOf"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4373-740f-1bf3-b0aa" type="instanceOf"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+          <modifiers>
+            <modifier type="set-primary" field="category" value="6230-ed60-e374-add4"/>
+            <modifier type="remove" field="category" value="a42d-220e-6a88-7bf6"/>
+          </modifiers>
+        </modifierGroup>
+      </modifierGroups>
       <profiles>
         <profile id="f50f-97d7-a853-639c" name="Arkanaut Company" hidden="false" typeId="3956-f6dd-6c88-ae4b" typeName="Unit">
           <characteristics>
@@ -626,9 +632,8 @@ Favourable Conditions: For each roll of 6, pick 1 different friendly SKYVESSEL w
         <categoryLink id="a9ac-fdda-30a4-7d8e" name="Duardin" hidden="false" targetId="3434-9baa-1e9a-4ebd" primary="false"/>
         <categoryLink id="09ff-85e5-9215-8b83" name="KHARADRON OVERLORDS" hidden="false" targetId="49c9-2257-e9f5-a409" primary="false"/>
         <categoryLink id="54c0-d5ce-7a69-0122" name="Order" hidden="false" targetId="90c6-6c11-9677-1fa8" primary="false"/>
-        <categoryLink id="006d-8c32-7c9f-311a" name="New CategoryLink" hidden="false" targetId="6230-ed60-e374-add4" primary="true"/>
         <categoryLink id="100b-733d-1dd4-719e" name="Skyfarer" hidden="false" targetId="a5be-1443-e38e-40f7" primary="false"/>
-        <categoryLink id="a424-f75a-dddd-b046" name="BATTLELINE" hidden="false" targetId="a42d-220e-6a88-7bf6" primary="false"/>
+        <categoryLink id="a424-f75a-dddd-b046" name="BATTLELINE" hidden="false" targetId="a42d-220e-6a88-7bf6" primary="true"/>
       </categoryLinks>
       <selectionEntries>
         <selectionEntry id="158a-f0cf-f86c-3df2" name="10 Arkanauts" hidden="false" collective="false" import="true" type="model">

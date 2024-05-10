@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="75e9-7c3a-2fc1-8356" name="Order - Lumineth Realm-lords" revision="16" battleScribeVersion="2.03" authorName="Thulram" library="false" gameSystemId="e832-3291-06be-cab1" gameSystemRevision="15" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="75e9-7c3a-2fc1-8356" name="Order - Lumineth Realm-lords" revision="17" battleScribeVersion="2.03" authorName="Thulram" library="false" gameSystemId="e832-3291-06be-cab1" gameSystemRevision="16" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <categoryEntries>
     <categoryEntry id="2e09-69e6-aa86-b6d7" name="General - Wizard" hidden="false"/>
     <categoryEntry id="b61b-b8ee-2c47-8260" name="SpellPlusScinari" hidden="false"/>
@@ -213,16 +213,26 @@
   <entryLinks>
     <entryLink id="b7be-2b5a-8f64-07e5" name="Alarith Spirit of the Mountain" hidden="false" collective="false" import="true" targetId="10fc-f436-5e8e-82ca" type="selectionEntry"/>
     <entryLink id="ecd2-e743-73ae-305b" name="Alarith Stoneguard" hidden="false" collective="false" import="true" targetId="1067-64f2-2bfb-76c1" type="selectionEntry">
-      <modifiers>
-        <modifier type="remove" field="category" value="a42d-220e-6a88-7bf6">
-          <conditions>
-            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="5312-4e1f-bd4b-a89f" type="equalTo"/>
-          </conditions>
-        </modifier>
-      </modifiers>
-      <categoryLinks>
-        <categoryLink id="a076-f01e-39b9-4dfa" name="BATTLELINE" hidden="false" targetId="a42d-220e-6a88-7bf6" primary="false"/>
-      </categoryLinks>
+      <modifierGroups>
+        <modifierGroup>
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4373-740f-1bf3-b0aa" type="notInstanceOf"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="e3a6-45ca-4974-b489" type="notInstanceOf"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="996a-613c-4006-25e3" type="notInstanceOf"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="6cd6-b22e-bfcb-9589" type="notInstanceOf"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="b543-cb16-0c79-fbc6" type="notInstanceOf"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="5312-4e1f-bd4b-a89f" type="greaterThan"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+          <modifiers>
+            <modifier type="set-primary" field="category" value="a42d-220e-6a88-7bf6"/>
+            <modifier type="remove" field="category" value="6230-ed60-e374-add4"/>
+          </modifiers>
+        </modifierGroup>
+      </modifierGroups>
     </entryLink>
     <entryLink id="b304-7a95-8614-62cb" name="Alarith Stonemage" hidden="false" collective="false" import="true" targetId="7ae5-82e7-111b-aad5" type="selectionEntry">
       <entryLinks>
@@ -277,6 +287,26 @@
       </entryLinks>
     </entryLink>
     <entryLink id="29ec-f3c9-ca02-ac2a" name="Vanari Auralan Sentinels" hidden="false" collective="false" import="true" targetId="0c52-c86c-842c-ec29" type="selectionEntry">
+      <modifierGroups>
+        <modifierGroup>
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4373-740f-1bf3-b0aa" type="notInstanceOf"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="e3a6-45ca-4974-b489" type="notInstanceOf"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="996a-613c-4006-25e3" type="notInstanceOf"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="6cd6-b22e-bfcb-9589" type="notInstanceOf"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="b543-cb16-0c79-fbc6" type="notInstanceOf"/>
+                <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="6951-d59f-2d78-8c1e" type="greaterThan"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+          <modifiers>
+            <modifier type="set-primary" field="category" value="a42d-220e-6a88-7bf6"/>
+            <modifier type="remove" field="category" value="6230-ed60-e374-add4"/>
+          </modifiers>
+        </modifierGroup>
+      </modifierGroups>
       <entryLinks>
         <entryLink id="7f58-be4a-2e3b-5e1b" name="Vanari Battleline" hidden="false" collective="false" import="true" targetId="6951-d59f-2d78-8c1e" type="selectionEntry"/>
         <entryLink id="d5f9-965a-3c53-6dca" name="Lumineth Spell Lores" hidden="false" collective="false" import="true" targetId="4097-ac27-19c8-96a3" type="selectionEntryGroup"/>
@@ -288,6 +318,26 @@
       </entryLinks>
     </entryLink>
     <entryLink id="0a40-f952-1517-02fe" name="Vanari Dawnriders" hidden="false" collective="false" import="true" targetId="b276-95ae-03b9-3802" type="selectionEntry">
+      <modifierGroups>
+        <modifierGroup>
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4373-740f-1bf3-b0aa" type="notInstanceOf"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="e3a6-45ca-4974-b489" type="notInstanceOf"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="996a-613c-4006-25e3" type="notInstanceOf"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="6cd6-b22e-bfcb-9589" type="notInstanceOf"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="b543-cb16-0c79-fbc6" type="notInstanceOf"/>
+                <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="6951-d59f-2d78-8c1e" type="greaterThan"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+          <modifiers>
+            <modifier type="set-primary" field="category" value="a42d-220e-6a88-7bf6"/>
+            <modifier type="remove" field="category" value="6230-ed60-e374-add4"/>
+          </modifiers>
+        </modifierGroup>
+      </modifierGroups>
       <entryLinks>
         <entryLink id="02f0-a041-b726-5760" name="Vanari Battleline" hidden="false" collective="false" import="true" targetId="6951-d59f-2d78-8c1e" type="selectionEntry"/>
         <entryLink id="c262-eaf5-7143-43d2" name="Lumineth Spell Lores" hidden="false" collective="false" import="true" targetId="4097-ac27-19c8-96a3" type="selectionEntryGroup"/>
@@ -328,15 +378,27 @@
     </entryLink>
     <entryLink id="6cae-6e2e-2123-2c5d" name="Hurakan Windchargers" hidden="false" collective="false" import="true" targetId="cd2e-9b24-83ad-2801" type="selectionEntry">
       <modifiers>
-        <modifier type="remove" field="category" value="a42d-220e-6a88-7bf6">
-          <conditions>
-            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="b4b4-434b-262a-a5f1" type="equalTo"/>
-          </conditions>
-        </modifier>
+        <modifier type="remove" field="category" value="a42d-220e-6a88-7bf6"/>
       </modifiers>
-      <categoryLinks>
-        <categoryLink id="a690-6bf4-63f4-73e4" name="BATTLELINE" hidden="false" targetId="a42d-220e-6a88-7bf6" primary="false"/>
-      </categoryLinks>
+      <modifierGroups>
+        <modifierGroup>
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4373-740f-1bf3-b0aa" type="notInstanceOf"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="e3a6-45ca-4974-b489" type="notInstanceOf"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="996a-613c-4006-25e3" type="notInstanceOf"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="6cd6-b22e-bfcb-9589" type="notInstanceOf"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="b543-cb16-0c79-fbc6" type="notInstanceOf"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="b4b4-434b-262a-a5f1" type="greaterThan"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+          <modifiers>
+            <modifier type="set-primary" field="category" value="a42d-220e-6a88-7bf6"/>
+          </modifiers>
+        </modifierGroup>
+      </modifierGroups>
     </entryLink>
     <entryLink id="990c-d5b0-87e3-909a" name="Hurakan Windmage" hidden="false" collective="false" import="true" targetId="b735-3075-a97e-b108" type="selectionEntry">
       <entryLinks>
@@ -403,6 +465,26 @@
       </entryLinks>
     </entryLink>
     <entryLink id="0628-dbe6-9f72-6d15" name="Vanari Bladelords" hidden="false" collective="false" import="true" targetId="577b-62d5-7a75-24cd" type="selectionEntry">
+      <modifierGroups>
+        <modifierGroup>
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4373-740f-1bf3-b0aa" type="notInstanceOf"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="e3a6-45ca-4974-b489" type="notInstanceOf"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="996a-613c-4006-25e3" type="notInstanceOf"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="6cd6-b22e-bfcb-9589" type="notInstanceOf"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="b543-cb16-0c79-fbc6" type="notInstanceOf"/>
+                <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="3e6b-5fe2-3b84-2046" type="greaterThan"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+          <modifiers>
+            <modifier type="set-primary" field="category" value="a42d-220e-6a88-7bf6"/>
+            <modifier type="remove" field="category" value="6230-ed60-e374-add4"/>
+          </modifiers>
+        </modifierGroup>
+      </modifierGroups>
       <entryLinks>
         <entryLink id="446a-4e5f-73ee-e125" name="Bladelord Battleline" hidden="false" collective="false" import="true" targetId="3e6b-5fe2-3b84-2046" type="selectionEntry"/>
       </entryLinks>
@@ -419,7 +501,11 @@
         </entryLink>
       </entryLinks>
     </entryLink>
-    <entryLink id="19dd-b7c8-4d68-6965" name="Vanari Starshard Ballistas" hidden="false" collective="false" import="true" targetId="a474-774a-77f2-d4e4" type="selectionEntry"/>
+    <entryLink id="19dd-b7c8-4d68-6965" name="Vanari Starshard Ballistas" hidden="false" collective="false" import="true" targetId="a474-774a-77f2-d4e4" type="selectionEntry">
+      <entryLinks>
+        <entryLink id="a042-d3b0-89ab-0d59" name="Core Battalions" hidden="false" collective="false" import="true" targetId="8c04-393d-d72d-c2a8" type="selectionEntryGroup"/>
+      </entryLinks>
+    </entryLink>
     <entryLink id="d562-4541-e6b1-1944" name="Shrine Luminor" hidden="false" collective="false" import="true" targetId="ffff-eecb-0fc5-5d6a" type="selectionEntry"/>
     <entryLink id="e817-7c44-76d3-c499" name="Scinari Enlightener" hidden="false" collective="false" import="true" targetId="1eff-4c3b-772c-1996" type="selectionEntry">
       <entryLinks>
@@ -431,6 +517,11 @@
         <entryLink id="2326-137b-233d-3f8e" name="Artefacts of Power" hidden="false" collective="false" import="true" targetId="0a6f-10d4-25d2-c2a0" type="selectionEntryGroup"/>
         <entryLink id="5b37-2467-1a74-4f34" name="Command Traits" hidden="false" collective="false" import="true" targetId="b248-0f97-c074-c052" type="selectionEntryGroup"/>
         <entryLink id="f85a-a1af-f6c0-81d7" name="Lumineth Spell Lores" hidden="false" collective="false" import="true" targetId="4097-ac27-19c8-96a3" type="selectionEntryGroup"/>
+      </entryLinks>
+    </entryLink>
+    <entryLink id="1beb-bbf9-ab0e-c9af" name="Ydrilan Riverblades" hidden="false" collective="false" import="true" targetId="5b86-beb8-4343-84e0" type="selectionEntry">
+      <entryLinks>
+        <entryLink id="7e28-065f-cbb1-7a98" name="Core Battalions" hidden="false" collective="false" import="true" targetId="8c04-393d-d72d-c2a8" type="selectionEntryGroup"/>
       </entryLinks>
     </entryLink>
   </entryLinks>
@@ -614,9 +705,6 @@ Magical Boost: You can say that a unit will use this ability after it has attemp
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="3036-118c-1b72-52b3" type="max"/>
         <constraint field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="35b9-c62a-5558-cfea" type="max"/>
       </constraints>
-      <categoryLinks>
-        <categoryLink id="c6aa-00eb-a4f7-36dc" name="BATTLELINE" hidden="false" targetId="a42d-220e-6a88-7bf6" primary="false"/>
-      </categoryLinks>
       <costs>
         <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
       </costs>
@@ -636,9 +724,6 @@ Magical Boost: You can say that a unit will use this ability after it has attemp
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="3150-02fc-bf4a-db4d" type="max"/>
         <constraint field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="d5a4-2f6e-d093-b030" type="max"/>
       </constraints>
-      <categoryLinks>
-        <categoryLink id="be93-3912-93fb-5564" name="BATTLELINE" hidden="false" targetId="a42d-220e-6a88-7bf6" primary="false"/>
-      </categoryLinks>
       <costs>
         <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
       </costs>

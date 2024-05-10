@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="cee0-17f2-d07a-b25e" name="Death - Flesh-eater Courts - Data" revision="13" battleScribeVersion="2.03" authorName="Thulram" library="true" gameSystemId="e832-3291-06be-cab1" gameSystemRevision="12" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="cee0-17f2-d07a-b25e" name="Death - Flesh-eater Courts - Data" revision="14" battleScribeVersion="2.03" authorName="Thulram" library="true" gameSystemId="e832-3291-06be-cab1" gameSystemRevision="13" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <profileTypes>
     <profileType id="683f-83a8-9eb7-0217" name="Royal Terrorgheist Wounds">
       <characteristicTypes>
@@ -52,6 +52,7 @@
     <categoryEntry id="6eee-843a-880d-d13a" name="MORBHEG KNIGHTS" hidden="false"/>
     <categoryEntry id="459b-bcb7-9c74-79fd" name="ROYAL BEASTFLAYERS" hidden="false"/>
     <categoryEntry id="4a04-4904-d4a5-31bb" name="MORTARCH" hidden="false"/>
+    <categoryEntry id="5f05-6e0c-bba4-e676" name="THE SKINNERKIN" hidden="false"/>
   </categoryEntries>
   <sharedSelectionEntries>
     <selectionEntry id="dd7b-859c-2558-afbd" name="Duke Crakmarrow &amp; The Grymwatch (separate units)" hidden="false" collective="false" import="true" type="upgrade">
@@ -1291,19 +1292,6 @@
     </selectionEntry>
     <selectionEntry id="f50b-6cf9-900b-e06a" name="Crypt Ghouls" hidden="false" collective="false" import="true" type="unit">
       <modifiers>
-        <modifier type="remove" field="category" value="a42d-220e-6a88-7bf6">
-          <conditionGroups>
-            <conditionGroup type="or">
-              <conditions>
-                <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="b543-cb16-0c79-fbc6" type="instanceOf"/>
-                <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="6cd6-b22e-bfcb-9589" type="instanceOf"/>
-                <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="e3a6-45ca-4974-b489" type="instanceOf"/>
-                <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="996a-613c-4006-25e3" type="instanceOf"/>
-                <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4373-740f-1bf3-b0aa" type="instanceOf"/>
-              </conditions>
-            </conditionGroup>
-          </conditionGroups>
-        </modifier>
         <modifier type="increment" field="b0b4-6aec-82c2-02ae" value="160.0">
           <repeats>
             <repeat field="selections" scope="f50b-6cf9-900b-e06a" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e20c-48d8-e5e3-1a36" repeats="1" roundUp="false"/>
@@ -1313,6 +1301,25 @@
           </conditions>
         </modifier>
       </modifiers>
+      <modifierGroups>
+        <modifierGroup>
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="b543-cb16-0c79-fbc6" type="instanceOf"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="6cd6-b22e-bfcb-9589" type="instanceOf"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="e3a6-45ca-4974-b489" type="instanceOf"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="996a-613c-4006-25e3" type="instanceOf"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4373-740f-1bf3-b0aa" type="instanceOf"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+          <modifiers>
+            <modifier type="set-primary" field="category" value="6230-ed60-e374-add4"/>
+            <modifier type="remove" field="category" value="a42d-220e-6a88-7bf6"/>
+          </modifiers>
+        </modifierGroup>
+      </modifierGroups>
       <profiles>
         <profile id="d9cc-db00-8ec3-b099" name="Crypt Ghouls" hidden="false" typeId="3956-f6dd-6c88-ae4b" typeName="Unit">
           <characteristics>
@@ -1343,9 +1350,8 @@
         <categoryLink id="cf10-2b58-f81a-e6b1" name="Death" hidden="false" targetId="4927-09f0-87d8-4a68" primary="false"/>
         <categoryLink id="e328-8b2f-bf07-a0c3" name="FLESH-EATER COURTS" hidden="false" targetId="7cad-9643-56c1-6fd8" primary="false"/>
         <categoryLink id="1c12-44a3-a1a2-7226" name="MORDANT" hidden="false" targetId="ee19-01c9-e3e0-eee1" primary="false"/>
-        <categoryLink id="03eb-511b-8bba-90f4" name="New CategoryLink" hidden="false" targetId="6230-ed60-e374-add4" primary="true"/>
         <categoryLink id="3059-ae0e-1a1c-3a72" name="SERFS" hidden="false" targetId="ac2d-d930-fc97-2b2d" primary="false"/>
-        <categoryLink id="3d64-1463-bee6-4dbd" name="BATTLELINE" hidden="false" targetId="a42d-220e-6a88-7bf6" primary="false"/>
+        <categoryLink id="3d64-1463-bee6-4dbd" name="BATTLELINE" hidden="false" targetId="a42d-220e-6a88-7bf6" primary="true"/>
       </categoryLinks>
       <selectionEntries>
         <selectionEntry id="4d2f-6950-1c5a-0261" name="20 Crypt Ghouls" hidden="false" collective="false" import="true" type="model">
@@ -2534,6 +2540,71 @@ If it accepts, that enemy unit becomes infected. For the rest of the battle, rol
       </entryLinks>
       <costs>
         <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="110.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="0e1f-2af7-69d3-7786" name="The Skinnerkin" hidden="false" collective="false" import="true" type="unit">
+      <constraints>
+        <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="bca2-56e8-684d-f361" type="max"/>
+      </constraints>
+      <profiles>
+        <profile id="d4d8-7292-7b08-6d28" name="The Skinnerkin" hidden="false" typeId="3956-f6dd-6c88-ae4b" typeName="Unit">
+          <characteristics>
+            <characteristic name="Move" typeId="5bbe-8910-4dfa-7b1c">6&quot;</characteristic>
+            <characteristic name="Wounds" typeId="a0c6-af64-2f24-5759">2</characteristic>
+            <characteristic name="Save" typeId="93b6-2f96-2df7-e330">6+</characteristic>
+            <characteristic name="Bravery" typeId="2420-1c5c-1016-7033">10</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="3717-8bef-0b37-39d1" name="&apos;Dinner is Served, Milord&apos;" hidden="false" typeId="7861-da01-01c0-88d9" typeName="Ability">
+          <characteristics>
+            <characteristic name="Ability" typeId="9bce-4deb-8b79-eaec">At the end of the combat phase, you can pick 1 friendly FLESH-EATER COURTS HERO wholly within 12&quot; of this unit. Heal a number of wounds allocated to that unit up to the number of prime cut points this unit has. Then, reset this unit’s prime cut points to 0.</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="d093-ebf7-2c92-0906" name="Prime Cuts" hidden="false" typeId="7861-da01-01c0-88d9" typeName="Ability">
+          <characteristics>
+            <characteristic name="Ability" typeId="9bce-4deb-8b79-eaec">If the unmodified hit roll for an attack made by this unit is 6, this unit receives 1 prime cut point.</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <categoryLinks>
+        <categoryLink id="4687-f653-2a32-2b5e" name="DEATH" hidden="false" targetId="4927-09f0-87d8-4a68" primary="false"/>
+        <categoryLink id="19d4-0a95-1451-007b" name="FLESH-EATER COURTS" hidden="false" targetId="7cad-9643-56c1-6fd8" primary="false"/>
+        <categoryLink id="924d-0d58-bd0d-0fbe" name="HOLLOWMOURNE" hidden="false" targetId="db8f-9c4e-b3ac-fcd3" primary="false"/>
+        <categoryLink id="5933-7a7b-9aef-e51c" name="MORDANT" hidden="false" targetId="ee19-01c9-e3e0-eee1" primary="false"/>
+        <categoryLink id="91d6-5451-e8a7-7a11" name="New CategoryLink" hidden="false" targetId="6230-ed60-e374-add4" primary="true"/>
+        <categoryLink id="e880-5f7b-1cc6-47ec" name="SERFS" hidden="false" targetId="ac2d-d930-fc97-2b2d" primary="false"/>
+        <categoryLink id="75ab-9467-2468-b5da" name="THE SKINNERKIN" hidden="false" targetId="5f05-6e0c-bba4-e676" primary="false"/>
+        <categoryLink id="eb0d-5b19-edf7-70da" name="Unique" hidden="false" targetId="543e-1cc9-6d38-f8b3" primary="false"/>
+      </categoryLinks>
+      <selectionEntries>
+        <selectionEntry id="5bdf-e8dd-1d6e-323e" name="Skinnerkin Weapons" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="2fc8-cdd0-2bf8-086f" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="a172-2ff0-ef90-d4ae" type="min"/>
+          </constraints>
+          <profiles>
+            <profile id="7466-b01e-eadf-d870" name="Skinnerkin Weapons" hidden="false" typeId="2905-f6bd-06e5-6642" typeName="Weapon">
+              <characteristics>
+                <characteristic name="Type" typeId="1a08-195b-76fd-2c2b">Melee</characteristic>
+                <characteristic name="Range" typeId="1406-f935-3f8e-b27f">1&quot;</characteristic>
+                <characteristic name="Attacks" typeId="4c19-dba6-f094-5165">3</characteristic>
+                <characteristic name="To-Hit" typeId="7a4f-9704-2095-96c8">4+</characteristic>
+                <characteristic name="To-Wound" typeId="172f-fc84-895b-04b7">4+</characteristic>
+                <characteristic name="Rend" typeId="0c05-bd2e-b7e7-3925">-</characteristic>
+                <characteristic name="Damage" typeId="01c2-d16a-8788-e52b">1</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+        </selectionEntry>
+        <selectionEntry id="a994-0b08-1759-e484" name="5 Skinnerkin" hidden="false" collective="false" import="true" type="model">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="1dc9-ae0a-b45a-031c" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="07be-cece-4029-b329" type="min"/>
+          </constraints>
+        </selectionEntry>
+      </selectionEntries>
+      <costs>
+        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="90.0"/>
       </costs>
     </selectionEntry>
   </sharedSelectionEntries>

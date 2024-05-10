@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="ea43-7972-d2ab-617a" name="Order - Cities of Sigmar - Data" revision="15" battleScribeVersion="2.03" authorName="Thulram" library="true" gameSystemId="e832-3291-06be-cab1" gameSystemRevision="14" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="ea43-7972-d2ab-617a" name="Order - Cities of Sigmar - Data" revision="16" battleScribeVersion="2.03" authorName="Thulram" library="true" gameSystemId="e832-3291-06be-cab1" gameSystemRevision="15" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <profileTypes>
     <profileType id="6ed8-2f25-715e-ccd5" name="Drakeblood Curse">
       <characteristicTypes>
@@ -109,6 +109,8 @@
     <categoryEntry id="5666-7eb6-180a-830d" name="TOLL&apos;S COMPANIONS" hidden="false"/>
     <categoryEntry id="1a2a-a957-86ad-ea4d" name="IRONWELD GREAT CANNON" hidden="false"/>
     <categoryEntry id="4c82-2388-6e2d-f3f9" name="IRONWELD ARSENAL" hidden="false"/>
+    <categoryEntry id="e6bd-95fc-5992-d04a" name="PATER FILIUS" hidden="false"/>
+    <categoryEntry id="4789-bb1d-e155-ca68" name="BRETHREN OF THE BOLT" hidden="false"/>
   </categoryEntries>
   <sharedSelectionEntries>
     <selectionEntry id="eb2c-4c6c-6a7d-c182" name="Flagellants" publicationId="88ce-c2fe-b89c-ed48" hidden="false" collective="false" import="true" type="unit">
@@ -1615,19 +1617,6 @@ Designer’s Note: This does not include Sorceress on Black Dragon units.</chara
     </selectionEntry>
     <selectionEntry id="fff8-84ba-9327-c684" name="Bleakswords" publicationId="88ce-c2fe-b89c-ed48" hidden="false" collective="false" import="true" type="unit">
       <modifiers>
-        <modifier type="remove" field="category" value="a42d-220e-6a88-7bf6">
-          <conditionGroups>
-            <conditionGroup type="or">
-              <conditions>
-                <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="b543-cb16-0c79-fbc6" type="instanceOf"/>
-                <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="6cd6-b22e-bfcb-9589" type="instanceOf"/>
-                <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="e3a6-45ca-4974-b489" type="instanceOf"/>
-                <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="996a-613c-4006-25e3" type="instanceOf"/>
-                <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4373-740f-1bf3-b0aa" type="instanceOf"/>
-              </conditions>
-            </conditionGroup>
-          </conditionGroups>
-        </modifier>
         <modifier type="increment" field="b0b4-6aec-82c2-02ae" value="100.0">
           <repeats>
             <repeat field="selections" scope="fff8-84ba-9327-c684" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e20c-48d8-e5e3-1a36" repeats="1" roundUp="false"/>
@@ -1637,6 +1626,25 @@ Designer’s Note: This does not include Sorceress on Black Dragon units.</chara
           </conditions>
         </modifier>
       </modifiers>
+      <modifierGroups>
+        <modifierGroup>
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="b543-cb16-0c79-fbc6" type="instanceOf"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="6cd6-b22e-bfcb-9589" type="instanceOf"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="e3a6-45ca-4974-b489" type="instanceOf"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="996a-613c-4006-25e3" type="instanceOf"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4373-740f-1bf3-b0aa" type="instanceOf"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+          <modifiers>
+            <modifier type="set-primary" field="category" value="6230-ed60-e374-add4"/>
+            <modifier type="remove" field="category" value="a42d-220e-6a88-7bf6"/>
+          </modifiers>
+        </modifierGroup>
+      </modifierGroups>
       <profiles>
         <profile id="0af2-dcb6-2327-b91f" name="Bleakswords" hidden="false" typeId="3956-f6dd-6c88-ae4b" typeName="Unit">
           <characteristics>
@@ -1657,9 +1665,8 @@ Designer’s Note: This does not include Sorceress on Black Dragon units.</chara
         <categoryLink id="28a9-c75b-ce61-3a96" name="Darkling Coven" hidden="false" targetId="bbcc-63cd-4941-2f7c" primary="false"/>
         <categoryLink id="b3f3-9da0-ef93-3cb9" name="Aelf" hidden="false" targetId="babf-cdeb-b0ab-05db" primary="false"/>
         <categoryLink id="aa83-9ea3-a12d-9f91" name="Order" hidden="false" targetId="90c6-6c11-9677-1fa8" primary="false"/>
-        <categoryLink id="022d-8c65-78c8-d2bc" name="New CategoryLink" hidden="false" targetId="6230-ed60-e374-add4" primary="true"/>
         <categoryLink id="6c64-bc54-d635-f358" name="Bleakswords" hidden="false" targetId="26e6-cf5f-a7df-27e3" primary="false"/>
-        <categoryLink id="1f0e-3d68-e5c6-796a" name="BATTLELINE" hidden="false" targetId="a42d-220e-6a88-7bf6" primary="false"/>
+        <categoryLink id="1f0e-3d68-e5c6-796a" name="BATTLELINE" hidden="false" targetId="a42d-220e-6a88-7bf6" primary="true"/>
       </categoryLinks>
       <selectionEntries>
         <selectionEntry id="391c-e8f9-1a1d-1aa7" name="10 Bleakswords" hidden="false" collective="false" import="true" type="model">
@@ -1765,19 +1772,6 @@ Designer’s Note: This does not include Sorceress on Black Dragon units.</chara
     </selectionEntry>
     <selectionEntry id="848e-a467-b591-291b" name="Dreadspears" publicationId="88ce-c2fe-b89c-ed48" hidden="false" collective="false" import="true" type="unit">
       <modifiers>
-        <modifier type="remove" field="category" value="a42d-220e-6a88-7bf6">
-          <conditionGroups>
-            <conditionGroup type="or">
-              <conditions>
-                <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="b543-cb16-0c79-fbc6" type="instanceOf"/>
-                <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="6cd6-b22e-bfcb-9589" type="instanceOf"/>
-                <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="e3a6-45ca-4974-b489" type="instanceOf"/>
-                <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="996a-613c-4006-25e3" type="instanceOf"/>
-                <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4373-740f-1bf3-b0aa" type="instanceOf"/>
-              </conditions>
-            </conditionGroup>
-          </conditionGroups>
-        </modifier>
         <modifier type="increment" field="b0b4-6aec-82c2-02ae" value="90.0">
           <repeats>
             <repeat field="selections" scope="848e-a467-b591-291b" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e20c-48d8-e5e3-1a36" repeats="1" roundUp="false"/>
@@ -1787,6 +1781,25 @@ Designer’s Note: This does not include Sorceress on Black Dragon units.</chara
           </conditions>
         </modifier>
       </modifiers>
+      <modifierGroups>
+        <modifierGroup>
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="b543-cb16-0c79-fbc6" type="instanceOf"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="6cd6-b22e-bfcb-9589" type="instanceOf"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="e3a6-45ca-4974-b489" type="instanceOf"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="996a-613c-4006-25e3" type="instanceOf"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4373-740f-1bf3-b0aa" type="instanceOf"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+          <modifiers>
+            <modifier type="set-primary" field="category" value="6230-ed60-e374-add4"/>
+            <modifier type="remove" field="category" value="a42d-220e-6a88-7bf6"/>
+          </modifiers>
+        </modifierGroup>
+      </modifierGroups>
       <profiles>
         <profile id="2960-771c-8526-5b55" name="Dreadspears" hidden="false" typeId="3956-f6dd-6c88-ae4b" typeName="Unit">
           <characteristics>
@@ -1812,9 +1825,8 @@ Designer’s Note: This does not include Sorceress on Black Dragon units.</chara
         <categoryLink id="cdbd-617e-62a3-2eb8" name="Darkling Coven" hidden="false" targetId="bbcc-63cd-4941-2f7c" primary="false"/>
         <categoryLink id="2125-5a19-d681-6b52" name="Aelf" hidden="false" targetId="babf-cdeb-b0ab-05db" primary="false"/>
         <categoryLink id="96ae-0358-b010-f817" name="Order" hidden="false" targetId="90c6-6c11-9677-1fa8" primary="false"/>
-        <categoryLink id="b53d-5999-c634-8e39" name="New CategoryLink" hidden="false" targetId="6230-ed60-e374-add4" primary="true"/>
         <categoryLink id="8e73-4421-1a89-c4dd" name="Dreadspears" hidden="false" targetId="1663-4eec-5edd-11be" primary="false"/>
-        <categoryLink id="2939-de67-690a-d978" name="BATTLELINE" hidden="false" targetId="a42d-220e-6a88-7bf6" primary="false"/>
+        <categoryLink id="2939-de67-690a-d978" name="BATTLELINE" hidden="false" targetId="a42d-220e-6a88-7bf6" primary="true"/>
       </categoryLinks>
       <selectionEntries>
         <selectionEntry id="f1c1-3bee-dbbc-4408" name="10 Dreadspears" hidden="false" collective="false" import="true" type="model">
@@ -5106,20 +5118,26 @@ Cast Out Evil: Roll a dice for each enemy WIZARD and PRIEST on the battlefield. 
             <condition field="selections" scope="4207-022d-c624-e9bf" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e20c-48d8-e5e3-1a36" type="greaterThan"/>
           </conditions>
         </modifier>
-        <modifier type="remove" field="category" value="a42d-220e-6a88-7bf6">
+      </modifiers>
+      <modifierGroups>
+        <modifierGroup>
           <conditionGroups>
             <conditionGroup type="or">
               <conditions>
-                <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="b543-cb16-0c79-fbc6" type="instanceOf"/>
-                <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="6cd6-b22e-bfcb-9589" type="instanceOf"/>
-                <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="e3a6-45ca-4974-b489" type="instanceOf"/>
-                <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="996a-613c-4006-25e3" type="instanceOf"/>
-                <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4373-740f-1bf3-b0aa" type="instanceOf"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="b543-cb16-0c79-fbc6" type="instanceOf"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="6cd6-b22e-bfcb-9589" type="instanceOf"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="e3a6-45ca-4974-b489" type="instanceOf"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="996a-613c-4006-25e3" type="instanceOf"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4373-740f-1bf3-b0aa" type="instanceOf"/>
               </conditions>
             </conditionGroup>
           </conditionGroups>
-        </modifier>
-      </modifiers>
+          <modifiers>
+            <modifier type="set-primary" field="category" value="6230-ed60-e374-add4"/>
+            <modifier type="remove" field="category" value="a42d-220e-6a88-7bf6"/>
+          </modifiers>
+        </modifierGroup>
+      </modifierGroups>
       <profiles>
         <profile id="2527-0bd8-5fc5-970b" name="Freeguild Steelhelms" hidden="false" typeId="3956-f6dd-6c88-ae4b" typeName="Unit">
           <characteristics>
@@ -5157,7 +5175,7 @@ Cast Out Evil: Roll a dice for each enemy WIZARD and PRIEST on the battlefield. 
         <categoryLink id="dda6-84fe-2962-a2fc" name="FREEGUILD STEELHELMS" hidden="false" targetId="095c-1e17-3ec7-5b3e" primary="false"/>
         <categoryLink id="6ec6-1b04-523d-5363" name="HUMAN" hidden="false" targetId="b4ba-caec-0644-d577" primary="false"/>
         <categoryLink id="bb2e-d36e-8cfd-7a0e" name="ORDER" hidden="false" targetId="90c6-6c11-9677-1fa8" primary="false"/>
-        <categoryLink id="c9f6-8520-daef-c559" name="New CategoryLink" hidden="false" targetId="6230-ed60-e374-add4" primary="true"/>
+        <categoryLink id="4e9c-d9bf-f195-12f1" name="New CategoryLink" hidden="false" targetId="a42d-220e-6a88-7bf6" primary="true"/>
       </categoryLinks>
       <selectionEntries>
         <selectionEntry id="9213-8446-1f41-2110" name="Standard Bearer" hidden="false" collective="false" import="true" type="upgrade">
@@ -6563,6 +6581,158 @@ Cast Out Evil: Roll a dice for each enemy WIZARD and PRIEST on the battlefield. 
       <costs>
         <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="140.0"/>
       </costs>
+    </selectionEntry>
+    <selectionEntry id="b848-cb58-ecae-d694" name="Brethren of the Bolt" hidden="false" collective="false" import="true" type="unit">
+      <profiles>
+        <profile id="3a95-25d5-97f0-9368" name="Brethren of the Bolt" hidden="false" typeId="3956-f6dd-6c88-ae4b" typeName="Unit">
+          <characteristics>
+            <characteristic name="Move" typeId="5bbe-8910-4dfa-7b1c">5&quot;</characteristic>
+            <characteristic name="Wounds" typeId="a0c6-af64-2f24-5759"></characteristic>
+            <characteristic name="Save" typeId="93b6-2f96-2df7-e330">5+</characteristic>
+            <characteristic name="Bravery" typeId="2420-1c5c-1016-7033">8</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="fbbd-bb0e-d3b1-d230" name="Crackling with Faith" hidden="false" typeId="7861-da01-01c0-88d9" typeName="Ability">
+          <characteristics>
+            <characteristic name="Ability" typeId="9bce-4deb-8b79-eaec">If an unmodified hit roll for an attack made by this unit is 6, you can pick another enemy unit within 6&quot; of this unit that was not targeted by that attack. That enemy unit suffers 1 mortal wound after the attack has been resolved.</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <categoryLinks>
+        <categoryLink id="047b-d4e1-79d5-ebe2" name="BRETHREN OF THE BOLT" hidden="false" targetId="4789-bb1d-e155-ca68" primary="false"/>
+        <categoryLink id="c793-5200-7abe-2d37" name="CITIES OF SIGMAR" hidden="false" targetId="d20b-b22a-23ee-3ca1" primary="false"/>
+        <categoryLink id="7648-8a83-8d1e-a826" name="DEVOTED OF SIGMAR" hidden="false" targetId="fb1c-ff93-d8da-c041" primary="false"/>
+        <categoryLink id="b2d8-c250-0a0c-6a26" name="HUMAN" hidden="false" targetId="b4ba-caec-0644-d577" primary="false"/>
+        <categoryLink id="3737-6a60-f25f-9825" name="ORDER" hidden="false" targetId="90c6-6c11-9677-1fa8" primary="false"/>
+      </categoryLinks>
+      <selectionEntries>
+        <selectionEntry id="d6f4-242e-0795-28c2" name="Friar Galvic" hidden="false" collective="false" import="true" type="model">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="9951-826d-6781-a107" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="3496-0f28-00af-517b" type="min"/>
+          </constraints>
+          <selectionEntries>
+            <selectionEntry id="6a04-8c51-88ab-a094" name="Lectroshock Club" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d89b-a690-1f2e-15c1" type="max"/>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="37db-25be-3e88-e580" type="min"/>
+              </constraints>
+              <profiles>
+                <profile id="fbcb-60db-9c03-a3bf" name="Lectroshock Club" hidden="false" typeId="2905-f6bd-06e5-6642" typeName="Weapon">
+                  <characteristics>
+                    <characteristic name="Type" typeId="1a08-195b-76fd-2c2b">Melee</characteristic>
+                    <characteristic name="Range" typeId="1406-f935-3f8e-b27f">1&quot;</characteristic>
+                    <characteristic name="Attacks" typeId="4c19-dba6-f094-5165">3</characteristic>
+                    <characteristic name="To-Hit" typeId="7a4f-9704-2095-96c8">4+</characteristic>
+                    <characteristic name="To-Wound" typeId="172f-fc84-895b-04b7">4+</characteristic>
+                    <characteristic name="Rend" typeId="0c05-bd2e-b7e7-3925">-1</characteristic>
+                    <characteristic name="Damage" typeId="01c2-d16a-8788-e52b">2</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntry>
+        <selectionEntry id="93f0-4f4d-175f-4059" name="Soror Tazat, Acolyte Arcus, Scorched Yakob" hidden="false" collective="false" import="true" type="model">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8709-1908-6c6d-9de4" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="9e3e-84cd-bc1e-a2a1" type="min"/>
+          </constraints>
+          <selectionEntries>
+            <selectionEntry id="0a95-f662-8e59-4ac4" name="Brethren Weapons" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="290a-7ec6-26e6-fa10" type="max"/>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="4b06-dba1-9ee4-4b1a" type="min"/>
+              </constraints>
+              <profiles>
+                <profile id="0b13-bd42-009f-f2a6" name="Brethren Weapons" hidden="false" typeId="2905-f6bd-06e5-6642" typeName="Weapon">
+                  <characteristics>
+                    <characteristic name="Type" typeId="1a08-195b-76fd-2c2b">Melee</characteristic>
+                    <characteristic name="Range" typeId="1406-f935-3f8e-b27f">1&quot;</characteristic>
+                    <characteristic name="Attacks" typeId="4c19-dba6-f094-5165">2</characteristic>
+                    <characteristic name="To-Hit" typeId="7a4f-9704-2095-96c8">4+</characteristic>
+                    <characteristic name="To-Wound" typeId="172f-fc84-895b-04b7">4+</characteristic>
+                    <characteristic name="Rend" typeId="0c05-bd2e-b7e7-3925">-</characteristic>
+                    <characteristic name="Damage" typeId="01c2-d16a-8788-e52b">1</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntry>
+      </selectionEntries>
+    </selectionEntry>
+    <selectionEntry id="3225-ccba-272c-9fa8" name="Pater Filius" hidden="false" collective="false" import="true" type="unit">
+      <profiles>
+        <profile id="d44f-8a7c-a62f-0a87" name="Pater Filius" hidden="false" typeId="3956-f6dd-6c88-ae4b" typeName="Unit">
+          <characteristics>
+            <characteristic name="Move" typeId="5bbe-8910-4dfa-7b1c">5&quot;</characteristic>
+            <characteristic name="Wounds" typeId="a0c6-af64-2f24-5759">6</characteristic>
+            <characteristic name="Save" typeId="93b6-2f96-2df7-e330">5+</characteristic>
+            <characteristic name="Bravery" typeId="2420-1c5c-1016-7033">8</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="70e7-9b89-58e4-fdbb" name="Accepting Capacitors" hidden="false" typeId="7861-da01-01c0-88d9" typeName="Ability">
+          <characteristics>
+            <characteristic name="Ability" typeId="9bce-4deb-8b79-eaec">At the start of your shooting phase, you can pick 1 enemy unit within 3&quot; of a friendly BRETHREN OF THE BOLT unit. That friendly unit suffers D3 mortal wounds. However, until the end of the phase, if an attack made with this unit’s Bolt of Azyr that targets that enemy unit scores a hit, that attack scores 2 hits on the target instead of 1. Make a wound roll and save roll for each hit.</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="7df5-763b-88e8-d93d" name="Bolt from the Blue" hidden="false" typeId="161a-85bd-f19e-a5a7" typeName="Prayer">
+          <characteristics>
+            <characteristic name="Prayer" typeId="19bc-965a-768d-defa">Bolt from the Blue is a prayer that has an answer value of 4 and a range of 12&quot;. If answered, this unit has a ward of 5+ until the start of your next hero phase and you can pick 1 enemy unit within range. That unit suffers D3 mortal wounds.</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="6210-6c85-d1dd-9eb8" name="Heavens&apos; Charge" hidden="false" typeId="7861-da01-01c0-88d9" typeName="Ability">
+          <characteristics>
+            <characteristic name="Ability" typeId="9bce-4deb-8b79-eaec">At the start of your hero phase, you can pick 1 friendly BRETHREN OF THE BOLT unit that is within 3&quot; of this unit and more than 3&quot; from all enemy units. You can immediately attempt a charge with that unit.</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoLinks>
+        <infoLink id="2899-0ad8-f01e-c721" name="Bless" hidden="false" targetId="4c4a-18dc-6a53-5355" type="profile"/>
+        <infoLink id="6b0d-9079-431a-c0ed" name="Smite" hidden="false" targetId="7b66-5f0a-449f-f31a" type="profile"/>
+      </infoLinks>
+      <categoryLinks>
+        <categoryLink id="c28d-a9fb-8b6f-cfbf" name="CITIES OF SIGMAR" hidden="false" targetId="d20b-b22a-23ee-3ca1" primary="false"/>
+        <categoryLink id="8577-5a9d-572d-229d" name="DEVOTED OF SIGMAR" hidden="false" targetId="fb1c-ff93-d8da-c041" primary="false"/>
+        <categoryLink id="9be3-a15c-acaa-14d4" name="HERO" hidden="false" targetId="411f-dd41-4ab6-8a05" primary="false"/>
+        <categoryLink id="a36d-4f66-f190-1b25" name="HUMAN" hidden="false" targetId="b4ba-caec-0644-d577" primary="false"/>
+        <categoryLink id="bd0d-5d59-deec-5371" name="ORDER" hidden="false" targetId="90c6-6c11-9677-1fa8" primary="false"/>
+        <categoryLink id="f355-e2ad-f156-9aca" name="PRIEST" hidden="false" targetId="f0a9-dd66-8662-61ce" primary="false"/>
+        <categoryLink id="48b7-ddaf-9ced-d7df" name="PATER FILIUS" hidden="false" targetId="e6bd-95fc-5992-d04a" primary="false"/>
+      </categoryLinks>
+      <selectionEntries>
+        <selectionEntry id="6b1a-516c-c6fc-c26c" name="Bolt of Azyr &amp; Arc-deacon&apos;s Rod" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="9fa0-63ef-ae6f-0ac7" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="f7a9-d594-c8fe-172e" type="min"/>
+          </constraints>
+          <profiles>
+            <profile id="2540-b06b-18ef-17b5" name="Arc-deacon&apos;s Rod" hidden="false" typeId="2905-f6bd-06e5-6642" typeName="Weapon">
+              <characteristics>
+                <characteristic name="Type" typeId="1a08-195b-76fd-2c2b">Melee</characteristic>
+                <characteristic name="Range" typeId="1406-f935-3f8e-b27f">1&quot;</characteristic>
+                <characteristic name="Attacks" typeId="4c19-dba6-f094-5165">3</characteristic>
+                <characteristic name="To-Hit" typeId="7a4f-9704-2095-96c8">4+</characteristic>
+                <characteristic name="To-Wound" typeId="172f-fc84-895b-04b7">4+</characteristic>
+                <characteristic name="Rend" typeId="0c05-bd2e-b7e7-3925">-</characteristic>
+                <characteristic name="Damage" typeId="01c2-d16a-8788-e52b">1</characteristic>
+              </characteristics>
+            </profile>
+            <profile id="d98d-19fb-6fbb-849b" name="Bolt of Azyr" hidden="false" typeId="2905-f6bd-06e5-6642" typeName="Weapon">
+              <characteristics>
+                <characteristic name="Type" typeId="1a08-195b-76fd-2c2b">Missile</characteristic>
+                <characteristic name="Range" typeId="1406-f935-3f8e-b27f">12&quot;</characteristic>
+                <characteristic name="Attacks" typeId="4c19-dba6-f094-5165">D6</characteristic>
+                <characteristic name="To-Hit" typeId="7a4f-9704-2095-96c8">4+</characteristic>
+                <characteristic name="To-Wound" typeId="172f-fc84-895b-04b7">4+</characteristic>
+                <characteristic name="Rend" typeId="0c05-bd2e-b7e7-3925">-1</characteristic>
+                <characteristic name="Damage" typeId="01c2-d16a-8788-e52b">D3</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+        </selectionEntry>
+      </selectionEntries>
     </selectionEntry>
   </sharedSelectionEntries>
   <sharedProfiles>

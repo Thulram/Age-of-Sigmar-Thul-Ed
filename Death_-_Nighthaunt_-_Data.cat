@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="a9fc-3ad2-0bad-01ea" name="Death - Nighthaunt - Data" revision="12" battleScribeVersion="2.03" authorName="Thulram" library="true" gameSystemId="e832-3291-06be-cab1" gameSystemRevision="11" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="a9fc-3ad2-0bad-01ea" name="Death - Nighthaunt - Data" revision="13" battleScribeVersion="2.03" authorName="Thulram" library="true" gameSystemId="e832-3291-06be-cab1" gameSystemRevision="13" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <categoryEntries>
     <categoryEntry id="4128-85eb-b9a7-54f4" name="MALIGNANT" hidden="false"/>
     <categoryEntry id="ae44-0a4f-d81c-b8bd" name="MORTARCH" hidden="false"/>
@@ -34,6 +34,7 @@
     <categoryEntry id="2923-189e-175d-d95e" name="CRAVENTHRONE GUARD" hidden="false"/>
     <categoryEntry id="0198-9e1d-5340-3b0e" name="WIELDER OF THE BLADE" hidden="false"/>
     <categoryEntry id="f4f7-8998-1fbf-167e" name="HEADSMEN&apos;S CURSE" hidden="false"/>
+    <categoryEntry id="f044-9db7-7e17-3fa2" name="PYREGHEISTS" hidden="false"/>
   </categoryEntries>
   <sharedSelectionEntries>
     <selectionEntry id="18fc-073a-cdfd-ad1f" name="Lady Olynder, Mortarch of Grief" publicationId="6918-4599-9a4b-12c8" hidden="false" collective="false" import="true" type="unit">
@@ -1161,19 +1162,6 @@ In the combat phase, when you pick this unit to fight for the first time in that
     </selectionEntry>
     <selectionEntry id="72aa-2798-089a-a52a" name="Grimghast Reapers" publicationId="6918-4599-9a4b-12c8" hidden="false" collective="false" import="true" type="unit">
       <modifiers>
-        <modifier type="remove" field="category" value="a42d-220e-6a88-7bf6">
-          <conditionGroups>
-            <conditionGroup type="or">
-              <conditions>
-                <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="b543-cb16-0c79-fbc6" type="instanceOf"/>
-                <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="6cd6-b22e-bfcb-9589" type="instanceOf"/>
-                <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="e3a6-45ca-4974-b489" type="instanceOf"/>
-                <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="996a-613c-4006-25e3" type="instanceOf"/>
-                <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4373-740f-1bf3-b0aa" type="instanceOf"/>
-              </conditions>
-            </conditionGroup>
-          </conditionGroups>
-        </modifier>
         <modifier type="increment" field="b0b4-6aec-82c2-02ae" value="150.0">
           <repeats>
             <repeat field="selections" scope="72aa-2798-089a-a52a" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e20c-48d8-e5e3-1a36" repeats="1" roundUp="false"/>
@@ -1183,6 +1171,25 @@ In the combat phase, when you pick this unit to fight for the first time in that
           </conditions>
         </modifier>
       </modifiers>
+      <modifierGroups>
+        <modifierGroup>
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="b543-cb16-0c79-fbc6" type="instanceOf"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="6cd6-b22e-bfcb-9589" type="instanceOf"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="e3a6-45ca-4974-b489" type="instanceOf"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="996a-613c-4006-25e3" type="instanceOf"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4373-740f-1bf3-b0aa" type="instanceOf"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+          <modifiers>
+            <modifier type="set-primary" field="category" value="6230-ed60-e374-add4"/>
+            <modifier type="remove" field="category" value="a42d-220e-6a88-7bf6"/>
+          </modifiers>
+        </modifierGroup>
+      </modifierGroups>
       <profiles>
         <profile id="f56d-fa3e-3de0-c216" name="Grimghast Reapers" hidden="false" typeId="3956-f6dd-6c88-ae4b" typeName="Unit">
           <characteristics>
@@ -1206,9 +1213,8 @@ In the combat phase, when you pick this unit to fight for the first time in that
         <categoryLink id="fb03-2f92-5951-628c" name="Grimghast Reapers" hidden="false" targetId="d920-6673-39e0-6bef" primary="false"/>
         <categoryLink id="d96d-2fce-d5e2-8584" name="Malignant" hidden="false" targetId="4128-85eb-b9a7-54f4" primary="false"/>
         <categoryLink id="670a-9bb5-866d-e974" name="NIGHTHAUNT" hidden="false" targetId="9af1-04d7-aa3e-c8b0" primary="false"/>
-        <categoryLink id="981e-2b96-fac8-e7b5" name="New CategoryLink" hidden="false" targetId="6230-ed60-e374-add4" primary="true"/>
         <categoryLink id="1feb-4452-4330-09c2" name="Summonable" hidden="false" targetId="1e79-ca01-523d-e891" primary="false"/>
-        <categoryLink id="9b47-5f07-c36f-1d20" name="BATTLELINE" hidden="false" targetId="a42d-220e-6a88-7bf6" primary="false"/>
+        <categoryLink id="9b47-5f07-c36f-1d20" name="BATTLELINE" hidden="false" targetId="a42d-220e-6a88-7bf6" primary="true"/>
       </categoryLinks>
       <selectionEntries>
         <selectionEntry id="0e31-9fcc-6651-ebea" name="10 Grimghast Reapers" hidden="false" collective="false" import="true" type="model">
@@ -1319,19 +1325,6 @@ In the combat phase, when you pick this unit to fight for the first time in that
     </selectionEntry>
     <selectionEntry id="01eb-b55b-5907-bb02" name="Chainrasps" publicationId="6918-4599-9a4b-12c8" hidden="false" collective="false" import="true" type="unit">
       <modifiers>
-        <modifier type="remove" field="category" value="a42d-220e-6a88-7bf6">
-          <conditionGroups>
-            <conditionGroup type="or">
-              <conditions>
-                <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="b543-cb16-0c79-fbc6" type="instanceOf"/>
-                <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="6cd6-b22e-bfcb-9589" type="instanceOf"/>
-                <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="e3a6-45ca-4974-b489" type="instanceOf"/>
-                <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="996a-613c-4006-25e3" type="instanceOf"/>
-                <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4373-740f-1bf3-b0aa" type="instanceOf"/>
-              </conditions>
-            </conditionGroup>
-          </conditionGroups>
-        </modifier>
         <modifier type="increment" field="b0b4-6aec-82c2-02ae" value="100.0">
           <repeats>
             <repeat field="selections" scope="01eb-b55b-5907-bb02" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e20c-48d8-e5e3-1a36" repeats="1" roundUp="false"/>
@@ -1341,6 +1334,25 @@ In the combat phase, when you pick this unit to fight for the first time in that
           </conditions>
         </modifier>
       </modifiers>
+      <modifierGroups>
+        <modifierGroup>
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="b543-cb16-0c79-fbc6" type="instanceOf"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="6cd6-b22e-bfcb-9589" type="instanceOf"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="e3a6-45ca-4974-b489" type="instanceOf"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="996a-613c-4006-25e3" type="instanceOf"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4373-740f-1bf3-b0aa" type="instanceOf"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+          <modifiers>
+            <modifier type="set-primary" field="category" value="6230-ed60-e374-add4"/>
+            <modifier type="remove" field="category" value="a42d-220e-6a88-7bf6"/>
+          </modifiers>
+        </modifierGroup>
+      </modifierGroups>
       <profiles>
         <profile id="7537-abfe-e741-6295" name="Chainrasps" hidden="false" typeId="3956-f6dd-6c88-ae4b" typeName="Unit">
           <characteristics>
@@ -1365,12 +1377,11 @@ In the combat phase, when you pick this unit to fight for the first time in that
         <infoLink id="ca1d-3365-f4fa-92ab" name="Fly" hidden="false" targetId="dd68-953d-c8fb-7075" type="profile"/>
       </infoLinks>
       <categoryLinks>
-        <categoryLink id="64f7-0b65-9d04-ac49" name="BATTLELINE" hidden="false" targetId="a42d-220e-6a88-7bf6" primary="false"/>
+        <categoryLink id="64f7-0b65-9d04-ac49" name="BATTLELINE" hidden="false" targetId="a42d-220e-6a88-7bf6" primary="true"/>
         <categoryLink id="b432-71af-7656-e55f" name="Chainrasp Horde" hidden="false" targetId="273b-dca8-dcd6-f2a8" primary="false"/>
         <categoryLink id="01f6-5b2d-a7da-e580" name="Death" hidden="false" targetId="4927-09f0-87d8-4a68" primary="false"/>
         <categoryLink id="a6e5-87b1-38d5-d480" name="Malignant" hidden="false" targetId="4128-85eb-b9a7-54f4" primary="false"/>
         <categoryLink id="7043-8e0f-3652-9e4f" name="NIGHTHAUNT" hidden="false" targetId="9af1-04d7-aa3e-c8b0" primary="false"/>
-        <categoryLink id="dc54-cf5c-b0d5-d700" name="New CategoryLink" hidden="false" targetId="6230-ed60-e374-add4" primary="true"/>
         <categoryLink id="55a3-fffc-3285-2e8c" name="Summonable" hidden="false" targetId="1e79-ca01-523d-e891" primary="false"/>
       </categoryLinks>
       <selectionEntries>
@@ -1720,19 +1731,6 @@ In the combat phase, when you pick this unit to fight for the first time in that
     </selectionEntry>
     <selectionEntry id="dc64-345a-48a6-d911" name="Spirit Hosts" publicationId="6918-4599-9a4b-12c8" hidden="false" collective="false" import="true" type="unit">
       <modifiers>
-        <modifier type="remove" field="category" value="a42d-220e-6a88-7bf6">
-          <conditionGroups>
-            <conditionGroup type="or">
-              <conditions>
-                <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="b543-cb16-0c79-fbc6" type="instanceOf"/>
-                <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="6cd6-b22e-bfcb-9589" type="instanceOf"/>
-                <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="e3a6-45ca-4974-b489" type="instanceOf"/>
-                <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="996a-613c-4006-25e3" type="instanceOf"/>
-                <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4373-740f-1bf3-b0aa" type="instanceOf"/>
-              </conditions>
-            </conditionGroup>
-          </conditionGroups>
-        </modifier>
         <modifier type="increment" field="b0b4-6aec-82c2-02ae" value="130.0">
           <repeats>
             <repeat field="selections" scope="dc64-345a-48a6-d911" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e20c-48d8-e5e3-1a36" repeats="1" roundUp="false"/>
@@ -1742,6 +1740,25 @@ In the combat phase, when you pick this unit to fight for the first time in that
           </conditions>
         </modifier>
       </modifiers>
+      <modifierGroups>
+        <modifierGroup>
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="b543-cb16-0c79-fbc6" type="instanceOf"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="6cd6-b22e-bfcb-9589" type="instanceOf"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="e3a6-45ca-4974-b489" type="instanceOf"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="996a-613c-4006-25e3" type="instanceOf"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4373-740f-1bf3-b0aa" type="instanceOf"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+          <modifiers>
+            <modifier type="set-primary" field="category" value="6230-ed60-e374-add4"/>
+            <modifier type="remove" field="category" value="a42d-220e-6a88-7bf6"/>
+          </modifiers>
+        </modifierGroup>
+      </modifierGroups>
       <profiles>
         <profile id="bfb1-481c-581a-0060" name="Spirit Hosts" hidden="false" typeId="3956-f6dd-6c88-ae4b" typeName="Unit">
           <characteristics>
@@ -1765,10 +1782,9 @@ In the combat phase, when you pick this unit to fight for the first time in that
         <categoryLink id="38d7-9f1b-5177-ed71" name="Death" hidden="false" targetId="4927-09f0-87d8-4a68" primary="false"/>
         <categoryLink id="96d6-98ee-e8ad-ccb1" name="Malignant" hidden="false" targetId="4128-85eb-b9a7-54f4" primary="false"/>
         <categoryLink id="7623-ddc8-8d0a-ca36" name="NIGHTHAUNT" hidden="false" targetId="9af1-04d7-aa3e-c8b0" primary="false"/>
-        <categoryLink id="7f25-094d-d17e-fa9a" name="New CategoryLink" hidden="false" targetId="6230-ed60-e374-add4" primary="true"/>
         <categoryLink id="4948-5b55-2efa-41d8" name="Spirit Hosts" hidden="false" targetId="2876-9efb-ee12-2782" primary="false"/>
         <categoryLink id="234d-e039-363a-ff44" name="Summonable" hidden="false" targetId="1e79-ca01-523d-e891" primary="false"/>
-        <categoryLink id="1a65-cfee-3791-40b3" name="Battleline" hidden="false" targetId="a42d-220e-6a88-7bf6" primary="false"/>
+        <categoryLink id="1a65-cfee-3791-40b3" name="Battleline" hidden="false" targetId="a42d-220e-6a88-7bf6" primary="true"/>
       </categoryLinks>
       <selectionEntries>
         <selectionEntry id="2c01-8146-f170-68e5" name="3 Spirit Hosts" hidden="false" collective="false" import="true" type="model">
@@ -1852,19 +1868,6 @@ In the combat phase, when you pick this unit to fight for the first time in that
     </selectionEntry>
     <selectionEntry id="92de-57b3-fbb3-40a6" name="Hexwraiths" publicationId="6918-4599-9a4b-12c8" hidden="false" collective="false" import="true" type="unit">
       <modifiers>
-        <modifier type="remove" field="category" value="a42d-220e-6a88-7bf6">
-          <conditionGroups>
-            <conditionGroup type="or">
-              <conditions>
-                <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="b543-cb16-0c79-fbc6" type="instanceOf"/>
-                <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="6cd6-b22e-bfcb-9589" type="instanceOf"/>
-                <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="e3a6-45ca-4974-b489" type="instanceOf"/>
-                <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="996a-613c-4006-25e3" type="instanceOf"/>
-                <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4373-740f-1bf3-b0aa" type="instanceOf"/>
-              </conditions>
-            </conditionGroup>
-          </conditionGroups>
-        </modifier>
         <modifier type="increment" field="b0b4-6aec-82c2-02ae" value="170.0">
           <repeats>
             <repeat field="selections" scope="92de-57b3-fbb3-40a6" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e20c-48d8-e5e3-1a36" repeats="1" roundUp="false"/>
@@ -1874,6 +1877,25 @@ In the combat phase, when you pick this unit to fight for the first time in that
           </conditions>
         </modifier>
       </modifiers>
+      <modifierGroups>
+        <modifierGroup>
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="b543-cb16-0c79-fbc6" type="instanceOf"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="6cd6-b22e-bfcb-9589" type="instanceOf"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="e3a6-45ca-4974-b489" type="instanceOf"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="996a-613c-4006-25e3" type="instanceOf"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4373-740f-1bf3-b0aa" type="instanceOf"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+          <modifiers>
+            <modifier type="set-primary" field="category" value="6230-ed60-e374-add4"/>
+            <modifier type="remove" field="category" value="a42d-220e-6a88-7bf6"/>
+          </modifiers>
+        </modifierGroup>
+      </modifierGroups>
       <profiles>
         <profile id="9c54-f659-a77b-539f" name="Hexwraiths" hidden="false" typeId="3956-f6dd-6c88-ae4b" typeName="Unit">
           <characteristics>
@@ -1907,9 +1929,8 @@ In the combat phase, when you pick this unit to fight for the first time in that
         <categoryLink id="3f24-a148-86f0-66d2" name="Hexwraiths" hidden="false" targetId="64b6-ebfd-68ac-aa22" primary="false"/>
         <categoryLink id="e7ba-60d5-17c2-4a34" name="Malignant" hidden="false" targetId="4128-85eb-b9a7-54f4" primary="false"/>
         <categoryLink id="5f7d-bad5-7f17-3377" name="NIGHTHAUNT" hidden="false" targetId="9af1-04d7-aa3e-c8b0" primary="false"/>
-        <categoryLink id="4f60-b33c-6558-194f" name="New CategoryLink" hidden="false" targetId="6230-ed60-e374-add4" primary="true"/>
         <categoryLink id="c4cf-f026-74c4-9fd2" name="Summonable" hidden="false" targetId="1e79-ca01-523d-e891" primary="false"/>
-        <categoryLink id="34ca-7f61-4209-40b3" name="BATTLELINE" hidden="false" targetId="a42d-220e-6a88-7bf6" primary="false"/>
+        <categoryLink id="34ca-7f61-4209-40b3" name="BATTLELINE" hidden="false" targetId="a42d-220e-6a88-7bf6" primary="true"/>
       </categoryLinks>
       <selectionEntries>
         <selectionEntry id="5d6b-4ae3-3391-3463" name="Mount" hidden="false" collective="false" import="true" type="upgrade">
@@ -2844,6 +2865,88 @@ To make a judgement roll, roll a dice. If the roll is less than the number of th
       </selectionEntries>
       <costs>
         <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="9e06-cfe1-f6b9-2a13" name="Pyregheists" hidden="false" collective="false" import="true" type="unit">
+      <profiles>
+        <profile id="600a-d0e6-f39d-4b84" name="Pyregheists" hidden="false" typeId="3956-f6dd-6c88-ae4b" typeName="Unit">
+          <characteristics>
+            <characteristic name="Move" typeId="5bbe-8910-4dfa-7b1c">8&quot;</characteristic>
+            <characteristic name="Wounds" typeId="a0c6-af64-2f24-5759">1</characteristic>
+            <characteristic name="Save" typeId="93b6-2f96-2df7-e330">4+</characteristic>
+            <characteristic name="Bravery" typeId="2420-1c5c-1016-7033">10</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="f977-216d-d542-e934" name="Light a Pyre" hidden="false" typeId="7861-da01-01c0-88d9" typeName="Ability">
+          <characteristics>
+            <characteristic name="Ability" typeId="9bce-4deb-8b79-eaec">At the end of each turn, roll a dice for each enemy unit contesting an objective that is contested by any friendly Pyregheists. On a 2+, that enemy unit suffers D3 mortal wounds.</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="e709-8b14-3ac2-a364" name="Champion" hidden="false" typeId="c23b-5a30-07e2-4706" typeName="Unit Options">
+          <characteristics>
+            <characteristic name="Unit Option" typeId="5879-9a21-e9d2-539d">1 model in this unit can be a Deacon of Flames. That model has a Wounds characteristic of 3. In addition, add 2 to the Attacks characteristic of that model’s Gout of Balefire.</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoLinks>
+        <infoLink id="2615-01b2-15c2-30a2" name="Fly" hidden="false" targetId="dd68-953d-c8fb-7075" type="profile"/>
+      </infoLinks>
+      <categoryLinks>
+        <categoryLink id="2f99-9bd8-259b-7416" name="DEATH" hidden="false" targetId="4927-09f0-87d8-4a68" primary="false"/>
+        <categoryLink id="1431-a8f4-f013-5c3c" name="MALIGNANT" hidden="false" targetId="4128-85eb-b9a7-54f4" primary="false"/>
+        <categoryLink id="9058-f0af-f7c9-efc1" name="NIGHTHAUNT" hidden="false" targetId="9af1-04d7-aa3e-c8b0" primary="false"/>
+        <categoryLink id="764d-c6cd-4b0f-b52e" name="New CategoryLink" hidden="false" targetId="6230-ed60-e374-add4" primary="true"/>
+        <categoryLink id="fbe5-b8fe-417e-12d4" name="PYREGHEISTS" hidden="false" targetId="f044-9db7-7e17-3fa2" primary="false"/>
+        <categoryLink id="a172-d458-8886-5fcc" name="SUMMONABLE" hidden="false" targetId="1e79-ca01-523d-e891" primary="false"/>
+      </categoryLinks>
+      <selectionEntries>
+        <selectionEntry id="2366-f96c-fab4-8c25" name="Balefire Weapon" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="dd20-2ab2-f9b0-6cd7" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="f85b-391f-ab3a-5321" type="min"/>
+          </constraints>
+          <profiles>
+            <profile id="4745-a77a-8c45-e447" name="Balefire Weapon" hidden="false" typeId="2905-f6bd-06e5-6642" typeName="Weapon">
+              <characteristics>
+                <characteristic name="Type" typeId="1a08-195b-76fd-2c2b">Melee</characteristic>
+                <characteristic name="Range" typeId="1406-f935-3f8e-b27f">2&quot;</characteristic>
+                <characteristic name="Attacks" typeId="4c19-dba6-f094-5165">2</characteristic>
+                <characteristic name="To-Hit" typeId="7a4f-9704-2095-96c8">4+</characteristic>
+                <characteristic name="To-Wound" typeId="172f-fc84-895b-04b7">3+</characteristic>
+                <characteristic name="Rend" typeId="0c05-bd2e-b7e7-3925">-</characteristic>
+                <characteristic name="Damage" typeId="01c2-d16a-8788-e52b">1</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+        </selectionEntry>
+        <selectionEntry id="5629-60c3-122a-ebc5" name="Gout of Balefire" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="407e-0213-0617-bc8c" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="6bb2-f01b-fa83-0712" type="min"/>
+          </constraints>
+          <profiles>
+            <profile id="2cd8-0395-32e8-7c17" name="Gout of Balefire" hidden="false" typeId="2905-f6bd-06e5-6642" typeName="Weapon">
+              <characteristics>
+                <characteristic name="Type" typeId="1a08-195b-76fd-2c2b">Missile</characteristic>
+                <characteristic name="Range" typeId="1406-f935-3f8e-b27f">12&quot;</characteristic>
+                <characteristic name="Attacks" typeId="4c19-dba6-f094-5165">3</characteristic>
+                <characteristic name="To-Hit" typeId="7a4f-9704-2095-96c8">4+</characteristic>
+                <characteristic name="To-Wound" typeId="172f-fc84-895b-04b7">4+</characteristic>
+                <characteristic name="Rend" typeId="0c05-bd2e-b7e7-3925">-1</characteristic>
+                <characteristic name="Damage" typeId="01c2-d16a-8788-e52b">1</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+        </selectionEntry>
+        <selectionEntry id="7141-8abd-dbd7-7990" name="8 Pyregheists" hidden="false" collective="false" import="true" type="model">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="7278-0c1d-237d-33a3" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="52a4-0b00-937c-4f01" type="min"/>
+          </constraints>
+        </selectionEntry>
+      </selectionEntries>
+      <costs>
+        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="170.0"/>
       </costs>
     </selectionEntry>
   </sharedSelectionEntries>

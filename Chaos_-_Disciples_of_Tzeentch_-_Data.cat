@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="4143-6a49-d5e6-4331" name="Chaos - Disciples of Tzeentch - Data" revision="13" battleScribeVersion="2.03" authorName="Thulram" library="true" gameSystemId="e832-3291-06be-cab1" gameSystemRevision="12" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="4143-6a49-d5e6-4331" name="Chaos - Disciples of Tzeentch - Data" revision="14" battleScribeVersion="2.03" authorName="Thulram" library="true" gameSystemId="e832-3291-06be-cab1" gameSystemRevision="14" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <profileTypes>
     <profileType id="9ec8-5a25-c4f7-aa4f" name="Lord of Change Wounds">
       <characteristicTypes>
@@ -1581,18 +1581,27 @@ If this unit is part of a Disciples of Tzeentch army, it knows all of the spells
       </costs>
     </selectionEntry>
     <selectionEntry id="5705-36dc-22dc-38ce" name="Horrors of Tzeentch" publicationId="97ef-9bf4-54c7-6623" hidden="false" collective="false" import="true" type="unit">
-      <modifiers>
-        <modifier type="remove" field="category" value="a42d-220e-6a88-7bf6">
+      <modifierGroups>
+        <modifierGroup>
           <conditionGroups>
-            <conditionGroup type="or">
+            <conditionGroup type="and">
               <conditions>
-                <condition field="selections" scope="5705-36dc-22dc-38ce" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="255d-73c6-d19c-a27b" type="greaterThan"/>
-                <condition field="selections" scope="5705-36dc-22dc-38ce" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="bd2c-a72b-6733-44d5" type="greaterThan"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4373-740f-1bf3-b0aa" type="notInstanceOf"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="e3a6-45ca-4974-b489" type="notInstanceOf"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="996a-613c-4006-25e3" type="notInstanceOf"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="6cd6-b22e-bfcb-9589" type="notInstanceOf"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="b543-cb16-0c79-fbc6" type="notInstanceOf"/>
+                <condition field="selections" scope="5705-36dc-22dc-38ce" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="255d-73c6-d19c-a27b" type="equalTo"/>
+                <condition field="selections" scope="5705-36dc-22dc-38ce" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="bd2c-a72b-6733-44d5" type="equalTo"/>
               </conditions>
             </conditionGroup>
           </conditionGroups>
-        </modifier>
-      </modifiers>
+          <modifiers>
+            <modifier type="set-primary" field="category" value="a42d-220e-6a88-7bf6"/>
+            <modifier type="remove" field="category" value="6230-ed60-e374-add4"/>
+          </modifiers>
+        </modifierGroup>
+      </modifierGroups>
       <profiles>
         <profile id="19df-8005-2bce-ce7c" name="Horrors of Tzeentch" hidden="false" typeId="3956-f6dd-6c88-ae4b" typeName="Unit">
           <characteristics>
@@ -1642,7 +1651,6 @@ If this unit is part of a Disciples of Tzeentch army, it knows all of the spells
         </profile>
       </profiles>
       <categoryLinks>
-        <categoryLink id="6208-f98e-b6e6-b5dc" name="BATTLELINE" hidden="false" targetId="a42d-220e-6a88-7bf6" primary="false"/>
         <categoryLink id="3d96-606f-5c85-fcf1" name="Daemon" hidden="false" targetId="128a-35fa-6f1f-a15d" primary="false"/>
         <categoryLink id="f759-2827-9ae3-a93b" name="Chaos" hidden="false" targetId="d8b4-9de1-926f-99b1" primary="false"/>
         <categoryLink id="3e7a-3733-115e-d6eb" name="Horrors of Tzeentch" hidden="false" targetId="adb6-fcc8-fa0d-3d43" primary="false"/>
@@ -2522,7 +2530,17 @@ Designer’s Note: Spells that require the caster to have a specific keyword, re
     </selectionEntry>
     <selectionEntry id="5ee5-454d-c8d6-f2fb" name="Kairic Acolytes" publicationId="97ef-9bf4-54c7-6623" hidden="false" collective="false" import="true" type="unit">
       <modifiers>
-        <modifier type="remove" field="category" value="a42d-220e-6a88-7bf6">
+        <modifier type="increment" field="b0b4-6aec-82c2-02ae" value="120.0">
+          <repeats>
+            <repeat field="selections" scope="5ee5-454d-c8d6-f2fb" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e20c-48d8-e5e3-1a36" repeats="1" roundUp="false"/>
+          </repeats>
+          <conditions>
+            <condition field="selections" scope="5ee5-454d-c8d6-f2fb" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e20c-48d8-e5e3-1a36" type="greaterThan"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <modifierGroups>
+        <modifierGroup>
           <conditionGroups>
             <conditionGroup type="or">
               <conditions>
@@ -2534,16 +2552,12 @@ Designer’s Note: Spells that require the caster to have a specific keyword, re
               </conditions>
             </conditionGroup>
           </conditionGroups>
-        </modifier>
-        <modifier type="increment" field="b0b4-6aec-82c2-02ae" value="120.0">
-          <repeats>
-            <repeat field="selections" scope="5ee5-454d-c8d6-f2fb" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e20c-48d8-e5e3-1a36" repeats="1" roundUp="false"/>
-          </repeats>
-          <conditions>
-            <condition field="selections" scope="5ee5-454d-c8d6-f2fb" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e20c-48d8-e5e3-1a36" type="greaterThan"/>
-          </conditions>
-        </modifier>
-      </modifiers>
+          <modifiers>
+            <modifier type="set-primary" field="category" value="6230-ed60-e374-add4"/>
+            <modifier type="remove" field="category" value="a42d-220e-6a88-7bf6"/>
+          </modifiers>
+        </modifierGroup>
+      </modifierGroups>
       <profiles>
         <profile id="5143-a6d6-599e-0a4a" name="Kairic Acolytes" hidden="false" typeId="3956-f6dd-6c88-ae4b" typeName="Unit">
           <characteristics>
@@ -2576,11 +2590,10 @@ This unit is a WIZARD while it has 9 or more models. It only knows the Gestalt S
         </profile>
       </profiles>
       <categoryLinks>
-        <categoryLink id="c5f7-46bb-284f-f367" name="BATTLELINE" hidden="false" targetId="a42d-220e-6a88-7bf6" primary="false"/>
+        <categoryLink id="c5f7-46bb-284f-f367" name="BATTLELINE" hidden="false" targetId="a42d-220e-6a88-7bf6" primary="true"/>
         <categoryLink id="e498-df62-3264-0c8f" name="Chaos" hidden="false" targetId="d8b4-9de1-926f-99b1" primary="false"/>
         <categoryLink id="50d4-165e-1789-4059" name="Kairic Acolytes" hidden="false" targetId="f008-b970-f072-7afc" primary="false"/>
         <categoryLink id="1156-b2ac-1383-e07b" name="Mortal" hidden="false" targetId="ca90-b9b0-010b-72d0" primary="false"/>
-        <categoryLink id="2226-17b5-e8f2-0139" name="New CategoryLink" hidden="false" targetId="6230-ed60-e374-add4" primary="true"/>
         <categoryLink id="a1a0-9f35-7b58-5e2f" name="TZEENTCH" hidden="false" targetId="eef2-2f52-b1cb-0639" primary="false"/>
         <categoryLink id="5cd5-1add-9d40-f2ce" name="Arcanite" hidden="false" targetId="c526-ef87-c015-5917" primary="false"/>
         <categoryLink id="4b5a-37bf-4464-8ebc" name="DISCIPLES OF TZEENTCH" hidden="false" targetId="2f02-6491-a31b-5b52" primary="false"/>
@@ -2840,7 +2853,17 @@ This unit is a WIZARD while it has 9 or more models. It only knows the Gestalt S
     </selectionEntry>
     <selectionEntry id="c8a1-3aac-fb3a-d4e6" name="Tzaangors" publicationId="97ef-9bf4-54c7-6623" hidden="false" collective="false" import="true" type="unit">
       <modifiers>
-        <modifier type="remove" field="category" value="a42d-220e-6a88-7bf6">
+        <modifier type="increment" field="b0b4-6aec-82c2-02ae" value="180.0">
+          <repeats>
+            <repeat field="selections" scope="c8a1-3aac-fb3a-d4e6" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e20c-48d8-e5e3-1a36" repeats="1" roundUp="false"/>
+          </repeats>
+          <conditions>
+            <condition field="selections" scope="c8a1-3aac-fb3a-d4e6" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e20c-48d8-e5e3-1a36" type="greaterThan"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <modifierGroups>
+        <modifierGroup>
           <conditionGroups>
             <conditionGroup type="or">
               <conditions>
@@ -2852,16 +2875,12 @@ This unit is a WIZARD while it has 9 or more models. It only knows the Gestalt S
               </conditions>
             </conditionGroup>
           </conditionGroups>
-        </modifier>
-        <modifier type="increment" field="b0b4-6aec-82c2-02ae" value="180.0">
-          <repeats>
-            <repeat field="selections" scope="c8a1-3aac-fb3a-d4e6" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e20c-48d8-e5e3-1a36" repeats="1" roundUp="false"/>
-          </repeats>
-          <conditions>
-            <condition field="selections" scope="c8a1-3aac-fb3a-d4e6" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e20c-48d8-e5e3-1a36" type="greaterThan"/>
-          </conditions>
-        </modifier>
-      </modifiers>
+          <modifiers>
+            <modifier type="set-primary" field="category" value="6230-ed60-e374-add4"/>
+            <modifier type="remove" field="category" value="a42d-220e-6a88-7bf6"/>
+          </modifiers>
+        </modifierGroup>
+      </modifierGroups>
       <profiles>
         <profile id="7b2e-fdba-a5a8-1a6a" name="Tzaangors" hidden="false" typeId="3956-f6dd-6c88-ae4b" typeName="Unit">
           <characteristics>
@@ -2885,8 +2904,7 @@ This unit is a WIZARD while it has 9 or more models. It only knows the Gestalt S
       <categoryLinks>
         <categoryLink id="a80d-1711-ec98-6ddf" name="Chaos" hidden="false" targetId="d8b4-9de1-926f-99b1" primary="false"/>
         <categoryLink id="01ed-6541-8e3f-6bd9" name="TZEENTCH" hidden="false" targetId="eef2-2f52-b1cb-0639" primary="false"/>
-        <categoryLink id="99bf-cefe-5b70-2158" name="New CategoryLink" hidden="false" targetId="6230-ed60-e374-add4" primary="true"/>
-        <categoryLink id="376f-3dc0-cb90-cec0" name="BATTLELINE" hidden="false" targetId="a42d-220e-6a88-7bf6" primary="false"/>
+        <categoryLink id="376f-3dc0-cb90-cec0" name="BATTLELINE" hidden="false" targetId="a42d-220e-6a88-7bf6" primary="true"/>
         <categoryLink id="0924-4dd6-1468-757f" name="Arcanite" hidden="false" targetId="c526-ef87-c015-5917" primary="false"/>
         <categoryLink id="1daa-89d5-34d7-9a26" name="Tzaangors" hidden="false" targetId="7614-2487-6a53-7c86" primary="false"/>
         <categoryLink id="e6f8-a0fb-4457-9971" name="DISCIPLES OF TZEENTCH" hidden="false" targetId="2f02-6491-a31b-5b52" primary="false"/>
@@ -3836,7 +3854,17 @@ Designer’s Note: The HERO cannot be returned if you are allowed to to bring ba
     </selectionEntry>
     <selectionEntry id="9cb6-f319-b748-00a7" name="Jade Obelisk" hidden="false" collective="false" import="true" type="unit">
       <modifiers>
-        <modifier type="remove" field="category" value="a42d-220e-6a88-7bf6">
+        <modifier type="increment" field="b0b4-6aec-82c2-02ae" value="120.0">
+          <repeats>
+            <repeat field="selections" scope="9cb6-f319-b748-00a7" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e20c-48d8-e5e3-1a36" repeats="1" roundUp="false"/>
+          </repeats>
+          <conditions>
+            <condition field="selections" scope="9cb6-f319-b748-00a7" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e20c-48d8-e5e3-1a36" type="greaterThan"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <modifierGroups>
+        <modifierGroup>
           <conditionGroups>
             <conditionGroup type="or">
               <conditions>
@@ -3848,16 +3876,12 @@ Designer’s Note: The HERO cannot be returned if you are allowed to to bring ba
               </conditions>
             </conditionGroup>
           </conditionGroups>
-        </modifier>
-        <modifier type="increment" field="b0b4-6aec-82c2-02ae" value="120.0">
-          <repeats>
-            <repeat field="selections" scope="9cb6-f319-b748-00a7" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e20c-48d8-e5e3-1a36" repeats="1" roundUp="false"/>
-          </repeats>
-          <conditions>
-            <condition field="selections" scope="9cb6-f319-b748-00a7" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e20c-48d8-e5e3-1a36" type="greaterThan"/>
-          </conditions>
-        </modifier>
-      </modifiers>
+          <modifiers>
+            <modifier type="set-primary" field="category" value="6230-ed60-e374-add4"/>
+            <modifier type="remove" field="category" value="a42d-220e-6a88-7bf6"/>
+          </modifiers>
+        </modifierGroup>
+      </modifierGroups>
       <profiles>
         <profile id="6103-6dc5-91c0-1c47" name="Jade Obelisk" hidden="false" typeId="3956-f6dd-6c88-ae4b" typeName="Unit">
           <characteristics>
@@ -3884,13 +3908,12 @@ Designer’s Note: The HERO cannot be returned if you are allowed to to bring ba
         </profile>
       </profiles>
       <categoryLinks>
-        <categoryLink id="ecca-e840-b90b-aa2e" name="Battleline" hidden="false" targetId="a42d-220e-6a88-7bf6" primary="false"/>
+        <categoryLink id="ecca-e840-b90b-aa2e" name="Battleline" hidden="false" targetId="a42d-220e-6a88-7bf6" primary="true"/>
         <categoryLink id="07b3-9050-e10c-f9fa" name="CHAOS" hidden="false" targetId="d8b4-9de1-926f-99b1" primary="false"/>
         <categoryLink id="2452-2a24-5409-cb78" name="CULTISTS" hidden="false" targetId="f525-0927-8c08-253c" primary="false"/>
         <categoryLink id="d167-859c-9ef8-6ceb" name="DISCIPLES OF TZEENTCH" hidden="false" targetId="2f02-6491-a31b-5b52" primary="false"/>
         <categoryLink id="44a7-cee9-2eeb-6008" name="JADE OBELISK" hidden="false" targetId="bf89-59d0-dae6-bb56" primary="false"/>
         <categoryLink id="9a3e-8a17-98fe-2db2" name="MORTAL" hidden="false" targetId="ca90-b9b0-010b-72d0" primary="false"/>
-        <categoryLink id="e92a-3c0c-7e98-21af" name="New CategoryLink" hidden="false" targetId="6230-ed60-e374-add4" primary="true"/>
         <categoryLink id="8b10-d224-fe10-1c10" name="TZEENTCH" hidden="false" targetId="eef2-2f52-b1cb-0639" primary="false"/>
       </categoryLinks>
       <selectionEntries>

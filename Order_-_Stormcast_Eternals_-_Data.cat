@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="3b1b-a210-7f3a-5f15" name="Order - Stormcast Eternals - Data" revision="12" battleScribeVersion="2.03" authorName="Thulram" library="true" gameSystemId="e832-3291-06be-cab1" gameSystemRevision="11" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="3b1b-a210-7f3a-5f15" name="Order - Stormcast Eternals - Data" revision="13" battleScribeVersion="2.03" authorName="Thulram" library="true" gameSystemId="e832-3291-06be-cab1" gameSystemRevision="12" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <profileTypes>
     <profileType id="48c3-6b80-e877-66c7" name="HERO on Stardrake Wounds">
       <characteristicTypes>
@@ -4627,19 +4627,6 @@ If you pick an enemy unit, roll a dice. On a 2+, the target suffers D3 mortal wo
     </selectionEntry>
     <selectionEntry id="43cc-71a1-f6c0-b647" name="Liberators" publicationId="0624-d006-ae10-12c0" hidden="false" collective="false" import="true" type="unit">
       <modifiers>
-        <modifier type="remove" field="category" value="a42d-220e-6a88-7bf6">
-          <conditionGroups>
-            <conditionGroup type="or">
-              <conditions>
-                <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="b543-cb16-0c79-fbc6" type="instanceOf"/>
-                <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="6cd6-b22e-bfcb-9589" type="instanceOf"/>
-                <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="e3a6-45ca-4974-b489" type="instanceOf"/>
-                <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="996a-613c-4006-25e3" type="instanceOf"/>
-                <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4373-740f-1bf3-b0aa" type="instanceOf"/>
-              </conditions>
-            </conditionGroup>
-          </conditionGroups>
-        </modifier>
         <modifier type="increment" field="b0b4-6aec-82c2-02ae" value="100.0">
           <repeats>
             <repeat field="selections" scope="43cc-71a1-f6c0-b647" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e20c-48d8-e5e3-1a36" repeats="1" roundUp="false"/>
@@ -4649,6 +4636,25 @@ If you pick an enemy unit, roll a dice. On a 2+, the target suffers D3 mortal wo
           </conditions>
         </modifier>
       </modifiers>
+      <modifierGroups>
+        <modifierGroup>
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="b543-cb16-0c79-fbc6" type="instanceOf"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="6cd6-b22e-bfcb-9589" type="instanceOf"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="e3a6-45ca-4974-b489" type="instanceOf"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="996a-613c-4006-25e3" type="instanceOf"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4373-740f-1bf3-b0aa" type="instanceOf"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+          <modifiers>
+            <modifier type="set-primary" field="category" value="6230-ed60-e374-add4"/>
+            <modifier type="remove" field="category" value="a42d-220e-6a88-7bf6"/>
+          </modifiers>
+        </modifierGroup>
+      </modifierGroups>
       <profiles>
         <profile id="714b-dfa0-4031-a0fe" name="Liberators" hidden="false" typeId="3956-f6dd-6c88-ae4b" typeName="Unit">
           <characteristics>
@@ -4672,10 +4678,9 @@ If you pick an enemy unit, roll a dice. On a 2+, the target suffers D3 mortal wo
       <categoryLinks>
         <categoryLink id="e58d-f98b-cd7d-e75f" name="Liberator" hidden="false" targetId="895f-3572-d42f-677a" primary="false"/>
         <categoryLink id="d5ba-1877-f71f-1993" name="Order" hidden="false" targetId="90c6-6c11-9677-1fa8" primary="false"/>
-        <categoryLink id="3e7c-eb22-bfe3-6837" name="New CategoryLink" hidden="false" targetId="6230-ed60-e374-add4" primary="true"/>
         <categoryLink id="bbe8-d440-f497-b962" name="Redeemer" hidden="false" targetId="6f80-b8ca-7bde-3799" primary="false"/>
         <categoryLink id="8bba-5865-43a2-bb9c" name="STORMCAST ETERNAL" hidden="false" targetId="f7e5-f667-4647-e141" primary="false"/>
-        <categoryLink id="bddf-fefa-618b-9f84" name="BATTLELINE" hidden="false" targetId="a42d-220e-6a88-7bf6" primary="false"/>
+        <categoryLink id="bddf-fefa-618b-9f84" name="BATTLELINE" hidden="false" targetId="a42d-220e-6a88-7bf6" primary="true"/>
       </categoryLinks>
       <selectionEntries>
         <selectionEntry id="aec3-b424-0035-baec" name="5 Liberators" hidden="false" collective="false" import="true" type="model">
@@ -4788,19 +4793,6 @@ If you pick an enemy unit, roll a dice. On a 2+, the target suffers D3 mortal wo
     </selectionEntry>
     <selectionEntry id="646e-55b4-709e-d3e9" name="Judicators with Boltstorm Crossbows" publicationId="0624-d006-ae10-12c0" hidden="false" collective="false" import="true" type="unit">
       <modifiers>
-        <modifier type="remove" field="category" value="a42d-220e-6a88-7bf6">
-          <conditionGroups>
-            <conditionGroup type="or">
-              <conditions>
-                <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="b543-cb16-0c79-fbc6" type="instanceOf"/>
-                <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="6cd6-b22e-bfcb-9589" type="instanceOf"/>
-                <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="e3a6-45ca-4974-b489" type="instanceOf"/>
-                <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="996a-613c-4006-25e3" type="instanceOf"/>
-                <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4373-740f-1bf3-b0aa" type="instanceOf"/>
-              </conditions>
-            </conditionGroup>
-          </conditionGroups>
-        </modifier>
         <modifier type="increment" field="b0b4-6aec-82c2-02ae" value="190.0">
           <repeats>
             <repeat field="selections" scope="646e-55b4-709e-d3e9" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e20c-48d8-e5e3-1a36" repeats="1" roundUp="false"/>
@@ -4810,6 +4802,25 @@ If you pick an enemy unit, roll a dice. On a 2+, the target suffers D3 mortal wo
           </conditions>
         </modifier>
       </modifiers>
+      <modifierGroups>
+        <modifierGroup>
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="b543-cb16-0c79-fbc6" type="instanceOf"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="6cd6-b22e-bfcb-9589" type="instanceOf"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="e3a6-45ca-4974-b489" type="instanceOf"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="996a-613c-4006-25e3" type="instanceOf"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4373-740f-1bf3-b0aa" type="instanceOf"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+          <modifiers>
+            <modifier type="set-primary" field="category" value="6230-ed60-e374-add4"/>
+            <modifier type="remove" field="category" value="a42d-220e-6a88-7bf6"/>
+          </modifiers>
+        </modifierGroup>
+      </modifierGroups>
       <profiles>
         <profile id="a5b6-9410-0061-888f" name="Judicators" hidden="false" typeId="3956-f6dd-6c88-ae4b" typeName="Unit">
           <characteristics>
@@ -4829,10 +4840,9 @@ If you pick an enemy unit, roll a dice. On a 2+, the target suffers D3 mortal wo
         <categoryLink id="1bf2-60a5-3e84-4735" name="Judicators" hidden="false" targetId="a109-8621-8c48-39ba" primary="false"/>
         <categoryLink id="58f9-3669-6f6a-0159" name="Justicar" hidden="false" targetId="4778-c1c6-7784-864c" primary="false"/>
         <categoryLink id="0a37-de14-a470-7973" name="Order" hidden="false" targetId="90c6-6c11-9677-1fa8" primary="false"/>
-        <categoryLink id="498d-bd64-f440-57c3" name="New CategoryLink" hidden="false" targetId="6230-ed60-e374-add4" primary="true"/>
         <categoryLink id="4065-597f-f4b8-c1c6" name="STORMCAST ETERNAL" hidden="false" targetId="f7e5-f667-4647-e141" primary="false"/>
         <categoryLink id="8d39-6696-93a8-8544" name="JUDICATORS WITH BOLTSTORM CROSSBOWS" hidden="false" targetId="786d-bfe0-13c4-5fa5" primary="false"/>
-        <categoryLink id="7a57-7533-66dc-e475" name="Battleline" hidden="false" targetId="a42d-220e-6a88-7bf6" primary="false"/>
+        <categoryLink id="7a57-7533-66dc-e475" name="Battleline" hidden="false" targetId="a42d-220e-6a88-7bf6" primary="true"/>
       </categoryLinks>
       <selectionEntries>
         <selectionEntry id="46ec-14cf-a35d-7fb8" name="5 Judicators" hidden="false" collective="false" import="true" type="model">
@@ -5750,20 +5760,26 @@ If you pick power, until the end of that phase, this unit’s Thunderhead Greatb
             <condition field="selections" scope="4cce-83f5-96a2-6586" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e20c-48d8-e5e3-1a36" type="greaterThan"/>
           </conditions>
         </modifier>
-        <modifier type="remove" field="category" value="a42d-220e-6a88-7bf6">
+      </modifiers>
+      <modifierGroups>
+        <modifierGroup>
           <conditionGroups>
             <conditionGroup type="or">
               <conditions>
-                <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="b543-cb16-0c79-fbc6" type="instanceOf"/>
-                <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="6cd6-b22e-bfcb-9589" type="instanceOf"/>
-                <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="e3a6-45ca-4974-b489" type="instanceOf"/>
-                <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="996a-613c-4006-25e3" type="instanceOf"/>
-                <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4373-740f-1bf3-b0aa" type="instanceOf"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="b543-cb16-0c79-fbc6" type="instanceOf"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="6cd6-b22e-bfcb-9589" type="instanceOf"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="e3a6-45ca-4974-b489" type="instanceOf"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="996a-613c-4006-25e3" type="instanceOf"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4373-740f-1bf3-b0aa" type="instanceOf"/>
               </conditions>
             </conditionGroup>
           </conditionGroups>
-        </modifier>
-      </modifiers>
+          <modifiers>
+            <modifier type="set-primary" field="category" value="6230-ed60-e374-add4"/>
+            <modifier type="remove" field="category" value="a42d-220e-6a88-7bf6"/>
+          </modifiers>
+        </modifierGroup>
+      </modifierGroups>
       <profiles>
         <profile id="8543-f4ed-f796-e404" name="Sequitors" hidden="false" typeId="3956-f6dd-6c88-ae4b" typeName="Unit">
           <characteristics>
@@ -5785,12 +5801,11 @@ If you pick its shields, until the end of that phase, this unit has a ward of 5+
       </profiles>
       <categoryLinks>
         <categoryLink id="b8de-a4c8-e814-74c4" name="Order" hidden="false" targetId="90c6-6c11-9677-1fa8" primary="false"/>
-        <categoryLink id="83b0-ee1a-0299-0dd5" name="New CategoryLink" hidden="false" targetId="6230-ed60-e374-add4" primary="true"/>
         <categoryLink id="59d9-b160-d871-3782" name="Redeemer" hidden="false" targetId="6f80-b8ca-7bde-3799" primary="false"/>
         <categoryLink id="e772-19a9-8659-cb0c" name="Sacrosanct" hidden="false" targetId="3702-c3a9-6d9f-d66f" primary="false"/>
         <categoryLink id="f49a-a5a5-4e95-682f" name="Sequitors" hidden="false" targetId="2404-531b-2a8b-f2a0" primary="false"/>
         <categoryLink id="a401-6aea-bdcf-7994" name="STORMCAST ETERNAL" hidden="false" targetId="f7e5-f667-4647-e141" primary="false"/>
-        <categoryLink id="c636-734e-ae2a-7da9" name="Battleline" hidden="false" targetId="a42d-220e-6a88-7bf6" primary="false"/>
+        <categoryLink id="c636-734e-ae2a-7da9" name="Battleline" hidden="false" targetId="a42d-220e-6a88-7bf6" primary="true"/>
       </categoryLinks>
       <selectionEntries>
         <selectionEntry id="196e-647b-3c15-771d" name="5 Sequitors" hidden="false" collective="false" import="true" type="model">
@@ -6792,20 +6807,26 @@ If you pick a unit once with this ability, you can heal up to D3 wounds allocate
             <condition field="selections" scope="dc91-1ef2-a910-8d95" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e20c-48d8-e5e3-1a36" type="greaterThan"/>
           </conditions>
         </modifier>
-        <modifier type="remove" field="category" value="a42d-220e-6a88-7bf6">
+      </modifiers>
+      <modifierGroups>
+        <modifierGroup>
           <conditionGroups>
             <conditionGroup type="or">
               <conditions>
-                <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="b543-cb16-0c79-fbc6" type="instanceOf"/>
-                <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="6cd6-b22e-bfcb-9589" type="instanceOf"/>
-                <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="e3a6-45ca-4974-b489" type="instanceOf"/>
-                <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="996a-613c-4006-25e3" type="instanceOf"/>
-                <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4373-740f-1bf3-b0aa" type="instanceOf"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="b543-cb16-0c79-fbc6" type="instanceOf"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="6cd6-b22e-bfcb-9589" type="instanceOf"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="e3a6-45ca-4974-b489" type="instanceOf"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="996a-613c-4006-25e3" type="instanceOf"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4373-740f-1bf3-b0aa" type="instanceOf"/>
               </conditions>
             </conditionGroup>
           </conditionGroups>
-        </modifier>
-      </modifiers>
+          <modifiers>
+            <modifier type="set-primary" field="category" value="6230-ed60-e374-add4"/>
+            <modifier type="remove" field="category" value="a42d-220e-6a88-7bf6"/>
+          </modifiers>
+        </modifierGroup>
+      </modifierGroups>
       <profiles>
         <profile id="ddf5-157f-c702-4ddb" name="Vindictors" hidden="false" typeId="3956-f6dd-6c88-ae4b" typeName="Unit">
           <characteristics>
@@ -6822,9 +6843,8 @@ If you pick a unit once with this ability, you can heal up to D3 wounds allocate
         </profile>
       </profiles>
       <categoryLinks>
-        <categoryLink id="4418-aec7-a711-9423" name="BATTLELINE" hidden="false" targetId="a42d-220e-6a88-7bf6" primary="false"/>
+        <categoryLink id="4418-aec7-a711-9423" name="BATTLELINE" hidden="false" targetId="a42d-220e-6a88-7bf6" primary="true"/>
         <categoryLink id="92f6-2f1e-654a-9c5f" name="Order" hidden="false" targetId="90c6-6c11-9677-1fa8" primary="false"/>
-        <categoryLink id="d546-56c9-7454-e9b9" name="New CategoryLink" hidden="false" targetId="6230-ed60-e374-add4" primary="true"/>
         <categoryLink id="cdb7-7e37-0d39-d684" name="Redeemer" hidden="false" targetId="6f80-b8ca-7bde-3799" primary="false"/>
         <categoryLink id="611f-2ea7-b546-fcb1" name="STORMCAST ETERNAL" hidden="false" targetId="f7e5-f667-4647-e141" primary="false"/>
         <categoryLink id="7d1d-923f-9437-8ab4" name="THUNDERSTRIKE" hidden="false" targetId="35c3-46df-8153-8396" primary="false"/>
@@ -7296,19 +7316,6 @@ On a 1 -2, that wound or mortal wound is allocated to that HERO as normal. On a 
     </selectionEntry>
     <selectionEntry id="415e-c729-17f1-21b8" name="Judicators with Skybolt Bows" publicationId="0624-d006-ae10-12c0" hidden="false" collective="false" import="true" type="unit">
       <modifiers>
-        <modifier type="remove" field="category" value="a42d-220e-6a88-7bf6">
-          <conditionGroups>
-            <conditionGroup type="or">
-              <conditions>
-                <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="b543-cb16-0c79-fbc6" type="instanceOf"/>
-                <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="6cd6-b22e-bfcb-9589" type="instanceOf"/>
-                <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="e3a6-45ca-4974-b489" type="instanceOf"/>
-                <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="996a-613c-4006-25e3" type="instanceOf"/>
-                <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4373-740f-1bf3-b0aa" type="instanceOf"/>
-              </conditions>
-            </conditionGroup>
-          </conditionGroups>
-        </modifier>
         <modifier type="increment" field="b0b4-6aec-82c2-02ae" value="200.0">
           <repeats>
             <repeat field="selections" scope="415e-c729-17f1-21b8" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e20c-48d8-e5e3-1a36" repeats="1" roundUp="false"/>
@@ -7318,6 +7325,25 @@ On a 1 -2, that wound or mortal wound is allocated to that HERO as normal. On a 
           </conditions>
         </modifier>
       </modifiers>
+      <modifierGroups>
+        <modifierGroup>
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="b543-cb16-0c79-fbc6" type="instanceOf"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="6cd6-b22e-bfcb-9589" type="instanceOf"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="e3a6-45ca-4974-b489" type="instanceOf"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="996a-613c-4006-25e3" type="instanceOf"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4373-740f-1bf3-b0aa" type="instanceOf"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+          <modifiers>
+            <modifier type="set-primary" field="category" value="6230-ed60-e374-add4"/>
+            <modifier type="remove" field="category" value="a42d-220e-6a88-7bf6"/>
+          </modifiers>
+        </modifierGroup>
+      </modifierGroups>
       <profiles>
         <profile id="3751-5335-d7e3-07b6" name="Judicators" hidden="false" typeId="3956-f6dd-6c88-ae4b" typeName="Unit">
           <characteristics>
@@ -7337,10 +7363,9 @@ On a 1 -2, that wound or mortal wound is allocated to that HERO as normal. On a 
         <categoryLink id="725c-bee7-19b7-fa7b" name="Judicators" hidden="false" targetId="a109-8621-8c48-39ba" primary="false"/>
         <categoryLink id="3375-e593-a214-388b" name="Justicar" hidden="false" targetId="4778-c1c6-7784-864c" primary="false"/>
         <categoryLink id="aa32-d10d-a4b2-2c4b" name="Order" hidden="false" targetId="90c6-6c11-9677-1fa8" primary="false"/>
-        <categoryLink id="a64b-90e6-368d-86ad" name="New CategoryLink" hidden="false" targetId="6230-ed60-e374-add4" primary="true"/>
         <categoryLink id="78e1-e042-2ec0-de4b" name="STORMCAST ETERNAL" hidden="false" targetId="f7e5-f667-4647-e141" primary="false"/>
         <categoryLink id="0043-4b73-9bed-d2f7" name="JUDICATORS WITH SKYBOLT BOW" hidden="false" targetId="8f84-edd3-6625-61e1" primary="false"/>
-        <categoryLink id="f87b-019f-5b0b-bcea" name="Battleline" hidden="false" targetId="a42d-220e-6a88-7bf6" primary="false"/>
+        <categoryLink id="f87b-019f-5b0b-bcea" name="Battleline" hidden="false" targetId="a42d-220e-6a88-7bf6" primary="true"/>
       </categoryLinks>
       <selectionEntries>
         <selectionEntry id="42b2-c1ce-dda9-5551" name="5 Judicators" hidden="false" collective="false" import="true" type="model">
@@ -7617,20 +7642,26 @@ On a 1 -2, that wound or mortal wound is allocated to that HERO as normal. On a 
             <condition field="selections" scope="1608-d5b3-7e11-6710" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e20c-48d8-e5e3-1a36" type="greaterThan"/>
           </conditions>
         </modifier>
-        <modifier type="remove" field="category" value="a42d-220e-6a88-7bf6">
+      </modifiers>
+      <modifierGroups>
+        <modifierGroup>
           <conditionGroups>
             <conditionGroup type="or">
               <conditions>
-                <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="b543-cb16-0c79-fbc6" type="instanceOf"/>
-                <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="6cd6-b22e-bfcb-9589" type="instanceOf"/>
-                <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="e3a6-45ca-4974-b489" type="instanceOf"/>
-                <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="996a-613c-4006-25e3" type="instanceOf"/>
-                <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4373-740f-1bf3-b0aa" type="instanceOf"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="b543-cb16-0c79-fbc6" type="instanceOf"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="6cd6-b22e-bfcb-9589" type="instanceOf"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="e3a6-45ca-4974-b489" type="instanceOf"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="996a-613c-4006-25e3" type="instanceOf"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4373-740f-1bf3-b0aa" type="instanceOf"/>
               </conditions>
             </conditionGroup>
           </conditionGroups>
-        </modifier>
-      </modifiers>
+          <modifiers>
+            <modifier type="set-primary" field="category" value="6230-ed60-e374-add4"/>
+            <modifier type="remove" field="category" value="a42d-220e-6a88-7bf6"/>
+          </modifiers>
+        </modifierGroup>
+      </modifierGroups>
       <profiles>
         <profile id="76ed-f234-a117-e55b" name="Vanquishers" hidden="false" typeId="3956-f6dd-6c88-ae4b" typeName="Unit">
           <characteristics>
@@ -7647,9 +7678,8 @@ On a 1 -2, that wound or mortal wound is allocated to that HERO as normal. On a 
         </profile>
       </profiles>
       <categoryLinks>
-        <categoryLink id="5d9d-bdcf-cf3c-8264" name="Battleline" hidden="false" targetId="a42d-220e-6a88-7bf6" primary="false"/>
+        <categoryLink id="5d9d-bdcf-cf3c-8264" name="Battleline" hidden="false" targetId="a42d-220e-6a88-7bf6" primary="true"/>
         <categoryLink id="d77a-e24e-e5a1-84b7" name="ORDER" hidden="false" targetId="90c6-6c11-9677-1fa8" primary="false"/>
-        <categoryLink id="cc4f-a599-677f-1da6" name="New CategoryLink" hidden="false" targetId="6230-ed60-e374-add4" primary="true"/>
         <categoryLink id="53fa-0853-7526-eb35" name="REDEEMER" hidden="false" targetId="6f80-b8ca-7bde-3799" primary="false"/>
         <categoryLink id="8ea6-eda2-b4c4-aad7" name="STORMCAST ETERNAL" hidden="false" targetId="f7e5-f667-4647-e141" primary="false"/>
         <categoryLink id="cec7-f826-012a-1439" name="THUNDERSTRIKE" hidden="false" targetId="35c3-46df-8153-8396" primary="false"/>

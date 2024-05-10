@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="53db-fccc-828d-aacf" name="Order - Idoneth Deepkin - Data" revision="15" battleScribeVersion="2.03" authorName="Thulram" library="true" gameSystemId="e832-3291-06be-cab1" gameSystemRevision="15" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="53db-fccc-828d-aacf" name="Order - Idoneth Deepkin - Data" revision="16" battleScribeVersion="2.03" authorName="Thulram" library="true" gameSystemId="e832-3291-06be-cab1" gameSystemRevision="15" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <profileTypes>
     <profileType id="3081-447d-82e2-cdb3" name="Leviadon Wounds">
       <characteristicTypes>
@@ -1898,19 +1898,6 @@ If the unmodified hit roll for an attack made with this unit’s Crushing Jaws i
     </selectionEntry>
     <selectionEntry id="9d96-79c5-f89b-592a" name="Namarti Thralls" publicationId="dea8-e4a3-2500-1a33" hidden="false" collective="false" import="true" type="unit">
       <modifiers>
-        <modifier type="remove" field="category" value="a42d-220e-6a88-7bf6">
-          <conditionGroups>
-            <conditionGroup type="or">
-              <conditions>
-                <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="b543-cb16-0c79-fbc6" type="instanceOf"/>
-                <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="6cd6-b22e-bfcb-9589" type="instanceOf"/>
-                <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="e3a6-45ca-4974-b489" type="instanceOf"/>
-                <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="996a-613c-4006-25e3" type="instanceOf"/>
-                <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4373-740f-1bf3-b0aa" type="instanceOf"/>
-              </conditions>
-            </conditionGroup>
-          </conditionGroups>
-        </modifier>
         <modifier type="increment" field="b0b4-6aec-82c2-02ae" value="110.0">
           <repeats>
             <repeat field="selections" scope="9d96-79c5-f89b-592a" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e20c-48d8-e5e3-1a36" repeats="1" roundUp="false"/>
@@ -1920,6 +1907,25 @@ If the unmodified hit roll for an attack made with this unit’s Crushing Jaws i
           </conditions>
         </modifier>
       </modifiers>
+      <modifierGroups>
+        <modifierGroup>
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="b543-cb16-0c79-fbc6" type="instanceOf"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="6cd6-b22e-bfcb-9589" type="instanceOf"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="e3a6-45ca-4974-b489" type="instanceOf"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="996a-613c-4006-25e3" type="instanceOf"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4373-740f-1bf3-b0aa" type="instanceOf"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+          <modifiers>
+            <modifier type="set-primary" field="category" value="6230-ed60-e374-add4"/>
+            <modifier type="remove" field="category" value="a42d-220e-6a88-7bf6"/>
+          </modifiers>
+        </modifierGroup>
+      </modifierGroups>
       <profiles>
         <profile id="c343-51e2-aae9-a971" name="Namarti Thralls" hidden="false" typeId="3956-f6dd-6c88-ae4b" typeName="Unit">
           <characteristics>
@@ -1937,11 +1943,10 @@ If the unmodified hit roll for an attack made with this unit’s Crushing Jaws i
       </profiles>
       <categoryLinks>
         <categoryLink id="c80b-f0f2-fe37-866d" name="Aelf" hidden="false" targetId="babf-cdeb-b0ab-05db" primary="false"/>
-        <categoryLink id="78ab-2347-6f55-4dc4" name="BATTLELINE" hidden="false" targetId="a42d-220e-6a88-7bf6" primary="false"/>
+        <categoryLink id="78ab-2347-6f55-4dc4" name="BATTLELINE" hidden="false" targetId="a42d-220e-6a88-7bf6" primary="true"/>
         <categoryLink id="6809-f118-e278-d7b9" name="IDONETH DEEPKIN" hidden="false" targetId="c6a3-55bb-de84-3ad0" primary="false"/>
         <categoryLink id="da90-2183-e258-4435" name="Namarti" hidden="false" targetId="a8d5-3110-7761-ff6a" primary="false"/>
         <categoryLink id="d58f-7a42-b24c-7583" name="Order" hidden="false" targetId="90c6-6c11-9677-1fa8" primary="false"/>
-        <categoryLink id="2122-62c4-1bfd-6551" name="New CategoryLink" hidden="false" targetId="6230-ed60-e374-add4" primary="true"/>
         <categoryLink id="aa5c-8788-cab1-18c4" name="Thralls" hidden="false" targetId="a67c-d3c2-d793-ea2c" primary="false"/>
       </categoryLinks>
       <selectionEntries>
@@ -2000,20 +2005,26 @@ If the unmodified hit roll for an attack made with this unit’s Crushing Jaws i
             <condition field="selections" scope="52d3-6c54-1d17-0285" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e20c-48d8-e5e3-1a36" type="greaterThan"/>
           </conditions>
         </modifier>
-        <modifier type="remove" field="category" value="a42d-220e-6a88-7bf6">
+      </modifiers>
+      <modifierGroups>
+        <modifierGroup>
           <conditionGroups>
             <conditionGroup type="or">
               <conditions>
-                <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="b543-cb16-0c79-fbc6" type="instanceOf"/>
-                <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="6cd6-b22e-bfcb-9589" type="instanceOf"/>
-                <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="e3a6-45ca-4974-b489" type="instanceOf"/>
-                <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="996a-613c-4006-25e3" type="instanceOf"/>
-                <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4373-740f-1bf3-b0aa" type="instanceOf"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="b543-cb16-0c79-fbc6" type="instanceOf"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="6cd6-b22e-bfcb-9589" type="instanceOf"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="e3a6-45ca-4974-b489" type="instanceOf"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="996a-613c-4006-25e3" type="instanceOf"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4373-740f-1bf3-b0aa" type="instanceOf"/>
               </conditions>
             </conditionGroup>
           </conditionGroups>
-        </modifier>
-      </modifiers>
+          <modifiers>
+            <modifier type="set-primary" field="category" value="6230-ed60-e374-add4"/>
+            <modifier type="remove" field="category" value="a42d-220e-6a88-7bf6"/>
+          </modifiers>
+        </modifierGroup>
+      </modifierGroups>
       <profiles>
         <profile id="867a-f368-0831-5f8d" name="Namarti Reavers" hidden="false" typeId="3956-f6dd-6c88-ae4b" typeName="Unit">
           <characteristics>
@@ -2039,9 +2050,8 @@ If the unmodified hit roll for an attack made with this unit’s Crushing Jaws i
         <categoryLink id="d427-3c83-4e12-59ad" name="IDONETH DEEPKIN" hidden="false" targetId="c6a3-55bb-de84-3ad0" primary="false"/>
         <categoryLink id="90be-d136-5cca-3a36" name="Namarti" hidden="false" targetId="a8d5-3110-7761-ff6a" primary="false"/>
         <categoryLink id="6066-880f-3d3d-d754" name="Order" hidden="false" targetId="90c6-6c11-9677-1fa8" primary="false"/>
-        <categoryLink id="326d-9c25-174e-2806" name="New CategoryLink" hidden="false" targetId="6230-ed60-e374-add4" primary="true"/>
         <categoryLink id="3bd8-14ea-fb72-9034" name="Reavers" hidden="false" targetId="b524-d787-bf53-1a7b" primary="false"/>
-        <categoryLink id="f23d-1f58-419d-93f9" name="Battleline" hidden="false" targetId="a42d-220e-6a88-7bf6" primary="false"/>
+        <categoryLink id="f23d-1f58-419d-93f9" name="Battleline" hidden="false" targetId="a42d-220e-6a88-7bf6" primary="true"/>
       </categoryLinks>
       <selectionEntries>
         <selectionEntry id="dbeb-ac24-aba0-5450" name="10 Namarti Reavers" hidden="false" collective="false" import="true" type="model">
@@ -2479,21 +2489,25 @@ Way of the Vortex: Subtract 1 from wound rolls for attacks that target this unit
       </costs>
     </selectionEntry>
     <selectionEntry id="6685-8487-6b45-38d1" name="Akhelian Allopexes (Bloodthirsty Shivers)" publicationId="dea8-e4a3-2500-1a33" hidden="false" collective="false" import="true" type="unit">
-      <modifiers>
-        <modifier type="remove" field="category" value="a42d-220e-6a88-7bf6">
+      <modifierGroups>
+        <modifierGroup>
           <conditionGroups>
             <conditionGroup type="or">
               <conditions>
-                <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="b543-cb16-0c79-fbc6" type="instanceOf"/>
-                <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="6cd6-b22e-bfcb-9589" type="instanceOf"/>
-                <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="e3a6-45ca-4974-b489" type="instanceOf"/>
-                <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="996a-613c-4006-25e3" type="instanceOf"/>
-                <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4373-740f-1bf3-b0aa" type="instanceOf"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="b543-cb16-0c79-fbc6" type="instanceOf"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="6cd6-b22e-bfcb-9589" type="instanceOf"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="e3a6-45ca-4974-b489" type="instanceOf"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="996a-613c-4006-25e3" type="instanceOf"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4373-740f-1bf3-b0aa" type="instanceOf"/>
               </conditions>
             </conditionGroup>
           </conditionGroups>
-        </modifier>
-      </modifiers>
+          <modifiers>
+            <modifier type="set-primary" field="category" value="6230-ed60-e374-add4"/>
+            <modifier type="remove" field="category" value="a42d-220e-6a88-7bf6"/>
+          </modifiers>
+        </modifierGroup>
+      </modifierGroups>
       <profiles>
         <profile id="a32b-7544-ec1a-e45e" name="Akhelian Allopexes" hidden="false" typeId="3956-f6dd-6c88-ae4b" typeName="Unit">
           <characteristics>
@@ -2523,8 +2537,7 @@ Way of the Vortex: Subtract 1 from wound rolls for attacks that target this unit
         <categoryLink id="f267-771d-b37a-6596" name="Allopex" hidden="false" targetId="5afb-f989-9a2a-5308" primary="false"/>
         <categoryLink id="de8d-7fbc-883b-3a4f" name="IDONETH DEEPKIN" hidden="false" targetId="c6a3-55bb-de84-3ad0" primary="false"/>
         <categoryLink id="5f03-bb28-73b0-5bdc" name="Order" hidden="false" targetId="90c6-6c11-9677-1fa8" primary="false"/>
-        <categoryLink id="b1d6-370f-6aa4-3e84" name="New CategoryLink" hidden="false" targetId="6230-ed60-e374-add4" primary="true"/>
-        <categoryLink id="dfe3-2e49-bca0-b8eb" name="Battleline" hidden="false" targetId="a42d-220e-6a88-7bf6" primary="false"/>
+        <categoryLink id="dfe3-2e49-bca0-b8eb" name="Battleline" hidden="false" targetId="a42d-220e-6a88-7bf6" primary="true"/>
       </categoryLinks>
       <selectionEntries>
         <selectionEntry id="f151-0c0f-a9ca-c3e7" name="Akhelian Allopex" hidden="false" collective="false" import="true" type="model">

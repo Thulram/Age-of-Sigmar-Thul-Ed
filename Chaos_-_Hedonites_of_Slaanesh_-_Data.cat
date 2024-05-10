@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="0f80-3aaf-c740-fcc3" name="Chaos - Hedonites of Slaanesh - Data" revision="18" battleScribeVersion="2.03" authorName="Thulram" library="true" gameSystemId="e832-3291-06be-cab1" gameSystemRevision="17" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="0f80-3aaf-c740-fcc3" name="Chaos - Hedonites of Slaanesh - Data" revision="19" battleScribeVersion="2.03" authorName="Thulram" library="true" gameSystemId="e832-3291-06be-cab1" gameSystemRevision="18" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <profileTypes>
     <profileType id="3f2f-edd9-f66c-bb96" name="Keeper of Secrets Wounds">
       <characteristicTypes>
@@ -1893,19 +1893,6 @@ If the target of an attack made with a Barbed Stinger has a Wounds characteristi
     </selectionEntry>
     <selectionEntry id="9aab-dbef-7f28-de38" name="Daemonettes" publicationId="29d6-453f-ecc0-3e4b" hidden="false" collective="false" import="true" type="unit">
       <modifiers>
-        <modifier type="remove" field="category" value="a42d-220e-6a88-7bf6">
-          <conditionGroups>
-            <conditionGroup type="or">
-              <conditions>
-                <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="b543-cb16-0c79-fbc6" type="instanceOf"/>
-                <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="6cd6-b22e-bfcb-9589" type="instanceOf"/>
-                <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="e3a6-45ca-4974-b489" type="instanceOf"/>
-                <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="996a-613c-4006-25e3" type="instanceOf"/>
-                <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4373-740f-1bf3-b0aa" type="instanceOf"/>
-              </conditions>
-            </conditionGroup>
-          </conditionGroups>
-        </modifier>
         <modifier type="increment" field="b0b4-6aec-82c2-02ae" value="110.0">
           <repeats>
             <repeat field="selections" scope="9aab-dbef-7f28-de38" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e20c-48d8-e5e3-1a36" repeats="1" roundUp="false"/>
@@ -1915,6 +1902,25 @@ If the target of an attack made with a Barbed Stinger has a Wounds characteristi
           </conditions>
         </modifier>
       </modifiers>
+      <modifierGroups>
+        <modifierGroup>
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="b543-cb16-0c79-fbc6" type="instanceOf"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="6cd6-b22e-bfcb-9589" type="instanceOf"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="e3a6-45ca-4974-b489" type="instanceOf"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="996a-613c-4006-25e3" type="instanceOf"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4373-740f-1bf3-b0aa" type="instanceOf"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+          <modifiers>
+            <modifier type="set-primary" field="category" value="6230-ed60-e374-add4"/>
+            <modifier type="remove" field="category" value="a42d-220e-6a88-7bf6"/>
+          </modifiers>
+        </modifierGroup>
+      </modifierGroups>
       <profiles>
         <profile id="d71d-dc17-f202-0a3b" name="Daemonettes" hidden="false" typeId="3956-f6dd-6c88-ae4b" typeName="Unit">
           <characteristics>
@@ -1936,11 +1942,10 @@ If the target of an attack made with a Barbed Stinger has a Wounds characteristi
         </profile>
       </profiles>
       <categoryLinks>
-        <categoryLink id="1104-9998-77e7-bd84" name="BATTLELINE" hidden="false" targetId="a42d-220e-6a88-7bf6" primary="false"/>
+        <categoryLink id="1104-9998-77e7-bd84" name="BATTLELINE" hidden="false" targetId="a42d-220e-6a88-7bf6" primary="true"/>
         <categoryLink id="027d-4c39-3bad-a7fd" name="Chaos" hidden="false" targetId="d8b4-9de1-926f-99b1" primary="false"/>
         <categoryLink id="2589-5c38-9592-5020" name="Daemon" hidden="false" targetId="128a-35fa-6f1f-a15d" primary="false"/>
         <categoryLink id="102c-53af-ca19-5e42" name="Daemonette(s)" hidden="false" targetId="75e3-e860-afdd-de79" primary="false"/>
-        <categoryLink id="aad4-676a-77e8-53d8" name="New CategoryLink" hidden="false" targetId="6230-ed60-e374-add4" primary="true"/>
         <categoryLink id="2f16-5b45-7b05-67c0" name="SLAANESH" hidden="false" targetId="58b2-6793-0b10-a246" primary="false"/>
         <categoryLink id="f4ac-8a33-ab76-b185" name="DAEMONETTE HOST" hidden="false" targetId="f1d2-e6a3-d081-de3e" primary="false"/>
         <categoryLink id="c654-a81f-ff8f-1886" name="HEDONITES OF SLAANESH" hidden="false" targetId="5598-0d67-0b62-8fa3" primary="false"/>
@@ -2085,20 +2090,26 @@ If the target of an attack made with a Barbed Stinger has a Wounds characteristi
             <condition field="selections" scope="557e-4177-4be2-2d54" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e20c-48d8-e5e3-1a36" type="greaterThan"/>
           </conditions>
         </modifier>
-        <modifier type="remove" field="category" value="a42d-220e-6a88-7bf6">
+      </modifiers>
+      <modifierGroups>
+        <modifierGroup>
           <conditionGroups>
             <conditionGroup type="or">
               <conditions>
-                <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="b543-cb16-0c79-fbc6" type="instanceOf"/>
-                <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="6cd6-b22e-bfcb-9589" type="instanceOf"/>
-                <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="e3a6-45ca-4974-b489" type="instanceOf"/>
-                <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="996a-613c-4006-25e3" type="instanceOf"/>
-                <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4373-740f-1bf3-b0aa" type="instanceOf"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="b543-cb16-0c79-fbc6" type="instanceOf"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="6cd6-b22e-bfcb-9589" type="instanceOf"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="e3a6-45ca-4974-b489" type="instanceOf"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="996a-613c-4006-25e3" type="instanceOf"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4373-740f-1bf3-b0aa" type="instanceOf"/>
               </conditions>
             </conditionGroup>
           </conditionGroups>
-        </modifier>
-      </modifiers>
+          <modifiers>
+            <modifier type="set-primary" field="category" value="6230-ed60-e374-add4"/>
+            <modifier type="remove" field="category" value="a42d-220e-6a88-7bf6"/>
+          </modifiers>
+        </modifierGroup>
+      </modifierGroups>
       <profiles>
         <profile id="c900-6e3c-fa54-f021" name="Seekers" hidden="false" typeId="3956-f6dd-6c88-ae4b" typeName="Unit">
           <characteristics>
@@ -2127,10 +2138,10 @@ If the target of an attack made with a Barbed Stinger has a Wounds characteristi
       <categoryLinks>
         <categoryLink id="58b8-ef13-9c1c-8946" name="Chaos" hidden="false" targetId="d8b4-9de1-926f-99b1" primary="false"/>
         <categoryLink id="33ef-1681-26b6-66c5" name="Daemon" hidden="false" targetId="128a-35fa-6f1f-a15d" primary="false"/>
-        <categoryLink id="03f8-f883-6f84-8132" name="New CategoryLink" hidden="false" targetId="6230-ed60-e374-add4" primary="true"/>
         <categoryLink id="6655-5caa-ad31-96b5" name="Seekers" hidden="false" targetId="fb28-8ee4-6d49-de9d" primary="false"/>
         <categoryLink id="8da8-016f-f49a-9b76" name="SLAANESH" hidden="false" targetId="58b2-6793-0b10-a246" primary="false"/>
         <categoryLink id="bf95-f458-7f74-e8a1" name="HEDONITES OF SLAANESH" hidden="false" targetId="5598-0d67-0b62-8fa3" primary="false"/>
+        <categoryLink id="0a54-cd69-8b09-e018" name="New CategoryLink" hidden="false" targetId="a42d-220e-6a88-7bf6" primary="true"/>
       </categoryLinks>
       <selectionEntries>
         <selectionEntry id="1d47-68e6-44b3-90f3" name="5 Seekers" hidden="false" collective="false" import="true" type="model">
@@ -3210,19 +3221,6 @@ Battle Round 5 - Digestif: You can re roll casting, dispelling and unbinding rol
     </selectionEntry>
     <selectionEntry id="b309-c000-e0c8-b592" name="Blissbarb Archers" publicationId="29d6-453f-ecc0-3e4b" hidden="false" collective="false" import="true" type="unit">
       <modifiers>
-        <modifier type="remove" field="category" value="a42d-220e-6a88-7bf6">
-          <conditionGroups>
-            <conditionGroup type="or">
-              <conditions>
-                <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="b543-cb16-0c79-fbc6" type="instanceOf"/>
-                <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="6cd6-b22e-bfcb-9589" type="instanceOf"/>
-                <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="e3a6-45ca-4974-b489" type="instanceOf"/>
-                <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="996a-613c-4006-25e3" type="instanceOf"/>
-                <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4373-740f-1bf3-b0aa" type="instanceOf"/>
-              </conditions>
-            </conditionGroup>
-          </conditionGroups>
-        </modifier>
         <modifier type="increment" field="b0b4-6aec-82c2-02ae" value="170.0">
           <repeats>
             <repeat field="selections" scope="b309-c000-e0c8-b592" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e20c-48d8-e5e3-1a36" repeats="1" roundUp="false"/>
@@ -3232,6 +3230,25 @@ Battle Round 5 - Digestif: You can re roll casting, dispelling and unbinding rol
           </conditions>
         </modifier>
       </modifiers>
+      <modifierGroups>
+        <modifierGroup>
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="b543-cb16-0c79-fbc6" type="instanceOf"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="6cd6-b22e-bfcb-9589" type="instanceOf"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="e3a6-45ca-4974-b489" type="instanceOf"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="996a-613c-4006-25e3" type="instanceOf"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4373-740f-1bf3-b0aa" type="instanceOf"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+          <modifiers>
+            <modifier type="set-primary" field="category" value="6230-ed60-e374-add4"/>
+            <modifier type="remove" field="category" value="a42d-220e-6a88-7bf6"/>
+          </modifiers>
+        </modifierGroup>
+      </modifierGroups>
       <profiles>
         <profile id="e8d9-2151-3a4c-4ad2" name="Blissbarb Archers" hidden="false" typeId="3956-f6dd-6c88-ae4b" typeName="Unit">
           <characteristics>
@@ -3261,9 +3278,9 @@ Battle Round 5 - Digestif: You can re roll casting, dispelling and unbinding rol
         <categoryLink id="cf99-d8ae-fccd-caac" name="Chaos" hidden="false" targetId="d8b4-9de1-926f-99b1" primary="false"/>
         <categoryLink id="48f5-6e84-0e38-3b3d" name="Blissbarb Archers" hidden="false" targetId="b25d-23b0-8ab9-6af1" primary="false"/>
         <categoryLink id="efbe-45e0-54a4-1cf3" name="Mortal" hidden="false" targetId="ca90-b9b0-010b-72d0" primary="false"/>
-        <categoryLink id="b913-581e-5bf4-d5ef" name="New CategoryLink" hidden="false" targetId="6230-ed60-e374-add4" primary="true"/>
         <categoryLink id="58c9-b55f-49d2-e7bb" name="SLAANESH" hidden="false" targetId="58b2-6793-0b10-a246" primary="false"/>
         <categoryLink id="8387-618b-114e-6cdc" name="HEDONITES OF SLAANESH" hidden="false" targetId="5598-0d67-0b62-8fa3" primary="false"/>
+        <categoryLink id="08b0-8a2f-40ed-f6e5" name="New CategoryLink" hidden="false" targetId="a42d-220e-6a88-7bf6" primary="true"/>
       </categoryLinks>
       <selectionEntries>
         <selectionEntry id="dd88-ee1a-1d1c-5610" name="Blissbarb Bow and Sybarite Blade" hidden="false" collective="false" import="true" type="upgrade">

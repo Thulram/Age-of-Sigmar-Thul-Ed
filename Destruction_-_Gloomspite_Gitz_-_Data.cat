@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="1fc2-3937-6f2b-a4bc" name="Destruction - Gloomspite Gitz - Data" revision="13" battleScribeVersion="2.03" authorName="Thulram" library="true" gameSystemId="e832-3291-06be-cab1" gameSystemRevision="12" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="1fc2-3937-6f2b-a4bc" name="Destruction - Gloomspite Gitz - Data" revision="14" battleScribeVersion="2.03" authorName="Thulram" library="true" gameSystemId="e832-3291-06be-cab1" gameSystemRevision="13" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <profileTypes>
     <profileType id="3b00-f2f8-10bc-6b74" name="Gargant Wounds">
       <characteristicTypes>
@@ -1281,19 +1281,6 @@ If the unit in which this unit is hidden is destroyed before this unit is releas
     </selectionEntry>
     <selectionEntry id="c796-e61c-3f9e-0197" name="Moonclan Stabbas" publicationId="b26b-402e-2023-e85b" hidden="false" collective="false" import="true" type="unit">
       <modifiers>
-        <modifier type="remove" field="category" value="a42d-220e-6a88-7bf6">
-          <conditionGroups>
-            <conditionGroup type="or">
-              <conditions>
-                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4373-740f-1bf3-b0aa" type="instanceOf"/>
-                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="e3a6-45ca-4974-b489" type="instanceOf"/>
-                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="996a-613c-4006-25e3" type="instanceOf"/>
-                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="6cd6-b22e-bfcb-9589" type="instanceOf"/>
-                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="b543-cb16-0c79-fbc6" type="instanceOf"/>
-              </conditions>
-            </conditionGroup>
-          </conditionGroups>
-        </modifier>
         <modifier type="increment" field="b0b4-6aec-82c2-02ae" value="120.0">
           <repeats>
             <repeat field="selections" scope="c796-e61c-3f9e-0197" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e20c-48d8-e5e3-1a36" repeats="1" roundUp="false"/>
@@ -1303,6 +1290,25 @@ If the unit in which this unit is hidden is destroyed before this unit is releas
           </conditions>
         </modifier>
       </modifiers>
+      <modifierGroups>
+        <modifierGroup>
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="b543-cb16-0c79-fbc6" type="instanceOf"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="6cd6-b22e-bfcb-9589" type="instanceOf"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="e3a6-45ca-4974-b489" type="instanceOf"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="996a-613c-4006-25e3" type="instanceOf"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4373-740f-1bf3-b0aa" type="instanceOf"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+          <modifiers>
+            <modifier type="set-primary" field="category" value="6230-ed60-e374-add4"/>
+            <modifier type="remove" field="category" value="a42d-220e-6a88-7bf6"/>
+          </modifiers>
+        </modifierGroup>
+      </modifierGroups>
       <profiles>
         <profile id="c506-94ae-d194-2102" name="Moonclan Stabbas" hidden="false" typeId="3956-f6dd-6c88-ae4b" typeName="Unit">
           <characteristics>
@@ -1324,12 +1330,11 @@ If the unit in which this unit is hidden is destroyed before this unit is releas
         </profile>
       </profiles>
       <categoryLinks>
-        <categoryLink id="7c49-661d-b05c-2bb0" name="BATTLELINE" hidden="false" targetId="a42d-220e-6a88-7bf6" primary="false"/>
+        <categoryLink id="7c49-661d-b05c-2bb0" name="BATTLELINE" hidden="false" targetId="a42d-220e-6a88-7bf6" primary="true"/>
         <categoryLink id="90c9-f48f-b233-059c" name="Destruction" hidden="false" targetId="5d33-469f-2bda-51f9" primary="false"/>
         <categoryLink id="1dc1-3aa2-c0c4-e071" name="GLOOMSPITE GITZ" hidden="false" targetId="afbc-a227-f9ea-5aeb" primary="false"/>
         <categoryLink id="c69c-ac1b-04c1-2f27" name="Grot" hidden="false" targetId="136a-adac-f0f3-e167" primary="false"/>
         <categoryLink id="06b9-430e-5507-ca61" name="Moonclan" hidden="false" targetId="d204-ae0c-c18f-f10e" primary="false"/>
-        <categoryLink id="d05f-8640-493b-d395" name="New CategoryLink" hidden="false" targetId="6230-ed60-e374-add4" primary="true"/>
         <categoryLink id="11ed-899f-bf33-1088" name="Stabbas" hidden="false" targetId="cf84-622d-844b-17f1" primary="false"/>
       </categoryLinks>
       <selectionEntries>
@@ -1500,19 +1505,6 @@ If the unit in which this unit is hidden is destroyed before this unit is releas
     </selectionEntry>
     <selectionEntry id="b214-3bc6-1bb4-3e41" name="Moonclan Shootas" publicationId="b26b-402e-2023-e85b" hidden="false" collective="false" import="true" type="unit">
       <modifiers>
-        <modifier type="remove" field="category" value="a42d-220e-6a88-7bf6">
-          <conditionGroups>
-            <conditionGroup type="or">
-              <conditions>
-                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4373-740f-1bf3-b0aa" type="instanceOf"/>
-                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="e3a6-45ca-4974-b489" type="instanceOf"/>
-                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="996a-613c-4006-25e3" type="instanceOf"/>
-                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="6cd6-b22e-bfcb-9589" type="instanceOf"/>
-                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="b543-cb16-0c79-fbc6" type="instanceOf"/>
-              </conditions>
-            </conditionGroup>
-          </conditionGroups>
-        </modifier>
         <modifier type="increment" field="b0b4-6aec-82c2-02ae" value="120.0">
           <repeats>
             <repeat field="selections" scope="b214-3bc6-1bb4-3e41" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e20c-48d8-e5e3-1a36" repeats="1" roundUp="false"/>
@@ -1522,6 +1514,25 @@ If the unit in which this unit is hidden is destroyed before this unit is releas
           </conditions>
         </modifier>
       </modifiers>
+      <modifierGroups>
+        <modifierGroup>
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="b543-cb16-0c79-fbc6" type="instanceOf"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="6cd6-b22e-bfcb-9589" type="instanceOf"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="e3a6-45ca-4974-b489" type="instanceOf"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="996a-613c-4006-25e3" type="instanceOf"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4373-740f-1bf3-b0aa" type="instanceOf"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+          <modifiers>
+            <modifier type="set-primary" field="category" value="6230-ed60-e374-add4"/>
+            <modifier type="remove" field="category" value="a42d-220e-6a88-7bf6"/>
+          </modifiers>
+        </modifierGroup>
+      </modifierGroups>
       <profiles>
         <profile id="dde6-3d5d-bc9f-37d6" name="Moonclan Shootas" hidden="false" typeId="3956-f6dd-6c88-ae4b" typeName="Unit">
           <characteristics>
@@ -1538,12 +1549,11 @@ If the unit in which this unit is hidden is destroyed before this unit is releas
         </profile>
       </profiles>
       <categoryLinks>
-        <categoryLink id="0235-868c-276b-c631" name="BATTLELINE" hidden="false" targetId="a42d-220e-6a88-7bf6" primary="false"/>
+        <categoryLink id="0235-868c-276b-c631" name="BATTLELINE" hidden="false" targetId="a42d-220e-6a88-7bf6" primary="true"/>
         <categoryLink id="0f36-bf37-c948-8e19" name="Destruction" hidden="false" targetId="5d33-469f-2bda-51f9" primary="false"/>
         <categoryLink id="4274-066b-8ace-a639" name="GLOOMSPITE GITZ" hidden="false" targetId="afbc-a227-f9ea-5aeb" primary="false"/>
         <categoryLink id="0c13-8f75-4719-eb61" name="Grot" hidden="false" targetId="136a-adac-f0f3-e167" primary="false"/>
         <categoryLink id="6078-4b34-879e-34d1" name="Moonclan" hidden="false" targetId="d204-ae0c-c18f-f10e" primary="false"/>
-        <categoryLink id="9a0e-6503-6cbc-d267" name="New CategoryLink" hidden="false" targetId="6230-ed60-e374-add4" primary="true"/>
         <categoryLink id="8342-b70e-ffdb-b4e7" name="Shootas" hidden="false" targetId="de8d-8304-cc3a-a5bd" primary="false"/>
       </categoryLinks>
       <selectionEntries>
@@ -1714,20 +1724,26 @@ If the unit in which this unit is hidden is destroyed before this unit is releas
             <condition field="selections" scope="f903-6b16-79bf-a259" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e20c-48d8-e5e3-1a36" type="greaterThan"/>
           </conditions>
         </modifier>
-        <modifier type="remove" field="category" value="a42d-220e-6a88-7bf6">
+      </modifiers>
+      <modifierGroups>
+        <modifierGroup>
           <conditionGroups>
             <conditionGroup type="or">
               <conditions>
-                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4373-740f-1bf3-b0aa" type="instanceOf"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="b543-cb16-0c79-fbc6" type="instanceOf"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="6cd6-b22e-bfcb-9589" type="instanceOf"/>
                 <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="e3a6-45ca-4974-b489" type="instanceOf"/>
                 <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="996a-613c-4006-25e3" type="instanceOf"/>
-                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="6cd6-b22e-bfcb-9589" type="instanceOf"/>
-                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="b543-cb16-0c79-fbc6" type="instanceOf"/>
+                <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4373-740f-1bf3-b0aa" type="instanceOf"/>
               </conditions>
             </conditionGroup>
           </conditionGroups>
-        </modifier>
-      </modifiers>
+          <modifiers>
+            <modifier type="set-primary" field="category" value="6230-ed60-e374-add4"/>
+            <modifier type="remove" field="category" value="a42d-220e-6a88-7bf6"/>
+          </modifiers>
+        </modifierGroup>
+      </modifierGroups>
       <profiles>
         <profile id="6ca3-634e-6645-5774" name="Squig Hoppers" hidden="false" typeId="3956-f6dd-6c88-ae4b" typeName="Unit">
           <characteristics>
@@ -1755,10 +1771,9 @@ If the unit in which this unit is hidden is destroyed before this unit is releas
         <categoryLink id="db72-047a-bdfe-cfd3" name="Destruction" hidden="false" targetId="5d33-469f-2bda-51f9" primary="false"/>
         <categoryLink id="03bf-4fc3-0980-dff5" name="GLOOMSPITE GITZ" hidden="false" targetId="afbc-a227-f9ea-5aeb" primary="false"/>
         <categoryLink id="e53e-67c0-030c-2e22" name="Moonclan" hidden="false" targetId="d204-ae0c-c18f-f10e" primary="false"/>
-        <categoryLink id="ec64-6aca-fea0-0c1b" name="New CategoryLink" hidden="false" targetId="6230-ed60-e374-add4" primary="true"/>
         <categoryLink id="4d38-a07c-9369-0ab8" name="Squig" hidden="false" targetId="f43a-d017-8766-5692" primary="false"/>
         <categoryLink id="3521-f113-b02f-c1fc" name="Squig Hoppers" hidden="false" targetId="f1ca-73be-194a-868a" primary="false"/>
-        <categoryLink id="d8ca-0e61-f2fb-03c2" name="Battleline" hidden="false" targetId="a42d-220e-6a88-7bf6" primary="false"/>
+        <categoryLink id="d8ca-0e61-f2fb-03c2" name="Battleline" hidden="false" targetId="a42d-220e-6a88-7bf6" primary="true"/>
       </categoryLinks>
       <selectionEntries>
         <selectionEntry id="5a7b-6977-6c40-a3e4" name="10 Squig Hoppers" hidden="false" collective="false" import="true" type="model">
