@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="0323-3d4f-ac64-f863" name="Chaos - Slaves to Darkness - Data" revision="23" battleScribeVersion="2.03" authorName="Thulram" library="true" gameSystemId="e832-3291-06be-cab1" gameSystemRevision="22" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="0323-3d4f-ac64-f863" name="Chaos - Slaves to Darkness - Data" revision="24" battleScribeVersion="2.03" authorName="Thulram" library="true" gameSystemId="e832-3291-06be-cab1" gameSystemRevision="23" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <profileTypes>
     <profileType id="6d8f-5fb8-9cc5-2146" name="Archaon Wounds">
       <characteristicTypes>
@@ -125,6 +125,11 @@
     <categoryEntry id="080d-5e55-4f18-0337" name="DARKOATH WILDERFIEND" hidden="false"/>
     <categoryEntry id="7e24-d887-ab7b-f218" name="DARKOATH MARAUDERS" hidden="false"/>
     <categoryEntry id="9020-b98f-fd37-6417" name="DARKOATH FELLRIDERS" hidden="false"/>
+    <categoryEntry id="904e-01ac-fa9b-5537" name="ABRAXIA" hidden="false"/>
+    <categoryEntry id="aa25-43c1-ef9d-5c41" name="GUNNAR BRAND" hidden="false"/>
+    <categoryEntry id="8584-47a8-13b4-d522" name="BRAND&apos;S OATHBOUND" hidden="false"/>
+    <categoryEntry id="4486-cec9-d606-3138" name="SINGRI BRAND" hidden="false"/>
+    <categoryEntry id="34f2-f466-2772-eaf1" name="THE OATHSWORN KIN" hidden="false"/>
   </categoryEntries>
   <sharedSelectionEntries>
     <selectionEntry id="b236-3f69-c15f-a954" name="Archaon the Everchosen" publicationId="3fe3-bddd-c287-5968" hidden="false" collective="false" import="true" type="unit">
@@ -7857,10 +7862,10 @@ Dark Might: For each 2+, heal 1 wound allocated to this unit. In addition, for e
       <categoryLinks>
         <categoryLink id="60f2-f7a2-21cc-1f6c" name="CHAOS" hidden="false" targetId="d8b4-9de1-926f-99b1" primary="false"/>
         <categoryLink id="d5d7-6918-acd3-cfea" name="DARKOATH" hidden="false" targetId="40e2-8158-edf7-a0e2" primary="false"/>
-        <categoryLink id="ca50-d9bf-ddf3-c37d" name="DARKOATH WILDERFIEND" hidden="false" targetId="080d-5e55-4f18-0337" primary="false"/>
         <categoryLink id="5b45-54a4-3774-a89f" name="New CategoryLink" hidden="false" targetId="6230-ed60-e374-add4" primary="true"/>
         <categoryLink id="a7fb-7337-9321-3754" name="SLAVES TO DARKNESS" hidden="false" targetId="7cc4-0f77-6518-a47d" primary="false"/>
         <categoryLink id="1332-ff74-7f11-e722" name="UNDIVIDED" hidden="false" targetId="99f6-bae0-b529-5f2d" primary="false"/>
+        <categoryLink id="9384-bede-9931-44c5" name="DARKOATH WILDERFIEND" hidden="false" targetId="080d-5e55-4f18-0337" primary="false"/>
       </categoryLinks>
       <selectionEntries>
         <selectionEntry id="425e-cf9f-f805-ba98" name="Razor-sharp Claws" hidden="false" collective="false" import="true" type="upgrade">
@@ -8317,6 +8322,402 @@ Dark Might: For each 2+, heal 1 wound allocated to this unit. In addition, for e
       <costs>
         <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="125.0"/>
       </costs>
+    </selectionEntry>
+    <selectionEntry id="7a6e-c419-6935-3bc3" name="Abraxia, Spear of the Everchosen" hidden="false" collective="false" import="true" type="unit">
+      <constraints>
+        <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="3a9e-56ef-d19f-cc83" type="max"/>
+      </constraints>
+      <profiles>
+        <profile id="b9cd-cd7c-5e2a-8628" name="Abraxia, Spear of the Everchosen" hidden="false" typeId="3956-f6dd-6c88-ae4b" typeName="Unit">
+          <characteristics>
+            <characteristic name="Move" typeId="5bbe-8910-4dfa-7b1c">10&quot;</characteristic>
+            <characteristic name="Wounds" typeId="a0c6-af64-2f24-5759">14</characteristic>
+            <characteristic name="Save" typeId="93b6-2f96-2df7-e330">4+</characteristic>
+            <characteristic name="Bravery" typeId="2420-1c5c-1016-7033">9</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="7805-be46-3a5e-945a" name="Gorbolga the Accurs&apos;d" hidden="false" typeId="7861-da01-01c0-88d9" typeName="Ability">
+          <characteristics>
+            <characteristic name="Ability" typeId="9bce-4deb-8b79-eaec">At the start of the combat phase, if this unit is within 3&quot; of any enemy units, roll a dice and look up the effect on the table below:
+
+D6  --  Effect
+
+1  --  Uncontrollable Power: This unit suffers 1 mortal wound.
+
+2-3  --  The Spear Slumbers: No effect.
+
+4-5  --  White-hot Varanite: Add 1 to the Damage characteristic of this unit’s Gorbolga until the end of the phase.
+
+6  --  Rampant Mutation: The effect of ‘White-hot Varanite’ applies (see above). In addition, until the end of the phase, for each unmodified hit roll of 6 for an attack made with this unit’s Gorbolga, after all of this unit’s attacks have been resolved, you can pick 1 enemy unit within 6&quot; of this unit to suffer D3 mortal wounds.</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="59b4-1081-0c05-03f1" name="Warpsteel Shield" hidden="false" typeId="7861-da01-01c0-88d9" typeName="Ability">
+          <characteristics>
+            <characteristic name="Ability" typeId="9bce-4deb-8b79-eaec">This unit has a ward of 4+ against mortal wounds.</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="f89a-e09f-e072-8be8" name="Blood of Molten Varanite" hidden="false" typeId="7861-da01-01c0-88d9" typeName="Ability">
+          <characteristics>
+            <characteristic name="Ability" typeId="9bce-4deb-8b79-eaec">Roll a dice each time a wound caused by an attack made with a melee weapon is allocated to this unit. On a 4+, the attacking unit suffers 1 mortal wound.</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="03e2-9cf5-c7a1-82e2" name="Warlord of the First Circle" hidden="false" typeId="7861-da01-01c0-88d9" typeName="Ability">
+          <characteristics>
+            <characteristic name="Ability" typeId="9bce-4deb-8b79-eaec">This unit can issue the same command up to 3 times in the same phase. If it does so, each command must be received by a friendly VARANGUARD unit. No command point is spent the second and third times this unit issues that command in that phase.</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <categoryLinks>
+        <categoryLink id="433d-b624-f28c-f73f" name="ABRAXIA" hidden="false" targetId="904e-01ac-fa9b-5537" primary="false"/>
+        <categoryLink id="ba4c-be78-52c3-875e" name="CHAOS" hidden="false" targetId="d8b4-9de1-926f-99b1" primary="false"/>
+        <categoryLink id="6401-b7ec-7354-0063" name="CHAOS LORD" hidden="false" targetId="066d-1a60-80e3-022c" primary="false"/>
+        <categoryLink id="0e9e-ce0f-966e-52ba" name="HERO" hidden="false" targetId="411f-dd41-4ab6-8a05" primary="false"/>
+        <categoryLink id="af16-4ef7-d30b-97c7" name="New CategoryLink" hidden="false" targetId="93cb-21d9-e1d5-6161" primary="true"/>
+        <categoryLink id="7656-4cf9-46af-13e5" name="MORTAL" hidden="false" targetId="ca90-b9b0-010b-72d0" primary="false"/>
+        <categoryLink id="19fa-1a79-d07f-abb6" name="MONSTER" hidden="false" targetId="e3bc-f9bd-b6f8-7afd" primary="false"/>
+        <categoryLink id="3d41-0634-c348-d4cf" name="SLAVES TO DARKNESS" hidden="false" targetId="7cc4-0f77-6518-a47d" primary="false"/>
+        <categoryLink id="d6fb-0eaf-e11d-defd" name="UNDIVIDED" hidden="false" targetId="99f6-bae0-b529-5f2d" primary="false"/>
+        <categoryLink id="8eda-2609-04e1-3b34" name="Unique" hidden="false" targetId="543e-1cc9-6d38-f8b3" primary="false"/>
+      </categoryLinks>
+      <selectionEntries>
+        <selectionEntry id="ae53-0083-4a24-af26" name="Mount" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="2335-46a0-4e97-0864" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8351-ffdf-6275-7d23" type="min"/>
+          </constraints>
+          <profiles>
+            <profile id="c671-c143-fa86-34c7" name="Mount" hidden="false" typeId="61e3-eba4-7222-dee7" typeName="Mount/Companion">
+              <characteristics>
+                <characteristic name="Mount/Companion" typeId="e368-06f5-5b4f-64a3">This unit’s mount, the Thanatorg, is armed with Vorpal Claws and Fangs.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <selectionEntries>
+            <selectionEntry id="6651-3ac4-7e65-a971" name="Vorpal Claws and Fangs" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="f4a9-a466-0495-3e37" type="max"/>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="82ae-abf2-31e8-b812" type="min"/>
+              </constraints>
+              <profiles>
+                <profile id="e853-8d20-17b1-021d" name="Vorpal Claws and Fangs" hidden="false" typeId="2905-f6bd-06e5-6642" typeName="Weapon">
+                  <characteristics>
+                    <characteristic name="Type" typeId="1a08-195b-76fd-2c2b">Melee</characteristic>
+                    <characteristic name="Range" typeId="1406-f935-3f8e-b27f">1&quot;</characteristic>
+                    <characteristic name="Attacks" typeId="4c19-dba6-f094-5165">6</characteristic>
+                    <characteristic name="To-Hit" typeId="7a4f-9704-2095-96c8">4+</characteristic>
+                    <characteristic name="To-Wound" typeId="172f-fc84-895b-04b7">3+</characteristic>
+                    <characteristic name="Rend" typeId="0c05-bd2e-b7e7-3925">-1</characteristic>
+                    <characteristic name="Damage" typeId="01c2-d16a-8788-e52b">D3</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntry>
+        <selectionEntry id="f99a-0284-adae-4ea9" name="Gorbolga" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="1665-5d3b-88a5-99c1" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="9388-a3ee-6059-eca6" type="min"/>
+          </constraints>
+          <profiles>
+            <profile id="21aa-91df-a0fd-82a5" name="Gorbolga" hidden="false" typeId="2905-f6bd-06e5-6642" typeName="Weapon">
+              <characteristics>
+                <characteristic name="Type" typeId="1a08-195b-76fd-2c2b">Melee</characteristic>
+                <characteristic name="Range" typeId="1406-f935-3f8e-b27f">2&quot;</characteristic>
+                <characteristic name="Attacks" typeId="4c19-dba6-f094-5165">5</characteristic>
+                <characteristic name="To-Hit" typeId="7a4f-9704-2095-96c8">3+</characteristic>
+                <characteristic name="To-Wound" typeId="172f-fc84-895b-04b7">3+</characteristic>
+                <characteristic name="Rend" typeId="0c05-bd2e-b7e7-3925">-</characteristic>
+                <characteristic name="Damage" typeId="01c2-d16a-8788-e52b">2</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+        </selectionEntry>
+      </selectionEntries>
+      <costs>
+        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="260.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="44bb-b053-dbdd-6c94" name="Gunnar Brand" hidden="false" collective="false" import="true" type="unit">
+      <profiles>
+        <profile id="0ae2-fbdd-d03e-c510" name="Gunnar Brand" hidden="false" typeId="3956-f6dd-6c88-ae4b" typeName="Unit">
+          <characteristics>
+            <characteristic name="Move" typeId="5bbe-8910-4dfa-7b1c">6&quot;</characteristic>
+            <characteristic name="Wounds" typeId="a0c6-af64-2f24-5759">6</characteristic>
+            <characteristic name="Save" typeId="93b6-2f96-2df7-e330">5+</characteristic>
+            <characteristic name="Bravery" typeId="2420-1c5c-1016-7033">8</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="c696-a5c1-388d-a213" name="Oath of Bloodshed" hidden="false" typeId="7861-da01-01c0-88d9" typeName="Ability">
+          <characteristics>
+            <characteristic name="Ability" typeId="9bce-4deb-8b79-eaec">The first time an enemy HERO is slain by an attack made by this unit, this unit fulfils its oath. Once this unit fulfils its oath, friendly BRAND’S OATHBOUND units have a ward of 4+ while they are wholly within 12&quot; of this unit.</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="2615-95bc-f0a2-5c3b" name="Carve a Path to Glory" hidden="false" typeId="7861-da01-01c0-88d9" typeName="Ability">
+          <characteristics>
+            <characteristic name="Ability" typeId="9bce-4deb-8b79-eaec">In the combat phase, after this unit has fought for the first time in that phase, when it is your turn to pick a unit to fight, this unit can be picked to fight for a second time if it is within 3&quot; of any enemy HEROES. All attacks made by this unit the second time it fights must target an enemy HERO.</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <categoryLinks>
+        <categoryLink id="cc99-7af4-bfb2-76bd" name="BRAND&apos;S OATHBOUND" hidden="false" targetId="8584-47a8-13b4-d522" primary="false"/>
+        <categoryLink id="4deb-580c-a2f8-32dd" name="CHAOS" hidden="false" targetId="d8b4-9de1-926f-99b1" primary="false"/>
+        <categoryLink id="1055-6c91-1b2d-50ea" name="DARKOATH" hidden="false" targetId="40e2-8158-edf7-a0e2" primary="false"/>
+        <categoryLink id="d5dd-9446-8efb-9204" name="EYE OF THE GODS" hidden="false" targetId="a0dd-b834-0aec-a408" primary="false"/>
+        <categoryLink id="063e-46b8-253a-c76a" name="GUNNAR BRAND" hidden="false" targetId="aa25-43c1-ef9d-5c41" primary="false"/>
+        <categoryLink id="9470-23f5-f74e-31ce" name="HERO" hidden="false" targetId="411f-dd41-4ab6-8a05" primary="false"/>
+        <categoryLink id="a822-b76b-eb5e-1f22" name="MORTAL" hidden="false" targetId="ca90-b9b0-010b-72d0" primary="false"/>
+        <categoryLink id="444c-c2d4-43c7-ae95" name="SLAVES TO DARKNESS" hidden="false" targetId="7cc4-0f77-6518-a47d" primary="false"/>
+        <categoryLink id="7d76-9e02-7b8c-5274" name="UNDIVIDED" hidden="false" targetId="99f6-bae0-b529-5f2d" primary="false"/>
+        <categoryLink id="96ae-34db-f79a-c66a" name="Unique" hidden="false" targetId="543e-1cc9-6d38-f8b3" primary="false"/>
+      </categoryLinks>
+      <selectionEntries>
+        <selectionEntry id="c2cf-bf8c-e3a6-a6f2" name="Dual Axes" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="5840-b594-0bc3-37cc" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="561e-0e55-c376-c6bf" type="min"/>
+          </constraints>
+          <profiles>
+            <profile id="9911-6e71-dbfb-c901" name="Dual Axes" hidden="false" typeId="2905-f6bd-06e5-6642" typeName="Weapon">
+              <characteristics>
+                <characteristic name="Type" typeId="1a08-195b-76fd-2c2b">Melee</characteristic>
+                <characteristic name="Range" typeId="1406-f935-3f8e-b27f">1&quot;</characteristic>
+                <characteristic name="Attacks" typeId="4c19-dba6-f094-5165">5</characteristic>
+                <characteristic name="To-Hit" typeId="7a4f-9704-2095-96c8">3+</characteristic>
+                <characteristic name="To-Wound" typeId="172f-fc84-895b-04b7">3+</characteristic>
+                <characteristic name="Rend" typeId="0c05-bd2e-b7e7-3925">-1</characteristic>
+                <characteristic name="Damage" typeId="01c2-d16a-8788-e52b">2</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+        </selectionEntry>
+      </selectionEntries>
+    </selectionEntry>
+    <selectionEntry id="be9b-26f8-c059-fb46" name="Singri Brand" hidden="false" collective="false" import="true" type="unit">
+      <profiles>
+        <profile id="43c2-9661-bbcd-c7b8" name="Singri Brand" hidden="false" typeId="3956-f6dd-6c88-ae4b" typeName="Unit">
+          <characteristics>
+            <characteristic name="Move" typeId="5bbe-8910-4dfa-7b1c">12&quot;</characteristic>
+            <characteristic name="Wounds" typeId="a0c6-af64-2f24-5759"></characteristic>
+            <characteristic name="Save" typeId="93b6-2f96-2df7-e330">5</characteristic>
+            <characteristic name="Bravery" typeId="2420-1c5c-1016-7033">6</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="e007-940f-a756-423e" name="Swift as the Wind" hidden="false" typeId="7861-da01-01c0-88d9" typeName="Ability">
+          <characteristics>
+            <characteristic name="Ability" typeId="9bce-4deb-8b79-eaec">Only unmodified hit rolls of 6 successfully score a hit for attacks that target this unit.</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <categoryLinks>
+        <categoryLink id="8b97-8066-1019-5b69" name="CHAOS" hidden="false" targetId="d8b4-9de1-926f-99b1" primary="false"/>
+        <categoryLink id="6a47-91f1-8940-1b6f" name="BRAND&apos;S OATHBOUND" hidden="false" targetId="8584-47a8-13b4-d522" primary="false"/>
+        <categoryLink id="488d-2c9a-c256-7884" name="DARKOATH" hidden="false" targetId="40e2-8158-edf7-a0e2" primary="false"/>
+        <categoryLink id="d984-bedc-654d-e9a6" name="EYE OF THE GODS" hidden="false" targetId="a0dd-b834-0aec-a408" primary="false"/>
+        <categoryLink id="2fbb-3e1b-bbef-f77e" name="MORTAL" hidden="false" targetId="ca90-b9b0-010b-72d0" primary="false"/>
+        <categoryLink id="cf74-eb59-4a3a-aedb" name="SINGRI BRAND" hidden="false" targetId="4486-cec9-d606-3138" primary="false"/>
+        <categoryLink id="47dc-d560-aed8-8958" name="SLAVES TO DARKNESS" hidden="false" targetId="7cc4-0f77-6518-a47d" primary="false"/>
+        <categoryLink id="70c5-79a7-1c80-76d7" name="UNDIVIDED" hidden="false" targetId="99f6-bae0-b529-5f2d" primary="false"/>
+        <categoryLink id="2c36-04e7-fc06-3212" name="Unique" hidden="false" targetId="543e-1cc9-6d38-f8b3" primary="false"/>
+      </categoryLinks>
+      <selectionEntries>
+        <selectionEntry id="989f-bc15-55dc-98cd" name="Mount" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="12c8-bf7f-e2d9-263a" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="290c-058f-9c0e-2994" type="min"/>
+          </constraints>
+          <profiles>
+            <profile id="dc5a-de87-8163-e38e" name="Mount" hidden="false" typeId="61e3-eba4-7222-dee7" typeName="Mount/Companion">
+              <characteristics>
+                <characteristic name="Mount/Companion" typeId="e368-06f5-5b4f-64a3">This unit’s Chaos Steed is armed with Trampling Hooves.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <selectionEntries>
+            <selectionEntry id="2d0e-d3fe-1765-c505" name="Trampling Hooves" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="b983-b9f8-0520-fdbf" type="max"/>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="ed17-5f16-7187-d09f" type="min"/>
+              </constraints>
+              <profiles>
+                <profile id="bc02-c267-f3c4-0ff5" name="Trampling Hooves" hidden="false" typeId="2905-f6bd-06e5-6642" typeName="Weapon">
+                  <characteristics>
+                    <characteristic name="Type" typeId="1a08-195b-76fd-2c2b">Melee</characteristic>
+                    <characteristic name="Range" typeId="1406-f935-3f8e-b27f">1&quot;</characteristic>
+                    <characteristic name="Attacks" typeId="4c19-dba6-f094-5165">2</characteristic>
+                    <characteristic name="To-Hit" typeId="7a4f-9704-2095-96c8">4+</characteristic>
+                    <characteristic name="To-Wound" typeId="172f-fc84-895b-04b7">4+</characteristic>
+                    <characteristic name="Rend" typeId="0c05-bd2e-b7e7-3925">-</characteristic>
+                    <characteristic name="Damage" typeId="01c2-d16a-8788-e52b">1</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntry>
+        <selectionEntry id="a9ff-0034-39c3-2f6d" name="Brand Ancestral Knife" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="7143-16ef-0324-da62" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="af06-311a-2818-7d20" type="min"/>
+          </constraints>
+          <profiles>
+            <profile id="7b27-0f2e-d4d0-e2cb" name="Brand Ancestral Knife" hidden="false" typeId="2905-f6bd-06e5-6642" typeName="Weapon">
+              <characteristics>
+                <characteristic name="Type" typeId="1a08-195b-76fd-2c2b">Melee</characteristic>
+                <characteristic name="Range" typeId="1406-f935-3f8e-b27f">1&quot;</characteristic>
+                <characteristic name="Attacks" typeId="4c19-dba6-f094-5165">3</characteristic>
+                <characteristic name="To-Hit" typeId="7a4f-9704-2095-96c8">3+</characteristic>
+                <characteristic name="To-Wound" typeId="172f-fc84-895b-04b7">4+</characteristic>
+                <characteristic name="Rend" typeId="0c05-bd2e-b7e7-3925">-1</characteristic>
+                <characteristic name="Damage" typeId="01c2-d16a-8788-e52b">1</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+        </selectionEntry>
+        <selectionEntry id="4e11-893c-7b76-35d4" name="Singri&apos;s Warbow" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="5f26-d264-ff3b-f503" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="b461-1720-5027-b4cb" type="min"/>
+          </constraints>
+          <profiles>
+            <profile id="a3f9-9fc6-b048-b7ab" name="Singri&apos;s Warbow" hidden="false" typeId="2905-f6bd-06e5-6642" typeName="Weapon">
+              <characteristics>
+                <characteristic name="Type" typeId="1a08-195b-76fd-2c2b">Missile</characteristic>
+                <characteristic name="Range" typeId="1406-f935-3f8e-b27f">18&quot;</characteristic>
+                <characteristic name="Attacks" typeId="4c19-dba6-f094-5165">2</characteristic>
+                <characteristic name="To-Hit" typeId="7a4f-9704-2095-96c8">3+</characteristic>
+                <characteristic name="To-Wound" typeId="172f-fc84-895b-04b7">3+</characteristic>
+                <characteristic name="Rend" typeId="0c05-bd2e-b7e7-3925">-1</characteristic>
+                <characteristic name="Damage" typeId="01c2-d16a-8788-e52b">D3</characteristic>
+              </characteristics>
+            </profile>
+            <profile id="9de0-d684-5eb7-5f14" name="Uncanny Shot" hidden="false" typeId="7861-da01-01c0-88d9" typeName="Ability">
+              <characteristics>
+                <characteristic name="Ability" typeId="9bce-4deb-8b79-eaec">If the unmodified hit roll for a shooting attack made by this unit is 6, and that attack targets an enemy unit within 6&quot; of a friendly GUNNAR BRAND, the target suffers D3 mortal wounds and the attack sequence ends.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+        </selectionEntry>
+      </selectionEntries>
+    </selectionEntry>
+    <selectionEntry id="0857-861c-c194-5c83" name="The Oathsworn Kin" hidden="false" collective="false" import="true" type="unit">
+      <profiles>
+        <profile id="a3a7-e542-9764-f7be" name="The Oathsworn Kin" hidden="false" typeId="3956-f6dd-6c88-ae4b" typeName="Unit">
+          <characteristics>
+            <characteristic name="Move" typeId="5bbe-8910-4dfa-7b1c">6&quot;</characteristic>
+            <characteristic name="Wounds" typeId="a0c6-af64-2f24-5759">3</characteristic>
+            <characteristic name="Save" typeId="93b6-2f96-2df7-e330">5+</characteristic>
+            <characteristic name="Bravery" typeId="2420-1c5c-1016-7033">6</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <categoryLinks>
+        <categoryLink id="80d8-5a52-483c-57ae" name="BRAND&apos;S OATHBOUND" hidden="false" targetId="8584-47a8-13b4-d522" primary="false"/>
+        <categoryLink id="bf71-2c21-b063-4fd3" name="CHAOS" hidden="false" targetId="d8b4-9de1-926f-99b1" primary="false"/>
+        <categoryLink id="a9ec-ecf4-324b-2eb8" name="EYE OF THE GODS" hidden="false" targetId="a0dd-b834-0aec-a408" primary="false"/>
+        <categoryLink id="6a20-fdbe-7828-6390" name="DARKOATH" hidden="false" targetId="40e2-8158-edf7-a0e2" primary="false"/>
+        <categoryLink id="4efc-1df3-a50b-2320" name="MORTAL" hidden="false" targetId="ca90-b9b0-010b-72d0" primary="false"/>
+        <categoryLink id="c4b8-a08f-98e8-da88" name="SLAVES TO DARKNESS" hidden="false" targetId="7cc4-0f77-6518-a47d" primary="false"/>
+        <categoryLink id="fec4-6924-1c63-1053" name="THE OATHSWORN KIN" hidden="false" targetId="34f2-f466-2772-eaf1" primary="false"/>
+        <categoryLink id="703c-46fd-8fd4-111f" name="UNDIVIDED" hidden="false" targetId="99f6-bae0-b529-5f2d" primary="false"/>
+        <categoryLink id="7b5d-f203-6c74-5348" name="Unique" hidden="false" targetId="543e-1cc9-6d38-f8b3" primary="false"/>
+        <categoryLink id="3d36-aa9a-366d-7784" name="WIZARD" hidden="false" targetId="7ee2-0d81-544f-5d7e" primary="false"/>
+      </categoryLinks>
+      <selectionEntries>
+        <selectionEntry id="d70f-e6cc-4084-a3f2" name="Broken Nadja" hidden="false" collective="false" import="true" type="model">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d783-1c74-56a9-b8a7" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="1412-d69c-e9c7-1893" type="min"/>
+          </constraints>
+          <profiles>
+            <profile id="2b97-8b15-6dff-8f03" name="Broken Nadja" hidden="false" typeId="a62b-2245-5c24-f8bc" typeName="Magic">
+              <characteristics>
+                <characteristic name="Cast/Unbind" typeId="9a5b-68ee-bc46-6a9d">Broken Nadja can attempt to cast 1 spell in your hero phase and attempt to unbind 1 spell in the enemy hero phase. No other models in this unit can attempt to cast or unbind spells.</characteristic>
+              </characteristics>
+            </profile>
+            <profile id="204e-d75a-50c1-3add" name="Withering Death" hidden="false" typeId="13da-11a8-b7d1-77a7" typeName="Spell">
+              <characteristics>
+                <characteristic name="Spell" typeId="1170-c916-1b73-ae34">Withering Death is a spell that has a casting value of 5 and a range of 18&quot;. If successful, pick 1 enemy HERO within range and visible to the caster. That enemy HERO suffers 1 mortal wound, and until the start of your next hero phase, subtract 1 from the Attacks characteristic of that HERO’s melee weapons.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <selectionEntries>
+            <selectionEntry id="70d5-04f5-549d-3f60" name="Gnarled Staff" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="0e1c-4c30-f3d1-dfee" type="max"/>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="f899-178c-0379-a88b" type="min"/>
+              </constraints>
+              <profiles>
+                <profile id="54f3-2cd7-3857-dc6e" name="Gnarled Staff" hidden="false" typeId="2905-f6bd-06e5-6642" typeName="Weapon">
+                  <characteristics>
+                    <characteristic name="Type" typeId="1a08-195b-76fd-2c2b">Melee</characteristic>
+                    <characteristic name="Range" typeId="1406-f935-3f8e-b27f">1&quot;</characteristic>
+                    <characteristic name="Attacks" typeId="4c19-dba6-f094-5165">2</characteristic>
+                    <characteristic name="To-Hit" typeId="7a4f-9704-2095-96c8">3+</characteristic>
+                    <characteristic name="To-Wound" typeId="172f-fc84-895b-04b7">3+</characteristic>
+                    <characteristic name="Rend" typeId="0c05-bd2e-b7e7-3925">-1</characteristic>
+                    <characteristic name="Damage" typeId="01c2-d16a-8788-e52b">D3</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntry>
+        <selectionEntry id="7410-261c-807a-1cad" name="Dendrel Direbrand" hidden="false" collective="false" import="true" type="model">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d8d8-8bf5-5237-3d18" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="b62f-eac2-348d-01f3" type="min"/>
+          </constraints>
+          <selectionEntries>
+            <selectionEntry id="e0e2-aa02-3fa2-ed48" name="Heavy Darkoath Weapon" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="cce2-7b22-4064-cf38" type="max"/>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="dd49-d661-c70a-9018" type="min"/>
+              </constraints>
+              <profiles>
+                <profile id="a956-ce5a-5f9c-41a5" name="Heavy Darkoath Weapon" hidden="false" typeId="2905-f6bd-06e5-6642" typeName="Weapon">
+                  <characteristics>
+                    <characteristic name="Type" typeId="1a08-195b-76fd-2c2b">Melee</characteristic>
+                    <characteristic name="Range" typeId="1406-f935-3f8e-b27f">1&quot;</characteristic>
+                    <characteristic name="Attacks" typeId="4c19-dba6-f094-5165">3</characteristic>
+                    <characteristic name="To-Hit" typeId="7a4f-9704-2095-96c8">3+</characteristic>
+                    <characteristic name="To-Wound" typeId="172f-fc84-895b-04b7">3+</characteristic>
+                    <characteristic name="Rend" typeId="0c05-bd2e-b7e7-3925">-1</characteristic>
+                    <characteristic name="Damage" typeId="01c2-d16a-8788-e52b">2</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntry>
+        <selectionEntry id="927c-e6bb-444b-4508" name="Warqueen Tanari" hidden="false" collective="false" import="true" type="model">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="efe3-d858-28e6-b091" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="bd32-f909-d0e1-2e44" type="min"/>
+          </constraints>
+          <selectionEntries>
+            <selectionEntry id="d2d6-f272-83e1-8f9f" name="Heavy Darkoath Weapon" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="1cbd-005a-b50a-3544" type="max"/>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="a3c3-25c8-1af5-932b" type="min"/>
+              </constraints>
+              <profiles>
+                <profile id="5901-5460-e13c-d794" name="Heavy Darkoath Weapon" hidden="false" typeId="2905-f6bd-06e5-6642" typeName="Weapon">
+                  <characteristics>
+                    <characteristic name="Type" typeId="1a08-195b-76fd-2c2b">Melee</characteristic>
+                    <characteristic name="Range" typeId="1406-f935-3f8e-b27f">1&quot;</characteristic>
+                    <characteristic name="Attacks" typeId="4c19-dba6-f094-5165">3</characteristic>
+                    <characteristic name="To-Hit" typeId="7a4f-9704-2095-96c8">3+</characteristic>
+                    <characteristic name="To-Wound" typeId="172f-fc84-895b-04b7">3+</characteristic>
+                    <characteristic name="Rend" typeId="0c05-bd2e-b7e7-3925">-1</characteristic>
+                    <characteristic name="Damage" typeId="01c2-d16a-8788-e52b">2</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntry>
+      </selectionEntries>
     </selectionEntry>
   </sharedSelectionEntries>
   <sharedProfiles>

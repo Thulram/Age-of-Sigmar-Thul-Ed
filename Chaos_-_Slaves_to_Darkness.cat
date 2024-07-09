@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="c8fd-e065-b7a9-a959" name="Chaos - Slaves to Darkness" revision="23" battleScribeVersion="2.03" authorName="Thulram" library="false" gameSystemId="e832-3291-06be-cab1" gameSystemRevision="22" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="c8fd-e065-b7a9-a959" name="Chaos - Slaves to Darkness" revision="24" battleScribeVersion="2.03" authorName="Thulram" library="false" gameSystemId="e832-3291-06be-cab1" gameSystemRevision="24" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <profileTypes>
     <profileType id="6d8f-5fb8-9cc5-2146" name="Archaon Wounds">
       <characteristicTypes>
@@ -545,6 +545,87 @@
       </entryLinks>
       <costs>
         <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="190.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="0786-f384-dd19-57fb" name="Terrain Feature - Nexus Chaotica" hidden="false" collective="false" import="true" type="upgrade">
+      <constraints>
+        <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="59fa-82db-285a-1fba" type="max"/>
+      </constraints>
+      <profiles>
+        <profile id="8055-3eae-bdd0-427e" name="Nexus Chaotica Set-Up" hidden="false" typeId="d508-c1d5-a06f-0103" typeName="Scenery Set-Up">
+          <characteristics>
+            <characteristic name="Set-Up Rules" typeId="fb13-8187-bb28-76fe">After territories are determined, you can set up this faction terrain feature wholly within your territory and more than 3&quot; from all objectives and other terrain features. If both players can set up faction terrain features at the same time, they must roll off and the winner chooses who sets up their faction terrain features first.
+
+Only Slaves to Darkness armies can include this faction terrain feature.</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="3360-a695-acf0-b48a" name="Corrupt the Realms" hidden="false" typeId="1c58-2b3d-482e-2a35" typeName="Scenery Rules">
+          <characteristics>
+            <characteristic name="Scenery Rule" typeId="a333-0c4a-7f67-677c">This terrain feature starts the battle with 0 power points. At the start of your hero phase, roll a dice and add the result to its power points total. It can never have more than 12 power points. Power points can be spent in the following ways:
+
+• Each time you pick a friendly WIZARD to attempt to cast a spell, if that WIZARD is within 3&quot; of this terrain feature, you can spend 3 of its power points. If you do so, add 1 to the casting roll for that attempt.
+
+• You can pick an objective or terrain feature and spend 9 of this terrain feature’s power points. If you do so, roll a dice. On a 2+, all enemy units contesting that objective or terrain feature suffer D3 mortal wounds (roll for each). On a 1, the Nexus Chaotica releases a pulse of mutating energies: all friendly units within 3&quot; of this terrain feature suffer D3 mortal wounds (roll for each).</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="7b22-c688-18ca-3c3b" name="Impassable" hidden="false" typeId="ce32-0c40-1990-4c8a" typeName="Restriction">
+          <characteristics>
+            <characteristic name="Restriction" typeId="edbe-5fe5-1142-afa6">You cannot move a model over this terrain feature unless it can fly, and you cannot move a model onto this terrain feature or set up a model on this terrain feature (even if it can fly).</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <categoryLinks>
+        <categoryLink id="0c60-4371-6690-cfce" name="Scenery" hidden="false" targetId="bab2-426b-5501-5fe8" primary="false"/>
+        <categoryLink id="1fdd-6af0-f1fd-9fde" name="New CategoryLink" hidden="false" targetId="29f4-e63d-fa5b-1611" primary="true"/>
+      </categoryLinks>
+      <costs>
+        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="7beb-8af5-7491-ccbb" name="Gunnar &amp; Singri Brand + Oathsworn Kin (separate units)" hidden="false" collective="false" import="true" type="upgrade">
+      <constraints>
+        <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="d2f0-9754-c382-f05c" type="max"/>
+      </constraints>
+      <categoryLinks>
+        <categoryLink id="8b45-250d-38d9-9761" name="New CategoryLink" hidden="false" targetId="93cb-21d9-e1d5-6161" primary="true"/>
+      </categoryLinks>
+      <entryLinks>
+        <entryLink id="7c00-6072-df9e-a047" name="Gunnar Brand" hidden="false" collective="false" import="true" targetId="44bb-b053-dbdd-6c94" type="selectionEntry">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="e15e-762e-1c71-c5b3" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="995e-386c-0c58-8306" type="min"/>
+          </constraints>
+          <entryLinks>
+            <entryLink id="ee54-5a24-7467-a861" name="General" hidden="false" collective="false" import="true" targetId="98a4-3d6d-a7b9-399f" type="selectionEntry">
+              <categoryLinks>
+                <categoryLink id="d182-b0c2-0fc7-80f9" name="General - DARKOATH" hidden="false" targetId="e64f-9bb3-f49e-d61b" primary="false"/>
+                <categoryLink id="9174-07c9-b3e2-9e4e" name="Named General" hidden="false" targetId="8b3d-7f03-e1f9-eaf5" primary="false"/>
+              </categoryLinks>
+            </entryLink>
+            <entryLink id="6e1d-3885-4c09-d582" name="Battalion Formation" hidden="false" collective="false" import="true" targetId="b2f4-d86d-5ac0-67b4" type="selectionEntryGroup"/>
+          </entryLinks>
+        </entryLink>
+        <entryLink id="5e61-2cb1-e33d-7884" name="Singri Brand" hidden="false" collective="false" import="true" targetId="be9b-26f8-c059-fb46" type="selectionEntry">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="0504-152a-7c29-b83d" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="364b-7b0b-e6dc-4c80" type="min"/>
+          </constraints>
+          <entryLinks>
+            <entryLink id="a4bd-5dc3-75b3-868d" name="Battalion Formation" hidden="false" collective="false" import="true" targetId="b2f4-d86d-5ac0-67b4" type="selectionEntryGroup"/>
+          </entryLinks>
+        </entryLink>
+        <entryLink id="ff50-1421-1d65-c7e9" name="The Oathsworn Kin" hidden="false" collective="false" import="true" targetId="0857-861c-c194-5c83" type="selectionEntry">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="4e83-3c73-945c-1c06" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="83fa-1bee-bc17-7fdb" type="min"/>
+          </constraints>
+          <entryLinks>
+            <entryLink id="ebbe-3b3a-374e-64bd" name="Battalion Formation" hidden="false" collective="false" import="true" targetId="b2f4-d86d-5ac0-67b4" type="selectionEntryGroup"/>
+          </entryLinks>
+        </entryLink>
+      </entryLinks>
+      <costs>
+        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="260.0"/>
       </costs>
     </selectionEntry>
   </selectionEntries>
@@ -1094,6 +1175,16 @@
     <entryLink id="d17e-219b-6a3d-bf7b" name="Darkoath Wilderfiend" hidden="false" collective="false" import="true" targetId="ce38-8dc1-c289-6d6d" type="selectionEntry">
       <entryLinks>
         <entryLink id="2277-1e3e-4211-1977" name="Battalion Formation" hidden="false" collective="false" import="true" targetId="b2f4-d86d-5ac0-67b4" type="selectionEntryGroup"/>
+      </entryLinks>
+    </entryLink>
+    <entryLink id="73c5-e335-1bc5-26ef" name="Abraxia, Spear of the Everchosen" hidden="false" collective="false" import="true" targetId="7a6e-c419-6935-3bc3" type="selectionEntry">
+      <entryLinks>
+        <entryLink id="87bd-2742-987c-43cc" name="General" hidden="false" collective="false" import="true" targetId="98a4-3d6d-a7b9-399f" type="selectionEntry">
+          <categoryLinks>
+            <categoryLink id="7b4a-4c84-c69d-efd1" name="Named General" hidden="false" targetId="8b3d-7f03-e1f9-eaf5" primary="false"/>
+          </categoryLinks>
+        </entryLink>
+        <entryLink id="3883-dcf7-63da-fdba" name="Battalion Formation" hidden="false" collective="false" import="true" targetId="b2f4-d86d-5ac0-67b4" type="selectionEntryGroup"/>
       </entryLinks>
     </entryLink>
   </entryLinks>
