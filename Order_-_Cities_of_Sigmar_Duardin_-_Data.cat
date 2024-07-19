@@ -1,17 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="7399-a48d-8928-2889" name="Order - Cities of Sigmar Duardin - Data" revision="11" battleScribeVersion="2.03" authorName="Thulram" library="true" gameSystemId="e832-3291-06be-cab1" gameSystemRevision="10" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="7399-a48d-8928-2889" name="Order - Cities of Sigmar Duardin - Data" revision="12" battleScribeVersion="2.03" authorName="Thulram" library="true" gameSystemId="e832-3291-06be-cab1" gameSystemRevision="11" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <categoryEntries>
-    <categoryEntry id="9d48-97e2-eb19-edbe" name="DISPOSSESSED" hidden="false"/>
-    <categoryEntry id="0416-6c61-913d-ee62" name="WARDEN KING" hidden="false"/>
-    <categoryEntry id="f869-110c-efe6-11cf" name="RUNELORD" hidden="false"/>
-    <categoryEntry id="8bb9-53eb-b3b6-ce74" name="LONGBEARDS" hidden="false"/>
-    <categoryEntry id="5bf9-4126-2b10-69f6" name="IRONDRAKES" hidden="false"/>
-    <categoryEntry id="2e69-150c-921c-c16c" name="IRONBREAKERS" hidden="false"/>
-    <categoryEntry id="d831-ebc4-e94f-0cca" name="HAMMERERS" hidden="false"/>
-    <categoryEntry id="2390-51f0-d286-dc3f" name="COGSMITH" hidden="false"/>
-    <categoryEntry id="402d-8beb-90c9-cd91" name="IRONWELD ARSENAL" hidden="false"/>
-    <categoryEntry id="3430-be36-26d9-df75" name="GYROCOPTERS" hidden="false"/>
-    <categoryEntry id="2655-860b-fa60-be2f" name="GYROBOMBER" hidden="false"/>
     <categoryEntry id="2eb2-b65f-2516-1dc2" name="RoR - Cities of Sigmar" hidden="false"/>
   </categoryEntries>
   <sharedSelectionEntries>
@@ -20,47 +9,60 @@
         <profile id="bcf4-599a-80c4-af7e" name="Warden King" hidden="false" typeId="3956-f6dd-6c88-ae4b" typeName="Unit">
           <characteristics>
             <characteristic name="Move" typeId="5bbe-8910-4dfa-7b1c">4&quot;</characteristic>
-            <characteristic name="Wounds" typeId="a0c6-af64-2f24-5759">6</characteristic>
+            <characteristic name="Health" typeId="a0c6-af64-2f24-5759">5</characteristic>
             <characteristic name="Save" typeId="93b6-2f96-2df7-e330">3+</characteristic>
-            <characteristic name="Bravery" typeId="2420-1c5c-1016-7033">8</characteristic>
+            <characteristic name="Control" typeId="2420-1c5c-1016-7033">2</characteristic>
           </characteristics>
         </profile>
         <profile id="3a23-887b-89f2-510b" name="Fearless Leader" hidden="false" typeId="7861-da01-01c0-88d9" typeName="Ability">
           <characteristics>
-            <characteristic name="Ability" typeId="9bce-4deb-8b79-eaec">In the combat phase, after this unit has fought for the first time in that phase, you can pick 1 friendly CITIES OF SIGMAR DUARDIN unit that has not yet fought in that phase, is within 3&quot; of an enemy unit and is wholly within 12&quot; of this unit. That unit can fight immediately.</characteristic>
+            <characteristic name="Use" typeId="9bce-4deb-8b79-eaec">Reaction: You declared a FIGHT ability for this unit</characteristic>
+            <characteristic name="Declare" typeId="f9c7-7dae-69e1-f924">-</characteristic>
+            <characteristic name="Effect" typeId="7d15-5e9e-83a9-d696">Pick a friendly non-HERO CITIES OF SIGMAR DUARDIN unit that has not used a FIGHT ability this turn and is within this unit’s combat range to be the target. The target can be picked to use a FIGHT ability immediately after the FIGHT ability of this unit has been resolved.</characteristic>
           </characteristics>
         </profile>
         <profile id="b37e-6fa7-c611-60a5" name="Ancestral Grudgebearer" hidden="false" typeId="7861-da01-01c0-88d9" typeName="Ability">
           <characteristics>
-            <characteristic name="Ability" typeId="9bce-4deb-8b79-eaec">If this unit is picked to be your general, at the start of first battle round, you can pick 1 enemy unit to bear a grudge against. If you do so, until the end of the battle, if the unmodified hit roll for an attack made with a melee weapon by a friendly CITIES OF SIGMAR DUARDIN unit that targets that enemy unit is 6, that attack automatically wounds the target (do not make a wound roll).</characteristic>
+            <characteristic name="Use" typeId="9bce-4deb-8b79-eaec">Once Per Battle (Army), Deployment Phase</characteristic>
+            <characteristic name="Declare" typeId="f9c7-7dae-69e1-f924">Pick an enemy unit in your opponent’s army to bear a grudge against. You can pick an enemy unit that is in reserve.</characteristic>
+            <characteristic name="Effect" typeId="7d15-5e9e-83a9-d696">For the rest of the battle, add 1 to wound rolls for combat attacks made by friendly CITIES OF SIGMAR DUARDIN units that target that unit.</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="55af-a78c-bfb4-8104" name="Warden King" hidden="false" typeId="c23b-5a30-07e2-4706" typeName="Warscroll Extras">
+          <characteristics>
+            <characteristic name="WIZARD" typeId="67b3-6f8b-2116-2a27">-</characteristic>
+            <characteristic name="PRIEST" typeId="02ab-4d58-5c31-767e">-</characteristic>
+            <characteristic name="WARD" typeId="40a4-4432-32da-74d9">-</characteristic>
+            <characteristic name="CHAMPION" typeId="dccd-b70a-d225-5e37">-</characteristic>
+            <characteristic name="MUSICIAN" typeId="053d-5038-d84a-3aa3">-</characteristic>
+            <characteristic name="STANDARD BEARER" typeId="ccb7-3ee4-5637-586e">-</characteristic>
           </characteristics>
         </profile>
       </profiles>
       <categoryLinks>
         <categoryLink id="4acd-d889-f16d-cb42" name="CITIES OF SIGMAR" hidden="false" targetId="d20b-b22a-23ee-3ca1" primary="false"/>
-        <categoryLink id="e2bd-4e52-93f0-c8cd" name="Dispossessed" hidden="false" targetId="9d48-97e2-eb19-edbe" primary="false"/>
         <categoryLink id="9925-a100-13e3-1c66" name="Duardin" hidden="false" targetId="3434-9baa-1e9a-4ebd" primary="false"/>
-        <categoryLink id="1b66-b8be-9d9b-dad0" name="Hero" hidden="false" targetId="411f-dd41-4ab6-8a05" primary="false"/>
-        <categoryLink id="2488-30b3-ec51-5402" name="New CategoryLink" hidden="false" targetId="93cb-21d9-e1d5-6161" primary="true"/>
+        <categoryLink id="1b66-b8be-9d9b-dad0" name="Hero" hidden="false" targetId="411f-dd41-4ab6-8a05" primary="true"/>
         <categoryLink id="20d3-9b65-7fb4-af92" name="Order" hidden="false" targetId="90c6-6c11-9677-1fa8" primary="false"/>
-        <categoryLink id="c805-5b8e-d079-d06b" name="WARDEN KING" hidden="false" targetId="0416-6c61-913d-ee62" primary="false"/>
+        <categoryLink id="b1c8-9901-b3d0-0238" name="INFANTRY" hidden="false" targetId="25bf-7a1c-60fc-7e12" primary="false"/>
       </categoryLinks>
       <selectionEntries>
-        <selectionEntry id="69a8-8049-08ed-16b2" name="Rune Hammer" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="69a8-8049-08ed-16b2" name="Runic Hammer" hidden="false" collective="false" import="true" type="upgrade">
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="dd3f-1804-8cce-e143" type="max"/>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="141a-38dd-0b49-230d" type="min"/>
           </constraints>
           <profiles>
-            <profile id="1032-0c56-4f8d-c196" name="Rune Hammer" hidden="false" typeId="2905-f6bd-06e5-6642" typeName="Weapon">
+            <profile id="1032-0c56-4f8d-c196" name="Runic Hammer" hidden="false" typeId="2905-f6bd-06e5-6642" typeName="Weapon">
               <characteristics>
                 <characteristic name="Type" typeId="1a08-195b-76fd-2c2b">Melee</characteristic>
-                <characteristic name="Range" typeId="1406-f935-3f8e-b27f">1&quot;</characteristic>
+                <characteristic name="Range" typeId="1406-f935-3f8e-b27f">-</characteristic>
                 <characteristic name="Attacks" typeId="4c19-dba6-f094-5165">5</characteristic>
                 <characteristic name="To-Hit" typeId="7a4f-9704-2095-96c8">3+</characteristic>
                 <characteristic name="To-Wound" typeId="172f-fc84-895b-04b7">3+</characteristic>
-                <characteristic name="Rend" typeId="0c05-bd2e-b7e7-3925">-2</characteristic>
-                <characteristic name="Damage" typeId="01c2-d16a-8788-e52b">D3</characteristic>
+                <characteristic name="Rend" typeId="0c05-bd2e-b7e7-3925">2</characteristic>
+                <characteristic name="Damage" typeId="01c2-d16a-8788-e52b">2</characteristic>
+                <characteristic name="Ability" typeId="0a53-8ba4-d02a-fc50">-</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -70,7 +72,7 @@
         </selectionEntry>
       </selectionEntries>
       <costs>
-        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="110.0"/>
+        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="150.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="7358-9443-268c-eb5d" name="Runelord" publicationId="88ce-c2fe-b89c-ed48" hidden="false" collective="false" import="true" type="unit">
@@ -78,35 +80,41 @@
         <profile id="6329-9e9e-e622-fef8" name="Runelord" hidden="false" typeId="3956-f6dd-6c88-ae4b" typeName="Unit">
           <characteristics>
             <characteristic name="Move" typeId="5bbe-8910-4dfa-7b1c">4&quot;</characteristic>
-            <characteristic name="Wounds" typeId="a0c6-af64-2f24-5759">5</characteristic>
-            <characteristic name="Save" typeId="93b6-2f96-2df7-e330">4+</characteristic>
-            <characteristic name="Bravery" typeId="2420-1c5c-1016-7033">7</characteristic>
+            <characteristic name="Health" typeId="a0c6-af64-2f24-5759">5</characteristic>
+            <characteristic name="Save" typeId="93b6-2f96-2df7-e330">3+</characteristic>
+            <characteristic name="Control" typeId="2420-1c5c-1016-7033">2</characteristic>
           </characteristics>
         </profile>
         <profile id="008c-6cfc-933f-d6a6" name="Runes of Spellbreaking" hidden="false" typeId="7861-da01-01c0-88d9" typeName="Ability">
           <characteristics>
-            <characteristic name="Ability" typeId="9bce-4deb-8b79-eaec">This unit can attempt to unbind one spell in the enemy hero phase in the same manner as a WIZARD.</characteristic>
+            <characteristic name="Use" typeId="9bce-4deb-8b79-eaec">Passive</characteristic>
+            <characteristic name="Declare" typeId="f9c7-7dae-69e1-f924"></characteristic>
+            <characteristic name="Effect" typeId="7d15-5e9e-83a9-d696">This unit can use the ‘Unbind’ ability as if it had WIZARD (1).</characteristic>
           </characteristics>
         </profile>
-        <profile id="9ac9-225c-9e9b-208e" name="Forgefire" hidden="false" typeId="161a-85bd-f19e-a5a7" typeName="Prayer">
+        <profile id="9ac9-225c-9e9b-208e" name="Forgefire (5)" hidden="false" typeId="161a-85bd-f19e-a5a7" typeName="PRAYER">
           <characteristics>
-            <characteristic name="Prayer" typeId="19bc-965a-768d-defa">Forgefire is a prayer that has an answer value of 4 and a range of 18&quot;. If answered, pick 1 friendly CITIES OF SIGMAR DUARDIN unit wholly within range and visible to the chanter. Until the start of your next hero phase, improve the Rend characteristic of that unit’s melee weapons by 1.</characteristic>
+            <characteristic name="Declare" typeId="19bc-965a-768d-defa">Pick a friendly CITIES OF SIGMAR DUARDIN unit wholly within 12&quot; of this unit to be the target, then make a chanting roll of D6.</characteristic>
+            <characteristic name="Effect" typeId="0bc2-1357-3589-5c61">Until the start of your next turn, add 1 to the Rend characteristic of the target’s melee weapons. In addition, if the chanting roll was 10+, pick another friendly CITIES OF SIGMAR DUARDIN unit wholly within 12&quot; of this unit. Add 1 to the Rend characteristic of that unit’s melee weapons until the start of your next turn as well.</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="089c-f8b2-a99e-b885" name="Runelord" hidden="false" typeId="c23b-5a30-07e2-4706" typeName="Warscroll Extras">
+          <characteristics>
+            <characteristic name="WIZARD" typeId="67b3-6f8b-2116-2a27">-</characteristic>
+            <characteristic name="PRIEST" typeId="02ab-4d58-5c31-767e">1</characteristic>
+            <characteristic name="WARD" typeId="40a4-4432-32da-74d9">-</characteristic>
+            <characteristic name="CHAMPION" typeId="dccd-b70a-d225-5e37">-</characteristic>
+            <characteristic name="MUSICIAN" typeId="053d-5038-d84a-3aa3"></characteristic>
+            <characteristic name="STANDARD BEARER" typeId="ccb7-3ee4-5637-586e">-</characteristic>
           </characteristics>
         </profile>
       </profiles>
-      <infoLinks>
-        <infoLink id="288e-ab74-6357-4ff0" name="Smite" hidden="false" targetId="7b66-5f0a-449f-f31a" type="profile"/>
-        <infoLink id="1ff3-2da5-f084-4936" name="Bless" hidden="false" targetId="4c4a-18dc-6a53-5355" type="profile"/>
-      </infoLinks>
       <categoryLinks>
         <categoryLink id="ba36-e9ac-ef85-3ec1" name="CITIES OF SIGMAR" hidden="false" targetId="d20b-b22a-23ee-3ca1" primary="false"/>
-        <categoryLink id="a5ba-17db-f72c-9417" name="Dispossessed" hidden="false" targetId="9d48-97e2-eb19-edbe" primary="false"/>
         <categoryLink id="19ae-7bae-a064-96d7" name="Duardin" hidden="false" targetId="3434-9baa-1e9a-4ebd" primary="false"/>
-        <categoryLink id="c2eb-95ed-c26d-ad8e" name="Hero" hidden="false" targetId="411f-dd41-4ab6-8a05" primary="false"/>
-        <categoryLink id="6c81-36ae-a4c9-6c29" name="New CategoryLink" hidden="false" targetId="93cb-21d9-e1d5-6161" primary="true"/>
+        <categoryLink id="c2eb-95ed-c26d-ad8e" name="Hero" hidden="false" targetId="411f-dd41-4ab6-8a05" primary="true"/>
         <categoryLink id="cade-9822-6025-92fd" name="Order" hidden="false" targetId="90c6-6c11-9677-1fa8" primary="false"/>
-        <categoryLink id="4338-74cc-e0a8-f483" name="Priest" hidden="false" targetId="f0a9-dd66-8662-61ce" primary="false"/>
-        <categoryLink id="7e2e-f04a-3c40-2e73" name="Runelord" hidden="false" targetId="f869-110c-efe6-11cf" primary="false"/>
+        <categoryLink id="ab59-439d-7f85-76d6" name="INFANTRY" hidden="false" targetId="25bf-7a1c-60fc-7e12" primary="false"/>
       </categoryLinks>
       <selectionEntries>
         <selectionEntry id="36ac-bfcf-a3b9-9e73" name="Rune Staff and Forgehammer" hidden="false" collective="false" import="true" type="upgrade">
@@ -118,12 +126,13 @@
             <profile id="6c23-8216-ea44-b6be" name="Rune Staff and Forgehammer" hidden="false" typeId="2905-f6bd-06e5-6642" typeName="Weapon">
               <characteristics>
                 <characteristic name="Type" typeId="1a08-195b-76fd-2c2b">Melee</characteristic>
-                <characteristic name="Range" typeId="1406-f935-3f8e-b27f">1&quot;</characteristic>
+                <characteristic name="Range" typeId="1406-f935-3f8e-b27f">-</characteristic>
                 <characteristic name="Attacks" typeId="4c19-dba6-f094-5165">3</characteristic>
-                <characteristic name="To-Hit" typeId="7a4f-9704-2095-96c8">3+</characteristic>
+                <characteristic name="To-Hit" typeId="7a4f-9704-2095-96c8">4+</characteristic>
                 <characteristic name="To-Wound" typeId="172f-fc84-895b-04b7">3+</characteristic>
-                <characteristic name="Rend" typeId="0c05-bd2e-b7e7-3925">-</characteristic>
+                <characteristic name="Rend" typeId="0c05-bd2e-b7e7-3925">1</characteristic>
                 <characteristic name="Damage" typeId="01c2-d16a-8788-e52b">D3</characteristic>
+                <characteristic name="Ability" typeId="0a53-8ba4-d02a-fc50">-</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -133,70 +142,60 @@
         </selectionEntry>
       </selectionEntries>
       <costs>
-        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="90.0"/>
+        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="120.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="4050-5f67-9ee9-424f" name="Longbeards" publicationId="88ce-c2fe-b89c-ed48" hidden="false" collective="false" import="true" type="unit">
       <modifiers>
-        <modifier type="remove" field="category" value="a42d-220e-6a88-7bf6">
-          <conditionGroups>
-            <conditionGroup type="or">
-              <conditions>
-                <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="b543-cb16-0c79-fbc6" type="instanceOf"/>
-                <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="6cd6-b22e-bfcb-9589" type="instanceOf"/>
-                <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="e3a6-45ca-4974-b489" type="instanceOf"/>
-                <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="996a-613c-4006-25e3" type="instanceOf"/>
-                <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4373-740f-1bf3-b0aa" type="instanceOf"/>
-              </conditions>
-            </conditionGroup>
-          </conditionGroups>
-        </modifier>
-        <modifier type="increment" field="b0b4-6aec-82c2-02ae" value="130.0">
-          <repeats>
-            <repeat field="selections" scope="4050-5f67-9ee9-424f" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e20c-48d8-e5e3-1a36" repeats="1" roundUp="false"/>
-          </repeats>
+        <modifier type="increment" field="b0b4-6aec-82c2-02ae" value="120.0">
           <conditions>
-            <condition field="selections" scope="4050-5f67-9ee9-424f" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e20c-48d8-e5e3-1a36" type="greaterThan"/>
+            <condition field="selections" scope="4050-5f67-9ee9-424f" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2f0d-f5ca-5317-56c4" type="greaterThan"/>
           </conditions>
         </modifier>
       </modifiers>
       <profiles>
         <profile id="56ef-9c8e-40b8-80c6" name="Longbeards" hidden="false" typeId="3956-f6dd-6c88-ae4b" typeName="Unit">
-          <modifiers>
-            <modifier type="set" field="93b6-2f96-2df7-e330" value="3+">
-              <conditions>
-                <condition field="selections" scope="4050-5f67-9ee9-424f" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="a745-97f3-a4f1-e83b" type="greaterThan"/>
-              </conditions>
-            </modifier>
-          </modifiers>
           <characteristics>
             <characteristic name="Move" typeId="5bbe-8910-4dfa-7b1c">4&quot;</characteristic>
-            <characteristic name="Wounds" typeId="a0c6-af64-2f24-5759">1</characteristic>
-            <characteristic name="Save" typeId="93b6-2f96-2df7-e330">4+</characteristic>
-            <characteristic name="Bravery" typeId="2420-1c5c-1016-7033">8</characteristic>
+            <characteristic name="Health" typeId="a0c6-af64-2f24-5759">1</characteristic>
+            <characteristic name="Save" typeId="93b6-2f96-2df7-e330">3+</characteristic>
+            <characteristic name="Control" typeId="2420-1c5c-1016-7033">1</characteristic>
           </characteristics>
         </profile>
-        <profile id="5cf8-697a-e98d-fd58" name="I Thought Duardin Were Made of Sterner Stuff!" hidden="false" typeId="7861-da01-01c0-88d9" typeName="Ability">
+        <profile id="5cf8-697a-e98d-fd58" name="&apos;I Thought Duardin Were Made of Sterner Stuff!&apos;" hidden="false" typeId="7861-da01-01c0-88d9" typeName="Ability">
           <characteristics>
-            <characteristic name="Ability" typeId="9bce-4deb-8b79-eaec">Each time a model would flee from a friendly CITIES OF SIGMAR DUARDIN unit that is wholly within 12&quot; of any friendly units with this ability, roll a dice. On a 4+, that model does not flee.</characteristic>
+            <characteristic name="Use" typeId="9bce-4deb-8b79-eaec">Passive</characteristic>
+            <characteristic name="Declare" typeId="f9c7-7dae-69e1-f924">-</characteristic>
+            <characteristic name="Effect" typeId="7d15-5e9e-83a9-d696">Add 2 to the control scores of friendly CITIES OF SIGMAR DUARDIN units, excluding Longbeards units, while they are wholly within 12&quot; of this unit.</characteristic>
           </characteristics>
         </profile>
-        <profile id="4d8d-fca8-df4a-2d80" name="Champion" hidden="false" typeId="c23b-5a30-07e2-4706" typeName="Unit Options">
+        <profile id="1eb9-57c3-7d48-5e9f" name="Longbeards" hidden="false" typeId="c23b-5a30-07e2-4706" typeName="Warscroll Extras">
           <characteristics>
-            <characteristic name="Unit Option" typeId="5879-9a21-e9d2-539d">1 model in this unit can be an Old Guard. Add 1 to the Attacks characteristic of that model’s melee weapons.</characteristic>
+            <characteristic name="WIZARD" typeId="67b3-6f8b-2116-2a27">-</characteristic>
+            <characteristic name="PRIEST" typeId="02ab-4d58-5c31-767e">-</characteristic>
+            <characteristic name="WARD" typeId="40a4-4432-32da-74d9">-</characteristic>
+            <characteristic name="CHAMPION" typeId="dccd-b70a-d225-5e37">Yes</characteristic>
+            <characteristic name="MUSICIAN" typeId="053d-5038-d84a-3aa3">1/10</characteristic>
+            <characteristic name="STANDARD BEARER" typeId="ccb7-3ee4-5637-586e">1/10</characteristic>
           </characteristics>
         </profile>
       </profiles>
       <categoryLinks>
         <categoryLink id="cf4c-059d-9f9c-395e" name="CITIES OF SIGMAR" hidden="false" targetId="d20b-b22a-23ee-3ca1" primary="false"/>
-        <categoryLink id="7330-1b06-891b-8247" name="Dispossessed" hidden="false" targetId="9d48-97e2-eb19-edbe" primary="false"/>
         <categoryLink id="5fae-8b37-618e-7dc2" name="Duardin" hidden="false" targetId="3434-9baa-1e9a-4ebd" primary="false"/>
-        <categoryLink id="d101-20a6-8e90-c082" name="Longbeards" hidden="false" targetId="8bb9-53eb-b3b6-ce74" primary="false"/>
         <categoryLink id="66fa-0add-fa6b-cb67" name="Order" hidden="false" targetId="90c6-6c11-9677-1fa8" primary="false"/>
-        <categoryLink id="6db6-62b5-05f4-8899" name="BATTLELINE" hidden="false" targetId="a42d-220e-6a88-7bf6" primary="true"/>
+        <categoryLink id="8dd1-5cf1-9176-d240" name="INFANTRY" hidden="false" targetId="25bf-7a1c-60fc-7e12" primary="false"/>
+        <categoryLink id="42bf-ee55-b790-fc01" name="New CategoryLink" hidden="false" targetId="6230-ed60-e374-add4" primary="true"/>
       </categoryLinks>
       <selectionEntries>
         <selectionEntry id="db95-d37e-66fa-c22d" name="10 Longbeards" hidden="false" collective="false" import="true" type="model">
+          <modifiers>
+            <modifier type="set" field="name" value="20 Longbeards">
+              <conditions>
+                <condition field="selections" scope="4050-5f67-9ee9-424f" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2f0d-f5ca-5317-56c4" type="greaterThan"/>
+              </conditions>
+            </modifier>
+          </modifiers>
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="e3fa-a48c-0a0e-245a" type="max"/>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="5320-0023-3812-fe4b" type="min"/>
@@ -205,128 +204,39 @@
             <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
           </costs>
         </selectionEntry>
-      </selectionEntries>
-      <selectionEntryGroups>
-        <selectionEntryGroup id="736e-8dde-d337-2383" name="Weapon Option" hidden="false" collective="false" import="true" defaultSelectionEntryId="3cce-5df9-62c2-fcd9">
+        <selectionEntry id="ffc4-114b-1302-daf3" name="Hallowed Weapons" hidden="false" collective="false" import="true" type="upgrade">
           <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="e454-4a6c-fa78-0edf" type="max"/>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="a712-fad7-db97-ff55" type="min"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="c556-ca6a-08a1-0b7e" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="c540-1ff0-1c9b-97d0" type="min"/>
           </constraints>
-          <selectionEntries>
-            <selectionEntry id="3cce-5df9-62c2-fcd9" name="Ancestral Great Axe" hidden="false" collective="false" import="true" type="upgrade">
-              <profiles>
-                <profile id="20b6-f0ef-b801-a0e2" name="Ancestral Great Axe" hidden="false" typeId="2905-f6bd-06e5-6642" typeName="Weapon">
-                  <characteristics>
-                    <characteristic name="Type" typeId="1a08-195b-76fd-2c2b">Melee</characteristic>
-                    <characteristic name="Range" typeId="1406-f935-3f8e-b27f">1&quot;</characteristic>
-                    <characteristic name="Attacks" typeId="4c19-dba6-f094-5165">2</characteristic>
-                    <characteristic name="To-Hit" typeId="7a4f-9704-2095-96c8">3+</characteristic>
-                    <characteristic name="To-Wound" typeId="172f-fc84-895b-04b7">3+</characteristic>
-                    <characteristic name="Rend" typeId="0c05-bd2e-b7e7-3925">-2</characteristic>
-                    <characteristic name="Damage" typeId="01c2-d16a-8788-e52b">1</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-              <costs>
-                <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
-              </costs>
-            </selectionEntry>
-            <selectionEntry id="a745-97f3-a4f1-e83b" name="Ancestral Weapon and Gromril Shield" hidden="false" collective="false" import="true" type="upgrade">
-              <profiles>
-                <profile id="e3d5-67cb-837c-4175" name="Ancestral Weapon and Gromril Shield" hidden="false" typeId="2905-f6bd-06e5-6642" typeName="Weapon">
-                  <characteristics>
-                    <characteristic name="Type" typeId="1a08-195b-76fd-2c2b">Melee</characteristic>
-                    <characteristic name="Range" typeId="1406-f935-3f8e-b27f">1&quot;</characteristic>
-                    <characteristic name="Attacks" typeId="4c19-dba6-f094-5165">2</characteristic>
-                    <characteristic name="To-Hit" typeId="7a4f-9704-2095-96c8">3+</characteristic>
-                    <characteristic name="To-Wound" typeId="172f-fc84-895b-04b7">4+</characteristic>
-                    <characteristic name="Rend" typeId="0c05-bd2e-b7e7-3925">-1</characteristic>
-                    <characteristic name="Damage" typeId="01c2-d16a-8788-e52b">1</characteristic>
-                  </characteristics>
-                </profile>
-                <profile id="0154-1170-5d75-7b12" name="Shield" hidden="false" typeId="ce32-0c40-1990-4c8a" typeName="Restriction">
-                  <characteristics>
-                    <characteristic name="Restriction" typeId="edbe-5fe5-1142-afa6">If this unit is armed with Ancestral Weapons and Gromril Shields, it has a Save characteristic of 3+ instead of 4+.</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-              <costs>
-                <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
-              </costs>
-            </selectionEntry>
-          </selectionEntries>
-        </selectionEntryGroup>
-        <selectionEntryGroup id="40f4-9758-1216-d4c5" name="Unit Options" hidden="false" collective="false" import="true">
-          <selectionEntries>
-            <selectionEntry id="6618-f325-aa8f-bde7" name="Standard Bearer" hidden="false" collective="false" import="true" type="upgrade">
-              <modifiers>
-                <modifier type="increment" field="6c0f-c0bd-2e36-656d" value="1.0">
-                  <repeats>
-                    <repeat field="selections" scope="4050-5f67-9ee9-424f" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e20c-48d8-e5e3-1a36" repeats="1" roundUp="false"/>
-                  </repeats>
-                  <conditions>
-                    <condition field="selections" scope="4050-5f67-9ee9-424f" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e20c-48d8-e5e3-1a36" type="greaterThan"/>
-                  </conditions>
-                </modifier>
-              </modifiers>
-              <constraints>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="6c0f-c0bd-2e36-656d" type="max"/>
-              </constraints>
-              <profiles>
-                <profile id="0d2a-5568-c32c-38ad" name="Standard Bearer" hidden="false" typeId="c23b-5a30-07e2-4706" typeName="Unit Options">
-                  <characteristics>
-                    <characteristic name="Unit Option" typeId="5879-9a21-e9d2-539d">1 in every 10 models in this unit can be a Standard Bearer. Add 1 to the Bravery characteristic ofthis unit while it includes any Standard Bearers.</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-              <costs>
-                <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
-              </costs>
-            </selectionEntry>
-            <selectionEntry id="fcaf-091e-0f9a-bdf6" name="Musician" hidden="false" collective="false" import="true" type="upgrade">
-              <modifiers>
-                <modifier type="increment" field="bc61-7375-a223-6f61" value="1.0">
-                  <repeats>
-                    <repeat field="selections" scope="4050-5f67-9ee9-424f" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e20c-48d8-e5e3-1a36" repeats="1" roundUp="false"/>
-                  </repeats>
-                  <conditions>
-                    <condition field="selections" scope="4050-5f67-9ee9-424f" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e20c-48d8-e5e3-1a36" type="greaterThan"/>
-                  </conditions>
-                </modifier>
-              </modifiers>
-              <constraints>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="bc61-7375-a223-6f61" type="max"/>
-              </constraints>
-              <profiles>
-                <profile id="9939-57a4-d4a2-4eca" name="Musician" hidden="false" typeId="c23b-5a30-07e2-4706" typeName="Unit Options">
-                  <characteristics>
-                    <characteristic name="Unit Option" typeId="5879-9a21-e9d2-539d">1 in every 10 models in this unit can be a Hornblower. Add 1 to run rolls and charge rolls for this unit while it includes any Hornblowers.</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-              <costs>
-                <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
-              </costs>
-            </selectionEntry>
-          </selectionEntries>
-        </selectionEntryGroup>
-      </selectionEntryGroups>
+          <profiles>
+            <profile id="3045-ff92-02d0-5124" name="Hallowed Weapons" hidden="false" typeId="2905-f6bd-06e5-6642" typeName="Weapon">
+              <characteristics>
+                <characteristic name="Type" typeId="1a08-195b-76fd-2c2b">Melee</characteristic>
+                <characteristic name="Range" typeId="1406-f935-3f8e-b27f">-</characteristic>
+                <characteristic name="Attacks" typeId="4c19-dba6-f094-5165">2</characteristic>
+                <characteristic name="To-Hit" typeId="7a4f-9704-2095-96c8">3+</characteristic>
+                <characteristic name="To-Wound" typeId="172f-fc84-895b-04b7">4+</characteristic>
+                <characteristic name="Rend" typeId="0c05-bd2e-b7e7-3925">1</characteristic>
+                <characteristic name="Damage" typeId="01c2-d16a-8788-e52b">1</characteristic>
+                <characteristic name="Ability" typeId="0a53-8ba4-d02a-fc50">-</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+        </selectionEntry>
+      </selectionEntries>
       <entryLinks>
         <entryLink id="2f0d-f5ca-5317-56c4" name="Unit Reinforcement" hidden="false" collective="false" import="true" targetId="b493-d9e6-82ca-5488" type="selectionEntry"/>
-        <entryLink id="29f1-b084-b922-9c12" name="BATTLELINE" hidden="false" collective="false" import="true" targetId="be1f-d384-9fe4-789d" type="selectionEntry"/>
       </entryLinks>
       <costs>
-        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="130.0"/>
+        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="120.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="6d3d-4c04-d50d-7fd9" name="Irondrakes" publicationId="88ce-c2fe-b89c-ed48" hidden="false" collective="false" import="true" type="unit">
       <modifiers>
-        <modifier type="increment" field="b0b4-6aec-82c2-02ae" value="170.0">
-          <repeats>
-            <repeat field="selections" scope="6d3d-4c04-d50d-7fd9" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e20c-48d8-e5e3-1a36" repeats="1" roundUp="false"/>
-          </repeats>
+        <modifier type="increment" field="b0b4-6aec-82c2-02ae" value="150.0">
           <conditions>
-            <condition field="selections" scope="6d3d-4c04-d50d-7fd9" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e20c-48d8-e5e3-1a36" type="greaterThan"/>
+            <condition field="selections" scope="6d3d-4c04-d50d-7fd9" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2f0d-f5ca-5317-56c4" type="greaterThan"/>
           </conditions>
         </modifier>
       </modifiers>
@@ -334,32 +244,52 @@
         <profile id="13ea-7faa-6975-3093" name="Irondrakes" hidden="false" typeId="3956-f6dd-6c88-ae4b" typeName="Unit">
           <characteristics>
             <characteristic name="Move" typeId="5bbe-8910-4dfa-7b1c">4&quot;</characteristic>
-            <characteristic name="Wounds" typeId="a0c6-af64-2f24-5759">1</characteristic>
-            <characteristic name="Save" typeId="93b6-2f96-2df7-e330">4+</characteristic>
-            <characteristic name="Bravery" typeId="2420-1c5c-1016-7033">7</characteristic>
+            <characteristic name="Health" typeId="a0c6-af64-2f24-5759">1</characteristic>
+            <characteristic name="Save" typeId="93b6-2f96-2df7-e330">3+</characteristic>
+            <characteristic name="Control" typeId="2420-1c5c-1016-7033">1</characteristic>
           </characteristics>
         </profile>
-        <profile id="4772-0d59-27d2-d216" name="Forge-proven Gromril Armour" hidden="false" typeId="7861-da01-01c0-88d9" typeName="Ability">
+        <profile id="419a-c3ef-f451-5ef9" name="Irondrakes" hidden="false" typeId="c23b-5a30-07e2-4706" typeName="Warscroll Extras">
           <characteristics>
-            <characteristic name="Ability" typeId="9bce-4deb-8b79-eaec">Add 1 to save rolls for attacks made with missile weapons that target this unit.</characteristic>
+            <characteristic name="WIZARD" typeId="67b3-6f8b-2116-2a27">-</characteristic>
+            <characteristic name="PRIEST" typeId="02ab-4d58-5c31-767e">-</characteristic>
+            <characteristic name="WARD" typeId="40a4-4432-32da-74d9">-</characteristic>
+            <characteristic name="CHAMPION" typeId="dccd-b70a-d225-5e37">Yes</characteristic>
+            <characteristic name="MUSICIAN" typeId="053d-5038-d84a-3aa3">1/10</characteristic>
+            <characteristic name="STANDARD BEARER" typeId="ccb7-3ee4-5637-586e">1/10</characteristic>
           </characteristics>
         </profile>
-        <profile id="eaf9-575c-a854-daf1" name="Blaze Away" hidden="false" typeId="7861-da01-01c0-88d9" typeName="Ability">
+        <profile id="0e5e-ce0a-e27e-b788" name="Cinderblast Bomb" hidden="false" typeId="7861-da01-01c0-88d9" typeName="Ability">
           <characteristics>
-            <characteristic name="Ability" typeId="9bce-4deb-8b79-eaec">Add 1 to the Attacks characteristic of this unit’s missile weapons if there are no enemy units within 3&quot; of this unit and this unit has not made a move in the same turn.</characteristic>
+            <characteristic name="Use" typeId="9bce-4deb-8b79-eaec">Once Per Turn (Army), Your Shooting Phase</characteristic>
+            <characteristic name="Declare" typeId="f9c7-7dae-69e1-f924">If this unit is not in combat, pick a visible enemy unit within 6&quot; of it to be the target.</characteristic>
+            <characteristic name="Effect" typeId="7d15-5e9e-83a9-d696">Roll a dice. On a 3+, inflict an amount of mortal damage on the target equal to the roll.</characteristic>
           </characteristics>
         </profile>
       </profiles>
+      <rules>
+        <rule id="db72-7b49-3f5a-3377" name="Weapons" hidden="false">
+          <description>Each model in this unit is armed with a Drakegun and Plated Fists.
+
+• The champion can replace their Drakegun with a Grudgehammer Torpedo.</description>
+        </rule>
+      </rules>
       <categoryLinks>
         <categoryLink id="93f3-290b-7fe6-a50c" name="CITIES OF SIGMAR" hidden="false" targetId="d20b-b22a-23ee-3ca1" primary="false"/>
-        <categoryLink id="2324-9f53-1370-46af" name="Dispossessed" hidden="false" targetId="9d48-97e2-eb19-edbe" primary="false"/>
         <categoryLink id="5abe-dbab-05ca-be26" name="Duardin" hidden="false" targetId="3434-9baa-1e9a-4ebd" primary="false"/>
-        <categoryLink id="c9e4-137c-3803-af9b" name="Irondrakes" hidden="false" targetId="5bf9-4126-2b10-69f6" primary="false"/>
         <categoryLink id="8826-b32c-0e77-5305" name="Order" hidden="false" targetId="90c6-6c11-9677-1fa8" primary="false"/>
         <categoryLink id="b4f8-78eb-18e5-284d" name="New CategoryLink" hidden="false" targetId="6230-ed60-e374-add4" primary="true"/>
+        <categoryLink id="864c-2606-83dc-b88a" name="INFANTRY" hidden="false" targetId="25bf-7a1c-60fc-7e12" primary="false"/>
       </categoryLinks>
       <selectionEntries>
         <selectionEntry id="d4eb-6d7d-93f2-eb3d" name="10 Irondrakes" hidden="false" collective="false" import="true" type="model">
+          <modifiers>
+            <modifier type="set" field="name" value="20 Irondrakes">
+              <conditions>
+                <condition field="selections" scope="6d3d-4c04-d50d-7fd9" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2f0d-f5ca-5317-56c4" type="greaterThan"/>
+              </conditions>
+            </modifier>
+          </modifiers>
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="29c5-a8f6-13b0-f289" type="max"/>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="f693-7287-4add-cb08" type="min"/>
@@ -368,28 +298,56 @@
             <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="cdb8-e78a-43e7-c208" name="Drakegun and Mailed Fist" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="cdb8-e78a-43e7-c208" name="Drakegun &amp; Plated Fist" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="519d-9a8e-4b14-e6bc" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="dbfa-bfd6-1abc-97bf" type="min"/>
+          </constraints>
           <profiles>
             <profile id="8a9a-17ba-a01a-b28d" name="Drakegun" hidden="false" typeId="2905-f6bd-06e5-6642" typeName="Weapon">
               <characteristics>
-                <characteristic name="Type" typeId="1a08-195b-76fd-2c2b">Missile</characteristic>
-                <characteristic name="Range" typeId="1406-f935-3f8e-b27f">16&quot;</characteristic>
+                <characteristic name="Type" typeId="1a08-195b-76fd-2c2b">Ranged</characteristic>
+                <characteristic name="Range" typeId="1406-f935-3f8e-b27f">15&quot;</characteristic>
                 <characteristic name="Attacks" typeId="4c19-dba6-f094-5165">1</characteristic>
                 <characteristic name="To-Hit" typeId="7a4f-9704-2095-96c8">3+</characteristic>
                 <characteristic name="To-Wound" typeId="172f-fc84-895b-04b7">3+</characteristic>
-                <characteristic name="Rend" typeId="0c05-bd2e-b7e7-3925">-1</characteristic>
+                <characteristic name="Rend" typeId="0c05-bd2e-b7e7-3925">1</characteristic>
                 <characteristic name="Damage" typeId="01c2-d16a-8788-e52b">1</characteristic>
+                <characteristic name="Ability" typeId="0a53-8ba4-d02a-fc50">Anti-INFANTRY (+1 Rend)</characteristic>
               </characteristics>
             </profile>
-            <profile id="e8ae-06ac-95a0-0321" name="Mailed Fist" hidden="false" typeId="2905-f6bd-06e5-6642" typeName="Weapon">
+            <profile id="e8ae-06ac-95a0-0321" name="Plated Fist" hidden="false" typeId="2905-f6bd-06e5-6642" typeName="Weapon">
               <characteristics>
                 <characteristic name="Type" typeId="1a08-195b-76fd-2c2b">Melee</characteristic>
-                <characteristic name="Range" typeId="1406-f935-3f8e-b27f">1&quot;</characteristic>
+                <characteristic name="Range" typeId="1406-f935-3f8e-b27f">-</characteristic>
                 <characteristic name="Attacks" typeId="4c19-dba6-f094-5165">1</characteristic>
                 <characteristic name="To-Hit" typeId="7a4f-9704-2095-96c8">4+</characteristic>
                 <characteristic name="To-Wound" typeId="172f-fc84-895b-04b7">4+</characteristic>
                 <characteristic name="Rend" typeId="0c05-bd2e-b7e7-3925">-</characteristic>
                 <characteristic name="Damage" typeId="01c2-d16a-8788-e52b">1</characteristic>
+                <characteristic name="Ability" typeId="0a53-8ba4-d02a-fc50">-</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <costs>
+            <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="8ee2-70c2-e189-c4cd" name="Grudgehammer Torpedo" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="03df-9c95-d073-f5c6" type="max"/>
+          </constraints>
+          <profiles>
+            <profile id="f6fb-4068-99c9-6910" name="Grudgehammer Torpedo" hidden="false" typeId="2905-f6bd-06e5-6642" typeName="Weapon">
+              <characteristics>
+                <characteristic name="Type" typeId="1a08-195b-76fd-2c2b">Ranged</characteristic>
+                <characteristic name="Range" typeId="1406-f935-3f8e-b27f">15&quot;</characteristic>
+                <characteristic name="Attacks" typeId="4c19-dba6-f094-5165">1</characteristic>
+                <characteristic name="To-Hit" typeId="7a4f-9704-2095-96c8">3+</characteristic>
+                <characteristic name="To-Wound" typeId="172f-fc84-895b-04b7">3+</characteristic>
+                <characteristic name="Rend" typeId="0c05-bd2e-b7e7-3925">1</characteristic>
+                <characteristic name="Damage" typeId="01c2-d16a-8788-e52b">D3</characteristic>
+                <characteristic name="Ability" typeId="0a53-8ba4-d02a-fc50">Anti-MONSTER (+1 Rend)</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -398,226 +356,18 @@
           </costs>
         </selectionEntry>
       </selectionEntries>
-      <selectionEntryGroups>
-        <selectionEntryGroup id="9d04-9e20-4e5a-0761" name="Unit Options" hidden="false" collective="false" import="true">
-          <selectionEntries>
-            <selectionEntry id="2092-7de7-3952-7180" name="Ironwarden" hidden="false" collective="false" import="true" type="upgrade">
-              <constraints>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="e7d0-c6a4-012a-e6e8" type="max"/>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="1b82-7ecb-b348-eada" type="min"/>
-              </constraints>
-              <profiles>
-                <profile id="ef96-df37-e10e-fc57" name="Ironwarden" hidden="false" typeId="c23b-5a30-07e2-4706" typeName="Unit Options">
-                  <characteristics>
-                    <characteristic name="Unit Option" typeId="5879-9a21-e9d2-539d">1 model in this unit can be an Ironwarden. Add 1 to the Attacks characteristic of that model’s Mailed Fist. In addition, an Ironwarden can replace their Drakegun with one of the following weapon options: Grudgehammer Torpedo; Drakefire Pistol and Cinderblast Bomb; or a pair of Drakefire Pistols.</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-              <selectionEntryGroups>
-                <selectionEntryGroup id="7c95-de01-1133-1ea3" name="Ironwarden Replacement Weapon" hidden="false" collective="false" import="true">
-                  <constraints>
-                    <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="3103-d5ab-1779-7806" type="max"/>
-                  </constraints>
-                  <selectionEntries>
-                    <selectionEntry id="9da6-e56d-fb45-9dbf" name="Grudgehammer Torpedo" hidden="false" collective="false" import="true" type="upgrade">
-                      <profiles>
-                        <profile id="6713-2211-d88e-0adc" name="Grudgehammer Torpedo" hidden="false" typeId="2905-f6bd-06e5-6642" typeName="Weapon">
-                          <characteristics>
-                            <characteristic name="Type" typeId="1a08-195b-76fd-2c2b">Missile</characteristic>
-                            <characteristic name="Range" typeId="1406-f935-3f8e-b27f">20&quot;</characteristic>
-                            <characteristic name="Attacks" typeId="4c19-dba6-f094-5165">1</characteristic>
-                            <characteristic name="To-Hit" typeId="7a4f-9704-2095-96c8">3+</characteristic>
-                            <characteristic name="To-Wound" typeId="172f-fc84-895b-04b7">3+</characteristic>
-                            <characteristic name="Rend" typeId="0c05-bd2e-b7e7-3925">-2</characteristic>
-                            <characteristic name="Damage" typeId="01c2-d16a-8788-e52b">D3</characteristic>
-                          </characteristics>
-                        </profile>
-                        <profile id="8581-96c0-bf73-f276" name="Grudgehammer Torpedo" hidden="false" typeId="7861-da01-01c0-88d9" typeName="Ability">
-                          <characteristics>
-                            <characteristic name="Ability" typeId="9bce-4deb-8b79-eaec">A Grudgehammer Torpedo has a Damage characteristic of D6 instead of D3 if the target is a MONSTER.</characteristic>
-                          </characteristics>
-                        </profile>
-                        <profile id="7b41-f5a7-1e50-03cf" name="Mailed Fist" hidden="false" typeId="2905-f6bd-06e5-6642" typeName="Weapon">
-                          <characteristics>
-                            <characteristic name="Type" typeId="1a08-195b-76fd-2c2b">Melee</characteristic>
-                            <characteristic name="Range" typeId="1406-f935-3f8e-b27f">1&quot;</characteristic>
-                            <characteristic name="Attacks" typeId="4c19-dba6-f094-5165">1</characteristic>
-                            <characteristic name="To-Hit" typeId="7a4f-9704-2095-96c8">4+</characteristic>
-                            <characteristic name="To-Wound" typeId="172f-fc84-895b-04b7">4+</characteristic>
-                            <characteristic name="Rend" typeId="0c05-bd2e-b7e7-3925">-</characteristic>
-                            <characteristic name="Damage" typeId="01c2-d16a-8788-e52b">1</characteristic>
-                          </characteristics>
-                        </profile>
-                      </profiles>
-                      <costs>
-                        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
-                      </costs>
-                    </selectionEntry>
-                    <selectionEntry id="dc88-b772-7e36-13cd" name="Drakefire Pistol and Cinderblast Bomb" hidden="false" collective="false" import="true" type="upgrade">
-                      <profiles>
-                        <profile id="1851-2971-2d6d-c7a9" name="Cinderblast Bomb" hidden="false" typeId="7861-da01-01c0-88d9" typeName="Ability">
-                          <characteristics>
-                            <characteristic name="Ability" typeId="9bce-4deb-8b79-eaec">Once per battle, in your shooting phase, a model armed with a Cinderblast Bomb can throw it. If it does so, pick 1 enemy unit within 6&quot; of that model and roll a dice. On a 2+, that unit suffers D3 mortal wounds.</characteristic>
-                          </characteristics>
-                        </profile>
-                        <profile id="2330-68d5-d7b7-6bc9" name="Drakefire Pistol" hidden="false" typeId="2905-f6bd-06e5-6642" typeName="Weapon">
-                          <characteristics>
-                            <characteristic name="Type" typeId="1a08-195b-76fd-2c2b">Missile</characteristic>
-                            <characteristic name="Range" typeId="1406-f935-3f8e-b27f">8&quot;</characteristic>
-                            <characteristic name="Attacks" typeId="4c19-dba6-f094-5165">1</characteristic>
-                            <characteristic name="To-Hit" typeId="7a4f-9704-2095-96c8">3+</characteristic>
-                            <characteristic name="To-Wound" typeId="172f-fc84-895b-04b7">3+</characteristic>
-                            <characteristic name="Rend" typeId="0c05-bd2e-b7e7-3925">-1</characteristic>
-                            <characteristic name="Damage" typeId="01c2-d16a-8788-e52b">1</characteristic>
-                          </characteristics>
-                        </profile>
-                        <profile id="24fc-5212-0485-ac72" name="Mailed Fist" hidden="false" typeId="2905-f6bd-06e5-6642" typeName="Weapon">
-                          <characteristics>
-                            <characteristic name="Type" typeId="1a08-195b-76fd-2c2b">Melee</characteristic>
-                            <characteristic name="Range" typeId="1406-f935-3f8e-b27f">1&quot;</characteristic>
-                            <characteristic name="Attacks" typeId="4c19-dba6-f094-5165">1</characteristic>
-                            <characteristic name="To-Hit" typeId="7a4f-9704-2095-96c8">4+</characteristic>
-                            <characteristic name="To-Wound" typeId="172f-fc84-895b-04b7">4+</characteristic>
-                            <characteristic name="Rend" typeId="0c05-bd2e-b7e7-3925">-</characteristic>
-                            <characteristic name="Damage" typeId="01c2-d16a-8788-e52b">1</characteristic>
-                          </characteristics>
-                        </profile>
-                      </profiles>
-                      <costs>
-                        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
-                      </costs>
-                    </selectionEntry>
-                    <selectionEntry id="9fc2-8ac4-a360-b204" name="Pair of Drakefire Pistols" hidden="false" collective="false" import="true" type="upgrade">
-                      <profiles>
-                        <profile id="fe55-a10a-6077-17f5" name="Drakefire Pistol" hidden="false" typeId="2905-f6bd-06e5-6642" typeName="Weapon">
-                          <characteristics>
-                            <characteristic name="Type" typeId="1a08-195b-76fd-2c2b">Missile</characteristic>
-                            <characteristic name="Range" typeId="1406-f935-3f8e-b27f">8&quot;</characteristic>
-                            <characteristic name="Attacks" typeId="4c19-dba6-f094-5165">1</characteristic>
-                            <characteristic name="To-Hit" typeId="7a4f-9704-2095-96c8">3+</characteristic>
-                            <characteristic name="To-Wound" typeId="172f-fc84-895b-04b7">3+</characteristic>
-                            <characteristic name="Rend" typeId="0c05-bd2e-b7e7-3925">-1</characteristic>
-                            <characteristic name="Damage" typeId="01c2-d16a-8788-e52b">1</characteristic>
-                          </characteristics>
-                        </profile>
-                        <profile id="8716-340f-538c-ff12" name="Paired Drakefire Pistols" hidden="false" typeId="7861-da01-01c0-88d9" typeName="Ability">
-                          <characteristics>
-                            <characteristic name="Ability" typeId="9bce-4deb-8b79-eaec">Add 1 to the Attacks characteristic of a Drakefire Pistol for models armed with a pair of Drakefire Pistols.</characteristic>
-                          </characteristics>
-                        </profile>
-                        <profile id="9c3a-482f-d40a-86c5" name="Mailed Fist" hidden="false" typeId="2905-f6bd-06e5-6642" typeName="Weapon">
-                          <characteristics>
-                            <characteristic name="Type" typeId="1a08-195b-76fd-2c2b">Melee</characteristic>
-                            <characteristic name="Range" typeId="1406-f935-3f8e-b27f">1&quot;</characteristic>
-                            <characteristic name="Attacks" typeId="4c19-dba6-f094-5165">1</characteristic>
-                            <characteristic name="To-Hit" typeId="7a4f-9704-2095-96c8">4+</characteristic>
-                            <characteristic name="To-Wound" typeId="172f-fc84-895b-04b7">4+</characteristic>
-                            <characteristic name="Rend" typeId="0c05-bd2e-b7e7-3925">-</characteristic>
-                            <characteristic name="Damage" typeId="01c2-d16a-8788-e52b">1</characteristic>
-                          </characteristics>
-                        </profile>
-                      </profiles>
-                      <costs>
-                        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
-                      </costs>
-                    </selectionEntry>
-                  </selectionEntries>
-                </selectionEntryGroup>
-              </selectionEntryGroups>
-              <costs>
-                <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
-              </costs>
-            </selectionEntry>
-            <selectionEntry id="884a-216a-f6cd-4415" name="Standard Bearer" hidden="false" collective="false" import="true" type="upgrade">
-              <modifiers>
-                <modifier type="increment" field="9ebe-9b22-cee6-8158" value="1.0">
-                  <repeats>
-                    <repeat field="selections" scope="6d3d-4c04-d50d-7fd9" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e20c-48d8-e5e3-1a36" repeats="1" roundUp="false"/>
-                  </repeats>
-                  <conditions>
-                    <condition field="selections" scope="6d3d-4c04-d50d-7fd9" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e20c-48d8-e5e3-1a36" type="greaterThan"/>
-                  </conditions>
-                </modifier>
-              </modifiers>
-              <constraints>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="9ebe-9b22-cee6-8158" type="max"/>
-              </constraints>
-              <profiles>
-                <profile id="c55f-917c-ad58-e813" name="Standard Bearer" hidden="false" typeId="c23b-5a30-07e2-4706" typeName="Unit Options">
-                  <characteristics>
-                    <characteristic name="Unit Option" typeId="5879-9a21-e9d2-539d">1 in every 10 models in this unit can be a Standard Bearer. Add 1 to the Bravery characteristic of units that include any Standard Bearers.</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-              <costs>
-                <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
-              </costs>
-            </selectionEntry>
-            <selectionEntry id="e8c2-7b61-14c6-6ea5" name="Hornblower" hidden="false" collective="false" import="true" type="upgrade">
-              <modifiers>
-                <modifier type="increment" field="bf2e-a8a7-bafa-7426" value="1.0">
-                  <repeats>
-                    <repeat field="selections" scope="6d3d-4c04-d50d-7fd9" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e20c-48d8-e5e3-1a36" repeats="1" roundUp="false"/>
-                  </repeats>
-                  <conditions>
-                    <condition field="selections" scope="6d3d-4c04-d50d-7fd9" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e20c-48d8-e5e3-1a36" type="greaterThan"/>
-                  </conditions>
-                </modifier>
-              </modifiers>
-              <constraints>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="bf2e-a8a7-bafa-7426" type="max"/>
-              </constraints>
-              <profiles>
-                <profile id="0100-9060-f95b-8bdb" name="Hornblower" hidden="false" typeId="c23b-5a30-07e2-4706" typeName="Unit Options">
-                  <characteristics>
-                    <characteristic name="Unit Option" typeId="5879-9a21-e9d2-539d">1 in every 10 models in this unit can be a Hornblower. Add 1 to run and charge rolls for units that include any Hornblowers.</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-              <costs>
-                <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
-              </costs>
-            </selectionEntry>
-          </selectionEntries>
-        </selectionEntryGroup>
-      </selectionEntryGroups>
       <entryLinks>
         <entryLink id="51ba-976d-2a0f-8378" name="Unit Reinforcement" hidden="false" collective="false" import="true" targetId="b493-d9e6-82ca-5488" type="selectionEntry"/>
-        <entryLink id="b3f1-9386-12df-db82" name="CONDITIONAL BATTLELINE" hidden="false" collective="false" import="true" targetId="6a2c-7fc7-e348-ca8c" type="selectionEntry">
-          <profiles>
-            <profile id="130d-4578-74a1-2815" name="CONDITIONAL BATTLELINE" hidden="false" typeId="77d9-94b6-d8f2-a150" typeName="BATTLELINE">
-              <characteristics>
-                <characteristic name="Condition" typeId="820b-20af-6fd8-5f48">Battleline in a Cities of Sigmar army if general is DUARDIN</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-        </entryLink>
       </entryLinks>
       <costs>
-        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="170.0"/>
+        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="150.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="476d-c8dc-9c4d-87fd" name="Ironbreakers" publicationId="88ce-c2fe-b89c-ed48" hidden="false" collective="false" import="true" type="unit">
       <modifiers>
-        <modifier type="remove" field="category" value="a42d-220e-6a88-7bf6">
-          <conditionGroups>
-            <conditionGroup type="or">
-              <conditions>
-                <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="b543-cb16-0c79-fbc6" type="instanceOf"/>
-                <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="6cd6-b22e-bfcb-9589" type="instanceOf"/>
-                <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="e3a6-45ca-4974-b489" type="instanceOf"/>
-                <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="996a-613c-4006-25e3" type="instanceOf"/>
-                <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4373-740f-1bf3-b0aa" type="instanceOf"/>
-              </conditions>
-            </conditionGroup>
-          </conditionGroups>
-        </modifier>
-        <modifier type="increment" field="b0b4-6aec-82c2-02ae" value="120.0">
-          <repeats>
-            <repeat field="selections" scope="476d-c8dc-9c4d-87fd" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e20c-48d8-e5e3-1a36" repeats="1" roundUp="false"/>
-          </repeats>
+        <modifier type="increment" field="b0b4-6aec-82c2-02ae" value="130.0">
           <conditions>
-            <condition field="selections" scope="476d-c8dc-9c4d-87fd" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e20c-48d8-e5e3-1a36" type="greaterThan"/>
+            <condition field="selections" scope="476d-c8dc-9c4d-87fd" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2f0d-f5ca-5317-56c4" type="greaterThan"/>
           </conditions>
         </modifier>
       </modifiers>
@@ -625,32 +375,52 @@
         <profile id="9985-9274-e733-ea86" name="Ironbreakers" hidden="false" typeId="3956-f6dd-6c88-ae4b" typeName="Unit">
           <characteristics>
             <characteristic name="Move" typeId="5bbe-8910-4dfa-7b1c">4&quot;</characteristic>
-            <characteristic name="Wounds" typeId="a0c6-af64-2f24-5759">1</characteristic>
+            <characteristic name="Health" typeId="a0c6-af64-2f24-5759">1</characteristic>
             <characteristic name="Save" typeId="93b6-2f96-2df7-e330">3+</characteristic>
-            <characteristic name="Bravery" typeId="2420-1c5c-1016-7033">7</characteristic>
-          </characteristics>
-        </profile>
-        <profile id="d8f3-a028-a60c-e0d7" name="Champion" hidden="false" typeId="c23b-5a30-07e2-4706" typeName="Unit Options">
-          <characteristics>
-            <characteristic name="Unit Option" typeId="5879-9a21-e9d2-539d">1 model in this unit can be an Ironbeard. That model is armed with Drakefire Pistols and a Cinderblast Bomb in addition to its Ironbreaker Weapon.</characteristic>
+            <characteristic name="Control" typeId="2420-1c5c-1016-7033">1</characteristic>
           </characteristics>
         </profile>
         <profile id="b737-f6d0-b3b9-f8fe" name="Gromril Shieldwall" hidden="false" typeId="7861-da01-01c0-88d9" typeName="Ability">
           <characteristics>
-            <characteristic name="Ability" typeId="9bce-4deb-8b79-eaec">If this unit is picked for the ‘Form Shieldwall’ order, it has a ward of 4+ until the end of the phase instead of 5+.</characteristic>
+            <characteristic name="Use" typeId="9bce-4deb-8b79-eaec">Passive</characteristic>
+            <characteristic name="Declare" typeId="f9c7-7dae-69e1-f924">-</characteristic>
+            <characteristic name="Effect" typeId="7d15-5e9e-83a9-d696">While this unit is affected by the ‘Hold the Line’ OFFICAR&apos;S ORDER ability, it has WARD (4+) instead of WARD (5+).</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="6ebb-6713-66b5-ea3c" name="Ironbreakers" hidden="false" typeId="c23b-5a30-07e2-4706" typeName="Warscroll Extras">
+          <characteristics>
+            <characteristic name="WIZARD" typeId="67b3-6f8b-2116-2a27">-</characteristic>
+            <characteristic name="PRIEST" typeId="02ab-4d58-5c31-767e">-</characteristic>
+            <characteristic name="WARD" typeId="40a4-4432-32da-74d9">-</characteristic>
+            <characteristic name="CHAMPION" typeId="dccd-b70a-d225-5e37">Yes</characteristic>
+            <characteristic name="MUSICIAN" typeId="053d-5038-d84a-3aa3">1/10</characteristic>
+            <characteristic name="STANDARD BEARER" typeId="ccb7-3ee4-5637-586e">1/10</characteristic>
           </characteristics>
         </profile>
       </profiles>
+      <rules>
+        <rule id="8b1a-181f-5f8f-6ad9" name="Weapons" hidden="false">
+          <description>Each model in this unit is armed with Ironbreaker Weapons.
+
+• The champion is armed with Drakefire Pistols in addition to their other weapons.</description>
+        </rule>
+      </rules>
       <categoryLinks>
         <categoryLink id="e14c-9dc3-b9c6-bc5e" name="CITIES OF SIGMAR" hidden="false" targetId="d20b-b22a-23ee-3ca1" primary="false"/>
-        <categoryLink id="31b7-a2bd-450c-505c" name="Dispossessed" hidden="false" targetId="9d48-97e2-eb19-edbe" primary="false"/>
         <categoryLink id="10a7-c4f9-59f3-4bcc" name="Duardin" hidden="false" targetId="3434-9baa-1e9a-4ebd" primary="false"/>
         <categoryLink id="bd06-4776-cb90-b3c4" name="Order" hidden="false" targetId="90c6-6c11-9677-1fa8" primary="false"/>
-        <categoryLink id="b72e-c77f-09d5-81d9" name="BATTLELINE" hidden="false" targetId="a42d-220e-6a88-7bf6" primary="true"/>
-        <categoryLink id="e2fa-c1a3-479d-a20c" name="Ironbreakers" hidden="false" targetId="2e69-150c-921c-c16c" primary="false"/>
+        <categoryLink id="933f-e424-7f92-dab8" name="INFANTRY" hidden="false" targetId="25bf-7a1c-60fc-7e12" primary="false"/>
+        <categoryLink id="2403-615e-ea00-3ada" name="New CategoryLink" hidden="false" targetId="6230-ed60-e374-add4" primary="true"/>
       </categoryLinks>
       <selectionEntries>
         <selectionEntry id="01da-9266-4fa1-1370" name="10 Ironbreakers" hidden="false" collective="false" import="true" type="model">
+          <modifiers>
+            <modifier type="set" field="name" value="20 Ironbreakers">
+              <conditions>
+                <condition field="selections" scope="476d-c8dc-9c4d-87fd" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2f0d-f5ca-5317-56c4" type="greaterThan"/>
+              </conditions>
+            </modifier>
+          </modifiers>
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="4a5f-c2c5-9dc8-87f4" type="max"/>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="fae9-3d8b-33bd-204a" type="min"/>
@@ -668,12 +438,13 @@
             <profile id="81c7-7f0b-ac0c-5478" name="Ironbreaker Weapon" hidden="false" typeId="2905-f6bd-06e5-6642" typeName="Weapon">
               <characteristics>
                 <characteristic name="Type" typeId="1a08-195b-76fd-2c2b">Melee</characteristic>
-                <characteristic name="Range" typeId="1406-f935-3f8e-b27f">1&quot;</characteristic>
+                <characteristic name="Range" typeId="1406-f935-3f8e-b27f">-</characteristic>
                 <characteristic name="Attacks" typeId="4c19-dba6-f094-5165">2</characteristic>
                 <characteristic name="To-Hit" typeId="7a4f-9704-2095-96c8">3+</characteristic>
                 <characteristic name="To-Wound" typeId="172f-fc84-895b-04b7">4+</characteristic>
                 <characteristic name="Rend" typeId="0c05-bd2e-b7e7-3925">-</characteristic>
                 <characteristic name="Damage" typeId="01c2-d16a-8788-e52b">1</characteristic>
+                <characteristic name="Ability" typeId="0a53-8ba4-d02a-fc50">-</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -681,26 +452,22 @@
             <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="dc40-b537-3c8e-b7fa" name="Drakefire Pistol" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="dc40-b537-3c8e-b7fa" name="Drakefire Pistols" hidden="false" collective="false" import="true" type="upgrade">
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="38cb-6189-83a1-4d23" type="max"/>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="bff3-130f-00e1-f77d" type="min"/>
           </constraints>
           <profiles>
-            <profile id="ea93-ab36-ffe2-0bcc" name="Cinderblast Bomb" hidden="false" typeId="7861-da01-01c0-88d9" typeName="Ability">
+            <profile id="675d-1282-1550-2f43" name="Drakefire Pistols" hidden="false" typeId="2905-f6bd-06e5-6642" typeName="Weapon">
               <characteristics>
-                <characteristic name="Ability" typeId="9bce-4deb-8b79-eaec">If this unit includes a model armed with a Cinderblast Bomb, once per battle, in your shooting phase, that model can throw it. If it does so, pick 1 enemy unit within 6&quot; of that model and roll a dice. On a 2+, that unit suffers D3 mortal wounds.</characteristic>
-              </characteristics>
-            </profile>
-            <profile id="675d-1282-1550-2f43" name="Drakefire Pistol" hidden="false" typeId="2905-f6bd-06e5-6642" typeName="Weapon">
-              <characteristics>
-                <characteristic name="Type" typeId="1a08-195b-76fd-2c2b">Missile</characteristic>
-                <characteristic name="Range" typeId="1406-f935-3f8e-b27f">9&quot;</characteristic>
-                <characteristic name="Attacks" typeId="4c19-dba6-f094-5165">2</characteristic>
+                <characteristic name="Type" typeId="1a08-195b-76fd-2c2b">Ranged</characteristic>
+                <characteristic name="Range" typeId="1406-f935-3f8e-b27f">10&quot;</characteristic>
+                <characteristic name="Attacks" typeId="4c19-dba6-f094-5165">1</characteristic>
                 <characteristic name="To-Hit" typeId="7a4f-9704-2095-96c8">3+</characteristic>
                 <characteristic name="To-Wound" typeId="172f-fc84-895b-04b7">3+</characteristic>
-                <characteristic name="Rend" typeId="0c05-bd2e-b7e7-3925">-1</characteristic>
+                <characteristic name="Rend" typeId="0c05-bd2e-b7e7-3925">1</characteristic>
                 <characteristic name="Damage" typeId="01c2-d16a-8788-e52b">1</characteristic>
+                <characteristic name="Ability" typeId="0a53-8ba4-d02a-fc50">Shoot in Combat</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -709,78 +476,18 @@
           </costs>
         </selectionEntry>
       </selectionEntries>
-      <selectionEntryGroups>
-        <selectionEntryGroup id="8de1-e4a4-c4c0-c9ac" name="Unit Options" hidden="false" collective="false" import="true">
-          <selectionEntries>
-            <selectionEntry id="ddcc-fe86-6ea3-cafa" name="Standard Bearer" hidden="false" collective="false" import="true" type="upgrade">
-              <modifiers>
-                <modifier type="increment" field="3794-c3df-7fc8-cb6a" value="1.0">
-                  <repeats>
-                    <repeat field="selections" scope="476d-c8dc-9c4d-87fd" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e20c-48d8-e5e3-1a36" repeats="1" roundUp="false"/>
-                  </repeats>
-                  <conditions>
-                    <condition field="selections" scope="476d-c8dc-9c4d-87fd" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e20c-48d8-e5e3-1a36" type="greaterThan"/>
-                  </conditions>
-                </modifier>
-              </modifiers>
-              <constraints>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="3794-c3df-7fc8-cb6a" type="max"/>
-              </constraints>
-              <profiles>
-                <profile id="f20a-b1a5-6968-fc71" name="Standard Bearer" hidden="false" typeId="c23b-5a30-07e2-4706" typeName="Unit Options">
-                  <characteristics>
-                    <characteristic name="Unit Option" typeId="5879-9a21-e9d2-539d">1 in every 10 models in this unit can be a Standard Bearer. Add 1 to the Bravery characteristic ofthis unit while it includes any Standard Bearers.</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-              <costs>
-                <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
-              </costs>
-            </selectionEntry>
-            <selectionEntry id="7eec-6b6e-e5cd-99ed" name="Musician" hidden="false" collective="false" import="true" type="upgrade">
-              <modifiers>
-                <modifier type="increment" field="3464-2d8c-b54f-702b" value="1.0">
-                  <repeats>
-                    <repeat field="selections" scope="476d-c8dc-9c4d-87fd" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e20c-48d8-e5e3-1a36" repeats="1" roundUp="false"/>
-                  </repeats>
-                  <conditions>
-                    <condition field="selections" scope="476d-c8dc-9c4d-87fd" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e20c-48d8-e5e3-1a36" type="greaterThan"/>
-                  </conditions>
-                </modifier>
-              </modifiers>
-              <constraints>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="3464-2d8c-b54f-702b" type="max"/>
-              </constraints>
-              <profiles>
-                <profile id="8068-6faa-ef90-d239" name="Musician" hidden="false" typeId="c23b-5a30-07e2-4706" typeName="Unit Options">
-                  <characteristics>
-                    <characteristic name="Unit Option" typeId="5879-9a21-e9d2-539d">1 in every 10 models in this unit can be a Hornblower. Add 1 to run rolls and charge rolls for this unit while it includes any Hornblowers.</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-              <costs>
-                <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
-              </costs>
-            </selectionEntry>
-          </selectionEntries>
-        </selectionEntryGroup>
-      </selectionEntryGroups>
       <entryLinks>
         <entryLink id="0c20-c6b7-e204-de02" name="Unit Reinforcement" hidden="false" collective="false" import="true" targetId="b493-d9e6-82ca-5488" type="selectionEntry"/>
-        <entryLink id="129d-1dbb-7b6e-179b" name="BATTLELINE" hidden="false" collective="false" import="true" targetId="be1f-d384-9fe4-789d" type="selectionEntry"/>
       </entryLinks>
       <costs>
-        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="120.0"/>
+        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="130.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="da0b-6716-3626-4dd5" name="Hammerers" publicationId="88ce-c2fe-b89c-ed48" hidden="false" collective="false" import="true" type="unit">
       <modifiers>
-        <modifier type="increment" field="b0b4-6aec-82c2-02ae" value="140.0">
-          <repeats>
-            <repeat field="selections" scope="da0b-6716-3626-4dd5" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e20c-48d8-e5e3-1a36" repeats="1" roundUp="false"/>
-          </repeats>
+        <modifier type="increment" field="b0b4-6aec-82c2-02ae" value="150.0">
           <conditions>
-            <condition field="selections" scope="da0b-6716-3626-4dd5" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e20c-48d8-e5e3-1a36" type="greaterThan"/>
+            <condition field="selections" scope="da0b-6716-3626-4dd5" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2f0d-f5ca-5317-56c4" type="greaterThan"/>
           </conditions>
         </modifier>
       </modifiers>
@@ -788,41 +495,47 @@
         <profile id="94e8-3c97-8af2-e5f1" name="Hammerers" hidden="false" typeId="3956-f6dd-6c88-ae4b" typeName="Unit">
           <characteristics>
             <characteristic name="Move" typeId="5bbe-8910-4dfa-7b1c">4&quot;</characteristic>
-            <characteristic name="Wounds" typeId="a0c6-af64-2f24-5759">1</characteristic>
-            <characteristic name="Save" typeId="93b6-2f96-2df7-e330">4+</characteristic>
-            <characteristic name="Bravery" typeId="2420-1c5c-1016-7033">7</characteristic>
+            <characteristic name="Health" typeId="a0c6-af64-2f24-5759">1</characteristic>
+            <characteristic name="Save" typeId="93b6-2f96-2df7-e330">3+</characteristic>
+            <characteristic name="Control" typeId="2420-1c5c-1016-7033">1</characteristic>
           </characteristics>
         </profile>
-        <profile id="97de-872f-aafa-7b99" name="Kingsguard" hidden="false" typeId="7861-da01-01c0-88d9" typeName="Ability">
+        <profile id="97de-872f-aafa-7b99" name="Oathsworn" hidden="false" typeId="7861-da01-01c0-88d9" typeName="Ability">
           <characteristics>
-            <characteristic name="Ability" typeId="9bce-4deb-8b79-eaec">At the start of the first battle round, before determining who has the first turn, you can pick 1 friendly WARDEN KING on the battlefield for this unit to be assigned to (the same WARDEN KING cannot have more than 1 unit assigned to it). That WARDEN KING has a ward of 4+ while it is within 3&quot; of this unit.</characteristic>
+            <characteristic name="Use" typeId="9bce-4deb-8b79-eaec">Passive</characteristic>
+            <characteristic name="Declare" typeId="f9c7-7dae-69e1-f924"></characteristic>
+            <characteristic name="Effect" typeId="7d15-5e9e-83a9-d696">While any friendly CITIES OF SIGMAR DUARDIN INFANTRY HEROES are wholly within this unit’s combat range, both this unit and those friendly units have WARD (5+).</characteristic>
           </characteristics>
         </profile>
-        <profile id="36f7-487c-e8a4-8066" name="Champion" hidden="false" typeId="c23b-5a30-07e2-4706" typeName="Unit Options">
+        <profile id="5b01-ce51-6e6d-a5d6" name="Hammerers" hidden="false" typeId="c23b-5a30-07e2-4706" typeName="Warscroll Extras">
           <characteristics>
-            <characteristic name="Unit Option" typeId="5879-9a21-e9d2-539d">1 model in this unit can be a Keeper of the Gate. Add 1 to the Attacks characteristic of that model’s melee weapons.</characteristic>
+            <characteristic name="WIZARD" typeId="67b3-6f8b-2116-2a27">-</characteristic>
+            <characteristic name="PRIEST" typeId="02ab-4d58-5c31-767e">-</characteristic>
+            <characteristic name="WARD" typeId="40a4-4432-32da-74d9"></characteristic>
+            <characteristic name="CHAMPION" typeId="dccd-b70a-d225-5e37">Yes</characteristic>
+            <characteristic name="MUSICIAN" typeId="053d-5038-d84a-3aa3">1/10</characteristic>
+            <characteristic name="STANDARD BEARER" typeId="ccb7-3ee4-5637-586e">1/10</characteristic>
           </characteristics>
         </profile>
       </profiles>
       <categoryLinks>
         <categoryLink id="c5f4-c067-41a3-3346" name="CITIES OF SIGMAR" hidden="false" targetId="d20b-b22a-23ee-3ca1" primary="false"/>
-        <categoryLink id="3d66-2e43-5bda-27f3" name="Dispossessed" hidden="false" targetId="9d48-97e2-eb19-edbe" primary="false"/>
         <categoryLink id="7150-ad55-1ac1-2c06" name="Duardin" hidden="false" targetId="3434-9baa-1e9a-4ebd" primary="false"/>
         <categoryLink id="81b1-c0a2-fb41-8c67" name="Order" hidden="false" targetId="90c6-6c11-9677-1fa8" primary="false"/>
         <categoryLink id="6bea-da96-353c-8814" name="New CategoryLink" hidden="false" targetId="6230-ed60-e374-add4" primary="true"/>
-        <categoryLink id="cb81-22d6-57e5-9e65" name="Hammerers" hidden="false" targetId="d831-ebc4-e94f-0cca" primary="false"/>
+        <categoryLink id="c89d-34fa-0cc9-6d9e" name="INFANTRY" hidden="false" targetId="25bf-7a1c-60fc-7e12" primary="false"/>
       </categoryLinks>
       <selectionEntries>
         <selectionEntry id="cb38-2233-59c5-1d6e" name="10 Hammerers" hidden="false" collective="false" import="true" type="model">
           <modifiers>
-            <modifier type="set" field="0f0d-bc5d-0e63-73a0" value="3.0">
+            <modifier type="set" field="name" value="20 Hammerers">
               <conditions>
-                <condition field="selections" scope="da0b-6716-3626-4dd5" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="a42d-220e-6a88-7bf6" type="greaterThan"/>
+                <condition field="selections" scope="da0b-6716-3626-4dd5" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2f0d-f5ca-5317-56c4" type="greaterThan"/>
               </conditions>
             </modifier>
           </modifiers>
           <constraints>
-            <constraint field="selections" scope="parent" value="2.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="0f0d-bc5d-0e63-73a0" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="0f0d-bc5d-0e63-73a0" type="max"/>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="dbd9-0091-efe1-d7be" type="min"/>
           </constraints>
           <costs>
@@ -838,12 +551,13 @@
             <profile id="cfdd-584a-89fa-c843" name="Gromril Great Hammer" hidden="false" typeId="2905-f6bd-06e5-6642" typeName="Weapon">
               <characteristics>
                 <characteristic name="Type" typeId="1a08-195b-76fd-2c2b">Melee</characteristic>
-                <characteristic name="Range" typeId="1406-f935-3f8e-b27f">1&quot;</characteristic>
+                <characteristic name="Range" typeId="1406-f935-3f8e-b27f">-</characteristic>
                 <characteristic name="Attacks" typeId="4c19-dba6-f094-5165">2</characteristic>
-                <characteristic name="To-Hit" typeId="7a4f-9704-2095-96c8">3+</characteristic>
+                <characteristic name="To-Hit" typeId="7a4f-9704-2095-96c8">4+</characteristic>
                 <characteristic name="To-Wound" typeId="172f-fc84-895b-04b7">3+</characteristic>
-                <characteristic name="Rend" typeId="0c05-bd2e-b7e7-3925">-2</characteristic>
+                <characteristic name="Rend" typeId="0c05-bd2e-b7e7-3925">1</characteristic>
                 <characteristic name="Damage" typeId="01c2-d16a-8788-e52b">2</characteristic>
+                <characteristic name="Ability" typeId="0a53-8ba4-d02a-fc50">-</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -852,64 +566,8 @@
           </costs>
         </selectionEntry>
       </selectionEntries>
-      <selectionEntryGroups>
-        <selectionEntryGroup id="8dba-c79d-b290-ea77" name="Unit Options" hidden="false" collective="false" import="true">
-          <selectionEntries>
-            <selectionEntry id="c2cd-be0e-df49-5da0" name="Standard Bearer" hidden="false" collective="false" import="true" type="upgrade">
-              <modifiers>
-                <modifier type="increment" field="d175-5633-3ff9-0d8d" value="1.0">
-                  <repeats>
-                    <repeat field="selections" scope="da0b-6716-3626-4dd5" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e20c-48d8-e5e3-1a36" repeats="1" roundUp="false"/>
-                  </repeats>
-                  <conditions>
-                    <condition field="selections" scope="da0b-6716-3626-4dd5" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e20c-48d8-e5e3-1a36" type="greaterThan"/>
-                  </conditions>
-                </modifier>
-              </modifiers>
-              <constraints>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d175-5633-3ff9-0d8d" type="max"/>
-              </constraints>
-              <profiles>
-                <profile id="d0a3-b868-dd35-71ce" name="Standard Bearer" hidden="false" typeId="c23b-5a30-07e2-4706" typeName="Unit Options">
-                  <characteristics>
-                    <characteristic name="Unit Option" typeId="5879-9a21-e9d2-539d">1 in every 10 models in this unit can be a Standard Bearer. Add 1 to the Bravery characteristic ofthis unit while it includes any Standard Bearers.</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-              <costs>
-                <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
-              </costs>
-            </selectionEntry>
-            <selectionEntry id="8710-b312-f5d8-1b72" name="Musician" hidden="false" collective="false" import="true" type="upgrade">
-              <modifiers>
-                <modifier type="increment" field="f419-f43f-99f8-7d69" value="1.0">
-                  <repeats>
-                    <repeat field="selections" scope="da0b-6716-3626-4dd5" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e20c-48d8-e5e3-1a36" repeats="1" roundUp="false"/>
-                  </repeats>
-                  <conditions>
-                    <condition field="selections" scope="da0b-6716-3626-4dd5" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e20c-48d8-e5e3-1a36" type="greaterThan"/>
-                  </conditions>
-                </modifier>
-              </modifiers>
-              <constraints>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="f419-f43f-99f8-7d69" type="max"/>
-              </constraints>
-              <profiles>
-                <profile id="51b1-aedb-5609-1ee0" name="Musician" hidden="false" typeId="c23b-5a30-07e2-4706" typeName="Unit Options">
-                  <characteristics>
-                    <characteristic name="Unit Option" typeId="5879-9a21-e9d2-539d">1 in every 10 models in this unit can be a Hornblower. Add 1 to run rolls and charge rolls for this unit while it includes any Hornblowers.</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-              <costs>
-                <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
-              </costs>
-            </selectionEntry>
-          </selectionEntries>
-        </selectionEntryGroup>
-      </selectionEntryGroups>
       <costs>
-        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="140.0"/>
+        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="150.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="5923-8c44-2c49-546f" name="Cogsmith" publicationId="88ce-c2fe-b89c-ed48" hidden="false" collective="false" import="true" type="unit">
@@ -917,58 +575,76 @@
         <profile id="4b8b-fa6f-d128-b2b8" name="Cogsmith" hidden="false" typeId="3956-f6dd-6c88-ae4b" typeName="Unit">
           <characteristics>
             <characteristic name="Move" typeId="5bbe-8910-4dfa-7b1c">4&quot;</characteristic>
-            <characteristic name="Wounds" typeId="a0c6-af64-2f24-5759">5</characteristic>
+            <characteristic name="Health" typeId="a0c6-af64-2f24-5759">5</characteristic>
             <characteristic name="Save" typeId="93b6-2f96-2df7-e330">3+</characteristic>
-            <characteristic name="Bravery" typeId="2420-1c5c-1016-7033">8</characteristic>
+            <characteristic name="Control" typeId="2420-1c5c-1016-7033">2</characteristic>
           </characteristics>
         </profile>
         <profile id="3e27-a752-d33b-728f" name="Direct the Gyrocorps" hidden="false" typeId="7861-da01-01c0-88d9" typeName="Ability">
           <characteristics>
-            <characteristic name="Ability" typeId="9bce-4deb-8b79-eaec">This unit can issue commands to friendly GYROCOPTERS and GYROBOMBER units anywhere on the battlefield.</characteristic>
+            <characteristic name="Use" typeId="9bce-4deb-8b79-eaec">Once Per Turn (Army), Your Hero Phase</characteristic>
+            <characteristic name="Declare" typeId="f9c7-7dae-69e1-f924">Pick up to 3 visible friendly Gyrocopter or Gyrobomber units wholly within 18&quot; of this unit to be the targets.</characteristic>
+            <characteristic name="Effect" typeId="7d15-5e9e-83a9-d696">Roll a dice for each target. On a 3+, add 1 to hit rolls for the target’s attacks until the start of your next turn.</characteristic>
           </characteristics>
         </profile>
-        <profile id="d988-76f6-e73c-1299" name="Free-Arm" hidden="false" typeId="7861-da01-01c0-88d9" typeName="Ability">
+        <profile id="6480-f914-393e-7150" name="Cogsmith" hidden="false" typeId="c23b-5a30-07e2-4706" typeName="Warscroll Extras">
           <characteristics>
-            <characteristic name="Ability" typeId="9bce-4deb-8b79-eaec">Add 1 to hit rolls for attacks made with this model’s missile weapons if it is not armed with a Cog Axe. Add 1 to hit rolls for attacks made with this unit’s melee weapons if it is not armed with a Grudge-raker.</characteristic>
+            <characteristic name="WIZARD" typeId="67b3-6f8b-2116-2a27">-</characteristic>
+            <characteristic name="PRIEST" typeId="02ab-4d58-5c31-767e">-</characteristic>
+            <characteristic name="WARD" typeId="40a4-4432-32da-74d9">-</characteristic>
+            <characteristic name="CHAMPION" typeId="dccd-b70a-d225-5e37">-</characteristic>
+            <characteristic name="MUSICIAN" typeId="053d-5038-d84a-3aa3">-</characteristic>
+            <characteristic name="STANDARD BEARER" typeId="ccb7-3ee4-5637-586e">-</characteristic>
           </characteristics>
         </profile>
       </profiles>
       <categoryLinks>
         <categoryLink id="00f2-c25f-8d33-6966" name="CITIES OF SIGMAR" hidden="false" targetId="d20b-b22a-23ee-3ca1" primary="false"/>
-        <categoryLink id="e96f-0218-cc84-b377" name="Cogsmith" hidden="false" targetId="2390-51f0-d286-dc3f" primary="false"/>
         <categoryLink id="c9c8-0f98-04be-4753" name="Duardin" hidden="false" targetId="3434-9baa-1e9a-4ebd" primary="false"/>
-        <categoryLink id="f750-8039-4c84-ea56" name="Hero" hidden="false" targetId="411f-dd41-4ab6-8a05" primary="false"/>
-        <categoryLink id="cea4-8497-4412-0f2a" name="Ironweld Arsenal" hidden="false" targetId="402d-8beb-90c9-cd91" primary="false"/>
-        <categoryLink id="a0a5-e111-8994-1833" name="New CategoryLink" hidden="false" targetId="93cb-21d9-e1d5-6161" primary="true"/>
+        <categoryLink id="f750-8039-4c84-ea56" name="Hero" hidden="false" targetId="411f-dd41-4ab6-8a05" primary="true"/>
         <categoryLink id="4937-29d3-8441-8420" name="Order" hidden="false" targetId="90c6-6c11-9677-1fa8" primary="false"/>
+        <categoryLink id="da1e-236e-52e4-5cbf" name="INFANTRY" hidden="false" targetId="25bf-7a1c-60fc-7e12" primary="false"/>
       </categoryLinks>
       <selectionEntries>
-        <selectionEntry id="fde3-457a-2464-47f7" name="Duardin Pistols &amp; Gun Butt" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="fde3-457a-2464-47f7" name="Gun Butt &amp; Cog Axe" hidden="false" collective="false" import="true" type="upgrade">
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="acaa-5b5a-d1c3-fb6f" type="max"/>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="b159-b206-a474-2785" type="min"/>
           </constraints>
           <profiles>
-            <profile id="4137-9835-dcc4-5dc1" name="Duardin Pistols" hidden="false" typeId="2905-f6bd-06e5-6642" typeName="Weapon">
-              <characteristics>
-                <characteristic name="Type" typeId="1a08-195b-76fd-2c2b">Missile</characteristic>
-                <characteristic name="Range" typeId="1406-f935-3f8e-b27f">9&quot;</characteristic>
-                <characteristic name="Attacks" typeId="4c19-dba6-f094-5165">2</characteristic>
-                <characteristic name="To-Hit" typeId="7a4f-9704-2095-96c8">4+</characteristic>
-                <characteristic name="To-Wound" typeId="172f-fc84-895b-04b7">3+</characteristic>
-                <characteristic name="Rend" typeId="0c05-bd2e-b7e7-3925">-1</characteristic>
-                <characteristic name="Damage" typeId="01c2-d16a-8788-e52b">1</characteristic>
-              </characteristics>
-            </profile>
-            <profile id="f73d-3297-f7c3-8448" name="Gun Butt" hidden="false" typeId="2905-f6bd-06e5-6642" typeName="Weapon">
+            <profile id="a147-fb7d-c0a8-6034" name="Gun Butt &amp; Cog Axe" hidden="false" typeId="2905-f6bd-06e5-6642" typeName="Weapon">
               <characteristics>
                 <characteristic name="Type" typeId="1a08-195b-76fd-2c2b">Melee</characteristic>
-                <characteristic name="Range" typeId="1406-f935-3f8e-b27f">1&quot;</characteristic>
-                <characteristic name="Attacks" typeId="4c19-dba6-f094-5165">1</characteristic>
+                <characteristic name="Range" typeId="1406-f935-3f8e-b27f">-</characteristic>
+                <characteristic name="Attacks" typeId="4c19-dba6-f094-5165">3</characteristic>
                 <characteristic name="To-Hit" typeId="7a4f-9704-2095-96c8">4+</characteristic>
                 <characteristic name="To-Wound" typeId="172f-fc84-895b-04b7">4+</characteristic>
-                <characteristic name="Rend" typeId="0c05-bd2e-b7e7-3925">-</characteristic>
+                <characteristic name="Rend" typeId="0c05-bd2e-b7e7-3925">1</characteristic>
+                <characteristic name="Damage" typeId="01c2-d16a-8788-e52b">2</characteristic>
+                <characteristic name="Ability" typeId="0a53-8ba4-d02a-fc50">-</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <costs>
+            <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="8201-1570-3196-a977" name="Cogsmith&apos;s Firearms" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="19b7-dc1d-161f-77a8" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="22ea-e9bd-38cc-cf6b" type="min"/>
+          </constraints>
+          <profiles>
+            <profile id="90e3-5979-c1cc-f808" name="Cogsmith&apos;s Firearms" hidden="false" typeId="2905-f6bd-06e5-6642" typeName="Weapon">
+              <characteristics>
+                <characteristic name="Type" typeId="1a08-195b-76fd-2c2b">Ranged</characteristic>
+                <characteristic name="Range" typeId="1406-f935-3f8e-b27f">15&quot;</characteristic>
+                <characteristic name="Attacks" typeId="4c19-dba6-f094-5165">4</characteristic>
+                <characteristic name="To-Hit" typeId="7a4f-9704-2095-96c8">3+</characteristic>
+                <characteristic name="To-Wound" typeId="172f-fc84-895b-04b7">3+</characteristic>
+                <characteristic name="Rend" typeId="0c05-bd2e-b7e7-3925">1</characteristic>
                 <characteristic name="Damage" typeId="01c2-d16a-8788-e52b">1</characteristic>
+                <characteristic name="Ability" typeId="0a53-8ba4-d02a-fc50">-</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -977,94 +653,45 @@
           </costs>
         </selectionEntry>
       </selectionEntries>
-      <selectionEntryGroups>
-        <selectionEntryGroup id="b4c0-6414-1625-0953" name="Weapon Option" hidden="false" collective="false" import="true" defaultSelectionEntryId="1e22-c255-ea14-ab9c">
-          <constraints>
-            <constraint field="selections" scope="parent" value="2.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="2379-e431-e132-0d53" type="max"/>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="6d96-855b-7f3f-d781" type="min"/>
-          </constraints>
-          <selectionEntries>
-            <selectionEntry id="09d6-5358-c766-4e6d" name="Grudge-raker" hidden="false" collective="false" import="true" type="upgrade">
-              <constraints>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="fc7f-f739-b422-c346" type="max"/>
-              </constraints>
-              <profiles>
-                <profile id="18d2-3dee-8caf-667e" name="Grudge-raker" hidden="false" typeId="2905-f6bd-06e5-6642" typeName="Weapon">
-                  <characteristics>
-                    <characteristic name="Type" typeId="1a08-195b-76fd-2c2b">Missile</characteristic>
-                    <characteristic name="Range" typeId="1406-f935-3f8e-b27f">16&quot;</characteristic>
-                    <characteristic name="Attacks" typeId="4c19-dba6-f094-5165">2</characteristic>
-                    <characteristic name="To-Hit" typeId="7a4f-9704-2095-96c8">4+</characteristic>
-                    <characteristic name="To-Wound" typeId="172f-fc84-895b-04b7">3+</characteristic>
-                    <characteristic name="Rend" typeId="0c05-bd2e-b7e7-3925">-1</characteristic>
-                    <characteristic name="Damage" typeId="01c2-d16a-8788-e52b">2</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-              <costs>
-                <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
-              </costs>
-            </selectionEntry>
-            <selectionEntry id="1e22-c255-ea14-ab9c" name="Cog Axe" hidden="false" collective="false" import="true" type="upgrade">
-              <constraints>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="1f96-dc96-f89b-7f38" type="max"/>
-              </constraints>
-              <profiles>
-                <profile id="cf1a-7a5d-2f87-9626" name="Cog Axe" hidden="false" typeId="2905-f6bd-06e5-6642" typeName="Weapon">
-                  <characteristics>
-                    <characteristic name="Type" typeId="1a08-195b-76fd-2c2b">Melee</characteristic>
-                    <characteristic name="Range" typeId="1406-f935-3f8e-b27f">1&quot;</characteristic>
-                    <characteristic name="Attacks" typeId="4c19-dba6-f094-5165">3</characteristic>
-                    <characteristic name="To-Hit" typeId="7a4f-9704-2095-96c8">3+</characteristic>
-                    <characteristic name="To-Wound" typeId="172f-fc84-895b-04b7">3+</characteristic>
-                    <characteristic name="Rend" typeId="0c05-bd2e-b7e7-3925">-1</characteristic>
-                    <characteristic name="Damage" typeId="01c2-d16a-8788-e52b">2</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-              <costs>
-                <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
-              </costs>
-            </selectionEntry>
-          </selectionEntries>
-        </selectionEntryGroup>
-      </selectionEntryGroups>
       <costs>
-        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="90.0"/>
+        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="130.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="cd6b-49ef-27b4-2cbc" name="Gyrocopter" publicationId="88ce-c2fe-b89c-ed48" hidden="false" collective="false" import="true" type="unit">
       <profiles>
-        <profile id="84d6-ec2b-1c14-5ead" name="Gyrocopters" hidden="false" typeId="3956-f6dd-6c88-ae4b" typeName="Unit">
+        <profile id="84d6-ec2b-1c14-5ead" name="Gyrocopter" hidden="false" typeId="3956-f6dd-6c88-ae4b" typeName="Unit">
           <characteristics>
             <characteristic name="Move" typeId="5bbe-8910-4dfa-7b1c">12&quot;</characteristic>
-            <characteristic name="Wounds" typeId="a0c6-af64-2f24-5759">4</characteristic>
+            <characteristic name="Health" typeId="a0c6-af64-2f24-5759">5</characteristic>
             <characteristic name="Save" typeId="93b6-2f96-2df7-e330">3+</characteristic>
-            <characteristic name="Bravery" typeId="2420-1c5c-1016-7033">6</characteristic>
+            <characteristic name="Control" typeId="2420-1c5c-1016-7033">2</characteristic>
           </characteristics>
         </profile>
         <profile id="af63-815e-74f0-12ac" name="Guild Bombs" hidden="false" typeId="7861-da01-01c0-88d9" typeName="Ability">
           <characteristics>
-            <characteristic name="Ability" typeId="9bce-4deb-8b79-eaec">Once per battle, after this unit has made a normal move, pick 1 enemy unit and roll 1 dice for each model in this unit that passed across any models in that enemy unit. For each roll of 2+, that enemy unit suffers D3 mortal wounds.</characteristic>
+            <characteristic name="Use" typeId="9bce-4deb-8b79-eaec">Once Per Battle, Your Movement Phase</characteristic>
+            <characteristic name="Declare" typeId="f9c7-7dae-69e1-f924">If this unit used a MOVE ability this phase, pick an enemy unit that does not have FLY and that this unit passed across this turn to be the target.</characteristic>
+            <characteristic name="Effect" typeId="7d15-5e9e-83a9-d696">Roll a D3. On a 2+, inflict an amount of mortal damage on the target equal to the roll.</characteristic>
           </characteristics>
         </profile>
-        <profile id="4fbb-a268-dd7b-3255" name="Champion" hidden="false" typeId="c23b-5a30-07e2-4706" typeName="Unit Options">
+        <profile id="2dad-6826-dd45-228f" name="Gyrocopter" hidden="false" typeId="c23b-5a30-07e2-4706" typeName="Warscroll Extras">
           <characteristics>
-            <characteristic name="Unit Option" typeId="5879-9a21-e9d2-539d">If this unit has 2 or more models, 1 model in this unit can be a Squadron Leader. Add 1 to the Attacks characteristic of that model’s missile weapons.</characteristic>
+            <characteristic name="WIZARD" typeId="67b3-6f8b-2116-2a27">-</characteristic>
+            <characteristic name="PRIEST" typeId="02ab-4d58-5c31-767e">-</characteristic>
+            <characteristic name="WARD" typeId="40a4-4432-32da-74d9">-</characteristic>
+            <characteristic name="CHAMPION" typeId="dccd-b70a-d225-5e37"></characteristic>
+            <characteristic name="MUSICIAN" typeId="053d-5038-d84a-3aa3">-</characteristic>
+            <characteristic name="STANDARD BEARER" typeId="ccb7-3ee4-5637-586e">-</characteristic>
           </characteristics>
         </profile>
       </profiles>
-      <infoLinks>
-        <infoLink id="5d17-2f68-4419-04fd" name="Fly" hidden="false" targetId="dd68-953d-c8fb-7075" type="profile"/>
-      </infoLinks>
       <categoryLinks>
         <categoryLink id="c28a-d513-5e10-90b2" name="CITIES OF SIGMAR" hidden="false" targetId="d20b-b22a-23ee-3ca1" primary="false"/>
         <categoryLink id="8ef7-14bd-e47c-c362" name="Duardin" hidden="false" targetId="3434-9baa-1e9a-4ebd" primary="false"/>
-        <categoryLink id="335d-bde5-65b7-8943" name="Gyrocopters" hidden="false" targetId="3430-be36-26d9-df75" primary="false"/>
         <categoryLink id="9972-6ca6-b5d6-3028" name="Order" hidden="false" targetId="90c6-6c11-9677-1fa8" primary="false"/>
         <categoryLink id="aaf9-d87e-a279-8d60" name="New CategoryLink" hidden="false" targetId="6230-ed60-e374-add4" primary="true"/>
         <categoryLink id="f47e-9b62-c3e4-3799" name="War Machine" hidden="false" targetId="6eff-9011-b44d-1334" primary="false"/>
-        <categoryLink id="b1ad-74e4-d93f-bd9d" name="Ironweld Arsenal" hidden="false" targetId="402d-8beb-90c9-cd91" primary="false"/>
+        <categoryLink id="3af4-bbae-7a91-4554" name="FLY" hidden="false" targetId="d6e0-a528-9ca3-0c8c" primary="false"/>
       </categoryLinks>
       <selectionEntries>
         <selectionEntry id="310c-90e5-3114-31ed" name="Rotor Blades" hidden="false" collective="false" import="true" type="upgrade">
@@ -1076,12 +703,36 @@
             <profile id="36eb-1804-2078-815c" name="Rotor Blades" hidden="false" typeId="2905-f6bd-06e5-6642" typeName="Weapon">
               <characteristics>
                 <characteristic name="Type" typeId="1a08-195b-76fd-2c2b">Melee</characteristic>
-                <characteristic name="Range" typeId="1406-f935-3f8e-b27f">1&quot;</characteristic>
-                <characteristic name="Attacks" typeId="4c19-dba6-f094-5165">D3</characteristic>
-                <characteristic name="To-Hit" typeId="7a4f-9704-2095-96c8">5+</characteristic>
+                <characteristic name="Range" typeId="1406-f935-3f8e-b27f">-</characteristic>
+                <characteristic name="Attacks" typeId="4c19-dba6-f094-5165">3</characteristic>
+                <characteristic name="To-Hit" typeId="7a4f-9704-2095-96c8">4+</characteristic>
                 <characteristic name="To-Wound" typeId="172f-fc84-895b-04b7">4+</characteristic>
-                <characteristic name="Rend" typeId="0c05-bd2e-b7e7-3925">-</characteristic>
-                <characteristic name="Damage" typeId="01c2-d16a-8788-e52b">1</characteristic>
+                <characteristic name="Rend" typeId="0c05-bd2e-b7e7-3925">1</characteristic>
+                <characteristic name="Damage" typeId="01c2-d16a-8788-e52b">D3</characteristic>
+                <characteristic name="Ability" typeId="0a53-8ba4-d02a-fc50">-</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <costs>
+            <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="8602-7a7c-943e-490b" name="Gyrocopter Guns" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="e2a0-eae0-2962-5bc0" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="ade0-0bb9-e825-0dc3" type="min"/>
+          </constraints>
+          <profiles>
+            <profile id="0a1d-b434-a62c-2788" name="Gyrocopter Guns" hidden="false" typeId="2905-f6bd-06e5-6642" typeName="Weapon">
+              <characteristics>
+                <characteristic name="Type" typeId="1a08-195b-76fd-2c2b">Missile</characteristic>
+                <characteristic name="Range" typeId="1406-f935-3f8e-b27f">12&quot;</characteristic>
+                <characteristic name="Attacks" typeId="4c19-dba6-f094-5165">5</characteristic>
+                <characteristic name="To-Hit" typeId="7a4f-9704-2095-96c8">4+</characteristic>
+                <characteristic name="To-Wound" typeId="172f-fc84-895b-04b7">3+</characteristic>
+                <characteristic name="Rend" typeId="0c05-bd2e-b7e7-3925">1</characteristic>
+                <characteristic name="Damage" typeId="01c2-d16a-8788-e52b">D3</characteristic>
+                <characteristic name="Ability" typeId="0a53-8ba4-d02a-fc50">-</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -1090,122 +741,51 @@
           </costs>
         </selectionEntry>
       </selectionEntries>
-      <selectionEntryGroups>
-        <selectionEntryGroup id="9922-1e6c-20e3-3bdf" name="Weapon Option" hidden="false" collective="false" import="true" defaultSelectionEntryId="3a0f-5ee9-2600-bcd5">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="a34f-1f3c-2a45-3402" type="max"/>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="52ea-c0a2-f9a7-afe0" type="min"/>
-          </constraints>
-          <selectionEntries>
-            <selectionEntry id="3a0f-5ee9-2600-bcd5" name="Brimstone Gun" hidden="false" collective="false" import="true" type="upgrade">
-              <profiles>
-                <profile id="16fa-c3f0-59ce-001b" name="Brimstone Gun" hidden="false" typeId="2905-f6bd-06e5-6642" typeName="Weapon">
-                  <characteristics>
-                    <characteristic name="Type" typeId="1a08-195b-76fd-2c2b">Missile</characteristic>
-                    <characteristic name="Range" typeId="1406-f935-3f8e-b27f">15&quot;</characteristic>
-                    <characteristic name="Attacks" typeId="4c19-dba6-f094-5165">3</characteristic>
-                    <characteristic name="To-Hit" typeId="7a4f-9704-2095-96c8">3+</characteristic>
-                    <characteristic name="To-Wound" typeId="172f-fc84-895b-04b7">3+</characteristic>
-                    <characteristic name="Rend" typeId="0c05-bd2e-b7e7-3925">-1</characteristic>
-                    <characteristic name="Damage" typeId="01c2-d16a-8788-e52b">D3</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-              <costs>
-                <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
-              </costs>
-            </selectionEntry>
-            <selectionEntry id="cfb0-b5b6-5f3e-2e95" name="Steam Gun" hidden="false" collective="false" import="true" type="upgrade">
-              <profiles>
-                <profile id="0e66-e2a0-3000-70e8" name="Steam Gun" hidden="false" typeId="2905-f6bd-06e5-6642" typeName="Weapon">
-                  <characteristics>
-                    <characteristic name="Type" typeId="1a08-195b-76fd-2c2b">Missile</characteristic>
-                    <characteristic name="Range" typeId="1406-f935-3f8e-b27f">12&quot;</characteristic>
-                    <characteristic name="Attacks" typeId="4c19-dba6-f094-5165">2D6</characteristic>
-                    <characteristic name="To-Hit" typeId="7a4f-9704-2095-96c8">3+</characteristic>
-                    <characteristic name="To-Wound" typeId="172f-fc84-895b-04b7">3+</characteristic>
-                    <characteristic name="Rend" typeId="0c05-bd2e-b7e7-3925">-</characteristic>
-                    <characteristic name="Damage" typeId="01c2-d16a-8788-e52b">1</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-              <costs>
-                <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
-              </costs>
-            </selectionEntry>
-          </selectionEntries>
-        </selectionEntryGroup>
-        <selectionEntryGroup id="d75c-01f2-b1e5-3d2c" name="Model Count" hidden="false" collective="false" import="true" defaultSelectionEntryId="36b7-a529-9546-f482">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="2591-4a22-7095-ca20" type="max"/>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="f686-b6c3-ae58-5bb6" type="min"/>
-          </constraints>
-          <selectionEntries>
-            <selectionEntry id="36b7-a529-9546-f482" name="1 Gyrocopter" hidden="false" collective="false" import="true" type="model">
-              <costs>
-                <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="80.0"/>
-              </costs>
-            </selectionEntry>
-            <selectionEntry id="4066-b3a1-34ae-a4fd" name="3 Gyrocopters" hidden="false" collective="false" import="true" type="model">
-              <costs>
-                <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="240.0"/>
-              </costs>
-            </selectionEntry>
-          </selectionEntries>
-        </selectionEntryGroup>
-      </selectionEntryGroups>
       <costs>
-        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
+        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="160.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="cc3e-1d7c-a8e9-bfce" name="Gyrobomber" publicationId="88ce-c2fe-b89c-ed48" hidden="false" collective="false" import="true" type="unit">
-      <modifiers>
-        <modifier type="increment" field="b0b4-6aec-82c2-02ae" value="120.0">
-          <repeats>
-            <repeat field="selections" scope="cc3e-1d7c-a8e9-bfce" value="1.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" childId="e20c-48d8-e5e3-1a36" repeats="1" roundUp="false"/>
-          </repeats>
-          <conditions>
-            <condition field="selections" scope="cc3e-1d7c-a8e9-bfce" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e20c-48d8-e5e3-1a36" type="greaterThan"/>
-          </conditions>
-        </modifier>
-      </modifiers>
       <profiles>
         <profile id="f682-0db7-0e17-aaa1" name="Gyrobomber" hidden="false" typeId="3956-f6dd-6c88-ae4b" typeName="Unit">
           <characteristics>
             <characteristic name="Move" typeId="5bbe-8910-4dfa-7b1c">12&quot;</characteristic>
-            <characteristic name="Wounds" typeId="a0c6-af64-2f24-5759">5</characteristic>
+            <characteristic name="Health" typeId="a0c6-af64-2f24-5759">6</characteristic>
             <characteristic name="Save" typeId="93b6-2f96-2df7-e330">3+</characteristic>
-            <characteristic name="Bravery" typeId="2420-1c5c-1016-7033">6</characteristic>
+            <characteristic name="Control" typeId="2420-1c5c-1016-7033">2</characteristic>
           </characteristics>
         </profile>
         <profile id="7433-0d55-f553-bc4a" name="Grudgebuster Bombs" hidden="false" typeId="7861-da01-01c0-88d9" typeName="Ability">
           <characteristics>
-            <characteristic name="Ability" typeId="9bce-4deb-8b79-eaec">After this unit has made a normal move, pick 1 enemy unit that this unit passed across and roll a dice. On a 2+, that enemy unit suffers D3 mortal wounds.</characteristic>
+            <characteristic name="Use" typeId="9bce-4deb-8b79-eaec">Your Movement Phase</characteristic>
+            <characteristic name="Declare" typeId="f9c7-7dae-69e1-f924">If this unit used a MOVE ability this phase, pick an enemy unit that does not have FLY and that this unit passed across this turn to be the target.</characteristic>
+            <characteristic name="Effect" typeId="7d15-5e9e-83a9-d696">Pick 1 of the following effects:
+
+Tactical Bombing: Roll a D3. On a 2+, inflict an amount of mortal damage on the target equal to the roll.
+
+Drop It All!:Make 2 rolls of D3. For each 2+, inflict an amount of mortal damage on the target equal to the roll. Then, roll a D3 for each unit (friendly and enemy) within the target’s combat range that does not have FLY. On a 2+, inflict an amount of mortal damage on that unit equal to the roll. Once the ‘Drop It All!’ effect of this ability has been resolved, this unit cannot use this ability again for the rest of the battle.</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="bc32-1a95-8b1e-c7c0" name="Gyrobomber" hidden="false" typeId="c23b-5a30-07e2-4706" typeName="Warscroll Extras">
+          <characteristics>
+            <characteristic name="WIZARD" typeId="67b3-6f8b-2116-2a27">-</characteristic>
+            <characteristic name="PRIEST" typeId="02ab-4d58-5c31-767e">-</characteristic>
+            <characteristic name="WARD" typeId="40a4-4432-32da-74d9"></characteristic>
+            <characteristic name="CHAMPION" typeId="dccd-b70a-d225-5e37"></characteristic>
+            <characteristic name="MUSICIAN" typeId="053d-5038-d84a-3aa3"></characteristic>
+            <characteristic name="STANDARD BEARER" typeId="ccb7-3ee4-5637-586e">-</characteristic>
           </characteristics>
         </profile>
       </profiles>
-      <infoLinks>
-        <infoLink id="0c4e-7bb7-7a2a-935e" name="Fly" hidden="false" targetId="dd68-953d-c8fb-7075" type="profile"/>
-      </infoLinks>
       <categoryLinks>
         <categoryLink id="4939-a5a4-d167-2ebb" name="CITIES OF SIGMAR" hidden="false" targetId="d20b-b22a-23ee-3ca1" primary="false"/>
         <categoryLink id="78df-6f3f-2404-c589" name="Duardin" hidden="false" targetId="3434-9baa-1e9a-4ebd" primary="false"/>
-        <categoryLink id="a9c7-ee2c-3606-40cb" name="Gyrobombers" hidden="false" targetId="2655-860b-fa60-be2f" primary="false"/>
-        <categoryLink id="57b2-fa42-d0a6-be6d" name="Ironweld Arsenal" hidden="false" targetId="402d-8beb-90c9-cd91" primary="false"/>
         <categoryLink id="f2cf-17a6-85a9-b4bd" name="Order" hidden="false" targetId="90c6-6c11-9677-1fa8" primary="false"/>
         <categoryLink id="d2c3-a161-7e3c-c3c5" name="New CategoryLink" hidden="false" targetId="6230-ed60-e374-add4" primary="true"/>
         <categoryLink id="69bb-98cd-1e7d-86d4" name="War Machine" hidden="false" targetId="6eff-9011-b44d-1334" primary="false"/>
+        <categoryLink id="ca2b-34ff-76a2-4c03" name="FLY" hidden="false" targetId="d6e0-a528-9ca3-0c8c" primary="false"/>
       </categoryLinks>
       <selectionEntries>
-        <selectionEntry id="1cb8-0ace-394c-5990" name="1 Gyrobomber" hidden="false" collective="false" import="true" type="model">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="80dc-c4e9-d490-737d" type="max"/>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="52e8-6a53-231b-0bbd" type="min"/>
-          </constraints>
-          <costs>
-            <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
-          </costs>
-        </selectionEntry>
         <selectionEntry id="32da-5f5c-fddc-aeb0" name="Rotor Blades" hidden="false" collective="false" import="true" type="upgrade">
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="2a5a-4337-a3cd-17b2" type="max"/>
@@ -1215,12 +795,13 @@
             <profile id="5b27-0a42-33c0-a6a6" name="Rotor Blades" hidden="false" typeId="2905-f6bd-06e5-6642" typeName="Weapon">
               <characteristics>
                 <characteristic name="Type" typeId="1a08-195b-76fd-2c2b">Melee</characteristic>
-                <characteristic name="Range" typeId="1406-f935-3f8e-b27f">1&quot;</characteristic>
+                <characteristic name="Range" typeId="1406-f935-3f8e-b27f">-</characteristic>
                 <characteristic name="Attacks" typeId="4c19-dba6-f094-5165">3</characteristic>
                 <characteristic name="To-Hit" typeId="7a4f-9704-2095-96c8">4+</characteristic>
                 <characteristic name="To-Wound" typeId="172f-fc84-895b-04b7">4+</characteristic>
-                <characteristic name="Rend" typeId="0c05-bd2e-b7e7-3925">-1</characteristic>
-                <characteristic name="Damage" typeId="01c2-d16a-8788-e52b">2</characteristic>
+                <characteristic name="Rend" typeId="0c05-bd2e-b7e7-3925">1</characteristic>
+                <characteristic name="Damage" typeId="01c2-d16a-8788-e52b">D3</characteristic>
+                <characteristic name="Ability" typeId="0a53-8ba4-d02a-fc50">-</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -1237,12 +818,13 @@
             <profile id="a00f-a71a-62ab-4c07" name="Clattergun" hidden="false" typeId="2905-f6bd-06e5-6642" typeName="Weapon">
               <characteristics>
                 <characteristic name="Type" typeId="1a08-195b-76fd-2c2b">Missile</characteristic>
-                <characteristic name="Range" typeId="1406-f935-3f8e-b27f">18&quot;</characteristic>
-                <characteristic name="Attacks" typeId="4c19-dba6-f094-5165">5</characteristic>
-                <characteristic name="To-Hit" typeId="7a4f-9704-2095-96c8">3+</characteristic>
+                <characteristic name="Range" typeId="1406-f935-3f8e-b27f">12&quot;</characteristic>
+                <characteristic name="Attacks" typeId="4c19-dba6-f094-5165">3</characteristic>
+                <characteristic name="To-Hit" typeId="7a4f-9704-2095-96c8">4+</characteristic>
                 <characteristic name="To-Wound" typeId="172f-fc84-895b-04b7">3+</characteristic>
-                <characteristic name="Rend" typeId="0c05-bd2e-b7e7-3925">-1</characteristic>
-                <characteristic name="Damage" typeId="01c2-d16a-8788-e52b">2</characteristic>
+                <characteristic name="Rend" typeId="0c05-bd2e-b7e7-3925">1</characteristic>
+                <characteristic name="Damage" typeId="01c2-d16a-8788-e52b">D3</characteristic>
+                <characteristic name="Ability" typeId="0a53-8ba4-d02a-fc50">-</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -1255,7 +837,7 @@
         <entryLink id="2c2d-9c0c-5d56-362e" name="Unit Reinforcement" hidden="false" collective="false" import="true" targetId="b493-d9e6-82ca-5488" type="selectionEntry"/>
       </entryLinks>
       <costs>
-        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="120.0"/>
+        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="180.0"/>
       </costs>
     </selectionEntry>
   </sharedSelectionEntries>
