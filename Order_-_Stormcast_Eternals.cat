@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="d0f5-3583-d7c8-28a4" name="Order - Stormcast Eternals" revision="20" battleScribeVersion="2.03" authorName="Thulram" library="false" gameSystemId="e832-3291-06be-cab1" gameSystemRevision="20" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="d0f5-3583-d7c8-28a4" name="Order - Stormcast Eternals" revision="21" battleScribeVersion="2.03" authorName="Thulram" library="false" gameSystemId="e832-3291-06be-cab1" gameSystemRevision="21" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <categoryEntries>
     <categoryEntry id="e71f-8e09-8b76-9555" name="{Extremis Unlock}" hidden="false"/>
     <categoryEntry id="e4b6-a417-852e-542c" name="{Sacrosanct Unlock}" hidden="false"/>
@@ -26,126 +26,182 @@
         <categoryLink id="c976-5ed6-4e7d-cc10" name="New CategoryLink" hidden="false" targetId="29f4-e63d-fa5b-1611" primary="true"/>
         <categoryLink id="d259-349e-92da-1d9e" name="RoR - Stormcast Eternals" hidden="false" targetId="19c9-4095-f5ad-5774" primary="false"/>
       </categoryLinks>
-      <selectionEntries>
-        <selectionEntry id="61b8-47b3-c0aa-0b2a" name="Stormcast Eternals" publicationId="0624-d006-ae10-12c0" hidden="false" collective="false" import="true" type="upgrade">
+      <selectionEntryGroups>
+        <selectionEntryGroup id="3134-3fe8-0844-1e02" name="Allegiance" hidden="false" collective="false" import="true" defaultSelectionEntryId="971a-dd17-c869-f236">
           <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="094e-0d70-705e-7e49" type="max"/>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="23f6-c873-42e2-57bf" type="min"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="5f5c-758b-9c6e-7d03" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="c01f-f712-6d1c-e7d0" type="min"/>
           </constraints>
-          <profiles>
-            <profile id="b934-3155-95b4-acc2" name="The Celestial Realm [DEPLOY]" hidden="false" typeId="7861-da01-01c0-88d9" typeName="Ability">
-              <characteristics>
-                <characteristic name="Use" typeId="9bce-4deb-8b79-eaec">Deployment Phase</characteristic>
-                <characteristic name="Declare" typeId="f9c7-7dae-69e1-f924">If there are more friendly STORMCAST ETERNALS units on the battlefield than there are set up in reserve, pick a friendly STORMCAST ETERNALS unit that has not been deployed.</characteristic>
-                <characteristic name="Effect" typeId="7d15-5e9e-83a9-d696">Set up that unit in reserve in the Celestial Realm. It has now been deployed.</characteristic>
-              </characteristics>
-            </profile>
-            <profile id="4cf4-d49d-bcf8-859e" name="Scions of the Storm" hidden="false" typeId="7861-da01-01c0-88d9" typeName="Ability">
-              <characteristics>
-                <characteristic name="Use" typeId="9bce-4deb-8b79-eaec">Your Movement Phase</characteristic>
-                <characteristic name="Declare" typeId="f9c7-7dae-69e1-f924">Pick a friendly STORMCAST ETERNALS unit that is in the Celestial Realm.</characteristic>
-                <characteristic name="Effect" typeId="7d15-5e9e-83a9-d696">Set up that unit anywhere on the battlefield more than 9&quot; from all enemy units.</characteristic>
-              </characteristics>
-            </profile>
-            <profile id="3e55-d9cc-8aea-f855" name="Heavens-sent (1)" hidden="false" typeId="6364-f76d-fc0c-80bc" typeName="Command Ability">
-              <characteristics>
-                <characteristic name="Use" typeId="36cb-f8a4-d94b-8aa8">Once Per Battle, Your Movement Phase </characteristic>
-                <characteristic name="Declare" typeId="f14b-8a9d-0d54-37b8">Pick a friendly non-UNIQUE STORMCAST ETERNALS INFANTRY or CAVALRY unit that started the battle with 2 or more models and that has been destroyed to be the target.</characteristic>
-                <characteristic name="Effect" typeId="41c9-17a0-2545-666a">Set up a replacement unit with half the number of models from the target unit (rounding up) more than 9&quot; from all enemy units.</characteristic>
-              </characteristics>
-            </profile>
-            <profile id="7f4f-385f-25a3-33cf" name="Their Finest Hour" hidden="false" typeId="7861-da01-01c0-88d9" typeName="Ability">
-              <characteristics>
-                <characteristic name="Use" typeId="9bce-4deb-8b79-eaec">Once Per Turn (Army), Your Hero Phase</characteristic>
-                <characteristic name="Declare" typeId="f9c7-7dae-69e1-f924">Pick a friendly STORMCAST ETERNALS unit that has not used this ability this battle to use this ability.</characteristic>
-                <characteristic name="Effect" typeId="7d15-5e9e-83a9-d696">For the rest of the turn, add 1 to wound rolls for that unit’s combat attacks and add 1 to save rolls for that unit.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <selectionEntryGroups>
-            <selectionEntryGroup id="ea9c-f258-9fd9-f164" name="Battle Formations" hidden="false" collective="false" import="true">
-              <constraints>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="3e47-c507-3b30-5b4c" type="max"/>
-              </constraints>
-              <selectionEntries>
-                <selectionEntry id="dd55-965e-cf2a-9644" name="Sacrosanct Convocation" hidden="false" collective="false" import="true" type="upgrade">
-                  <profiles>
-                    <profile id="4d00-c992-9453-7a38" name="Cycle of the Storm" hidden="false" typeId="7861-da01-01c0-88d9" typeName="Ability">
-                      <characteristics>
-                        <characteristic name="Use" typeId="9bce-4deb-8b79-eaec">Once Per Turn (Army), End of Your Turn</characteristic>
-                        <characteristic name="Declare" typeId="f9c7-7dae-69e1-f924">Pick a friendly SACROSANCT CHAMBER unit that had models slain in this turn to be the target.</characteristic>
-                        <characteristic name="Effect" typeId="7d15-5e9e-83a9-d696">Return 1 slain model to the target unit.</characteristic>
-                      </characteristics>
-                    </profile>
-                  </profiles>
-                  <costs>
-                    <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
-                  </costs>
-                </selectionEntry>
-                <selectionEntry id="608d-d8f0-865b-ecbc" name="Lightning Echelon" hidden="false" collective="false" import="true" type="upgrade">
-                  <profiles>
-                    <profile id="a97e-4a4a-f8d9-f6f3" name="Oncoming Storm" hidden="false" typeId="7861-da01-01c0-88d9" typeName="Ability">
-                      <characteristics>
-                        <characteristic name="Use" typeId="9bce-4deb-8b79-eaec">Once Per Turn (Army), Any Combat Phase</characteristic>
-                        <characteristic name="Declare" typeId="f9c7-7dae-69e1-f924">Pick a friendly EXTREMIS CHAMBER unit that charged this turn.</characteristic>
-                        <characteristic name="Effect" typeId="7d15-5e9e-83a9-d696">Roll a dice. On a 3+, that unit has STRIKE-FIRST for the rest of the turn.</characteristic>
-                      </characteristics>
-                    </profile>
-                  </profiles>
-                  <costs>
-                    <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
-                  </costs>
-                </selectionEntry>
-                <selectionEntry id="e4a9-33d0-1dfe-762a" name="Vanguard Wing" hidden="false" collective="false" import="true" type="upgrade">
-                  <profiles>
-                    <profile id="2d68-5b48-12db-79d1" name="Peerless Manoeuvres [CORE]" hidden="false" typeId="7861-da01-01c0-88d9" typeName="Ability">
-                      <characteristics>
-                        <characteristic name="Use" typeId="9bce-4deb-8b79-eaec">Once Per Turn (Army), Your Movement Phase</characteristic>
-                        <characteristic name="Declare" typeId="f9c7-7dae-69e1-f924">Pick a friendly VANGUARD CHAMBER unit that is not in combat.</characteristic>
-                        <characteristic name="Effect" typeId="7d15-5e9e-83a9-d696">Roll a dice. On a 3+, remove that unit from the battlefield and set it up again anywhere on the battlefield more than 9&quot; from all enemy units.</characteristic>
-                      </characteristics>
-                    </profile>
-                  </profiles>
-                  <costs>
-                    <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
-                  </costs>
-                </selectionEntry>
-                <selectionEntry id="cb58-612f-e828-b88c" name="Thunderhead Host" hidden="false" collective="false" import="true" type="upgrade">
-                  <profiles>
-                    <profile id="c3b8-d93f-809f-87a9" name="Synchronised Strikes" hidden="false" typeId="7861-da01-01c0-88d9" typeName="Ability">
-                      <characteristics>
-                        <characteristic name="Use" typeId="9bce-4deb-8b79-eaec">Passive</characteristic>
-                        <characteristic name="Declare" typeId="f9c7-7dae-69e1-f924">-</characteristic>
-                        <characteristic name="Effect" typeId="7d15-5e9e-83a9-d696">Add 1 to hit rolls for combat attacks made by friendly WARRIOR CHAMBER units while they are wholly within 12&quot; of any friendly non-HERO STORMCAST ETERNALS units that do not have the WARRIOR CHAMBER keyword.</characteristic>
-                      </characteristics>
-                    </profile>
-                  </profiles>
-                  <costs>
-                    <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
-                  </costs>
-                </selectionEntry>
-                <selectionEntry id="4500-ef01-8fec-c954" name="Sentinels of the Bleak Citadels" hidden="false" collective="false" import="true" type="upgrade">
-                  <profiles>
-                    <profile id="3d32-7f2f-be98-41f4" name="Ancient Aura" hidden="false" typeId="7861-da01-01c0-88d9" typeName="Ability">
-                      <characteristics>
-                        <characteristic name="Use" typeId="9bce-4deb-8b79-eaec">Once Per Turn (Army), Any Hero Phase</characteristic>
-                        <characteristic name="Declare" typeId="f9c7-7dae-69e1-f924">Pick a friendly RUINATION CHAMBER unit.</characteristic>
-                        <characteristic name="Effect" typeId="7d15-5e9e-83a9-d696">That unit has WARD (5+) for the rest of the turn.</characteristic>
-                      </characteristics>
-                    </profile>
-                  </profiles>
-                  <costs>
-                    <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
-                  </costs>
-                </selectionEntry>
-              </selectionEntries>
-            </selectionEntryGroup>
-          </selectionEntryGroups>
-          <costs>
-            <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
-          </costs>
-        </selectionEntry>
-      </selectionEntries>
+          <selectionEntries>
+            <selectionEntry id="971a-dd17-c869-f236" name="Stormcast Eternals" publicationId="0624-d006-ae10-12c0" hidden="false" collective="false" import="true" type="upgrade">
+              <profiles>
+                <profile id="b640-7720-713d-a371" name="The Celestial Realm [DEPLOY]" hidden="false" typeId="7861-da01-01c0-88d9" typeName="Ability">
+                  <characteristics>
+                    <characteristic name="Use" typeId="9bce-4deb-8b79-eaec">Deployment Phase</characteristic>
+                    <characteristic name="Declare" typeId="f9c7-7dae-69e1-f924">If there are more friendly STORMCAST ETERNALS units on the battlefield than there are set up in reserve, pick a friendly STORMCAST ETERNALS unit that has not been deployed.</characteristic>
+                    <characteristic name="Effect" typeId="7d15-5e9e-83a9-d696">Set up that unit in reserve in the Celestial Realm. It has now been deployed.</characteristic>
+                  </characteristics>
+                </profile>
+                <profile id="8a6c-70b6-5f13-8ebf" name="Scions of the Storm" hidden="false" typeId="7861-da01-01c0-88d9" typeName="Ability">
+                  <characteristics>
+                    <characteristic name="Use" typeId="9bce-4deb-8b79-eaec">Your Movement Phase</characteristic>
+                    <characteristic name="Declare" typeId="f9c7-7dae-69e1-f924">Pick a friendly STORMCAST ETERNALS unit that is in the Celestial Realm.</characteristic>
+                    <characteristic name="Effect" typeId="7d15-5e9e-83a9-d696">Set up that unit anywhere on the battlefield more than 9&quot; from all enemy units.</characteristic>
+                  </characteristics>
+                </profile>
+                <profile id="882f-bf5e-5688-12a0" name="Heavens-sent (1)" hidden="false" typeId="6364-f76d-fc0c-80bc" typeName="Command Ability">
+                  <characteristics>
+                    <characteristic name="Use" typeId="36cb-f8a4-d94b-8aa8">Once Per Battle, Your Movement Phase </characteristic>
+                    <characteristic name="Declare" typeId="f14b-8a9d-0d54-37b8">Pick a friendly non-UNIQUE STORMCAST ETERNALS INFANTRY or CAVALRY unit that started the battle with 2 or more models and that has been destroyed to be the target.</characteristic>
+                    <characteristic name="Effect" typeId="41c9-17a0-2545-666a">Set up a replacement unit with half the number of models from the target unit (rounding up) more than 9&quot; from all enemy units.</characteristic>
+                  </characteristics>
+                </profile>
+                <profile id="5968-6c4a-78f5-ae23" name="Their Finest Hour" hidden="false" typeId="7861-da01-01c0-88d9" typeName="Ability">
+                  <characteristics>
+                    <characteristic name="Use" typeId="9bce-4deb-8b79-eaec">Once Per Turn (Army), Your Hero Phase</characteristic>
+                    <characteristic name="Declare" typeId="f9c7-7dae-69e1-f924">Pick a friendly STORMCAST ETERNALS unit that has not used this ability this battle to use this ability.</characteristic>
+                    <characteristic name="Effect" typeId="7d15-5e9e-83a9-d696">For the rest of the turn, add 1 to wound rolls for that unit’s combat attacks and add 1 to save rolls for that unit.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <selectionEntryGroups>
+                <selectionEntryGroup id="af2b-4dc5-8749-6dae" name="Battle Formations" hidden="false" collective="false" import="true">
+                  <constraints>
+                    <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="17bb-aacd-fc9e-21ca" type="max"/>
+                  </constraints>
+                  <selectionEntries>
+                    <selectionEntry id="1923-ac38-1fb5-c78b" name="Sacrosanct Convocation" hidden="false" collective="false" import="true" type="upgrade">
+                      <profiles>
+                        <profile id="d7a3-a9c7-d423-3ee0" name="Cycle of the Storm" hidden="false" typeId="7861-da01-01c0-88d9" typeName="Ability">
+                          <characteristics>
+                            <characteristic name="Use" typeId="9bce-4deb-8b79-eaec">Once Per Turn (Army), End of Your Turn</characteristic>
+                            <characteristic name="Declare" typeId="f9c7-7dae-69e1-f924">Pick a friendly SACROSANCT CHAMBER unit that had models slain in this turn to be the target.</characteristic>
+                            <characteristic name="Effect" typeId="7d15-5e9e-83a9-d696">Return 1 slain model to the target unit.</characteristic>
+                          </characteristics>
+                        </profile>
+                      </profiles>
+                      <costs>
+                        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
+                      </costs>
+                    </selectionEntry>
+                    <selectionEntry id="b0bf-c5d0-f6f0-9df3" name="Lightning Echelon" hidden="false" collective="false" import="true" type="upgrade">
+                      <profiles>
+                        <profile id="881d-fd2d-e8e6-4c5f" name="Oncoming Storm" hidden="false" typeId="7861-da01-01c0-88d9" typeName="Ability">
+                          <characteristics>
+                            <characteristic name="Use" typeId="9bce-4deb-8b79-eaec">Once Per Turn (Army), Any Combat Phase</characteristic>
+                            <characteristic name="Declare" typeId="f9c7-7dae-69e1-f924">Pick a friendly EXTREMIS CHAMBER unit that charged this turn.</characteristic>
+                            <characteristic name="Effect" typeId="7d15-5e9e-83a9-d696">Roll a dice. On a 3+, that unit has STRIKE-FIRST for the rest of the turn.</characteristic>
+                          </characteristics>
+                        </profile>
+                      </profiles>
+                      <costs>
+                        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
+                      </costs>
+                    </selectionEntry>
+                    <selectionEntry id="01a2-98cb-7caa-668b" name="Vanguard Wing" hidden="false" collective="false" import="true" type="upgrade">
+                      <profiles>
+                        <profile id="b7af-b564-0cab-4c95" name="Peerless Manoeuvres [CORE]" hidden="false" typeId="7861-da01-01c0-88d9" typeName="Ability">
+                          <characteristics>
+                            <characteristic name="Use" typeId="9bce-4deb-8b79-eaec">Once Per Turn (Army), Your Movement Phase</characteristic>
+                            <characteristic name="Declare" typeId="f9c7-7dae-69e1-f924">Pick a friendly VANGUARD CHAMBER unit that is not in combat.</characteristic>
+                            <characteristic name="Effect" typeId="7d15-5e9e-83a9-d696">Roll a dice. On a 3+, remove that unit from the battlefield and set it up again anywhere on the battlefield more than 9&quot; from all enemy units.</characteristic>
+                          </characteristics>
+                        </profile>
+                      </profiles>
+                      <costs>
+                        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
+                      </costs>
+                    </selectionEntry>
+                    <selectionEntry id="446c-aa28-d6a1-4955" name="Thunderhead Host" hidden="false" collective="false" import="true" type="upgrade">
+                      <profiles>
+                        <profile id="047c-6b1b-84d4-c96e" name="Synchronised Strikes" hidden="false" typeId="7861-da01-01c0-88d9" typeName="Ability">
+                          <characteristics>
+                            <characteristic name="Use" typeId="9bce-4deb-8b79-eaec">Passive</characteristic>
+                            <characteristic name="Declare" typeId="f9c7-7dae-69e1-f924">-</characteristic>
+                            <characteristic name="Effect" typeId="7d15-5e9e-83a9-d696">Add 1 to hit rolls for combat attacks made by friendly WARRIOR CHAMBER units while they are wholly within 12&quot; of any friendly non-HERO STORMCAST ETERNALS units that do not have the WARRIOR CHAMBER keyword.</characteristic>
+                          </characteristics>
+                        </profile>
+                      </profiles>
+                      <costs>
+                        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
+                      </costs>
+                    </selectionEntry>
+                    <selectionEntry id="1856-6df6-c1d1-086c" name="Sentinels of the Bleak Citadels" hidden="false" collective="false" import="true" type="upgrade">
+                      <profiles>
+                        <profile id="d1ff-1233-df30-8e77" name="Ancient Aura" hidden="false" typeId="7861-da01-01c0-88d9" typeName="Ability">
+                          <characteristics>
+                            <characteristic name="Use" typeId="9bce-4deb-8b79-eaec">Once Per Turn (Army), Any Hero Phase</characteristic>
+                            <characteristic name="Declare" typeId="f9c7-7dae-69e1-f924">Pick a friendly RUINATION CHAMBER unit.</characteristic>
+                            <characteristic name="Effect" typeId="7d15-5e9e-83a9-d696">That unit has WARD (5+) for the rest of the turn.</characteristic>
+                          </characteristics>
+                        </profile>
+                      </profiles>
+                      <costs>
+                        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
+                      </costs>
+                    </selectionEntry>
+                  </selectionEntries>
+                </selectionEntryGroup>
+              </selectionEntryGroups>
+              <costs>
+                <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="894e-5b38-c712-4203" name="Draconith Skywing" hidden="false" collective="false" import="true" type="upgrade">
+              <profiles>
+                <profile id="6a7d-93fd-def4-f17e" name="Draconith Skywing" hidden="false" typeId="ce32-0c40-1990-4c8a" typeName="Restriction">
+                  <characteristics>
+                    <characteristic name="Restriction" typeId="edbe-5fe5-1142-afa6">All units in your army gain the DRACONITH SKYWING keyword.
+
+ROSTER OPTIONS
+♦ Ionus Cryptborn
+♦ Krondys, Son of Dracothion
+♦ Karazai the Scarred
+♦ Knight-Draconis
+♦ Stormdrake Guard
+♦ You cannot include Regiments of Renown</characteristic>
+                  </characteristics>
+                </profile>
+                <profile id="194d-1125-3c9b-1cd5" name="Shields of the Warden" hidden="false" typeId="7861-da01-01c0-88d9" typeName="Ability">
+                  <characteristics>
+                    <characteristic name="Use" typeId="9bce-4deb-8b79-eaec">Passive</characteristic>
+                    <characteristic name="Declare" typeId="f9c7-7dae-69e1-f924">-</characteristic>
+                    <characteristic name="Effect" typeId="7d15-5e9e-83a9-d696">While any friendly Stormdrake Guard units are within a friendly Ionus Cryptborn’s combat range:
+
+• That friendly Ionus Cryptborn has WARD (4+).
+
+• Each time you make a successful ward roll for that friendly Ionus Cryptborn, allocate 1 damage point to a friendly Stormdrake Guard unit within its combat range after the damage sequence for that friendly Ionus Cryptborn has been resolved (ward rolls cannot be made for those damage points).</characteristic>
+                  </characteristics>
+                </profile>
+                <profile id="2a33-3e64-ff07-bec6" name="Thunderous Roar [RAMPAGE]" hidden="false" typeId="7861-da01-01c0-88d9" typeName="Ability">
+                  <characteristics>
+                    <characteristic name="Use" typeId="9bce-4deb-8b79-eaec">Once Per Turn (Army), Any Combat Phase</characteristic>
+                    <characteristic name="Declare" typeId="f9c7-7dae-69e1-f924">Pick a friendly DRACONITH SKYWING MONSTER that has not used any RAMPAGE abilities this turn to use this ability. Then, pick up to 3 enemy units in combat with it to be the targets.</characteristic>
+                    <characteristic name="Effect" typeId="7d15-5e9e-83a9-d696">Roll a dice for each target. On a 3+, subtract 5 from that target’s control score for the rest of the turn.</characteristic>
+                  </characteristics>
+                </profile>
+                <profile id="5882-6f72-d9b3-7536" name="Aetheric Cyclone [RAMPAGE]" hidden="false" typeId="7861-da01-01c0-88d9" typeName="Ability">
+                  <characteristics>
+                    <characteristic name="Use" typeId="9bce-4deb-8b79-eaec">Once Per Turn (Army), Any Combat Phase</characteristic>
+                    <characteristic name="Declare" typeId="f9c7-7dae-69e1-f924">Pick a friendly DRACONITH SKYWING MONSTER that has not used any RAMPAGE abilities this turn to use this ability. Then, pick an enemy unit in combat with it to be the target.</characteristic>
+                    <characteristic name="Effect" typeId="7d15-5e9e-83a9-d696">Roll a dice. On a 3+, subtract 1 from wound rolls for the target’s attacks for the rest of the turn.</characteristic>
+                  </characteristics>
+                </profile>
+                <profile id="ef63-063a-788d-a590" name="Exemplars of Fury" hidden="false" typeId="7861-da01-01c0-88d9" typeName="Ability">
+                  <characteristics>
+                    <characteristic name="Use" typeId="9bce-4deb-8b79-eaec">Passive</characteristic>
+                    <characteristic name="Declare" typeId="f9c7-7dae-69e1-f924">-</characteristic>
+                    <characteristic name="Effect" typeId="7d15-5e9e-83a9-d696">Add 1 to the Attacks characteristic of Companion weapons used by friendly DRACONITH SKYWING HEROES while they are within 6&quot; of 2 or more friendly Stormdrake Guard units.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <costs>
+                <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
+              </costs>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
       <costs>
         <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
       </costs>
@@ -160,9 +216,15 @@
       </categoryLinks>
       <selectionEntries>
         <selectionEntry id="dd65-c052-8850-4f57" name="Lore of the Storm" hidden="false" collective="false" import="true" type="upgrade">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="971a-dd17-c869-f236" type="equalTo"/>
+              </conditions>
+            </modifier>
+          </modifiers>
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d0e2-fc9c-750d-6550" type="max"/>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="a7cd-ae38-5368-2334" type="min"/>
           </constraints>
           <profiles>
             <profile id="d568-c279-554a-6d68" name="Lightning Blast (5) [UNLIMITED]" hidden="false" typeId="13da-11a8-b7d1-77a7" typeName="SPELL">
@@ -189,9 +251,15 @@
           </costs>
         </selectionEntry>
         <selectionEntry id="da6a-6351-588a-a84e" name="Prayers of the Stormhosts" hidden="false" collective="false" import="true" type="upgrade">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="971a-dd17-c869-f236" type="equalTo"/>
+              </conditions>
+            </modifier>
+          </modifiers>
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="2b3b-aef7-32fc-cfca" type="max"/>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="b823-0000-22e3-ed8c" type="min"/>
           </constraints>
           <profiles>
             <profile id="188d-8974-bf77-993b" name="Healing Storm (4) [UNLIMITED]" hidden="false" typeId="161a-85bd-f19e-a5a7" typeName="PRAYER">
@@ -217,60 +285,170 @@
             <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="f646-5356-71a6-76f2" name="Manifestations of the Storm" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="70fe-d181-1efc-0701" name="Draconith Skywing Spell Lore" hidden="false" collective="false" import="true" type="upgrade">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="894e-5b38-c712-4203" type="equalTo"/>
+              </conditions>
+            </modifier>
+          </modifiers>
           <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="83ec-027b-1f02-224f" type="max"/>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="b4fc-dc58-d57d-7b17" type="min"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="c7ff-9b8a-88a5-3f19" type="max"/>
           </constraints>
-          <entryLinks>
-            <entryLink id="0fca-092a-eae5-6a4e" name="Dais Arcanum" hidden="false" collective="false" import="true" targetId="3dbb-8111-43bd-d4b5" type="selectionEntry">
-              <constraints>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="f512-181c-7523-c64e" type="max"/>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="3d9a-2fb3-e5c4-760f" type="min"/>
-              </constraints>
-              <profiles>
-                <profile id="03d6-ca27-5743-3afc" name="Summon Dais Arcanum (6) [SUMMON]" hidden="false" typeId="13da-11a8-b7d1-77a7" typeName="SPELL">
-                  <characteristics>
-                    <characteristic name="Declare" typeId="1170-c916-1b73-ae34">If there is not a friendly Dais Arcanum on the battlefield, pick a friendly STORMCAST ETERNALS WIZARD to cast this spell, pick a friendly STORMCAST ETERNALS INFANTRY HERO that does not have FLY and is wholly within 12&quot; of them to be the target, then make a casting roll of 2D6.</characteristic>
-                    <characteristic name="Effect" typeId="9b2f-8599-7c10-31bd">Set up a Dais Arcanum within 1/2&quot; of the target, visible to the caster and not in combat. Then, remove the target from the battlefield and place it on the platform of that Dais Arcanum.</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-            </entryLink>
-            <entryLink id="bbce-f7f8-6483-2c22" name="Celestian Vortex" hidden="false" collective="false" import="true" targetId="be1b-e8c3-5b0f-91c7" type="selectionEntry">
-              <constraints>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="9c4b-91d0-0e93-8e25" type="max"/>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="db07-0f64-2862-cb92" type="min"/>
-              </constraints>
-              <profiles>
-                <profile id="04ee-3e99-1f8d-73e6" name="Summon Celestian Vortex (6) [SUMMON]" hidden="false" typeId="13da-11a8-b7d1-77a7" typeName="SPELL">
-                  <characteristics>
-                    <characteristic name="Declare" typeId="1170-c916-1b73-ae34">If there is not a friendly Celestian Vortex on the battlefield, pick a friendly STORMCAST ETERNALS WIZARD to cast this spell, then make a casting roll of 2D6.</characteristic>
-                    <characteristic name="Effect" typeId="9b2f-8599-7c10-31bd">Set up a Celestian Vortex wholly within 18&quot; of the caster and more than 9&quot; from all enemy units.</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-            </entryLink>
-            <entryLink id="a899-a50d-01be-b5fe" name="Everblaze Comet" hidden="false" collective="false" import="true" targetId="6c00-4960-28cc-5e41" type="selectionEntry">
-              <constraints>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="f79d-a499-1b2c-7bbe" type="max"/>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d214-079d-f731-2dd6" type="min"/>
-              </constraints>
-              <profiles>
-                <profile id="5355-2246-6873-a72c" name="Summon Everblaze Comet (7) [SUMMON]" hidden="false" typeId="13da-11a8-b7d1-77a7" typeName="SPELL">
-                  <characteristics>
-                    <characteristic name="Declare" typeId="1170-c916-1b73-ae34">If there is not a friendly Everblaze Comet on the battlefield, pick a friendly STORMCAST ETERNALS WIZARD to cast this spell, then make a casting roll of 2D6.</characteristic>
-                    <characteristic name="Effect" typeId="9b2f-8599-7c10-31bd">Set up an Everblaze Comet wholly within 18&quot; of the caster.</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-            </entryLink>
-          </entryLinks>
+          <profiles>
+            <profile id="d6d4-bea7-f778-cf0f" name="Regal Authority (7) [UNLIMITED]" hidden="false" typeId="13da-11a8-b7d1-77a7" typeName="SPELL">
+              <characteristics>
+                <characteristic name="Declare" typeId="1170-c916-1b73-ae34">Pick a friendly DRACONITH SKYWING WIZARD to cast this spell, pick a visible friendly DRACONITH SKYWING unit wholly within 12&quot; of them to be the target, then make a casting roll of 2D6.</characteristic>
+                <characteristic name="Effect" typeId="9b2f-8599-7c10-31bd">Add 5 to the target’s control score for the rest of the turn.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <costs>
+            <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="3815-f5a8-1901-af5a" name="Draconith Skywing Prayer Lore" hidden="false" collective="false" import="true" type="upgrade">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="894e-5b38-c712-4203" type="equalTo"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="7774-c8bf-0633-7c8e" type="max"/>
+          </constraints>
+          <profiles>
+            <profile id="382d-4c74-746c-294d" name="Sigmar&apos;s Grace (4) [UNLIMITED]" hidden="false" typeId="161a-85bd-f19e-a5a7" typeName="PRAYER">
+              <characteristics>
+                <characteristic name="Declare" typeId="19bc-965a-768d-defa">Pick a friendly DRACONITH SKYWING PRIEST to chant this prayer, pick a friendly DRACONITH SKYWING unit wholly within 12&quot; of them to be the target, then make a chanting roll of D6.</characteristic>
+                <characteristic name="Effect" typeId="0bc2-1357-3589-5c61">Heal (D3) the target. If the chanting roll was 8+, Heal (2D3) the target instead.</characteristic>
+              </characteristics>
+            </profile>
+            <profile id="cc1c-7b1c-bba8-76a4" name="Sanctification (4)" hidden="false" typeId="161a-85bd-f19e-a5a7" typeName="PRAYER">
+              <characteristics>
+                <characteristic name="Declare" typeId="19bc-965a-768d-defa">Pick a friendly DRACONITH SKYWING PRIEST to chant this prayer, then make a chanting roll of D6.</characteristic>
+                <characteristic name="Effect" typeId="0bc2-1357-3589-5c61">Until the start of your next turn, subtract 1 from casting rolls for enemy WIZARDS while they are within 30&quot; of the chanter. If the chanting roll was 12+, subtract 1 from casting rolls for enemy WIZARDS for the rest of the battle and friendly PRIESTS cannot use this ability again for the rest of the battle.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
           <costs>
             <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
           </costs>
         </selectionEntry>
       </selectionEntries>
+      <selectionEntryGroups>
+        <selectionEntryGroup id="f507-59bb-a39c-7a0b" name="Manifestation Lores" hidden="false" collective="false" import="true" defaultSelectionEntryId="3c17-c89d-1078-4f27">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="1686-f588-6972-21e6" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="142e-7d43-e3f5-4d53" type="min"/>
+          </constraints>
+          <selectionEntries>
+            <selectionEntry id="3c17-c89d-1078-4f27" name="Manifestations of the Storm" hidden="false" collective="false" import="true" type="upgrade">
+              <entryLinks>
+                <entryLink id="d172-0d71-0c64-f8af" name="Dais Arcanum" hidden="false" collective="false" import="true" targetId="3dbb-8111-43bd-d4b5" type="selectionEntry">
+                  <modifiers>
+                    <modifier type="set" field="hidden" value="true">
+                      <conditions>
+                        <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="971a-dd17-c869-f236" type="equalTo"/>
+                      </conditions>
+                    </modifier>
+                    <modifier type="set" field="da86-8080-7c5e-199c" value="1.0">
+                      <conditions>
+                        <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="971a-dd17-c869-f236" type="greaterThan"/>
+                      </conditions>
+                    </modifier>
+                  </modifiers>
+                  <constraints>
+                    <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="9ca3-4aa7-a558-120a" type="max"/>
+                    <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="da86-8080-7c5e-199c" type="min"/>
+                  </constraints>
+                  <profiles>
+                    <profile id="f410-8a7a-2613-1099" name="Summon Dais Arcanum (6) [SUMMON]" hidden="false" typeId="13da-11a8-b7d1-77a7" typeName="SPELL">
+                      <characteristics>
+                        <characteristic name="Declare" typeId="1170-c916-1b73-ae34">If there is not a friendly Dais Arcanum on the battlefield, pick a friendly STORMCAST ETERNALS WIZARD to cast this spell, pick a friendly STORMCAST ETERNALS INFANTRY HERO that does not have FLY and is wholly within 12&quot; of them to be the target, then make a casting roll of 2D6.</characteristic>
+                        <characteristic name="Effect" typeId="9b2f-8599-7c10-31bd">Set up a Dais Arcanum within 1/2&quot; of the target, visible to the caster and not in combat. Then, remove the target from the battlefield and place it on the platform of that Dais Arcanum.</characteristic>
+                      </characteristics>
+                    </profile>
+                  </profiles>
+                </entryLink>
+                <entryLink id="c381-18dc-45b5-078f" name="Celestian Vortex" hidden="false" collective="false" import="true" targetId="be1b-e8c3-5b0f-91c7" type="selectionEntry">
+                  <modifiers>
+                    <modifier type="set" field="hidden" value="true">
+                      <conditions>
+                        <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="971a-dd17-c869-f236" type="equalTo"/>
+                      </conditions>
+                    </modifier>
+                    <modifier type="set" field="0599-88a0-d16b-564a" value="1.0">
+                      <conditions>
+                        <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="971a-dd17-c869-f236" type="greaterThan"/>
+                      </conditions>
+                    </modifier>
+                  </modifiers>
+                  <constraints>
+                    <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="dd21-2c42-beb2-8841" type="max"/>
+                    <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="0599-88a0-d16b-564a" type="min"/>
+                  </constraints>
+                  <profiles>
+                    <profile id="b731-8f04-e6d9-8f6c" name="Summon Celestian Vortex (6) [SUMMON]" hidden="false" typeId="13da-11a8-b7d1-77a7" typeName="SPELL">
+                      <characteristics>
+                        <characteristic name="Declare" typeId="1170-c916-1b73-ae34">If there is not a friendly Celestian Vortex on the battlefield, pick a friendly STORMCAST ETERNALS WIZARD to cast this spell, then make a casting roll of 2D6.</characteristic>
+                        <characteristic name="Effect" typeId="9b2f-8599-7c10-31bd">Set up a Celestian Vortex wholly within 18&quot; of the caster and more than 9&quot; from all enemy units.</characteristic>
+                      </characteristics>
+                    </profile>
+                  </profiles>
+                </entryLink>
+                <entryLink id="8c10-4395-5aae-3c9a" name="Everblaze Comet" hidden="false" collective="false" import="true" targetId="6c00-4960-28cc-5e41" type="selectionEntry">
+                  <constraints>
+                    <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="ed2b-0ad0-cbe9-abad" type="max"/>
+                    <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8c1f-e17c-42b6-445a" type="min"/>
+                  </constraints>
+                  <profiles>
+                    <profile id="3e29-7508-9654-e2a9" name="Summon Everblaze Comet (7) [SUMMON]" hidden="false" typeId="13da-11a8-b7d1-77a7" typeName="SPELL">
+                      <modifiers>
+                        <modifier type="set" field="hidden" value="true">
+                          <conditions>
+                            <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="971a-dd17-c869-f236" type="equalTo"/>
+                          </conditions>
+                        </modifier>
+                      </modifiers>
+                      <characteristics>
+                        <characteristic name="Declare" typeId="1170-c916-1b73-ae34">If there is not a friendly Everblaze Comet on the battlefield, pick a friendly STORMCAST ETERNALS WIZARD to cast this spell, then make a casting roll of 2D6.</characteristic>
+                        <characteristic name="Effect" typeId="9b2f-8599-7c10-31bd">Set up an Everblaze Comet wholly within 18&quot; of the caster.</characteristic>
+                      </characteristics>
+                    </profile>
+                    <profile id="9fee-ddaa-cf61-f6d1" name="Summon Everblaze Comet (8) [SUMMON]" hidden="false" typeId="13da-11a8-b7d1-77a7" typeName="SPELL">
+                      <modifiers>
+                        <modifier type="set" field="hidden" value="true">
+                          <conditions>
+                            <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="894e-5b38-c712-4203" type="equalTo"/>
+                          </conditions>
+                        </modifier>
+                      </modifiers>
+                      <characteristics>
+                        <characteristic name="Declare" typeId="1170-c916-1b73-ae34">If there is not a friendly Everblaze Comet on the battlefield, pick a friendly DRACONITH SKYWING WIZARD to cast this spell, then make a casting roll of 2D6.</characteristic>
+                        <characteristic name="Effect" typeId="9b2f-8599-7c10-31bd">Set up an Everblaze Comet wholly within 18&quot; of the caster.</characteristic>
+                      </characteristics>
+                    </profile>
+                  </profiles>
+                </entryLink>
+              </entryLinks>
+              <costs>
+                <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
+              </costs>
+            </selectionEntry>
+          </selectionEntries>
+          <entryLinks>
+            <entryLink id="3508-28a8-b925-4867" name="Aetherwrought Machineries" hidden="false" collective="false" import="true" targetId="6f04-32a4-0a98-a793" type="selectionEntry"/>
+            <entryLink id="d8ce-9ad4-b528-980c" name="Twilit Sorceries" hidden="false" collective="false" import="true" targetId="601d-2b99-cb0e-3f81" type="selectionEntry"/>
+            <entryLink id="959e-ffe7-d7d4-96da" name="Krondspine Incarnate of Ghur" hidden="false" collective="false" import="true" targetId="cbf0-ddbd-d718-4a7f" type="selectionEntry"/>
+            <entryLink id="c7c9-2004-ee3f-3c88" name="Primal Energy" hidden="false" collective="false" import="true" targetId="4411-634c-0110-575d" type="selectionEntry"/>
+            <entryLink id="6fad-d41c-683e-6d97" name="Morbid Conjuration" hidden="false" collective="false" import="true" targetId="c96f-790f-33b8-4187" type="selectionEntry"/>
+            <entryLink id="744d-920f-b7dd-89bd" name="Forbidden Power" hidden="false" collective="false" import="true" targetId="857b-8bca-6fbb-9b6f" type="selectionEntry"/>
+          </entryLinks>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
       <costs>
         <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
       </costs>
@@ -289,6 +467,11 @@
             </conditionGroup>
           </conditionGroups>
         </modifier>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="971a-dd17-c869-f236" type="equalTo"/>
+          </conditions>
+        </modifier>
       </modifiers>
     </entryLink>
     <entryLink id="4731-6840-77d4-e503" name="Annihilators" hidden="false" collective="false" import="true" targetId="26b4-76ce-909e-8c30" type="selectionEntry">
@@ -303,6 +486,11 @@
               </conditions>
             </conditionGroup>
           </conditionGroups>
+        </modifier>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="971a-dd17-c869-f236" type="equalTo"/>
+          </conditions>
         </modifier>
       </modifiers>
     </entryLink>
@@ -319,9 +507,21 @@
             </conditionGroup>
           </conditionGroups>
         </modifier>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="971a-dd17-c869-f236" type="equalTo"/>
+          </conditions>
+        </modifier>
       </modifiers>
     </entryLink>
     <entryLink id="50d3-b02b-8e34-8599" name="Astreia Solbright" hidden="false" collective="false" import="true" targetId="db6f-2932-06be-f0e2" type="selectionEntry">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="971a-dd17-c869-f236" type="equalTo"/>
+          </conditions>
+        </modifier>
+      </modifiers>
       <categoryLinks>
         <categoryLink id="8382-a453-fa27-2055" name="{Warrior Unlock}" hidden="false" targetId="f59c-ea37-e10d-52c2" primary="false"/>
         <categoryLink id="055e-b9c7-84ef-6300" name="{Vanguard Unlock}" hidden="false" targetId="f2d2-7198-f935-b99d" primary="false"/>
@@ -335,6 +535,13 @@
       </entryLinks>
     </entryLink>
     <entryLink id="1e0d-2316-e4a9-245a" name="Aventis Firestrike, Magister of Hammerhal" hidden="false" collective="false" import="true" targetId="2b4f-c3c0-c455-5d04" type="selectionEntry">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="971a-dd17-c869-f236" type="equalTo"/>
+          </conditions>
+        </modifier>
+      </modifiers>
       <categoryLinks>
         <categoryLink id="6ee3-a434-775e-6e29" name="{Warrior Unlock}" hidden="false" targetId="f59c-ea37-e10d-52c2" primary="false"/>
         <categoryLink id="1465-ff96-5a08-62c9" name="{Vanguard Unlock}" hidden="false" targetId="f2d2-7198-f935-b99d" primary="false"/>
@@ -360,9 +567,21 @@
             </conditionGroup>
           </conditionGroups>
         </modifier>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="971a-dd17-c869-f236" type="equalTo"/>
+          </conditions>
+        </modifier>
       </modifiers>
     </entryLink>
     <entryLink id="bf2b-f516-6545-304f" name="Celestant-Prime, Hammer of Sigmar" hidden="false" collective="false" import="true" targetId="3167-e3f7-2405-0c83" type="selectionEntry">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="971a-dd17-c869-f236" type="equalTo"/>
+          </conditions>
+        </modifier>
+      </modifiers>
       <categoryLinks>
         <categoryLink id="ef11-dc7d-f0d2-1776" name="{Extremis Unlock}" hidden="false" targetId="e71f-8e09-8b76-9555" primary="false"/>
         <categoryLink id="3afa-07c5-7f1f-43f5" name="{Ruination Unlock}" hidden="false" targetId="a4dc-cd76-51e2-9e22" primary="false"/>
@@ -388,6 +607,11 @@
             </conditionGroup>
           </conditionGroups>
         </modifier>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="971a-dd17-c869-f236" type="equalTo"/>
+          </conditions>
+        </modifier>
       </modifiers>
     </entryLink>
     <entryLink id="8f6b-42e6-b5c7-39f0" name="Decimators" hidden="false" collective="false" import="true" targetId="d387-6c4b-dcbb-7be5" type="selectionEntry">
@@ -403,6 +627,11 @@
             </conditionGroup>
           </conditionGroups>
         </modifier>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="971a-dd17-c869-f236" type="equalTo"/>
+          </conditions>
+        </modifier>
       </modifiers>
     </entryLink>
     <entryLink id="4460-5880-0acb-85e0" name="Dracothian Guard Concussors" hidden="false" collective="false" import="true" targetId="165f-4a83-5b66-f539" type="selectionEntry">
@@ -410,6 +639,11 @@
         <modifier type="set" field="hidden" value="true">
           <conditions>
             <condition field="selections" scope="75ec-21ff-e079-6e2c" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e71f-8e09-8b76-9555" type="equalTo"/>
+          </conditions>
+        </modifier>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="971a-dd17-c869-f236" type="equalTo"/>
           </conditions>
         </modifier>
       </modifiers>
@@ -429,6 +663,11 @@
             <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="3433-3a08-8088-8855" type="greaterThan"/>
           </conditions>
         </modifier>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="971a-dd17-c869-f236" type="equalTo"/>
+          </conditions>
+        </modifier>
       </modifiers>
       <constraints>
         <constraint field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="7139-6d93-059f-9797" type="max"/>
@@ -439,6 +678,11 @@
         <modifier type="set" field="hidden" value="true">
           <conditions>
             <condition field="selections" scope="75ec-21ff-e079-6e2c" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e71f-8e09-8b76-9555" type="equalTo"/>
+          </conditions>
+        </modifier>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="971a-dd17-c869-f236" type="equalTo"/>
           </conditions>
         </modifier>
       </modifiers>
@@ -458,6 +702,11 @@
             <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="3433-3a08-8088-8855" type="greaterThan"/>
           </conditions>
         </modifier>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="971a-dd17-c869-f236" type="equalTo"/>
+          </conditions>
+        </modifier>
       </modifiers>
       <constraints>
         <constraint field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="5ec9-ee32-186b-7902" type="max"/>
@@ -468,6 +717,11 @@
         <modifier type="set" field="hidden" value="true">
           <conditions>
             <condition field="selections" scope="75ec-21ff-e079-6e2c" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e71f-8e09-8b76-9555" type="equalTo"/>
+          </conditions>
+        </modifier>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="971a-dd17-c869-f236" type="equalTo"/>
           </conditions>
         </modifier>
       </modifiers>
@@ -487,6 +741,11 @@
             <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="3433-3a08-8088-8855" type="greaterThan"/>
           </conditions>
         </modifier>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="971a-dd17-c869-f236" type="equalTo"/>
+          </conditions>
+        </modifier>
       </modifiers>
       <constraints>
         <constraint field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="69c4-9848-a99b-098b" type="max"/>
@@ -497,6 +756,11 @@
         <modifier type="set" field="hidden" value="true">
           <conditions>
             <condition field="selections" scope="75ec-21ff-e079-6e2c" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e71f-8e09-8b76-9555" type="equalTo"/>
+          </conditions>
+        </modifier>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="971a-dd17-c869-f236" type="equalTo"/>
           </conditions>
         </modifier>
       </modifiers>
@@ -516,12 +780,24 @@
             <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="3433-3a08-8088-8855" type="greaterThan"/>
           </conditions>
         </modifier>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="971a-dd17-c869-f236" type="equalTo"/>
+          </conditions>
+        </modifier>
       </modifiers>
       <constraints>
         <constraint field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="586f-0289-67d4-033a" type="max"/>
       </constraints>
     </entryLink>
     <entryLink id="88c4-519e-82cc-d2c3" name="Drakesworn Templar" hidden="false" collective="false" import="true" targetId="2e41-b8aa-9c1c-d336" type="selectionEntry">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="971a-dd17-c869-f236" type="equalTo"/>
+          </conditions>
+        </modifier>
+      </modifiers>
       <categoryLinks>
         <categoryLink id="a363-37c0-bcb6-df76" name="{Warrior Unlock}" hidden="false" targetId="f59c-ea37-e10d-52c2" primary="false"/>
         <categoryLink id="c35d-cb75-00d0-1c2e" name="{Extremis Unlock}" hidden="false" targetId="e71f-8e09-8b76-9555" primary="false"/>
@@ -546,6 +822,11 @@
             </conditionGroup>
           </conditionGroups>
         </modifier>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="971a-dd17-c869-f236" type="equalTo"/>
+          </conditions>
+        </modifier>
       </modifiers>
     </entryLink>
     <entryLink id="3029-010d-f917-6ef9" name="Evocators on Celestial Dracolines" hidden="false" collective="false" import="true" targetId="5365-eb30-b510-7254" type="selectionEntry">
@@ -560,9 +841,21 @@
             </conditionGroup>
           </conditionGroups>
         </modifier>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="971a-dd17-c869-f236" type="equalTo"/>
+          </conditions>
+        </modifier>
       </modifiers>
     </entryLink>
     <entryLink id="94a0-2859-e83d-da41" name="Gardus Steel Soul" hidden="false" collective="false" import="true" targetId="faa9-abbc-9dbc-7a16" type="selectionEntry">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="971a-dd17-c869-f236" type="equalTo"/>
+          </conditions>
+        </modifier>
+      </modifiers>
       <categoryLinks>
         <categoryLink id="5ebc-8248-1aac-611f" name="{Warrior Unlock}" hidden="false" targetId="f59c-ea37-e10d-52c2" primary="false"/>
         <categoryLink id="e3cb-063f-c00c-b530" name="{Gryph Unlock}" hidden="false" targetId="8014-e367-b38f-187f" primary="false"/>
@@ -573,6 +866,13 @@
       </entryLinks>
     </entryLink>
     <entryLink id="0a81-5bfc-e82d-a061" name="Gavriel Sureheart" hidden="false" collective="false" import="true" targetId="a0ad-775c-5c5f-66ba" type="selectionEntry">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="971a-dd17-c869-f236" type="equalTo"/>
+          </conditions>
+        </modifier>
+      </modifiers>
       <categoryLinks>
         <categoryLink id="9422-4e5e-2719-c064" name="{Gryph Unlock}" hidden="false" targetId="8014-e367-b38f-187f" primary="false"/>
         <categoryLink id="b5d4-3325-863f-c724" name="{Infantry Unlock}" hidden="false" targetId="8c95-403f-c8bf-6cb2" primary="false"/>
@@ -600,6 +900,11 @@
             <condition field="selections" scope="75ec-21ff-e079-6e2c" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="8014-e367-b38f-187f" type="greaterThan"/>
           </conditions>
         </modifier>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="971a-dd17-c869-f236" type="equalTo"/>
+          </conditions>
+        </modifier>
       </modifiers>
       <constraints>
         <constraint field="selections" scope="force" value="-1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="460e-a6cb-bb3f-cacb" type="max"/>
@@ -616,7 +921,7 @@
         <categoryLink id="1ebb-bee0-07be-a738" name="{Exemplar Unlock}" hidden="false" targetId="ead6-e003-2312-5f3d" primary="false"/>
       </categoryLinks>
       <entryLinks>
-        <entryLink id="4f7e-47ae-015c-899d" name="General" hidden="false" collective="false" import="true" targetId="98a4-3d6d-a7b9-399f" type="selectionEntry"/>
+        <entryLink id="4f7e-47ae-015c-899d" name="General - Warmaster" hidden="false" collective="false" import="true" targetId="9f9e-1a62-8e0b-36ae" type="selectionEntry"/>
       </entryLinks>
     </entryLink>
     <entryLink id="0c26-ea07-e7a9-0af4" name="Judicators with Boltstorm Crossbows" hidden="false" collective="false" import="true" targetId="646e-55b4-709e-d3e9" type="selectionEntry">
@@ -631,6 +936,11 @@
               </conditions>
             </conditionGroup>
           </conditionGroups>
+        </modifier>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="971a-dd17-c869-f236" type="equalTo"/>
+          </conditions>
         </modifier>
       </modifiers>
     </entryLink>
@@ -647,6 +957,11 @@
             </conditionGroup>
           </conditionGroups>
         </modifier>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="971a-dd17-c869-f236" type="equalTo"/>
+          </conditions>
+        </modifier>
       </modifiers>
     </entryLink>
     <entryLink id="194d-79cb-cc17-c7f4" name="Karazai the Scarred" hidden="false" collective="false" import="true" targetId="55e5-7b51-c489-69d0" type="selectionEntry">
@@ -660,10 +975,17 @@
         <categoryLink id="2086-cb11-c1f6-b6fe" name="{Exemplar Unlock}" hidden="false" targetId="ead6-e003-2312-5f3d" primary="false"/>
       </categoryLinks>
       <entryLinks>
-        <entryLink id="211d-ac24-9a35-840e" name="General" hidden="false" collective="false" import="true" targetId="98a4-3d6d-a7b9-399f" type="selectionEntry"/>
+        <entryLink id="211d-ac24-9a35-840e" name="General - Warmaster" hidden="false" collective="false" import="true" targetId="9f9e-1a62-8e0b-36ae" type="selectionEntry"/>
       </entryLinks>
     </entryLink>
     <entryLink id="04c6-4cf9-b1a9-e10c" name="Knight-Arcanum" hidden="false" collective="false" import="true" targetId="1c54-87d2-2f0a-86a7" type="selectionEntry">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="971a-dd17-c869-f236" type="equalTo"/>
+          </conditions>
+        </modifier>
+      </modifiers>
       <categoryLinks>
         <categoryLink id="d299-8924-aa5e-b129" name="{Warrior Unlock}" hidden="false" targetId="f59c-ea37-e10d-52c2" primary="false"/>
         <categoryLink id="24a1-4af0-17d6-9c23" name="{Gryph Unlock}" hidden="false" targetId="8014-e367-b38f-187f" primary="false"/>
@@ -682,9 +1004,18 @@
         <entryLink id="1828-46aa-bcbe-ef9f" name="Aspects of Azyr (Heroic Traits)" hidden="false" collective="false" import="true" targetId="569e-d834-dfb1-0fe5" type="selectionEntryGroup"/>
         <entryLink id="e8d7-1682-f376-5128" name="Artefacts of the Tempest (Artefacts of Power)" hidden="false" collective="false" import="true" targetId="f45c-b34c-33e5-0808" type="selectionEntryGroup"/>
         <entryLink id="c661-0d5d-8bf5-a90a" name="General" hidden="false" collective="false" import="true" targetId="98a4-3d6d-a7b9-399f" type="selectionEntry"/>
+        <entryLink id="0ef6-bfe5-4722-aea7" name="Fearless Fliers (Heroic Trait)" hidden="false" collective="false" import="true" targetId="f80e-9bc3-4e04-b513" type="selectionEntry"/>
+        <entryLink id="9fe4-02c1-655c-e56d" name="Celestium Ensign (Artefact of Power)" hidden="false" collective="false" import="true" targetId="64bb-aaad-5157-9889" type="selectionEntry"/>
       </entryLinks>
     </entryLink>
     <entryLink id="93bc-06ca-fbbc-ffbb" name="Knight-Heraldor" hidden="false" collective="false" import="true" targetId="3d1a-41c5-5165-51f7" type="selectionEntry">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="971a-dd17-c869-f236" type="equalTo"/>
+          </conditions>
+        </modifier>
+      </modifiers>
       <categoryLinks>
         <categoryLink id="e6d7-f9fc-8f9d-9d03" name="{Warrior Unlock}" hidden="false" targetId="f59c-ea37-e10d-52c2" primary="false"/>
         <categoryLink id="886c-11b7-a0e4-0991" name="{Gryph Unlock}" hidden="false" targetId="8014-e367-b38f-187f" primary="false"/>
@@ -696,6 +1027,13 @@
       </entryLinks>
     </entryLink>
     <entryLink id="ccd1-da43-6848-3588" name="Knight-Incantor" hidden="false" collective="false" import="true" targetId="1819-4a1a-1aca-a3c4" type="selectionEntry">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="971a-dd17-c869-f236" type="equalTo"/>
+          </conditions>
+        </modifier>
+      </modifiers>
       <categoryLinks>
         <categoryLink id="3130-b05d-dc8b-a841" name="{Gryph Unlock}" hidden="false" targetId="8014-e367-b38f-187f" primary="false"/>
         <categoryLink id="70da-d413-0bd9-9397" name="{Sacrosanct Inf Unlock}" hidden="false" targetId="21ce-082a-8359-d307" primary="false"/>
@@ -707,6 +1045,13 @@
       </entryLinks>
     </entryLink>
     <entryLink id="72c4-ce60-f005-62c8" name="Knight-Questor" hidden="false" collective="false" import="true" targetId="98a5-5083-e689-579c" type="selectionEntry">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="971a-dd17-c869-f236" type="equalTo"/>
+          </conditions>
+        </modifier>
+      </modifiers>
       <categoryLinks>
         <categoryLink id="ea93-59de-850a-4734" name="{Ruination Unlock}" hidden="false" targetId="a4dc-cd76-51e2-9e22" primary="false"/>
         <categoryLink id="8d03-00bd-63e9-7e45" name="{Gryph Unlock}" hidden="false" targetId="8014-e367-b38f-187f" primary="false"/>
@@ -718,6 +1063,13 @@
       </entryLinks>
     </entryLink>
     <entryLink id="c408-af6a-263c-71dd" name="Knight-Relictor" hidden="false" collective="false" import="true" targetId="17b9-c940-ebba-945d" type="selectionEntry">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="971a-dd17-c869-f236" type="equalTo"/>
+          </conditions>
+        </modifier>
+      </modifiers>
       <categoryLinks>
         <categoryLink id="d15f-63e7-0435-94be" name="{Warrior Unlock}" hidden="false" targetId="f59c-ea37-e10d-52c2" primary="false"/>
         <categoryLink id="7b19-b708-b83d-7c7e" name="{Gryph Unlock}" hidden="false" targetId="8014-e367-b38f-187f" primary="false"/>
@@ -729,6 +1081,13 @@
       </entryLinks>
     </entryLink>
     <entryLink id="6303-611e-6f09-d77a" name="Knight-Venator" hidden="false" collective="false" import="true" targetId="559c-5704-ffa3-442e" type="selectionEntry">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="971a-dd17-c869-f236" type="equalTo"/>
+          </conditions>
+        </modifier>
+      </modifiers>
       <categoryLinks>
         <categoryLink id="ff07-a029-0df8-9c19" name="{Warrior Inf Unlock}" hidden="false" targetId="7874-7763-f1ad-38b4" primary="false"/>
         <categoryLink id="fcff-64df-2569-4711" name="{Gryph Unlock}" hidden="false" targetId="8014-e367-b38f-187f" primary="false"/>
@@ -739,18 +1098,14 @@
         <entryLink id="98b5-e3b8-7763-aa01" name="General" hidden="false" collective="false" import="true" targetId="98a4-3d6d-a7b9-399f" type="selectionEntry"/>
       </entryLinks>
     </entryLink>
-    <entryLink id="939d-ea30-ea02-64b9" name="Knight-Vexillor" hidden="false" collective="false" import="true" targetId="5bea-1338-e6ee-3d5c" type="selectionEntry">
-      <categoryLinks>
-        <categoryLink id="de2a-d831-089f-7458" name="{Warrior Unlock}" hidden="false" targetId="f59c-ea37-e10d-52c2" primary="false"/>
-        <categoryLink id="5490-ecee-645d-17d2" name="{Gryph Unlock}" hidden="false" targetId="8014-e367-b38f-187f" primary="false"/>
-      </categoryLinks>
-      <entryLinks>
-        <entryLink id="ecff-954b-449a-ef0a" name="Aspects of Azyr (Heroic Traits)" hidden="false" collective="false" import="true" targetId="569e-d834-dfb1-0fe5" type="selectionEntryGroup"/>
-        <entryLink id="1201-4a92-748e-9974" name="Artefacts of the Tempest (Artefacts of Power)" hidden="false" collective="false" import="true" targetId="f45c-b34c-33e5-0808" type="selectionEntryGroup"/>
-        <entryLink id="99cd-1e6f-5621-df87" name="General" hidden="false" collective="false" import="true" targetId="98a4-3d6d-a7b9-399f" type="selectionEntry"/>
-      </entryLinks>
-    </entryLink>
     <entryLink id="4bb5-dfaa-0676-356f" name="Knight-Zephyros" hidden="false" collective="false" import="true" targetId="7e36-49f8-78b3-2b05" type="selectionEntry">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="971a-dd17-c869-f236" type="equalTo"/>
+          </conditions>
+        </modifier>
+      </modifiers>
       <categoryLinks>
         <categoryLink id="7810-536b-4fc3-7ea7" name="{Warrior Inf Unlock}" hidden="false" targetId="7874-7763-f1ad-38b4" primary="false"/>
         <categoryLink id="2cfd-4cd7-adbb-426b" name="{Gryph Unlock}" hidden="false" targetId="8014-e367-b38f-187f" primary="false"/>
@@ -772,7 +1127,7 @@
         <categoryLink id="2678-cace-f231-79f0" name="{Exemplar Unlock}" hidden="false" targetId="ead6-e003-2312-5f3d" primary="false"/>
       </categoryLinks>
       <entryLinks>
-        <entryLink id="f1c4-7a03-c2cf-63b5" name="General" hidden="false" collective="false" import="true" targetId="98a4-3d6d-a7b9-399f" type="selectionEntry"/>
+        <entryLink id="f1c4-7a03-c2cf-63b5" name="General - Warmaster" hidden="false" collective="false" import="true" targetId="9f9e-1a62-8e0b-36ae" type="selectionEntry"/>
       </entryLinks>
     </entryLink>
     <entryLink id="03e9-6132-734b-5698" name="Liberators" hidden="false" collective="false" import="true" targetId="43cc-71a1-f6c0-b647" type="selectionEntry">
@@ -788,6 +1143,11 @@
             </conditionGroup>
           </conditionGroups>
         </modifier>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="971a-dd17-c869-f236" type="equalTo"/>
+          </conditions>
+        </modifier>
       </modifiers>
     </entryLink>
     <entryLink id="10fa-9c58-579d-d74e" name="Lorai, Child of the Abyss" hidden="false" collective="false" import="true" targetId="ba1e-fb8b-0bfb-1820" type="selectionEntry">
@@ -802,6 +1162,16 @@
             <condition field="selections" scope="75ec-21ff-e079-6e2c" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="48a0-4c37-2f18-79c2" type="equalTo"/>
           </conditions>
         </modifier>
+        <modifier type="set-primary" field="category" value="f2f5-93ab-4dee-a87c">
+          <conditions>
+            <condition field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="48a0-4c37-2f18-79c2" type="greaterThan"/>
+          </conditions>
+        </modifier>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="971a-dd17-c869-f236" type="equalTo"/>
+          </conditions>
+        </modifier>
       </modifiers>
       <constraints>
         <constraint field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="5f7d-383e-f60c-175f" type="min"/>
@@ -811,6 +1181,13 @@
       </entryLinks>
     </entryLink>
     <entryLink id="43a1-12bc-41a5-9b1e" name="Lord-Aquilor" hidden="false" collective="false" import="true" targetId="de27-61c7-dfeb-cfa3" type="selectionEntry">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="971a-dd17-c869-f236" type="equalTo"/>
+          </conditions>
+        </modifier>
+      </modifiers>
       <categoryLinks>
         <categoryLink id="05ce-5a37-7b9f-715b" name="{Vanguard Unlock}" hidden="false" targetId="f2d2-7198-f935-b99d" primary="false"/>
       </categoryLinks>
@@ -821,6 +1198,13 @@
       </entryLinks>
     </entryLink>
     <entryLink id="1d47-bf11-5968-a99b" name="Lord-Arcanum" hidden="false" collective="false" import="true" targetId="7a6f-11cb-5205-7736" type="selectionEntry">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="971a-dd17-c869-f236" type="equalTo"/>
+          </conditions>
+        </modifier>
+      </modifiers>
       <categoryLinks>
         <categoryLink id="5d80-48cd-66d7-2fc3" name="{Sacrosanct Inf Unlock}" hidden="false" targetId="21ce-082a-8359-d307" primary="false"/>
       </categoryLinks>
@@ -831,6 +1215,13 @@
       </entryLinks>
     </entryLink>
     <entryLink id="25b4-99c4-442e-5dc8" name="Lord-Arcanum on Celestial Dracoline" hidden="false" collective="false" import="true" targetId="f089-eb70-e6ec-a175" type="selectionEntry">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="971a-dd17-c869-f236" type="equalTo"/>
+          </conditions>
+        </modifier>
+      </modifiers>
       <categoryLinks>
         <categoryLink id="381e-eaa9-8ab2-9b30" name="{Sacrosanct Cav Unlock}" hidden="false" targetId="79a4-936f-6229-95eb" primary="false"/>
       </categoryLinks>
@@ -841,6 +1232,13 @@
       </entryLinks>
     </entryLink>
     <entryLink id="8dc6-ac22-8670-4600" name="Lord-Arcanum on Gryph-Charger" hidden="false" collective="false" import="true" targetId="1b51-a280-a1c5-5d28" type="selectionEntry">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="971a-dd17-c869-f236" type="equalTo"/>
+          </conditions>
+        </modifier>
+      </modifiers>
       <categoryLinks>
         <categoryLink id="6ecc-a2f4-3c03-487a" name="{Sacrosanct Unlock}" hidden="false" targetId="e4b6-a417-852e-542c" primary="false"/>
       </categoryLinks>
@@ -851,6 +1249,13 @@
       </entryLinks>
     </entryLink>
     <entryLink id="b504-49c8-3046-efca" name="Lord-Arcanum on Tauralon" hidden="false" collective="false" import="true" targetId="a46b-de5f-14a1-aa13" type="selectionEntry">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="971a-dd17-c869-f236" type="equalTo"/>
+          </conditions>
+        </modifier>
+      </modifiers>
       <categoryLinks>
         <categoryLink id="0248-03bc-6b57-e279" name="{Sacrosanct Unlock}" hidden="false" targetId="e4b6-a417-852e-542c" primary="false"/>
       </categoryLinks>
@@ -861,6 +1266,13 @@
       </entryLinks>
     </entryLink>
     <entryLink id="411d-d5bd-ab3d-42ab" name="Lord-Castellant" hidden="false" collective="false" import="true" targetId="d5de-e1bb-52de-812b" type="selectionEntry">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="971a-dd17-c869-f236" type="equalTo"/>
+          </conditions>
+        </modifier>
+      </modifiers>
       <categoryLinks>
         <categoryLink id="9fb6-00ea-17b8-12e8" name="{Warrior Inf Unlock}" hidden="false" targetId="7874-7763-f1ad-38b4" primary="false"/>
       </categoryLinks>
@@ -871,6 +1283,13 @@
       </entryLinks>
     </entryLink>
     <entryLink id="f8ef-5c88-6760-ed10" name="Lord-Celestant" hidden="false" collective="false" import="true" targetId="81a3-db91-57bd-9d88" type="selectionEntry">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="971a-dd17-c869-f236" type="equalTo"/>
+          </conditions>
+        </modifier>
+      </modifiers>
       <categoryLinks>
         <categoryLink id="0b47-6c24-07ed-581f" name="{Warrior Unlock}" hidden="false" targetId="f59c-ea37-e10d-52c2" primary="false"/>
         <categoryLink id="8ae7-09dd-e031-df9c" name="{Gryph Unlock}" hidden="false" targetId="8014-e367-b38f-187f" primary="false"/>
@@ -883,6 +1302,13 @@
       </entryLinks>
     </entryLink>
     <entryLink id="2e89-9737-e56f-14e8" name="Lord-Celestant on Dracoth" hidden="false" collective="false" import="true" targetId="3433-3a08-8088-8855" type="selectionEntry">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="971a-dd17-c869-f236" type="equalTo"/>
+          </conditions>
+        </modifier>
+      </modifiers>
       <categoryLinks>
         <categoryLink id="b56b-04e0-1532-e7fd" name="{Warrior Unlock}" hidden="false" targetId="f59c-ea37-e10d-52c2" primary="false"/>
         <categoryLink id="3ece-26a3-ee8e-3990" name="{Extremis Unlock}" hidden="false" targetId="e71f-8e09-8b76-9555" primary="false"/>
@@ -895,6 +1321,13 @@
       </entryLinks>
     </entryLink>
     <entryLink id="d608-c514-d92c-fc85" name="Lord-Celestant on Stardrake" hidden="false" collective="false" import="true" targetId="0654-13e8-97fc-c01b" type="selectionEntry">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="971a-dd17-c869-f236" type="equalTo"/>
+          </conditions>
+        </modifier>
+      </modifiers>
       <categoryLinks>
         <categoryLink id="72c9-1831-4505-43f4" name="{Warrior Unlock}" hidden="false" targetId="f59c-ea37-e10d-52c2" primary="false"/>
         <categoryLink id="2a34-7f45-f596-b3ab" name="{Extremis Unlock}" hidden="false" targetId="e71f-8e09-8b76-9555" primary="false"/>
@@ -907,6 +1340,13 @@
       </entryLinks>
     </entryLink>
     <entryLink id="e780-9ec5-6fac-8273" name="Lord-Commander Bastian Carthalos" hidden="false" collective="false" import="true" targetId="ca0c-059d-74d4-6913" type="selectionEntry">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="971a-dd17-c869-f236" type="equalTo"/>
+          </conditions>
+        </modifier>
+      </modifiers>
       <categoryLinks>
         <categoryLink id="bddb-99f1-cd22-23b6" name="{Warrior Unlock}" hidden="false" targetId="f59c-ea37-e10d-52c2" primary="false"/>
         <categoryLink id="7ad2-f71a-b058-242a" name="{Vanguard Unlock}" hidden="false" targetId="f2d2-7198-f935-b99d" primary="false"/>
@@ -921,6 +1361,13 @@
       </entryLinks>
     </entryLink>
     <entryLink id="e176-65f4-f586-59d4" name="Lord-Exorcist" hidden="false" collective="false" import="true" targetId="910c-1cf2-c5f1-3d5e" type="selectionEntry">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="971a-dd17-c869-f236" type="equalTo"/>
+          </conditions>
+        </modifier>
+      </modifiers>
       <categoryLinks>
         <categoryLink id="04d4-cf3b-fa9f-6923" name="{Sacrosanct Inf Unlock}" hidden="false" targetId="21ce-082a-8359-d307" primary="false"/>
       </categoryLinks>
@@ -931,6 +1378,13 @@
       </entryLinks>
     </entryLink>
     <entryLink id="0d16-7519-677c-ff90" name="Lord-Imperatant" hidden="false" collective="false" import="true" targetId="ff10-6d9a-b549-738d" type="selectionEntry">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="971a-dd17-c869-f236" type="equalTo"/>
+          </conditions>
+        </modifier>
+      </modifiers>
       <categoryLinks>
         <categoryLink id="778f-f5be-2968-3b7a" name="{Warrior Unlock}" hidden="false" targetId="f59c-ea37-e10d-52c2" primary="false"/>
         <categoryLink id="5a29-8b1b-d277-16e2" name="{Gryph Unlock}" hidden="false" targetId="8014-e367-b38f-187f" primary="false"/>
@@ -943,6 +1397,13 @@
       </entryLinks>
     </entryLink>
     <entryLink id="f69b-6b02-d84f-d89f" name="Lord-Ordinator" hidden="false" collective="false" import="true" targetId="9743-a445-9f1f-3e7b" type="selectionEntry">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="971a-dd17-c869-f236" type="equalTo"/>
+          </conditions>
+        </modifier>
+      </modifiers>
       <categoryLinks>
         <categoryLink id="f9ff-3a08-132f-3d82" name="{Sacrosanct Inf Unlock}" hidden="false" targetId="21ce-082a-8359-d307" primary="false"/>
         <categoryLink id="0a11-cea9-6b2b-5891" name="{War Machine Unlock}" hidden="false" targetId="e11d-dad2-c4a3-83fc" primary="false"/>
@@ -954,6 +1415,13 @@
       </entryLinks>
     </entryLink>
     <entryLink id="a873-1a8c-efd3-85c7" name="Lord-Relictor" hidden="false" collective="false" import="true" targetId="9535-ef25-84ae-1537" type="selectionEntry">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="971a-dd17-c869-f236" type="equalTo"/>
+          </conditions>
+        </modifier>
+      </modifiers>
       <categoryLinks>
         <categoryLink id="e63d-99a9-3874-13b8" name="{Warrior Unlock}" hidden="false" targetId="f59c-ea37-e10d-52c2" primary="false"/>
         <categoryLink id="028d-2dbd-8d35-c547" name="{Ruination Unlock}" hidden="false" targetId="a4dc-cd76-51e2-9e22" primary="false"/>
@@ -967,6 +1435,13 @@
       </entryLinks>
     </entryLink>
     <entryLink id="f7cd-47c5-3494-6b4a" name="Lord-Terminos" hidden="false" collective="false" import="true" targetId="f737-b1a6-21b8-6a2d" type="selectionEntry">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="971a-dd17-c869-f236" type="equalTo"/>
+          </conditions>
+        </modifier>
+      </modifiers>
       <categoryLinks>
         <categoryLink id="9e5e-c2ee-161c-6299" name="{Ruination Unlock}" hidden="false" targetId="a4dc-cd76-51e2-9e22" primary="false"/>
         <categoryLink id="ba18-8be3-b385-b3bf" name="{Exemplar Unlock}" hidden="false" targetId="ead6-e003-2312-5f3d" primary="false"/>
@@ -978,6 +1453,13 @@
       </entryLinks>
     </entryLink>
     <entryLink id="42c1-35cc-e269-2daa" name="Lord-Veritant" hidden="false" collective="false" import="true" targetId="c180-6bc6-709e-b6d2" type="selectionEntry">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="971a-dd17-c869-f236" type="equalTo"/>
+          </conditions>
+        </modifier>
+      </modifiers>
       <categoryLinks>
         <categoryLink id="eefb-7509-54d3-d265" name="{Warrior Unlock}" hidden="false" targetId="f59c-ea37-e10d-52c2" primary="false"/>
         <categoryLink id="1720-ffd2-f897-08c4" name="{Ruination Unlock}" hidden="false" targetId="a4dc-cd76-51e2-9e22" primary="false"/>
@@ -991,6 +1473,13 @@
       </entryLinks>
     </entryLink>
     <entryLink id="a44f-635c-07c0-99ac" name="Lord-Vigilant on Gryph-stalker" hidden="false" collective="false" import="true" targetId="4444-331b-16e6-7f2b" type="selectionEntry">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="971a-dd17-c869-f236" type="equalTo"/>
+          </conditions>
+        </modifier>
+      </modifiers>
       <categoryLinks>
         <categoryLink id="fdcb-1bd2-38cf-e87a" name="{Warrior Unlock}" hidden="false" targetId="f59c-ea37-e10d-52c2" primary="false"/>
         <categoryLink id="784f-e2df-03ba-01c2" name="{Ruination Unlock}" hidden="false" targetId="a4dc-cd76-51e2-9e22" primary="false"/>
@@ -1004,6 +1493,13 @@
       </entryLinks>
     </entryLink>
     <entryLink id="ee5c-1c3c-b914-1c0a" name="Neave Blacktalon" hidden="false" collective="false" import="true" targetId="48a0-4c37-2f18-79c2" type="selectionEntry">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="971a-dd17-c869-f236" type="equalTo"/>
+          </conditions>
+        </modifier>
+      </modifiers>
       <categoryLinks>
         <categoryLink id="57b9-5b46-daf5-36f1" name="{Vanguard Unlock}" hidden="false" targetId="f2d2-7198-f935-b99d" primary="false"/>
       </categoryLinks>
@@ -1021,6 +1517,11 @@
         <modifier type="set" field="c7cc-e1bc-5f82-83c5" value="1.0">
           <conditions>
             <condition field="selections" scope="75ec-21ff-e079-6e2c" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="48a0-4c37-2f18-79c2" type="greaterThan"/>
+          </conditions>
+        </modifier>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="971a-dd17-c869-f236" type="equalTo"/>
           </conditions>
         </modifier>
       </modifiers>
@@ -1041,6 +1542,11 @@
             </conditionGroup>
           </conditionGroups>
         </modifier>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="971a-dd17-c869-f236" type="equalTo"/>
+          </conditions>
+        </modifier>
       </modifiers>
     </entryLink>
     <entryLink id="dd82-6fcc-268f-c0bb" name="Prosecutors" hidden="false" collective="false" import="true" targetId="4440-f9f2-b315-8279" type="selectionEntry">
@@ -1054,6 +1560,11 @@
               </conditions>
             </conditionGroup>
           </conditionGroups>
+        </modifier>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="971a-dd17-c869-f236" type="equalTo"/>
+          </conditions>
         </modifier>
       </modifiers>
     </entryLink>
@@ -1069,6 +1580,11 @@
               </conditions>
             </conditionGroup>
           </conditionGroups>
+        </modifier>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="971a-dd17-c869-f236" type="equalTo"/>
+          </conditions>
         </modifier>
       </modifiers>
     </entryLink>
@@ -1091,6 +1607,11 @@
             <condition field="selections" scope="75ec-21ff-e079-6e2c" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="98a5-5083-e689-579c" type="greaterThan"/>
           </conditions>
         </modifier>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="971a-dd17-c869-f236" type="equalTo"/>
+          </conditions>
+        </modifier>
       </modifiers>
       <constraints>
         <constraint field="selections" scope="force" value="-1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="ddbf-7160-b547-1242" type="max"/>
@@ -1108,6 +1629,11 @@
             </conditionGroup>
           </conditionGroups>
         </modifier>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="971a-dd17-c869-f236" type="equalTo"/>
+          </conditions>
+        </modifier>
       </modifiers>
     </entryLink>
     <entryLink id="448d-d58e-6bc0-5028" name="Retributors" hidden="false" collective="false" import="true" targetId="2cc4-97ec-0b48-c08c" type="selectionEntry">
@@ -1123,6 +1649,11 @@
             </conditionGroup>
           </conditionGroups>
         </modifier>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="971a-dd17-c869-f236" type="equalTo"/>
+          </conditions>
+        </modifier>
       </modifiers>
     </entryLink>
     <entryLink id="f666-0f1e-0107-5c1c" name="Sequitors" hidden="false" collective="false" import="true" targetId="4cce-83f5-96a2-6586" type="selectionEntry">
@@ -1137,6 +1668,11 @@
               </conditions>
             </conditionGroup>
           </conditionGroups>
+        </modifier>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="971a-dd17-c869-f236" type="equalTo"/>
+          </conditions>
         </modifier>
       </modifiers>
     </entryLink>
@@ -1176,9 +1712,21 @@
             <condition field="selections" scope="75ec-21ff-e079-6e2c" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="f59c-ea37-e10d-52c2" type="equalTo"/>
           </conditions>
         </modifier>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="971a-dd17-c869-f236" type="equalTo"/>
+          </conditions>
+        </modifier>
       </modifiers>
     </entryLink>
     <entryLink id="e427-ad7d-da0d-cb18" name="Vandus Hammerhand" hidden="false" collective="false" import="true" targetId="5175-d818-9355-a435" type="selectionEntry">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="971a-dd17-c869-f236" type="equalTo"/>
+          </conditions>
+        </modifier>
+      </modifiers>
       <categoryLinks>
         <categoryLink id="fa5b-3e6b-c6b1-209e" name="{Warrior Unlock}" hidden="false" targetId="f59c-ea37-e10d-52c2" primary="false"/>
         <categoryLink id="3be9-4420-c48e-dd32" name="{Extremis Unlock}" hidden="false" targetId="e71f-8e09-8b76-9555" primary="false"/>
@@ -1200,6 +1748,11 @@
             </conditionGroup>
           </conditionGroups>
         </modifier>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="971a-dd17-c869-f236" type="equalTo"/>
+          </conditions>
+        </modifier>
       </modifiers>
     </entryLink>
     <entryLink id="773f-cd0b-aab1-1eb0" name="Vanguard-Palladors with Shock Handaxes" hidden="false" collective="false" import="true" targetId="86c6-b945-327d-9571" type="selectionEntry">
@@ -1209,6 +1762,11 @@
             <condition field="selections" scope="75ec-21ff-e079-6e2c" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="f2d2-7198-f935-b99d" type="equalTo"/>
           </conditions>
         </modifier>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="971a-dd17-c869-f236" type="equalTo"/>
+          </conditions>
+        </modifier>
       </modifiers>
     </entryLink>
     <entryLink id="93c3-e2a5-356d-a67f" name="Vanguard-Palladors with Starstrike Javelins" hidden="false" collective="false" import="true" targetId="5b2f-dc4c-1797-19b3" type="selectionEntry">
@@ -1216,6 +1774,11 @@
         <modifier type="set" field="hidden" value="true">
           <conditions>
             <condition field="selections" scope="75ec-21ff-e079-6e2c" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="f2d2-7198-f935-b99d" type="equalTo"/>
+          </conditions>
+        </modifier>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="971a-dd17-c869-f236" type="equalTo"/>
           </conditions>
         </modifier>
       </modifiers>
@@ -1232,6 +1795,11 @@
             </conditionGroup>
           </conditionGroups>
         </modifier>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="971a-dd17-c869-f236" type="equalTo"/>
+          </conditions>
+        </modifier>
       </modifiers>
     </entryLink>
     <entryLink id="a141-f724-fa04-fa3e" name="Vanguard-Raptors with Longstrike Crossbows" hidden="false" collective="false" import="true" targetId="8620-5d8e-dc14-4665" type="selectionEntry">
@@ -1245,6 +1813,11 @@
               </conditions>
             </conditionGroup>
           </conditionGroups>
+        </modifier>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="971a-dd17-c869-f236" type="equalTo"/>
+          </conditions>
         </modifier>
       </modifiers>
     </entryLink>
@@ -1261,6 +1834,11 @@
             </conditionGroup>
           </conditionGroups>
         </modifier>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="971a-dd17-c869-f236" type="equalTo"/>
+          </conditions>
+        </modifier>
       </modifiers>
     </entryLink>
     <entryLink id="a531-4997-af76-b427" name="Vigilors" hidden="false" collective="false" import="true" targetId="4360-ed2f-3acd-3396" type="selectionEntry">
@@ -1275,6 +1853,11 @@
               </conditions>
             </conditionGroup>
           </conditionGroups>
+        </modifier>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="971a-dd17-c869-f236" type="equalTo"/>
+          </conditions>
         </modifier>
       </modifiers>
     </entryLink>
@@ -1291,9 +1874,21 @@
             </conditionGroup>
           </conditionGroups>
         </modifier>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="971a-dd17-c869-f236" type="equalTo"/>
+          </conditions>
+        </modifier>
       </modifiers>
     </entryLink>
     <entryLink id="2974-8fb4-84bd-485f" name="Yndrasta, The Celestial Spear" hidden="false" collective="false" import="true" targetId="df30-a3d8-6f49-2067" type="selectionEntry">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="971a-dd17-c869-f236" type="equalTo"/>
+          </conditions>
+        </modifier>
+      </modifiers>
       <categoryLinks>
         <categoryLink id="75af-1c37-16db-b09c" name="{Warrior Unlock}" hidden="false" targetId="f59c-ea37-e10d-52c2" primary="false"/>
         <categoryLink id="3ee2-bb1b-a81b-8319" name="{Vanguard Unlock}" hidden="false" targetId="f2d2-7198-f935-b99d" primary="false"/>
@@ -1304,10 +1899,17 @@
         <categoryLink id="abe5-177b-444d-e75a" name="{Exemplar Unlock}" hidden="false" targetId="ead6-e003-2312-5f3d" primary="false"/>
       </categoryLinks>
       <entryLinks>
-        <entryLink id="132e-b4e8-d481-4561" name="General" hidden="false" collective="false" import="true" targetId="98a4-3d6d-a7b9-399f" type="selectionEntry"/>
+        <entryLink id="132e-b4e8-d481-4561" name="General - Warmaster" hidden="false" collective="false" import="true" targetId="9f9e-1a62-8e0b-36ae" type="selectionEntry"/>
       </entryLinks>
     </entryLink>
     <entryLink id="f418-0e59-b302-b1d4" name="Knight-Judicator with Gryph-hounds" hidden="false" collective="false" import="true" targetId="f412-ae72-ee53-4dd4" type="selectionEntry">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="971a-dd17-c869-f236" type="equalTo"/>
+          </conditions>
+        </modifier>
+      </modifiers>
       <categoryLinks>
         <categoryLink id="3d0b-c399-b542-4389" name="{Warrior Unlock}" hidden="false" targetId="f59c-ea37-e10d-52c2" primary="false"/>
       </categoryLinks>
@@ -1326,6 +1928,11 @@
           </conditions>
         </modifier>
         <modifier type="set-primary" field="category" value="f2f5-93ab-4dee-a87c"/>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="971a-dd17-c869-f236" type="equalTo"/>
+          </conditions>
+        </modifier>
       </modifiers>
       <constraints>
         <constraint field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="c4b5-2d1c-90c0-0d6a" type="max"/>
@@ -1345,6 +1952,11 @@
           </conditions>
         </modifier>
         <modifier type="set-primary" field="category" value="f2f5-93ab-4dee-a87c"/>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="971a-dd17-c869-f236" type="equalTo"/>
+          </conditions>
+        </modifier>
       </modifiers>
       <constraints>
         <constraint field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="8900-4cad-a1dc-8d7e" type="max"/>
@@ -1355,9 +1967,89 @@
         <entryLink id="1752-8df8-654c-b095" name="General" hidden="false" collective="false" import="true" targetId="98a4-3d6d-a7b9-399f" type="selectionEntry"/>
       </entryLinks>
     </entryLink>
+    <entryLink id="3c46-9827-33b9-54c2" name="Knight-Vexillor" hidden="false" collective="false" import="true" targetId="5bea-1338-e6ee-3d5c" type="selectionEntry">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="971a-dd17-c869-f236" type="equalTo"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <categoryLinks>
+        <categoryLink id="13d4-a253-d75d-e1a5" name="{Warrior Unlock}" hidden="false" targetId="f59c-ea37-e10d-52c2" primary="false"/>
+        <categoryLink id="fd96-4ae0-319f-60c1" name="{Gryph Unlock}" hidden="false" targetId="8014-e367-b38f-187f" primary="false"/>
+      </categoryLinks>
+      <entryLinks>
+        <entryLink id="466e-c703-39d9-87ec" name="Aspects of Azyr (Heroic Traits)" hidden="false" collective="false" import="true" targetId="569e-d834-dfb1-0fe5" type="selectionEntryGroup"/>
+        <entryLink id="4481-78aa-8130-60b9" name="Artefacts of the Tempest (Artefacts of Power)" hidden="false" collective="false" import="true" targetId="f45c-b34c-33e5-0808" type="selectionEntryGroup"/>
+        <entryLink id="3f02-914d-f968-1d9f" name="General" hidden="false" collective="false" import="true" targetId="98a4-3d6d-a7b9-399f" type="selectionEntry"/>
+      </entryLinks>
+    </entryLink>
   </entryLinks>
+  <sharedSelectionEntries>
+    <selectionEntry id="f80e-9bc3-4e04-b513" name="Fearless Fliers (Heroic Trait)" hidden="false" collective="false" import="true" type="upgrade">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="894e-5b38-c712-4203" type="equalTo"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <constraints>
+        <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="db92-2ad0-1a82-b9d1" type="max"/>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="6e96-ba6c-5233-faa3" type="max"/>
+      </constraints>
+      <profiles>
+        <profile id="cb44-83c2-ec58-c5fd" name="Fearless Fliers" hidden="false" typeId="7861-da01-01c0-88d9" typeName="Ability">
+          <characteristics>
+            <characteristic name="Use" typeId="9bce-4deb-8b79-eaec">End of Any Turn</characteristic>
+            <characteristic name="Declare" typeId="f9c7-7dae-69e1-f924">-</characteristic>
+            <characteristic name="Effect" typeId="7d15-5e9e-83a9-d696">If this unit is not in combat, it can immediately make a D6&quot; move and can end that move in combat.</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <costs>
+        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="64bb-aaad-5157-9889" name="Celestium Ensign (Artefact of Power)" hidden="false" collective="false" import="true" type="upgrade">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="894e-5b38-c712-4203" type="equalTo"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <constraints>
+        <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="5fbc-9ad2-055a-d711" type="max"/>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="4668-9ed7-969d-16ed" type="max"/>
+      </constraints>
+      <profiles>
+        <profile id="1fa7-b525-781f-e3da" name="Celestium Ensign" hidden="false" typeId="7861-da01-01c0-88d9" typeName="Ability">
+          <characteristics>
+            <characteristic name="Use" typeId="9bce-4deb-8b79-eaec">Once Per Battle (Army), End of Any Turn</characteristic>
+            <characteristic name="Declare" typeId="f9c7-7dae-69e1-f924">-</characteristic>
+            <characteristic name="Effect" typeId="7d15-5e9e-83a9-d696">Heal (3) each friendly DRACONITH SKYWING unit wholly within 12&quot; of this unit.</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <categoryLinks>
+        <categoryLink id="b3ab-a9a8-cb3e-ba1d" name="Artefacts" hidden="false" targetId="ba14-5553-456e-33ad" primary="false"/>
+      </categoryLinks>
+      <costs>
+        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
+      </costs>
+    </selectionEntry>
+  </sharedSelectionEntries>
   <sharedSelectionEntryGroups>
     <selectionEntryGroup id="569e-d834-dfb1-0fe5" name="Aspects of Azyr (Heroic Traits)" hidden="false" collective="false" import="true">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="971a-dd17-c869-f236" type="equalTo"/>
+          </conditions>
+        </modifier>
+      </modifiers>
       <constraints>
         <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="3155-4a5f-fa51-8a98" type="max"/>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="3a9c-f4a8-72f9-19a9" type="max"/>
@@ -1417,6 +2109,13 @@
       </selectionEntries>
     </selectionEntryGroup>
     <selectionEntryGroup id="f45c-b34c-33e5-0808" name="Artefacts of the Tempest (Artefacts of Power)" hidden="false" collective="false" import="true">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="971a-dd17-c869-f236" type="equalTo"/>
+          </conditions>
+        </modifier>
+      </modifiers>
       <constraints>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="fe28-88a8-2bc1-8efa" type="max"/>
       </constraints>

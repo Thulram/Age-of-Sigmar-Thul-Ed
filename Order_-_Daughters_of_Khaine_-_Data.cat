@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="6529-a3f6-42f7-7556" name="Order - Daughters of Khaine - Data" revision="21" battleScribeVersion="2.03" authorName="Thulram" library="true" gameSystemId="e832-3291-06be-cab1" gameSystemRevision="21" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="6529-a3f6-42f7-7556" name="Order - Daughters of Khaine - Data" revision="23" battleScribeVersion="2.03" authorName="Thulram" library="true" gameSystemId="e832-3291-06be-cab1" gameSystemRevision="22" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <profileTypes>
     <profileType id="71e6-b252-8ba4-0054" name="Blood Rites Table - Battle Round">
       <characteristicTypes>
@@ -528,13 +528,6 @@ In addition, add 1 to chanting rolls for friendly DAUGHTERS OF KHAINE PRIESTS wh
       </costs>
     </selectionEntry>
     <selectionEntry id="a90f-18fa-f3ce-877d" name="Witch Aelves with Paired Sciansá" publicationId="6ce4-e8a3-f18f-be55" hidden="false" collective="false" import="true" type="unit">
-      <modifiers>
-        <modifier type="increment" field="b0b4-6aec-82c2-02ae" value="110.0">
-          <conditions>
-            <condition field="selections" scope="a90f-18fa-f3ce-877d" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="1f37-5264-f4c2-78d8" type="greaterThan"/>
-          </conditions>
-        </modifier>
-      </modifiers>
       <profiles>
         <profile id="62e8-b99e-6ce7-a6e6" name="Witch Aelves with Paired Sciansá" hidden="false" typeId="3956-f6dd-6c88-ae4b" typeName="Unit">
           <characteristics>
@@ -571,13 +564,6 @@ In addition, add 1 to chanting rolls for friendly DAUGHTERS OF KHAINE PRIESTS wh
       </categoryLinks>
       <selectionEntries>
         <selectionEntry id="038e-234a-78be-f66e" name="10 Witch Aelves" hidden="false" collective="false" import="true" type="model">
-          <modifiers>
-            <modifier type="set" field="name" value="20 Witch Aelves">
-              <conditions>
-                <condition field="selections" scope="a90f-18fa-f3ce-877d" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="1f37-5264-f4c2-78d8" type="greaterThan"/>
-              </conditions>
-            </modifier>
-          </modifiers>
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="49c2-3383-0fd1-cb4a" type="max"/>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="2ef9-06ec-afa0-37c1" type="min"/>
@@ -611,20 +597,17 @@ In addition, add 1 to chanting rolls for friendly DAUGHTERS OF KHAINE PRIESTS wh
         </selectionEntry>
       </selectionEntries>
       <entryLinks>
-        <entryLink id="1f37-5264-f4c2-78d8" name="Unit Reinforcement" hidden="false" collective="false" import="true" targetId="b493-d9e6-82ca-5488" type="selectionEntry"/>
+        <entryLink id="1f37-5264-f4c2-78d8" name="Unit Reinforcement" hidden="false" collective="false" import="true" targetId="b493-d9e6-82ca-5488" type="selectionEntry">
+          <costs>
+            <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="110.0"/>
+          </costs>
+        </entryLink>
       </entryLinks>
       <costs>
         <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="110.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="cc3b-c9b5-d947-8fdf" name="Sisters of Slaughter with Bladed Bucklers" publicationId="6ce4-e8a3-f18f-be55" hidden="false" collective="false" import="true" type="unit">
-      <modifiers>
-        <modifier type="increment" field="b0b4-6aec-82c2-02ae" value="110.0">
-          <conditions>
-            <condition field="selections" scope="cc3b-c9b5-d947-8fdf" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="b08d-c8e9-5326-0c40" type="greaterThan"/>
-          </conditions>
-        </modifier>
-      </modifiers>
       <profiles>
         <profile id="f890-da98-16a0-7492" name="Sisters of Slaughter with Bladed Bucklers" hidden="false" typeId="3956-f6dd-6c88-ae4b" typeName="Unit">
           <characteristics>
@@ -668,13 +651,6 @@ In addition, add 1 to chanting rolls for friendly DAUGHTERS OF KHAINE PRIESTS wh
       </categoryLinks>
       <selectionEntries>
         <selectionEntry id="a2ea-96ed-00f7-4e3a" name="10 Sisters of Slaughter" hidden="false" collective="false" import="true" type="model">
-          <modifiers>
-            <modifier type="set" field="name" value="20 Sisters of Slaughter">
-              <conditions>
-                <condition field="selections" scope="cc3b-c9b5-d947-8fdf" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="1f37-5264-f4c2-78d8" type="greaterThan"/>
-              </conditions>
-            </modifier>
-          </modifiers>
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="b565-6d79-6dd5-67ae" type="max"/>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="92ba-3e26-7a93-9ba2" type="min"/>
@@ -708,7 +684,11 @@ In addition, add 1 to chanting rolls for friendly DAUGHTERS OF KHAINE PRIESTS wh
         </selectionEntry>
       </selectionEntries>
       <entryLinks>
-        <entryLink id="b08d-c8e9-5326-0c40" name="Unit Reinforcement" hidden="false" collective="false" import="true" targetId="b493-d9e6-82ca-5488" type="selectionEntry"/>
+        <entryLink id="b08d-c8e9-5326-0c40" name="Unit Reinforcement" hidden="false" collective="false" import="true" targetId="b493-d9e6-82ca-5488" type="selectionEntry">
+          <costs>
+            <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="110.0"/>
+          </costs>
+        </entryLink>
       </entryLinks>
       <costs>
         <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="110.0"/>
@@ -933,13 +913,6 @@ In addition, add 1 to chanting rolls for friendly DAUGHTERS OF KHAINE PRIESTS wh
       </costs>
     </selectionEntry>
     <selectionEntry id="98f2-239d-947c-fb81" name="Doomfire Warlocks" publicationId="6ce4-e8a3-f18f-be55" hidden="false" collective="false" import="true" type="unit">
-      <modifiers>
-        <modifier type="increment" field="b0b4-6aec-82c2-02ae" value="150.0">
-          <conditions>
-            <condition field="selections" scope="98f2-239d-947c-fb81" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="b08d-c8e9-5326-0c40" type="greaterThan"/>
-          </conditions>
-        </modifier>
-      </modifiers>
       <profiles>
         <profile id="03f7-6539-03b5-5349" name="Doomfire Warlocks" hidden="false" typeId="3956-f6dd-6c88-ae4b" typeName="Unit">
           <characteristics>
@@ -976,13 +949,6 @@ In addition, add 1 to chanting rolls for friendly DAUGHTERS OF KHAINE PRIESTS wh
       </categoryLinks>
       <selectionEntries>
         <selectionEntry id="05dd-df61-088d-625a" name="5 Doomfire Warlocks" hidden="false" collective="false" import="true" type="model">
-          <modifiers>
-            <modifier type="set" field="name" value="10 Doomfire Warlocks">
-              <conditions>
-                <condition field="selections" scope="98f2-239d-947c-fb81" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="b08d-c8e9-5326-0c40" type="greaterThan"/>
-              </conditions>
-            </modifier>
-          </modifiers>
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="bc6d-13d3-22a5-58f3" type="max"/>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="ce49-8dcb-1767-6dcb" type="min"/>
@@ -1051,20 +1017,17 @@ In addition, add 1 to chanting rolls for friendly DAUGHTERS OF KHAINE PRIESTS wh
         </selectionEntry>
       </selectionEntries>
       <entryLinks>
-        <entryLink id="64ed-9eba-3d73-f0fc" name="Unit Reinforcement" hidden="false" collective="false" import="true" targetId="b493-d9e6-82ca-5488" type="selectionEntry"/>
+        <entryLink id="64ed-9eba-3d73-f0fc" name="Unit Reinforcement" hidden="false" collective="false" import="true" targetId="b493-d9e6-82ca-5488" type="selectionEntry">
+          <costs>
+            <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="150.0"/>
+          </costs>
+        </entryLink>
       </entryLinks>
       <costs>
         <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="150.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="cbaf-9fdf-01ff-c81c" name="Blood Sisters" publicationId="6ce4-e8a3-f18f-be55" hidden="false" collective="false" import="true" type="unit">
-      <modifiers>
-        <modifier type="increment" field="b0b4-6aec-82c2-02ae" value="140.0">
-          <conditions>
-            <condition field="selections" scope="cbaf-9fdf-01ff-c81c" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="b08d-c8e9-5326-0c40" type="greaterThan"/>
-          </conditions>
-        </modifier>
-      </modifiers>
       <profiles>
         <profile id="ebd0-f09d-7fab-a01f" name="Blood Sisters" hidden="false" typeId="3956-f6dd-6c88-ae4b" typeName="Unit">
           <characteristics>
@@ -1101,13 +1064,6 @@ In addition, add 1 to chanting rolls for friendly DAUGHTERS OF KHAINE PRIESTS wh
       </categoryLinks>
       <selectionEntries>
         <selectionEntry id="173d-26be-152c-09d0" name="5 Blood Sisters" hidden="false" collective="false" import="true" type="model">
-          <modifiers>
-            <modifier type="set" field="name" value="10 Blood Sisters">
-              <conditions>
-                <condition field="selections" scope="cbaf-9fdf-01ff-c81c" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="b08d-c8e9-5326-0c40" type="greaterThan"/>
-              </conditions>
-            </modifier>
-          </modifiers>
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8798-2dec-27d4-51a7" type="max"/>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="a0b0-3229-6ed2-95f2" type="min"/>
@@ -1141,20 +1097,17 @@ In addition, add 1 to chanting rolls for friendly DAUGHTERS OF KHAINE PRIESTS wh
         </selectionEntry>
       </selectionEntries>
       <entryLinks>
-        <entryLink id="fbc2-3a9e-4d45-7725" name="Unit Reinforcement" hidden="false" collective="false" import="true" targetId="b493-d9e6-82ca-5488" type="selectionEntry"/>
+        <entryLink id="fbc2-3a9e-4d45-7725" name="Unit Reinforcement" hidden="false" collective="false" import="true" targetId="b493-d9e6-82ca-5488" type="selectionEntry">
+          <costs>
+            <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="140.0"/>
+          </costs>
+        </entryLink>
       </entryLinks>
       <costs>
         <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="140.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="f565-aec7-6075-c942" name="Blood Stalkers" publicationId="6ce4-e8a3-f18f-be55" hidden="false" collective="false" import="true" type="unit">
-      <modifiers>
-        <modifier type="increment" field="b0b4-6aec-82c2-02ae" value="140.0">
-          <conditions>
-            <condition field="selections" scope="f565-aec7-6075-c942" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="b08d-c8e9-5326-0c40" type="greaterThan"/>
-          </conditions>
-        </modifier>
-      </modifiers>
       <profiles>
         <profile id="27c7-21d1-ed90-7b8a" name="Blood Stalkers" hidden="false" typeId="3956-f6dd-6c88-ae4b" typeName="Unit">
           <characteristics>
@@ -1184,13 +1137,6 @@ In addition, add 1 to chanting rolls for friendly DAUGHTERS OF KHAINE PRIESTS wh
       </categoryLinks>
       <selectionEntries>
         <selectionEntry id="15ce-ecc8-2a60-30ce" name="5 Blood Stalkers" hidden="false" collective="false" import="true" type="model">
-          <modifiers>
-            <modifier type="set" field="name" value="10 Blood Stalkers">
-              <conditions>
-                <condition field="selections" scope="f565-aec7-6075-c942" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="b08d-c8e9-5326-0c40" type="greaterThan"/>
-              </conditions>
-            </modifier>
-          </modifiers>
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="9d1e-bf87-acd0-b027" type="max"/>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="2887-fe0d-29fd-651b" type="min"/>
@@ -1243,20 +1189,17 @@ In addition, add 1 to chanting rolls for friendly DAUGHTERS OF KHAINE PRIESTS wh
         </selectionEntry>
       </selectionEntries>
       <entryLinks>
-        <entryLink id="723f-c4cb-d4f2-8552" name="Unit Reinforcement" hidden="false" collective="false" import="true" targetId="b493-d9e6-82ca-5488" type="selectionEntry"/>
+        <entryLink id="723f-c4cb-d4f2-8552" name="Unit Reinforcement" hidden="false" collective="false" import="true" targetId="b493-d9e6-82ca-5488" type="selectionEntry">
+          <costs>
+            <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="140.0"/>
+          </costs>
+        </entryLink>
       </entryLinks>
       <costs>
         <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="140.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="ff71-b5f8-acc6-f519" name="Khinerai Heartrenders" publicationId="6ce4-e8a3-f18f-be55" hidden="false" collective="false" import="true" type="unit">
-      <modifiers>
-        <modifier type="increment" field="b0b4-6aec-82c2-02ae" value="110.0">
-          <conditions>
-            <condition field="selections" scope="ff71-b5f8-acc6-f519" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="b08d-c8e9-5326-0c40" type="greaterThan"/>
-          </conditions>
-        </modifier>
-      </modifiers>
       <profiles>
         <profile id="50a1-e624-4bd5-aba9" name="Khinerai Heartrenders" hidden="false" typeId="3956-f6dd-6c88-ae4b" typeName="Unit">
           <characteristics>
@@ -1308,13 +1251,6 @@ In addition, add 1 to chanting rolls for friendly DAUGHTERS OF KHAINE PRIESTS wh
       </categoryLinks>
       <selectionEntries>
         <selectionEntry id="6964-15eb-a86a-80e7" name="5 Khinerai Heartrenders" hidden="false" collective="false" import="true" type="model">
-          <modifiers>
-            <modifier type="set" field="name" value="10 Khinerai Heartrenders">
-              <conditions>
-                <condition field="selections" scope="ff71-b5f8-acc6-f519" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="b08d-c8e9-5326-0c40" type="greaterThan"/>
-              </conditions>
-            </modifier>
-          </modifiers>
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="430c-78c4-4308-f2e4" type="max"/>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="54cf-a6af-122e-0d97" type="min"/>
@@ -1360,20 +1296,17 @@ In addition, add 1 to chanting rolls for friendly DAUGHTERS OF KHAINE PRIESTS wh
         </selectionEntry>
       </selectionEntries>
       <entryLinks>
-        <entryLink id="a9e2-dae4-3ce0-a502" name="Unit Reinforcement" hidden="false" collective="false" import="true" targetId="b493-d9e6-82ca-5488" type="selectionEntry"/>
+        <entryLink id="a9e2-dae4-3ce0-a502" name="Unit Reinforcement" hidden="false" collective="false" import="true" targetId="b493-d9e6-82ca-5488" type="selectionEntry">
+          <costs>
+            <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="110.0"/>
+          </costs>
+        </entryLink>
       </entryLinks>
       <costs>
         <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="110.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="cb5d-fabe-1eff-5352" name="Khinerai Lifetakers" publicationId="6ce4-e8a3-f18f-be55" hidden="false" collective="false" import="true" type="unit">
-      <modifiers>
-        <modifier type="increment" field="b0b4-6aec-82c2-02ae" value="100.0">
-          <conditions>
-            <condition field="selections" scope="cb5d-fabe-1eff-5352" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="b08d-c8e9-5326-0c40" type="greaterThan"/>
-          </conditions>
-        </modifier>
-      </modifiers>
       <profiles>
         <profile id="660c-1d71-b7d8-c9e3" name="Khinerai Lifetakers" hidden="false" typeId="3956-f6dd-6c88-ae4b" typeName="Unit">
           <characteristics>
@@ -1425,13 +1358,6 @@ In addition, add 1 to chanting rolls for friendly DAUGHTERS OF KHAINE PRIESTS wh
       </categoryLinks>
       <selectionEntries>
         <selectionEntry id="1634-8454-41fe-eab6" name="5 Khinerai Lifetakers" hidden="false" collective="false" import="true" type="model">
-          <modifiers>
-            <modifier type="set" field="name" value="10 Khinerai Lifetakers">
-              <conditions>
-                <condition field="selections" scope="cb5d-fabe-1eff-5352" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="b08d-c8e9-5326-0c40" type="greaterThan"/>
-              </conditions>
-            </modifier>
-          </modifiers>
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8867-3aea-7cf8-800a" type="max"/>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="5ee1-7782-d3da-f98b" type="min"/>
@@ -1465,7 +1391,11 @@ In addition, add 1 to chanting rolls for friendly DAUGHTERS OF KHAINE PRIESTS wh
         </selectionEntry>
       </selectionEntries>
       <entryLinks>
-        <entryLink id="9a09-51e7-e099-8da5" name="Unit Reinforcement" hidden="false" collective="false" import="true" targetId="b493-d9e6-82ca-5488" type="selectionEntry"/>
+        <entryLink id="9a09-51e7-e099-8da5" name="Unit Reinforcement" hidden="false" collective="false" import="true" targetId="b493-d9e6-82ca-5488" type="selectionEntry">
+          <costs>
+            <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="100.0"/>
+          </costs>
+        </entryLink>
       </entryLinks>
       <costs>
         <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="100.0"/>
@@ -2040,7 +1970,7 @@ Prophecy of Reclamation: For the rest of the turn, while the target is contestin
         <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="190.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="7f74-670c-4993-bfdc" name="Bloodwrack Viper" hidden="false" collective="false" import="true" type="unit">
+    <selectionEntry id="7f74-670c-4993-bfdc" name="Bloodwrack Viper" hidden="false" collective="false" import="true" type="model">
       <profiles>
         <profile id="0335-2bb9-c710-36e4" name="Bloodwrack Viper" hidden="false" typeId="4dd5-1c08-7200-eff9" typeName="Manifestation">
           <characteristics>
@@ -2104,7 +2034,7 @@ Prophecy of Reclamation: For the rest of the turn, while the target is contestin
         <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="8d06-9bee-4c55-3663" name="Bladewind" hidden="false" collective="false" import="true" type="unit">
+    <selectionEntry id="8d06-9bee-4c55-3663" name="Bladewind" hidden="false" collective="false" import="true" type="model">
       <profiles>
         <profile id="a61a-1717-25dd-1715" name="Bladewind" hidden="false" typeId="4dd5-1c08-7200-eff9" typeName="Manifestation">
           <characteristics>
@@ -2168,7 +2098,7 @@ Prophecy of Reclamation: For the rest of the turn, while the target is contestin
         <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="309b-622d-5913-8d3c" name="Heart of Fury" hidden="false" collective="false" import="true" type="unit">
+    <selectionEntry id="309b-622d-5913-8d3c" name="Heart of Fury" hidden="false" collective="false" import="true" type="model">
       <profiles>
         <profile id="6a12-b9d7-7fb0-846c" name="Heart of Fury" hidden="false" typeId="4dd5-1c08-7200-eff9" typeName="Manifestation">
           <characteristics>
@@ -2207,13 +2137,6 @@ Prophecy of Reclamation: For the rest of the turn, while the target is contestin
       </costs>
     </selectionEntry>
     <selectionEntry id="8c4c-7f2b-ecb4-e53d" name="Witch Aelves with Bladed Bucklers" publicationId="6ce4-e8a3-f18f-be55" hidden="false" collective="false" import="true" type="unit">
-      <modifiers>
-        <modifier type="increment" field="b0b4-6aec-82c2-02ae" value="110.0">
-          <conditions>
-            <condition field="selections" scope="8c4c-7f2b-ecb4-e53d" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="1f37-5264-f4c2-78d8" type="greaterThan"/>
-          </conditions>
-        </modifier>
-      </modifiers>
       <profiles>
         <profile id="2533-2d50-da3b-0d7e" name="Witch Aelves with Bladed Bucklers" hidden="false" typeId="3956-f6dd-6c88-ae4b" typeName="Unit">
           <characteristics>
@@ -2250,13 +2173,6 @@ Prophecy of Reclamation: For the rest of the turn, while the target is contestin
       </categoryLinks>
       <selectionEntries>
         <selectionEntry id="466d-a040-0d6a-9f2f" name="10 Witch Aelves" hidden="false" collective="false" import="true" type="model">
-          <modifiers>
-            <modifier type="set" field="name" value="20 Witch Aelves">
-              <conditions>
-                <condition field="selections" scope="8c4c-7f2b-ecb4-e53d" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="1f37-5264-f4c2-78d8" type="greaterThan"/>
-              </conditions>
-            </modifier>
-          </modifiers>
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="fb82-65aa-2fa8-b71e" type="max"/>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="5451-2300-2f61-28f5" type="min"/>
@@ -2290,20 +2206,17 @@ Prophecy of Reclamation: For the rest of the turn, while the target is contestin
         </selectionEntry>
       </selectionEntries>
       <entryLinks>
-        <entryLink id="0454-90a6-e1f4-92d8" name="Unit Reinforcement" hidden="false" collective="false" import="true" targetId="b493-d9e6-82ca-5488" type="selectionEntry"/>
+        <entryLink id="0454-90a6-e1f4-92d8" name="Unit Reinforcement" hidden="false" collective="false" import="true" targetId="b493-d9e6-82ca-5488" type="selectionEntry">
+          <costs>
+            <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="110.0"/>
+          </costs>
+        </entryLink>
       </entryLinks>
       <costs>
         <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="110.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="019e-0ce0-f7c4-71cb" name="Sisters of Slaughter with Sacrificial Knives" publicationId="6ce4-e8a3-f18f-be55" hidden="false" collective="false" import="true" type="unit">
-      <modifiers>
-        <modifier type="increment" field="b0b4-6aec-82c2-02ae" value="130.0">
-          <conditions>
-            <condition field="selections" scope="019e-0ce0-f7c4-71cb" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="1f37-5264-f4c2-78d8" type="greaterThan"/>
-          </conditions>
-        </modifier>
-      </modifiers>
       <profiles>
         <profile id="a2ea-7f90-2e40-0e24" name="Sisters of Slaughter with Sacrificial Knives" hidden="false" typeId="3956-f6dd-6c88-ae4b" typeName="Unit">
           <characteristics>
@@ -2340,13 +2253,6 @@ Prophecy of Reclamation: For the rest of the turn, while the target is contestin
       </categoryLinks>
       <selectionEntries>
         <selectionEntry id="7c79-7634-baec-ddf4" name="10 Sisters of Slaughter" hidden="false" collective="false" import="true" type="model">
-          <modifiers>
-            <modifier type="set" field="name" value="20 Sisters of Slaughter">
-              <conditions>
-                <condition field="selections" scope="019e-0ce0-f7c4-71cb" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="1f37-5264-f4c2-78d8" type="greaterThan"/>
-              </conditions>
-            </modifier>
-          </modifiers>
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8712-c16c-f64d-9338" type="max"/>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8e35-55e4-8cd8-0eaf" type="min"/>
@@ -2380,7 +2286,11 @@ Prophecy of Reclamation: For the rest of the turn, while the target is contestin
         </selectionEntry>
       </selectionEntries>
       <entryLinks>
-        <entryLink id="4c0f-178d-bb6a-0bd0" name="Unit Reinforcement" hidden="false" collective="false" import="true" targetId="b493-d9e6-82ca-5488" type="selectionEntry"/>
+        <entryLink id="4c0f-178d-bb6a-0bd0" name="Unit Reinforcement" hidden="false" collective="false" import="true" targetId="b493-d9e6-82ca-5488" type="selectionEntry">
+          <costs>
+            <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="130.0"/>
+          </costs>
+        </entryLink>
       </entryLinks>
       <costs>
         <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="130.0"/>

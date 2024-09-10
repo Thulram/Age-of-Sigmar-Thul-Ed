@@ -1,14 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="ea43-7972-d2ab-617a" name="Order - Cities of Sigmar - Data" revision="17" battleScribeVersion="2.03" authorName="Thulram" library="true" gameSystemId="e832-3291-06be-cab1" gameSystemRevision="16" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="ea43-7972-d2ab-617a" name="Order - Cities of Sigmar - Data" revision="18" battleScribeVersion="2.03" authorName="Thulram" library="true" gameSystemId="e832-3291-06be-cab1" gameSystemRevision="17" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <sharedSelectionEntries>
     <selectionEntry id="eb2c-4c6c-6a7d-c182" name="Flagellants" publicationId="88ce-c2fe-b89c-ed48" hidden="false" collective="false" import="true" type="unit">
-      <modifiers>
-        <modifier type="increment" field="b0b4-6aec-82c2-02ae" value="100.0">
-          <conditions>
-            <condition field="selections" scope="eb2c-4c6c-6a7d-c182" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="bf16-ffcc-6650-cb95" type="greaterThan"/>
-          </conditions>
-        </modifier>
-      </modifiers>
       <profiles>
         <profile id="02c2-3735-4726-45a0" name="Flagellants" hidden="false" typeId="3956-f6dd-6c88-ae4b" typeName="Unit">
           <characteristics>
@@ -21,7 +14,7 @@
         <profile id="9872-f1e3-ff1d-4630" name="Glorious Martyrs" hidden="false" typeId="7861-da01-01c0-88d9" typeName="Ability">
           <characteristics>
             <characteristic name="Use" typeId="9bce-4deb-8b79-eaec">Passive</characteristic>
-            <characteristic name="Declare" typeId="f9c7-7dae-69e1-f924"></characteristic>
+            <characteristic name="Declare" typeId="f9c7-7dae-69e1-f924"/>
             <characteristic name="Effect" typeId="7d15-5e9e-83a9-d696">Each time a model in this unit is slain by a combat attack and that model was in combat with the attacking unit, roll a dice. Add 1 to the roll if this unit is wholly within 12&quot; of a friendly Pontifex Zenestra. On a 5+, inflict 1 mortal damage on the attacking unit after the FIGHT ability has been resolved.</characteristic>
           </characteristics>
         </profile>
@@ -35,13 +28,6 @@
       </categoryLinks>
       <selectionEntries>
         <selectionEntry id="8aae-7925-e719-3ee5" name="10 Flagellants" hidden="false" collective="false" import="true" type="model">
-          <modifiers>
-            <modifier type="set" field="name" value="20 Flagellants">
-              <conditions>
-                <condition field="selections" scope="eb2c-4c6c-6a7d-c182" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="bf16-ffcc-6650-cb95" type="greaterThan"/>
-              </conditions>
-            </modifier>
-          </modifiers>
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="b494-d171-7e53-0a05" type="max"/>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="afa6-e2ed-0e5d-52b9" type="min"/>
@@ -75,7 +61,11 @@
         </selectionEntry>
       </selectionEntries>
       <entryLinks>
-        <entryLink id="bf16-ffcc-6650-cb95" name="Unit Reinforcement" hidden="false" collective="false" import="true" targetId="b493-d9e6-82ca-5488" type="selectionEntry"/>
+        <entryLink id="bf16-ffcc-6650-cb95" name="Unit Reinforcement" hidden="false" collective="false" import="true" targetId="b493-d9e6-82ca-5488" type="selectionEntry">
+          <costs>
+            <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="100.0"/>
+          </costs>
+        </entryLink>
       </entryLinks>
       <costs>
         <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="100.0"/>
@@ -104,7 +94,7 @@
             <characteristic name="PRIEST" typeId="02ab-4d58-5c31-767e">-</characteristic>
             <characteristic name="WARD" typeId="40a4-4432-32da-74d9">-</characteristic>
             <characteristic name="CHAMPION" typeId="dccd-b70a-d225-5e37">-</characteristic>
-            <characteristic name="MUSICIAN" typeId="053d-5038-d84a-3aa3"></characteristic>
+            <characteristic name="MUSICIAN" typeId="053d-5038-d84a-3aa3"/>
             <characteristic name="STANDARD BEARER" typeId="ccb7-3ee4-5637-586e">-</characteristic>
           </characteristics>
         </profile>
@@ -166,10 +156,10 @@
           <characteristics>
             <characteristic name="WIZARD" typeId="67b3-6f8b-2116-2a27">1</characteristic>
             <characteristic name="PRIEST" typeId="02ab-4d58-5c31-767e">-</characteristic>
-            <characteristic name="WARD" typeId="40a4-4432-32da-74d9"></characteristic>
-            <characteristic name="CHAMPION" typeId="dccd-b70a-d225-5e37"></characteristic>
-            <characteristic name="MUSICIAN" typeId="053d-5038-d84a-3aa3"></characteristic>
-            <characteristic name="STANDARD BEARER" typeId="ccb7-3ee4-5637-586e"></characteristic>
+            <characteristic name="WARD" typeId="40a4-4432-32da-74d9"/>
+            <characteristic name="CHAMPION" typeId="dccd-b70a-d225-5e37"/>
+            <characteristic name="MUSICIAN" typeId="053d-5038-d84a-3aa3"/>
+            <characteristic name="STANDARD BEARER" typeId="ccb7-3ee4-5637-586e"/>
           </characteristics>
         </profile>
         <profile id="17c9-d8d3-07c4-e6ce" name="Battle Damaged" hidden="false" typeId="7861-da01-01c0-88d9" typeName="Ability">
@@ -277,16 +267,16 @@
           <characteristics>
             <characteristic name="WIZARD" typeId="67b3-6f8b-2116-2a27">-</characteristic>
             <characteristic name="PRIEST" typeId="02ab-4d58-5c31-767e">-</characteristic>
-            <characteristic name="WARD" typeId="40a4-4432-32da-74d9"></characteristic>
-            <characteristic name="CHAMPION" typeId="dccd-b70a-d225-5e37"></characteristic>
-            <characteristic name="MUSICIAN" typeId="053d-5038-d84a-3aa3"></characteristic>
+            <characteristic name="WARD" typeId="40a4-4432-32da-74d9"/>
+            <characteristic name="CHAMPION" typeId="dccd-b70a-d225-5e37"/>
+            <characteristic name="MUSICIAN" typeId="053d-5038-d84a-3aa3"/>
             <characteristic name="STANDARD BEARER" typeId="ccb7-3ee4-5637-586e">-</characteristic>
           </characteristics>
         </profile>
         <profile id="1354-aab0-eda1-cf68" name="Aura of Protection" hidden="false" typeId="7861-da01-01c0-88d9" typeName="Ability">
           <characteristics>
             <characteristic name="Use" typeId="9bce-4deb-8b79-eaec">Passive</characteristic>
-            <characteristic name="Declare" typeId="f9c7-7dae-69e1-f924"></characteristic>
+            <characteristic name="Declare" typeId="f9c7-7dae-69e1-f924"/>
             <characteristic name="Effect" typeId="7d15-5e9e-83a9-d696">Friendly CITIES OF SIGMAR HUMAN units have WARD (6+) while they are wholly within 12&quot; of this unit.</characteristic>
           </characteristics>
         </profile>
@@ -320,7 +310,7 @@
             <profile id="ac04-b646-e1a2-dc6e" name="Searing Beam of Light" hidden="false" typeId="7861-da01-01c0-88d9" typeName="Ability">
               <characteristics>
                 <characteristic name="Use" typeId="9bce-4deb-8b79-eaec">Passive</characteristic>
-                <characteristic name="Declare" typeId="f9c7-7dae-69e1-f924"></characteristic>
+                <characteristic name="Declare" typeId="f9c7-7dae-69e1-f924"/>
                 <characteristic name="Effect" typeId="7d15-5e9e-83a9-d696">Each time this unit attacks with its Searing Beam of Light, pick a point on the battlefield within range to be the target. If the attack scores a hit, draw a straight line between that point and the closest point on this unit’s base. Inflict D3 mortal damage on each visible unit (friendly and enemy) that the line passes across.</characteristic>
               </characteristics>
             </profile>
@@ -371,9 +361,9 @@
           <characteristics>
             <characteristic name="WIZARD" typeId="67b3-6f8b-2116-2a27">-</characteristic>
             <characteristic name="PRIEST" typeId="02ab-4d58-5c31-767e">-</characteristic>
-            <characteristic name="WARD" typeId="40a4-4432-32da-74d9"></characteristic>
-            <characteristic name="CHAMPION" typeId="dccd-b70a-d225-5e37"></characteristic>
-            <characteristic name="MUSICIAN" typeId="053d-5038-d84a-3aa3"></characteristic>
+            <characteristic name="WARD" typeId="40a4-4432-32da-74d9"/>
+            <characteristic name="CHAMPION" typeId="dccd-b70a-d225-5e37"/>
+            <characteristic name="MUSICIAN" typeId="053d-5038-d84a-3aa3"/>
             <characteristic name="STANDARD BEARER" typeId="ccb7-3ee4-5637-586e">-</characteristic>
           </characteristics>
         </profile>
@@ -535,7 +525,7 @@
         <profile id="4040-a502-d546-d2bb" name="Aura of Protection" hidden="false" typeId="7861-da01-01c0-88d9" typeName="Ability">
           <characteristics>
             <characteristic name="Use" typeId="9bce-4deb-8b79-eaec">Passive</characteristic>
-            <characteristic name="Declare" typeId="f9c7-7dae-69e1-f924"></characteristic>
+            <characteristic name="Declare" typeId="f9c7-7dae-69e1-f924"/>
             <characteristic name="Effect" typeId="7d15-5e9e-83a9-d696">Friendly CITIES OF SIGMAR HUMAN units have WARD (6+) while they are wholly within 12&quot; of this unit.</characteristic>
           </characteristics>
         </profile>
@@ -543,10 +533,10 @@
           <characteristics>
             <characteristic name="WIZARD" typeId="67b3-6f8b-2116-2a27">1</characteristic>
             <characteristic name="PRIEST" typeId="02ab-4d58-5c31-767e">-</characteristic>
-            <characteristic name="WARD" typeId="40a4-4432-32da-74d9"></characteristic>
-            <characteristic name="CHAMPION" typeId="dccd-b70a-d225-5e37"></characteristic>
-            <characteristic name="MUSICIAN" typeId="053d-5038-d84a-3aa3"></characteristic>
-            <characteristic name="STANDARD BEARER" typeId="ccb7-3ee4-5637-586e"></characteristic>
+            <characteristic name="WARD" typeId="40a4-4432-32da-74d9"/>
+            <characteristic name="CHAMPION" typeId="dccd-b70a-d225-5e37"/>
+            <characteristic name="MUSICIAN" typeId="053d-5038-d84a-3aa3"/>
+            <characteristic name="STANDARD BEARER" typeId="ccb7-3ee4-5637-586e"/>
           </characteristics>
         </profile>
       </profiles>
@@ -579,7 +569,7 @@
             <profile id="64e7-cf1c-7dfa-104d" name="Searing Beam of Light" hidden="false" typeId="7861-da01-01c0-88d9" typeName="Ability">
               <characteristics>
                 <characteristic name="Use" typeId="9bce-4deb-8b79-eaec">Passive</characteristic>
-                <characteristic name="Declare" typeId="f9c7-7dae-69e1-f924"></characteristic>
+                <characteristic name="Declare" typeId="f9c7-7dae-69e1-f924"/>
                 <characteristic name="Effect" typeId="7d15-5e9e-83a9-d696">Each time this unit attacks with its Searing Beam of Light, pick a point on the battlefield within range to be the target. If the attack scores a hit, draw a straight line between that point and the closest point on this unit’s base. Inflict D3 mortal damage on each visible unit (friendly and enemy) that the line passes across.</characteristic>
               </characteristics>
             </profile>
@@ -843,13 +833,6 @@
       </costs>
     </selectionEntry>
     <selectionEntry id="621b-e6a2-018c-ec41" name="Black Guard" publicationId="88ce-c2fe-b89c-ed48" hidden="false" collective="false" import="true" type="unit">
-      <modifiers>
-        <modifier type="increment" field="b0b4-6aec-82c2-02ae" value="130.0">
-          <conditions>
-            <condition field="selections" scope="621b-e6a2-018c-ec41" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="bf16-ffcc-6650-cb95" type="greaterThan"/>
-          </conditions>
-        </modifier>
-      </modifiers>
       <profiles>
         <profile id="31f2-97c5-2c18-efd6" name="Black Guard" hidden="false" typeId="3956-f6dd-6c88-ae4b" typeName="Unit">
           <characteristics>
@@ -886,13 +869,6 @@
       </categoryLinks>
       <selectionEntries>
         <selectionEntry id="f585-13e3-eaa8-36af" name="10 Black Guard" hidden="false" collective="false" import="true" type="model">
-          <modifiers>
-            <modifier type="set" field="name" value="20 Black Guard">
-              <conditions>
-                <condition field="selections" scope="621b-e6a2-018c-ec41" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="bf16-ffcc-6650-cb95" type="greaterThan"/>
-              </conditions>
-            </modifier>
-          </modifiers>
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="0605-e826-6be5-6a21" type="max"/>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="862c-3abd-4032-20b1" type="min"/>
@@ -926,20 +902,17 @@
         </selectionEntry>
       </selectionEntries>
       <entryLinks>
-        <entryLink id="6d2c-4e5f-a550-4551" name="Unit Reinforcement" hidden="false" collective="false" import="true" targetId="b493-d9e6-82ca-5488" type="selectionEntry"/>
+        <entryLink id="6d2c-4e5f-a550-4551" name="Unit Reinforcement" hidden="false" collective="false" import="true" targetId="b493-d9e6-82ca-5488" type="selectionEntry">
+          <costs>
+            <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="130.0"/>
+          </costs>
+        </entryLink>
       </entryLinks>
       <costs>
         <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="130.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="c8b2-f93a-46f0-6e84" name="Executioners" publicationId="88ce-c2fe-b89c-ed48" hidden="false" collective="false" import="true" type="unit">
-      <modifiers>
-        <modifier type="increment" field="b0b4-6aec-82c2-02ae" value="140.0">
-          <conditions>
-            <condition field="selections" scope="c8b2-f93a-46f0-6e84" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="bf16-ffcc-6650-cb95" type="greaterThan"/>
-          </conditions>
-        </modifier>
-      </modifiers>
       <profiles>
         <profile id="e9ed-c85b-a2ab-7ba3" name="Executioners" hidden="false" typeId="3956-f6dd-6c88-ae4b" typeName="Unit">
           <characteristics>
@@ -952,7 +925,7 @@
         <profile id="3f5e-ca24-6b80-29c4" name="Severing Strike" hidden="false" typeId="7861-da01-01c0-88d9" typeName="Ability">
           <characteristics>
             <characteristic name="Use" typeId="9bce-4deb-8b79-eaec">Passive</characteristic>
-            <characteristic name="Declare" typeId="f9c7-7dae-69e1-f924"></characteristic>
+            <characteristic name="Declare" typeId="f9c7-7dae-69e1-f924"/>
             <characteristic name="Effect" typeId="7d15-5e9e-83a9-d696">If this unit charged this turn, this unit’s attacks score critical hits on unmodified hit rolls of 5+.</characteristic>
           </characteristics>
         </profile>
@@ -976,13 +949,6 @@
       </categoryLinks>
       <selectionEntries>
         <selectionEntry id="f32a-16e4-4f30-64a0" name="10 Executioners" hidden="false" collective="false" import="true" type="model">
-          <modifiers>
-            <modifier type="set" field="name" value="20 Executioners">
-              <conditions>
-                <condition field="selections" scope="c8b2-f93a-46f0-6e84" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="bf16-ffcc-6650-cb95" type="greaterThan"/>
-              </conditions>
-            </modifier>
-          </modifiers>
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8889-ea73-6bc3-20b1" type="max"/>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="2da2-fcc6-bec0-7431" type="min"/>
@@ -1016,20 +982,17 @@
         </selectionEntry>
       </selectionEntries>
       <entryLinks>
-        <entryLink id="c91b-5b93-d44b-fd7d" name="Unit Reinforcement" hidden="false" collective="false" import="true" targetId="b493-d9e6-82ca-5488" type="selectionEntry"/>
+        <entryLink id="c91b-5b93-d44b-fd7d" name="Unit Reinforcement" hidden="false" collective="false" import="true" targetId="b493-d9e6-82ca-5488" type="selectionEntry">
+          <costs>
+            <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="140.0"/>
+          </costs>
+        </entryLink>
       </entryLinks>
       <costs>
         <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="140.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="fff8-84ba-9327-c684" name="Bleakswords" publicationId="88ce-c2fe-b89c-ed48" hidden="false" collective="false" import="true" type="unit">
-      <modifiers>
-        <modifier type="increment" field="b0b4-6aec-82c2-02ae" value="100.0">
-          <conditions>
-            <condition field="selections" scope="fff8-84ba-9327-c684" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="bf16-ffcc-6650-cb95" type="greaterThan"/>
-          </conditions>
-        </modifier>
-      </modifiers>
       <profiles>
         <profile id="0af2-dcb6-2327-b91f" name="Bleakswords" hidden="false" typeId="3956-f6dd-6c88-ae4b" typeName="Unit">
           <characteristics>
@@ -1043,7 +1006,7 @@
           <characteristics>
             <characteristic name="WIZARD" typeId="67b3-6f8b-2116-2a27">-</characteristic>
             <characteristic name="PRIEST" typeId="02ab-4d58-5c31-767e">-</characteristic>
-            <characteristic name="WARD" typeId="40a4-4432-32da-74d9"></characteristic>
+            <characteristic name="WARD" typeId="40a4-4432-32da-74d9"/>
             <characteristic name="CHAMPION" typeId="dccd-b70a-d225-5e37">Yes</characteristic>
             <characteristic name="MUSICIAN" typeId="053d-5038-d84a-3aa3">1/10</characteristic>
             <characteristic name="STANDARD BEARER" typeId="ccb7-3ee4-5637-586e">1/10</characteristic>
@@ -1052,7 +1015,7 @@
         <profile id="181c-0179-ad83-023a" name="Merciless Conquerors" hidden="false" typeId="7861-da01-01c0-88d9" typeName="Ability">
           <characteristics>
             <characteristic name="Use" typeId="9bce-4deb-8b79-eaec">Passive</characteristic>
-            <characteristic name="Declare" typeId="f9c7-7dae-69e1-f924"></characteristic>
+            <characteristic name="Declare" typeId="f9c7-7dae-69e1-f924"/>
             <characteristic name="Effect" typeId="7d15-5e9e-83a9-d696">Add 1 to the Attacks characteristic of this unit’s melee weapons while it is contesting an objective you do not control.</characteristic>
           </characteristics>
         </profile>
@@ -1066,13 +1029,6 @@
       </categoryLinks>
       <selectionEntries>
         <selectionEntry id="391c-e8f9-1a1d-1aa7" name="10 Bleakswords" hidden="false" collective="false" import="true" type="model">
-          <modifiers>
-            <modifier type="set" field="name" value="20 Bleakswords">
-              <conditions>
-                <condition field="selections" scope="fff8-84ba-9327-c684" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="bf16-ffcc-6650-cb95" type="greaterThan"/>
-              </conditions>
-            </modifier>
-          </modifiers>
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="6bd1-a3b5-ce74-d27e" type="max"/>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="47f2-3ed7-fe9f-280d" type="min"/>
@@ -1106,20 +1062,17 @@
         </selectionEntry>
       </selectionEntries>
       <entryLinks>
-        <entryLink id="4f26-1104-6657-5174" name="Unit Reinforcement" hidden="false" collective="false" import="true" targetId="b493-d9e6-82ca-5488" type="selectionEntry"/>
+        <entryLink id="4f26-1104-6657-5174" name="Unit Reinforcement" hidden="false" collective="false" import="true" targetId="b493-d9e6-82ca-5488" type="selectionEntry">
+          <costs>
+            <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="100.0"/>
+          </costs>
+        </entryLink>
       </entryLinks>
       <costs>
         <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="100.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="848e-a467-b591-291b" name="Dreadspears" publicationId="88ce-c2fe-b89c-ed48" hidden="false" collective="false" import="true" type="unit">
-      <modifiers>
-        <modifier type="increment" field="b0b4-6aec-82c2-02ae" value="110.0">
-          <conditions>
-            <condition field="selections" scope="848e-a467-b591-291b" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="bf16-ffcc-6650-cb95" type="greaterThan"/>
-          </conditions>
-        </modifier>
-      </modifiers>
       <profiles>
         <profile id="2960-771c-8526-5b55" name="Dreadspears" hidden="false" typeId="3956-f6dd-6c88-ae4b" typeName="Unit">
           <characteristics>
@@ -1156,13 +1109,6 @@
       </categoryLinks>
       <selectionEntries>
         <selectionEntry id="f1c1-3bee-dbbc-4408" name="10 Dreadspears" hidden="false" collective="false" import="true" type="model">
-          <modifiers>
-            <modifier type="set" field="name" value="20 Dreadspears">
-              <conditions>
-                <condition field="selections" scope="848e-a467-b591-291b" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="bf16-ffcc-6650-cb95" type="greaterThan"/>
-              </conditions>
-            </modifier>
-          </modifiers>
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="a42c-ab6e-db2e-58e4" type="max"/>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="f17f-7739-1e55-8d91" type="min"/>
@@ -1180,7 +1126,7 @@
             <profile id="04c3-3b43-fa6d-3461" name="Darkling Spear" hidden="false" typeId="2905-f6bd-06e5-6642" typeName="Weapon">
               <characteristics>
                 <characteristic name="Type" typeId="1a08-195b-76fd-2c2b">Melee</characteristic>
-                <characteristic name="Range" typeId="1406-f935-3f8e-b27f"></characteristic>
+                <characteristic name="Range" typeId="1406-f935-3f8e-b27f"/>
                 <characteristic name="Attacks" typeId="4c19-dba6-f094-5165">2</characteristic>
                 <characteristic name="To-Hit" typeId="7a4f-9704-2095-96c8">3+</characteristic>
                 <characteristic name="To-Wound" typeId="172f-fc84-895b-04b7">4+</characteristic>
@@ -1196,20 +1142,17 @@
         </selectionEntry>
       </selectionEntries>
       <entryLinks>
-        <entryLink id="4460-d5d8-ee80-467d" name="Unit Reinforcement" hidden="false" collective="false" import="true" targetId="b493-d9e6-82ca-5488" type="selectionEntry"/>
+        <entryLink id="4460-d5d8-ee80-467d" name="Unit Reinforcement" hidden="false" collective="false" import="true" targetId="b493-d9e6-82ca-5488" type="selectionEntry">
+          <costs>
+            <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="110.0"/>
+          </costs>
+        </entryLink>
       </entryLinks>
       <costs>
         <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="110.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="332a-070f-d2ce-6ae8" name="Darkshards" publicationId="88ce-c2fe-b89c-ed48" hidden="false" collective="false" import="true" type="unit">
-      <modifiers>
-        <modifier type="increment" field="b0b4-6aec-82c2-02ae" value="140.0">
-          <conditions>
-            <condition field="selections" scope="332a-070f-d2ce-6ae8" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="bf16-ffcc-6650-cb95" type="greaterThan"/>
-          </conditions>
-        </modifier>
-      </modifiers>
       <profiles>
         <profile id="0a57-e554-9ae6-224d" name="Darkshards" hidden="false" typeId="3956-f6dd-6c88-ae4b" typeName="Unit">
           <characteristics>
@@ -1223,7 +1166,7 @@
           <characteristics>
             <characteristic name="WIZARD" typeId="67b3-6f8b-2116-2a27">-</characteristic>
             <characteristic name="PRIEST" typeId="02ab-4d58-5c31-767e">-</characteristic>
-            <characteristic name="WARD" typeId="40a4-4432-32da-74d9"></characteristic>
+            <characteristic name="WARD" typeId="40a4-4432-32da-74d9"/>
             <characteristic name="CHAMPION" typeId="dccd-b70a-d225-5e37">Yes</characteristic>
             <characteristic name="MUSICIAN" typeId="053d-5038-d84a-3aa3">1/10</characteristic>
             <characteristic name="STANDARD BEARER" typeId="ccb7-3ee4-5637-586e">1/10</characteristic>
@@ -1239,13 +1182,6 @@
       </categoryLinks>
       <selectionEntries>
         <selectionEntry id="2696-4871-c3d5-9e7e" name="10 Darkshards" hidden="false" collective="false" import="true" type="model">
-          <modifiers>
-            <modifier type="set" field="name" value="20 Darkshards">
-              <conditions>
-                <condition field="selections" scope="332a-070f-d2ce-6ae8" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="bf16-ffcc-6650-cb95" type="greaterThan"/>
-              </conditions>
-            </modifier>
-          </modifiers>
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="80a1-ee53-1a35-1991" type="max"/>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="a11a-a877-449b-1483" type="min"/>
@@ -1309,7 +1245,11 @@
         </selectionEntry>
       </selectionEntries>
       <entryLinks>
-        <entryLink id="33c8-6568-6ea7-0a28" name="Unit Reinforcement" hidden="false" collective="false" import="true" targetId="b493-d9e6-82ca-5488" type="selectionEntry"/>
+        <entryLink id="33c8-6568-6ea7-0a28" name="Unit Reinforcement" hidden="false" collective="false" import="true" targetId="b493-d9e6-82ca-5488" type="selectionEntry">
+          <costs>
+            <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="140.0"/>
+          </costs>
+        </entryLink>
       </entryLinks>
       <costs>
         <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="140.0"/>
@@ -1329,9 +1269,9 @@
           <characteristics>
             <characteristic name="WIZARD" typeId="67b3-6f8b-2116-2a27">-</characteristic>
             <characteristic name="PRIEST" typeId="02ab-4d58-5c31-767e">-</characteristic>
-            <characteristic name="WARD" typeId="40a4-4432-32da-74d9"></characteristic>
-            <characteristic name="CHAMPION" typeId="dccd-b70a-d225-5e37"></characteristic>
-            <characteristic name="MUSICIAN" typeId="053d-5038-d84a-3aa3"></characteristic>
+            <characteristic name="WARD" typeId="40a4-4432-32da-74d9"/>
+            <characteristic name="CHAMPION" typeId="dccd-b70a-d225-5e37"/>
+            <characteristic name="MUSICIAN" typeId="053d-5038-d84a-3aa3"/>
             <characteristic name="STANDARD BEARER" typeId="ccb7-3ee4-5637-586e">-</characteristic>
           </characteristics>
         </profile>
@@ -1609,7 +1549,7 @@ Power the Guns: Add 3 to the Attacks characteristic of this unit’s Steam Gun.<
         <profile id="a5dd-2c1e-8fed-06fd" name="Under the Shadow of Black Wings" hidden="false" typeId="7861-da01-01c0-88d9" typeName="Ability">
           <characteristics>
             <characteristic name="Use" typeId="9bce-4deb-8b79-eaec">Passive</characteristic>
-            <characteristic name="Declare" typeId="f9c7-7dae-69e1-f924"></characteristic>
+            <characteristic name="Declare" typeId="f9c7-7dae-69e1-f924"/>
             <characteristic name="Effect" typeId="7d15-5e9e-83a9-d696">Add 1 to charge rolls for friendly CITIES OF SIGMAR AELF CAVALRY units while they are wholly within 12&quot; of this unit.</characteristic>
           </characteristics>
         </profile>
@@ -1617,10 +1557,10 @@ Power the Guns: Add 3 to the Attacks characteristic of this unit’s Steam Gun.<
           <characteristics>
             <characteristic name="WIZARD" typeId="67b3-6f8b-2116-2a27">-</characteristic>
             <characteristic name="PRIEST" typeId="02ab-4d58-5c31-767e">-</characteristic>
-            <characteristic name="WARD" typeId="40a4-4432-32da-74d9"></characteristic>
-            <characteristic name="CHAMPION" typeId="dccd-b70a-d225-5e37"></characteristic>
-            <characteristic name="MUSICIAN" typeId="053d-5038-d84a-3aa3"></characteristic>
-            <characteristic name="STANDARD BEARER" typeId="ccb7-3ee4-5637-586e"></characteristic>
+            <characteristic name="WARD" typeId="40a4-4432-32da-74d9"/>
+            <characteristic name="CHAMPION" typeId="dccd-b70a-d225-5e37"/>
+            <characteristic name="MUSICIAN" typeId="053d-5038-d84a-3aa3"/>
+            <characteristic name="STANDARD BEARER" typeId="ccb7-3ee4-5637-586e"/>
           </characteristics>
         </profile>
         <profile id="e020-d142-5d4d-00a6" name="Battle Damaged" hidden="false" typeId="7861-da01-01c0-88d9" typeName="Ability">
@@ -1765,9 +1705,9 @@ Power the Guns: Add 3 to the Attacks characteristic of this unit’s Steam Gun.<
           <characteristics>
             <characteristic name="WIZARD" typeId="67b3-6f8b-2116-2a27">-</characteristic>
             <characteristic name="PRIEST" typeId="02ab-4d58-5c31-767e">-</characteristic>
-            <characteristic name="WARD" typeId="40a4-4432-32da-74d9"></characteristic>
-            <characteristic name="CHAMPION" typeId="dccd-b70a-d225-5e37"></characteristic>
-            <characteristic name="MUSICIAN" typeId="053d-5038-d84a-3aa3"></characteristic>
+            <characteristic name="WARD" typeId="40a4-4432-32da-74d9"/>
+            <characteristic name="CHAMPION" typeId="dccd-b70a-d225-5e37"/>
+            <characteristic name="MUSICIAN" typeId="053d-5038-d84a-3aa3"/>
             <characteristic name="STANDARD BEARER" typeId="ccb7-3ee4-5637-586e">-</characteristic>
           </characteristics>
         </profile>
@@ -1883,8 +1823,8 @@ Power the Guns: Add 3 to the Attacks characteristic of this unit’s Steam Gun.<
             <characteristic name="WIZARD" typeId="67b3-6f8b-2116-2a27">-</characteristic>
             <characteristic name="PRIEST" typeId="02ab-4d58-5c31-767e">-</characteristic>
             <characteristic name="WARD" typeId="40a4-4432-32da-74d9">-</characteristic>
-            <characteristic name="CHAMPION" typeId="dccd-b70a-d225-5e37"></characteristic>
-            <characteristic name="MUSICIAN" typeId="053d-5038-d84a-3aa3"></characteristic>
+            <characteristic name="CHAMPION" typeId="dccd-b70a-d225-5e37"/>
+            <characteristic name="MUSICIAN" typeId="053d-5038-d84a-3aa3"/>
             <characteristic name="STANDARD BEARER" typeId="ccb7-3ee4-5637-586e">-</characteristic>
           </characteristics>
         </profile>
@@ -1949,13 +1889,6 @@ Power the Guns: Add 3 to the Attacks characteristic of this unit’s Steam Gun.<
       </costs>
     </selectionEntry>
     <selectionEntry id="d1c6-32c5-68a4-77d3" name="Drakespawn Knights" publicationId="88ce-c2fe-b89c-ed48" hidden="false" collective="false" import="true" type="unit">
-      <modifiers>
-        <modifier type="increment" field="b0b4-6aec-82c2-02ae" value="180.0">
-          <conditions>
-            <condition field="selections" scope="d1c6-32c5-68a4-77d3" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="bf16-ffcc-6650-cb95" type="greaterThan"/>
-          </conditions>
-        </modifier>
-      </modifiers>
       <profiles>
         <profile id="d0d8-70a6-5f11-117b" name="Drakespawn Knights" hidden="false" typeId="3956-f6dd-6c88-ae4b" typeName="Unit">
           <characteristics>
@@ -1992,13 +1925,6 @@ Power the Guns: Add 3 to the Attacks characteristic of this unit’s Steam Gun.<
       </categoryLinks>
       <selectionEntries>
         <selectionEntry id="3264-9714-81d3-565c" name="5 Drakespawn Knights" hidden="false" collective="false" import="true" type="model">
-          <modifiers>
-            <modifier type="set" field="name" value="10 Drakespawn Knights">
-              <conditions>
-                <condition field="selections" scope="d1c6-32c5-68a4-77d3" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="bf16-ffcc-6650-cb95" type="greaterThan"/>
-              </conditions>
-            </modifier>
-          </modifiers>
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="e50c-6b2c-000c-b02a" type="max"/>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="0cd5-3f51-56c8-f31e" type="min"/>
@@ -2055,7 +1981,11 @@ Power the Guns: Add 3 to the Attacks characteristic of this unit’s Steam Gun.<
         </selectionEntry>
       </selectionEntries>
       <entryLinks>
-        <entryLink id="a9c2-b5c7-9746-773d" name="Unit Reinforcement" hidden="false" collective="false" import="true" targetId="b493-d9e6-82ca-5488" type="selectionEntry"/>
+        <entryLink id="a9c2-b5c7-9746-773d" name="Unit Reinforcement" hidden="false" collective="false" import="true" targetId="b493-d9e6-82ca-5488" type="selectionEntry">
+          <costs>
+            <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="180.0"/>
+          </costs>
+        </entryLink>
       </entryLinks>
       <costs>
         <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="180.0"/>
@@ -2074,7 +2004,7 @@ Power the Guns: Add 3 to the Attacks characteristic of this unit’s Steam Gun.<
         <profile id="5d10-f015-d3ef-669b" name="Hidden Murderer" hidden="false" typeId="7861-da01-01c0-88d9" typeName="Ability">
           <characteristics>
             <characteristic name="Use" typeId="9bce-4deb-8b79-eaec">Passive</characteristic>
-            <characteristic name="Declare" typeId="f9c7-7dae-69e1-f924"></characteristic>
+            <characteristic name="Declare" typeId="f9c7-7dae-69e1-f924"/>
             <characteristic name="Effect" typeId="7d15-5e9e-83a9-d696">While this unit is within the combat range of a friendly INFANTRY unit that has 5 or more models and this unit is not in combat, this unit is not visible to enemy units.</characteristic>
           </characteristics>
         </profile>
@@ -2133,13 +2063,6 @@ Power the Guns: Add 3 to the Attacks characteristic of this unit’s Steam Gun.<
       </costs>
     </selectionEntry>
     <selectionEntry id="804b-d7b4-6223-6526" name="Dark Riders" publicationId="88ce-c2fe-b89c-ed48" hidden="false" collective="false" import="true" type="unit">
-      <modifiers>
-        <modifier type="increment" field="b0b4-6aec-82c2-02ae" value="150.0">
-          <conditions>
-            <condition field="selections" scope="804b-d7b4-6223-6526" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="bf16-ffcc-6650-cb95" type="greaterThan"/>
-          </conditions>
-        </modifier>
-      </modifiers>
       <profiles>
         <profile id="d673-8b63-3f05-d12f" name="Dark Riders" hidden="false" typeId="3956-f6dd-6c88-ae4b" typeName="Unit">
           <characteristics>
@@ -2179,13 +2102,6 @@ Power the Guns: Add 3 to the Attacks characteristic of this unit’s Steam Gun.<
       </categoryLinks>
       <selectionEntries>
         <selectionEntry id="5cdc-919b-3d8c-7449" name="5 Dark Riders" hidden="false" collective="false" import="true" type="model">
-          <modifiers>
-            <modifier type="set" field="name" value="10 Dark Riders">
-              <conditions>
-                <condition field="selections" scope="804b-d7b4-6223-6526" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="bf16-ffcc-6650-cb95" type="greaterThan"/>
-              </conditions>
-            </modifier>
-          </modifiers>
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="10fe-25cd-1882-ead8" type="max"/>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d6ed-0386-5806-7713" type="min"/>
@@ -2265,7 +2181,11 @@ Power the Guns: Add 3 to the Attacks characteristic of this unit’s Steam Gun.<
         </selectionEntry>
       </selectionEntries>
       <entryLinks>
-        <entryLink id="9a32-e511-01ff-44c6" name="Unit Reinforcement" hidden="false" collective="false" import="true" targetId="b493-d9e6-82ca-5488" type="selectionEntry"/>
+        <entryLink id="9a32-e511-01ff-44c6" name="Unit Reinforcement" hidden="false" collective="false" import="true" targetId="b493-d9e6-82ca-5488" type="selectionEntry">
+          <costs>
+            <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="150.0"/>
+          </costs>
+        </entryLink>
       </entryLinks>
       <costs>
         <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="150.0"/>
@@ -2294,7 +2214,7 @@ Power the Guns: Add 3 to the Attacks characteristic of this unit’s Steam Gun.<
             <characteristic name="PRIEST" typeId="02ab-4d58-5c31-767e">-</characteristic>
             <characteristic name="WARD" typeId="40a4-4432-32da-74d9">-</characteristic>
             <characteristic name="CHAMPION" typeId="dccd-b70a-d225-5e37">-</characteristic>
-            <characteristic name="MUSICIAN" typeId="053d-5038-d84a-3aa3"></characteristic>
+            <characteristic name="MUSICIAN" typeId="053d-5038-d84a-3aa3"/>
             <characteristic name="STANDARD BEARER" typeId="ccb7-3ee4-5637-586e">-</characteristic>
           </characteristics>
         </profile>
@@ -2425,13 +2345,6 @@ The target can be picked to use a FIGHT ability immediately after the FIGHT abil
       </costs>
     </selectionEntry>
     <selectionEntry id="21a0-7f0c-2840-f652" name="Black Ark Corsairs" publicationId="88ce-c2fe-b89c-ed48" hidden="false" collective="false" import="true" type="unit">
-      <modifiers>
-        <modifier type="increment" field="b0b4-6aec-82c2-02ae" value="120.0">
-          <conditions>
-            <condition field="selections" scope="21a0-7f0c-2840-f652" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="bf16-ffcc-6650-cb95" type="greaterThan"/>
-          </conditions>
-        </modifier>
-      </modifiers>
       <profiles>
         <profile id="3c81-37bc-d0fb-60ab" name="Black Ark Corsairs" hidden="false" typeId="3956-f6dd-6c88-ae4b" typeName="Unit">
           <characteristics>
@@ -2444,7 +2357,7 @@ The target can be picked to use a FIGHT ability immediately after the FIGHT abil
         <profile id="e0b9-f4aa-cc28-5e1d" name="Skilled Swashbucklers" hidden="false" typeId="7861-da01-01c0-88d9" typeName="Ability">
           <characteristics>
             <characteristic name="Use" typeId="9bce-4deb-8b79-eaec">Passive</characteristic>
-            <characteristic name="Declare" typeId="f9c7-7dae-69e1-f924"></characteristic>
+            <characteristic name="Declare" typeId="f9c7-7dae-69e1-f924"/>
             <characteristic name="Effect" typeId="7d15-5e9e-83a9-d696">Each time you make an unmodified save roll of 6 for a combat attack that targets this unit, inflict 1 mortal damage on the attacking unit after the FIGHT ability has been resolved.</characteristic>
           </characteristics>
         </profile>
@@ -2452,7 +2365,7 @@ The target can be picked to use a FIGHT ability immediately after the FIGHT abil
           <characteristics>
             <characteristic name="WIZARD" typeId="67b3-6f8b-2116-2a27">-</characteristic>
             <characteristic name="PRIEST" typeId="02ab-4d58-5c31-767e">-</characteristic>
-            <characteristic name="WARD" typeId="40a4-4432-32da-74d9"></characteristic>
+            <characteristic name="WARD" typeId="40a4-4432-32da-74d9"/>
             <characteristic name="CHAMPION" typeId="dccd-b70a-d225-5e37">Yes</characteristic>
             <characteristic name="MUSICIAN" typeId="053d-5038-d84a-3aa3">1/10</characteristic>
             <characteristic name="STANDARD BEARER" typeId="ccb7-3ee4-5637-586e">1/10</characteristic>
@@ -2468,13 +2381,6 @@ The target can be picked to use a FIGHT ability immediately after the FIGHT abil
       </categoryLinks>
       <selectionEntries>
         <selectionEntry id="caac-b509-7d05-461b" name="10 Black Ark Corsairs" hidden="false" collective="false" import="true" type="model">
-          <modifiers>
-            <modifier type="set" field="name" value="20 Black Ark Corsairs">
-              <conditions>
-                <condition field="selections" scope="21a0-7f0c-2840-f652" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="bf16-ffcc-6650-cb95" type="greaterThan"/>
-              </conditions>
-            </modifier>
-          </modifiers>
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="975a-fce8-9243-4a4e" type="max"/>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="b6bb-99c6-330d-3f86" type="min"/>
@@ -2502,6 +2408,9 @@ The target can be picked to use a FIGHT ability immediately after the FIGHT abil
               </characteristics>
             </profile>
           </profiles>
+          <costs>
+            <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
+          </costs>
         </selectionEntry>
         <selectionEntry id="60fd-c00d-0922-4cec" name="Repeater Handbow" hidden="false" collective="false" import="true" type="upgrade">
           <constraints>
@@ -2522,10 +2431,17 @@ The target can be picked to use a FIGHT ability immediately after the FIGHT abil
               </characteristics>
             </profile>
           </profiles>
+          <costs>
+            <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
+          </costs>
         </selectionEntry>
       </selectionEntries>
       <entryLinks>
-        <entryLink id="b15d-f618-4fbc-b0e9" name="Unit Reinforcement" hidden="false" collective="false" import="true" targetId="b493-d9e6-82ca-5488" type="selectionEntry"/>
+        <entryLink id="b15d-f618-4fbc-b0e9" name="Unit Reinforcement" hidden="false" collective="false" import="true" targetId="b493-d9e6-82ca-5488" type="selectionEntry">
+          <costs>
+            <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="120.0"/>
+          </costs>
+        </entryLink>
       </entryLinks>
       <costs>
         <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="120.0"/>
@@ -2547,7 +2463,7 @@ The target can be picked to use a FIGHT ability immediately after the FIGHT abil
             <characteristic name="PRIEST" typeId="02ab-4d58-5c31-767e">-</characteristic>
             <characteristic name="WARD" typeId="40a4-4432-32da-74d9">-</characteristic>
             <characteristic name="CHAMPION" typeId="dccd-b70a-d225-5e37">-</characteristic>
-            <characteristic name="MUSICIAN" typeId="053d-5038-d84a-3aa3"></characteristic>
+            <characteristic name="MUSICIAN" typeId="053d-5038-d84a-3aa3"/>
             <characteristic name="STANDARD BEARER" typeId="ccb7-3ee4-5637-586e">-</characteristic>
           </characteristics>
         </profile>
@@ -2604,7 +2520,7 @@ The target can be picked to use a FIGHT ability immediately after the FIGHT abil
             <profile id="d830-5ddb-8bcf-84f1" name="Lay the Beast Low" hidden="false" typeId="7861-da01-01c0-88d9" typeName="Ability">
               <characteristics>
                 <characteristic name="Use" typeId="9bce-4deb-8b79-eaec">Passive</characteristic>
-                <characteristic name="Declare" typeId="f9c7-7dae-69e1-f924"></characteristic>
+                <characteristic name="Declare" typeId="f9c7-7dae-69e1-f924"/>
                 <characteristic name="Effect" typeId="7d15-5e9e-83a9-d696">Add 1 to hit rolls and wound rolls for this unit’s shooting attacks that target enemy MONSTERS.</characteristic>
               </characteristics>
             </profile>
@@ -2660,7 +2576,7 @@ The target can be picked to use a FIGHT ability immediately after the FIGHT abil
             <characteristic name="PRIEST" typeId="02ab-4d58-5c31-767e">-</characteristic>
             <characteristic name="WARD" typeId="40a4-4432-32da-74d9">-</characteristic>
             <characteristic name="CHAMPION" typeId="dccd-b70a-d225-5e37">-</characteristic>
-            <characteristic name="MUSICIAN" typeId="053d-5038-d84a-3aa3"></characteristic>
+            <characteristic name="MUSICIAN" typeId="053d-5038-d84a-3aa3"/>
             <characteristic name="STANDARD BEARER" typeId="ccb7-3ee4-5637-586e">-</characteristic>
           </characteristics>
         </profile>
@@ -2856,8 +2772,8 @@ The target can be picked to use a FIGHT ability immediately after the FIGHT abil
             <characteristic name="WIZARD" typeId="67b3-6f8b-2116-2a27">-</characteristic>
             <characteristic name="PRIEST" typeId="02ab-4d58-5c31-767e">-</characteristic>
             <characteristic name="WARD" typeId="40a4-4432-32da-74d9">-</characteristic>
-            <characteristic name="CHAMPION" typeId="dccd-b70a-d225-5e37"></characteristic>
-            <characteristic name="MUSICIAN" typeId="053d-5038-d84a-3aa3"></characteristic>
+            <characteristic name="CHAMPION" typeId="dccd-b70a-d225-5e37"/>
+            <characteristic name="MUSICIAN" typeId="053d-5038-d84a-3aa3"/>
             <characteristic name="STANDARD BEARER" typeId="ccb7-3ee4-5637-586e">-</characteristic>
           </characteristics>
         </profile>
@@ -2969,7 +2885,7 @@ The target can be picked to use a FIGHT ability immediately after the FIGHT abil
             <characteristic name="PRIEST" typeId="02ab-4d58-5c31-767e">-</characteristic>
             <characteristic name="WARD" typeId="40a4-4432-32da-74d9">6+</characteristic>
             <characteristic name="CHAMPION" typeId="dccd-b70a-d225-5e37">-</characteristic>
-            <characteristic name="MUSICIAN" typeId="053d-5038-d84a-3aa3"></characteristic>
+            <characteristic name="MUSICIAN" typeId="053d-5038-d84a-3aa3"/>
             <characteristic name="STANDARD BEARER" typeId="ccb7-3ee4-5637-586e">-</characteristic>
           </characteristics>
         </profile>
@@ -3160,7 +3076,7 @@ The target can be picked to use a FIGHT ability immediately after the FIGHT abil
             <characteristic name="PRIEST" typeId="02ab-4d58-5c31-767e">-</characteristic>
             <characteristic name="WARD" typeId="40a4-4432-32da-74d9">-</characteristic>
             <characteristic name="CHAMPION" typeId="dccd-b70a-d225-5e37">-</characteristic>
-            <characteristic name="MUSICIAN" typeId="053d-5038-d84a-3aa3"></characteristic>
+            <characteristic name="MUSICIAN" typeId="053d-5038-d84a-3aa3"/>
             <characteristic name="STANDARD BEARER" typeId="ccb7-3ee4-5637-586e">-</characteristic>
           </characteristics>
         </profile>
@@ -3417,7 +3333,7 @@ This unit’s Relic Envoy is a token.</description>
             <characteristic name="PRIEST" typeId="02ab-4d58-5c31-767e">-</characteristic>
             <characteristic name="WARD" typeId="40a4-4432-32da-74d9">-</characteristic>
             <characteristic name="CHAMPION" typeId="dccd-b70a-d225-5e37">-</characteristic>
-            <characteristic name="MUSICIAN" typeId="053d-5038-d84a-3aa3"></characteristic>
+            <characteristic name="MUSICIAN" typeId="053d-5038-d84a-3aa3"/>
             <characteristic name="STANDARD BEARER" typeId="ccb7-3ee4-5637-586e">-</characteristic>
           </characteristics>
         </profile>
@@ -3604,14 +3520,14 @@ Cast Out Evil: Roll a D3 for each enemy WIZARD and PRIEST on the battlefield. On
         <profile id="7890-1527-3a26-c281" name="Right Tools for the Job" hidden="false" typeId="7861-da01-01c0-88d9" typeName="Ability">
           <characteristics>
             <characteristic name="Use" typeId="9bce-4deb-8b79-eaec">Passive</characteristic>
-            <characteristic name="Declare" typeId="f9c7-7dae-69e1-f924"></characteristic>
+            <characteristic name="Declare" typeId="f9c7-7dae-69e1-f924"/>
             <characteristic name="Effect" typeId="7d15-5e9e-83a9-d696">Double the Damage characteristic of this unit’s weapons for attacks that target WIZARDS, PRIESTS and MANIFESTATIONS.</characteristic>
           </characteristics>
         </profile>
         <profile id="9214-a4ee-fa35-0b08" name="Wily To the Last" hidden="false" typeId="7861-da01-01c0-88d9" typeName="Ability">
           <characteristics>
             <characteristic name="Use" typeId="9bce-4deb-8b79-eaec">Passive</characteristic>
-            <characteristic name="Declare" typeId="f9c7-7dae-69e1-f924"></characteristic>
+            <characteristic name="Declare" typeId="f9c7-7dae-69e1-f924"/>
             <characteristic name="Effect" typeId="7d15-5e9e-83a9-d696">If this unit has 2 models and would be automatically destroyed, it is not automatically destroyed. Instead, 1 model in this unit is slain.</characteristic>
           </characteristics>
         </profile>
@@ -3621,7 +3537,7 @@ Cast Out Evil: Roll a D3 for each enemy WIZARD and PRIEST on the battlefield. On
             <characteristic name="PRIEST" typeId="02ab-4d58-5c31-767e">-</characteristic>
             <characteristic name="WARD" typeId="40a4-4432-32da-74d9">5+</characteristic>
             <characteristic name="CHAMPION" typeId="dccd-b70a-d225-5e37">-</characteristic>
-            <characteristic name="MUSICIAN" typeId="053d-5038-d84a-3aa3"></characteristic>
+            <characteristic name="MUSICIAN" typeId="053d-5038-d84a-3aa3"/>
             <characteristic name="STANDARD BEARER" typeId="ccb7-3ee4-5637-586e">-</characteristic>
           </characteristics>
         </profile>
@@ -3687,13 +3603,6 @@ Cast Out Evil: Roll a D3 for each enemy WIZARD and PRIEST on the battlefield. On
       </costs>
     </selectionEntry>
     <selectionEntry id="4207-022d-c624-e9bf" name="Freeguild Steelhelms" hidden="false" collective="false" import="true" type="unit">
-      <modifiers>
-        <modifier type="increment" field="b0b4-6aec-82c2-02ae" value="100.0">
-          <conditions>
-            <condition field="selections" scope="4207-022d-c624-e9bf" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="bf16-ffcc-6650-cb95" type="greaterThan"/>
-          </conditions>
-        </modifier>
-      </modifiers>
       <profiles>
         <profile id="2527-0bd8-5fc5-970b" name="Freeguild Steelhelms" hidden="false" typeId="3956-f6dd-6c88-ae4b" typeName="Unit">
           <characteristics>
@@ -3714,7 +3623,7 @@ Cast Out Evil: Roll a D3 for each enemy WIZARD and PRIEST on the battlefield. On
           <characteristics>
             <characteristic name="WIZARD" typeId="67b3-6f8b-2116-2a27">-</characteristic>
             <characteristic name="PRIEST" typeId="02ab-4d58-5c31-767e">-</characteristic>
-            <characteristic name="WARD" typeId="40a4-4432-32da-74d9"></characteristic>
+            <characteristic name="WARD" typeId="40a4-4432-32da-74d9"/>
             <characteristic name="CHAMPION" typeId="dccd-b70a-d225-5e37">Yes</characteristic>
             <characteristic name="MUSICIAN" typeId="053d-5038-d84a-3aa3">1/10</characteristic>
             <characteristic name="STANDARD BEARER" typeId="ccb7-3ee4-5637-586e">1/10</characteristic>
@@ -3730,13 +3639,6 @@ Cast Out Evil: Roll a D3 for each enemy WIZARD and PRIEST on the battlefield. On
       </categoryLinks>
       <selectionEntries>
         <selectionEntry id="9b64-dd30-8d53-4675" name="10 Freeguild Steelhelms" hidden="false" collective="false" import="true" type="model">
-          <modifiers>
-            <modifier type="set" field="name" value="20 Freeguild Steelhelms">
-              <conditions>
-                <condition field="selections" scope="4207-022d-c624-e9bf" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="bf16-ffcc-6650-cb95" type="greaterThan"/>
-              </conditions>
-            </modifier>
-          </modifiers>
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="9900-196e-4a41-88c5" type="max"/>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d2d2-0d3b-0ce9-08e3" type="min"/>
@@ -3770,20 +3672,17 @@ Cast Out Evil: Roll a D3 for each enemy WIZARD and PRIEST on the battlefield. On
         </selectionEntry>
       </selectionEntries>
       <entryLinks>
-        <entryLink id="ff22-c142-2000-d459" name="Unit Reinforcement" hidden="false" collective="false" import="true" targetId="b493-d9e6-82ca-5488" type="selectionEntry"/>
+        <entryLink id="ff22-c142-2000-d459" name="Unit Reinforcement" hidden="false" collective="false" import="true" targetId="b493-d9e6-82ca-5488" type="selectionEntry">
+          <costs>
+            <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="100.0"/>
+          </costs>
+        </entryLink>
       </entryLinks>
       <costs>
         <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="100.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="10d0-253b-c996-52b5" name="Freeguild Cavaliers" hidden="false" collective="false" import="true" type="unit">
-      <modifiers>
-        <modifier type="increment" field="b0b4-6aec-82c2-02ae" value="170.0">
-          <conditions>
-            <condition field="selections" scope="10d0-253b-c996-52b5" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="bf16-ffcc-6650-cb95" type="greaterThan"/>
-          </conditions>
-        </modifier>
-      </modifiers>
       <profiles>
         <profile id="f34b-77be-086d-648b" name="Freeguild Cavaliers" hidden="false" typeId="3956-f6dd-6c88-ae4b" typeName="Unit">
           <characteristics>
@@ -3820,13 +3719,6 @@ Cast Out Evil: Roll a D3 for each enemy WIZARD and PRIEST on the battlefield. On
       </categoryLinks>
       <selectionEntries>
         <selectionEntry id="7183-0c11-6928-3fab" name="5 Freeguild Cavaliers" hidden="false" collective="false" import="true" type="model">
-          <modifiers>
-            <modifier type="set" field="name" value="10 Freeguild Cavaliers">
-              <conditions>
-                <condition field="selections" scope="10d0-253b-c996-52b5" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="bf16-ffcc-6650-cb95" type="greaterThan"/>
-              </conditions>
-            </modifier>
-          </modifiers>
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="cd02-8fbd-71cd-1f75" type="max"/>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="ad10-8ae5-8f36-b89b" type="min"/>
@@ -3883,7 +3775,11 @@ Cast Out Evil: Roll a D3 for each enemy WIZARD and PRIEST on the battlefield. On
         </selectionEntry>
       </selectionEntries>
       <entryLinks>
-        <entryLink id="e791-6e03-1181-862e" name="Unit Reinforcement" hidden="false" collective="false" import="true" targetId="b493-d9e6-82ca-5488" type="selectionEntry"/>
+        <entryLink id="e791-6e03-1181-862e" name="Unit Reinforcement" hidden="false" collective="false" import="true" targetId="b493-d9e6-82ca-5488" type="selectionEntry">
+          <costs>
+            <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="170.0"/>
+          </costs>
+        </entryLink>
       </entryLinks>
       <costs>
         <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="180.0"/>
@@ -4149,13 +4045,6 @@ Cast Out Evil: Roll a D3 for each enemy WIZARD and PRIEST on the battlefield. On
       </costs>
     </selectionEntry>
     <selectionEntry id="e724-b536-5314-0dad" name="Freeguild Fusiliers" hidden="false" collective="false" import="true" type="unit">
-      <modifiers>
-        <modifier type="increment" field="b0b4-6aec-82c2-02ae" value="120.0">
-          <conditions>
-            <condition field="selections" scope="e724-b536-5314-0dad" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="bf16-ffcc-6650-cb95" type="greaterThan"/>
-          </conditions>
-        </modifier>
-      </modifiers>
       <profiles>
         <profile id="6f78-8caf-78a3-f8c2" name="Freeguild Fusiliers" hidden="false" typeId="3956-f6dd-6c88-ae4b" typeName="Unit">
           <characteristics>
@@ -4175,7 +4064,7 @@ Cast Out Evil: Roll a D3 for each enemy WIZARD and PRIEST on the battlefield. On
         <profile id="7c46-1685-80b3-8986" name="Blackpowder Squire" hidden="false" typeId="7861-da01-01c0-88d9" typeName="Ability">
           <characteristics>
             <characteristic name="Use" typeId="9bce-4deb-8b79-eaec">Passive</characteristic>
-            <characteristic name="Declare" typeId="f9c7-7dae-69e1-f924"></characteristic>
+            <characteristic name="Declare" typeId="f9c7-7dae-69e1-f924"/>
             <characteristic name="Effect" typeId="7d15-5e9e-83a9-d696">This unit has a Blackpowder Squire token. Each time this unit uses a SHOOT ability, if this unit’s Blackpowder Squire is on the battlefield, you can re-roll 1 hit roll. If a hit roll re-rolled in this manner is 1, remove this unit’s Blackpowder Squire from the battlefield.</characteristic>
           </characteristics>
         </profile>
@@ -4183,7 +4072,7 @@ Cast Out Evil: Roll a D3 for each enemy WIZARD and PRIEST on the battlefield. On
           <characteristics>
             <characteristic name="WIZARD" typeId="67b3-6f8b-2116-2a27">-</characteristic>
             <characteristic name="PRIEST" typeId="02ab-4d58-5c31-767e">-</characteristic>
-            <characteristic name="WARD" typeId="40a4-4432-32da-74d9"></characteristic>
+            <characteristic name="WARD" typeId="40a4-4432-32da-74d9"/>
             <characteristic name="CHAMPION" typeId="dccd-b70a-d225-5e37">Yes</characteristic>
             <characteristic name="MUSICIAN" typeId="053d-5038-d84a-3aa3">-</characteristic>
             <characteristic name="STANDARD BEARER" typeId="ccb7-3ee4-5637-586e">1/10</characteristic>
@@ -4199,13 +4088,6 @@ Cast Out Evil: Roll a D3 for each enemy WIZARD and PRIEST on the battlefield. On
       </categoryLinks>
       <selectionEntries>
         <selectionEntry id="aa0e-9509-3bb4-9080" name="10 Freeguild Fusiliers" hidden="false" collective="false" import="true" type="model">
-          <modifiers>
-            <modifier type="set" field="name" value="20 Freeguild Fusiliers">
-              <conditions>
-                <condition field="selections" scope="e724-b536-5314-0dad" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="bf16-ffcc-6650-cb95" type="greaterThan"/>
-              </conditions>
-            </modifier>
-          </modifiers>
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="6d2a-3747-8fdb-54f8" type="max"/>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="3056-3c4e-2f06-ed57" type="min"/>
@@ -4270,7 +4152,11 @@ Cast Out Evil: Roll a D3 for each enemy WIZARD and PRIEST on the battlefield. On
         </selectionEntry>
       </selectionEntries>
       <entryLinks>
-        <entryLink id="5572-bf58-eee3-b8c1" name="Unit Reinforcement" hidden="false" collective="false" import="true" targetId="b493-d9e6-82ca-5488" type="selectionEntry"/>
+        <entryLink id="5572-bf58-eee3-b8c1" name="Unit Reinforcement" hidden="false" collective="false" import="true" targetId="b493-d9e6-82ca-5488" type="selectionEntry">
+          <costs>
+            <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="120.0"/>
+          </costs>
+        </entryLink>
       </entryLinks>
       <costs>
         <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="120.0"/>
@@ -4289,7 +4175,7 @@ Cast Out Evil: Roll a D3 for each enemy WIZARD and PRIEST on the battlefield. On
         <profile id="f774-48cc-0b55-fc91" name="Hidden and Dangerous" hidden="false" typeId="7861-da01-01c0-88d9" typeName="Ability">
           <characteristics>
             <characteristic name="Use" typeId="9bce-4deb-8b79-eaec">Passive</characteristic>
-            <characteristic name="Declare" typeId="f9c7-7dae-69e1-f924"></characteristic>
+            <characteristic name="Declare" typeId="f9c7-7dae-69e1-f924"/>
             <characteristic name="Effect" typeId="7d15-5e9e-83a9-d696">This unit is not visible to enemy units more than 12&quot; from it while it is affected by the ‘Cover’ terrain ability. In addition, add 1 to hit rolls for this unit’s shooting attacks while it is wholly within 3&quot; of a terrain feature.</characteristic>
           </characteristics>
         </profile>
@@ -4515,6 +4401,9 @@ Cast Out Evil: Roll a D3 for each enemy WIZARD and PRIEST on the battlefield. On
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="3f6c-8d58-6987-a960" type="max"/>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="c77c-092c-61ee-0986" type="min"/>
           </constraints>
+          <costs>
+            <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
+          </costs>
         </selectionEntry>
       </selectionEntries>
       <costs>
@@ -4590,7 +4479,7 @@ Cast Out Evil: Roll a D3 for each enemy WIZARD and PRIEST on the battlefield. On
             <profile id="4d8b-f0db-867b-4a2f" name="Shot and Shell" hidden="false" typeId="7861-da01-01c0-88d9" typeName="Ability">
               <characteristics>
                 <characteristic name="Use" typeId="9bce-4deb-8b79-eaec">Passive</characteristic>
-                <characteristic name="Declare" typeId="f9c7-7dae-69e1-f924"></characteristic>
+                <characteristic name="Declare" typeId="f9c7-7dae-69e1-f924"/>
                 <characteristic name="Effect" typeId="7d15-5e9e-83a9-d696">Each time this unit uses a SHOOT ability, if it is in a fortified position, pick either the Cannonball or Grapeshot weapon characteristics for all the attacks it makes with its Great Cannon. If it is not in a fortified position, use the Grapeshot weapon characteristics.</characteristic>
               </characteristics>
             </profile>

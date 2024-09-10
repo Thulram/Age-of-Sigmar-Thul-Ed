@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="c04f-85d8-0212-a0b8" name="Destruction - Orruk Warclans - Data" revision="21" battleScribeVersion="2.03" authorName="Thulram" library="true" gameSystemId="e832-3291-06be-cab1" gameSystemRevision="21" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="c04f-85d8-0212-a0b8" name="Destruction - Orruk Warclans - Data" revision="22" battleScribeVersion="2.03" authorName="Thulram" library="true" gameSystemId="e832-3291-06be-cab1" gameSystemRevision="22" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <categoryEntries>
     <categoryEntry id="8cc4-4950-a6d0-d820" name="RoR - Kruleboyz" hidden="false"/>
     <categoryEntry id="1e5b-5721-d5c9-967d" name="MAW-KRUSHA" hidden="false"/>
@@ -507,13 +507,6 @@ Until the end of the next turn, add 1 to the Attacks characteristic of this unit
       </costs>
     </selectionEntry>
     <selectionEntry id="a4ec-6dd2-9cb7-e606" name="Brutes" publicationId="9e65-0058-6ffe-24a5" hidden="false" collective="false" import="true" type="unit">
-      <modifiers>
-        <modifier type="increment" field="b0b4-6aec-82c2-02ae" value="200.0">
-          <conditions>
-            <condition field="selections" scope="a4ec-6dd2-9cb7-e606" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="d809-c4be-7a2a-bf8c" type="greaterThan"/>
-          </conditions>
-        </modifier>
-      </modifiers>
       <profiles>
         <profile id="bef0-7042-63e9-d287" name="Brutes" hidden="false" typeId="3956-f6dd-6c88-ae4b" typeName="Unit">
           <characteristics>
@@ -556,13 +549,6 @@ Until the end of the next turn, add 1 to the Attacks characteristic of this unit
       </categoryLinks>
       <selectionEntries>
         <selectionEntry id="0b7b-3886-9e91-c7e0" name="5 Brutes" hidden="false" collective="false" import="true" type="model">
-          <modifiers>
-            <modifier type="set" field="name" value="10 Brutes">
-              <conditions>
-                <condition field="selections" scope="a4ec-6dd2-9cb7-e606" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="d809-c4be-7a2a-bf8c" type="greaterThan"/>
-              </conditions>
-            </modifier>
-          </modifiers>
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="6e50-17e4-a214-bfc5" type="max"/>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="96fa-7301-39c3-1bec" type="min"/>
@@ -572,16 +558,6 @@ Until the end of the next turn, add 1 to the Attacks characteristic of this unit
           </costs>
         </selectionEntry>
         <selectionEntry id="b707-d513-98f6-a113" name="Gore-choppa" hidden="false" collective="false" import="true" type="upgrade">
-          <modifiers>
-            <modifier type="set" field="a1af-9655-0942-a95f" value="2.0">
-              <conditions>
-                <condition field="selections" scope="a4ec-6dd2-9cb7-e606" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="d809-c4be-7a2a-bf8c" type="greaterThan"/>
-              </conditions>
-            </modifier>
-          </modifiers>
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="a1af-9655-0942-a95f" type="max"/>
-          </constraints>
           <profiles>
             <profile id="efad-cb48-b9aa-0066" name="Gore-choppa" hidden="false" typeId="2905-f6bd-06e5-6642" typeName="Weapon">
               <characteristics>
@@ -625,20 +601,17 @@ Until the end of the next turn, add 1 to the Attacks characteristic of this unit
         </selectionEntry>
       </selectionEntries>
       <entryLinks>
-        <entryLink id="d809-c4be-7a2a-bf8c" name="Unit Reinforcement" hidden="false" collective="false" import="true" targetId="b493-d9e6-82ca-5488" type="selectionEntry"/>
+        <entryLink id="d809-c4be-7a2a-bf8c" name="Unit Reinforcement" hidden="false" collective="false" import="true" targetId="b493-d9e6-82ca-5488" type="selectionEntry">
+          <costs>
+            <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="200.0"/>
+          </costs>
+        </entryLink>
       </entryLinks>
       <costs>
         <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="200.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="e1f4-e969-497d-d38c" name="Gore-gruntas" publicationId="9e65-0058-6ffe-24a5" hidden="false" collective="false" import="true" type="unit">
-      <modifiers>
-        <modifier type="increment" field="b0b4-6aec-82c2-02ae" value="190.0">
-          <conditions>
-            <condition field="selections" scope="e1f4-e969-497d-d38c" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="d809-c4be-7a2a-bf8c" type="greaterThan"/>
-          </conditions>
-        </modifier>
-      </modifiers>
       <profiles>
         <profile id="3740-75da-e004-c376" name="Gore-gruntas" hidden="false" typeId="3956-f6dd-6c88-ae4b" typeName="Unit">
           <characteristics>
@@ -674,13 +647,6 @@ Until the end of the next turn, add 1 to the Attacks characteristic of this unit
       </categoryLinks>
       <selectionEntries>
         <selectionEntry id="f799-1de6-28b1-e700" name="3 Gore-gruntas" hidden="false" collective="false" import="true" type="model">
-          <modifiers>
-            <modifier type="set" field="name" value="6 Gore-gruntas">
-              <conditions>
-                <condition field="selections" scope="e1f4-e969-497d-d38c" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="d809-c4be-7a2a-bf8c" type="greaterThan"/>
-              </conditions>
-            </modifier>
-          </modifiers>
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="0197-7b7f-6065-2a61" type="max"/>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="466a-00a1-3ebf-1d94" type="min"/>
@@ -737,20 +703,17 @@ Until the end of the next turn, add 1 to the Attacks characteristic of this unit
         </selectionEntry>
       </selectionEntries>
       <entryLinks>
-        <entryLink id="7b87-0860-84c1-8280" name="Unit Reinforcement" hidden="false" collective="false" import="true" targetId="b493-d9e6-82ca-5488" type="selectionEntry"/>
+        <entryLink id="7b87-0860-84c1-8280" name="Unit Reinforcement" hidden="false" collective="false" import="true" targetId="b493-d9e6-82ca-5488" type="selectionEntry">
+          <costs>
+            <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="190.0"/>
+          </costs>
+        </entryLink>
       </entryLinks>
       <costs>
         <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="190.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="9899-9f4f-8dc9-a404" name="Ardboyz" publicationId="9e65-0058-6ffe-24a5" hidden="false" collective="false" import="true" type="unit">
-      <modifiers>
-        <modifier type="increment" field="b0b4-6aec-82c2-02ae" value="180.0">
-          <conditions>
-            <condition field="selections" scope="9899-9f4f-8dc9-a404" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="d809-c4be-7a2a-bf8c" type="greaterThan"/>
-          </conditions>
-        </modifier>
-      </modifiers>
       <profiles>
         <profile id="2c5b-679f-6194-7bec" name="Ardboyz" hidden="false" typeId="3956-f6dd-6c88-ae4b" typeName="Unit">
           <characteristics>
@@ -786,13 +749,6 @@ Until the end of the next turn, add 1 to the Attacks characteristic of this unit
       </categoryLinks>
       <selectionEntries>
         <selectionEntry id="9c0b-e797-4ab7-d4ba" name="10 Ardboyz" hidden="false" collective="false" import="true" type="model">
-          <modifiers>
-            <modifier type="set" field="name" value="20 Ardboyz">
-              <conditions>
-                <condition field="selections" scope="9899-9f4f-8dc9-a404" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="d809-c4be-7a2a-bf8c" type="greaterThan"/>
-              </conditions>
-            </modifier>
-          </modifiers>
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="3577-50bb-31d3-aba3" type="max"/>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="5b67-4478-15e0-7527" type="min"/>
@@ -826,7 +782,11 @@ Until the end of the next turn, add 1 to the Attacks characteristic of this unit
         </selectionEntry>
       </selectionEntries>
       <entryLinks>
-        <entryLink id="9aeb-4442-a403-e7d7" name="Unit Reinforcement" hidden="false" collective="false" import="true" targetId="b493-d9e6-82ca-5488" type="selectionEntry"/>
+        <entryLink id="9aeb-4442-a403-e7d7" name="Unit Reinforcement" hidden="false" collective="false" import="true" targetId="b493-d9e6-82ca-5488" type="selectionEntry">
+          <costs>
+            <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="180.0"/>
+          </costs>
+        </entryLink>
       </entryLinks>
       <costs>
         <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="180.0"/>
@@ -1170,13 +1130,6 @@ After resolving either effect, remove this unit’s Stab-grot from the battlefie
       </costs>
     </selectionEntry>
     <selectionEntry id="47d2-162d-a768-bd35" name="Man-skewer Boltboyz" hidden="false" collective="false" import="true" type="unit">
-      <modifiers>
-        <modifier type="increment" field="b0b4-6aec-82c2-02ae" value="110.0">
-          <conditions>
-            <condition field="selections" scope="47d2-162d-a768-bd35" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="d809-c4be-7a2a-bf8c" type="greaterThan"/>
-          </conditions>
-        </modifier>
-      </modifiers>
       <profiles>
         <profile id="74c8-51dd-1e4a-460d" name="Man-skewer Boltboyz" hidden="false" typeId="3956-f6dd-6c88-ae4b" typeName="Unit">
           <characteristics>
@@ -1254,13 +1207,6 @@ After resolving either effect, remove this unit’s Stab-grot from the battlefie
           </costs>
         </selectionEntry>
         <selectionEntry id="29fe-ed9e-1168-7dac" name="3 Man-skewer Boltboyz" hidden="false" collective="false" import="true" type="model">
-          <modifiers>
-            <modifier type="set" field="name" value="6 Man-skewer Boltboyz">
-              <conditions>
-                <condition field="selections" scope="47d2-162d-a768-bd35" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="d809-c4be-7a2a-bf8c" type="greaterThan"/>
-              </conditions>
-            </modifier>
-          </modifiers>
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="05e6-abb3-8e8f-9186" type="max"/>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="99db-ee8b-7380-56e5" type="min"/>
@@ -1294,20 +1240,17 @@ After resolving either effect, remove this unit’s Stab-grot from the battlefie
         </selectionEntry>
       </selectionEntries>
       <entryLinks>
-        <entryLink id="e6ae-0223-577e-5a3c" name="Unit Reinforcement" hidden="false" collective="false" import="true" targetId="b493-d9e6-82ca-5488" type="selectionEntry"/>
+        <entryLink id="e6ae-0223-577e-5a3c" name="Unit Reinforcement" hidden="false" collective="false" import="true" targetId="b493-d9e6-82ca-5488" type="selectionEntry">
+          <costs>
+            <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="110.0"/>
+          </costs>
+        </entryLink>
       </entryLinks>
       <costs>
         <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="110.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="0696-ffce-028b-6b1a" name="Hobgrot Slittaz" hidden="false" collective="false" import="true" type="unit">
-      <modifiers>
-        <modifier type="increment" field="b0b4-6aec-82c2-02ae" value="100.0">
-          <conditions>
-            <condition field="selections" scope="0696-ffce-028b-6b1a" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="d809-c4be-7a2a-bf8c" type="greaterThan"/>
-          </conditions>
-        </modifier>
-      </modifiers>
       <profiles>
         <profile id="fa35-1c0e-1eb1-695d" name="Hobgrot Slittaz" hidden="false" typeId="3956-f6dd-6c88-ae4b" typeName="Unit">
           <characteristics>
@@ -1380,13 +1323,6 @@ After resolving either effect, remove this unit’s Stab-grot from the battlefie
           </costs>
         </selectionEntry>
         <selectionEntry id="0161-08ff-b60c-1661" name="10 Hobgrot Slittaz" hidden="false" collective="false" import="true" type="model">
-          <modifiers>
-            <modifier type="set" field="name" value="20 Hobgrot Slittaz">
-              <conditions>
-                <condition field="selections" scope="0696-ffce-028b-6b1a" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="d809-c4be-7a2a-bf8c" type="greaterThan"/>
-              </conditions>
-            </modifier>
-          </modifiers>
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="2920-af8d-d4c7-6ce0" type="max"/>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="38a3-2fce-3406-4938" type="min"/>
@@ -1397,20 +1333,17 @@ After resolving either effect, remove this unit’s Stab-grot from the battlefie
         </selectionEntry>
       </selectionEntries>
       <entryLinks>
-        <entryLink id="b3ec-e35c-3361-c843" name="Unit Reinforcement" hidden="false" collective="false" import="true" targetId="b493-d9e6-82ca-5488" type="selectionEntry"/>
+        <entryLink id="b3ec-e35c-3361-c843" name="Unit Reinforcement" hidden="false" collective="false" import="true" targetId="b493-d9e6-82ca-5488" type="selectionEntry">
+          <costs>
+            <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="100.0"/>
+          </costs>
+        </entryLink>
       </entryLinks>
       <costs>
         <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="100.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="d6ba-3b0a-20d4-7720" name="Gutrippaz" hidden="false" collective="false" import="true" type="unit">
-      <modifiers>
-        <modifier type="increment" field="b0b4-6aec-82c2-02ae" value="170.0">
-          <conditions>
-            <condition field="selections" scope="d6ba-3b0a-20d4-7720" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="d809-c4be-7a2a-bf8c" type="greaterThan"/>
-          </conditions>
-        </modifier>
-      </modifiers>
       <profiles>
         <profile id="34a7-c866-3cbb-8b25" name="Gutrippaz" hidden="false" typeId="3956-f6dd-6c88-ae4b" typeName="Unit">
           <characteristics>
@@ -1446,13 +1379,6 @@ After resolving either effect, remove this unit’s Stab-grot from the battlefie
       </categoryLinks>
       <selectionEntries>
         <selectionEntry id="3eb1-6e71-d6d8-3e33" name="10 Gutrippaz" hidden="false" collective="false" import="true" type="model">
-          <modifiers>
-            <modifier type="set" field="name" value="20 Gutrippaz">
-              <conditions>
-                <condition field="selections" scope="d6ba-3b0a-20d4-7720" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="d809-c4be-7a2a-bf8c" type="greaterThan"/>
-              </conditions>
-            </modifier>
-          </modifiers>
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="fb1a-0162-6a25-1034" type="max"/>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="afac-71c1-e9a1-bc44" type="min"/>
@@ -1486,7 +1412,11 @@ After resolving either effect, remove this unit’s Stab-grot from the battlefie
         </selectionEntry>
       </selectionEntries>
       <entryLinks>
-        <entryLink id="fbab-93f4-55b4-c6e8" name="Unit Reinforcement" hidden="false" collective="false" import="true" targetId="b493-d9e6-82ca-5488" type="selectionEntry"/>
+        <entryLink id="fbab-93f4-55b4-c6e8" name="Unit Reinforcement" hidden="false" collective="false" import="true" targetId="b493-d9e6-82ca-5488" type="selectionEntry">
+          <costs>
+            <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="170.0"/>
+          </costs>
+        </entryLink>
       </entryLinks>
       <costs>
         <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="170.0"/>
@@ -2734,13 +2664,6 @@ If you make an unmodified save roll of 1 for this unit, remove this unit’s Klo
       </costs>
     </selectionEntry>
     <selectionEntry id="e54c-4bca-098e-c9bb" name="Brute Ragerz" hidden="false" collective="false" import="true" type="unit">
-      <modifiers>
-        <modifier type="increment" field="b0b4-6aec-82c2-02ae" value="140.0">
-          <conditions>
-            <condition field="selections" scope="e54c-4bca-098e-c9bb" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="d809-c4be-7a2a-bf8c" type="greaterThan"/>
-          </conditions>
-        </modifier>
-      </modifiers>
       <profiles>
         <profile id="db9a-b652-d3bc-7a64" name="Brute Ragerz" hidden="false" typeId="3956-f6dd-6c88-ae4b" typeName="Unit">
           <characteristics>
@@ -2784,13 +2707,6 @@ If you make an unmodified save roll of 1 for this unit, remove this unit’s Klo
       </categoryLinks>
       <selectionEntries>
         <selectionEntry id="731d-6207-b40b-7758" name="3 Brute Ragerz" hidden="false" collective="false" import="true" type="model">
-          <modifiers>
-            <modifier type="set" field="name" value="6 Brute Ragerz">
-              <conditions>
-                <condition field="selections" scope="e54c-4bca-098e-c9bb" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="d809-c4be-7a2a-bf8c" type="greaterThan"/>
-              </conditions>
-            </modifier>
-          </modifiers>
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="35fe-36ca-954d-6c69" type="max"/>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="4785-c83e-a933-268a" type="min"/>
@@ -2824,20 +2740,17 @@ If you make an unmodified save roll of 1 for this unit, remove this unit’s Klo
         </selectionEntry>
       </selectionEntries>
       <entryLinks>
-        <entryLink id="e157-e9fe-cdeb-66cf" name="Unit Reinforcement" hidden="false" collective="false" import="true" targetId="b493-d9e6-82ca-5488" type="selectionEntry"/>
+        <entryLink id="e157-e9fe-cdeb-66cf" name="Unit Reinforcement" hidden="false" collective="false" import="true" targetId="b493-d9e6-82ca-5488" type="selectionEntry">
+          <costs>
+            <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="140.0"/>
+          </costs>
+        </entryLink>
       </entryLinks>
       <costs>
         <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="140.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="6162-3a5c-7598-9ad2" name="Weirdbrute Wrekkaz" hidden="false" collective="false" import="true" type="unit">
-      <modifiers>
-        <modifier type="increment" field="b0b4-6aec-82c2-02ae" value="130.0">
-          <conditions>
-            <condition field="selections" scope="6162-3a5c-7598-9ad2" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="d809-c4be-7a2a-bf8c" type="greaterThan"/>
-          </conditions>
-        </modifier>
-      </modifiers>
       <profiles>
         <profile id="df30-0d95-7529-bc9d" name="Weirdbrute Wrekkaz" hidden="false" typeId="3956-f6dd-6c88-ae4b" typeName="Unit">
           <characteristics>
@@ -2874,13 +2787,6 @@ If you make an unmodified save roll of 1 for this unit, remove this unit’s Klo
       </categoryLinks>
       <selectionEntries>
         <selectionEntry id="20c5-0f2d-eb72-ffa3" name="3 Weirdbrute Wrekkaz" hidden="false" collective="false" import="true" type="model">
-          <modifiers>
-            <modifier type="set" field="name" value="6 Weirdbrute Wrekkaz">
-              <conditions>
-                <condition field="selections" scope="6162-3a5c-7598-9ad2" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="d809-c4be-7a2a-bf8c" type="greaterThan"/>
-              </conditions>
-            </modifier>
-          </modifiers>
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="ff43-e4fc-8046-6ba8" type="max"/>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8e7f-826d-d524-88a1" type="min"/>
@@ -2914,7 +2820,11 @@ If you make an unmodified save roll of 1 for this unit, remove this unit’s Klo
         </selectionEntry>
       </selectionEntries>
       <entryLinks>
-        <entryLink id="cc6e-4200-4cac-ff81" name="Unit Reinforcement" hidden="false" collective="false" import="true" targetId="b493-d9e6-82ca-5488" type="selectionEntry"/>
+        <entryLink id="cc6e-4200-4cac-ff81" name="Unit Reinforcement" hidden="false" collective="false" import="true" targetId="b493-d9e6-82ca-5488" type="selectionEntry">
+          <costs>
+            <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="130.0"/>
+          </costs>
+        </entryLink>
       </entryLinks>
       <costs>
         <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="130.0"/>
@@ -3185,6 +3095,856 @@ Then, pick each enemy unit that this unit passed across during that move to be t
       </selectionEntries>
       <costs>
         <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="270.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="8f81-9e9e-d717-bc5a" name="Wurrgog Prophet" hidden="false" collective="false" import="true" type="unit">
+      <profiles>
+        <profile id="3d76-c3a3-8e58-55db" name="Wurrgog Prophet" hidden="false" typeId="3956-f6dd-6c88-ae4b" typeName="Unit">
+          <characteristics>
+            <characteristic name="Move" typeId="5bbe-8910-4dfa-7b1c">5&quot;</characteristic>
+            <characteristic name="Health" typeId="a0c6-af64-2f24-5759">6</characteristic>
+            <characteristic name="Save" typeId="93b6-2f96-2df7-e330">6+</characteristic>
+            <characteristic name="Control" typeId="2420-1c5c-1016-7033">2</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="0a36-767f-b7bf-184b" name="Wurrgog Prophet" hidden="false" typeId="c23b-5a30-07e2-4706" typeName="Warscroll Extras">
+          <characteristics>
+            <characteristic name="WIZARD" typeId="67b3-6f8b-2116-2a27">2</characteristic>
+            <characteristic name="PRIEST" typeId="02ab-4d58-5c31-767e">-</characteristic>
+            <characteristic name="WARD" typeId="40a4-4432-32da-74d9">6+</characteristic>
+            <characteristic name="CHAMPION" typeId="dccd-b70a-d225-5e37">-</characteristic>
+            <characteristic name="MUSICIAN" typeId="053d-5038-d84a-3aa3">-</characteristic>
+            <characteristic name="STANDARD BEARER" typeId="ccb7-3ee4-5637-586e">-</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="dfe1-2af4-90f9-2393" name="Squiggly Curse (4) [UNLIMITED]" hidden="false" typeId="13da-11a8-b7d1-77a7" typeName="SPELL">
+          <characteristics>
+            <characteristic name="Declare" typeId="1170-c916-1b73-ae34">Pick an enemy HERO in combat with the caster to be the target, then make a casting roll of 2D6.</characteristic>
+            <characteristic name="Effect" typeId="9b2f-8599-7c10-31bd">Inflict D3 mortal damage on the target. If the target is destroyed by this spell, add 1 to this unit’s power level for the rest of the battle.</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="0cda-af6c-4faa-2113" name="Wurrgog Mask" hidden="false" typeId="7861-da01-01c0-88d9" typeName="Ability">
+          <characteristics>
+            <characteristic name="Use" typeId="9bce-4deb-8b79-eaec">Once Per Battle (Army), Your Shooting Phase</characteristic>
+            <characteristic name="Declare" typeId="f9c7-7dae-69e1-f924">-</characteristic>
+            <characteristic name="Effect" typeId="7d15-5e9e-83a9-d696">For the rest of the turn:
+
+• The Attacks characteristic of this unit’s Deadly Green Bolts is 12 instead of D6.
+• For each unmodified hit roll of 1 for a shooting attack made by this unit, inflict D3 mortal damage on this unit after the SHOOT ability has been resolved.</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <categoryLinks>
+        <categoryLink id="c542-3d42-db84-8fd1" name="DESTRUCTION" hidden="false" targetId="5d33-469f-2bda-51f9" primary="false"/>
+        <categoryLink id="7ff1-5def-01c0-b86e" name="BONESPLITTERZ" hidden="false" targetId="858d-9c79-fe92-649f" primary="false"/>
+        <categoryLink id="f70a-7c16-45b6-66b4" name="New CategoryLink" hidden="false" targetId="411f-dd41-4ab6-8a05" primary="true"/>
+        <categoryLink id="9286-f8ca-271a-4533" name="INFANTRY" hidden="false" targetId="25bf-7a1c-60fc-7e12" primary="false"/>
+      </categoryLinks>
+      <selectionEntries>
+        <selectionEntry id="f6fd-e3d5-9a8f-3540" name="Wurrgog Staff" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="077a-e9af-ee30-8ead" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="eb52-ee12-578f-20dc" type="min"/>
+          </constraints>
+          <profiles>
+            <profile id="0c81-dab8-702d-1f07" name="Wurrgog Staff" hidden="false" typeId="2905-f6bd-06e5-6642" typeName="Weapon">
+              <characteristics>
+                <characteristic name="Type" typeId="1a08-195b-76fd-2c2b">Melee</characteristic>
+                <characteristic name="Range" typeId="1406-f935-3f8e-b27f">-</characteristic>
+                <characteristic name="Attacks" typeId="4c19-dba6-f094-5165">4</characteristic>
+                <characteristic name="To-Hit" typeId="7a4f-9704-2095-96c8">4+</characteristic>
+                <characteristic name="To-Wound" typeId="172f-fc84-895b-04b7">3+</characteristic>
+                <characteristic name="Rend" typeId="0c05-bd2e-b7e7-3925">-</characteristic>
+                <characteristic name="Damage" typeId="01c2-d16a-8788-e52b">D3</characteristic>
+                <characteristic name="Ability" typeId="0a53-8ba4-d02a-fc50">-</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <costs>
+            <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="681d-c04e-0231-f9a5" name="Deadly Green Bolts" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="3a7b-31a7-644d-d7d8" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="fbaa-2ba0-c408-e306" type="min"/>
+          </constraints>
+          <profiles>
+            <profile id="dadd-5c63-fcc6-9568" name="Deadly Green Bolts" hidden="false" typeId="2905-f6bd-06e5-6642" typeName="Weapon">
+              <characteristics>
+                <characteristic name="Type" typeId="1a08-195b-76fd-2c2b">Missile</characteristic>
+                <characteristic name="Range" typeId="1406-f935-3f8e-b27f">10&quot;</characteristic>
+                <characteristic name="Attacks" typeId="4c19-dba6-f094-5165">D6</characteristic>
+                <characteristic name="To-Hit" typeId="7a4f-9704-2095-96c8">4+</characteristic>
+                <characteristic name="To-Wound" typeId="172f-fc84-895b-04b7">2+</characteristic>
+                <characteristic name="Rend" typeId="0c05-bd2e-b7e7-3925">1</characteristic>
+                <characteristic name="Damage" typeId="01c2-d16a-8788-e52b">D3</characteristic>
+                <characteristic name="Ability" typeId="0a53-8ba4-d02a-fc50">Shoot in Combat</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <costs>
+            <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
+          </costs>
+        </selectionEntry>
+      </selectionEntries>
+      <costs>
+        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="160.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="0631-05d5-0da0-4a3a" name="Savage Big Boss" hidden="false" collective="false" import="true" type="unit">
+      <profiles>
+        <profile id="8135-da96-297e-709e" name="Savage Big Boss" hidden="false" typeId="3956-f6dd-6c88-ae4b" typeName="Unit">
+          <characteristics>
+            <characteristic name="Move" typeId="5bbe-8910-4dfa-7b1c">5&quot;</characteristic>
+            <characteristic name="Health" typeId="a0c6-af64-2f24-5759">6</characteristic>
+            <characteristic name="Save" typeId="93b6-2f96-2df7-e330">6+</characteristic>
+            <characteristic name="Control" typeId="2420-1c5c-1016-7033">2</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="81dc-cfd2-d325-fb8c" name="Savage Big Boss" hidden="false" typeId="c23b-5a30-07e2-4706" typeName="Warscroll Extras">
+          <characteristics>
+            <characteristic name="WIZARD" typeId="67b3-6f8b-2116-2a27">-</characteristic>
+            <characteristic name="PRIEST" typeId="02ab-4d58-5c31-767e">-</characteristic>
+            <characteristic name="WARD" typeId="40a4-4432-32da-74d9">6+</characteristic>
+            <characteristic name="CHAMPION" typeId="dccd-b70a-d225-5e37">-</characteristic>
+            <characteristic name="MUSICIAN" typeId="053d-5038-d84a-3aa3">-</characteristic>
+            <characteristic name="STANDARD BEARER" typeId="ccb7-3ee4-5637-586e">-</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="2f15-c9bc-3bb9-27e5" name="Havin&apos; a Good Old Ruck" hidden="false" typeId="7861-da01-01c0-88d9" typeName="Ability">
+          <characteristics>
+            <characteristic name="Use" typeId="9bce-4deb-8b79-eaec">Reaction: You declared a FIGHT ability for this unit</characteristic>
+            <characteristic name="Declare" typeId="f9c7-7dae-69e1-f924">-</characteristic>
+            <characteristic name="Effect" typeId="7d15-5e9e-83a9-d696">Pick a friendly non-HERO BONESPLITTERZ INFANTRY unit that has not used a FIGHT ability this turn and is within this unit’s combat range to be the target. The target can be picked to use a FIGHT ability immediately after the FIGHT ability used by this unit has been resolved. If it is picked to do so, add 1 to the Attacks characteristic of the target’s melee weapons for the rest of the turn.</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <categoryLinks>
+        <categoryLink id="564b-9f0c-25b1-3459" name="BONESPLITTERZ" hidden="false" targetId="858d-9c79-fe92-649f" primary="false"/>
+        <categoryLink id="af1e-2faa-c723-5a66" name="DESTRUCTION" hidden="false" targetId="5d33-469f-2bda-51f9" primary="false"/>
+        <categoryLink id="1b33-2b03-248b-5852" name="New CategoryLink" hidden="false" targetId="411f-dd41-4ab6-8a05" primary="true"/>
+        <categoryLink id="3f2e-ab52-34e7-5525" name="INFANTRY" hidden="false" targetId="25bf-7a1c-60fc-7e12" primary="false"/>
+      </categoryLinks>
+      <selectionEntries>
+        <selectionEntry id="5f86-626a-a53a-fdbc" name="Boss Chompa" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="0b1b-c315-d215-3335" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="876f-00b4-4614-679b" type="min"/>
+          </constraints>
+          <profiles>
+            <profile id="b9d4-33a6-6d4d-46c4" name="Boss Chompa" hidden="false" typeId="2905-f6bd-06e5-6642" typeName="Weapon">
+              <characteristics>
+                <characteristic name="Type" typeId="1a08-195b-76fd-2c2b">Melee</characteristic>
+                <characteristic name="Range" typeId="1406-f935-3f8e-b27f">-</characteristic>
+                <characteristic name="Attacks" typeId="4c19-dba6-f094-5165">6</characteristic>
+                <characteristic name="To-Hit" typeId="7a4f-9704-2095-96c8">4+</characteristic>
+                <characteristic name="To-Wound" typeId="172f-fc84-895b-04b7">3+</characteristic>
+                <characteristic name="Rend" typeId="0c05-bd2e-b7e7-3925">1</characteristic>
+                <characteristic name="Damage" typeId="01c2-d16a-8788-e52b">3</characteristic>
+                <characteristic name="Ability" typeId="0a53-8ba4-d02a-fc50">Anti-MONSTER (+1 Rend)</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <costs>
+            <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
+          </costs>
+        </selectionEntry>
+      </selectionEntries>
+      <costs>
+        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="130.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="b208-7565-ccf3-f43d" name="Maniak Weirdnob" hidden="false" collective="false" import="true" type="unit">
+      <profiles>
+        <profile id="ab26-de3d-fbeb-f130" name="Maniak Weirdnob" hidden="false" typeId="3956-f6dd-6c88-ae4b" typeName="Unit">
+          <characteristics>
+            <characteristic name="Move" typeId="5bbe-8910-4dfa-7b1c">10&quot;</characteristic>
+            <characteristic name="Health" typeId="a0c6-af64-2f24-5759">6</characteristic>
+            <characteristic name="Save" typeId="93b6-2f96-2df7-e330">5+</characteristic>
+            <characteristic name="Control" typeId="2420-1c5c-1016-7033">2</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="385c-73ef-5c2f-ef5f" name="Maniak Weirdnob" hidden="false" typeId="c23b-5a30-07e2-4706" typeName="Warscroll Extras">
+          <characteristics>
+            <characteristic name="WIZARD" typeId="67b3-6f8b-2116-2a27">1</characteristic>
+            <characteristic name="PRIEST" typeId="02ab-4d58-5c31-767e">-</characteristic>
+            <characteristic name="WARD" typeId="40a4-4432-32da-74d9">6+</characteristic>
+            <characteristic name="CHAMPION" typeId="dccd-b70a-d225-5e37">-</characteristic>
+            <characteristic name="MUSICIAN" typeId="053d-5038-d84a-3aa3">-</characteristic>
+            <characteristic name="STANDARD BEARER" typeId="ccb7-3ee4-5637-586e">-</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="92fc-db73-5c41-9aa9" name="Bone Spirit" hidden="false" typeId="7861-da01-01c0-88d9" typeName="Ability">
+          <characteristics>
+            <characteristic name="Use" typeId="9bce-4deb-8b79-eaec">Once Per Turn (Army), Any Combat Phase</characteristic>
+            <characteristic name="Declare" typeId="f9c7-7dae-69e1-f924">Pick a friendly BONESPLITTERZ CAVALRY unit within this unit’s combat range to be the target.</characteristic>
+            <characteristic name="Effect" typeId="7d15-5e9e-83a9-d696">Roll a dice. On a 3+, add 1 to wound rolls for the target’s combat attacks for the rest of the turn. This ability also affects Companion weapons.</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <categoryLinks>
+        <categoryLink id="ef37-c1b1-c0bc-0418" name="DESTRUCTION" hidden="false" targetId="5d33-469f-2bda-51f9" primary="false"/>
+        <categoryLink id="963c-fa2e-a61a-0810" name="BONESPLITTERZ" hidden="false" targetId="858d-9c79-fe92-649f" primary="false"/>
+        <categoryLink id="b8c6-5179-262f-47cf" name="New CategoryLink" hidden="false" targetId="411f-dd41-4ab6-8a05" primary="true"/>
+        <categoryLink id="b363-4088-288d-f5e8" name="CAVALRY" hidden="false" targetId="8b21-f02a-6da1-3cf6" primary="false"/>
+      </categoryLinks>
+      <selectionEntries>
+        <selectionEntry id="52f8-46c3-0f30-933f" name="Bonebeast Staff" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="2968-04cd-dfc3-588c" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="a22c-b06b-ca8e-16f6" type="min"/>
+          </constraints>
+          <profiles>
+            <profile id="a685-131f-074e-cd0e" name="Wurrgog Staff" hidden="false" typeId="2905-f6bd-06e5-6642" typeName="Weapon">
+              <characteristics>
+                <characteristic name="Type" typeId="1a08-195b-76fd-2c2b">Melee</characteristic>
+                <characteristic name="Range" typeId="1406-f935-3f8e-b27f">-</characteristic>
+                <characteristic name="Attacks" typeId="4c19-dba6-f094-5165">3</characteristic>
+                <characteristic name="To-Hit" typeId="7a4f-9704-2095-96c8">4+</characteristic>
+                <characteristic name="To-Wound" typeId="172f-fc84-895b-04b7">3+</characteristic>
+                <characteristic name="Rend" typeId="0c05-bd2e-b7e7-3925">-</characteristic>
+                <characteristic name="Damage" typeId="01c2-d16a-8788-e52b">D3</characteristic>
+                <characteristic name="Ability" typeId="0a53-8ba4-d02a-fc50">-</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <costs>
+            <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="79e2-2074-0200-25d5" name="War Boar&apos;s Tusks and Hooves" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="386a-9482-cc62-d566" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="044b-ba29-4f67-ef3a" type="min"/>
+          </constraints>
+          <profiles>
+            <profile id="dccd-955b-dfd4-a604" name="War Boar&apos;s Tusks and Hooves" hidden="false" typeId="2905-f6bd-06e5-6642" typeName="Weapon">
+              <characteristics>
+                <characteristic name="Type" typeId="1a08-195b-76fd-2c2b">Melee</characteristic>
+                <characteristic name="Range" typeId="1406-f935-3f8e-b27f">-</characteristic>
+                <characteristic name="Attacks" typeId="4c19-dba6-f094-5165">2</characteristic>
+                <characteristic name="To-Hit" typeId="7a4f-9704-2095-96c8">5+</characteristic>
+                <characteristic name="To-Wound" typeId="172f-fc84-895b-04b7">3+</characteristic>
+                <characteristic name="Rend" typeId="0c05-bd2e-b7e7-3925">-</characteristic>
+                <characteristic name="Damage" typeId="01c2-d16a-8788-e52b">1</characteristic>
+                <characteristic name="Ability" typeId="0a53-8ba4-d02a-fc50">Charge (+1 Damage), Companion</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <costs>
+            <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
+          </costs>
+        </selectionEntry>
+      </selectionEntries>
+      <costs>
+        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="160.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="b024-ba65-8714-0885" name="Wardokk" hidden="false" collective="false" import="true" type="unit">
+      <profiles>
+        <profile id="56c8-8c07-6387-9159" name="Wardokk" hidden="false" typeId="3956-f6dd-6c88-ae4b" typeName="Unit">
+          <characteristics>
+            <characteristic name="Move" typeId="5bbe-8910-4dfa-7b1c">5&quot;</characteristic>
+            <characteristic name="Health" typeId="a0c6-af64-2f24-5759">5</characteristic>
+            <characteristic name="Save" typeId="93b6-2f96-2df7-e330">6+</characteristic>
+            <characteristic name="Control" typeId="2420-1c5c-1016-7033">2</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="a1bc-4ba1-69e7-c849" name="Wardokk" hidden="false" typeId="c23b-5a30-07e2-4706" typeName="Warscroll Extras">
+          <characteristics>
+            <characteristic name="WIZARD" typeId="67b3-6f8b-2116-2a27">-</characteristic>
+            <characteristic name="PRIEST" typeId="02ab-4d58-5c31-767e">1</characteristic>
+            <characteristic name="WARD" typeId="40a4-4432-32da-74d9">6+</characteristic>
+            <characteristic name="CHAMPION" typeId="dccd-b70a-d225-5e37">-</characteristic>
+            <characteristic name="MUSICIAN" typeId="053d-5038-d84a-3aa3">-</characteristic>
+            <characteristic name="STANDARD BEARER" typeId="ccb7-3ee4-5637-586e">-</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="57d0-d815-05fd-1258" name="Primal Hex" hidden="false" typeId="7861-da01-01c0-88d9" typeName="Ability">
+          <characteristics>
+            <characteristic name="Use" typeId="9bce-4deb-8b79-eaec">Once Per Turn (Army), Your Hero Phase</characteristic>
+            <characteristic name="Declare" typeId="f9c7-7dae-69e1-f924">Pick an enemy WIZARD within 24&quot; of this unit to be the target.</characteristic>
+            <characteristic name="Effect" typeId="7d15-5e9e-83a9-d696">Roll a dice. On a 3+, until the start of your next turn, each time the target uses a SPELL or UNBIND ability, this unit gains 1 ritual point.</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <categoryLinks>
+        <categoryLink id="25a8-5928-12c9-5584" name="BONESPLITTERZ" hidden="false" targetId="858d-9c79-fe92-649f" primary="false"/>
+        <categoryLink id="0ba6-49e9-49fd-971e" name="DESTRUCTION" hidden="false" targetId="5d33-469f-2bda-51f9" primary="false"/>
+        <categoryLink id="ce6c-9b0d-e3b5-039a" name="New CategoryLink" hidden="false" targetId="411f-dd41-4ab6-8a05" primary="true"/>
+        <categoryLink id="8174-eb77-c310-364a" name="INFANTRY" hidden="false" targetId="25bf-7a1c-60fc-7e12" primary="false"/>
+      </categoryLinks>
+      <selectionEntries>
+        <selectionEntry id="5288-dad9-053b-56c5" name="Bonebeast Stikk" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="30c7-16ba-56bf-eb6c" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="2448-4a45-e21d-8c5c" type="min"/>
+          </constraints>
+          <profiles>
+            <profile id="72cd-f688-4bc3-9b09" name="Bonebeast Stikk" hidden="false" typeId="2905-f6bd-06e5-6642" typeName="Weapon">
+              <characteristics>
+                <characteristic name="Type" typeId="1a08-195b-76fd-2c2b">Melee</characteristic>
+                <characteristic name="Range" typeId="1406-f935-3f8e-b27f">-</characteristic>
+                <characteristic name="Attacks" typeId="4c19-dba6-f094-5165">3</characteristic>
+                <characteristic name="To-Hit" typeId="7a4f-9704-2095-96c8">4+</characteristic>
+                <characteristic name="To-Wound" typeId="172f-fc84-895b-04b7">3+</characteristic>
+                <characteristic name="Rend" typeId="0c05-bd2e-b7e7-3925">-</characteristic>
+                <characteristic name="Damage" typeId="01c2-d16a-8788-e52b">D3</characteristic>
+                <characteristic name="Ability" typeId="0a53-8ba4-d02a-fc50">-</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <costs>
+            <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
+          </costs>
+        </selectionEntry>
+      </selectionEntries>
+      <costs>
+        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="100.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="6c74-2844-15e2-e83b" name="Savage Orruks" hidden="false" collective="false" import="true" type="unit">
+      <profiles>
+        <profile id="bb56-e677-50c2-82e7" name="Savage Orruks" hidden="false" typeId="3956-f6dd-6c88-ae4b" typeName="Unit">
+          <characteristics>
+            <characteristic name="Move" typeId="5bbe-8910-4dfa-7b1c">5&quot;</characteristic>
+            <characteristic name="Health" typeId="a0c6-af64-2f24-5759">2</characteristic>
+            <characteristic name="Save" typeId="93b6-2f96-2df7-e330">5+</characteristic>
+            <characteristic name="Control" typeId="2420-1c5c-1016-7033">1</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="0079-62ac-8387-53f4" name="Savage Orruks" hidden="false" typeId="c23b-5a30-07e2-4706" typeName="Warscroll Extras">
+          <characteristics>
+            <characteristic name="WIZARD" typeId="67b3-6f8b-2116-2a27">-</characteristic>
+            <characteristic name="PRIEST" typeId="02ab-4d58-5c31-767e">-</characteristic>
+            <characteristic name="WARD" typeId="40a4-4432-32da-74d9">6+</characteristic>
+            <characteristic name="CHAMPION" typeId="dccd-b70a-d225-5e37">Yes</characteristic>
+            <characteristic name="MUSICIAN" typeId="053d-5038-d84a-3aa3">1/10</characteristic>
+            <characteristic name="STANDARD BEARER" typeId="ccb7-3ee4-5637-586e">1/10</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="c8e0-2f8d-2bc5-fe79" name="The Savage Hordes" hidden="false" typeId="7861-da01-01c0-88d9" typeName="Ability">
+          <characteristics>
+            <characteristic name="Use" typeId="9bce-4deb-8b79-eaec">Passive</characteristic>
+            <characteristic name="Declare" typeId="f9c7-7dae-69e1-f924">-</characteristic>
+            <characteristic name="Effect" typeId="7d15-5e9e-83a9-d696">Add 10 to this unit’s control score while it is in combat with any enemy units that charged this turn.</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <categoryLinks>
+        <categoryLink id="bf17-53b4-0b85-973b" name="BONESPLITTERZ" hidden="false" targetId="858d-9c79-fe92-649f" primary="false"/>
+        <categoryLink id="eac7-7a81-510c-591c" name="DESTRUCTION" hidden="false" targetId="5d33-469f-2bda-51f9" primary="false"/>
+        <categoryLink id="3ae9-5e34-51b0-4960" name="INFANTRY" hidden="false" targetId="25bf-7a1c-60fc-7e12" primary="false"/>
+        <categoryLink id="f94f-6ede-99f1-b4e5" name="New CategoryLink" hidden="false" targetId="6230-ed60-e374-add4" primary="true"/>
+      </categoryLinks>
+      <selectionEntries>
+        <selectionEntry id="485f-837e-6df2-0885" name="10 Savage Orruks" hidden="false" collective="false" import="true" type="model">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="b210-2da0-7d58-2542" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="68e1-ac63-ec37-af64" type="min"/>
+          </constraints>
+          <costs>
+            <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="009c-824b-3658-5c00" name="Savage Weapons" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="f4ae-6e19-6ff8-3834" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="3b75-c65e-9124-ce04" type="min"/>
+          </constraints>
+          <profiles>
+            <profile id="1a08-f47d-52a5-1f22" name="Savage Weapons" hidden="false" typeId="2905-f6bd-06e5-6642" typeName="Weapon">
+              <characteristics>
+                <characteristic name="Type" typeId="1a08-195b-76fd-2c2b">Melee</characteristic>
+                <characteristic name="Range" typeId="1406-f935-3f8e-b27f">-</characteristic>
+                <characteristic name="Attacks" typeId="4c19-dba6-f094-5165">2</characteristic>
+                <characteristic name="To-Hit" typeId="7a4f-9704-2095-96c8">4+</characteristic>
+                <characteristic name="To-Wound" typeId="172f-fc84-895b-04b7">3+</characteristic>
+                <characteristic name="Rend" typeId="0c05-bd2e-b7e7-3925">-</characteristic>
+                <characteristic name="Damage" typeId="01c2-d16a-8788-e52b">1</characteristic>
+                <characteristic name="Ability" typeId="0a53-8ba4-d02a-fc50">-</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <costs>
+            <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
+          </costs>
+        </selectionEntry>
+      </selectionEntries>
+      <entryLinks>
+        <entryLink id="df7f-d331-cf65-7fb1" name="Unit Reinforcement" hidden="false" collective="false" import="true" targetId="b493-d9e6-82ca-5488" type="selectionEntry">
+          <costs>
+            <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="140.0"/>
+          </costs>
+        </entryLink>
+      </entryLinks>
+      <costs>
+        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="140.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="2326-cf3f-08a1-68b3" name="Savage Boarboys" hidden="false" collective="false" import="true" type="unit">
+      <profiles>
+        <profile id="2c4d-b414-b27f-d102" name="Savage Boarboys" hidden="false" typeId="3956-f6dd-6c88-ae4b" typeName="Unit">
+          <characteristics>
+            <characteristic name="Move" typeId="5bbe-8910-4dfa-7b1c">10&quot;</characteristic>
+            <characteristic name="Health" typeId="a0c6-af64-2f24-5759">3</characteristic>
+            <characteristic name="Save" typeId="93b6-2f96-2df7-e330">5+</characteristic>
+            <characteristic name="Control" typeId="2420-1c5c-1016-7033">1</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="541e-9771-fe29-5ff5" name="Savage Boarboys" hidden="false" typeId="c23b-5a30-07e2-4706" typeName="Warscroll Extras">
+          <characteristics>
+            <characteristic name="WIZARD" typeId="67b3-6f8b-2116-2a27">-</characteristic>
+            <characteristic name="PRIEST" typeId="02ab-4d58-5c31-767e">-</characteristic>
+            <characteristic name="WARD" typeId="40a4-4432-32da-74d9">6+</characteristic>
+            <characteristic name="CHAMPION" typeId="dccd-b70a-d225-5e37">Yes</characteristic>
+            <characteristic name="MUSICIAN" typeId="053d-5038-d84a-3aa3">1/5</characteristic>
+            <characteristic name="STANDARD BEARER" typeId="ccb7-3ee4-5637-586e">1/5</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="7329-6acd-c033-25f5" name="Wild Enthusiasm" hidden="false" typeId="7861-da01-01c0-88d9" typeName="Ability">
+          <characteristics>
+            <characteristic name="Use" typeId="9bce-4deb-8b79-eaec">Passive</characteristic>
+            <characteristic name="Declare" typeId="f9c7-7dae-69e1-f924">-</characteristic>
+            <characteristic name="Effect" typeId="7d15-5e9e-83a9-d696">This unit can use the ‘Power Through’ command even if it has not charged this turn. In addition, when you pick a target for that command, the target does not have to have a lower Health characteristic than this unit.</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <categoryLinks>
+        <categoryLink id="0201-a2b2-c13a-d07f" name="BONESPLITTERZ" hidden="false" targetId="858d-9c79-fe92-649f" primary="false"/>
+        <categoryLink id="cf31-cd58-d3e0-0cf0" name="DESTRUCTION" hidden="false" targetId="5d33-469f-2bda-51f9" primary="false"/>
+        <categoryLink id="3f00-1083-a651-b967" name="New CategoryLink" hidden="false" targetId="6230-ed60-e374-add4" primary="true"/>
+        <categoryLink id="b7bd-9604-7cab-574c" name="CAVALRY" hidden="false" targetId="8b21-f02a-6da1-3cf6" primary="false"/>
+      </categoryLinks>
+      <selectionEntries>
+        <selectionEntry id="632b-cae5-85b1-576e" name="5 Savage Boarboys" hidden="false" collective="false" import="true" type="model">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="7ca9-7ae6-b749-e155" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="cda4-861f-b816-f9c3" type="min"/>
+          </constraints>
+          <costs>
+            <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="c959-026a-2342-c2c3" name="Boarboy Weapons" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8699-e45c-d020-8b5e" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="6f59-45a9-5fad-cf7e" type="min"/>
+          </constraints>
+          <profiles>
+            <profile id="bb06-adbb-0c72-4d96" name="Boarboy Weapons" hidden="false" typeId="2905-f6bd-06e5-6642" typeName="Weapon">
+              <characteristics>
+                <characteristic name="Type" typeId="1a08-195b-76fd-2c2b">Melee</characteristic>
+                <characteristic name="Range" typeId="1406-f935-3f8e-b27f">-</characteristic>
+                <characteristic name="Attacks" typeId="4c19-dba6-f094-5165">3</characteristic>
+                <characteristic name="To-Hit" typeId="7a4f-9704-2095-96c8">4+</characteristic>
+                <characteristic name="To-Wound" typeId="172f-fc84-895b-04b7">3+</characteristic>
+                <characteristic name="Rend" typeId="0c05-bd2e-b7e7-3925">1</characteristic>
+                <characteristic name="Damage" typeId="01c2-d16a-8788-e52b">1</characteristic>
+                <characteristic name="Ability" typeId="0a53-8ba4-d02a-fc50">-</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <costs>
+            <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="2951-fcf1-a65c-a903" name="War Boar&apos;s Tusks and Hooves" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="fa41-e8e5-daaa-d780" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="1941-a08c-d5ec-7138" type="min"/>
+          </constraints>
+          <profiles>
+            <profile id="a8b1-9fc2-f19e-9a79" name="War Boar&apos;s Tusks and Hooves" hidden="false" typeId="2905-f6bd-06e5-6642" typeName="Weapon">
+              <characteristics>
+                <characteristic name="Type" typeId="1a08-195b-76fd-2c2b">Melee</characteristic>
+                <characteristic name="Range" typeId="1406-f935-3f8e-b27f">-</characteristic>
+                <characteristic name="Attacks" typeId="4c19-dba6-f094-5165">2</characteristic>
+                <characteristic name="To-Hit" typeId="7a4f-9704-2095-96c8">5+</characteristic>
+                <characteristic name="To-Wound" typeId="172f-fc84-895b-04b7">3+</characteristic>
+                <characteristic name="Rend" typeId="0c05-bd2e-b7e7-3925">-</characteristic>
+                <characteristic name="Damage" typeId="01c2-d16a-8788-e52b">1</characteristic>
+                <characteristic name="Ability" typeId="0a53-8ba4-d02a-fc50">Charge (+1 Damage), Companion</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <costs>
+            <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
+          </costs>
+        </selectionEntry>
+      </selectionEntries>
+      <entryLinks>
+        <entryLink id="8901-5a94-6509-48e7" name="Unit Reinforcement" hidden="false" collective="false" import="true" targetId="b493-d9e6-82ca-5488" type="selectionEntry">
+          <costs>
+            <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="140.0"/>
+          </costs>
+        </entryLink>
+      </entryLinks>
+      <costs>
+        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="140.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="fafa-cc32-df3f-da5e" name="Savage Big Stabbas" hidden="false" collective="false" import="true" type="unit">
+      <profiles>
+        <profile id="d418-3dd3-29ef-1de0" name="Savage Big Stabbas" hidden="false" typeId="3956-f6dd-6c88-ae4b" typeName="Unit">
+          <characteristics>
+            <characteristic name="Move" typeId="5bbe-8910-4dfa-7b1c">5&quot;</characteristic>
+            <characteristic name="Health" typeId="a0c6-af64-2f24-5759">4</characteristic>
+            <characteristic name="Save" typeId="93b6-2f96-2df7-e330">6+</characteristic>
+            <characteristic name="Control" typeId="2420-1c5c-1016-7033">1</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="ca83-ebdd-aeb9-ed12" name="Savage Big Stabbas" hidden="false" typeId="c23b-5a30-07e2-4706" typeName="Warscroll Extras">
+          <characteristics>
+            <characteristic name="WIZARD" typeId="67b3-6f8b-2116-2a27">-</characteristic>
+            <characteristic name="PRIEST" typeId="02ab-4d58-5c31-767e">-</characteristic>
+            <characteristic name="WARD" typeId="40a4-4432-32da-74d9">6+</characteristic>
+            <characteristic name="CHAMPION" typeId="dccd-b70a-d225-5e37">-</characteristic>
+            <characteristic name="MUSICIAN" typeId="053d-5038-d84a-3aa3">-</characteristic>
+            <characteristic name="STANDARD BEARER" typeId="ccb7-3ee4-5637-586e">-</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="32c9-ec99-c58f-ff33" name="Da Final Fling" hidden="false" typeId="7861-da01-01c0-88d9" typeName="Ability">
+          <characteristics>
+            <characteristic name="Use" typeId="9bce-4deb-8b79-eaec">Passive</characteristic>
+            <characteristic name="Declare" typeId="f9c7-7dae-69e1-f924">-</characteristic>
+            <characteristic name="Effect" typeId="7d15-5e9e-83a9-d696">While this unit is not in combat, each time a model in this unit is slain by a shooting attack and that model was within 12&quot; of the attacking unit, roll a dice. Add 2 to the roll if the attacking unit was a MONSTER. On a 4+, inflict D6 mortal damage on the attacking unit after the SHOOT ability has been resolved.</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <categoryLinks>
+        <categoryLink id="61a8-7992-5767-bc6f" name="BONESPLITTERZ" hidden="false" targetId="858d-9c79-fe92-649f" primary="false"/>
+        <categoryLink id="52a8-d7d0-945b-b780" name="DESTRUCTION" hidden="false" targetId="5d33-469f-2bda-51f9" primary="false"/>
+        <categoryLink id="db12-f5ed-e7d1-d8a3" name="INFANTRY" hidden="false" targetId="25bf-7a1c-60fc-7e12" primary="false"/>
+        <categoryLink id="9d87-b563-6c7c-665a" name="New CategoryLink" hidden="false" targetId="6230-ed60-e374-add4" primary="true"/>
+      </categoryLinks>
+      <selectionEntries>
+        <selectionEntry id="6ed4-aa50-c6d8-91f5" name="2 Savage Big Stabbas" hidden="false" collective="false" import="true" type="model">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="ebed-bb1f-7ef8-e555" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="a902-982e-c1fa-5040" type="min"/>
+          </constraints>
+          <costs>
+            <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="ccf6-0117-b4f5-7c9d" name="Gorktoof" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="a8f0-49fb-0e95-15f8" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="1c2b-74f4-9e45-586c" type="min"/>
+          </constraints>
+          <profiles>
+            <profile id="6e40-739d-5fea-412d" name="Gorktoof" hidden="false" typeId="2905-f6bd-06e5-6642" typeName="Weapon">
+              <characteristics>
+                <characteristic name="Type" typeId="1a08-195b-76fd-2c2b">Melee</characteristic>
+                <characteristic name="Range" typeId="1406-f935-3f8e-b27f">-</characteristic>
+                <characteristic name="Attacks" typeId="4c19-dba6-f094-5165">3</characteristic>
+                <characteristic name="To-Hit" typeId="7a4f-9704-2095-96c8">4+</characteristic>
+                <characteristic name="To-Wound" typeId="172f-fc84-895b-04b7">2+</characteristic>
+                <characteristic name="Rend" typeId="0c05-bd2e-b7e7-3925">1</characteristic>
+                <characteristic name="Damage" typeId="01c2-d16a-8788-e52b">2</characteristic>
+                <characteristic name="Ability" typeId="0a53-8ba4-d02a-fc50">Charge (+1 Damage), Crit (Mortal)</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <costs>
+            <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
+          </costs>
+        </selectionEntry>
+      </selectionEntries>
+      <entryLinks>
+        <entryLink id="f866-0fb1-1e49-4e62" name="Unit Reinforcement" hidden="false" collective="false" import="true" targetId="b493-d9e6-82ca-5488" type="selectionEntry">
+          <costs>
+            <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="130.0"/>
+          </costs>
+        </entryLink>
+      </entryLinks>
+      <costs>
+        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="130.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="16e7-7180-dbfd-c032" name="Savage Orruk Morboys" hidden="false" collective="false" import="true" type="unit">
+      <profiles>
+        <profile id="b141-f479-f048-9917" name="Savage Orruk Morboys" hidden="false" typeId="3956-f6dd-6c88-ae4b" typeName="Unit">
+          <characteristics>
+            <characteristic name="Move" typeId="5bbe-8910-4dfa-7b1c">5&quot;</characteristic>
+            <characteristic name="Health" typeId="a0c6-af64-2f24-5759">2</characteristic>
+            <characteristic name="Save" typeId="93b6-2f96-2df7-e330">6+</characteristic>
+            <characteristic name="Control" typeId="2420-1c5c-1016-7033">1</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="57bc-be9b-29a6-3ad8" name="Savage Orruk Morboys" hidden="false" typeId="c23b-5a30-07e2-4706" typeName="Warscroll Extras">
+          <characteristics>
+            <characteristic name="WIZARD" typeId="67b3-6f8b-2116-2a27">-</characteristic>
+            <characteristic name="PRIEST" typeId="02ab-4d58-5c31-767e">-</characteristic>
+            <characteristic name="WARD" typeId="40a4-4432-32da-74d9">6+</characteristic>
+            <characteristic name="CHAMPION" typeId="dccd-b70a-d225-5e37">Yes</characteristic>
+            <characteristic name="MUSICIAN" typeId="053d-5038-d84a-3aa3">1/10</characteristic>
+            <characteristic name="STANDARD BEARER" typeId="ccb7-3ee4-5637-586e">1/10</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="ca8d-7c9e-50b5-ef67" name="Morboy Fury" hidden="false" typeId="7861-da01-01c0-88d9" typeName="Ability">
+          <characteristics>
+            <characteristic name="Use" typeId="9bce-4deb-8b79-eaec">Passive</characteristic>
+            <characteristic name="Declare" typeId="f9c7-7dae-69e1-f924">-</characteristic>
+            <characteristic name="Effect" typeId="7d15-5e9e-83a9-d696">If this unit charged this turn, enemy units cannot use commands while they are in combat with this unit.</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <categoryLinks>
+        <categoryLink id="6743-6b0b-0a5d-245d" name="BONESPLITTERZ" hidden="false" targetId="858d-9c79-fe92-649f" primary="false"/>
+        <categoryLink id="c7d8-f9ed-951c-c443" name="DESTRUCTION" hidden="false" targetId="5d33-469f-2bda-51f9" primary="false"/>
+        <categoryLink id="08c4-7618-f298-4586" name="INFANTRY" hidden="false" targetId="25bf-7a1c-60fc-7e12" primary="false"/>
+        <categoryLink id="0c0a-25c9-4097-8b17" name="New CategoryLink" hidden="false" targetId="6230-ed60-e374-add4" primary="true"/>
+      </categoryLinks>
+      <selectionEntries>
+        <selectionEntry id="63ed-afbb-dbcd-117f" name="10 Savage Orruk Morboys" hidden="false" collective="false" import="true" type="model">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="bb7f-c8d9-2f0b-9407" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="db76-6f0f-1b6b-037a" type="min"/>
+          </constraints>
+          <costs>
+            <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="3952-2435-c5a3-7293" name="Paired Savage Weapons" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="239c-fc2c-6254-562a" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8aa1-0a52-b322-e869" type="min"/>
+          </constraints>
+          <profiles>
+            <profile id="6f60-055f-28b6-a18b" name="Paired Savage Weapons" hidden="false" typeId="2905-f6bd-06e5-6642" typeName="Weapon">
+              <characteristics>
+                <characteristic name="Type" typeId="1a08-195b-76fd-2c2b">Melee</characteristic>
+                <characteristic name="Range" typeId="1406-f935-3f8e-b27f">-</characteristic>
+                <characteristic name="Attacks" typeId="4c19-dba6-f094-5165">3</characteristic>
+                <characteristic name="To-Hit" typeId="7a4f-9704-2095-96c8">4+</characteristic>
+                <characteristic name="To-Wound" typeId="172f-fc84-895b-04b7">3+</characteristic>
+                <characteristic name="Rend" typeId="0c05-bd2e-b7e7-3925">-</characteristic>
+                <characteristic name="Damage" typeId="01c2-d16a-8788-e52b">1</characteristic>
+                <characteristic name="Ability" typeId="0a53-8ba4-d02a-fc50">-</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <costs>
+            <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
+          </costs>
+        </selectionEntry>
+      </selectionEntries>
+      <entryLinks>
+        <entryLink id="a4fc-632b-af23-fd6e" name="Unit Reinforcement" hidden="false" collective="false" import="true" targetId="b493-d9e6-82ca-5488" type="selectionEntry">
+          <costs>
+            <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="160.0"/>
+          </costs>
+        </entryLink>
+      </entryLinks>
+      <costs>
+        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="160.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="a9e0-d8d0-b24b-4ea7" name="Savage Boarboy Maniaks" hidden="false" collective="false" import="true" type="unit">
+      <profiles>
+        <profile id="6f66-0c54-d353-454f" name="Savage Boarboy Maniaks" hidden="false" typeId="3956-f6dd-6c88-ae4b" typeName="Unit">
+          <characteristics>
+            <characteristic name="Move" typeId="5bbe-8910-4dfa-7b1c">10&quot;</characteristic>
+            <characteristic name="Health" typeId="a0c6-af64-2f24-5759">3</characteristic>
+            <characteristic name="Save" typeId="93b6-2f96-2df7-e330">5+</characteristic>
+            <characteristic name="Control" typeId="2420-1c5c-1016-7033">1</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="573d-64ea-8759-5c2e" name="Savage Boarboy Maniaks" hidden="false" typeId="c23b-5a30-07e2-4706" typeName="Warscroll Extras">
+          <characteristics>
+            <characteristic name="WIZARD" typeId="67b3-6f8b-2116-2a27">-</characteristic>
+            <characteristic name="PRIEST" typeId="02ab-4d58-5c31-767e">-</characteristic>
+            <characteristic name="WARD" typeId="40a4-4432-32da-74d9">6+</characteristic>
+            <characteristic name="CHAMPION" typeId="dccd-b70a-d225-5e37">Yes</characteristic>
+            <characteristic name="MUSICIAN" typeId="053d-5038-d84a-3aa3">1/5</characteristic>
+            <characteristic name="STANDARD BEARER" typeId="ccb7-3ee4-5637-586e">1/5</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="0770-a302-9e36-521b" name="On a Tear" hidden="false" typeId="7861-da01-01c0-88d9" typeName="Ability">
+          <characteristics>
+            <characteristic name="Use" typeId="9bce-4deb-8b79-eaec">Once Per Turn (Army), Reaction: You declared a CHARGE ability for this unit</characteristic>
+            <characteristic name="Declare" typeId="f9c7-7dae-69e1-f924">-</characteristic>
+            <characteristic name="Effect" typeId="7d15-5e9e-83a9-d696">Add 5 to this unit’s control score for the rest of the turn.</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <categoryLinks>
+        <categoryLink id="e6d6-3327-b702-a223" name="BONESPLITTERZ" hidden="false" targetId="858d-9c79-fe92-649f" primary="false"/>
+        <categoryLink id="ae77-cb32-6b14-fab1" name="DESTRUCTION" hidden="false" targetId="5d33-469f-2bda-51f9" primary="false"/>
+        <categoryLink id="f6dc-aa17-77af-9df5" name="New CategoryLink" hidden="false" targetId="6230-ed60-e374-add4" primary="true"/>
+        <categoryLink id="9cfd-f475-2f0f-6b15" name="CAVALRY" hidden="false" targetId="8b21-f02a-6da1-3cf6" primary="false"/>
+      </categoryLinks>
+      <selectionEntries>
+        <selectionEntry id="477d-e4bd-c2b5-d3c0" name="5 Savage Boarboy Maniaks" hidden="false" collective="false" import="true" type="model">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="dca5-7214-9787-ebed" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="e227-569a-5879-fc86" type="min"/>
+          </constraints>
+          <costs>
+            <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="3353-f98b-3a44-edb3" name="Chompas" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="47ae-4505-32b2-8cab" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="1c72-3f8f-641f-2b64" type="min"/>
+          </constraints>
+          <profiles>
+            <profile id="4e4d-d79f-ca8e-98fe" name="Chompas" hidden="false" typeId="2905-f6bd-06e5-6642" typeName="Weapon">
+              <characteristics>
+                <characteristic name="Type" typeId="1a08-195b-76fd-2c2b">Melee</characteristic>
+                <characteristic name="Range" typeId="1406-f935-3f8e-b27f">-</characteristic>
+                <characteristic name="Attacks" typeId="4c19-dba6-f094-5165">4</characteristic>
+                <characteristic name="To-Hit" typeId="7a4f-9704-2095-96c8">4+</characteristic>
+                <characteristic name="To-Wound" typeId="172f-fc84-895b-04b7">3+</characteristic>
+                <characteristic name="Rend" typeId="0c05-bd2e-b7e7-3925">-</characteristic>
+                <characteristic name="Damage" typeId="01c2-d16a-8788-e52b">1</characteristic>
+                <characteristic name="Ability" typeId="0a53-8ba4-d02a-fc50">-</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <costs>
+            <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="c760-791e-3710-a7ba" name="War Boar&apos;s Tusks and Hooves" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="b6c1-2309-c0d6-c416" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="1483-fb50-34d5-df39" type="min"/>
+          </constraints>
+          <profiles>
+            <profile id="6615-1a36-6659-a8cf" name="War Boar&apos;s Tusks and Hooves" hidden="false" typeId="2905-f6bd-06e5-6642" typeName="Weapon">
+              <characteristics>
+                <characteristic name="Type" typeId="1a08-195b-76fd-2c2b">Melee</characteristic>
+                <characteristic name="Range" typeId="1406-f935-3f8e-b27f">-</characteristic>
+                <characteristic name="Attacks" typeId="4c19-dba6-f094-5165">2</characteristic>
+                <characteristic name="To-Hit" typeId="7a4f-9704-2095-96c8">5+</characteristic>
+                <characteristic name="To-Wound" typeId="172f-fc84-895b-04b7">3+</characteristic>
+                <characteristic name="Rend" typeId="0c05-bd2e-b7e7-3925">-</characteristic>
+                <characteristic name="Damage" typeId="01c2-d16a-8788-e52b">1</characteristic>
+                <characteristic name="Ability" typeId="0a53-8ba4-d02a-fc50">Charge (+1 Damage), Companion</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <costs>
+            <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
+          </costs>
+        </selectionEntry>
+      </selectionEntries>
+      <entryLinks>
+        <entryLink id="948f-11e8-07ad-c898" name="Unit Reinforcement" hidden="false" collective="false" import="true" targetId="b493-d9e6-82ca-5488" type="selectionEntry">
+          <costs>
+            <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="150.0"/>
+          </costs>
+        </entryLink>
+      </entryLinks>
+      <costs>
+        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="150.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="9fc6-c3e5-5b41-2a31" name="Savage Orruk Arrowboys" hidden="false" collective="false" import="true" type="unit">
+      <profiles>
+        <profile id="9ff0-69d6-56d2-2450" name="Savage Orruk Arrowboys" hidden="false" typeId="3956-f6dd-6c88-ae4b" typeName="Unit">
+          <characteristics>
+            <characteristic name="Move" typeId="5bbe-8910-4dfa-7b1c">5&quot;</characteristic>
+            <characteristic name="Health" typeId="a0c6-af64-2f24-5759">2</characteristic>
+            <characteristic name="Save" typeId="93b6-2f96-2df7-e330">6+</characteristic>
+            <characteristic name="Control" typeId="2420-1c5c-1016-7033">1</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="9252-6b2a-fc0d-2c0e" name="Savage Orruk Arrowboys" hidden="false" typeId="c23b-5a30-07e2-4706" typeName="Warscroll Extras">
+          <characteristics>
+            <characteristic name="WIZARD" typeId="67b3-6f8b-2116-2a27">-</characteristic>
+            <characteristic name="PRIEST" typeId="02ab-4d58-5c31-767e">-</characteristic>
+            <characteristic name="WARD" typeId="40a4-4432-32da-74d9">6+</characteristic>
+            <characteristic name="CHAMPION" typeId="dccd-b70a-d225-5e37">Yes</characteristic>
+            <characteristic name="MUSICIAN" typeId="053d-5038-d84a-3aa3">1/10</characteristic>
+            <characteristic name="STANDARD BEARER" typeId="ccb7-3ee4-5637-586e">1/10</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="b670-1a2f-b8a0-2b5b" name="Aim Fer Its Eyes" hidden="false" typeId="7861-da01-01c0-88d9" typeName="Ability">
+          <characteristics>
+            <characteristic name="Use" typeId="9bce-4deb-8b79-eaec">Once Per Battle Round (Army), Any Shooting Phase</characteristic>
+            <characteristic name="Declare" typeId="f9c7-7dae-69e1-f924">If all of the attacks made with this unit’s Stinga Bows this turn targeted the same enemy unit, pick that enemy unit to be the target.</characteristic>
+            <characteristic name="Effect" typeId="7d15-5e9e-83a9-d696">Roll a dice. Add 1 to the roll if the target is a BEASTY or CAVALRY unit, or add 2 to the roll if the target is a MONSTER. On a 4+, subtract 1 from the Attacks characteristic of the target’s Companion weapons for the rest of the turn.</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <categoryLinks>
+        <categoryLink id="0672-c320-9b56-7b14" name="BONESPLITTERZ" hidden="false" targetId="858d-9c79-fe92-649f" primary="false"/>
+        <categoryLink id="797e-6b49-60a8-e476" name="DESTRUCTION" hidden="false" targetId="5d33-469f-2bda-51f9" primary="false"/>
+        <categoryLink id="0779-1f16-97a6-1636" name="INFANTRY" hidden="false" targetId="25bf-7a1c-60fc-7e12" primary="false"/>
+        <categoryLink id="bdbe-f900-fc13-4659" name="New CategoryLink" hidden="false" targetId="6230-ed60-e374-add4" primary="true"/>
+      </categoryLinks>
+      <selectionEntries>
+        <selectionEntry id="e9a6-f1d5-34f7-9e99" name="10 Savage Orruk Arrowboys" hidden="false" collective="false" import="true" type="model">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="62b8-b25a-4b0e-d4cb" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="295d-bfdc-c1ab-6e63" type="min"/>
+          </constraints>
+          <costs>
+            <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="d9d1-85fe-6a31-958a" name="Chompa" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="3c9c-91ab-f70e-ba30" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="87ee-4043-6b17-1154" type="min"/>
+          </constraints>
+          <profiles>
+            <profile id="9612-bc6e-b5b6-2bf7" name="Chompa" hidden="false" typeId="2905-f6bd-06e5-6642" typeName="Weapon">
+              <characteristics>
+                <characteristic name="Type" typeId="1a08-195b-76fd-2c2b">Melee</characteristic>
+                <characteristic name="Range" typeId="1406-f935-3f8e-b27f">-</characteristic>
+                <characteristic name="Attacks" typeId="4c19-dba6-f094-5165">1</characteristic>
+                <characteristic name="To-Hit" typeId="7a4f-9704-2095-96c8">4+</characteristic>
+                <characteristic name="To-Wound" typeId="172f-fc84-895b-04b7">3+</characteristic>
+                <characteristic name="Rend" typeId="0c05-bd2e-b7e7-3925">-</characteristic>
+                <characteristic name="Damage" typeId="01c2-d16a-8788-e52b">1</characteristic>
+                <characteristic name="Ability" typeId="0a53-8ba4-d02a-fc50">-</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <costs>
+            <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="c7bd-88ae-3652-99a4" name="Stinga Bow" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="221b-12ce-b6f9-0ac5" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="e8ee-d7e2-87bc-d4bf" type="min"/>
+          </constraints>
+          <profiles>
+            <profile id="75e2-50e7-1260-9dbb" name="Stinga Bow" hidden="false" typeId="2905-f6bd-06e5-6642" typeName="Weapon">
+              <characteristics>
+                <characteristic name="Type" typeId="1a08-195b-76fd-2c2b">Missile</characteristic>
+                <characteristic name="Range" typeId="1406-f935-3f8e-b27f">15&quot;</characteristic>
+                <characteristic name="Attacks" typeId="4c19-dba6-f094-5165">2</characteristic>
+                <characteristic name="To-Hit" typeId="7a4f-9704-2095-96c8">5+</characteristic>
+                <characteristic name="To-Wound" typeId="172f-fc84-895b-04b7">4+</characteristic>
+                <characteristic name="Rend" typeId="0c05-bd2e-b7e7-3925">-</characteristic>
+                <characteristic name="Damage" typeId="01c2-d16a-8788-e52b">1</characteristic>
+                <characteristic name="Ability" typeId="0a53-8ba4-d02a-fc50">Crit (Auto-wound)</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <costs>
+            <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="0.0"/>
+          </costs>
+        </selectionEntry>
+      </selectionEntries>
+      <entryLinks>
+        <entryLink id="7767-3cc6-cf86-949e" name="Unit Reinforcement" hidden="false" collective="false" import="true" targetId="b493-d9e6-82ca-5488" type="selectionEntry">
+          <costs>
+            <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="140.0"/>
+          </costs>
+        </entryLink>
+      </entryLinks>
+      <costs>
+        <cost name="pts" typeId="b0b4-6aec-82c2-02ae" value="140.0"/>
       </costs>
     </selectionEntry>
   </sharedSelectionEntries>
